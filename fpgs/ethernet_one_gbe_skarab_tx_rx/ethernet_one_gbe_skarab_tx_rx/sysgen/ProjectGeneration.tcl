@@ -26,6 +26,11 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 		{{single_reg_w_init.vhd} -lib {xil_defaultlib}}
 		{{xlclockdriver_rd.vhd} -lib {xil_defaultlib}}
 		{{vivado_ip.tcl}}
+		{{gbe_contro_beta_v2.v}}
+		{{conv_pkg.v}}
+		{{synth_reg.v}}
+		{{synth_reg_w_init.v}}
+		{{convert_type.v}}
 		{{wrapper_buffer_in_ethernet_verilog.v}}
 		{{conv_pkg.v}}
 		{{synth_reg.v}}
@@ -36,24 +41,19 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 		{{synth_reg.v}}
 		{{synth_reg_w_init.v}}
 		{{convert_type.v}}
-		{{gbe_contro_beta_v2.v}}
-		{{conv_pkg.v}}
-		{{synth_reg.v}}
-		{{synth_reg_w_init.v}}
-		{{convert_type.v}}
 		{{ethernet_one_gbe_skarab_tx_rx_entity_declarations.vhd} -lib {xil_defaultlib}}
 		{{ethernet_one_gbe_skarab_tx_rx.vhd} -lib {xil_defaultlib}}
 		{{ethernet_one_gbe_skarab_tx_rx_clock.xdc}}
 		{{ethernet_one_gbe_skarab_tx_rx.xdc}}
 	}
 	set SimPeriod 1
-	set SimTime 1000
-	set SimulationTime {4552.14780000 ns}
+	set SimTime 30000
+	set SimulationTime {130638.34780000 ns}
 	set SynthStrategyName {Vivado Synthesis Defaults}
 	set SynthesisTool {Vivado}
 	set TargetDir {/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_tx_rx/ethernet_one_gbe_skarab_tx_rx/sysgen}
 	set TopLevelModule {ethernet_one_gbe_skarab_tx_rx}
-	set TopLevelSimulinkHandle 79217
+	set TopLevelSimulinkHandle 74344
 	set VHDLLib {xil_defaultlib}
 	set TopLevelPortInterface {}
 	dict set TopLevelPortInterface ethernet_one_gbe_skarab_tx_rx_tx_one_gbe_app_tx_overflow Name {ethernet_one_gbe_skarab_tx_rx_tx_one_gbe_app_tx_overflow}

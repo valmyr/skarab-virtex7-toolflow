@@ -35,6 +35,40 @@
 #-----------------------------------------------------------------
 
 set existingipslist [get_ips]
+if {[lsearch $existingipslist ethernet_one_gbe_skarab_tx_rx_c_addsub_v12_0_i0] < 0} {
+create_ip -name c_addsub -version 12.0 -vendor xilinx.com -library ip -module_name ethernet_one_gbe_skarab_tx_rx_c_addsub_v12_0_i0
+set params_list [list]
+lappend params_list CONFIG.Component_Name {ethernet_one_gbe_skarab_tx_rx_c_addsub_v12_0_i0}
+lappend params_list CONFIG.AINIT_Value {0}
+lappend params_list CONFIG.A_Type {Unsigned}
+lappend params_list CONFIG.A_Width {33}
+lappend params_list CONFIG.Add_Mode {Add}
+lappend params_list CONFIG.B_Constant {false}
+lappend params_list CONFIG.B_Type {Unsigned}
+lappend params_list CONFIG.B_Value {0}
+lappend params_list CONFIG.B_Width {33}
+lappend params_list CONFIG.Borrow_Sense {Active_Low}
+lappend params_list CONFIG.Bypass {false}
+lappend params_list CONFIG.Bypass_CE_Priority {Bypass_Overrides_CE}
+lappend params_list CONFIG.Bypass_Sense {Active_Low}
+lappend params_list CONFIG.CE {false}
+lappend params_list CONFIG.C_In {false}
+lappend params_list CONFIG.C_Out {false}
+lappend params_list CONFIG.Implementation {Fabric}
+lappend params_list CONFIG.Latency {0}
+lappend params_list CONFIG.Out_Width {33}
+lappend params_list CONFIG.SCLR {false}
+lappend params_list CONFIG.SINIT {false}
+lappend params_list CONFIG.SINIT_Value {0}
+lappend params_list CONFIG.SSET {false}
+lappend params_list CONFIG.Sync_CE_Priority {Sync_Overrides_CE}
+lappend params_list CONFIG.Sync_Ctrl_Priority {Reset_Overrides_Set}
+
+set_property -dict $params_list [get_ips ethernet_one_gbe_skarab_tx_rx_c_addsub_v12_0_i0]
+}
+
+
+set existingipslist [get_ips]
 if {[lsearch $existingipslist ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i0] < 0} {
 create_ip -name c_counter_binary -version 12.0 -vendor xilinx.com -library ip -module_name ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i0
 set params_list [list]
@@ -87,40 +121,6 @@ lappend params_list CONFIG.sync_threshold_output {false}
 lappend params_list CONFIG.syncctrlpriority {Reset_Overrides_Set}
 
 set_property -dict $params_list [get_ips ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i1]
-}
-
-
-set existingipslist [get_ips]
-if {[lsearch $existingipslist ethernet_one_gbe_skarab_tx_rx_c_addsub_v12_0_i0] < 0} {
-create_ip -name c_addsub -version 12.0 -vendor xilinx.com -library ip -module_name ethernet_one_gbe_skarab_tx_rx_c_addsub_v12_0_i0
-set params_list [list]
-lappend params_list CONFIG.Component_Name {ethernet_one_gbe_skarab_tx_rx_c_addsub_v12_0_i0}
-lappend params_list CONFIG.AINIT_Value {0}
-lappend params_list CONFIG.A_Type {Unsigned}
-lappend params_list CONFIG.A_Width {33}
-lappend params_list CONFIG.Add_Mode {Add}
-lappend params_list CONFIG.B_Constant {false}
-lappend params_list CONFIG.B_Type {Unsigned}
-lappend params_list CONFIG.B_Value {0}
-lappend params_list CONFIG.B_Width {33}
-lappend params_list CONFIG.Borrow_Sense {Active_Low}
-lappend params_list CONFIG.Bypass {false}
-lappend params_list CONFIG.Bypass_CE_Priority {Bypass_Overrides_CE}
-lappend params_list CONFIG.Bypass_Sense {Active_Low}
-lappend params_list CONFIG.CE {false}
-lappend params_list CONFIG.C_In {false}
-lappend params_list CONFIG.C_Out {false}
-lappend params_list CONFIG.Implementation {Fabric}
-lappend params_list CONFIG.Latency {0}
-lappend params_list CONFIG.Out_Width {33}
-lappend params_list CONFIG.SCLR {false}
-lappend params_list CONFIG.SINIT {false}
-lappend params_list CONFIG.SINIT_Value {0}
-lappend params_list CONFIG.SSET {false}
-lappend params_list CONFIG.Sync_CE_Priority {Sync_Overrides_CE}
-lappend params_list CONFIG.Sync_Ctrl_Priority {Reset_Overrides_Set}
-
-set_property -dict $params_list [get_ips ethernet_one_gbe_skarab_tx_rx_c_addsub_v12_0_i0]
 }
 
 

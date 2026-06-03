@@ -49,7 +49,7 @@ module buffer_in_ethernet(
 reg [31:0]counter;
 
 reg [7:0] mem[255:0];
-always@(posedge clk)begin
+always@(posedge clk, negedge a_sync_nrst)begin
     if(!a_sync_nrst)begin
         counter <= 0;
     end else begin

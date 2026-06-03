@@ -40,438 +40,6 @@ use xil_defaultlib.conv_pkg.all;
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
-entity sysgen_constant_619ec24221 is
-  port (
-    op : out std_logic_vector((32 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_constant_619ec24221;
-architecture behavior of sysgen_constant_619ec24221
-is
-begin
-  op <= "00000000000000000000000000000000";
-end behavior;
-
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-entity sysgen_constant_9b520a9ff1 is
-  port (
-    op : out std_logic_vector((16 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_constant_9b520a9ff1;
-architecture behavior of sysgen_constant_9b520a9ff1
-is
-begin
-  op <= "0000000000000000";
-end behavior;
-
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-entity sysgen_inverter_9738349e77 is
-  port (
-    ip : in std_logic_vector((1 - 1) downto 0);
-    op : out std_logic_vector((1 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_inverter_9738349e77;
-architecture behavior of sysgen_inverter_9738349e77
-is
-  signal ip_1_26: boolean;
-  type array_type_op_mem_22_20 is array (0 to (1 - 1)) of boolean;
-  signal op_mem_22_20: array_type_op_mem_22_20 := (
-    0 => false);
-  signal op_mem_22_20_front_din: boolean;
-  signal op_mem_22_20_back: boolean;
-  signal op_mem_22_20_push_front_pop_back_en: std_logic;
-  signal internal_ip_12_1_bitnot: boolean;
-begin
-  ip_1_26 <= ((ip) = "1");
-  op_mem_22_20_back <= op_mem_22_20(0);
-  proc_op_mem_22_20: process (clk)
-  is
-    variable i: integer;
-  begin
-    if (clk'event and (clk = '1')) then
-      if ((ce = '1') and (op_mem_22_20_push_front_pop_back_en = '1')) then
-        op_mem_22_20(0) <= op_mem_22_20_front_din;
-      end if;
-    end if;
-  end process proc_op_mem_22_20;
-  internal_ip_12_1_bitnot <= ((not boolean_to_vector(ip_1_26)) = "1");
-  op_mem_22_20_front_din <= internal_ip_12_1_bitnot;
-  op_mem_22_20_push_front_pop_back_en <= '1';
-  op <= boolean_to_vector(op_mem_22_20_back);
-end behavior;
-
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-
-entity ethernet_one_gbe_skarab_tx_rx_xldelay is
-   generic(width        : integer := -1;
-           latency      : integer := -1;
-           reg_retiming : integer :=  0;
-           reset        : integer :=  0);
-   port(d       : in std_logic_vector (width-1 downto 0);
-        ce      : in std_logic;
-        clk     : in std_logic;
-        en      : in std_logic;
-        rst     : in std_logic;
-        q       : out std_logic_vector (width-1 downto 0));
-
-end ethernet_one_gbe_skarab_tx_rx_xldelay;
-
-architecture behavior of ethernet_one_gbe_skarab_tx_rx_xldelay is
-   component synth_reg
-      generic (width       : integer;
-               latency     : integer);
-      port (i       : in std_logic_vector(width-1 downto 0);
-            ce      : in std_logic;
-            clr     : in std_logic;
-            clk     : in std_logic;
-            o       : out std_logic_vector(width-1 downto 0));
-   end component; -- end component synth_reg
-
-   component synth_reg_reg
-      generic (width       : integer;
-               latency     : integer);
-      port (i       : in std_logic_vector(width-1 downto 0);
-            ce      : in std_logic;
-            clr     : in std_logic;
-            clk     : in std_logic;
-            o       : out std_logic_vector(width-1 downto 0));
-   end component;
-
-   signal internal_ce  : std_logic;
-
-begin
-   internal_ce  <= ce and en;
-
-   srl_delay: if ((reg_retiming = 0) and (reset = 0)) or (latency < 1) generate
-     synth_reg_srl_inst : synth_reg
-       generic map (
-         width   => width,
-         latency => latency)
-       port map (
-         i   => d,
-         ce  => internal_ce,
-         clr => '0',
-         clk => clk,
-         o   => q);
-   end generate srl_delay;
-
-   reg_delay: if ((reg_retiming = 1) or (reset = 1)) and (latency >= 1) generate
-     synth_reg_reg_inst : synth_reg_reg
-       generic map (
-         width   => width,
-         latency => latency)
-       port map (
-         i   => d,
-         ce  => internal_ce,
-         clr => rst,
-         clk => clk,
-         o   => q);
-   end generate reg_delay;
-end architecture behavior;
-
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-entity sysgen_concat_6b60634a05 is
-  port (
-    in0 : in std_logic_vector((16 - 1) downto 0);
-    in1 : in std_logic_vector((240 - 1) downto 0);
-    y : out std_logic_vector((256 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_concat_6b60634a05;
-architecture behavior of sysgen_concat_6b60634a05
-is
-  signal in0_1_23: unsigned((16 - 1) downto 0);
-  signal in1_1_27: unsigned((240 - 1) downto 0);
-  signal y_2_1_concat: unsigned((256 - 1) downto 0);
-begin
-  in0_1_23 <= std_logic_vector_to_unsigned(in0);
-  in1_1_27 <= std_logic_vector_to_unsigned(in1);
-  y_2_1_concat <= std_logic_vector_to_unsigned(unsigned_to_std_logic_vector(in0_1_23) & unsigned_to_std_logic_vector(in1_1_27));
-  y <= unsigned_to_std_logic_vector(y_2_1_concat);
-end behavior;
-
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-entity sysgen_constant_00d1c4e959 is
-  port (
-    op : out std_logic_vector((32 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_constant_00d1c4e959;
-architecture behavior of sysgen_constant_00d1c4e959
-is
-begin
-  op <= "00001010001010100000000000011111";
-end behavior;
-
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-entity sysgen_constant_77eecb6e48 is
-  port (
-    op : out std_logic_vector((32 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_constant_77eecb6e48;
-architecture behavior of sysgen_constant_77eecb6e48
-is
-begin
-  op <= "00000000000000001011000100000000";
-end behavior;
-
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-entity sysgen_constant_5099047c5c is
-  port (
-    op : out std_logic_vector((16 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_constant_5099047c5c;
-architecture behavior of sysgen_constant_5099047c5c
-is
-begin
-  op <= "0001111001100001";
-end behavior;
-
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-entity sysgen_constant_88950a3fa2 is
-  port (
-    op : out std_logic_vector((1 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_constant_88950a3fa2;
-architecture behavior of sysgen_constant_88950a3fa2
-is
-begin
-  op <= "1";
-end behavior;
-
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-entity sysgen_constant_9e30774807 is
-  port (
-    op : out std_logic_vector((240 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_constant_9e30774807;
-architecture behavior of sysgen_constant_9e30774807
-is
-begin
-  op <= "111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111";
-end behavior;
-
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-entity sysgen_constant_37ae93c26a is
-  port (
-    op : out std_logic_vector((32 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_constant_37ae93c26a;
-architecture behavior of sysgen_constant_37ae93c26a
-is
-begin
-  op <= "00000000000000000000000000001111";
-end behavior;
-
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-entity sysgen_logical_7e2a2895ac is
-  port (
-    d0 : in std_logic_vector((1 - 1) downto 0);
-    d1 : in std_logic_vector((1 - 1) downto 0);
-    d2 : in std_logic_vector((1 - 1) downto 0);
-    d3 : in std_logic_vector((1 - 1) downto 0);
-    y : out std_logic_vector((1 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_logical_7e2a2895ac;
-architecture behavior of sysgen_logical_7e2a2895ac
-is
-  signal d0_1_24: std_logic;
-  signal d1_1_27: std_logic;
-  signal d2_1_30: std_logic;
-  signal d3_1_33: std_logic;
-  signal fully_2_1_bit: std_logic;
-begin
-  d0_1_24 <= d0(0);
-  d1_1_27 <= d1(0);
-  d2_1_30 <= d2(0);
-  d3_1_33 <= d3(0);
-  fully_2_1_bit <= d0_1_24 or d1_1_27 or d2_1_30 or d3_1_33;
-  y <= std_logic_to_vector(fully_2_1_bit);
-end behavior;
-
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
----------------------------------------------------------------------
---
---  Filename      : xlslice.vhd
---
---  Description   : VHDL description of a block that sets the output to a
---                  specified range of the input bits. The output is always
---                  set to an unsigned type with it's binary point at zero.
---
----------------------------------------------------------------------
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.std_logic_arith.all;
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-
-entity ethernet_one_gbe_skarab_tx_rx_xlslice is
-    generic (
-        new_msb      : integer := 9;           -- position of new msb
-        new_lsb      : integer := 1;           -- position of new lsb
-        x_width      : integer := 16;          -- Width of x input
-        y_width      : integer := 8);          -- Width of y output
-    port (
-        x : in std_logic_vector (x_width-1 downto 0);
-        y : out std_logic_vector (y_width-1 downto 0));
-end ethernet_one_gbe_skarab_tx_rx_xlslice;
-
-architecture behavior of ethernet_one_gbe_skarab_tx_rx_xlslice is
-begin
-    y <= x(new_msb downto new_lsb);
-end  behavior;
-
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-entity wrapper_buffer_in_ethernet_verilog_wrapper is 
-  port(
-    a_sync_nrst : in std_logic;
-    in_valid_rx : in std_logic;
-    in_data_rx_ethernet : in std_logic_vector(7 downto 0);
-    package_size : in std_logic_vector(9 downto 0);
-    addr_data : in std_logic_vector(7 downto 0);
-    data_valid_rx : in std_logic;
-    data_out_buffer : out std_logic_vector(7 downto 0);
-    clk : in std_logic;
-    ce : in std_logic
-  );
-end wrapper_buffer_in_ethernet_verilog_wrapper;
-architecture structural of wrapper_buffer_in_ethernet_verilog_wrapper is 
-  signal a_sync_nrst_net : std_logic;
-  signal in_valid_rx_net : std_logic;
-  signal in_data_rx_ethernet_net : std_logic_vector(7 downto 0);
-  signal package_size_net : std_logic_vector(9 downto 0);
-  signal addr_data_net : std_logic_vector(7 downto 0);
-  signal data_valid_rx_net : std_logic;
-  signal data_out_buffer_net : std_logic_vector(7 downto 0);
-  signal clk_net : std_logic;
-  signal ce_net : std_logic;
-  component wrapper_buffer_in_ethernet_verilog is
-    port(
-      a_sync_nrst : in std_logic;
-      in_valid_rx : in std_logic;
-      in_data_rx_ethernet : in std_logic_vector(7 downto 0);
-      package_size : in std_logic_vector(9 downto 0);
-      addr_data : in std_logic_vector(7 downto 0);
-      data_valid_rx : in std_logic;
-      data_out_buffer : out std_logic_vector(7 downto 0);
-      clk : in std_logic;
-      ce : in std_logic
-    );
-  end component;
-begin
-  a_sync_nrst_net <= a_sync_nrst;
-  in_valid_rx_net <= in_valid_rx;
-  in_data_rx_ethernet_net <= in_data_rx_ethernet;
-  package_size_net <= package_size;
-  addr_data_net <= addr_data;
-  data_valid_rx_net <= data_valid_rx;
-  data_out_buffer <= data_out_buffer_net;
-  clk_net <= clk;
-  ce_net <= ce;
-  wrapper_buffer_in_ethernet_verilog_inst : wrapper_buffer_in_ethernet_verilog
-    port map(
-      a_sync_nrst => a_sync_nrst_net,
-      in_valid_rx => in_valid_rx_net,
-      in_data_rx_ethernet => in_data_rx_ethernet_net,
-      package_size => package_size_net,
-      addr_data => addr_data_net,
-      data_valid_rx => data_valid_rx_net,
-      data_out_buffer => data_out_buffer_net,
-      clk => clk_net,
-      ce => ce_net
-    );
-end structural;
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
 entity gbe_control_wrapper is 
   port(
     nrst : in std_logic;
@@ -585,6 +153,71 @@ use xil_defaultlib.conv_pkg.all;
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
+entity sysgen_concat_6b60634a05 is
+  port (
+    in0 : in std_logic_vector((16 - 1) downto 0);
+    in1 : in std_logic_vector((240 - 1) downto 0);
+    y : out std_logic_vector((256 - 1) downto 0);
+    clk : in std_logic;
+    ce : in std_logic;
+    clr : in std_logic);
+end sysgen_concat_6b60634a05;
+architecture behavior of sysgen_concat_6b60634a05
+is
+  signal in0_1_23: unsigned((16 - 1) downto 0);
+  signal in1_1_27: unsigned((240 - 1) downto 0);
+  signal y_2_1_concat: unsigned((256 - 1) downto 0);
+begin
+  in0_1_23 <= std_logic_vector_to_unsigned(in0);
+  in1_1_27 <= std_logic_vector_to_unsigned(in1);
+  y_2_1_concat <= std_logic_vector_to_unsigned(unsigned_to_std_logic_vector(in0_1_23) & unsigned_to_std_logic_vector(in1_1_27));
+  y <= unsigned_to_std_logic_vector(y_2_1_concat);
+end behavior;
+
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+entity sysgen_constant_00d1c4e959 is
+  port (
+    op : out std_logic_vector((32 - 1) downto 0);
+    clk : in std_logic;
+    ce : in std_logic;
+    clr : in std_logic);
+end sysgen_constant_00d1c4e959;
+architecture behavior of sysgen_constant_00d1c4e959
+is
+begin
+  op <= "00001010001010100000000000011111";
+end behavior;
+
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+entity sysgen_constant_5099047c5c is
+  port (
+    op : out std_logic_vector((16 - 1) downto 0);
+    clk : in std_logic;
+    ce : in std_logic;
+    clr : in std_logic);
+end sysgen_constant_5099047c5c;
+architecture behavior of sysgen_constant_5099047c5c
+is
+begin
+  op <= "0001111001100001";
+end behavior;
+
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
 entity sysgen_constant_6bd893df36 is
   port (
     op : out std_logic_vector((48 - 1) downto 0);
@@ -623,6 +256,120 @@ use xil_defaultlib.conv_pkg.all;
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
+entity sysgen_constant_77eecb6e48 is
+  port (
+    op : out std_logic_vector((32 - 1) downto 0);
+    clk : in std_logic;
+    ce : in std_logic;
+    clr : in std_logic);
+end sysgen_constant_77eecb6e48;
+architecture behavior of sysgen_constant_77eecb6e48
+is
+begin
+  op <= "00000000000000001011000100000000";
+end behavior;
+
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+entity sysgen_constant_88950a3fa2 is
+  port (
+    op : out std_logic_vector((1 - 1) downto 0);
+    clk : in std_logic;
+    ce : in std_logic;
+    clr : in std_logic);
+end sysgen_constant_88950a3fa2;
+architecture behavior of sysgen_constant_88950a3fa2
+is
+begin
+  op <= "1";
+end behavior;
+
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+entity sysgen_constant_9e30774807 is
+  port (
+    op : out std_logic_vector((240 - 1) downto 0);
+    clk : in std_logic;
+    ce : in std_logic;
+    clr : in std_logic);
+end sysgen_constant_9e30774807;
+architecture behavior of sysgen_constant_9e30774807
+is
+begin
+  op <= "111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111";
+end behavior;
+
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+entity sysgen_constant_37ae93c26a is
+  port (
+    op : out std_logic_vector((32 - 1) downto 0);
+    clk : in std_logic;
+    ce : in std_logic;
+    clr : in std_logic);
+end sysgen_constant_37ae93c26a;
+architecture behavior of sysgen_constant_37ae93c26a
+is
+begin
+  op <= "00000000000000000000000000001111";
+end behavior;
+
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+entity sysgen_constant_619ec24221 is
+  port (
+    op : out std_logic_vector((32 - 1) downto 0);
+    clk : in std_logic;
+    ce : in std_logic;
+    clr : in std_logic);
+end sysgen_constant_619ec24221;
+architecture behavior of sysgen_constant_619ec24221
+is
+begin
+  op <= "00000000000000000000000000000000";
+end behavior;
+
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+entity sysgen_constant_9b520a9ff1 is
+  port (
+    op : out std_logic_vector((16 - 1) downto 0);
+    clk : in std_logic;
+    ce : in std_logic;
+    clr : in std_logic);
+end sysgen_constant_9b520a9ff1;
+architecture behavior of sysgen_constant_9b520a9ff1
+is
+begin
+  op <= "0000000000000000";
+end behavior;
+
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
 entity sysgen_constant_6123f02036 is
   port (
     op : out std_logic_vector((64 - 1) downto 0);
@@ -634,6 +381,125 @@ architecture behavior of sysgen_constant_6123f02036
 is
 begin
   op <= "0000000000000000000000000000000000000000000000000000000000000000";
+end behavior;
+
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+
+entity ethernet_one_gbe_skarab_tx_rx_xldelay is
+   generic(width        : integer := -1;
+           latency      : integer := -1;
+           reg_retiming : integer :=  0;
+           reset        : integer :=  0);
+   port(d       : in std_logic_vector (width-1 downto 0);
+        ce      : in std_logic;
+        clk     : in std_logic;
+        en      : in std_logic;
+        rst     : in std_logic;
+        q       : out std_logic_vector (width-1 downto 0));
+
+end ethernet_one_gbe_skarab_tx_rx_xldelay;
+
+architecture behavior of ethernet_one_gbe_skarab_tx_rx_xldelay is
+   component synth_reg
+      generic (width       : integer;
+               latency     : integer);
+      port (i       : in std_logic_vector(width-1 downto 0);
+            ce      : in std_logic;
+            clr     : in std_logic;
+            clk     : in std_logic;
+            o       : out std_logic_vector(width-1 downto 0));
+   end component; -- end component synth_reg
+
+   component synth_reg_reg
+      generic (width       : integer;
+               latency     : integer);
+      port (i       : in std_logic_vector(width-1 downto 0);
+            ce      : in std_logic;
+            clr     : in std_logic;
+            clk     : in std_logic;
+            o       : out std_logic_vector(width-1 downto 0));
+   end component;
+
+   signal internal_ce  : std_logic;
+
+begin
+   internal_ce  <= ce and en;
+
+   srl_delay: if ((reg_retiming = 0) and (reset = 0)) or (latency < 1) generate
+     synth_reg_srl_inst : synth_reg
+       generic map (
+         width   => width,
+         latency => latency)
+       port map (
+         i   => d,
+         ce  => internal_ce,
+         clr => '0',
+         clk => clk,
+         o   => q);
+   end generate srl_delay;
+
+   reg_delay: if ((reg_retiming = 1) or (reset = 1)) and (latency >= 1) generate
+     synth_reg_reg_inst : synth_reg_reg
+       generic map (
+         width   => width,
+         latency => latency)
+       port map (
+         i   => d,
+         ce  => internal_ce,
+         clr => rst,
+         clk => clk,
+         o   => q);
+   end generate reg_delay;
+end architecture behavior;
+
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+entity sysgen_inverter_9738349e77 is
+  port (
+    ip : in std_logic_vector((1 - 1) downto 0);
+    op : out std_logic_vector((1 - 1) downto 0);
+    clk : in std_logic;
+    ce : in std_logic;
+    clr : in std_logic);
+end sysgen_inverter_9738349e77;
+architecture behavior of sysgen_inverter_9738349e77
+is
+  signal ip_1_26: boolean;
+  type array_type_op_mem_22_20 is array (0 to (1 - 1)) of boolean;
+  signal op_mem_22_20: array_type_op_mem_22_20 := (
+    0 => false);
+  signal op_mem_22_20_front_din: boolean;
+  signal op_mem_22_20_back: boolean;
+  signal op_mem_22_20_push_front_pop_back_en: std_logic;
+  signal internal_ip_12_1_bitnot: boolean;
+begin
+  ip_1_26 <= ((ip) = "1");
+  op_mem_22_20_back <= op_mem_22_20(0);
+  proc_op_mem_22_20: process (clk)
+  is
+    variable i: integer;
+  begin
+    if (clk'event and (clk = '1')) then
+      if ((ce = '1') and (op_mem_22_20_push_front_pop_back_en = '1')) then
+        op_mem_22_20(0) <= op_mem_22_20_front_din;
+      end if;
+    end if;
+  end process proc_op_mem_22_20;
+  internal_ip_12_1_bitnot <= ((not boolean_to_vector(ip_1_26)) = "1");
+  op_mem_22_20_front_din <= internal_ip_12_1_bitnot;
+  op_mem_22_20_push_front_pop_back_en <= '1';
+  op <= boolean_to_vector(op_mem_22_20_back);
 end behavior;
 
 library xil_defaultlib;
@@ -702,6 +568,39 @@ begin
   d0_1_24 <= d0(0);
   d1_1_27 <= d1(0);
   fully_2_1_bit <= d0_1_24 and d1_1_27;
+  y <= std_logic_to_vector(fully_2_1_bit);
+end behavior;
+
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+entity sysgen_logical_7e2a2895ac is
+  port (
+    d0 : in std_logic_vector((1 - 1) downto 0);
+    d1 : in std_logic_vector((1 - 1) downto 0);
+    d2 : in std_logic_vector((1 - 1) downto 0);
+    d3 : in std_logic_vector((1 - 1) downto 0);
+    y : out std_logic_vector((1 - 1) downto 0);
+    clk : in std_logic;
+    ce : in std_logic;
+    clr : in std_logic);
+end sysgen_logical_7e2a2895ac;
+architecture behavior of sysgen_logical_7e2a2895ac
+is
+  signal d0_1_24: std_logic;
+  signal d1_1_27: std_logic;
+  signal d2_1_30: std_logic;
+  signal d3_1_33: std_logic;
+  signal fully_2_1_bit: std_logic;
+begin
+  d0_1_24 <= d0(0);
+  d1_1_27 <= d1(0);
+  d2_1_30 <= d2(0);
+  d3_1_33 <= d3(0);
+  fully_2_1_bit <= d0_1_24 or d1_1_27 or d2_1_30 or d3_1_33;
   y <= std_logic_to_vector(fully_2_1_bit);
 end behavior;
 
@@ -816,33 +715,6 @@ use xil_defaultlib.conv_pkg.all;
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
-entity sysgen_relational_474620387a is
-  port (
-    a : in std_logic_vector((32 - 1) downto 0);
-    b : in std_logic_vector((32 - 1) downto 0);
-    op : out std_logic_vector((1 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_relational_474620387a;
-architecture behavior of sysgen_relational_474620387a
-is
-  signal a_1_31: unsigned((32 - 1) downto 0);
-  signal b_1_34: unsigned((32 - 1) downto 0);
-  signal result_12_3_rel: boolean;
-begin
-  a_1_31 <= std_logic_vector_to_unsigned(a);
-  b_1_34 <= std_logic_vector_to_unsigned(b);
-  result_12_3_rel <= a_1_31 = b_1_34;
-  op <= boolean_to_vector(result_12_3_rel);
-end behavior;
-
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
 entity sysgen_relational_46df96a6cc is
   port (
     a : in std_logic_vector((16 - 1) downto 0);
@@ -897,21 +769,171 @@ use xil_defaultlib.conv_pkg.all;
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
-entity sysgen_delay_700e35c45c is
+entity sysgen_relational_474620387a is
   port (
-    d : in std_logic_vector((32 - 1) downto 0);
-    q : out std_logic_vector((32 - 1) downto 0);
+    a : in std_logic_vector((32 - 1) downto 0);
+    b : in std_logic_vector((32 - 1) downto 0);
+    op : out std_logic_vector((1 - 1) downto 0);
     clk : in std_logic;
     ce : in std_logic;
     clr : in std_logic);
-end sysgen_delay_700e35c45c;
-architecture behavior of sysgen_delay_700e35c45c
+end sysgen_relational_474620387a;
+architecture behavior of sysgen_relational_474620387a
 is
-  signal d_1_22: std_logic_vector((32 - 1) downto 0);
+  signal a_1_31: unsigned((32 - 1) downto 0);
+  signal b_1_34: unsigned((32 - 1) downto 0);
+  signal result_12_3_rel: boolean;
 begin
-  d_1_22 <= d;
-  q <= d_1_22;
+  a_1_31 <= std_logic_vector_to_unsigned(a);
+  b_1_34 <= std_logic_vector_to_unsigned(b);
+  result_12_3_rel <= a_1_31 = b_1_34;
+  op <= boolean_to_vector(result_12_3_rel);
 end behavior;
+
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+---------------------------------------------------------------------
+--
+--  Filename      : xlslice.vhd
+--
+--  Description   : VHDL description of a block that sets the output to a
+--                  specified range of the input bits. The output is always
+--                  set to an unsigned type with it's binary point at zero.
+--
+---------------------------------------------------------------------
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_arith.all;
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+
+entity ethernet_one_gbe_skarab_tx_rx_xlslice is
+    generic (
+        new_msb      : integer := 9;           -- position of new msb
+        new_lsb      : integer := 1;           -- position of new lsb
+        x_width      : integer := 16;          -- Width of x input
+        y_width      : integer := 8);          -- Width of y output
+    port (
+        x : in std_logic_vector (x_width-1 downto 0);
+        y : out std_logic_vector (y_width-1 downto 0));
+end ethernet_one_gbe_skarab_tx_rx_xlslice;
+
+architecture behavior of ethernet_one_gbe_skarab_tx_rx_xlslice is
+begin
+    y <= x(new_msb downto new_lsb);
+end  behavior;
+
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+entity wrapper_buffer_in_ethernet_verilog_wrapper is 
+  port(
+    a_sync_nrst : in std_logic;
+    in_valid_rx : in std_logic;
+    in_data_rx_ethernet : in std_logic_vector(7 downto 0);
+    package_size : in std_logic_vector(9 downto 0);
+    addr_data : in std_logic_vector(7 downto 0);
+    data_valid_rx : in std_logic;
+    data_out_buffer : out std_logic_vector(7 downto 0);
+    clk : in std_logic;
+    ce : in std_logic
+  );
+end wrapper_buffer_in_ethernet_verilog_wrapper;
+architecture structural of wrapper_buffer_in_ethernet_verilog_wrapper is 
+  signal a_sync_nrst_net : std_logic;
+  signal in_valid_rx_net : std_logic;
+  signal in_data_rx_ethernet_net : std_logic_vector(7 downto 0);
+  signal package_size_net : std_logic_vector(9 downto 0);
+  signal addr_data_net : std_logic_vector(7 downto 0);
+  signal data_valid_rx_net : std_logic;
+  signal data_out_buffer_net : std_logic_vector(7 downto 0);
+  signal clk_net : std_logic;
+  signal ce_net : std_logic;
+  component wrapper_buffer_in_ethernet_verilog is
+    port(
+      a_sync_nrst : in std_logic;
+      in_valid_rx : in std_logic;
+      in_data_rx_ethernet : in std_logic_vector(7 downto 0);
+      package_size : in std_logic_vector(9 downto 0);
+      addr_data : in std_logic_vector(7 downto 0);
+      data_valid_rx : in std_logic;
+      data_out_buffer : out std_logic_vector(7 downto 0);
+      clk : in std_logic;
+      ce : in std_logic
+    );
+  end component;
+begin
+  a_sync_nrst_net <= a_sync_nrst;
+  in_valid_rx_net <= in_valid_rx;
+  in_data_rx_ethernet_net <= in_data_rx_ethernet;
+  package_size_net <= package_size;
+  addr_data_net <= addr_data;
+  data_valid_rx_net <= data_valid_rx;
+  data_out_buffer <= data_out_buffer_net;
+  clk_net <= clk;
+  ce_net <= ce;
+  wrapper_buffer_in_ethernet_verilog_inst : wrapper_buffer_in_ethernet_verilog
+    port map(
+      a_sync_nrst => a_sync_nrst_net,
+      in_valid_rx => in_valid_rx_net,
+      in_data_rx_ethernet => in_data_rx_ethernet_net,
+      package_size => package_size_net,
+      addr_data => addr_data_net,
+      data_valid_rx => data_valid_rx_net,
+      data_out_buffer => data_out_buffer_net,
+      clk => clk_net,
+      ce => ce_net
+    );
+end structural;
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+--$Header: /devl/xcs/repo/env/Jobs/sysgen/src/xbs/hdl_pkg/xlpassthrough.vhd,v 1.1 2005/07/11 00:50:55 alexc Exp $
+---------------------------------------------------------------------
+--
+--  Filename      : xlpassthrough.vhd
+--
+--  Created       : 07/09/05
+--
+--  Description   : VHDL description of a passthrough block
+--
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+--
+--  Entity        : xlpassthrough
+--
+--  Architecture  : passthrough_arch
+--
+--  Description   : Top level VHDL description of passthrough block. 
+--
+---------------------------------------------------------------------
+library IEEE;
+use IEEE.std_logic_1164.all;
+use work.conv_pkg.all;
+
+entity xlpassthrough is
+    generic (
+        din_width    : integer := 16;            -- Width of input
+        dout_width   : integer := 16             -- Width of output
+        );
+    port (
+        din : in std_logic_vector (din_width-1 downto 0);
+        dout : out std_logic_vector (dout_width-1 downto 0));
+end xlpassthrough;
+
+architecture passthrough_arch of xlpassthrough is
+begin
+  dout <= din;
+end passthrough_arch;
+
 
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
@@ -1093,46 +1115,24 @@ end  behavior;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
 
---$Header: /devl/xcs/repo/env/Jobs/sysgen/src/xbs/hdl_pkg/xlpassthrough.vhd,v 1.1 2005/07/11 00:50:55 alexc Exp $
----------------------------------------------------------------------
---
---  Filename      : xlpassthrough.vhd
---
---  Created       : 07/09/05
---
---  Description   : VHDL description of a passthrough block
---
----------------------------------------------------------------------
-
-
----------------------------------------------------------------------
---
---  Entity        : xlpassthrough
---
---  Architecture  : passthrough_arch
---
---  Description   : Top level VHDL description of passthrough block. 
---
----------------------------------------------------------------------
 library IEEE;
 use IEEE.std_logic_1164.all;
-use work.conv_pkg.all;
-
-entity xlpassthrough is
-    generic (
-        din_width    : integer := 16;            -- Width of input
-        dout_width   : integer := 16             -- Width of output
-        );
-    port (
-        din : in std_logic_vector (din_width-1 downto 0);
-        dout : out std_logic_vector (dout_width-1 downto 0));
-end xlpassthrough;
-
-architecture passthrough_arch of xlpassthrough is
+use IEEE.numeric_std.all;
+entity sysgen_delay_700e35c45c is
+  port (
+    d : in std_logic_vector((32 - 1) downto 0);
+    q : out std_logic_vector((32 - 1) downto 0);
+    clk : in std_logic;
+    ce : in std_logic;
+    clr : in std_logic);
+end sysgen_delay_700e35c45c;
+architecture behavior of sysgen_delay_700e35c45c
+is
+  signal d_1_22: std_logic_vector((32 - 1) downto 0);
 begin
-  dout <= din;
-end passthrough_arch;
-
+  d_1_22 <= d;
+  q <= d_1_22;
+end behavior;
 
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;

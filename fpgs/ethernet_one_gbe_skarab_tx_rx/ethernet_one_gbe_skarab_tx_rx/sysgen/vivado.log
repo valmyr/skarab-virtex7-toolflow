@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Jun  1 19:37:18 2026
-# Process ID: 676986
+# Start of session at: Wed Jun  3 00:08:15 2026
+# Process ID: 705803
 # Current directory: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_tx_rx/ethernet_one_gbe_skarab_tx_rx/sysgen
 # Command line: vivado -mode batch -source ProjectGeneration.tcl -notrace
 # Log file: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_tx_rx/ethernet_one_gbe_skarab_tx_rx/sysgen/vivado.log
@@ -136,15 +136,15 @@ WARNING: [Coretcl 2-176] No IPs found
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
-WARNING: [IP_Flow 19-4832] The IP name 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i0' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i0' to 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i0' is not allowed and is ignored.
-WARNING: [IP_Flow 19-4832] The IP name 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i1' to 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i1' is not allowed and is ignored.
 WARNING: [IP_Flow 19-4832] The IP name 'ethernet_one_gbe_skarab_tx_rx_c_addsub_v12_0_i0' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
 WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ethernet_one_gbe_skarab_tx_rx_c_addsub_v12_0_i0' to 'ethernet_one_gbe_skarab_tx_rx_c_addsub_v12_0_i0' is not allowed and is ignored.
 WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'B_Value' from '000000000000000000000000000000000' to '0' has been ignored for IP 'ethernet_one_gbe_skarab_tx_rx_c_addsub_v12_0_i0'
 WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'Bypass_Sense' from 'Active_High' to 'Active_Low' has been ignored for IP 'ethernet_one_gbe_skarab_tx_rx_c_addsub_v12_0_i0'
 WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'Bypass_CE_Priority' from 'CE_Overrides_Bypass' to 'Bypass_Overrides_CE' has been ignored for IP 'ethernet_one_gbe_skarab_tx_rx_c_addsub_v12_0_i0'
+WARNING: [IP_Flow 19-4832] The IP name 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i0' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i0' to 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i0' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i1' to 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i1' is not allowed and is ignored.
 WARNING: [IP_Flow 19-4832] The IP name 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i2' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
 WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i2' to 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i2' is not allowed and is ignored.
 WARNING: [IP_Flow 19-4832] The IP name 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i3' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
@@ -153,4 +153,4 @@ WARNING: [IP_Flow 19-4832] The IP name 'ethernet_one_gbe_skarab_tx_rx_c_counter_
 WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i4' to 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i4' is not allowed and is ignored.
 WARNING: [IP_Flow 19-4832] The IP name 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i5' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
 WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i5' to 'ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i5' is not allowed and is ignored.
-INFO: [Common 17-206] Exiting Vivado at Mon Jun  1 19:37:23 2026...
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  3 00:08:19 2026...

@@ -47,7 +47,7 @@ amostras = 10
 N =256
 j=0
 fs=600
-t=np.arange(0,N,1)
+t=np.arange(0,4095,1)
 y=np.zeros(N,dtype=np.int8)
 while(True):
     data, addr = sock.recvfrom(2048)
@@ -95,3 +95,4 @@ while(True):
     
     k+=1
     #if(k>=amostras):break
+

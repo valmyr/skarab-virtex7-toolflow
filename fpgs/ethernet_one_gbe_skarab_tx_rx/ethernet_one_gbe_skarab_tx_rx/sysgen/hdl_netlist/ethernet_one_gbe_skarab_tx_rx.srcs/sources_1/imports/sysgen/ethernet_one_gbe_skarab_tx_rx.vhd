@@ -13,9 +13,9 @@ entity ethernet_one_gbe_skarab_tx_rx_bus_expand is
   );
 end ethernet_one_gbe_skarab_tx_rx_bus_expand;
 architecture structural of ethernet_one_gbe_skarab_tx_rx_bus_expand is 
+  signal slice4_y_net : std_logic_vector( 1-1 downto 0 );
   signal slice3_y_net : std_logic_vector( 1-1 downto 0 );
   signal slice2_y_net : std_logic_vector( 1-1 downto 0 );
-  signal slice4_y_net : std_logic_vector( 1-1 downto 0 );
   signal slice1_y_net : std_logic_vector( 1-1 downto 0 );
   signal black_box_tx_val_net : std_logic_vector( 4-1 downto 0 );
 begin
@@ -87,21 +87,22 @@ architecture structural of ethernet_one_gbe_skarab_tx_rx_clk_mhz is
   signal cast_gw_dout_net : std_logic_vector( 32-1 downto 0 );
   signal clk_net : std_logic;
   signal ce_net : std_logic;
+  signal assert_reg_dout_net : std_logic_vector( 32-1 downto 0 );
   signal io_delay_q_net : std_logic_vector( 32-1 downto 0 );
   signal reint1_output_port_net : std_logic_vector( 32-1 downto 0 );
-  signal assert_reg_dout_net : std_logic_vector( 32-1 downto 0 );
 begin
   constant15_op_net <= out_reg;
   skarab_tx_1gbe_tx_rx_valmir_clk_mhz_user_data_in <= cast_gw_dout_net;
   clk_net <= clk_1;
   ce_net <= ce_1;
-  io_delay : entity xil_defaultlib.sysgen_delay_700e35c45c 
+  assert_reg : entity xil_defaultlib.xlpassthrough 
+  generic map (
+    din_width => 32,
+    dout_width => 32
+  )
   port map (
-    clk => '0',
-    ce => '0',
-    clr => '0',
-    d => reint1_output_port_net,
-    q => io_delay_q_net
+    din => constant15_op_net,
+    dout => assert_reg_dout_net
   );
   cast_gw : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlconvert 
   generic map (
@@ -124,14 +125,13 @@ begin
     ce => ce_net,
     dout => cast_gw_dout_net
   );
-  assert_reg : entity xil_defaultlib.xlpassthrough 
-  generic map (
-    din_width => 32,
-    dout_width => 32
-  )
+  io_delay : entity xil_defaultlib.sysgen_delay_700e35c45c 
   port map (
-    din => constant15_op_net,
-    dout => assert_reg_dout_net
+    clk => '0',
+    ce => '0',
+    clr => '0',
+    d => reint1_output_port_net,
+    q => io_delay_q_net
   );
   reint1 : entity xil_defaultlib.sysgen_reinterpret_92d9e6753d 
   port map (
@@ -235,15 +235,15 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_buscreate_x1 is
+entity ethernet_one_gbe_skarab_tx_rx_buscreate_x2 is
   port (
     in1 : in std_logic_vector( 32-1 downto 0 );
     in2 : in std_logic_vector( 32-1 downto 0 );
     in3 : in std_logic_vector( 64-1 downto 0 );
     bus_out : out std_logic_vector( 128-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_buscreate_x1;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_buscreate_x1 is 
+end ethernet_one_gbe_skarab_tx_rx_buscreate_x2;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_buscreate_x2 is 
   signal concatenate_y_net : std_logic_vector( 128-1 downto 0 );
   signal assert_ctr0_dout_net : std_logic_vector( 32-1 downto 0 );
   signal assert_ramp0_dout_net : std_logic_vector( 32-1 downto 0 );
@@ -296,15 +296,15 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_edge_detect_x3 is
+entity ethernet_one_gbe_skarab_tx_rx_edge_detect_x4 is
   port (
     in_x0 : in std_logic_vector( 1-1 downto 0 );
     clk_1 : in std_logic;
     ce_1 : in std_logic;
     out_x0 : out std_logic_vector( 1-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_edge_detect_x3;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_edge_detect_x3 is 
+end ethernet_one_gbe_skarab_tx_rx_edge_detect_x4;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_edge_detect_x4 is 
   signal inverter_op_net : std_logic_vector( 1-1 downto 0 );
   signal edge_op_y_net : std_logic_vector( 1-1 downto 0 );
   signal slice3_y_net : std_logic_vector( 1-1 downto 0 );
@@ -354,7 +354,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_add_gen_x1 is
+entity ethernet_one_gbe_skarab_tx_rx_add_gen_x2 is
   port (
     din : in std_logic_vector( 128-1 downto 0 );
     we : in std_logic_vector( 1-1 downto 0 );
@@ -368,8 +368,8 @@ entity ethernet_one_gbe_skarab_tx_rx_add_gen_x1 is
     we_o : out std_logic_vector( 1-1 downto 0 );
     status : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_add_gen_x1;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_add_gen_x1 is 
+end ethernet_one_gbe_skarab_tx_rx_add_gen_x2;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_add_gen_x2 is 
   signal add_gen_op_net : std_logic_vector( 18-1 downto 0 );
   signal slice2_y_net : std_logic_vector( 13-1 downto 0 );
   signal delay6_q_net : std_logic_vector( 128-1 downto 0 );
@@ -408,7 +408,7 @@ begin
   edge_op_y_net <= init;
   clk_net <= clk_1;
   ce_net <= ce_1;
-  edge_detect : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_edge_detect_x3 
+  edge_detect : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_edge_detect_x4 
   port map (
     in_x0 => slice3_y_net,
     clk_1 => clk_net,
@@ -920,15 +920,15 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_edge_detect_x4 is
+entity ethernet_one_gbe_skarab_tx_rx_edge_detect_x5 is
   port (
     in_x0 : in std_logic_vector( 1-1 downto 0 );
     clk_1 : in std_logic;
     ce_1 : in std_logic;
     out_x0 : out std_logic_vector( 1-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_edge_detect_x4;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_edge_detect_x4 is 
+end ethernet_one_gbe_skarab_tx_rx_edge_detect_x5;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_edge_detect_x5 is 
   signal edge_op_y_net : std_logic_vector( 1-1 downto 0 );
   signal delay1_q_net : std_logic_vector( 1-1 downto 0 );
   signal clk_net : std_logic;
@@ -1041,7 +1041,7 @@ begin
     dout => data_choice_y_net,
     we_o => we_choice_y_net
   );
-  edge_detect : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_edge_detect_x4 
+  edge_detect : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_edge_detect_x5 
   port map (
     in_x0 => delay1_q_net,
     clk_1 => clk_net,
@@ -1216,15 +1216,15 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_calc_add_x2 is
+entity ethernet_one_gbe_skarab_tx_rx_calc_add_x1 is
   port (
     in_x0 : in std_logic_vector( 13-1 downto 0 );
     clk_1 : in std_logic;
     ce_1 : in std_logic;
     out_x0 : out std_logic_vector( 13-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_calc_add_x2;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_calc_add_x2 is 
+end ethernet_one_gbe_skarab_tx_rx_calc_add_x1;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_calc_add_x1 is 
   signal add_sub_s_net : std_logic_vector( 1-1 downto 0 );
   signal const_op_net : std_logic_vector( 1-1 downto 0 );
   signal lsw_y_net : std_logic_vector( 1-1 downto 0 );
@@ -1332,7 +1332,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_join_x1 is
+entity ethernet_one_gbe_skarab_tx_rx_join_x0 is
   port (
     in1 : in std_logic_vector( 32-1 downto 0 );
     in2 : in std_logic_vector( 32-1 downto 0 );
@@ -1340,8 +1340,8 @@ entity ethernet_one_gbe_skarab_tx_rx_join_x1 is
     in4 : in std_logic_vector( 32-1 downto 0 );
     bus_out : out std_logic_vector( 128-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_join_x1;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_join_x1 is 
+end ethernet_one_gbe_skarab_tx_rx_join_x0;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_join_x0 is 
   signal concatenate_y_net : std_logic_vector( 128-1 downto 0 );
   signal reinterpret1_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret2_output_port_net : std_logic_vector( 32-1 downto 0 );
@@ -1406,7 +1406,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_split_x1 is
+entity ethernet_one_gbe_skarab_tx_rx_split_x0 is
   port (
     bus_in : in std_logic_vector( 128-1 downto 0 );
     msb_out4 : out std_logic_vector( 32-1 downto 0 );
@@ -1414,8 +1414,8 @@ entity ethernet_one_gbe_skarab_tx_rx_split_x1 is
     out2 : out std_logic_vector( 32-1 downto 0 );
     lsb_out1 : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_split_x1;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_split_x1 is 
+end ethernet_one_gbe_skarab_tx_rx_split_x0;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_split_x0 is 
   signal reinterpret4_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret3_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret2_output_port_net : std_logic_vector( 32-1 downto 0 );
@@ -1513,13 +1513,13 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_munge_in_x2 is
+entity ethernet_one_gbe_skarab_tx_rx_munge_in_x1 is
   port (
     din : in std_logic_vector( 128-1 downto 0 );
     dout : out std_logic_vector( 128-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_munge_in_x2;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_munge_in_x2 is 
+end ethernet_one_gbe_skarab_tx_rx_munge_in_x1;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_munge_in_x1 is 
   signal reinterpret_out_output_port_net : std_logic_vector( 128-1 downto 0 );
   signal dat_del_q_net : std_logic_vector( 128-1 downto 0 );
   signal concatenate_y_net : std_logic_vector( 128-1 downto 0 );
@@ -1531,7 +1531,7 @@ architecture structural of ethernet_one_gbe_skarab_tx_rx_munge_in_x2 is
 begin
   dout <= reinterpret_out_output_port_net;
   dat_del_q_net <= din;
-  join_x3 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_join_x1 
+  join_x3 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_join_x0 
   port map (
     in1 => reinterpret1_output_port_net,
     in2 => reinterpret2_output_port_net,
@@ -1539,7 +1539,7 @@ begin
     in4 => reinterpret4_output_port_net,
     bus_out => concatenate_y_net
   );
-  split_x3 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_split_x1 
+  split_x3 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_split_x0 
   port map (
     bus_in => reinterpret_output_port_net,
     msb_out4 => reinterpret4_output_port_net,
@@ -1569,7 +1569,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_bram_x2 is
+entity ethernet_one_gbe_skarab_tx_rx_bram_x1 is
   port (
     addr : in std_logic_vector( 13-1 downto 0 );
     data_in : in std_logic_vector( 128-1 downto 0 );
@@ -1580,8 +1580,8 @@ entity ethernet_one_gbe_skarab_tx_rx_bram_x2 is
     ethernet_one_gbe_skarab_tx_rx_d3_ss_bram_data_in : out std_logic_vector( 128-1 downto 0 );
     ethernet_one_gbe_skarab_tx_rx_d3_ss_bram_we : out std_logic_vector( 1-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_bram_x2;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_bram_x2 is 
+end ethernet_one_gbe_skarab_tx_rx_bram_x1;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_bram_x1 is 
   signal add_del_q_net : std_logic_vector( 13-1 downto 0 );
   signal dat_del_q_net : std_logic_vector( 128-1 downto 0 );
   signal we_del_q_net : std_logic_vector( 1-1 downto 0 );
@@ -1601,14 +1601,14 @@ begin
   ethernet_one_gbe_skarab_tx_rx_d3_ss_bram_we <= convert_we_dout_net;
   clk_net <= clk_1;
   ce_net <= ce_1;
-  calc_add : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_calc_add_x2 
+  calc_add : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_calc_add_x1 
   port map (
     in_x0 => add_del_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
     out_x0 => mux_y_net
   );
-  munge_in : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_munge_in_x2 
+  munge_in : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_munge_in_x1 
   port map (
     din => dat_del_q_net,
     dout => reinterpret_out_output_port_net
@@ -1704,6 +1704,14 @@ begin
     d => skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out_net,
     q => io_delay_q_net
   );
+  reint1 : entity xil_defaultlib.sysgen_reinterpret_92d9e6753d 
+  port map (
+    clk => '0',
+    ce => '0',
+    clr => '0',
+    input_port => slice_reg_y_net,
+    output_port => reint1_output_port_net
+  );
   slice_reg : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlslice 
   generic map (
     new_lsb => 0,
@@ -1715,21 +1723,13 @@ begin
     x => io_delay_q_net,
     y => slice_reg_y_net
   );
-  reint1 : entity xil_defaultlib.sysgen_reinterpret_92d9e6753d 
-  port map (
-    clk => '0',
-    ce => '0',
-    clr => '0',
-    input_port => slice_reg_y_net,
-    output_port => reint1_output_port_net
-  );
 end structural;
 -- Generated from Simulink block ethernet_one_gbe_skarab_tx_rx/d3/ss/ctrl_combine
 library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x3 is
+entity ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x2 is
   port (
     in1 : in std_logic_vector( 28-1 downto 0 );
     in2 : in std_logic_vector( 1-1 downto 0 );
@@ -1737,8 +1737,8 @@ entity ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x3 is
     in4 : in std_logic_vector( 1-1 downto 0 );
     bus_out : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x3;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x3 is 
+end ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x2;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x2 is 
   signal concatenate_y_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret4_output_port_net_x0 : std_logic_vector( 28-1 downto 0 );
   signal circ_or_y_net : std_logic_vector( 1-1 downto 0 );
@@ -1803,7 +1803,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_ctrl_split_x3 is
+entity ethernet_one_gbe_skarab_tx_rx_ctrl_split_x2 is
   port (
     bus_in : in std_logic_vector( 32-1 downto 0 );
     msb_out4 : out std_logic_vector( 28-1 downto 0 );
@@ -1811,8 +1811,8 @@ entity ethernet_one_gbe_skarab_tx_rx_ctrl_split_x3 is
     out2 : out std_logic_vector( 2-1 downto 0 );
     lsb_out1 : out std_logic_vector( 1-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_ctrl_split_x3;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_split_x3 is 
+end ethernet_one_gbe_skarab_tx_rx_ctrl_split_x2;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_split_x2 is 
   signal reinterpret4_output_port_net : std_logic_vector( 28-1 downto 0 );
   signal slice3_y_net : std_logic_vector( 1-1 downto 0 );
   signal reinterpret2_output_port_net : std_logic_vector( 2-1 downto 0 );
@@ -1892,15 +1892,15 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_status_x3 is
+entity ethernet_one_gbe_skarab_tx_rx_status_x2 is
   port (
     out_reg : in std_logic_vector( 32-1 downto 0 );
     clk_1 : in std_logic;
     ce_1 : in std_logic;
     ethernet_one_gbe_skarab_tx_rx_d3_ss_status_user_data_in : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_status_x3;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_status_x3 is 
+end ethernet_one_gbe_skarab_tx_rx_status_x2;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_status_x2 is 
   signal concat_y_net : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net : std_logic_vector( 32-1 downto 0 );
   signal clk_net : std_logic;
@@ -1965,7 +1965,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_ss_x1 is
+entity ethernet_one_gbe_skarab_tx_rx_ss_x2 is
   port (
     din : in std_logic_vector( 128-1 downto 0 );
     we : in std_logic_vector( 1-1 downto 0 );
@@ -1981,8 +1981,8 @@ entity ethernet_one_gbe_skarab_tx_rx_ss_x1 is
     ethernet_one_gbe_skarab_tx_rx_d3_ss_bram_we : out std_logic_vector( 1-1 downto 0 );
     ethernet_one_gbe_skarab_tx_rx_d3_ss_status_user_data_in : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_ss_x1;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_ss_x1 is 
+end ethernet_one_gbe_skarab_tx_rx_ss_x2;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_ss_x2 is 
   signal arm_or_y_net : std_logic_vector( 1-1 downto 0 );
   signal concatenate_y_net : std_logic_vector( 128-1 downto 0 );
   signal delay32_q_net : std_logic_vector( 1-1 downto 0 );
@@ -2031,7 +2031,7 @@ begin
   ethernet_one_gbe_skarab_tx_rx_d3_ss_status_user_data_in <= cast_gw_dout_net;
   clk_net <= clk_1;
   ce_net <= ce_1;
-  add_gen : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_add_gen_x1 
+  add_gen : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_add_gen_x2 
   port map (
     din => data_choice_y_net,
     we => we_choice_y_net,
@@ -2059,7 +2059,7 @@ begin
     go => register6_q_net,
     init => edge_op_y_net_x0
   );
-  bram : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_bram_x2 
+  bram : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_bram_x1 
   port map (
     addr => add_del_q_net,
     data_in => dat_del_q_net,
@@ -2075,7 +2075,7 @@ begin
     skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out => skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out_net,
     in_reg => reint1_output_port_net
   );
-  ctrl_combine : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x3 
+  ctrl_combine : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x2 
   port map (
     in1 => reinterpret4_output_port_net,
     in2 => circ_or_y_net,
@@ -2083,7 +2083,7 @@ begin
     in4 => arm_or_y_net,
     bus_out => concatenate_y_net_x0
   );
-  ctrl_split : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_split_x3 
+  ctrl_split : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_split_x2 
   port map (
     bus_in => reint1_output_port_net,
     msb_out4 => reinterpret4_output_port_net,
@@ -2091,7 +2091,7 @@ begin
     out2 => reinterpret2_output_port_net,
     lsb_out1 => slice1_y_net
   );
-  status : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_status_x3 
+  status : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_status_x2 
   port map (
     out_reg => concat_y_net,
     clk_1 => clk_net,
@@ -2251,14 +2251,14 @@ begin
   goto_67410145_we4 <= logical6_y_net;
   clk_net <= clk_1;
   ce_net <= ce_1;
-  buscreate : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_buscreate_x1 
+  buscreate : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_buscreate_x2 
   port map (
     in1 => assert_ctr0_dout_net,
     in2 => assert_ramp0_dout_net,
     in3 => assert_walking0_dout_net,
     bus_out => concatenate_y_net
   );
-  ss : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ss_x1 
+  ss : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ss_x2 
   port map (
     din => concatenate_y_net,
     we => delay32_q_net,
@@ -2307,7 +2307,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_buscreate_x3 is
+entity ethernet_one_gbe_skarab_tx_rx_buscreate_x1 is
   port (
     in1 : in std_logic_vector( 32-1 downto 0 );
     in2 : in std_logic_vector( 32-1 downto 0 );
@@ -2315,8 +2315,8 @@ entity ethernet_one_gbe_skarab_tx_rx_buscreate_x3 is
     in4 : in std_logic_vector( 16-1 downto 0 );
     bus_out : out std_logic_vector( 128-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_buscreate_x3;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_buscreate_x3 is 
+end ethernet_one_gbe_skarab_tx_rx_buscreate_x1;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_buscreate_x1 is 
   signal assert_marker_dout_net : std_logic_vector( 16-1 downto 0 );
   signal reinterpret1_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret2_output_port_net : std_logic_vector( 32-1 downto 0 );
@@ -2439,7 +2439,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_add_gen_x3 is
+entity ethernet_one_gbe_skarab_tx_rx_add_gen_x1 is
   port (
     din : in std_logic_vector( 128-1 downto 0 );
     we : in std_logic_vector( 1-1 downto 0 );
@@ -2453,8 +2453,8 @@ entity ethernet_one_gbe_skarab_tx_rx_add_gen_x3 is
     we_o : out std_logic_vector( 1-1 downto 0 );
     status : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_add_gen_x3;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_add_gen_x3 is 
+end ethernet_one_gbe_skarab_tx_rx_add_gen_x1;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_add_gen_x1 is 
   signal inverter1_op_net : std_logic_vector( 1-1 downto 0 );
   signal logical1_y_net : std_logic_vector( 1-1 downto 0 );
   signal logical4_y_net : std_logic_vector( 1-1 downto 0 );
@@ -3789,6 +3789,14 @@ begin
     d => skarab_tx_1gbe_tx_rx_valmir_d4_ss_ctrl_user_data_out_net,
     q => io_delay_q_net
   );
+  reint1 : entity xil_defaultlib.sysgen_reinterpret_92d9e6753d 
+  port map (
+    clk => '0',
+    ce => '0',
+    clr => '0',
+    input_port => slice_reg_y_net,
+    output_port => reint1_output_port_net
+  );
   slice_reg : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlslice 
   generic map (
     new_lsb => 0,
@@ -3800,21 +3808,13 @@ begin
     x => io_delay_q_net,
     y => slice_reg_y_net
   );
-  reint1 : entity xil_defaultlib.sysgen_reinterpret_92d9e6753d 
-  port map (
-    clk => '0',
-    ce => '0',
-    clr => '0',
-    input_port => slice_reg_y_net,
-    output_port => reint1_output_port_net
-  );
 end structural;
 -- Generated from Simulink block ethernet_one_gbe_skarab_tx_rx/d4/ss/ctrl_combine
 library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x2 is
+entity ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x3 is
   port (
     in1 : in std_logic_vector( 28-1 downto 0 );
     in2 : in std_logic_vector( 1-1 downto 0 );
@@ -3822,8 +3822,8 @@ entity ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x2 is
     in4 : in std_logic_vector( 1-1 downto 0 );
     bus_out : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x2;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x2 is 
+end ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x3;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x3 is 
   signal concatenate_y_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret4_output_port_net_x0 : std_logic_vector( 28-1 downto 0 );
   signal circ_or_y_net : std_logic_vector( 1-1 downto 0 );
@@ -3888,7 +3888,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_ctrl_split_x2 is
+entity ethernet_one_gbe_skarab_tx_rx_ctrl_split_x3 is
   port (
     bus_in : in std_logic_vector( 32-1 downto 0 );
     msb_out4 : out std_logic_vector( 28-1 downto 0 );
@@ -3896,8 +3896,8 @@ entity ethernet_one_gbe_skarab_tx_rx_ctrl_split_x2 is
     out2 : out std_logic_vector( 2-1 downto 0 );
     lsb_out1 : out std_logic_vector( 1-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_ctrl_split_x2;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_split_x2 is 
+end ethernet_one_gbe_skarab_tx_rx_ctrl_split_x3;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_split_x3 is 
   signal reinterpret4_output_port_net : std_logic_vector( 28-1 downto 0 );
   signal slice3_y_net : std_logic_vector( 1-1 downto 0 );
   signal reinterpret2_output_port_net : std_logic_vector( 2-1 downto 0 );
@@ -3977,15 +3977,15 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_status_x2 is
+entity ethernet_one_gbe_skarab_tx_rx_status_x3 is
   port (
     out_reg : in std_logic_vector( 32-1 downto 0 );
     clk_1 : in std_logic;
     ce_1 : in std_logic;
     ethernet_one_gbe_skarab_tx_rx_d4_ss_status_user_data_in : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_status_x2;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_status_x2 is 
+end ethernet_one_gbe_skarab_tx_rx_status_x3;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_status_x3 is 
   signal concat_y_net : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net : std_logic_vector( 32-1 downto 0 );
   signal clk_net : std_logic;
@@ -4050,7 +4050,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_ss_x3 is
+entity ethernet_one_gbe_skarab_tx_rx_ss_x1 is
   port (
     din : in std_logic_vector( 128-1 downto 0 );
     we : in std_logic_vector( 1-1 downto 0 );
@@ -4066,8 +4066,8 @@ entity ethernet_one_gbe_skarab_tx_rx_ss_x3 is
     ethernet_one_gbe_skarab_tx_rx_d4_ss_bram_we : out std_logic_vector( 1-1 downto 0 );
     ethernet_one_gbe_skarab_tx_rx_d4_ss_status_user_data_in : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_ss_x3;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_ss_x3 is 
+end ethernet_one_gbe_skarab_tx_rx_ss_x1;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_ss_x1 is 
   signal arm_or_y_net : std_logic_vector( 1-1 downto 0 );
   signal concatenate_y_net : std_logic_vector( 128-1 downto 0 );
   signal delay32_q_net : std_logic_vector( 1-1 downto 0 );
@@ -4116,7 +4116,7 @@ begin
   ethernet_one_gbe_skarab_tx_rx_d4_ss_status_user_data_in <= cast_gw_dout_net;
   clk_net <= clk_1;
   ce_net <= ce_1;
-  add_gen : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_add_gen_x3 
+  add_gen : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_add_gen_x1 
   port map (
     din => data_choice_y_net,
     we => we_choice_y_net,
@@ -4160,7 +4160,7 @@ begin
     skarab_tx_1gbe_tx_rx_valmir_d4_ss_ctrl_user_data_out => skarab_tx_1gbe_tx_rx_valmir_d4_ss_ctrl_user_data_out_net,
     in_reg => reint1_output_port_net
   );
-  ctrl_combine : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x2 
+  ctrl_combine : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x3 
   port map (
     in1 => reinterpret4_output_port_net,
     in2 => circ_or_y_net,
@@ -4168,7 +4168,7 @@ begin
     in4 => arm_or_y_net,
     bus_out => concatenate_y_net_x0
   );
-  ctrl_split : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_split_x2 
+  ctrl_split : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_split_x3 
   port map (
     bus_in => reint1_output_port_net,
     msb_out4 => reinterpret4_output_port_net,
@@ -4176,7 +4176,7 @@ begin
     out2 => reinterpret2_output_port_net,
     lsb_out1 => slice1_y_net
   );
-  status : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_status_x2 
+  status : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_status_x3 
   port map (
     out_reg => concat_y_net,
     clk_1 => clk_net,
@@ -4340,7 +4340,7 @@ begin
   goto_67439936_we4 <= logical6_y_net;
   clk_net <= clk_1;
   ce_net <= ce_1;
-  buscreate : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_buscreate_x3 
+  buscreate : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_buscreate_x1 
   port map (
     in1 => assert_ctr1_dout_net,
     in2 => assert_ramp1_dout_net,
@@ -4348,7 +4348,7 @@ begin
     in4 => assert_marker_dout_net,
     bus_out => concatenate_y_net
   );
-  ss : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ss_x3 
+  ss : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ss_x1 
   port map (
     din => concatenate_y_net,
     we => delay32_q_net,
@@ -4406,7 +4406,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_buscreate_x2 is
+entity ethernet_one_gbe_skarab_tx_rx_buscreate_x3 is
   port (
     in1 : in std_logic_vector( 32-1 downto 0 );
     in2 : in std_logic_vector( 16-1 downto 0 );
@@ -4418,8 +4418,8 @@ entity ethernet_one_gbe_skarab_tx_rx_buscreate_x2 is
     in8 : in std_logic_vector( 1-1 downto 0 );
     bus_out : out std_logic_vector( 103-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_buscreate_x2;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_buscreate_x2 is 
+end ethernet_one_gbe_skarab_tx_rx_buscreate_x3;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_buscreate_x3 is 
   signal concatenate_y_net : std_logic_vector( 103-1 downto 0 );
   signal assert_src_ip_dout_net : std_logic_vector( 32-1 downto 0 );
   signal assert_src_port_dout_net : std_logic_vector( 16-1 downto 0 );
@@ -4590,7 +4590,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_add_gen_x2 is
+entity ethernet_one_gbe_skarab_tx_rx_add_gen_x3 is
   port (
     din : in std_logic_vector( 128-1 downto 0 );
     we : in std_logic_vector( 1-1 downto 0 );
@@ -4604,8 +4604,8 @@ entity ethernet_one_gbe_skarab_tx_rx_add_gen_x2 is
     we_o : out std_logic_vector( 1-1 downto 0 );
     status : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_add_gen_x2;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_add_gen_x2 is 
+end ethernet_one_gbe_skarab_tx_rx_add_gen_x3;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_add_gen_x3 is 
   signal we_choice_y_net : std_logic_vector( 1-1 downto 0 );
   signal register6_q_net : std_logic_vector( 1-1 downto 0 );
   signal never_op_net : std_logic_vector( 1-1 downto 0 );
@@ -5452,15 +5452,15 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_calc_add_x0 is
+entity ethernet_one_gbe_skarab_tx_rx_calc_add_x2 is
   port (
     in_x0 : in std_logic_vector( 13-1 downto 0 );
     clk_1 : in std_logic;
     ce_1 : in std_logic;
     out_x0 : out std_logic_vector( 13-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_calc_add_x0;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_calc_add_x0 is 
+end ethernet_one_gbe_skarab_tx_rx_calc_add_x2;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_calc_add_x2 is 
   signal mux_y_net : std_logic_vector( 13-1 downto 0 );
   signal add_del_q_net : std_logic_vector( 13-1 downto 0 );
   signal clk_net : std_logic;
@@ -5568,7 +5568,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_join is
+entity ethernet_one_gbe_skarab_tx_rx_join_x1 is
   port (
     in1 : in std_logic_vector( 32-1 downto 0 );
     in2 : in std_logic_vector( 32-1 downto 0 );
@@ -5576,8 +5576,8 @@ entity ethernet_one_gbe_skarab_tx_rx_join is
     in4 : in std_logic_vector( 32-1 downto 0 );
     bus_out : out std_logic_vector( 128-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_join;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_join is 
+end ethernet_one_gbe_skarab_tx_rx_join_x1;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_join_x1 is 
   signal concatenate_y_net : std_logic_vector( 128-1 downto 0 );
   signal reinterpret1_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret2_output_port_net : std_logic_vector( 32-1 downto 0 );
@@ -5642,7 +5642,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_split is
+entity ethernet_one_gbe_skarab_tx_rx_split_x1 is
   port (
     bus_in : in std_logic_vector( 128-1 downto 0 );
     msb_out4 : out std_logic_vector( 32-1 downto 0 );
@@ -5650,8 +5650,8 @@ entity ethernet_one_gbe_skarab_tx_rx_split is
     out2 : out std_logic_vector( 32-1 downto 0 );
     lsb_out1 : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_split;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_split is 
+end ethernet_one_gbe_skarab_tx_rx_split_x1;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_split_x1 is 
   signal reinterpret4_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret3_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret2_output_port_net : std_logic_vector( 32-1 downto 0 );
@@ -5749,13 +5749,13 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_munge_in_x0 is
+entity ethernet_one_gbe_skarab_tx_rx_munge_in_x2 is
   port (
     din : in std_logic_vector( 128-1 downto 0 );
     dout : out std_logic_vector( 128-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_munge_in_x0;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_munge_in_x0 is 
+end ethernet_one_gbe_skarab_tx_rx_munge_in_x2;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_munge_in_x2 is 
   signal reinterpret_out_output_port_net : std_logic_vector( 128-1 downto 0 );
   signal dat_del_q_net : std_logic_vector( 128-1 downto 0 );
   signal concatenate_y_net : std_logic_vector( 128-1 downto 0 );
@@ -5767,7 +5767,7 @@ architecture structural of ethernet_one_gbe_skarab_tx_rx_munge_in_x0 is
 begin
   dout <= reinterpret_out_output_port_net;
   dat_del_q_net <= din;
-  join_x3 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_join 
+  join_x3 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_join_x1 
   port map (
     in1 => reinterpret1_output_port_net,
     in2 => reinterpret2_output_port_net,
@@ -5775,7 +5775,7 @@ begin
     in4 => reinterpret4_output_port_net,
     bus_out => concatenate_y_net
   );
-  split_x3 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_split 
+  split_x3 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_split_x1 
   port map (
     bus_in => reinterpret_output_port_net,
     msb_out4 => reinterpret4_output_port_net,
@@ -5805,7 +5805,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_bram_x0 is
+entity ethernet_one_gbe_skarab_tx_rx_bram_x2 is
   port (
     addr : in std_logic_vector( 13-1 downto 0 );
     data_in : in std_logic_vector( 128-1 downto 0 );
@@ -5816,8 +5816,8 @@ entity ethernet_one_gbe_skarab_tx_rx_bram_x0 is
     ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_data_in : out std_logic_vector( 128-1 downto 0 );
     ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_we : out std_logic_vector( 1-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_bram_x0;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_bram_x0 is 
+end ethernet_one_gbe_skarab_tx_rx_bram_x2;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_bram_x2 is 
   signal add_del_q_net : std_logic_vector( 13-1 downto 0 );
   signal dat_del_q_net : std_logic_vector( 128-1 downto 0 );
   signal we_del_q_net : std_logic_vector( 1-1 downto 0 );
@@ -5837,14 +5837,14 @@ begin
   ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_we <= convert_we_dout_net;
   clk_net <= clk_1;
   ce_net <= ce_1;
-  calc_add : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_calc_add_x0 
+  calc_add : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_calc_add_x2 
   port map (
     in_x0 => add_del_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
     out_x0 => mux_y_net
   );
-  munge_in : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_munge_in_x0 
+  munge_in : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_munge_in_x2 
   port map (
     din => dat_del_q_net,
     dout => reinterpret_out_output_port_net
@@ -5918,13 +5918,13 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_ctrl is
+entity ethernet_one_gbe_skarab_tx_rx_ctrl_x0 is
   port (
     skarab_tx_1gbe_tx_rx_valmir_d5_ss_ctrl_user_data_out : in std_logic_vector( 32-1 downto 0 );
     in_reg : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_ctrl;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl is 
+end ethernet_one_gbe_skarab_tx_rx_ctrl_x0;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_x0 is 
   signal reint1_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal skarab_tx_1gbe_tx_rx_valmir_d5_ss_ctrl_user_data_out_net : std_logic_vector( 32-1 downto 0 );
   signal io_delay_q_net : std_logic_vector( 32-1 downto 0 );
@@ -5940,6 +5940,14 @@ begin
     d => skarab_tx_1gbe_tx_rx_valmir_d5_ss_ctrl_user_data_out_net,
     q => io_delay_q_net
   );
+  reint1 : entity xil_defaultlib.sysgen_reinterpret_92d9e6753d 
+  port map (
+    clk => '0',
+    ce => '0',
+    clr => '0',
+    input_port => slice_reg_y_net,
+    output_port => reint1_output_port_net
+  );
   slice_reg : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlslice 
   generic map (
     new_lsb => 0,
@@ -5951,21 +5959,13 @@ begin
     x => io_delay_q_net,
     y => slice_reg_y_net
   );
-  reint1 : entity xil_defaultlib.sysgen_reinterpret_92d9e6753d 
-  port map (
-    clk => '0',
-    ce => '0',
-    clr => '0',
-    input_port => slice_reg_y_net,
-    output_port => reint1_output_port_net
-  );
 end structural;
 -- Generated from Simulink block ethernet_one_gbe_skarab_tx_rx/d5/ss/ctrl_combine
 library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_ctrl_combine is
+entity ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x0 is
   port (
     in1 : in std_logic_vector( 28-1 downto 0 );
     in2 : in std_logic_vector( 1-1 downto 0 );
@@ -5973,8 +5973,8 @@ entity ethernet_one_gbe_skarab_tx_rx_ctrl_combine is
     in4 : in std_logic_vector( 1-1 downto 0 );
     bus_out : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_ctrl_combine;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_combine is 
+end ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x0;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x0 is 
   signal concatenate_y_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret4_output_port_net_x0 : std_logic_vector( 28-1 downto 0 );
   signal circ_or_y_net : std_logic_vector( 1-1 downto 0 );
@@ -6039,7 +6039,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_ctrl_split is
+entity ethernet_one_gbe_skarab_tx_rx_ctrl_split_x0 is
   port (
     bus_in : in std_logic_vector( 32-1 downto 0 );
     msb_out4 : out std_logic_vector( 28-1 downto 0 );
@@ -6047,8 +6047,8 @@ entity ethernet_one_gbe_skarab_tx_rx_ctrl_split is
     out2 : out std_logic_vector( 2-1 downto 0 );
     lsb_out1 : out std_logic_vector( 1-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_ctrl_split;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_split is 
+end ethernet_one_gbe_skarab_tx_rx_ctrl_split_x0;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_split_x0 is 
   signal reinterpret4_output_port_net : std_logic_vector( 28-1 downto 0 );
   signal slice3_y_net : std_logic_vector( 1-1 downto 0 );
   signal reinterpret2_output_port_net : std_logic_vector( 2-1 downto 0 );
@@ -6128,15 +6128,15 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_status is
+entity ethernet_one_gbe_skarab_tx_rx_status_x0 is
   port (
     out_reg : in std_logic_vector( 32-1 downto 0 );
     clk_1 : in std_logic;
     ce_1 : in std_logic;
     ethernet_one_gbe_skarab_tx_rx_d5_ss_status_user_data_in : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_status;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_status is 
+end ethernet_one_gbe_skarab_tx_rx_status_x0;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_status_x0 is 
   signal concat_y_net : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net : std_logic_vector( 32-1 downto 0 );
   signal clk_net : std_logic;
@@ -6201,7 +6201,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_ss_x2 is
+entity ethernet_one_gbe_skarab_tx_rx_ss_x3 is
   port (
     din : in std_logic_vector( 103-1 downto 0 );
     we : in std_logic_vector( 1-1 downto 0 );
@@ -6217,8 +6217,8 @@ entity ethernet_one_gbe_skarab_tx_rx_ss_x2 is
     ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_we : out std_logic_vector( 1-1 downto 0 );
     ethernet_one_gbe_skarab_tx_rx_d5_ss_status_user_data_in : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_ss_x2;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_ss_x2 is 
+end ethernet_one_gbe_skarab_tx_rx_ss_x3;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_ss_x3 is 
   signal arm_or_y_net : std_logic_vector( 1-1 downto 0 );
   signal concatenate_y_net : std_logic_vector( 103-1 downto 0 );
   signal delay32_q_net : std_logic_vector( 1-1 downto 0 );
@@ -6267,7 +6267,7 @@ begin
   ethernet_one_gbe_skarab_tx_rx_d5_ss_status_user_data_in <= cast_gw_dout_net;
   clk_net <= clk_1;
   ce_net <= ce_1;
-  add_gen : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_add_gen_x2 
+  add_gen : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_add_gen_x3 
   port map (
     din => data_choice_y_net,
     we => we_choice_y_net,
@@ -6295,7 +6295,7 @@ begin
     go => register6_q_net,
     init => edge_op_y_net_x0
   );
-  bram : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_bram_x0 
+  bram : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_bram_x2 
   port map (
     addr => add_del_q_net,
     data_in => dat_del_q_net,
@@ -6306,12 +6306,12 @@ begin
     ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_data_in => convert_din1_dout_net,
     ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_we => convert_we_dout_net
   );
-  ctrl : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl 
+  ctrl : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_x0 
   port map (
     skarab_tx_1gbe_tx_rx_valmir_d5_ss_ctrl_user_data_out => skarab_tx_1gbe_tx_rx_valmir_d5_ss_ctrl_user_data_out_net,
     in_reg => reint1_output_port_net
   );
-  ctrl_combine : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_combine 
+  ctrl_combine : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x0 
   port map (
     in1 => reinterpret4_output_port_net,
     in2 => circ_or_y_net,
@@ -6319,7 +6319,7 @@ begin
     in4 => arm_or_y_net,
     bus_out => concatenate_y_net_x0
   );
-  ctrl_split : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_split 
+  ctrl_split : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_split_x0 
   port map (
     bus_in => reint1_output_port_net,
     msb_out4 => reinterpret4_output_port_net,
@@ -6327,7 +6327,7 @@ begin
     out2 => reinterpret2_output_port_net,
     lsb_out1 => slice1_y_net
   );
-  status : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_status 
+  status : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_status_x0 
   port map (
     out_reg => concat_y_net,
     clk_1 => clk_net,
@@ -6462,8 +6462,8 @@ architecture structural of ethernet_one_gbe_skarab_tx_rx_d5 is
   signal delay34_q_net : std_logic_vector( 16-1 downto 0 );
   signal delay37_q_net : std_logic_vector( 1-1 downto 0 );
   signal delay39_q_net : std_logic_vector( 1-1 downto 0 );
-  signal constant5_op_net : std_logic_vector( 32-1 downto 0 );
-  signal constant17_op_net : std_logic_vector( 16-1 downto 0 );
+  signal delay23_q_net : std_logic_vector( 32-1 downto 0 );
+  signal delay24_q_net : std_logic_vector( 16-1 downto 0 );
   signal concatenate_y_net : std_logic_vector( 4-1 downto 0 );
   signal delay36_q_net : std_logic_vector( 1-1 downto 0 );
   signal delay32_q_net : std_logic_vector( 1-1 downto 0 );
@@ -6492,8 +6492,8 @@ begin
   delay34_q_net <= in_src_port;
   delay37_q_net <= in_badframe;
   delay39_q_net <= in_overrun;
-  constant5_op_net <= in_dest_ip;
-  constant17_op_net <= in_dest_port;
+  delay23_q_net <= in_dest_ip;
+  delay24_q_net <= in_dest_port;
   concatenate_y_net <= in_valid_raw;
   delay36_q_net <= in_eof;
   delay32_q_net <= we;
@@ -6507,7 +6507,7 @@ begin
   goto_67469727_we4 <= logical6_y_net;
   clk_net <= clk_1;
   ce_net <= ce_1;
-  buscreate : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_buscreate_x2 
+  buscreate : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_buscreate_x3 
   port map (
     in1 => assert_src_ip_dout_net,
     in2 => assert_src_port_dout_net,
@@ -6519,7 +6519,7 @@ begin
     in8 => assert_eof_dout_net,
     bus_out => concatenate_y_net_x0
   );
-  ss : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ss_x2 
+  ss : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ss_x3 
   port map (
     din => concatenate_y_net_x0,
     we => delay32_q_net,
@@ -6550,7 +6550,7 @@ begin
     dout_width => 32
   )
   port map (
-    din => constant5_op_net,
+    din => delay23_q_net,
     dout => assert_dest_ip_dout_net
   );
   assert_dest_port : entity xil_defaultlib.xlpassthrough 
@@ -6559,7 +6559,7 @@ begin
     dout_width => 16
   )
   port map (
-    din => constant17_op_net,
+    din => delay24_q_net,
     dout => assert_dest_port_dout_net
   );
   assert_eof : entity xil_defaultlib.xlpassthrough 
@@ -6686,15 +6686,15 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_edge_detect_x5 is
+entity ethernet_one_gbe_skarab_tx_rx_edge_detect_x1 is
   port (
     in_x0 : in std_logic_vector( 1-1 downto 0 );
     clk_1 : in std_logic;
     ce_1 : in std_logic;
     out_x0 : out std_logic_vector( 1-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_edge_detect_x5;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_edge_detect_x5 is 
+end ethernet_one_gbe_skarab_tx_rx_edge_detect_x1;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_edge_detect_x1 is 
   signal edge_op_y_net : std_logic_vector( 1-1 downto 0 );
   signal delay27_q_net : std_logic_vector( 1-1 downto 0 );
   signal clk_net : std_logic;
@@ -8380,13 +8380,13 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_ctrl_x1 is
+entity ethernet_one_gbe_skarab_tx_rx_ctrl is
   port (
     skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs1_ss_ctrl_user_data_out : in std_logic_vector( 32-1 downto 0 );
     in_reg : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_ctrl_x1;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_x1 is 
+end ethernet_one_gbe_skarab_tx_rx_ctrl;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl is 
   signal reint1_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs1_ss_ctrl_user_data_out_net : std_logic_vector( 32-1 downto 0 );
   signal io_delay_q_net : std_logic_vector( 32-1 downto 0 );
@@ -8402,6 +8402,14 @@ begin
     d => skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs1_ss_ctrl_user_data_out_net,
     q => io_delay_q_net
   );
+  reint1 : entity xil_defaultlib.sysgen_reinterpret_92d9e6753d 
+  port map (
+    clk => '0',
+    ce => '0',
+    clr => '0',
+    input_port => slice_reg_y_net,
+    output_port => reint1_output_port_net
+  );
   slice_reg : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlslice 
   generic map (
     new_lsb => 0,
@@ -8413,21 +8421,13 @@ begin
     x => io_delay_q_net,
     y => slice_reg_y_net
   );
-  reint1 : entity xil_defaultlib.sysgen_reinterpret_92d9e6753d 
-  port map (
-    clk => '0',
-    ce => '0',
-    clr => '0',
-    input_port => slice_reg_y_net,
-    output_port => reint1_output_port_net
-  );
 end structural;
 -- Generated from Simulink block ethernet_one_gbe_skarab_tx_rx/pkt_ctrs1/ss/ctrl_combine
 library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x1 is
+entity ethernet_one_gbe_skarab_tx_rx_ctrl_combine is
   port (
     in1 : in std_logic_vector( 28-1 downto 0 );
     in2 : in std_logic_vector( 1-1 downto 0 );
@@ -8435,8 +8435,8 @@ entity ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x1 is
     in4 : in std_logic_vector( 1-1 downto 0 );
     bus_out : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x1;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x1 is 
+end ethernet_one_gbe_skarab_tx_rx_ctrl_combine;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_combine is 
   signal concatenate_y_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret4_output_port_net_x0 : std_logic_vector( 28-1 downto 0 );
   signal circ_or_y_net : std_logic_vector( 1-1 downto 0 );
@@ -8501,7 +8501,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_ctrl_split_x1 is
+entity ethernet_one_gbe_skarab_tx_rx_ctrl_split is
   port (
     bus_in : in std_logic_vector( 32-1 downto 0 );
     msb_out4 : out std_logic_vector( 28-1 downto 0 );
@@ -8509,8 +8509,8 @@ entity ethernet_one_gbe_skarab_tx_rx_ctrl_split_x1 is
     out2 : out std_logic_vector( 2-1 downto 0 );
     lsb_out1 : out std_logic_vector( 1-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_ctrl_split_x1;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_split_x1 is 
+end ethernet_one_gbe_skarab_tx_rx_ctrl_split;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_split is 
   signal reinterpret4_output_port_net : std_logic_vector( 28-1 downto 0 );
   signal slice3_y_net : std_logic_vector( 1-1 downto 0 );
   signal reinterpret2_output_port_net : std_logic_vector( 2-1 downto 0 );
@@ -8590,15 +8590,15 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_status_x1 is
+entity ethernet_one_gbe_skarab_tx_rx_status is
   port (
     out_reg : in std_logic_vector( 32-1 downto 0 );
     clk_1 : in std_logic;
     ce_1 : in std_logic;
     ethernet_one_gbe_skarab_tx_rx_pkt_ctrs1_ss_status_user_data_in : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_status_x1;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_status_x1 is 
+end ethernet_one_gbe_skarab_tx_rx_status;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_status is 
   signal concat_y_net : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net : std_logic_vector( 32-1 downto 0 );
   signal clk_net : std_logic;
@@ -8764,12 +8764,12 @@ begin
     ethernet_one_gbe_skarab_tx_rx_pkt_ctrs1_ss_bram_data_in => convert_din1_dout_net,
     ethernet_one_gbe_skarab_tx_rx_pkt_ctrs1_ss_bram_we => convert_we_dout_net
   );
-  ctrl : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_x1 
+  ctrl : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl 
   port map (
     skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs1_ss_ctrl_user_data_out => skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs1_ss_ctrl_user_data_out_net,
     in_reg => reint1_output_port_net
   );
-  ctrl_combine : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x1 
+  ctrl_combine : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_combine 
   port map (
     in1 => reinterpret4_output_port_net,
     in2 => circ_or_y_net,
@@ -8777,7 +8777,7 @@ begin
     in4 => arm_or_y_net,
     bus_out => concatenate_y_net
   );
-  ctrl_split : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_split_x1 
+  ctrl_split : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_split 
   port map (
     bus_in => reint1_output_port_net,
     msb_out4 => reinterpret4_output_port_net,
@@ -8785,7 +8785,7 @@ begin
     out2 => reinterpret2_output_port_net,
     lsb_out1 => slice1_y_net
   );
-  status : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_status_x1 
+  status : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_status 
   port map (
     out_reg => concat_y_net,
     clk_1 => clk_net,
@@ -9017,15 +9017,15 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_edge_detect_x2 is
+entity ethernet_one_gbe_skarab_tx_rx_edge_detect_x3 is
   port (
     in_x0 : in std_logic_vector( 1-1 downto 0 );
     clk_1 : in std_logic;
     ce_1 : in std_logic;
     out_x0 : out std_logic_vector( 1-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_edge_detect_x2;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_edge_detect_x2 is 
+end ethernet_one_gbe_skarab_tx_rx_edge_detect_x3;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_edge_detect_x3 is 
   signal edge_op_y_net : std_logic_vector( 1-1 downto 0 );
   signal slice3_y_net : std_logic_vector( 1-1 downto 0 );
   signal clk_net : std_logic;
@@ -9129,7 +9129,7 @@ begin
   edge_op_y_net <= init;
   clk_net <= clk_1;
   ce_net <= ce_1;
-  edge_detect : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_edge_detect_x2 
+  edge_detect : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_edge_detect_x3 
   port map (
     in_x0 => slice3_y_net,
     clk_1 => clk_net,
@@ -9641,15 +9641,15 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_edge_detect_x1 is
+entity ethernet_one_gbe_skarab_tx_rx_edge_detect_x2 is
   port (
     in_x0 : in std_logic_vector( 1-1 downto 0 );
     clk_1 : in std_logic;
     ce_1 : in std_logic;
     out_x0 : out std_logic_vector( 1-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_edge_detect_x1;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_edge_detect_x1 is 
+end ethernet_one_gbe_skarab_tx_rx_edge_detect_x2;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_edge_detect_x2 is 
   signal edge_op_y_net : std_logic_vector( 1-1 downto 0 );
   signal delay1_q_net : std_logic_vector( 1-1 downto 0 );
   signal clk_net : std_logic;
@@ -9762,7 +9762,7 @@ begin
     dout => data_choice_y_net,
     we_o => we_choice_y_net
   );
-  edge_detect : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_edge_detect_x1 
+  edge_detect : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_edge_detect_x2 
   port map (
     in_x0 => delay1_q_net,
     clk_1 => clk_net,
@@ -9937,15 +9937,15 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_calc_add_x1 is
+entity ethernet_one_gbe_skarab_tx_rx_calc_add_x0 is
   port (
     in_x0 : in std_logic_vector( 13-1 downto 0 );
     clk_1 : in std_logic;
     ce_1 : in std_logic;
     out_x0 : out std_logic_vector( 13-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_calc_add_x1;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_calc_add_x1 is 
+end ethernet_one_gbe_skarab_tx_rx_calc_add_x0;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_calc_add_x0 is 
   signal mux_y_net : std_logic_vector( 13-1 downto 0 );
   signal add_del_q_net : std_logic_vector( 13-1 downto 0 );
   signal clk_net : std_logic;
@@ -10053,14 +10053,14 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_join_x0 is
+entity ethernet_one_gbe_skarab_tx_rx_join is
   port (
     in1 : in std_logic_vector( 32-1 downto 0 );
     in2 : in std_logic_vector( 32-1 downto 0 );
     bus_out : out std_logic_vector( 64-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_join_x0;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_join_x0 is 
+end ethernet_one_gbe_skarab_tx_rx_join;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_join is 
   signal concatenate_y_net : std_logic_vector( 64-1 downto 0 );
   signal reinterpret1_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret2_output_port_net : std_logic_vector( 32-1 downto 0 );
@@ -10101,14 +10101,14 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_split_x0 is
+entity ethernet_one_gbe_skarab_tx_rx_split is
   port (
     bus_in : in std_logic_vector( 64-1 downto 0 );
     msb_out2 : out std_logic_vector( 32-1 downto 0 );
     lsb_out1 : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_split_x0;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_split_x0 is 
+end ethernet_one_gbe_skarab_tx_rx_split;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_split is 
   signal reinterpret2_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret1_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret_output_port_net : std_logic_vector( 64-1 downto 0 );
@@ -10162,13 +10162,13 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_munge_in_x1 is
+entity ethernet_one_gbe_skarab_tx_rx_munge_in_x0 is
   port (
     din : in std_logic_vector( 64-1 downto 0 );
     dout : out std_logic_vector( 64-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_munge_in_x1;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_munge_in_x1 is 
+end ethernet_one_gbe_skarab_tx_rx_munge_in_x0;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_munge_in_x0 is 
   signal reinterpret_out_output_port_net : std_logic_vector( 64-1 downto 0 );
   signal dat_del_q_net : std_logic_vector( 64-1 downto 0 );
   signal concatenate_y_net : std_logic_vector( 64-1 downto 0 );
@@ -10178,13 +10178,13 @@ architecture structural of ethernet_one_gbe_skarab_tx_rx_munge_in_x1 is
 begin
   dout <= reinterpret_out_output_port_net;
   dat_del_q_net <= din;
-  join_x3 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_join_x0 
+  join_x3 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_join 
   port map (
     in1 => reinterpret1_output_port_net,
     in2 => reinterpret2_output_port_net,
     bus_out => concatenate_y_net
   );
-  split_x3 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_split_x0 
+  split_x3 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_split 
   port map (
     bus_in => reinterpret_output_port_net,
     msb_out2 => reinterpret2_output_port_net,
@@ -10212,7 +10212,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_bram_x1 is
+entity ethernet_one_gbe_skarab_tx_rx_bram_x0 is
   port (
     addr : in std_logic_vector( 13-1 downto 0 );
     data_in : in std_logic_vector( 64-1 downto 0 );
@@ -10223,8 +10223,8 @@ entity ethernet_one_gbe_skarab_tx_rx_bram_x1 is
     ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_bram_data_in : out std_logic_vector( 64-1 downto 0 );
     ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_bram_we : out std_logic_vector( 1-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_bram_x1;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_bram_x1 is 
+end ethernet_one_gbe_skarab_tx_rx_bram_x0;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_bram_x0 is 
   signal add_del_q_net : std_logic_vector( 13-1 downto 0 );
   signal dat_del_q_net : std_logic_vector( 64-1 downto 0 );
   signal we_del_q_net : std_logic_vector( 1-1 downto 0 );
@@ -10244,14 +10244,14 @@ begin
   ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_bram_we <= convert_we_dout_net;
   clk_net <= clk_1;
   ce_net <= ce_1;
-  calc_add : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_calc_add_x1 
+  calc_add : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_calc_add_x0 
   port map (
     in_x0 => add_del_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
     out_x0 => mux_y_net
   );
-  munge_in : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_munge_in_x1 
+  munge_in : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_munge_in_x0 
   port map (
     din => dat_del_q_net,
     dout => reinterpret_out_output_port_net
@@ -10325,13 +10325,13 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_ctrl_x0 is
+entity ethernet_one_gbe_skarab_tx_rx_ctrl_x1 is
   port (
     skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs_compare1_ss_ctrl_user_data_out : in std_logic_vector( 32-1 downto 0 );
     in_reg : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_ctrl_x0;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_x0 is 
+end ethernet_one_gbe_skarab_tx_rx_ctrl_x1;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_x1 is 
   signal reint1_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs_compare1_ss_ctrl_user_data_out_net : std_logic_vector( 32-1 downto 0 );
   signal io_delay_q_net : std_logic_vector( 32-1 downto 0 );
@@ -10347,6 +10347,14 @@ begin
     d => skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs_compare1_ss_ctrl_user_data_out_net,
     q => io_delay_q_net
   );
+  reint1 : entity xil_defaultlib.sysgen_reinterpret_92d9e6753d 
+  port map (
+    clk => '0',
+    ce => '0',
+    clr => '0',
+    input_port => slice_reg_y_net,
+    output_port => reint1_output_port_net
+  );
   slice_reg : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlslice 
   generic map (
     new_lsb => 0,
@@ -10358,21 +10366,13 @@ begin
     x => io_delay_q_net,
     y => slice_reg_y_net
   );
-  reint1 : entity xil_defaultlib.sysgen_reinterpret_92d9e6753d 
-  port map (
-    clk => '0',
-    ce => '0',
-    clr => '0',
-    input_port => slice_reg_y_net,
-    output_port => reint1_output_port_net
-  );
 end structural;
 -- Generated from Simulink block ethernet_one_gbe_skarab_tx_rx/pkt_ctrs_compare1/ss/ctrl_combine
 library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x0 is
+entity ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x1 is
   port (
     in1 : in std_logic_vector( 28-1 downto 0 );
     in2 : in std_logic_vector( 1-1 downto 0 );
@@ -10380,8 +10380,8 @@ entity ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x0 is
     in4 : in std_logic_vector( 1-1 downto 0 );
     bus_out : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x0;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x0 is 
+end ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x1;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x1 is 
   signal concatenate_y_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret4_output_port_net_x0 : std_logic_vector( 28-1 downto 0 );
   signal circ_or_y_net : std_logic_vector( 1-1 downto 0 );
@@ -10446,7 +10446,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_ctrl_split_x0 is
+entity ethernet_one_gbe_skarab_tx_rx_ctrl_split_x1 is
   port (
     bus_in : in std_logic_vector( 32-1 downto 0 );
     msb_out4 : out std_logic_vector( 28-1 downto 0 );
@@ -10454,8 +10454,8 @@ entity ethernet_one_gbe_skarab_tx_rx_ctrl_split_x0 is
     out2 : out std_logic_vector( 2-1 downto 0 );
     lsb_out1 : out std_logic_vector( 1-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_ctrl_split_x0;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_split_x0 is 
+end ethernet_one_gbe_skarab_tx_rx_ctrl_split_x1;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_ctrl_split_x1 is 
   signal reinterpret4_output_port_net : std_logic_vector( 28-1 downto 0 );
   signal slice3_y_net : std_logic_vector( 1-1 downto 0 );
   signal reinterpret2_output_port_net : std_logic_vector( 2-1 downto 0 );
@@ -10535,15 +10535,15 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity ethernet_one_gbe_skarab_tx_rx_status_x0 is
+entity ethernet_one_gbe_skarab_tx_rx_status_x1 is
   port (
     out_reg : in std_logic_vector( 32-1 downto 0 );
     clk_1 : in std_logic;
     ce_1 : in std_logic;
     ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_status_user_data_in : out std_logic_vector( 32-1 downto 0 )
   );
-end ethernet_one_gbe_skarab_tx_rx_status_x0;
-architecture structural of ethernet_one_gbe_skarab_tx_rx_status_x0 is 
+end ethernet_one_gbe_skarab_tx_rx_status_x1;
+architecture structural of ethernet_one_gbe_skarab_tx_rx_status_x1 is 
   signal concat_y_net : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net : std_logic_vector( 32-1 downto 0 );
   signal clk_net : std_logic;
@@ -10702,7 +10702,7 @@ begin
     go => register6_q_net,
     init => edge_op_y_net_x0
   );
-  bram : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_bram_x1 
+  bram : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_bram_x0 
   port map (
     addr => add_del_q_net,
     data_in => dat_del_q_net,
@@ -10713,12 +10713,12 @@ begin
     ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_bram_data_in => convert_din1_dout_net,
     ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_bram_we => convert_we_dout_net
   );
-  ctrl : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_x0 
+  ctrl : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_x1 
   port map (
     skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs_compare1_ss_ctrl_user_data_out => skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs_compare1_ss_ctrl_user_data_out_net,
     in_reg => reint1_output_port_net
   );
-  ctrl_combine : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x0 
+  ctrl_combine : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_combine_x1 
   port map (
     in1 => reinterpret4_output_port_net,
     in2 => circ_or_y_net,
@@ -10726,7 +10726,7 @@ begin
     in4 => arm_or_y_net,
     bus_out => concatenate_y_net_x0
   );
-  ctrl_split : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_split_x0 
+  ctrl_split : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_ctrl_split_x1 
   port map (
     bus_in => reint1_output_port_net,
     msb_out4 => reinterpret4_output_port_net,
@@ -10734,7 +10734,7 @@ begin
     out2 => reinterpret2_output_port_net,
     lsb_out1 => slice1_y_net
   );
-  status : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_status_x0 
+  status : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_status_x1 
   port map (
     out_reg => concat_y_net,
     clk_1 => clk_net,
@@ -11634,7 +11634,7 @@ entity ethernet_one_gbe_skarab_tx_rx_tx_one_gbe is
 end ethernet_one_gbe_skarab_tx_rx_tx_one_gbe;
 architecture structural of ethernet_one_gbe_skarab_tx_rx_tx_one_gbe is 
   signal delay_q_net : std_logic_vector( 1-1 downto 0 );
-  signal wrapper_ethernet_buffer_rx_verilog_v1_0_data_out_buffer_net : std_logic_vector( 8-1 downto 0 );
+  signal delay9_q_net : std_logic_vector( 8-1 downto 0 );
   signal out_or : std_logic_vector( 1-1 downto 0 );
   signal delay3_q_net : std_logic_vector( 32-1 downto 0 );
   signal delay4_q_net : std_logic_vector( 16-1 downto 0 );
@@ -11661,7 +11661,7 @@ architecture structural of ethernet_one_gbe_skarab_tx_rx_tx_one_gbe is
   signal ce_net : std_logic;
 begin
   delay_q_net <= tx_rst;
-  wrapper_ethernet_buffer_rx_verilog_v1_0_data_out_buffer_net <= tx_data;
+  delay9_q_net <= tx_data;
   out_or <= tx_val;
   delay3_q_net <= tx_destip;
   delay4_q_net <= tx_destport;
@@ -11744,7 +11744,7 @@ begin
   port map (
     clr => '0',
     en => "1",
-    din => wrapper_ethernet_buffer_rx_verilog_v1_0_data_out_buffer_net,
+    din => delay9_q_net,
     clk => clk_net,
     ce => ce_net,
     dout => convert_tx_data_dout_net
@@ -12007,72 +12007,52 @@ entity ethernet_one_gbe_skarab_tx_rx_struct is
   );
 end ethernet_one_gbe_skarab_tx_rx_struct;
 architecture structural of ethernet_one_gbe_skarab_tx_rx_struct is 
-  signal inverter7_op_net : std_logic_vector( 1-1 downto 0 );
-  signal relational1_op_net : std_logic_vector( 1-1 downto 0 );
-  signal inverter9_op_net : std_logic_vector( 1-1 downto 0 );
-  signal relational2_op_net : std_logic_vector( 1-1 downto 0 );
-  signal inverter10_op_net : std_logic_vector( 1-1 downto 0 );
-  signal relational3_op_net : std_logic_vector( 1-1 downto 0 );
-  signal inverter11_op_net : std_logic_vector( 1-1 downto 0 );
-  signal relational10_op_net : std_logic_vector( 1-1 downto 0 );
-  signal inverter12_op_net : std_logic_vector( 1-1 downto 0 );
-  signal relational11_op_net : std_logic_vector( 1-1 downto 0 );
-  signal inverter13_op_net : std_logic_vector( 1-1 downto 0 );
-  signal relational12_op_net : std_logic_vector( 1-1 downto 0 );
-  signal logical2_y_net : std_logic_vector( 1-1 downto 0 );
-  signal logical4_y_net : std_logic_vector( 1-1 downto 0 );
-  signal logical5_y_net : std_logic_vector( 1-1 downto 0 );
-  signal logical7_y_net : std_logic_vector( 1-1 downto 0 );
-  signal logical8_y_net : std_logic_vector( 1-1 downto 0 );
-  signal logical9_y_net : std_logic_vector( 1-1 downto 0 );
-  signal slice7_y_net : std_logic_vector( 48-1 downto 0 );
-  signal slice8_y_net : std_logic_vector( 32-1 downto 0 );
+  signal cast_gw_dout_net_x18 : std_logic_vector( 32-1 downto 0 );
+  signal convert_addr_dout_net_x2 : std_logic_vector( 13-1 downto 0 );
+  signal convert_din1_dout_net_x2 : std_logic_vector( 128-1 downto 0 );
+  signal ethernet_one_gbe_skarab_tx_rx_d3_ss_bram_data_out_net : std_logic_vector( 128-1 downto 0 );
+  signal convert_we_dout_net_x3 : std_logic_vector( 1-1 downto 0 );
+  signal skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out_net : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net_x19 : std_logic_vector( 32-1 downto 0 );
   signal convert_addr_dout_net_x3 : std_logic_vector( 13-1 downto 0 );
   signal convert_din1_dout_net_x3 : std_logic_vector( 128-1 downto 0 );
-  signal ethernet_one_gbe_skarab_tx_rx_d3_ss_bram_data_out_net : std_logic_vector( 128-1 downto 0 );
-  signal convert_we_dout_net_x0 : std_logic_vector( 1-1 downto 0 );
-  signal skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out_net : std_logic_vector( 32-1 downto 0 );
-  signal cast_gw_dout_net_x7 : std_logic_vector( 32-1 downto 0 );
+  signal ethernet_one_gbe_skarab_tx_rx_d4_ss_bram_data_out_net : std_logic_vector( 128-1 downto 0 );
+  signal convert_we_dout_net_x2 : std_logic_vector( 1-1 downto 0 );
+  signal skarab_tx_1gbe_tx_rx_valmir_d4_ss_ctrl_user_data_out_net : std_logic_vector( 32-1 downto 0 );
+  signal cast_gw_dout_net_x1 : std_logic_vector( 32-1 downto 0 );
   signal convert_addr_dout_net_x0 : std_logic_vector( 13-1 downto 0 );
   signal convert_din1_dout_net_x0 : std_logic_vector( 128-1 downto 0 );
-  signal ethernet_one_gbe_skarab_tx_rx_d4_ss_bram_data_out_net : std_logic_vector( 128-1 downto 0 );
-  signal convert_we_dout_net_x1 : std_logic_vector( 1-1 downto 0 );
-  signal skarab_tx_1gbe_tx_rx_valmir_d4_ss_ctrl_user_data_out_net : std_logic_vector( 32-1 downto 0 );
-  signal cast_gw_dout_net_x8 : std_logic_vector( 32-1 downto 0 );
-  signal convert_addr_dout_net_x1 : std_logic_vector( 13-1 downto 0 );
-  signal convert_din1_dout_net_x1 : std_logic_vector( 128-1 downto 0 );
   signal ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_data_out_net : std_logic_vector( 128-1 downto 0 );
-  signal convert_we_dout_net_x2 : std_logic_vector( 1-1 downto 0 );
+  signal convert_we_dout_net_x0 : std_logic_vector( 1-1 downto 0 );
   signal skarab_tx_1gbe_tx_rx_valmir_d5_ss_ctrl_user_data_out_net : std_logic_vector( 32-1 downto 0 );
-  signal cast_gw_dout_net_x6 : std_logic_vector( 32-1 downto 0 );
-  signal cast_gw_dout_net : std_logic_vector( 32-1 downto 0 );
-  signal cast_gw_dout_net_x0 : std_logic_vector( 32-1 downto 0 );
-  signal cast_gw_dout_net_x1 : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net_x2 : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net_x3 : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net_x4 : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net_x5 : std_logic_vector( 32-1 downto 0 );
+  signal cast_gw_dout_net_x6 : std_logic_vector( 32-1 downto 0 );
+  signal cast_gw_dout_net_x7 : std_logic_vector( 32-1 downto 0 );
+  signal cast_gw_dout_net_x8 : std_logic_vector( 32-1 downto 0 );
+  signal cast_gw_dout_net_x9 : std_logic_vector( 32-1 downto 0 );
   signal convert_addr_dout_net : std_logic_vector( 16-1 downto 0 );
   signal convert_din1_dout_net : std_logic_vector( 32-1 downto 0 );
   signal ethernet_one_gbe_skarab_tx_rx_pkt_ctrs1_ss_bram_data_out_net : std_logic_vector( 32-1 downto 0 );
   signal convert_we_dout_net : std_logic_vector( 1-1 downto 0 );
   signal skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs1_ss_ctrl_user_data_out_net : std_logic_vector( 32-1 downto 0 );
-  signal cast_gw_dout_net_x11 : std_logic_vector( 32-1 downto 0 );
-  signal convert_addr_dout_net_x2 : std_logic_vector( 13-1 downto 0 );
-  signal convert_din1_dout_net_x2 : std_logic_vector( 64-1 downto 0 );
+  signal cast_gw_dout_net : std_logic_vector( 32-1 downto 0 );
+  signal convert_addr_dout_net_x1 : std_logic_vector( 13-1 downto 0 );
+  signal convert_din1_dout_net_x1 : std_logic_vector( 64-1 downto 0 );
   signal ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_bram_data_out_net : std_logic_vector( 64-1 downto 0 );
-  signal convert_we_dout_net_x3 : std_logic_vector( 1-1 downto 0 );
+  signal convert_we_dout_net_x1 : std_logic_vector( 1-1 downto 0 );
   signal skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs_compare1_ss_ctrl_user_data_out_net : std_logic_vector( 32-1 downto 0 );
-  signal cast_gw_dout_net_x10 : std_logic_vector( 32-1 downto 0 );
+  signal cast_gw_dout_net_x11 : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net_x12 : std_logic_vector( 32-1 downto 0 );
   signal ethernet_one_gbe_skarab_tx_rx_rx_control1_user_data_out_net : std_logic_vector( 32-1 downto 0 );
+  signal cast_gw_dout_net_x0 : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net_x13 : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net_x14 : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net_x15 : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net_x16 : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net_x17 : std_logic_vector( 32-1 downto 0 );
-  signal cast_gw_dout_net_x18 : std_logic_vector( 32-1 downto 0 );
   signal ethernet_one_gbe_skarab_tx_rx_tx_control_user_data_out_net : std_logic_vector( 32-1 downto 0 );
   signal ethernet_one_gbe_skarab_tx_rx_tx_one_gbe_app_dbg_data_net : std_logic_vector( 32-1 downto 0 );
   signal ethernet_one_gbe_skarab_tx_rx_tx_one_gbe_app_dbg_dvld_net : std_logic_vector( 1-1 downto 0 );
@@ -12093,7 +12073,7 @@ architecture structural of ethernet_one_gbe_skarab_tx_rx_struct is
   signal convert_tx_end_of_frame_dout_net : std_logic_vector( 1-1 downto 0 );
   signal ethernet_one_gbe_skarab_tx_rx_tx_one_gbe_app_tx_overflow_net : std_logic_vector( 1-1 downto 0 );
   signal convert_tx_rst_dout_net : std_logic_vector( 1-1 downto 0 );
-  signal cast_gw_dout_net_x9 : std_logic_vector( 32-1 downto 0 );
+  signal cast_gw_dout_net_x10 : std_logic_vector( 32-1 downto 0 );
   signal clk_net : std_logic;
   signal ce_net : std_logic;
   signal slice4_y_net : std_logic_vector( 1-1 downto 0 );
@@ -12104,30 +12084,30 @@ architecture structural of ethernet_one_gbe_skarab_tx_rx_struct is
   signal constant15_op_net : std_logic_vector( 32-1 downto 0 );
   signal concatenate_y_net : std_logic_vector( 4-1 downto 0 );
   signal delay14_q_net : std_logic_vector( 1-1 downto 0 );
-  signal arm_or_y_net_x3 : std_logic_vector( 1-1 downto 0 );
+  signal arm_or_y_net_x2 : std_logic_vector( 1-1 downto 0 );
   signal constant39_op_net : std_logic_vector( 32-1 downto 0 );
   signal concat1_y_net : std_logic_vector( 32-1 downto 0 );
   signal constant40_op_net : std_logic_vector( 64-1 downto 0 );
   signal delay32_q_net : std_logic_vector( 1-1 downto 0 );
   signal logical3_y_net : std_logic_vector( 1-1 downto 0 );
-  signal we_choice_y_net_x3 : std_logic_vector( 1-1 downto 0 );
-  signal logical6_y_net_x3 : std_logic_vector( 1-1 downto 0 );
-  signal arm_or_y_net_x0 : std_logic_vector( 1-1 downto 0 );
+  signal we_choice_y_net_x2 : std_logic_vector( 1-1 downto 0 );
+  signal logical6_y_net_x2 : std_logic_vector( 1-1 downto 0 );
+  signal arm_or_y_net_x3 : std_logic_vector( 1-1 downto 0 );
   signal constant36_op_net : std_logic_vector( 32-1 downto 0 );
   signal constant37_op_net : std_logic_vector( 32-1 downto 0 );
   signal constant12_op_net : std_logic_vector( 48-1 downto 0 );
   signal constant38_op_net : std_logic_vector( 16-1 downto 0 );
-  signal we_choice_y_net_x0 : std_logic_vector( 1-1 downto 0 );
-  signal logical6_y_net_x0 : std_logic_vector( 1-1 downto 0 );
+  signal we_choice_y_net_x3 : std_logic_vector( 1-1 downto 0 );
+  signal logical6_y_net_x3 : std_logic_vector( 1-1 downto 0 );
   signal arm_or_y_net_x1 : std_logic_vector( 1-1 downto 0 );
   signal delay33_q_net : std_logic_vector( 32-1 downto 0 );
   signal delay34_q_net : std_logic_vector( 16-1 downto 0 );
   signal delay37_q_net : std_logic_vector( 1-1 downto 0 );
   signal delay39_q_net : std_logic_vector( 1-1 downto 0 );
-  signal constant5_op_net : std_logic_vector( 32-1 downto 0 );
-  signal constant17_op_net : std_logic_vector( 16-1 downto 0 );
+  signal delay23_q_net : std_logic_vector( 32-1 downto 0 );
+  signal delay24_q_net : std_logic_vector( 16-1 downto 0 );
   signal delay36_q_net : std_logic_vector( 1-1 downto 0 );
-  signal we_choice_y_net_x1 : std_logic_vector( 1-1 downto 0 );
+  signal we_choice_y_net_x0 : std_logic_vector( 1-1 downto 0 );
   signal logical6_y_net_x1 : std_logic_vector( 1-1 downto 0 );
   signal delay31_q_net : std_logic_vector( 8-1 downto 0 );
   signal edge_op_y_net : std_logic_vector( 1-1 downto 0 );
@@ -12138,66 +12118,55 @@ architecture structural of ethernet_one_gbe_skarab_tx_rx_struct is
   signal delay16_q_net : std_logic_vector( 32-1 downto 0 );
   signal delay20_q_net : std_logic_vector( 32-1 downto 0 );
   signal delay15_q_net : std_logic_vector( 32-1 downto 0 );
-  signal arm_or_y_net : std_logic_vector( 1-1 downto 0 );
+  signal arm_or_y_net_x0 : std_logic_vector( 1-1 downto 0 );
   signal delay22_q_net : std_logic_vector( 32-1 downto 0 );
   signal delay30_q_net : std_logic_vector( 1-1 downto 0 );
   signal we_choice_y_net : std_logic_vector( 1-1 downto 0 );
   signal logical6_y_net : std_logic_vector( 1-1 downto 0 );
-  signal arm_or_y_net_x2 : std_logic_vector( 1-1 downto 0 );
+  signal arm_or_y_net : std_logic_vector( 1-1 downto 0 );
   signal old_one : std_logic_vector( 32-1 downto 0 );
   signal logical1_y_net : std_logic_vector( 1-1 downto 0 );
-  signal we_choice_y_net_x2 : std_logic_vector( 1-1 downto 0 );
-  signal logical6_y_net_x2 : std_logic_vector( 1-1 downto 0 );
+  signal we_choice_y_net_x1 : std_logic_vector( 1-1 downto 0 );
+  signal logical6_y_net_x0 : std_logic_vector( 1-1 downto 0 );
   signal delay10_q_net : std_logic_vector( 32-1 downto 0 );
-  signal slice_dbg_rst_y_net_x0 : std_logic_vector( 1-1 downto 0 );
+  signal slice_dbg_rst_y_net : std_logic_vector( 1-1 downto 0 );
   signal slice_snap_arm_y_net_x0 : std_logic_vector( 1-1 downto 0 );
   signal delay13_q_net : std_logic_vector( 32-1 downto 0 );
   signal delay11_q_net : std_logic_vector( 32-1 downto 0 );
   signal delay12_q_net : std_logic_vector( 32-1 downto 0 );
   signal delay66_q_net : std_logic_vector( 32-1 downto 0 );
-  signal slice_gbe_rst_y_net : std_logic_vector( 1-1 downto 0 );
-  signal slice_dbg_rst_y_net : std_logic_vector( 1-1 downto 0 );
+  signal slice_gbe_rst_y_net_x0 : std_logic_vector( 1-1 downto 0 );
+  signal slice_dbg_rst_y_net_x0 : std_logic_vector( 1-1 downto 0 );
   signal slice_pkt_rst_y_net : std_logic_vector( 1-1 downto 0 );
   signal slice_tx_en_y_net : std_logic_vector( 1-1 downto 0 );
   signal reint5_output_port_net : std_logic_vector( 10-1 downto 0 );
   signal delay_q_net : std_logic_vector( 1-1 downto 0 );
-  signal wrapper_ethernet_buffer_rx_verilog_v1_0_data_out_buffer_net : std_logic_vector( 8-1 downto 0 );
+  signal delay9_q_net : std_logic_vector( 8-1 downto 0 );
   signal out_or : std_logic_vector( 1-1 downto 0 );
   signal delay3_q_net : std_logic_vector( 32-1 downto 0 );
   signal delay4_q_net : std_logic_vector( 16-1 downto 0 );
   signal gbe_eof : std_logic_vector( 1-1 downto 0 );
   signal delay6_q_net : std_logic_vector( 1-1 downto 0 );
   signal delay68_q_net : std_logic_vector( 32-1 downto 0 );
-  signal inverter1_op_net : std_logic_vector( 1-1 downto 0 );
-  signal counter1_op_net : std_logic_vector( 8-1 downto 0 );
-  signal slice5_y_net : std_logic_vector( 1-1 downto 0 );
-  signal delay8_q_net : std_logic_vector( 1-1 downto 0 );
-  signal black_box_tx_valid_package_net : std_logic_vector( 1-1 downto 0 );
-  signal ip_const_10_42_0_31 : std_logic_vector( 32-1 downto 0 );
-  signal constant2_op_net : std_logic_vector( 1-1 downto 0 );
-  signal constant31_op_net : std_logic_vector( 32-1 downto 0 );
-  signal port_const_7777 : std_logic_vector( 16-1 downto 0 );
-  signal delay25_q_net : std_logic_vector( 1-1 downto 0 );
-  signal delay23_q_net : std_logic_vector( 32-1 downto 0 );
-  signal delay24_q_net : std_logic_vector( 16-1 downto 0 );
-  signal delay26_q_net : std_logic_vector( 1-1 downto 0 );
-  signal tx_en : std_logic_vector( 1-1 downto 0 );
-  signal delay29_q_net : std_logic_vector( 10-1 downto 0 );
-  signal eof_verilg : std_logic_vector( 1-1 downto 0 );
-  signal pkt_counter14_op_net : std_logic_vector( 32-1 downto 0 );
-  signal delay67_q_net : std_logic_vector( 1-1 downto 0 );
-  signal pkt_counter15_op_net : std_logic_vector( 32-1 downto 0 );
-  signal delay69_q_net : std_logic_vector( 1-1 downto 0 );
-  signal inverter8_op_net : std_logic_vector( 1-1 downto 0 );
-  signal eof_verilg_base : std_logic_vector( 1-1 downto 0 );
+  signal addsub3_s_net : std_logic_vector( 33-1 downto 0 );
+  signal constant33_op_net : std_logic_vector( 1-1 downto 0 );
+  signal eof_verilg_base : std_logic;
   signal black_box_tx_data_net : std_logic_vector( 8-1 downto 0 );
   signal black_box_ena_dec_tmp_net : std_logic;
   signal black_box_counter_tmp_net : std_logic_vector( 32-1 downto 0 );
-  signal addsub3_s_net : std_logic_vector( 33-1 downto 0 );
-  signal constant33_op_net : std_logic_vector( 1-1 downto 0 );
+  signal black_box_tx_valid_package_net : std_logic;
+  signal inverter8_op_net : std_logic;
+  signal constant31_op_net : std_logic_vector( 32-1 downto 0 );
+  signal delay29_q_net : std_logic_vector( 10-1 downto 0 );
+  signal tx_en : std_logic;
+  signal ip_const_10_42_0_31 : std_logic_vector( 32-1 downto 0 );
   signal constant11_op_net : std_logic_vector( 16-1 downto 0 );
   signal constant14_op_net : std_logic_vector( 4-1 downto 0 );
-  signal delay7_q_net : std_logic_vector( 1-1 downto 0 );
+  signal constant2_op_net : std_logic_vector( 1-1 downto 0 );
+  signal port_const_7777 : std_logic_vector( 16-1 downto 0 );
+  signal addr_data_buffer : std_logic_vector( 8-1 downto 0 );
+  signal data_valid_rx : std_logic_vector( 1-1 downto 0 );
+  signal delay25_q_net : std_logic_vector( 1-1 downto 0 );
   signal pkt_counter17_op_net : std_logic_vector( 32-1 downto 0 );
   signal pkt_counter18_op_net : std_logic_vector( 32-1 downto 0 );
   signal pkt_counter19_op_net : std_logic_vector( 32-1 downto 0 );
@@ -12209,54 +12178,85 @@ architecture structural of ethernet_one_gbe_skarab_tx_rx_struct is
   signal pkt_counter3_op_net : std_logic_vector( 32-1 downto 0 );
   signal pkt_counter16_op_net : std_logic_vector( 32-1 downto 0 );
   signal pkt_counter1_op_net : std_logic_vector( 32-1 downto 0 );
+  signal delay26_q_net : std_logic_vector( 1-1 downto 0 );
   signal logical11_y_net : std_logic_vector( 1-1 downto 0 );
+  signal eof_verilg : std_logic_vector( 1-1 downto 0 );
+  signal pkt_counter14_op_net : std_logic_vector( 32-1 downto 0 );
+  signal delay67_q_net : std_logic_vector( 1-1 downto 0 );
+  signal pkt_counter15_op_net : std_logic_vector( 32-1 downto 0 );
+  signal delay69_q_net : std_logic_vector( 1-1 downto 0 );
+  signal delay7_q_net : std_logic_vector( 1-1 downto 0 );
+  signal delay8_q_net : std_logic_vector( 1-1 downto 0 );
+  signal inverter1_op_net : std_logic_vector( 1-1 downto 0 );
+  signal inverter10_op_net : std_logic_vector( 1-1 downto 0 );
+  signal relational3_op_net : std_logic_vector( 1-1 downto 0 );
+  signal inverter11_op_net : std_logic_vector( 1-1 downto 0 );
+  signal relational10_op_net : std_logic_vector( 1-1 downto 0 );
+  signal inverter12_op_net : std_logic_vector( 1-1 downto 0 );
+  signal relational11_op_net : std_logic_vector( 1-1 downto 0 );
+  signal inverter13_op_net : std_logic_vector( 1-1 downto 0 );
+  signal relational12_op_net : std_logic_vector( 1-1 downto 0 );
+  signal inverter7_op_net : std_logic_vector( 1-1 downto 0 );
+  signal relational1_op_net : std_logic_vector( 1-1 downto 0 );
+  signal inverter9_op_net : std_logic_vector( 1-1 downto 0 );
+  signal relational2_op_net : std_logic_vector( 1-1 downto 0 );
+  signal logical2_y_net : std_logic_vector( 1-1 downto 0 );
+  signal logical4_y_net : std_logic_vector( 1-1 downto 0 );
+  signal logical5_y_net : std_logic_vector( 1-1 downto 0 );
+  signal logical7_y_net : std_logic_vector( 1-1 downto 0 );
+  signal logical8_y_net : std_logic_vector( 1-1 downto 0 );
+  signal logical9_y_net : std_logic_vector( 1-1 downto 0 );
+  signal slice7_y_net : std_logic_vector( 48-1 downto 0 );
+  signal slice8_y_net : std_logic_vector( 32-1 downto 0 );
+  signal data_out_buffer_tx : std_logic_vector( 8-1 downto 0 );
+  signal data_out_buffer : std_logic_vector( 8-1 downto 0 );
 begin
-  skarab_tx_1gbe_tx_rx_valmir_clk_mhz_user_data_in <= cast_gw_dout_net_x19;
-  ethernet_one_gbe_skarab_tx_rx_d3_ss_bram_addr <= convert_addr_dout_net_x3;
-  ethernet_one_gbe_skarab_tx_rx_d3_ss_bram_data_in <= convert_din1_dout_net_x3;
+  skarab_tx_1gbe_tx_rx_valmir_clk_mhz_user_data_in <= cast_gw_dout_net_x18;
+  ethernet_one_gbe_skarab_tx_rx_d3_ss_bram_addr <= convert_addr_dout_net_x2;
+  ethernet_one_gbe_skarab_tx_rx_d3_ss_bram_data_in <= convert_din1_dout_net_x2;
   ethernet_one_gbe_skarab_tx_rx_d3_ss_bram_data_out_net <= ethernet_one_gbe_skarab_tx_rx_d3_ss_bram_data_out;
-  ethernet_one_gbe_skarab_tx_rx_d3_ss_bram_we <= convert_we_dout_net_x0;
+  ethernet_one_gbe_skarab_tx_rx_d3_ss_bram_we <= convert_we_dout_net_x3;
   skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out_net <= skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out;
-  ethernet_one_gbe_skarab_tx_rx_d3_ss_status_user_data_in <= cast_gw_dout_net_x7;
-  ethernet_one_gbe_skarab_tx_rx_d4_ss_bram_addr <= convert_addr_dout_net_x0;
-  ethernet_one_gbe_skarab_tx_rx_d4_ss_bram_data_in <= convert_din1_dout_net_x0;
+  ethernet_one_gbe_skarab_tx_rx_d3_ss_status_user_data_in <= cast_gw_dout_net_x19;
+  ethernet_one_gbe_skarab_tx_rx_d4_ss_bram_addr <= convert_addr_dout_net_x3;
+  ethernet_one_gbe_skarab_tx_rx_d4_ss_bram_data_in <= convert_din1_dout_net_x3;
   ethernet_one_gbe_skarab_tx_rx_d4_ss_bram_data_out_net <= ethernet_one_gbe_skarab_tx_rx_d4_ss_bram_data_out;
-  ethernet_one_gbe_skarab_tx_rx_d4_ss_bram_we <= convert_we_dout_net_x1;
+  ethernet_one_gbe_skarab_tx_rx_d4_ss_bram_we <= convert_we_dout_net_x2;
   skarab_tx_1gbe_tx_rx_valmir_d4_ss_ctrl_user_data_out_net <= skarab_tx_1gbe_tx_rx_valmir_d4_ss_ctrl_user_data_out;
-  ethernet_one_gbe_skarab_tx_rx_d4_ss_status_user_data_in <= cast_gw_dout_net_x8;
-  ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_addr <= convert_addr_dout_net_x1;
-  ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_data_in <= convert_din1_dout_net_x1;
+  ethernet_one_gbe_skarab_tx_rx_d4_ss_status_user_data_in <= cast_gw_dout_net_x1;
+  ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_addr <= convert_addr_dout_net_x0;
+  ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_data_in <= convert_din1_dout_net_x0;
   ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_data_out_net <= ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_data_out;
-  ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_we <= convert_we_dout_net_x2;
+  ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_we <= convert_we_dout_net_x0;
   skarab_tx_1gbe_tx_rx_valmir_d5_ss_ctrl_user_data_out_net <= skarab_tx_1gbe_tx_rx_valmir_d5_ss_ctrl_user_data_out;
-  ethernet_one_gbe_skarab_tx_rx_d5_ss_status_user_data_in <= cast_gw_dout_net_x6;
-  ethernet_one_gbe_skarab_tx_rx_data_rx_valmir_user_data_in <= cast_gw_dout_net;
-  ethernet_one_gbe_skarab_tx_rx_err_marker1_user_data_in <= cast_gw_dout_net_x0;
-  ethernet_one_gbe_skarab_tx_rx_err_pkt_ctr1_user_data_in <= cast_gw_dout_net_x1;
-  ethernet_one_gbe_skarab_tx_rx_err_pkt_ctr_step1_user_data_in <= cast_gw_dout_net_x2;
-  ethernet_one_gbe_skarab_tx_rx_err_ramp1_user_data_in <= cast_gw_dout_net_x3;
-  ethernet_one_gbe_skarab_tx_rx_err_valid_raw1_user_data_in <= cast_gw_dout_net_x4;
-  ethernet_one_gbe_skarab_tx_rx_err_walk1_user_data_in <= cast_gw_dout_net_x5;
+  ethernet_one_gbe_skarab_tx_rx_d5_ss_status_user_data_in <= cast_gw_dout_net_x2;
+  ethernet_one_gbe_skarab_tx_rx_data_rx_valmir_user_data_in <= cast_gw_dout_net_x3;
+  ethernet_one_gbe_skarab_tx_rx_err_marker1_user_data_in <= cast_gw_dout_net_x4;
+  ethernet_one_gbe_skarab_tx_rx_err_pkt_ctr1_user_data_in <= cast_gw_dout_net_x5;
+  ethernet_one_gbe_skarab_tx_rx_err_pkt_ctr_step1_user_data_in <= cast_gw_dout_net_x6;
+  ethernet_one_gbe_skarab_tx_rx_err_ramp1_user_data_in <= cast_gw_dout_net_x7;
+  ethernet_one_gbe_skarab_tx_rx_err_valid_raw1_user_data_in <= cast_gw_dout_net_x8;
+  ethernet_one_gbe_skarab_tx_rx_err_walk1_user_data_in <= cast_gw_dout_net_x9;
   ethernet_one_gbe_skarab_tx_rx_pkt_ctrs1_ss_bram_addr <= convert_addr_dout_net;
   ethernet_one_gbe_skarab_tx_rx_pkt_ctrs1_ss_bram_data_in <= convert_din1_dout_net;
   ethernet_one_gbe_skarab_tx_rx_pkt_ctrs1_ss_bram_data_out_net <= ethernet_one_gbe_skarab_tx_rx_pkt_ctrs1_ss_bram_data_out;
   ethernet_one_gbe_skarab_tx_rx_pkt_ctrs1_ss_bram_we <= convert_we_dout_net;
   skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs1_ss_ctrl_user_data_out_net <= skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs1_ss_ctrl_user_data_out;
-  ethernet_one_gbe_skarab_tx_rx_pkt_ctrs1_ss_status_user_data_in <= cast_gw_dout_net_x11;
-  ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_bram_addr <= convert_addr_dout_net_x2;
-  ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_bram_data_in <= convert_din1_dout_net_x2;
+  ethernet_one_gbe_skarab_tx_rx_pkt_ctrs1_ss_status_user_data_in <= cast_gw_dout_net;
+  ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_bram_addr <= convert_addr_dout_net_x1;
+  ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_bram_data_in <= convert_din1_dout_net_x1;
   ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_bram_data_out_net <= ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_bram_data_out;
-  ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_bram_we <= convert_we_dout_net_x3;
+  ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_bram_we <= convert_we_dout_net_x1;
   skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs_compare1_ss_ctrl_user_data_out_net <= skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs_compare1_ss_ctrl_user_data_out;
-  ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_status_user_data_in <= cast_gw_dout_net_x10;
+  ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_status_user_data_in <= cast_gw_dout_net_x11;
   ethernet_one_gbe_skarab_tx_rx_rx_badframe1_user_data_in <= cast_gw_dout_net_x12;
   ethernet_one_gbe_skarab_tx_rx_rx_control1_user_data_out_net <= ethernet_one_gbe_skarab_tx_rx_rx_control1_user_data_out;
-  ethernet_one_gbe_skarab_tx_rx_rx_eof1_user_data_in <= cast_gw_dout_net_x13;
-  ethernet_one_gbe_skarab_tx_rx_rx_overrun1_user_data_in <= cast_gw_dout_net_x14;
-  ethernet_one_gbe_skarab_tx_rx_rx_src_ip_user_data_in <= cast_gw_dout_net_x15;
-  ethernet_one_gbe_skarab_tx_rx_rx_src_port_user_data_in <= cast_gw_dout_net_x16;
-  ethernet_one_gbe_skarab_tx_rx_rx_valid1_user_data_in <= cast_gw_dout_net_x17;
-  ethernet_one_gbe_skarab_tx_rx_tx_afull1_user_data_in <= cast_gw_dout_net_x18;
+  ethernet_one_gbe_skarab_tx_rx_rx_eof1_user_data_in <= cast_gw_dout_net_x0;
+  ethernet_one_gbe_skarab_tx_rx_rx_overrun1_user_data_in <= cast_gw_dout_net_x13;
+  ethernet_one_gbe_skarab_tx_rx_rx_src_ip_user_data_in <= cast_gw_dout_net_x14;
+  ethernet_one_gbe_skarab_tx_rx_rx_src_port_user_data_in <= cast_gw_dout_net_x15;
+  ethernet_one_gbe_skarab_tx_rx_rx_valid1_user_data_in <= cast_gw_dout_net_x16;
+  ethernet_one_gbe_skarab_tx_rx_tx_afull1_user_data_in <= cast_gw_dout_net_x17;
   ethernet_one_gbe_skarab_tx_rx_tx_control_user_data_out_net <= ethernet_one_gbe_skarab_tx_rx_tx_control_user_data_out;
   ethernet_one_gbe_skarab_tx_rx_tx_one_gbe_app_dbg_data_net <= ethernet_one_gbe_skarab_tx_rx_tx_one_gbe_app_dbg_data;
   ethernet_one_gbe_skarab_tx_rx_tx_one_gbe_app_dbg_dvld_net <= ethernet_one_gbe_skarab_tx_rx_tx_one_gbe_app_dbg_dvld;
@@ -12277,7 +12277,7 @@ begin
   ethernet_one_gbe_skarab_tx_rx_tx_one_gbe_app_tx_eof <= convert_tx_end_of_frame_dout_net;
   ethernet_one_gbe_skarab_tx_rx_tx_one_gbe_app_tx_overflow_net <= ethernet_one_gbe_skarab_tx_rx_tx_one_gbe_app_tx_overflow;
   ethernet_one_gbe_skarab_tx_rx_tx_one_gbe_app_tx_rst <= convert_tx_rst_dout_net;
-  ethernet_one_gbe_skarab_tx_rx_tx_overflow1_user_data_in <= cast_gw_dout_net_x9;
+  ethernet_one_gbe_skarab_tx_rx_tx_overflow1_user_data_in <= cast_gw_dout_net_x10;
   clk_net <= clk_1;
   ce_net <= ce_1;
   bus_expand : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_bus_expand 
@@ -12293,7 +12293,7 @@ begin
     out_reg => constant15_op_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    skarab_tx_1gbe_tx_rx_valmir_clk_mhz_user_data_in => cast_gw_dout_net_x19
+    skarab_tx_1gbe_tx_rx_valmir_clk_mhz_user_data_in => cast_gw_dout_net_x18
   );
   convert_rx_valid1 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_convert_rx_valid1 
   port map (
@@ -12310,13 +12310,13 @@ begin
     skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out => skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    arm_out => arm_or_y_net_x3,
-    ethernet_one_gbe_skarab_tx_rx_d3_ss_bram_addr => convert_addr_dout_net_x3,
-    ethernet_one_gbe_skarab_tx_rx_d3_ss_bram_data_in => convert_din1_dout_net_x3,
-    ethernet_one_gbe_skarab_tx_rx_d3_ss_bram_we => convert_we_dout_net_x0,
-    ethernet_one_gbe_skarab_tx_rx_d3_ss_status_user_data_in => cast_gw_dout_net_x7,
-    goto_67410145_we1 => we_choice_y_net_x3,
-    goto_67410145_we4 => logical6_y_net_x3
+    arm_out => arm_or_y_net_x2,
+    ethernet_one_gbe_skarab_tx_rx_d3_ss_bram_addr => convert_addr_dout_net_x2,
+    ethernet_one_gbe_skarab_tx_rx_d3_ss_bram_data_in => convert_din1_dout_net_x2,
+    ethernet_one_gbe_skarab_tx_rx_d3_ss_bram_we => convert_we_dout_net_x3,
+    ethernet_one_gbe_skarab_tx_rx_d3_ss_status_user_data_in => cast_gw_dout_net_x19,
+    goto_67410145_we1 => we_choice_y_net_x2,
+    goto_67410145_we4 => logical6_y_net_x2
   );
   d4 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_d4 
   port map (
@@ -12329,13 +12329,13 @@ begin
     skarab_tx_1gbe_tx_rx_valmir_d4_ss_ctrl_user_data_out => skarab_tx_1gbe_tx_rx_valmir_d4_ss_ctrl_user_data_out_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    arm_out => arm_or_y_net_x0,
-    ethernet_one_gbe_skarab_tx_rx_d4_ss_bram_addr => convert_addr_dout_net_x0,
-    ethernet_one_gbe_skarab_tx_rx_d4_ss_bram_data_in => convert_din1_dout_net_x0,
-    ethernet_one_gbe_skarab_tx_rx_d4_ss_bram_we => convert_we_dout_net_x1,
-    ethernet_one_gbe_skarab_tx_rx_d4_ss_status_user_data_in => cast_gw_dout_net_x8,
-    goto_67439936_we1 => we_choice_y_net_x0,
-    goto_67439936_we4 => logical6_y_net_x0
+    arm_out => arm_or_y_net_x3,
+    ethernet_one_gbe_skarab_tx_rx_d4_ss_bram_addr => convert_addr_dout_net_x3,
+    ethernet_one_gbe_skarab_tx_rx_d4_ss_bram_data_in => convert_din1_dout_net_x3,
+    ethernet_one_gbe_skarab_tx_rx_d4_ss_bram_we => convert_we_dout_net_x2,
+    ethernet_one_gbe_skarab_tx_rx_d4_ss_status_user_data_in => cast_gw_dout_net_x1,
+    goto_67439936_we1 => we_choice_y_net_x3,
+    goto_67439936_we4 => logical6_y_net_x3
   );
   d5 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_d5 
   port map (
@@ -12343,8 +12343,8 @@ begin
     in_src_port => delay34_q_net,
     in_badframe => delay37_q_net,
     in_overrun => delay39_q_net,
-    in_dest_ip => constant5_op_net,
-    in_dest_port => constant17_op_net,
+    in_dest_ip => delay23_q_net,
+    in_dest_port => delay24_q_net,
     in_valid_raw => concatenate_y_net,
     in_eof => delay36_q_net,
     we => delay32_q_net,
@@ -12353,11 +12353,11 @@ begin
     clk_1 => clk_net,
     ce_1 => ce_net,
     arm_out => arm_or_y_net_x1,
-    ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_addr => convert_addr_dout_net_x1,
-    ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_data_in => convert_din1_dout_net_x1,
-    ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_we => convert_we_dout_net_x2,
-    ethernet_one_gbe_skarab_tx_rx_d5_ss_status_user_data_in => cast_gw_dout_net_x6,
-    goto_67469727_we1 => we_choice_y_net_x1,
+    ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_addr => convert_addr_dout_net_x0,
+    ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_data_in => convert_din1_dout_net_x0,
+    ethernet_one_gbe_skarab_tx_rx_d5_ss_bram_we => convert_we_dout_net_x0,
+    ethernet_one_gbe_skarab_tx_rx_d5_ss_status_user_data_in => cast_gw_dout_net_x2,
+    goto_67469727_we1 => we_choice_y_net_x0,
     goto_67469727_we4 => logical6_y_net_x1
   );
   data_rx_valmir : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_data_rx_valmir 
@@ -12365,9 +12365,9 @@ begin
     out_reg => delay31_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_tx_rx_data_rx_valmir_user_data_in => cast_gw_dout_net
+    ethernet_one_gbe_skarab_tx_rx_data_rx_valmir_user_data_in => cast_gw_dout_net_x3
   );
-  edge_detect : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_edge_detect_x5 
+  edge_detect : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_edge_detect_x1 
   port map (
     in_x0 => delay27_q_net,
     clk_1 => clk_net,
@@ -12379,42 +12379,42 @@ begin
     out_reg => delay19_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_tx_rx_err_marker1_user_data_in => cast_gw_dout_net_x0
+    ethernet_one_gbe_skarab_tx_rx_err_marker1_user_data_in => cast_gw_dout_net_x4
   );
   err_pkt_ctr1 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_err_pkt_ctr1 
   port map (
     out_reg => delay17_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_tx_rx_err_pkt_ctr1_user_data_in => cast_gw_dout_net_x1
+    ethernet_one_gbe_skarab_tx_rx_err_pkt_ctr1_user_data_in => cast_gw_dout_net_x5
   );
   err_pkt_ctr_step1 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_err_pkt_ctr_step1 
   port map (
     out_reg => delay21_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_tx_rx_err_pkt_ctr_step1_user_data_in => cast_gw_dout_net_x2
+    ethernet_one_gbe_skarab_tx_rx_err_pkt_ctr_step1_user_data_in => cast_gw_dout_net_x6
   );
   err_ramp1 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_err_ramp1 
   port map (
     out_reg => delay16_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_tx_rx_err_ramp1_user_data_in => cast_gw_dout_net_x3
+    ethernet_one_gbe_skarab_tx_rx_err_ramp1_user_data_in => cast_gw_dout_net_x7
   );
   err_valid_raw1 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_err_valid_raw1 
   port map (
     out_reg => delay20_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_tx_rx_err_valid_raw1_user_data_in => cast_gw_dout_net_x4
+    ethernet_one_gbe_skarab_tx_rx_err_valid_raw1_user_data_in => cast_gw_dout_net_x8
   );
   err_walk1 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_err_walk1 
   port map (
     out_reg => delay15_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_tx_rx_err_walk1_user_data_in => cast_gw_dout_net_x5
+    ethernet_one_gbe_skarab_tx_rx_err_walk1_user_data_in => cast_gw_dout_net_x9
   );
   pkt_ctrs1 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_pkt_ctrs1 
   port map (
@@ -12423,11 +12423,11 @@ begin
     skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs1_ss_ctrl_user_data_out => skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs1_ss_ctrl_user_data_out_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    arm_out => arm_or_y_net,
+    arm_out => arm_or_y_net_x0,
     ethernet_one_gbe_skarab_tx_rx_pkt_ctrs1_ss_bram_addr => convert_addr_dout_net,
     ethernet_one_gbe_skarab_tx_rx_pkt_ctrs1_ss_bram_data_in => convert_din1_dout_net,
     ethernet_one_gbe_skarab_tx_rx_pkt_ctrs1_ss_bram_we => convert_we_dout_net,
-    ethernet_one_gbe_skarab_tx_rx_pkt_ctrs1_ss_status_user_data_in => cast_gw_dout_net_x11,
+    ethernet_one_gbe_skarab_tx_rx_pkt_ctrs1_ss_status_user_data_in => cast_gw_dout_net,
     goto_51026485_we1 => we_choice_y_net,
     goto_51026485_we4 => logical6_y_net
   );
@@ -12440,13 +12440,13 @@ begin
     skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs_compare1_ss_ctrl_user_data_out => skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs_compare1_ss_ctrl_user_data_out_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    arm_out => arm_or_y_net_x2,
-    ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_bram_addr => convert_addr_dout_net_x2,
-    ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_bram_data_in => convert_din1_dout_net_x2,
-    ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_bram_we => convert_we_dout_net_x3,
-    ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_status_user_data_in => cast_gw_dout_net_x10,
-    goto_25826267_we1 => we_choice_y_net_x2,
-    goto_25826267_we4 => logical6_y_net_x2
+    arm_out => arm_or_y_net,
+    ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_bram_addr => convert_addr_dout_net_x1,
+    ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_bram_data_in => convert_din1_dout_net_x1,
+    ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_bram_we => convert_we_dout_net_x1,
+    ethernet_one_gbe_skarab_tx_rx_pkt_ctrs_compare1_ss_status_user_data_in => cast_gw_dout_net_x11,
+    goto_25826267_we1 => we_choice_y_net_x1,
+    goto_25826267_we4 => logical6_y_net_x0
   );
   rx_badframe1 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_rx_badframe1 
   port map (
@@ -12458,7 +12458,7 @@ begin
   rx_control1 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_rx_control1 
   port map (
     ethernet_one_gbe_skarab_tx_rx_rx_control1_user_data_out => ethernet_one_gbe_skarab_tx_rx_rx_control1_user_data_out_net,
-    in_dbg_rst => slice_dbg_rst_y_net_x0,
+    in_dbg_rst => slice_dbg_rst_y_net,
     in_snap_arm => slice_snap_arm_y_net_x0
   );
   rx_eof1 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_rx_eof1 
@@ -12466,48 +12466,48 @@ begin
     out_reg => delay13_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_tx_rx_rx_eof1_user_data_in => cast_gw_dout_net_x13
+    ethernet_one_gbe_skarab_tx_rx_rx_eof1_user_data_in => cast_gw_dout_net_x0
   );
   rx_overrun1 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_rx_overrun1 
   port map (
     out_reg => delay11_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_tx_rx_rx_overrun1_user_data_in => cast_gw_dout_net_x14
+    ethernet_one_gbe_skarab_tx_rx_rx_overrun1_user_data_in => cast_gw_dout_net_x13
   );
   rx_src_ip : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_rx_src_ip 
   port map (
     out_reg => delay33_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_tx_rx_rx_src_ip_user_data_in => cast_gw_dout_net_x15
+    ethernet_one_gbe_skarab_tx_rx_rx_src_ip_user_data_in => cast_gw_dout_net_x14
   );
   rx_src_port : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_rx_src_port 
   port map (
     out_reg => delay34_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_tx_rx_rx_src_port_user_data_in => cast_gw_dout_net_x16
+    ethernet_one_gbe_skarab_tx_rx_rx_src_port_user_data_in => cast_gw_dout_net_x15
   );
   rx_valid1 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_rx_valid1 
   port map (
     out_reg => delay12_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_tx_rx_rx_valid1_user_data_in => cast_gw_dout_net_x17
+    ethernet_one_gbe_skarab_tx_rx_rx_valid1_user_data_in => cast_gw_dout_net_x16
   );
   tx_afull1 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_tx_afull1 
   port map (
     out_reg => delay66_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_tx_rx_tx_afull1_user_data_in => cast_gw_dout_net_x18
+    ethernet_one_gbe_skarab_tx_rx_tx_afull1_user_data_in => cast_gw_dout_net_x17
   );
   tx_control : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_tx_control 
   port map (
     ethernet_one_gbe_skarab_tx_rx_tx_control_user_data_out => ethernet_one_gbe_skarab_tx_rx_tx_control_user_data_out_net,
-    in_gbe_rst => slice_gbe_rst_y_net,
-    in_dbg_rst => slice_dbg_rst_y_net,
+    in_gbe_rst => slice_gbe_rst_y_net_x0,
+    in_dbg_rst => slice_dbg_rst_y_net_x0,
     in_pkt_rst => slice_pkt_rst_y_net,
     in_tx_en => slice_tx_en_y_net,
     in_pkt_len => reint5_output_port_net
@@ -12515,7 +12515,7 @@ begin
   tx_one_gbe : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_tx_one_gbe 
   port map (
     tx_rst => delay_q_net,
-    tx_data => wrapper_ethernet_buffer_rx_verilog_v1_0_data_out_buffer_net,
+    tx_data => delay9_q_net,
     tx_val => out_or,
     tx_destip => delay3_q_net,
     tx_destport => delay4_q_net,
@@ -12546,429 +12546,7 @@ begin
     out_reg => delay68_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_tx_rx_tx_overflow1_user_data_in => cast_gw_dout_net_x9
-  );
-  constant5 : entity xil_defaultlib.sysgen_constant_619ec24221 
-  port map (
-    clk => '0',
-    ce => '0',
-    clr => '0',
-    op => constant5_op_net
-  );
-  constant17 : entity xil_defaultlib.sysgen_constant_9b520a9ff1 
-  port map (
-    clk => '0',
-    ce => '0',
-    clr => '0',
-    op => constant17_op_net
-  );
-  inverter1 : entity xil_defaultlib.sysgen_inverter_9738349e77 
-  port map (
-    clr => '0',
-    ip => edge_op_y_net,
-    clk => clk_net,
-    ce => ce_net,
-    op => inverter1_op_net
-  );
-  counter1 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlcounter_free 
-  generic map (
-    core_name0 => "ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i0",
-    op_arith => xlUnsigned,
-    op_width => 8
-  )
-  port map (
-    rst => "0",
-    clr => '0',
-    en => slice5_y_net,
-    clk => clk_net,
-    ce => ce_net,
-    op => counter1_op_net
-  );
-  delay8 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 1
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => black_box_tx_valid_package_net,
-    clk => clk_net,
-    ce => ce_net,
-    q => delay8_q_net
-  );
-  constant1 : entity xil_defaultlib.sysgen_constant_00d1c4e959 
-  port map (
-    clk => '0',
-    ce => '0',
-    clr => '0',
-    op => ip_const_10_42_0_31
-  );
-  constant15 : entity xil_defaultlib.sysgen_constant_77eecb6e48 
-  port map (
-    clk => '0',
-    ce => '0',
-    clr => '0',
-    op => constant15_op_net
-  );
-  constant2 : entity xil_defaultlib.sysgen_constant_88950a3fa2 
-  port map (
-    clk => '0',
-    ce => '0',
-    clr => '0',
-    op => constant2_op_net
-  );
-  constant31 : entity xil_defaultlib.sysgen_constant_37ae93c26a 
-  port map (
-    clk => '0',
-    ce => '0',
-    clr => '0',
-    op => constant31_op_net
-  );
-  constant4 : entity xil_defaultlib.sysgen_constant_5099047c5c 
-  port map (
-    clk => '0',
-    ce => '0',
-    clr => '0',
-    op => port_const_7777
-  );
-  delay : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 1
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => delay25_q_net,
-    clk => clk_net,
-    ce => ce_net,
-    q => delay_q_net
-  );
-  delay23 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 32
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => ip_const_10_42_0_31,
-    clk => clk_net,
-    ce => ce_net,
-    q => delay23_q_net
-  );
-  delay24 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 16
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => port_const_7777,
-    clk => clk_net,
-    ce => ce_net,
-    q => delay24_q_net
-  );
-  delay25 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 1
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => slice_gbe_rst_y_net,
-    clk => clk_net,
-    ce => ce_net,
-    q => delay25_q_net
-  );
-  delay26 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 1
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => slice_dbg_rst_y_net,
-    clk => clk_net,
-    ce => ce_net,
-    q => delay26_q_net
-  );
-  delay27 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 1
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => slice_pkt_rst_y_net,
-    clk => clk_net,
-    ce => ce_net,
-    q => delay27_q_net
-  );
-  delay28 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 1
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => slice_tx_en_y_net,
-    clk => clk_net,
-    ce => ce_net,
-    q => tx_en
-  );
-  delay29 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 10
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => reint5_output_port_net,
-    clk => clk_net,
-    ce => ce_net,
-    q => delay29_q_net
-  );
-  delay3 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 32
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => delay23_q_net,
-    clk => clk_net,
-    ce => ce_net,
-    q => delay3_q_net
-  );
-  delay4 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 16
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => delay24_q_net,
-    clk => clk_net,
-    ce => ce_net,
-    q => delay4_q_net
-  );
-  delay5 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 1
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => eof_verilg,
-    clk => clk_net,
-    ce => ce_net,
-    q => gbe_eof
-  );
-  delay6 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 1
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => constant2_op_net,
-    clk => clk_net,
-    ce => ce_net,
-    q => delay6_q_net
-  );
-  delay66 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 32
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => pkt_counter14_op_net,
-    clk => clk_net,
-    ce => ce_net,
-    q => delay66_q_net
-  );
-  delay67 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 1
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => ethernet_one_gbe_skarab_tx_rx_tx_one_gbe_app_tx_afull_net,
-    clk => clk_net,
-    ce => ce_net,
-    q => delay67_q_net
-  );
-  delay68 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 32
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => pkt_counter15_op_net,
-    clk => clk_net,
-    ce => ce_net,
-    q => delay68_q_net
-  );
-  delay69 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 1
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => ethernet_one_gbe_skarab_tx_rx_tx_one_gbe_app_tx_overflow_net,
-    clk => clk_net,
-    ce => ce_net,
-    q => delay69_q_net
-  );
-  inverter8 : entity xil_defaultlib.sysgen_inverter_9738349e77 
-  port map (
-    clr => '0',
-    ip => edge_op_y_net,
-    clk => clk_net,
-    ce => ce_net,
-    op => inverter8_op_net
-  );
-  logical6 : entity xil_defaultlib.sysgen_logical_7e2a2895ac 
-  port map (
-    clk => '0',
-    ce => '0',
-    clr => '0',
-    d0 => slice4_y_net,
-    d1 => slice3_y_net,
-    d2 => slice2_y_net,
-    d3 => slice1_y_net,
-    y => out_or
-  );
-  slice1 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlslice 
-  generic map (
-    new_lsb => 0,
-    new_msb => 0,
-    x_width => 1,
-    y_width => 1
-  )
-  port map (
-    x => eof_verilg_base,
-    y => eof_verilg
-  );
-  pkt_counter14 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlcounter_free 
-  generic map (
-    core_name0 => "ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i1",
-    op_arith => xlUnsigned,
-    op_width => 32
-  )
-  port map (
-    clr => '0',
-    rst => delay26_q_net,
-    en => delay67_q_net,
-    clk => clk_net,
-    ce => ce_net,
-    op => pkt_counter14_op_net
-  );
-  pkt_counter15 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlcounter_free 
-  generic map (
-    core_name0 => "ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i1",
-    op_arith => xlUnsigned,
-    op_width => 32
-  )
-  port map (
-    clr => '0',
-    rst => delay26_q_net,
-    en => delay69_q_net,
-    clk => clk_net,
-    ce => ce_net,
-    op => pkt_counter15_op_net
-  );
-  wrapper_ethernet_buffer_rx_verilog_v1_0 : entity xil_defaultlib.wrapper_buffer_in_ethernet_verilog_wrapper 
-  port map (
-    a_sync_nrst => inverter1_op_net(0),
-    in_valid_rx => delay32_q_net(0),
-    in_data_rx_ethernet => delay31_q_net,
-    package_size => delay29_q_net,
-    addr_data => counter1_op_net,
-    data_valid_rx => slice5_y_net(0),
-    clk => clk_net,
-    ce => ce_net,
-    data_out_buffer => wrapper_ethernet_buffer_rx_verilog_v1_0_data_out_buffer_net
-  );
-  black_box : entity xil_defaultlib.gbe_control_wrapper 
-  port map (
-    nrst => inverter8_op_net(0),
-    decimation_factor => constant31_op_net,
-    tx_package_len => delay29_q_net,
-    tx_en => tx_en(0),
-    clk => clk_net,
-    ce => ce_net,
-    tx_val => black_box_tx_val_net,
-    tx_eof => eof_verilg_base(0),
-    tx_data => black_box_tx_data_net,
-    ena_dec_tmp => black_box_ena_dec_tmp_net,
-    counter_tmp => black_box_counter_tmp_net,
-    tx_valid_package => black_box_tx_valid_package_net(0)
-  );
-  slice5 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlslice 
-  generic map (
-    new_lsb => 0,
-    new_msb => 0,
-    x_width => 1,
-    y_width => 1
-  )
-  port map (
-    x => delay8_q_net,
-    y => slice5_y_net
+    ethernet_one_gbe_skarab_tx_rx_tx_overflow1_user_data_in => cast_gw_dout_net_x10
   );
   addsub3 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xladdsub 
   generic map (
@@ -13001,6 +12579,21 @@ begin
     ce => ce_net,
     s => addsub3_s_net
   );
+  black_box : entity xil_defaultlib.gbe_control_wrapper 
+  port map (
+    nrst => inverter8_op_net,
+    decimation_factor => constant31_op_net,
+    tx_package_len => delay29_q_net,
+    tx_en => tx_en,
+    clk => clk_net,
+    ce => ce_net,
+    tx_val => black_box_tx_val_net,
+    tx_eof => eof_verilg_base,
+    tx_data => black_box_tx_data_net,
+    ena_dec_tmp => black_box_ena_dec_tmp_net,
+    counter_tmp => black_box_counter_tmp_net,
+    tx_valid_package => black_box_tx_valid_package_net
+  );
   concat1 : entity xil_defaultlib.sysgen_concat_c50181321d 
   port map (
     clk => '0',
@@ -13011,6 +12604,13 @@ begin
     in2 => delay31_q_net,
     in3 => delay31_q_net,
     y => concat1_y_net
+  );
+  constant1 : entity xil_defaultlib.sysgen_constant_00d1c4e959 
+  port map (
+    clk => '0',
+    ce => '0',
+    clr => '0',
+    op => ip_const_10_42_0_31
   );
   constant11 : entity xil_defaultlib.sysgen_constant_5099047c5c 
   port map (
@@ -13032,6 +12632,27 @@ begin
     ce => '0',
     clr => '0',
     op => constant14_op_net
+  );
+  constant15 : entity xil_defaultlib.sysgen_constant_77eecb6e48 
+  port map (
+    clk => '0',
+    ce => '0',
+    clr => '0',
+    op => constant15_op_net
+  );
+  constant2 : entity xil_defaultlib.sysgen_constant_88950a3fa2 
+  port map (
+    clk => '0',
+    ce => '0',
+    clr => '0',
+    op => constant2_op_net
+  );
+  constant31 : entity xil_defaultlib.sysgen_constant_37ae93c26a 
+  port map (
+    clk => '0',
+    ce => '0',
+    clr => '0',
+    op => constant31_op_net
   );
   constant33 : entity xil_defaultlib.sysgen_constant_88950a3fa2 
   port map (
@@ -13068,6 +12689,13 @@ begin
     clr => '0',
     op => constant39_op_net
   );
+  constant4 : entity xil_defaultlib.sysgen_constant_5099047c5c 
+  port map (
+    clk => '0',
+    ce => '0',
+    clr => '0',
+    op => port_const_7777
+  );
   constant40 : entity xil_defaultlib.sysgen_constant_6123f02036 
   port map (
     clk => '0',
@@ -13075,7 +12703,21 @@ begin
     clr => '0',
     op => constant40_op_net
   );
-  delay7 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
+  counter1 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlcounter_free 
+  generic map (
+    core_name0 => "ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i0",
+    op_arith => xlUnsigned,
+    op_width => 8
+  )
+  port map (
+    rst => "0",
+    clr => '0',
+    en => data_valid_rx,
+    clk => clk_net,
+    ce => ce_net,
+    op => addr_data_buffer
+  );
+  delay : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
   generic map (
     latency => 1,
     reg_retiming => 0,
@@ -13085,10 +12727,10 @@ begin
   port map (
     en => '1',
     rst => '0',
-    d => slice_dbg_rst_y_net_x0,
+    d => delay25_q_net,
     clk => clk_net,
     ce => ce_net,
-    q => delay7_q_net
+    q => delay_q_net
   );
   delay10 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
   generic map (
@@ -13285,6 +12927,126 @@ begin
     ce => ce_net,
     q => delay22_q_net
   );
+  delay23 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => ip_const_10_42_0_31,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay23_q_net
+  );
+  delay24 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 16
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => port_const_7777,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay24_q_net
+  );
+  delay25 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 1
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => slice_gbe_rst_y_net_x0,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay25_q_net
+  );
+  delay26 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 1
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => slice_dbg_rst_y_net_x0,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay26_q_net
+  );
+  delay27 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 1
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => slice_pkt_rst_y_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay27_q_net
+  );
+  delay28 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 1
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => slice_tx_en_y_net,
+    clk => clk_net,
+    ce => ce_net,
+    q(0) => tx_en
+  );
+  delay29 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 10
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => reint5_output_port_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay29_q_net
+  );
+  delay3 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => delay23_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay3_q_net
+  );
   delay30 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
   generic map (
     latency => 3,
@@ -13405,21 +13167,148 @@ begin
     ce => ce_net,
     q => delay39_q_net
   );
-  inverter7 : entity xil_defaultlib.sysgen_inverter_6558f322dd 
+  delay4 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 16
+  )
   port map (
-    clr => '0',
-    ip => relational1_op_net,
+    en => '1',
+    rst => '0',
+    d => delay24_q_net,
     clk => clk_net,
     ce => ce_net,
-    op => inverter7_op_net
+    q => delay4_q_net
   );
-  inverter9 : entity xil_defaultlib.sysgen_inverter_6558f322dd 
+  delay5 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 1
+  )
   port map (
-    clr => '0',
-    ip => relational2_op_net,
+    en => '1',
+    rst => '0',
+    d => eof_verilg,
     clk => clk_net,
     ce => ce_net,
-    op => inverter9_op_net
+    q => gbe_eof
+  );
+  delay6 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 1
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => constant2_op_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay6_q_net
+  );
+  delay66 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => pkt_counter14_op_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay66_q_net
+  );
+  delay67 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 1
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => ethernet_one_gbe_skarab_tx_rx_tx_one_gbe_app_tx_afull_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay67_q_net
+  );
+  delay68 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => pkt_counter15_op_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay68_q_net
+  );
+  delay69 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 1
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => ethernet_one_gbe_skarab_tx_rx_tx_one_gbe_app_tx_overflow_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay69_q_net
+  );
+  delay7 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 1
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => slice_dbg_rst_y_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay7_q_net
+  );
+  delay8 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 1
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d(0) => black_box_tx_valid_package_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay8_q_net
+  );
+  inverter1 : entity xil_defaultlib.sysgen_inverter_9738349e77 
+  port map (
+    clr => '0',
+    ip => edge_op_y_net,
+    clk => clk_net,
+    ce => ce_net,
+    op => inverter1_op_net
   );
   inverter10 : entity xil_defaultlib.sysgen_inverter_6558f322dd 
   port map (
@@ -13453,6 +13342,30 @@ begin
     ce => ce_net,
     op => inverter13_op_net
   );
+  inverter7 : entity xil_defaultlib.sysgen_inverter_6558f322dd 
+  port map (
+    clr => '0',
+    ip => relational1_op_net,
+    clk => clk_net,
+    ce => ce_net,
+    op => inverter7_op_net
+  );
+  inverter8 : entity xil_defaultlib.sysgen_inverter_9738349e77 
+  port map (
+    clr => '0',
+    ip => edge_op_y_net,
+    clk => clk_net,
+    ce => ce_net,
+    op(0) => inverter8_op_net
+  );
+  inverter9 : entity xil_defaultlib.sysgen_inverter_6558f322dd 
+  port map (
+    clr => '0',
+    ip => relational2_op_net,
+    clk => clk_net,
+    ce => ce_net,
+    op => inverter9_op_net
+  );
   logical1 : entity xil_defaultlib.sysgen_logical_7583dc6efe 
   port map (
     clk => '0',
@@ -13461,6 +13374,15 @@ begin
     d0 => delay32_q_net,
     d1 => delay36_q_net,
     y => logical1_y_net
+  );
+  logical11 : entity xil_defaultlib.sysgen_logical_7583dc6efe 
+  port map (
+    clk => '0',
+    ce => '0',
+    clr => '0',
+    d0 => delay32_q_net,
+    d1 => delay36_q_net,
+    y => logical11_y_net
   );
   logical2 : entity xil_defaultlib.sysgen_logical_7583dc6efe 
   port map (
@@ -13498,6 +13420,17 @@ begin
     d1 => inverter10_op_net,
     y => logical5_y_net
   );
+  logical6 : entity xil_defaultlib.sysgen_logical_7e2a2895ac 
+  port map (
+    clk => '0',
+    ce => '0',
+    clr => '0',
+    d0 => slice4_y_net,
+    d1 => slice3_y_net,
+    d2 => slice2_y_net,
+    d3 => slice1_y_net,
+    y => out_or
+  );
   logical7 : entity xil_defaultlib.sysgen_logical_7583dc6efe 
   port map (
     clk => '0',
@@ -13525,15 +13458,6 @@ begin
     d1 => inverter13_op_net,
     y => logical9_y_net
   );
-  logical11 : entity xil_defaultlib.sysgen_logical_7583dc6efe 
-  port map (
-    clk => '0',
-    ce => '0',
-    clr => '0',
-    d0 => delay32_q_net,
-    d1 => delay36_q_net,
-    y => logical11_y_net
-  );
   register2 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlregister 
   generic map (
     d_width => 32,
@@ -13555,24 +13479,6 @@ begin
     a => slice7_y_net,
     b => constant12_op_net,
     op => relational1_op_net
-  );
-  relational2 : entity xil_defaultlib.sysgen_relational_474620387a 
-  port map (
-    clk => '0',
-    ce => '0',
-    clr => '0',
-    a => concat1_y_net,
-    b => constant37_op_net,
-    op => relational2_op_net
-  );
-  relational3 : entity xil_defaultlib.sysgen_relational_474620387a 
-  port map (
-    clk => '0',
-    ce => '0',
-    clr => '0',
-    a => constant39_op_net,
-    b => constant36_op_net,
-    op => relational3_op_net
   );
   relational10 : entity xil_defaultlib.sysgen_relational_46df96a6cc 
   port map (
@@ -13600,6 +13506,46 @@ begin
     a => constant39_op_net,
     b => slice8_y_net,
     op => relational12_op_net
+  );
+  relational2 : entity xil_defaultlib.sysgen_relational_474620387a 
+  port map (
+    clk => '0',
+    ce => '0',
+    clr => '0',
+    a => concat1_y_net,
+    b => constant37_op_net,
+    op => relational2_op_net
+  );
+  relational3 : entity xil_defaultlib.sysgen_relational_474620387a 
+  port map (
+    clk => '0',
+    ce => '0',
+    clr => '0',
+    a => constant39_op_net,
+    b => constant36_op_net,
+    op => relational3_op_net
+  );
+  slice1 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlslice 
+  generic map (
+    new_lsb => 0,
+    new_msb => 0,
+    x_width => 1,
+    y_width => 1
+  )
+  port map (
+    x(0) => eof_verilg_base,
+    y => eof_verilg
+  );
+  slice5 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlslice 
+  generic map (
+    new_lsb => 0,
+    new_msb => 0,
+    x_width => 1,
+    y_width => 1
+  )
+  port map (
+    x => delay8_q_net,
+    y => data_valid_rx
   );
   slice7 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlslice 
   generic map (
@@ -13637,7 +13583,7 @@ begin
     ce => ce_net,
     op => pkt_counter1_op_net
   );
-  pkt_counter2 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlcounter_free 
+  pkt_counter14 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlcounter_free 
   generic map (
     core_name0 => "ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i1",
     op_arith => xlUnsigned,
@@ -13645,13 +13591,13 @@ begin
   )
   port map (
     clr => '0',
-    rst => delay7_q_net,
-    en => logical5_y_net,
+    rst => delay26_q_net,
+    en => delay67_q_net,
     clk => clk_net,
     ce => ce_net,
-    op => pkt_counter2_op_net
+    op => pkt_counter14_op_net
   );
-  pkt_counter3 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlcounter_free 
+  pkt_counter15 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlcounter_free 
   generic map (
     core_name0 => "ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i1",
     op_arith => xlUnsigned,
@@ -13659,11 +13605,11 @@ begin
   )
   port map (
     clr => '0',
-    rst => delay7_q_net,
-    en => logical7_y_net,
+    rst => delay26_q_net,
+    en => delay69_q_net,
     clk => clk_net,
     ce => ce_net,
-    op => pkt_counter3_op_net
+    op => pkt_counter15_op_net
   );
   pkt_counter16 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlcounter_free 
   generic map (
@@ -13721,6 +13667,20 @@ begin
     ce => ce_net,
     op => pkt_counter19_op_net
   );
+  pkt_counter2 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlcounter_free 
+  generic map (
+    core_name0 => "ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i1",
+    op_arith => xlUnsigned,
+    op_width => 32
+  )
+  port map (
+    clr => '0',
+    rst => delay7_q_net,
+    en => logical5_y_net,
+    clk => clk_net,
+    ce => ce_net,
+    op => pkt_counter2_op_net
+  );
   pkt_counter20 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlcounter_free 
   generic map (
     core_name0 => "ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i1",
@@ -13762,6 +13722,62 @@ begin
     clk => clk_net,
     ce => ce_net,
     op => pkt_counter22_op_net
+  );
+  pkt_counter3 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xlcounter_free 
+  generic map (
+    core_name0 => "ethernet_one_gbe_skarab_tx_rx_c_counter_binary_v12_0_i1",
+    op_arith => xlUnsigned,
+    op_width => 32
+  )
+  port map (
+    clr => '0',
+    rst => delay7_q_net,
+    en => logical7_y_net,
+    clk => clk_net,
+    ce => ce_net,
+    op => pkt_counter3_op_net
+  );
+  delay9 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 8
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => data_out_buffer_tx,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay9_q_net
+  );
+  delay38 : entity xil_defaultlib.ethernet_one_gbe_skarab_tx_rx_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 8
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => data_out_buffer,
+    clk => clk_net,
+    ce => ce_net,
+    q => data_out_buffer_tx
+  );
+  wrapper_ethernet_buffer_rx_verilog_v1_0 : entity xil_defaultlib.wrapper_buffer_in_ethernet_verilog_wrapper 
+  port map (
+    a_sync_nrst => inverter1_op_net(0),
+    in_valid_rx => delay32_q_net(0),
+    in_data_rx_ethernet => delay31_q_net,
+    package_size => delay29_q_net,
+    addr_data => addr_data_buffer,
+    data_valid_rx => data_valid_rx(0),
+    clk => clk_net,
+    ce => ce_net,
+    data_out_buffer => data_out_buffer
   );
 end structural;
 -- Generated from Simulink block 
@@ -13872,7 +13888,7 @@ entity ethernet_one_gbe_skarab_tx_rx is
 end ethernet_one_gbe_skarab_tx_rx;
 architecture structural of ethernet_one_gbe_skarab_tx_rx is 
   attribute core_generation_info : string;
-  attribute core_generation_info of structural : architecture is "ethernet_one_gbe_skarab_tx_rx,sysgen_core_2019_1,{,compilation=HDL Netlist,block_icon_display=Default,family=virtex7,part=xc7vx690t,speed=-2,package=ffg1927,synthesis_language=vhdl,hdl_library=xil_defaultlib,synthesis_strategy=Vivado Synthesis Defaults,implementation_strategy=Vivado Implementation Defaults,testbench=0,interface_doc=0,ce_clr=0,clock_period=4.3478,system_simulink_period=1,waveform_viewer=0,axilite_interface=0,ip_catalog_plugin=0,hwcosim_burst_mode=0,simulation_time=1000,addsub=6,assert=39,blackbox2=2,concat=40,constant=103,convert=59,counter=28,delay=166,inv=39,logical=76,mux=35,register=56,reinterpret=158,relational=26,shift=5,slice=113,}";
+  attribute core_generation_info of structural : architecture is "ethernet_one_gbe_skarab_tx_rx,sysgen_core_2019_1,{,compilation=HDL Netlist,block_icon_display=Default,family=virtex7,part=xc7vx690t,speed=-2,package=ffg1927,synthesis_language=vhdl,hdl_library=xil_defaultlib,synthesis_strategy=Vivado Synthesis Defaults,implementation_strategy=Vivado Implementation Defaults,testbench=0,interface_doc=0,ce_clr=0,clock_period=4.3478,system_simulink_period=1,waveform_viewer=0,axilite_interface=0,ip_catalog_plugin=0,hwcosim_burst_mode=0,simulation_time=30000,addsub=6,assert=39,blackbox2=2,concat=40,constant=101,convert=59,counter=28,delay=168,inv=39,logical=76,mux=35,register=56,reinterpret=158,relational=26,shift=5,slice=113,}";
   signal clk_1_net : std_logic;
   signal ce_1_net : std_logic;
 begin

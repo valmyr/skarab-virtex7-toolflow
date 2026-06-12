@@ -1,0 +1,33 @@
+--------------------------------- Version Log ----------------------------------
+Version                                 Path
+System Generator 2019.1                 /tools/Xilinx/Vivado/2019.1
+Matlab 9.4.0.813654 (R2018a)            /usr/local/MATLAB/R2018a
+Vivado 2019.1                           /tools/Xilinx/Vivado/2019.1
+--------------------------------------------------------------------------------
+Summary of Errors:
+Error 0001: Rate propagation error
+     Block: 'ethernet_one_gbe_skarab_loopback/Delay9'
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'ethernet_one_gbe_skarab_loopback/Delay9'
+
+Details:
+ This block contains internal state, but it is being driven only
+by constant signals. You must modify your design so that it is
+clear at what rate this block should be updated. You can do this
+by changing an upstream constant block to be a "sampled
+constant", or, if it is in a feedback loop, by adding an "Assert" block.
+
+In the debugging of this problem, you may find it helpful to have
+the sample rates displayed on the Simulink diagram. This will
+happen if you open the System Generator block's dialog box, set
+its "Block Icon Display" control to "Sample Rates", and then
+update the diagram.
+
+
+Error occurred during "Rate and Type Error Checking".
+
+--------------------------------------------------------------------------------

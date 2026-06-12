@@ -7,7 +7,9 @@ module wrapper_buffer_in_ethernet_verilog(
     input  wire [9:0] package_size,
     input  wire [7:0] addr_data,
     output wire [7:0]  data_out_buffer,
-    input  wire        data_valid_rx
+    input  wire        data_valid_rx,
+    input wire        tx_eof,    
+    input  wire        ena_mux
 );
 buffer_in_ethernet unit_buffer_in_ethernet(
     .clk(clk),
@@ -18,6 +20,8 @@ buffer_in_ethernet unit_buffer_in_ethernet(
     .package_size(package_size),
     .addr_data(addr_data),
     .data_out_buffer(data_out_buffer),
-    .data_valid_rx(data_valid_rx)
+    .data_valid_rx(data_valid_rx),
+    .tx_eof(tx_eof),
+    .ena_mux(ena_mux)
 );
 endmodule

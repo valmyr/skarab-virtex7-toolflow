@@ -55,7 +55,7 @@ fpg='/home/valmyrsilva07/teste12345/mlib_devel/jasper_library/test_models/test_o
 #fpg='/home/valmyrsilva07/teste12345/mlib_devel/jasper_library/test_models/test_onegbe/outputs/test_onegbe_2026-05-26_0116.fpg'
 #fpg='/home/valmyrsilva07/teste12345/mlib_devel/jasper_library/test_models/test_onegbe/outputs/test_onegbe_2026-05-26_1436.fpg'
 #fpg='/home/valmyrsilva07/teste12345/mlib_devel/jasper_library/test_models/test_onegbe/outputs/test_onegbe_2026-05-26_1455.fpg'
-fpg='/home/valmyrsilva07/projeto_virtex7/skarab_1gbe_tx_test_mod_2/outputs/skarab_1gbe_tx_test_mod_2_2026-05-26_1707.fpg'
+#fpg='/home/valmyrsilva07/projeto_virtex7/skarab_1gbe_tx_test_mod_2/outputs/skarab_1gbe_tx_test_mod_2_2026-05-26_1707.fpg'
 def control_fan(pwm=30):
     for i in range(5):
         #if(i<4):

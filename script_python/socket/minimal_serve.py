@@ -35,7 +35,7 @@ rodando = True
 
 
 #####################################################
-
+plt.ion()
 IP = "10.42.0.31"#0a2a001f; ip_const_10_42_0_31
 PORT = 7777
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -46,8 +46,9 @@ k = 0
 amostras = 10
 N =256
 j=0
-fs=600
-t=np.arange(0,4095,1)
+fs=1000
+t=np.arange(0,window,1)
+t_step = 0
 y=np.zeros(N,dtype=np.int8)
 while(True):
     data, addr = sock.recvfrom(2048)
@@ -72,11 +73,12 @@ while(True):
     while(incre+window<=N):
         ax.cla()
         data_plot = y[incre:window+incre]
-        time_plot = t[incre:window+incre]
+        time_plot = t+t_step*np.ones(window)
         ax.plot(time_plot,data_plot)
-        ax_set = ax.set_ylim(-128,128)
+        ax_set = ax.set_ylim(-64,64)
         incre+=step
-        plt.pause(1 / fs)
+        #plt.pause(1 / fs)
+        plt.ioff()
         if(incre+window>=N):
             j+=1
             incre =0
@@ -91,7 +93,7 @@ while(True):
                 kk+=1
 
             print("FIM:",j)
-
+        t_step+=window
     
     k+=1
     #if(k>=amostras):break

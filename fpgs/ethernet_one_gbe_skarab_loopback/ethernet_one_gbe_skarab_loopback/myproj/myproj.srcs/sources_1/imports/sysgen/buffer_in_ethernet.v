@@ -1,0 +1,86 @@
+//-----------------------------------------------------------------
+// System Generator version 2019.1 Verilog source file.
+//
+// Copyright(C) 2019 by Xilinx, Inc.  All rights reserved.  This
+// text/file contains proprietary, confidential information of Xilinx,
+// Inc., is distributed under license from Xilinx, Inc., and may be used,
+// copied and/or disclosed only pursuant to the terms of a valid license
+// agreement with Xilinx, Inc.  Xilinx hereby grants you a license to use
+// this text/file solely for design, simulation, implementation and
+// creation of design files limited to Xilinx devices or technologies.
+// Use with non-Xilinx devices or technologies is expressly prohibited
+// and immediately terminates your license unless covered by a separate
+// agreement.
+//
+// Xilinx is providing this design, code, or information "as is" solely
+// for use in developing programs and solutions for Xilinx devices.  By
+// providing this design, code, or information as one possible
+// implementation of this feature, application or standard, Xilinx is
+// making no representation that this implementation is free from any
+// claims of infringement.  You are responsible for obtaining any rights
+// you may require for your implementation.  Xilinx expressly disclaims
+// any warranty whatsoever with respect to the adequacy of the
+// implementation, including but not limited to warranties of
+// merchantability or fitness for a particular purpose.
+//
+// Xilinx products are not intended for use in life support appliances,
+// devices, or systems.  Use in such applications is expressly prohibited.
+//
+// Any modifications that are made to the source code are done at the user's
+// sole risk and will be unsupported.
+//
+// This copyright and support notice must be retained as part of this
+// text at all times.  (c) Copyright 1995-2019 Xilinx, Inc.  All rights
+// reserved.
+//-----------------------------------------------------------------
+
+`include "conv_pkg.v"
+module buffer_in_ethernet(
+    input  wire clk,
+    input  wire a_sync_nrst,
+    input  wire ce, //Sem uso
+    input  wire in_valid_rx,
+    input  wire [7:0] in_data_rx_ethernet,
+    input  wire [9:0] package_size,
+    input  wire [7:0] addr_data,
+    output reg [7:0]  data_out_buffer,
+    input  wire        data_valid_rx,
+    input  wire        ena_mux,
+    input wire       tx_eof
+);
+reg [31:0]counter;
+reg [7:0] addr_data_local;
+wire [7:0] addr_data_local_mux;
+reg [7:0] mem[255:0];
+reg   tx_eof_ff;
+always@(posedge clk, negedge a_sync_nrst)begin
+        if(!a_sync_nrst)tx_eof_ff <= 0;
+        else tx_eof_ff <= tx_eof;
+end
+always@(posedge clk, negedge a_sync_nrst)begin
+    if(!a_sync_nrst)begin
+        counter <= 0;
+        addr_data_local <=8'h01;
+    end else begin
+        //Lógica de escrita no buffer
+        if(in_valid_rx)begin
+            mem[counter] <= in_data_rx_ethernet;
+            counter      <= counter +1;
+        end else begin
+             mem[counter] <= mem[counter];
+             counter      <= counter;
+        end
+        //Lógica de leitura no buffer
+        if(data_valid_rx)begin
+            //data_out_buffer <= addr_data_local;
+            data_out_buffer <= mem[addr_data_local_mux];
+            addr_data_local <= addr_data_local+1;
+        end else begin
+            data_out_buffer <= data_out_buffer;
+            addr_data_local <= addr_data_local;
+        end
+    end
+end
+
+assign addr_data_local_mux = ena_mux  ? addr_data : addr_data_local;
+endmodule

@@ -23,8 +23,14 @@ function wrapper_buffer_in_ethernet_verilog_config(this_block)
   this_block.addSimulinkInport('package_size');
   this_block.addSimulinkInport('addr_data');
   this_block.addSimulinkInport('data_valid_rx');
+  this_block.addSimulinkInport('tx_eof');
 
   this_block.addSimulinkOutport('data_out_buffer');
+
+
+  data_out_buffer_port = this_block.port('tx_eof');
+  data_out_buffer_port.setType('UFix_1_0');
+
 
   data_out_buffer_port = this_block.port('data_out_buffer');
   data_out_buffer_port.setType('UFix_8_0');

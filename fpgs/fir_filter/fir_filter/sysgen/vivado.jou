@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Jun 10 00:56:41 2026
+# Process ID: 3351016
+# Current directory: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/fir_filter/fir_filter/sysgen
+# Command line: vivado -mode batch -source ProjectGeneration.tcl -notrace
+# Log file: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/fir_filter/fir_filter/sysgen/vivado.log
+# Journal file: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/fir_filter/fir_filter/sysgen/vivado.jou
+#-----------------------------------------------------------
+source ProjectGeneration.tcl -notrace

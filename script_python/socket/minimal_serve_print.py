@@ -44,13 +44,13 @@ print(f"Escutando em {IP}:{PORT}")
 data_ = []
 k = 0
 amostras = 10
-N =256
+N =256-8
 j=0
 fs=600
-t=np.arange(0,4095,1)
+t=np.arange(0,N,1)
 y=np.zeros(N,dtype=np.int8)
 while(True):
-    data, addr = sock.recvfrom(2048)
+    data, addr = sock.recvfrom((256-8)*8)  # Buffer de 2048 bytes
     bytesize = 8
     kk=0
     incre =0
@@ -64,6 +64,6 @@ while(True):
         data_.append(word)
         kk+=1
     print("--------------------------------fim -----------------------------------------\n")
-
+    break
     kk+=1
     #if(k>=amostras):break

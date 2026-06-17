@@ -42,16 +42,16 @@ module buffer_in_ethernet(
     input  wire in_valid_rx,
     input  wire [7:0] in_data_rx_ethernet,
     input  wire [9:0] package_size,
-    input  wire [7:0] addr_data,
+    input  wire [10:0] addr_data,
     output reg [7:0]  data_out_buffer,
     input  wire        data_valid_rx,
     input  wire        ena_mux,
     input wire       tx_eof
 );
 reg [31:0]counter;
-reg [7:0] addr_data_local;
-wire [7:0] addr_data_local_mux;
-reg [7:0] mem[255:0];
+reg [10:0] addr_data_local;
+wire [10:0] addr_data_local_mux;
+reg [7:0] mem[2048-1-1:0];
 reg   tx_eof_ff;
 always@(posedge clk, negedge a_sync_nrst)begin
         if(!a_sync_nrst)tx_eof_ff <= 0;

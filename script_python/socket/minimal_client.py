@@ -16,7 +16,9 @@ N= 256
 
 t = np.arange(0,N,1)
 y = np.array(2**5*np.sin(2*np.pi*(f/fs)*t)+2**5,dtype=np.int8).tolist()
-data =y
+
+frame_rx = np.array([0xff,0xff,0xff,0xff],dtype=np.int64)
+frame_tx = np.array([0xaa,0xaa,0xaa,0xaa],dtype=np.int64)
 
 f1=78
 f2=1000
@@ -27,20 +29,27 @@ t = np.arange(0,N,1)
 #y2 = np.array(2**4*np.sin(2*np.pi*(f2/fs)*t)+2**3,dtype=np.int8)
 #y3 = np.array(2**4*np.sin(2*np.pi*(f3/fs)*t)+2**3,dtype=np.int8)
 #data= ((y1+y2+y3)//3).tolist()
-data =np.arange(start=0,stop=N,dtype=np.int64)
-#data =np.ones(N,dtype=np.int64)*14
+#data =np.arange(start=0,stop=N,dtype=np.int64)
+data1=np.arange(start=0,stop=N-8,dtype=np.int64)+1
+#data1=np.ones(N,dtype=np.int64)*10
+data2 =np.concatenate((frame_rx,data1,frame_tx))
+
+data =(data2).tolist()
+#data =(np.arange(start=0,stop=N,dtype=np.int64)).tolist()
+print(len(data))
 k=0
 try:
     while(True):
+
         data_pack = struct.pack(f'>{len(data)}Q', *data)
-        
         sock.sendto(data_pack, (SERVER_IP, SERVER_PORT))
-        #time.sleep(1)
-        #print(data_pack)
-        for i in range(0,N-1):
+        time.sleep(1)
+        print(data_pack)
+        for i in range(0,N):
             print(f"word[{i}]={data[i]}")
         print("============================Enviado=====================",k)
         k+=1
+        break
         if(k==200):break
 except KeyboardInterrupt:
     print("Finalizado pelo usuário")

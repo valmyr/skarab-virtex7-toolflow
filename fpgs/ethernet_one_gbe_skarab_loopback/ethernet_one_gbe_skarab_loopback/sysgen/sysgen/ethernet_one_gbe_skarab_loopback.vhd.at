@@ -1,723 +1,698 @@
 {
-  'Line_10004' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/constant1',
-    'Instance' => 'constant1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Constant1'
+  'Line_10005' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/inverter',
+    'Instance' => 'inverter',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Inverter'
   },
-  'Line_10011' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/constant2',
-    'Instance' => 'constant2',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Constant2'
+  'Line_10013' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/logical',
+    'Instance' => 'logical',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Logical'
   },
-  'Line_10018' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/delay1',
-    'Instance' => 'delay1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Delay1'
+  'Line_10022' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/mux1',
+    'Instance' => 'mux1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Mux1'
   },
-  'Line_10033' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/delay2',
-    'Instance' => 'delay2',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Delay2'
+  'Line_10032' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/mux2',
+    'Instance' => 'mux2',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Mux2'
   },
-  'Line_10048' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/delay3',
-    'Instance' => 'delay3',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Delay3'
+  'Line_10042' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/register1',
+    'Instance' => 'register1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Register1'
   },
   'Line_1005' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/edge_detect/inverter',
     'Instance' => 'inverter',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/edge_detect/Inverter'
   },
-  'Line_10063' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/inverter',
-    'Instance' => 'inverter',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Inverter'
-  },
-  'Line_10071' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/logical',
-    'Instance' => 'logical',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Logical'
-  },
-  'Line_10080' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/mux1',
-    'Instance' => 'mux1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Mux1'
-  },
-  'Line_10090' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/mux2',
-    'Instance' => 'mux2',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Mux2'
-  },
-  'Line_10100' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/register1',
-    'Instance' => 'register1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Register1'
-  },
-  'Line_10113' => {
+  'Line_10055' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/register6',
     'Instance' => 'register6',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Register6'
   },
-  'Line_10126' => {
+  'Line_10068' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/enable',
     'Instance' => 'enable',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/enable'
+  },
+  'Line_10079' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/trig_src',
+    'Instance' => 'trig_src',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/trig_src'
+  },
+  'Line_10090' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/valid_src',
+    'Instance' => 'valid_src',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/valid_src'
   },
   'Line_1013' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/edge_detect/edge_op',
     'Instance' => 'edge_op',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/edge_detect/edge_op'
   },
-  'Line_10137' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/trig_src',
-    'Instance' => 'trig_src',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/trig_src'
-  },
-  'Line_10148' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/valid_src',
-    'Instance' => 'valid_src',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/valid_src'
-  },
-  'Line_10190' => {
+  'Line_10132' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/calc_add/add_sub',
     'Instance' => 'add_sub',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/calc_add/add_sub'
   },
-  'Line_10199' => {
+  'Line_10141' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/calc_add/concat',
     'Instance' => 'concat',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/calc_add/concat'
   },
-  'Line_10208' => {
+  'Line_10150' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/calc_add/const',
     'Instance' => 'const',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/calc_add/const'
   },
-  'Line_10215' => {
+  'Line_10157' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/calc_add/convert_addr',
     'Instance' => 'convert_addr',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/calc_add/convert_addr'
   },
-  'Line_10236' => {
+  'Line_10178' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/calc_add/lsw',
     'Instance' => 'lsw',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/calc_add/lsw'
   },
-  'Line_10247' => {
+  'Line_10189' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/calc_add/manipulate',
     'Instance' => 'manipulate',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/calc_add/manipulate'
   },
-  'Line_10254' => {
+  'Line_10196' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/calc_add/msw',
     'Instance' => 'msw',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/calc_add/msw'
   },
-  'Line_10265' => {
+  'Line_10207' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/calc_add/mux',
     'Instance' => 'mux',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/calc_add/mux'
   },
-  'Line_10298' => {
+  'Line_10240' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/munge_in/join_x3/concatenate',
     'Instance' => 'concatenate',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/munge_in/join/concatenate'
   },
-  'Line_10307' => {
+  'Line_10249' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/munge_in/join_x3/reinterpret1',
     'Instance' => 'reinterpret1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/munge_in/join/reinterpret1'
   },
-  'Line_10315' => {
+  'Line_10257' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/munge_in/join_x3/reinterpret2',
     'Instance' => 'reinterpret2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/munge_in/join/reinterpret2'
   },
-  'Line_10346' => {
+  'Line_10288' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/munge_in/split_x3/reinterpret1',
     'Instance' => 'reinterpret1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/munge_in/split/reinterpret1'
   },
-  'Line_10354' => {
+  'Line_10296' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/munge_in/split_x3/reinterpret2',
     'Instance' => 'reinterpret2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/munge_in/split/reinterpret2'
   },
-  'Line_10362' => {
+  'Line_10304' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/munge_in/split_x3/slice1',
     'Instance' => 'slice1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/munge_in/split/slice1'
   },
-  'Line_10373' => {
+  'Line_10315' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/munge_in/split_x3/slice2',
     'Instance' => 'slice2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/munge_in/split/slice2'
   },
-  'Line_10406' => {
+  'Line_10348' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/munge_in/join_x3',
     'Instance' => 'join_x3',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/munge_in/join'
   },
-  'Line_10412' => {
+  'Line_10354' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/munge_in/split_x3',
     'Instance' => 'split_x3',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/munge_in/split'
   },
-  'Line_10418' => {
+  'Line_10360' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/munge_in/reinterpret',
     'Instance' => 'reinterpret',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/munge_in/reinterpret'
   },
-  'Line_10426' => {
+  'Line_10368' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/munge_in/reinterpret_out',
     'Instance' => 'reinterpret_out',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/munge_in/reinterpret_out'
   },
-  'Line_10472' => {
+  'Line_10414' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/calc_add',
     'Instance' => 'calc_add',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/calc_add'
   },
-  'Line_10479' => {
+  'Line_10421' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/munge_in',
     'Instance' => 'munge_in',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/munge_in'
   },
-  'Line_10484' => {
+  'Line_10426' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/convert_addr',
     'Instance' => 'convert_addr',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/convert_addr'
   },
-  'Line_10505' => {
+  'Line_10447' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/convert_din1',
     'Instance' => 'convert_din1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/convert_din1'
   },
-  'Line_10526' => {
+  'Line_10468' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram/convert_we',
     'Instance' => 'convert_we',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram/convert_we'
   },
-  'Line_10567' => {
+  'Line_10509' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl/io_delay',
     'Instance' => 'io_delay',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl/io_delay'
   },
-  'Line_10575' => {
+  'Line_10517' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl/reint1',
     'Instance' => 'reint1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl/reint1'
   },
-  'Line_10583' => {
+  'Line_10525' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl/slice_reg',
     'Instance' => 'slice_reg',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl/slice_reg'
   },
-  'Line_10625' => {
+  'Line_10567' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl_combine/concatenate',
     'Instance' => 'concatenate',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl_combine/concatenate'
   },
-  'Line_10636' => {
+  'Line_10578' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl_combine/reinterpret1',
     'Instance' => 'reinterpret1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl_combine/reinterpret1'
   },
-  'Line_10644' => {
+  'Line_10586' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl_combine/reinterpret2',
     'Instance' => 'reinterpret2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl_combine/reinterpret2'
   },
-  'Line_10652' => {
+  'Line_10594' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl_combine/reinterpret3',
     'Instance' => 'reinterpret3',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl_combine/reinterpret3'
   },
-  'Line_10660' => {
+  'Line_10602' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl_combine/reinterpret4',
     'Instance' => 'reinterpret4',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl_combine/reinterpret4'
   },
-  'Line_10697' => {
+  'Line_10639' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl_split/reinterpret2',
     'Instance' => 'reinterpret2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl_split/reinterpret2'
+  },
+  'Line_10647' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl_split/reinterpret4',
+    'Instance' => 'reinterpret4',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl_split/reinterpret4'
+  },
+  'Line_10655' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl_split/slice1',
+    'Instance' => 'slice1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl_split/slice1'
+  },
+  'Line_10666' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl_split/slice2',
+    'Instance' => 'slice2',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl_split/slice2'
+  },
+  'Line_10677' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl_split/slice3',
+    'Instance' => 'slice3',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl_split/slice3'
+  },
+  'Line_10688' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl_split/slice4',
+    'Instance' => 'slice4',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl_split/slice4'
   },
   'Line_107' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/bus_expand/slice4',
     'Instance' => 'slice4',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/bus_expand/slice4'
   },
-  'Line_10705' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl_split/reinterpret4',
-    'Instance' => 'reinterpret4',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl_split/reinterpret4'
-  },
-  'Line_10713' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl_split/slice1',
-    'Instance' => 'slice1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl_split/slice1'
-  },
-  'Line_10724' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl_split/slice2',
-    'Instance' => 'slice2',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl_split/slice2'
-  },
-  'Line_10735' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl_split/slice3',
-    'Instance' => 'slice3',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl_split/slice3'
-  },
-  'Line_10746' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl_split/slice4',
-    'Instance' => 'slice4',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl_split/slice4'
-  },
-  'Line_10784' => {
+  'Line_10726' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/status/io_delay',
     'Instance' => 'io_delay',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/status/io_delay'
   },
-  'Line_10792' => {
+  'Line_10734' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/status/cast_gw',
     'Instance' => 'cast_gw',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/status/cast_gw'
+  },
+  'Line_10755' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/status/assert_reg',
+    'Instance' => 'assert_reg',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/status/assert_reg'
+  },
+  'Line_10764' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/status/reint1',
+    'Instance' => 'reint1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/status/reint1'
   },
   'Line_1081' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge',
     'Instance' => 'dram_munge',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge'
   },
-  'Line_10813' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/status/assert_reg',
-    'Instance' => 'assert_reg',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/status/assert_reg'
-  },
-  'Line_10822' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/status/reint1',
-    'Instance' => 'reint1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/status/reint1'
-  },
-  'Line_10902' => {
+  'Line_10844' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen',
     'Instance' => 'add_gen',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen'
+  },
+  'Line_10858' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl',
+    'Instance' => 'basic_ctrl',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl'
+  },
+  'Line_10872' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram',
+    'Instance' => 'bram',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram'
+  },
+  'Line_10883' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl',
+    'Instance' => 'ctrl',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl'
+  },
+  'Line_10888' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl_combine',
+    'Instance' => 'ctrl_combine',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl_combine'
+  },
+  'Line_10896' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl_split',
+    'Instance' => 'ctrl_split',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl_split'
+  },
+  'Line_10904' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/status',
+    'Instance' => 'status',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/status'
   },
   'Line_1091' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/edge_detect',
     'Instance' => 'edge_detect',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/edge_detect'
   },
-  'Line_10916' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl',
-    'Instance' => 'basic_ctrl',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl'
-  },
-  'Line_10930' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/bram',
-    'Instance' => 'bram',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/bram'
-  },
-  'Line_10941' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl',
-    'Instance' => 'ctrl',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl'
-  },
-  'Line_10946' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl_combine',
-    'Instance' => 'ctrl_combine',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl_combine'
-  },
-  'Line_10954' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ctrl_split',
-    'Instance' => 'ctrl_split',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ctrl_split'
-  },
-  'Line_10962' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/status',
-    'Instance' => 'status',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/status'
-  },
-  'Line_10969' => {
+  'Line_10911' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_del',
     'Instance' => 'add_del',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_del'
   },
-  'Line_10977' => {
+  'Line_10919' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/arm',
     'Instance' => 'arm',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/arm'
+  },
+  'Line_10926' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/arm_or',
+    'Instance' => 'arm_or',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/arm_or'
+  },
+  'Line_10935' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/cast',
+    'Instance' => 'cast',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/cast'
+  },
+  'Line_10956' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/circ',
+    'Instance' => 'circ',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/circ'
+  },
+  'Line_10963' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/circ_or',
+    'Instance' => 'circ_or',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/circ_or'
+  },
+  'Line_10972' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/dat_del',
+    'Instance' => 'dat_del',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/dat_del'
   },
   'Line_1098' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/constant_x0',
     'Instance' => 'constant_x0',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/Constant'
   },
-  'Line_10984' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/arm_or',
-    'Instance' => 'arm_or',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/arm_or'
-  },
-  'Line_10993' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/cast',
-    'Instance' => 'cast',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/cast'
-  },
-  'Line_11014' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/circ',
-    'Instance' => 'circ',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/circ'
-  },
-  'Line_11021' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/circ_or',
-    'Instance' => 'circ_or',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/circ_or'
-  },
-  'Line_11030' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/dat_del',
-    'Instance' => 'dat_del',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/dat_del'
-  },
-  'Line_11038' => {
+  'Line_10980' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/never',
     'Instance' => 'never',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/never'
   },
-  'Line_11045' => {
+  'Line_10987' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/ri',
     'Instance' => 'ri',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/ri'
+  },
+  'Line_10995' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/we_del',
+    'Instance' => 'we_del',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/we_del'
   },
   'Line_1105' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/constant1',
     'Instance' => 'constant1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/Constant1'
   },
-  'Line_11053' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/we_del',
-    'Instance' => 'we_del',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/we_del'
-  },
-  'Line_11118' => {
+  'Line_11060' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/buscreate',
     'Instance' => 'buscreate',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/buscreate'
+  },
+  'Line_11066' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss',
+    'Instance' => 'ss',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss'
+  },
+  'Line_11082' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/assert_pkt_ctr',
+    'Instance' => 'assert_pkt_ctr',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/assert_pkt_ctr'
+  },
+  'Line_11091' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/assert_pkt_ctr_old',
+    'Instance' => 'assert_pkt_ctr_old',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/assert_pkt_ctr_old'
   },
   'Line_1112' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/constant2',
     'Instance' => 'constant2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/Constant2'
   },
-  'Line_11124' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss',
-    'Instance' => 'ss',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss'
-  },
-  'Line_11140' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/assert_pkt_ctr',
-    'Instance' => 'assert_pkt_ctr',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/assert_pkt_ctr'
-  },
-  'Line_11149' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/assert_pkt_ctr_old',
-    'Instance' => 'assert_pkt_ctr_old',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/assert_pkt_ctr_old'
-  },
-  'Line_11185' => {
+  'Line_11127' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_badframe1/io_delay',
     'Instance' => 'io_delay',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_badframe1/io_delay'
+  },
+  'Line_11135' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_badframe1/cast_gw',
+    'Instance' => 'cast_gw',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_badframe1/cast_gw'
+  },
+  'Line_11156' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_badframe1/assert_reg',
+    'Instance' => 'assert_reg',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_badframe1/assert_reg'
+  },
+  'Line_11165' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_badframe1/reint1',
+    'Instance' => 'reint1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_badframe1/reint1'
   },
   'Line_1119' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/delay1',
     'Instance' => 'delay1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/Delay1'
   },
-  'Line_11193' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_badframe1/cast_gw',
-    'Instance' => 'cast_gw',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_badframe1/cast_gw'
-  },
-  'Line_11214' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_badframe1/assert_reg',
-    'Instance' => 'assert_reg',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_badframe1/assert_reg'
-  },
-  'Line_11223' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_badframe1/reint1',
-    'Instance' => 'reint1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_badframe1/reint1'
-  },
-  'Line_11253' => {
+  'Line_11195' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_control1/io_delay',
     'Instance' => 'io_delay',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_control1/io_delay'
   },
-  'Line_11261' => {
+  'Line_11203' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_control1/slice_dbg_rst',
     'Instance' => 'slice_dbg_rst',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_control1/slice_dbg_rst'
   },
-  'Line_11272' => {
+  'Line_11214' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_control1/slice_snap_arm',
     'Instance' => 'slice_snap_arm',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_control1/slice_snap_arm'
   },
-  'Line_11310' => {
+  'Line_11252' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_eof1/io_delay',
     'Instance' => 'io_delay',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_eof1/io_delay'
   },
-  'Line_11318' => {
+  'Line_11260' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_eof1/cast_gw',
     'Instance' => 'cast_gw',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_eof1/cast_gw'
   },
-  'Line_11339' => {
+  'Line_11281' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_eof1/assert_reg',
     'Instance' => 'assert_reg',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_eof1/assert_reg'
+  },
+  'Line_11290' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_eof1/reint1',
+    'Instance' => 'reint1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_eof1/reint1'
+  },
+  'Line_11325' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_overrun1/io_delay',
+    'Instance' => 'io_delay',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_overrun1/io_delay'
+  },
+  'Line_11333' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_overrun1/cast_gw',
+    'Instance' => 'cast_gw',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_overrun1/cast_gw'
   },
   'Line_1134' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/delay2',
     'Instance' => 'delay2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/Delay2'
   },
-  'Line_11348' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_eof1/reint1',
-    'Instance' => 'reint1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_eof1/reint1'
-  },
-  'Line_11383' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_overrun1/io_delay',
-    'Instance' => 'io_delay',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_overrun1/io_delay'
-  },
-  'Line_11391' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_overrun1/cast_gw',
-    'Instance' => 'cast_gw',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_overrun1/cast_gw'
-  },
-  'Line_11412' => {
+  'Line_11354' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_overrun1/assert_reg',
     'Instance' => 'assert_reg',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_overrun1/assert_reg'
   },
-  'Line_11421' => {
+  'Line_11363' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_overrun1/reint1',
     'Instance' => 'reint1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_overrun1/reint1'
   },
-  'Line_11456' => {
+  'Line_11398' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_src_ip/io_delay',
     'Instance' => 'io_delay',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_src_ip/io_delay'
   },
-  'Line_11464' => {
+  'Line_11406' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_src_ip/cast_gw',
     'Instance' => 'cast_gw',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_src_ip/cast_gw'
   },
-  'Line_11485' => {
+  'Line_11427' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_src_ip/assert_reg',
     'Instance' => 'assert_reg',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_src_ip/assert_reg'
+  },
+  'Line_11436' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_src_ip/reint1',
+    'Instance' => 'reint1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_src_ip/reint1'
+  },
+  'Line_11471' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_src_port/io_delay',
+    'Instance' => 'io_delay',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_src_port/io_delay'
+  },
+  'Line_11479' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_src_port/cast_gw',
+    'Instance' => 'cast_gw',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_src_port/cast_gw'
   },
   'Line_1149' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/delay3',
     'Instance' => 'delay3',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/Delay3'
   },
-  'Line_11494' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_src_ip/reint1',
-    'Instance' => 'reint1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_src_ip/reint1'
-  },
-  'Line_11529' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_src_port/io_delay',
-    'Instance' => 'io_delay',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_src_port/io_delay'
-  },
-  'Line_11537' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_src_port/cast_gw',
-    'Instance' => 'cast_gw',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_src_port/cast_gw'
-  },
-  'Line_11558' => {
+  'Line_11500' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_src_port/assert_reg',
     'Instance' => 'assert_reg',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_src_port/assert_reg'
   },
-  'Line_11567' => {
+  'Line_11509' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_src_port/reint1',
     'Instance' => 'reint1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_src_port/reint1'
   },
-  'Line_11602' => {
+  'Line_11544' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_valid1/io_delay',
     'Instance' => 'io_delay',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_valid1/io_delay'
   },
-  'Line_11610' => {
+  'Line_11552' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_valid1/cast_gw',
     'Instance' => 'cast_gw',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_valid1/cast_gw'
   },
-  'Line_11631' => {
+  'Line_11573' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_valid1/assert_reg',
     'Instance' => 'assert_reg',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_valid1/assert_reg'
+  },
+  'Line_11582' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_valid1/reint1',
+    'Instance' => 'reint1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_valid1/reint1'
+  },
+  'Line_11617' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_afull1/io_delay',
+    'Instance' => 'io_delay',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_afull1/io_delay'
+  },
+  'Line_11625' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_afull1/cast_gw',
+    'Instance' => 'cast_gw',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_afull1/cast_gw'
   },
   'Line_1164' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/inverter',
     'Instance' => 'inverter',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/Inverter'
   },
-  'Line_11640' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_valid1/reint1',
-    'Instance' => 'reint1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_valid1/reint1'
-  },
-  'Line_11675' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_afull1/io_delay',
-    'Instance' => 'io_delay',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_afull1/io_delay'
-  },
-  'Line_11683' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_afull1/cast_gw',
-    'Instance' => 'cast_gw',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_afull1/cast_gw'
-  },
-  'Line_11704' => {
+  'Line_11646' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_afull1/assert_reg',
     'Instance' => 'assert_reg',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_afull1/assert_reg'
   },
-  'Line_11713' => {
+  'Line_11655' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_afull1/reint1',
     'Instance' => 'reint1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_afull1/reint1'
+  },
+  'Line_11695' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_control/io_delay',
+    'Instance' => 'io_delay',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_control/io_delay'
+  },
+  'Line_11703' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_control/slice_gbe_rst',
+    'Instance' => 'slice_gbe_rst',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_control/slice_gbe_rst'
+  },
+  'Line_11714' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_control/slice_dbg_rst',
+    'Instance' => 'slice_dbg_rst',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_control/slice_dbg_rst'
   },
   'Line_1172' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/logical',
     'Instance' => 'logical',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/Logical'
   },
-  'Line_11753' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_control/io_delay',
-    'Instance' => 'io_delay',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_control/io_delay'
-  },
-  'Line_11761' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_control/slice_gbe_rst',
-    'Instance' => 'slice_gbe_rst',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_control/slice_gbe_rst'
-  },
-  'Line_11772' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_control/slice_dbg_rst',
-    'Instance' => 'slice_dbg_rst',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_control/slice_dbg_rst'
-  },
-  'Line_11783' => {
+  'Line_11725' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_control/slice_pkt_rst',
     'Instance' => 'slice_pkt_rst',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_control/slice_pkt_rst'
   },
-  'Line_11794' => {
+  'Line_11736' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_control/slice_tx_en',
     'Instance' => 'slice_tx_en',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_control/slice_tx_en'
   },
-  'Line_11805' => {
+  'Line_11747' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_control/slice_pkt_len',
     'Instance' => 'slice_pkt_len',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_control/slice_pkt_len'
+  },
+  'Line_11758' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_control/reint5',
+    'Instance' => 'reint5',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_control/reint5'
   },
   'Line_1181' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/mux1',
     'Instance' => 'mux1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/Mux1'
   },
-  'Line_11816' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_control/reint5',
-    'Instance' => 'reint5',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_control/reint5'
+  'Line_11856' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_one_gbe/convert_rx_ack',
+    'Instance' => 'convert_rx_ack',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_one_gbe/convert_rx_ack'
+  },
+  'Line_11877' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_one_gbe/convert_rx_rst',
+    'Instance' => 'convert_rx_rst',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_one_gbe/convert_rx_rst'
+  },
+  'Line_11898' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_one_gbe/convert_tx_data',
+    'Instance' => 'convert_tx_data',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_one_gbe/convert_tx_data'
   },
   'Line_1191' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/mux2',
     'Instance' => 'mux2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/Mux2'
   },
-  'Line_11914' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_one_gbe/convert_rx_ack',
-    'Instance' => 'convert_rx_ack',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_one_gbe/convert_rx_ack'
-  },
-  'Line_11935' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_one_gbe/convert_rx_rst',
-    'Instance' => 'convert_rx_rst',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_one_gbe/convert_rx_rst'
-  },
-  'Line_11956' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_one_gbe/convert_tx_data',
-    'Instance' => 'convert_tx_data',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_one_gbe/convert_tx_data'
-  },
-  'Line_11977' => {
+  'Line_11919' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_one_gbe/convert_tx_dest_ip',
     'Instance' => 'convert_tx_dest_ip',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_one_gbe/convert_tx_dest_ip'
   },
-  'Line_11998' => {
+  'Line_11940' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_one_gbe/convert_tx_end_of_frame',
     'Instance' => 'convert_tx_end_of_frame',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_one_gbe/convert_tx_end_of_frame'
+  },
+  'Line_11961' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_one_gbe/convert_tx_port',
+    'Instance' => 'convert_tx_port',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_one_gbe/convert_tx_port'
+  },
+  'Line_11982' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_one_gbe/convert_tx_rst',
+    'Instance' => 'convert_tx_rst',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_one_gbe/convert_tx_rst'
+  },
+  'Line_12003' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_one_gbe/convert_tx_valid',
+    'Instance' => 'convert_tx_valid',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_one_gbe/convert_tx_valid'
   },
   'Line_1201' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/register1',
     'Instance' => 'register1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/Register1'
   },
-  'Line_12019' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_one_gbe/convert_tx_port',
-    'Instance' => 'convert_tx_port',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_one_gbe/convert_tx_port'
-  },
-  'Line_12040' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_one_gbe/convert_tx_rst',
-    'Instance' => 'convert_tx_rst',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_one_gbe/convert_tx_rst'
-  },
-  'Line_12061' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_one_gbe/convert_tx_valid',
-    'Instance' => 'convert_tx_valid',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_one_gbe/convert_tx_valid'
-  },
-  'Line_12109' => {
+  'Line_12051' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_overflow1/io_delay',
     'Instance' => 'io_delay',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_overflow1/io_delay'
   },
-  'Line_12117' => {
+  'Line_12059' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_overflow1/cast_gw',
     'Instance' => 'cast_gw',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_overflow1/cast_gw'
   },
-  'Line_12138' => {
+  'Line_12080' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_overflow1/assert_reg',
     'Instance' => 'assert_reg',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_overflow1/assert_reg'
+  },
+  'Line_12089' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_overflow1/reint1',
+    'Instance' => 'reint1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_overflow1/reint1'
   },
   'Line_1214' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/register6',
     'Instance' => 'register6',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/Register6'
-  },
-  'Line_12147' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_overflow1/reint1',
-    'Instance' => 'reint1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_overflow1/reint1'
   },
   'Line_1227' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/enable',
@@ -729,480 +704,515 @@
     'Instance' => 'trig_src',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/trig_src'
   },
+  'Line_12460' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/addr_soft_control',
+    'Instance' => 'addr_soft_control',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/addr_soft_control'
+  },
+  'Line_12465' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/bus_expand',
+    'Instance' => 'bus_expand',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/bus_expand'
+  },
+  'Line_12473' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/clk_mhz',
+    'Instance' => 'clk_mhz',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/clk_mhz'
+  },
+  'Line_12480' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/convert_rx_valid1',
+    'Instance' => 'convert_rx_valid1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/convert_rx_valid1'
+  },
+  'Line_12485' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3',
+    'Instance' => 'd3',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3'
+  },
   'Line_1249' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/valid_src',
     'Instance' => 'valid_src',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/valid_src'
   },
-  'Line_12519' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/addr_soft_control',
-    'Instance' => 'addr_soft_control',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/addr_soft_control'
-  },
-  'Line_12524' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/bus_expand',
-    'Instance' => 'bus_expand',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/bus_expand'
-  },
-  'Line_12532' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/clk_mhz',
-    'Instance' => 'clk_mhz',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/clk_mhz'
-  },
-  'Line_12539' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/convert_rx_valid1',
-    'Instance' => 'convert_rx_valid1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/convert_rx_valid1'
-  },
-  'Line_12544' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3',
-    'Instance' => 'd3',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3'
-  },
-  'Line_12562' => {
+  'Line_12503' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d4',
     'Instance' => 'd4',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d4'
   },
-  'Line_12581' => {
+  'Line_12522' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d5',
     'Instance' => 'd5',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d5'
   },
-  'Line_12604' => {
+  'Line_12545' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/data_rx_valmir',
     'Instance' => 'data_rx_valmir',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/data_rx_valmir'
   },
-  'Line_12611' => {
+  'Line_12552' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/data_soft_control',
     'Instance' => 'data_soft_control',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/data_soft_control'
   },
-  'Line_12618' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/edge_detect',
-    'Instance' => 'edge_detect',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/edge_detect'
-  },
-  'Line_12625' => {
+  'Line_12559' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/edge_detect1_x4',
     'Instance' => 'edge_detect1_x4',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/edge_detect1'
   },
-  'Line_12632' => {
+  'Line_12566' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_marker1',
     'Instance' => 'err_marker1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_marker1'
   },
-  'Line_12639' => {
+  'Line_12573' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_pkt_ctr1',
     'Instance' => 'err_pkt_ctr1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_pkt_ctr1'
   },
-  'Line_12646' => {
+  'Line_12580' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_pkt_ctr_step1',
     'Instance' => 'err_pkt_ctr_step1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_pkt_ctr_step1'
   },
-  'Line_12653' => {
+  'Line_12587' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_ramp1',
     'Instance' => 'err_ramp1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_ramp1'
   },
-  'Line_12660' => {
+  'Line_12594' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_valid_raw1',
     'Instance' => 'err_valid_raw1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_valid_raw1'
   },
-  'Line_12667' => {
+  'Line_12601' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_walk1',
     'Instance' => 'err_walk1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_walk1'
   },
-  'Line_12674' => {
+  'Line_12608' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/mux_control',
     'Instance' => 'mux_control',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/mux_control'
   },
-  'Line_12679' => {
+  'Line_12613' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1',
     'Instance' => 'pkt_ctrs1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1'
   },
-  'Line_12694' => {
+  'Line_12628' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1',
     'Instance' => 'pkt_ctrs_compare1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1'
   },
-  'Line_12711' => {
+  'Line_12645' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_badframe1',
     'Instance' => 'rx_badframe1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_badframe1'
   },
-  'Line_12718' => {
+  'Line_12652' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_control1',
     'Instance' => 'rx_control1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_control1'
   },
-  'Line_12724' => {
+  'Line_12658' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_eof1',
     'Instance' => 'rx_eof1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_eof1'
   },
-  'Line_12731' => {
+  'Line_12665' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_overrun1',
     'Instance' => 'rx_overrun1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_overrun1'
   },
-  'Line_12738' => {
+  'Line_12672' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_src_ip',
     'Instance' => 'rx_src_ip',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_src_ip'
   },
-  'Line_12745' => {
+  'Line_12679' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_src_port',
     'Instance' => 'rx_src_port',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_src_port'
   },
-  'Line_12752' => {
+  'Line_12686' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/rx_valid1',
     'Instance' => 'rx_valid1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/rx_valid1'
   },
-  'Line_12759' => {
+  'Line_12693' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_afull1',
     'Instance' => 'tx_afull1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_afull1'
   },
-  'Line_12766' => {
+  'Line_12700' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_control',
     'Instance' => 'tx_control',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_control'
   },
-  'Line_12775' => {
+  'Line_12709' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_one_gbe',
     'Instance' => 'tx_one_gbe',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_one_gbe'
   },
-  'Line_12804' => {
+  'Line_12738' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/tx_overflow1',
     'Instance' => 'tx_overflow1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/tx_overflow1'
   },
-  'Line_12811' => {
+  'Line_12745' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/addsub3',
     'Instance' => 'addsub3',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/AddSub3'
   },
-  'Line_12842' => {
+  'Line_12776' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/black_box2',
     'Instance' => 'black_box2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Black Box2'
   },
-  'Line_12857' => {
+  'Line_12791' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/concat1',
     'Instance' => 'concat1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Concat1'
   },
-  'Line_12868' => {
+  'Line_12802' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant1',
     'Instance' => 'constant1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant1'
   },
-  'Line_12875' => {
+  'Line_12809' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant11',
     'Instance' => 'constant11',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant11'
   },
-  'Line_12882' => {
+  'Line_12816' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant12',
     'Instance' => 'constant12',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant12'
   },
-  'Line_12889' => {
+  'Line_12823' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant14',
     'Instance' => 'constant14',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant14'
   },
-  'Line_12896' => {
+  'Line_12830' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant15',
     'Instance' => 'constant15',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant15'
   },
-  'Line_12903' => {
+  'Line_12837' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant2',
     'Instance' => 'constant2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant2'
+  },
+  'Line_12844' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant31',
+    'Instance' => 'constant31',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant31'
+  },
+  'Line_12851' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant33',
+    'Instance' => 'constant33',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant33'
+  },
+  'Line_12858' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant36',
+    'Instance' => 'constant36',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant36'
+  },
+  'Line_12865' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant37',
+    'Instance' => 'constant37',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant37'
+  },
+  'Line_12872' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant38',
+    'Instance' => 'constant38',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant38'
+  },
+  'Line_12879' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant39',
+    'Instance' => 'constant39',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant39'
+  },
+  'Line_12886' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant4',
+    'Instance' => 'constant4',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant4'
+  },
+  'Line_12893' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant40',
+    'Instance' => 'constant40',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant40'
+  },
+  'Line_12900' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay',
+    'Instance' => 'delay',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay'
   },
   'Line_1291' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/bram/calc_add/add_sub',
     'Instance' => 'add_sub',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/bram/calc_add/add_sub'
   },
-  'Line_12910' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant31',
-    'Instance' => 'constant31',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant31'
-  },
-  'Line_12917' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant33',
-    'Instance' => 'constant33',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant33'
-  },
-  'Line_12924' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant36',
-    'Instance' => 'constant36',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant36'
-  },
-  'Line_12931' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant37',
-    'Instance' => 'constant37',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant37'
-  },
-  'Line_12938' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant38',
-    'Instance' => 'constant38',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant38'
-  },
-  'Line_12945' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant39',
-    'Instance' => 'constant39',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant39'
-  },
-  'Line_12952' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant4',
-    'Instance' => 'constant4',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant4'
-  },
-  'Line_12959' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/constant40',
-    'Instance' => 'constant40',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Constant40'
-  },
-  'Line_12966' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay',
-    'Instance' => 'delay',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay'
-  },
-  'Line_12981' => {
+  'Line_12915' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay10',
     'Instance' => 'delay10',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay10'
   },
-  'Line_12996' => {
+  'Line_12930' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay11',
     'Instance' => 'delay11',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay11'
+  },
+  'Line_12945' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay12',
+    'Instance' => 'delay12',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay12'
+  },
+  'Line_12960' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay13',
+    'Instance' => 'delay13',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay13'
+  },
+  'Line_12975' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay14',
+    'Instance' => 'delay14',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay14'
+  },
+  'Line_12990' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay15',
+    'Instance' => 'delay15',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay15'
   },
   'Line_1300' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/bram/calc_add/concat',
     'Instance' => 'concat',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/bram/calc_add/concat'
   },
-  'Line_13011' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay12',
-    'Instance' => 'delay12',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay12'
-  },
-  'Line_13026' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay13',
-    'Instance' => 'delay13',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay13'
-  },
-  'Line_13041' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay14',
-    'Instance' => 'delay14',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay14'
-  },
-  'Line_13056' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay15',
-    'Instance' => 'delay15',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay15'
-  },
-  'Line_13071' => {
+  'Line_13005' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay16',
     'Instance' => 'delay16',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay16'
   },
-  'Line_13086' => {
+  'Line_13020' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay17',
     'Instance' => 'delay17',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay17'
+  },
+  'Line_13035' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay18',
+    'Instance' => 'delay18',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay18'
+  },
+  'Line_13050' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay19',
+    'Instance' => 'delay19',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay19'
+  },
+  'Line_13065' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay20',
+    'Instance' => 'delay20',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay20'
+  },
+  'Line_13080' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay21',
+    'Instance' => 'delay21',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay21'
   },
   'Line_1309' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/bram/calc_add/const',
     'Instance' => 'const',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/bram/calc_add/const'
   },
-  'Line_13101' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay18',
-    'Instance' => 'delay18',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay18'
+  'Line_13095' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay22',
+    'Instance' => 'delay22',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay22'
   },
-  'Line_13116' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay19',
-    'Instance' => 'delay19',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay19'
+  'Line_13110' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay23',
+    'Instance' => 'delay23',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay23'
   },
-  'Line_13131' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay20',
-    'Instance' => 'delay20',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay20'
+  'Line_13125' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay24',
+    'Instance' => 'delay24',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay24'
   },
-  'Line_13146' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay21',
-    'Instance' => 'delay21',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay21'
+  'Line_13140' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay25',
+    'Instance' => 'delay25',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay25'
+  },
+  'Line_13155' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay26',
+    'Instance' => 'delay26',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay26'
   },
   'Line_1316' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/bram/calc_add/convert_addr',
     'Instance' => 'convert_addr',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/bram/calc_add/convert_addr'
   },
-  'Line_13161' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay22',
-    'Instance' => 'delay22',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay22'
-  },
-  'Line_13176' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay23',
-    'Instance' => 'delay23',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay23'
-  },
-  'Line_13191' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay24',
-    'Instance' => 'delay24',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay24'
-  },
-  'Line_13206' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay25',
-    'Instance' => 'delay25',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay25'
-  },
-  'Line_13221' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay26',
-    'Instance' => 'delay26',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay26'
-  },
-  'Line_13236' => {
+  'Line_13170' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay27',
     'Instance' => 'delay27',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay27'
   },
-  'Line_13251' => {
+  'Line_13185' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay28',
     'Instance' => 'delay28',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay28'
   },
-  'Line_13266' => {
+  'Line_13200' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay29',
     'Instance' => 'delay29',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay29'
   },
-  'Line_13281' => {
+  'Line_13215' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay3',
     'Instance' => 'delay3',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay3'
   },
-  'Line_13296' => {
+  'Line_13230' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay30',
     'Instance' => 'delay30',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay30'
   },
-  'Line_13311' => {
+  'Line_13245' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay31',
     'Instance' => 'delay31',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay31'
   },
-  'Line_13326' => {
+  'Line_13260' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay32',
     'Instance' => 'delay32',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay32'
   },
-  'Line_13341' => {
+  'Line_13275' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay33',
     'Instance' => 'delay33',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay33'
   },
-  'Line_13356' => {
+  'Line_13290' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay34',
     'Instance' => 'delay34',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay34'
+  },
+  'Line_13305' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay36',
+    'Instance' => 'delay36',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay36'
+  },
+  'Line_13320' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay37',
+    'Instance' => 'delay37',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay37'
+  },
+  'Line_13335' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay39',
+    'Instance' => 'delay39',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay39'
+  },
+  'Line_13350' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay4',
+    'Instance' => 'delay4',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay4'
+  },
+  'Line_13365' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay5',
+    'Instance' => 'delay5',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay5'
   },
   'Line_1337' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/bram/calc_add/lsw',
     'Instance' => 'lsw',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/bram/calc_add/lsw'
   },
-  'Line_13371' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay36',
-    'Instance' => 'delay36',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay36'
-  },
-  'Line_13386' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay37',
-    'Instance' => 'delay37',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay37'
-  },
-  'Line_13401' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay39',
-    'Instance' => 'delay39',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay39'
-  },
-  'Line_13416' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay4',
-    'Instance' => 'delay4',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay4'
-  },
-  'Line_13431' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay5',
-    'Instance' => 'delay5',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay5'
-  },
-  'Line_13446' => {
+  'Line_13380' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay6',
     'Instance' => 'delay6',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay6'
   },
-  'Line_13461' => {
+  'Line_13395' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay66',
     'Instance' => 'delay66',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay66'
   },
-  'Line_13476' => {
+  'Line_13410' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay67',
     'Instance' => 'delay67',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay67'
+  },
+  'Line_13425' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay68',
+    'Instance' => 'delay68',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay68'
+  },
+  'Line_13440' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay69',
+    'Instance' => 'delay69',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay69'
+  },
+  'Line_13455' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay7',
+    'Instance' => 'delay7',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay7'
+  },
+  'Line_13470' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/inverter1',
+    'Instance' => 'inverter1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Inverter1'
+  },
+  'Line_13478' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/inverter10',
+    'Instance' => 'inverter10',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Inverter10'
   },
   'Line_1348' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/bram/calc_add/manipulate',
     'Instance' => 'manipulate',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/bram/calc_add/manipulate'
   },
-  'Line_13491' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay68',
-    'Instance' => 'delay68',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay68'
+  'Line_13486' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/inverter11',
+    'Instance' => 'inverter11',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Inverter11'
   },
-  'Line_13506' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay69',
-    'Instance' => 'delay69',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay69'
+  'Line_13494' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/inverter12',
+    'Instance' => 'inverter12',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Inverter12'
   },
-  'Line_13521' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/delay7',
-    'Instance' => 'delay7',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Delay7'
+  'Line_13502' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/inverter13',
+    'Instance' => 'inverter13',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Inverter13'
   },
-  'Line_13536' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/inverter1',
-    'Instance' => 'inverter1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Inverter1'
+  'Line_13510' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/inverter7',
+    'Instance' => 'inverter7',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Inverter7'
   },
-  'Line_13544' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/inverter10',
-    'Instance' => 'inverter10',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Inverter10'
+  'Line_13518' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/inverter8',
+    'Instance' => 'inverter8',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Inverter8'
+  },
+  'Line_13526' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/inverter9',
+    'Instance' => 'inverter9',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Inverter9'
+  },
+  'Line_13534' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/logical1',
+    'Instance' => 'logical1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Logical1'
+  },
+  'Line_13543' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/logical11',
+    'Instance' => 'logical11',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Logical11'
   },
   'Line_1355' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/bram/calc_add/msw',
@@ -1210,226 +1220,186 @@
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/bram/calc_add/msw'
   },
   'Line_13552' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/inverter11',
-    'Instance' => 'inverter11',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Inverter11'
-  },
-  'Line_13560' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/inverter12',
-    'Instance' => 'inverter12',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Inverter12'
-  },
-  'Line_13568' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/inverter13',
-    'Instance' => 'inverter13',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Inverter13'
-  },
-  'Line_13576' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/inverter7',
-    'Instance' => 'inverter7',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Inverter7'
-  },
-  'Line_13584' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/inverter8',
-    'Instance' => 'inverter8',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Inverter8'
-  },
-  'Line_13592' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/inverter9',
-    'Instance' => 'inverter9',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Inverter9'
-  },
-  'Line_13600' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/logical1',
-    'Instance' => 'logical1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Logical1'
-  },
-  'Line_13609' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/logical11',
-    'Instance' => 'logical11',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Logical11'
-  },
-  'Line_13618' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/logical2',
     'Instance' => 'logical2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Logical2'
   },
-  'Line_13627' => {
+  'Line_13561' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/logical3',
     'Instance' => 'logical3',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Logical3'
   },
-  'Line_13636' => {
+  'Line_13570' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/logical4',
     'Instance' => 'logical4',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Logical4'
   },
-  'Line_13645' => {
+  'Line_13579' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/logical5',
     'Instance' => 'logical5',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Logical5'
   },
-  'Line_13654' => {
+  'Line_13588' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/logical6',
     'Instance' => 'logical6',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Logical6'
+  },
+  'Line_13599' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/logical7',
+    'Instance' => 'logical7',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Logical7'
+  },
+  'Line_13608' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/logical8',
+    'Instance' => 'logical8',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Logical8'
+  },
+  'Line_13617' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/logical9',
+    'Instance' => 'logical9',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Logical9'
+  },
+  'Line_13626' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/register2',
+    'Instance' => 'register2',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Register2'
+  },
+  'Line_13639' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/relational1',
+    'Instance' => 'relational1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Relational1'
+  },
+  'Line_13648' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/relational10',
+    'Instance' => 'relational10',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Relational10'
+  },
+  'Line_13657' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/relational11',
+    'Instance' => 'relational11',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Relational11'
   },
   'Line_1366' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/bram/calc_add/mux',
     'Instance' => 'mux',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/bram/calc_add/mux'
   },
-  'Line_13665' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/logical7',
-    'Instance' => 'logical7',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Logical7'
-  },
-  'Line_13674' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/logical8',
-    'Instance' => 'logical8',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Logical8'
-  },
-  'Line_13683' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/logical9',
-    'Instance' => 'logical9',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Logical9'
-  },
-  'Line_13692' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/register2',
-    'Instance' => 'register2',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Register2'
-  },
-  'Line_13705' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/relational1',
-    'Instance' => 'relational1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Relational1'
-  },
-  'Line_13714' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/relational10',
-    'Instance' => 'relational10',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Relational10'
-  },
-  'Line_13723' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/relational11',
-    'Instance' => 'relational11',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Relational11'
-  },
-  'Line_13732' => {
+  'Line_13666' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/relational12',
     'Instance' => 'relational12',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Relational12'
   },
-  'Line_13741' => {
+  'Line_13675' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/relational2',
     'Instance' => 'relational2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Relational2'
   },
-  'Line_13750' => {
+  'Line_13684' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/relational3',
     'Instance' => 'relational3',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Relational3'
   },
-  'Line_13759' => {
+  'Line_13693' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/slice1',
     'Instance' => 'slice1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Slice1'
   },
-  'Line_13770' => {
+  'Line_13704' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/slice5',
     'Instance' => 'slice5',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Slice5'
   },
-  'Line_13781' => {
+  'Line_13715' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/slice7',
     'Instance' => 'slice7',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Slice7'
   },
-  'Line_13792' => {
+  'Line_13726' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/slice8',
     'Instance' => 'slice8',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Slice8'
   },
-  'Line_13803' => {
+  'Line_13737' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/convert1',
     'Instance' => 'convert1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Convert1'
   },
-  'Line_13824' => {
+  'Line_13758' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/convert2',
     'Instance' => 'convert2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Convert2'
   },
-  'Line_13845' => {
+  'Line_13779' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/convert3',
     'Instance' => 'convert3',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/Convert3'
   },
-  'Line_13866' => {
+  'Line_13800' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_counter1',
     'Instance' => 'pkt_counter1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_counter1'
   },
-  'Line_13880' => {
+  'Line_13814' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_counter14',
     'Instance' => 'pkt_counter14',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_counter14'
   },
-  'Line_13894' => {
+  'Line_13828' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_counter15',
     'Instance' => 'pkt_counter15',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_counter15'
   },
-  'Line_13908' => {
+  'Line_13842' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_counter16',
     'Instance' => 'pkt_counter16',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_counter16'
   },
-  'Line_13922' => {
+  'Line_13856' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_counter17',
     'Instance' => 'pkt_counter17',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_counter17'
   },
-  'Line_13936' => {
+  'Line_13870' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_counter18',
     'Instance' => 'pkt_counter18',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_counter18'
   },
-  'Line_13950' => {
+  'Line_13884' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_counter19',
     'Instance' => 'pkt_counter19',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_counter19'
   },
-  'Line_13964' => {
+  'Line_13898' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_counter2',
     'Instance' => 'pkt_counter2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_counter2'
   },
-  'Line_13978' => {
+  'Line_13912' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_counter20',
     'Instance' => 'pkt_counter20',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_counter20'
   },
-  'Line_13992' => {
+  'Line_13926' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_counter21',
     'Instance' => 'pkt_counter21',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_counter21'
   },
-  'Line_14006' => {
+  'Line_13940' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_counter22',
     'Instance' => 'pkt_counter22',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_counter22'
   },
-  'Line_14020' => {
+  'Line_13954' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_counter3',
     'Instance' => 'pkt_counter3',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_counter3'
   },
-  'Line_14034' => {
+  'Line_13968' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/wrapper_ethernet_buffer_rx_verilog_v1_0_0',
     'Instance' => 'wrapper_ethernet_buffer_rx_verilog_v1_0_0',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/wrapper_ethernet_buffer_rx_verilog_v1.0.0'
   },
-  'Line_14065' => {
+  'Line_13999' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_default_clock_driver/clockdriver',
     'Instance' => 'clockdriver',
     'SimulinkInstance' => ''
@@ -1439,12 +1409,12 @@
     'Instance' => 'concatenate',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/bram/munge_in/join/concatenate'
   },
-  'Line_14164' => {
+  'Line_14098' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_default_clock_driver',
     'Instance' => 'ethernet_one_gbe_skarab_loopback_default_clock_driver',
     'SimulinkInstance' => ''
   },
-  'Line_14172' => {
+  'Line_14106' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct',
     'Instance' => 'ethernet_one_gbe_skarab_loopback_struct',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback'
@@ -3460,184 +3430,179 @@
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/data_soft_control/reint1'
   },
   'Line_6829' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/edge_detect/delay',
-    'Instance' => 'delay',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/edge_detect/Delay'
-  },
-  'Line_6844' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/edge_detect/inverter',
-    'Instance' => 'inverter',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/edge_detect/Inverter'
-  },
-  'Line_6852' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/edge_detect/edge_op',
-    'Instance' => 'edge_op',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/edge_detect/edge_op'
-  },
-  'Line_6887' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/edge_detect1_x4/delay',
     'Instance' => 'delay',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/edge_detect1/Delay'
   },
-  'Line_6902' => {
+  'Line_6844' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/edge_detect1_x4/inverter',
     'Instance' => 'inverter',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/edge_detect1/Inverter'
   },
-  'Line_6910' => {
+  'Line_6852' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/edge_detect1_x4/edge_op',
     'Instance' => 'edge_op',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/edge_detect1/edge_op'
   },
-  'Line_6946' => {
+  'Line_6888' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_marker1/io_delay',
     'Instance' => 'io_delay',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_marker1/io_delay'
   },
-  'Line_6954' => {
+  'Line_6896' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_marker1/cast_gw',
     'Instance' => 'cast_gw',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_marker1/cast_gw'
   },
-  'Line_6975' => {
+  'Line_6917' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_marker1/assert_reg',
     'Instance' => 'assert_reg',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_marker1/assert_reg'
   },
-  'Line_6984' => {
+  'Line_6926' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_marker1/reint1',
     'Instance' => 'reint1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_marker1/reint1'
   },
-  'Line_7019' => {
+  'Line_6961' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_pkt_ctr1/io_delay',
     'Instance' => 'io_delay',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_pkt_ctr1/io_delay'
   },
-  'Line_7027' => {
+  'Line_6969' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_pkt_ctr1/cast_gw',
     'Instance' => 'cast_gw',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_pkt_ctr1/cast_gw'
   },
-  'Line_7048' => {
+  'Line_6990' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_pkt_ctr1/assert_reg',
     'Instance' => 'assert_reg',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_pkt_ctr1/assert_reg'
   },
-  'Line_7057' => {
+  'Line_6999' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_pkt_ctr1/reint1',
     'Instance' => 'reint1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_pkt_ctr1/reint1'
   },
-  'Line_7092' => {
+  'Line_7034' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_pkt_ctr_step1/io_delay',
     'Instance' => 'io_delay',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_pkt_ctr_step1/io_delay'
   },
-  'Line_7100' => {
+  'Line_7042' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_pkt_ctr_step1/cast_gw',
     'Instance' => 'cast_gw',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_pkt_ctr_step1/cast_gw'
+  },
+  'Line_7063' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_pkt_ctr_step1/assert_reg',
+    'Instance' => 'assert_reg',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_pkt_ctr_step1/assert_reg'
+  },
+  'Line_7072' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_pkt_ctr_step1/reint1',
+    'Instance' => 'reint1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_pkt_ctr_step1/reint1'
+  },
+  'Line_7107' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_ramp1/io_delay',
+    'Instance' => 'io_delay',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_ramp1/io_delay'
   },
   'Line_711' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/concat',
     'Instance' => 'concat',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/Concat'
   },
-  'Line_7121' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_pkt_ctr_step1/assert_reg',
-    'Instance' => 'assert_reg',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_pkt_ctr_step1/assert_reg'
-  },
-  'Line_7130' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_pkt_ctr_step1/reint1',
-    'Instance' => 'reint1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_pkt_ctr_step1/reint1'
-  },
-  'Line_7165' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_ramp1/io_delay',
-    'Instance' => 'io_delay',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_ramp1/io_delay'
-  },
-  'Line_7173' => {
+  'Line_7115' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_ramp1/cast_gw',
     'Instance' => 'cast_gw',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_ramp1/cast_gw'
   },
-  'Line_7194' => {
+  'Line_7136' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_ramp1/assert_reg',
     'Instance' => 'assert_reg',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_ramp1/assert_reg'
   },
-  'Line_7203' => {
+  'Line_7145' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_ramp1/reint1',
     'Instance' => 'reint1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_ramp1/reint1'
+  },
+  'Line_7180' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_valid_raw1/io_delay',
+    'Instance' => 'io_delay',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_valid_raw1/io_delay'
+  },
+  'Line_7188' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_valid_raw1/cast_gw',
+    'Instance' => 'cast_gw',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_valid_raw1/cast_gw'
+  },
+  'Line_7209' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_valid_raw1/assert_reg',
+    'Instance' => 'assert_reg',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_valid_raw1/assert_reg'
+  },
+  'Line_7218' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_valid_raw1/reint1',
+    'Instance' => 'reint1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_valid_raw1/reint1'
   },
   'Line_722' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/concat1',
     'Instance' => 'concat1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/Concat1'
   },
-  'Line_7238' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_valid_raw1/io_delay',
-    'Instance' => 'io_delay',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_valid_raw1/io_delay'
-  },
-  'Line_7246' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_valid_raw1/cast_gw',
-    'Instance' => 'cast_gw',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_valid_raw1/cast_gw'
-  },
-  'Line_7267' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_valid_raw1/assert_reg',
-    'Instance' => 'assert_reg',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_valid_raw1/assert_reg'
-  },
-  'Line_7276' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_valid_raw1/reint1',
-    'Instance' => 'reint1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_valid_raw1/reint1'
-  },
-  'Line_7311' => {
+  'Line_7253' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_walk1/io_delay',
     'Instance' => 'io_delay',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_walk1/io_delay'
   },
-  'Line_7319' => {
+  'Line_7261' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_walk1/cast_gw',
     'Instance' => 'cast_gw',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_walk1/cast_gw'
+  },
+  'Line_7282' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_walk1/assert_reg',
+    'Instance' => 'assert_reg',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_walk1/assert_reg'
+  },
+  'Line_7291' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_walk1/reint1',
+    'Instance' => 'reint1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_walk1/reint1'
+  },
+  'Line_7319' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/mux_control/io_delay',
+    'Instance' => 'io_delay',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/mux_control/io_delay'
+  },
+  'Line_7327' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/mux_control/slice_reg',
+    'Instance' => 'slice_reg',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/mux_control/slice_reg'
   },
   'Line_733' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/constant_x0',
     'Instance' => 'constant_x0',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/Constant'
   },
-  'Line_7340' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_walk1/assert_reg',
-    'Instance' => 'assert_reg',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_walk1/assert_reg'
-  },
-  'Line_7349' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/err_walk1/reint1',
-    'Instance' => 'reint1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/err_walk1/reint1'
-  },
-  'Line_7377' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/mux_control/io_delay',
-    'Instance' => 'io_delay',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/mux_control/io_delay'
-  },
-  'Line_7385' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/mux_control/slice_reg',
-    'Instance' => 'slice_reg',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/mux_control/slice_reg'
-  },
-  'Line_7396' => {
+  'Line_7338' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/mux_control/reint1',
     'Instance' => 'reint1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/mux_control/reint1'
+  },
+  'Line_7364' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/buscreate/reinterpret1',
+    'Instance' => 'reinterpret1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/buscreate/reinterpret1'
+  },
+  'Line_7398' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/edge_detect/delay',
+    'Instance' => 'delay',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/edge_detect/Delay'
   },
   'Line_74' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/bus_expand/slice1',
@@ -3649,282 +3614,272 @@
     'Instance' => 'delay',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/Delay'
   },
-  'Line_7422' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/buscreate/reinterpret1',
-    'Instance' => 'reinterpret1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/buscreate/reinterpret1'
-  },
-  'Line_7456' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/edge_detect/delay',
-    'Instance' => 'delay',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/edge_detect/Delay'
-  },
-  'Line_7471' => {
+  'Line_7413' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/edge_detect/inverter',
     'Instance' => 'inverter',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/edge_detect/Inverter'
   },
-  'Line_7479' => {
+  'Line_7421' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/edge_detect/edge_op',
     'Instance' => 'edge_op',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/edge_detect/edge_op'
   },
-  'Line_7548' => {
+  'Line_7490' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/edge_detect',
     'Instance' => 'edge_detect',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/edge_detect'
+  },
+  'Line_7497' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/concat',
+    'Instance' => 'concat',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/Concat'
+  },
+  'Line_7507' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/convert',
+    'Instance' => 'convert',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/Convert'
+  },
+  'Line_7528' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/delay',
+    'Instance' => 'delay',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/Delay'
+  },
+  'Line_7536' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/delay1',
+    'Instance' => 'delay1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/Delay1'
   },
   'Line_755' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/delay1',
     'Instance' => 'delay1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/Delay1'
   },
-  'Line_7555' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/concat',
-    'Instance' => 'concat',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/Concat'
-  },
-  'Line_7565' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/convert',
-    'Instance' => 'convert',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/Convert'
-  },
-  'Line_7586' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/delay',
-    'Instance' => 'delay',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/Delay'
-  },
-  'Line_7594' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/delay1',
-    'Instance' => 'delay1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/Delay1'
-  },
-  'Line_7609' => {
+  'Line_7551' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/delay3',
     'Instance' => 'delay3',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/Delay3'
   },
-  'Line_7617' => {
+  'Line_7559' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/delay4',
     'Instance' => 'delay4',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/Delay4'
   },
-  'Line_7625' => {
+  'Line_7567' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/delay6',
     'Instance' => 'delay6',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/Delay6'
   },
-  'Line_7633' => {
+  'Line_7575' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/inverter',
     'Instance' => 'inverter',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/Inverter'
   },
-  'Line_7641' => {
+  'Line_7583' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/inverter1',
     'Instance' => 'inverter1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/Inverter1'
   },
-  'Line_7649' => {
+  'Line_7591' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/logical1',
     'Instance' => 'logical1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/Logical1'
   },
-  'Line_7658' => {
+  'Line_7600' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/logical4',
     'Instance' => 'logical4',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/Logical4'
   },
-  'Line_7667' => {
+  'Line_7609' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/logical6',
     'Instance' => 'logical6',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/Logical6'
   },
-  'Line_7677' => {
+  'Line_7619' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/register5',
     'Instance' => 'register5',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/Register5'
   },
-  'Line_7690' => {
+  'Line_7632' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/shift',
     'Instance' => 'shift',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/Shift'
   },
-  'Line_7698' => {
+  'Line_7640' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/add_gen',
     'Instance' => 'add_gen',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/add_gen'
+  },
+  'Line_7654' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/slice1',
+    'Instance' => 'slice1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/slice1'
+  },
+  'Line_7665' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/slice2',
+    'Instance' => 'slice2',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/slice2'
+  },
+  'Line_7676' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/slice3',
+    'Instance' => 'slice3',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/slice3'
   },
   'Line_770' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/logical',
     'Instance' => 'logical',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/Logical'
   },
-  'Line_7712' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/slice1',
-    'Instance' => 'slice1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/slice1'
+  'Line_7743' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/concat',
+    'Instance' => 'concat',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Concat'
   },
-  'Line_7723' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/slice2',
-    'Instance' => 'slice2',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/slice2'
+  'Line_7754' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/concat1',
+    'Instance' => 'concat1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Concat1'
   },
-  'Line_7734' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen/slice3',
-    'Instance' => 'slice3',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen/slice3'
+  'Line_7765' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/constant_x0',
+    'Instance' => 'constant_x0',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Constant'
+  },
+  'Line_7772' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/delay',
+    'Instance' => 'delay',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Delay'
+  },
+  'Line_7787' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/delay1',
+    'Instance' => 'delay1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Delay1'
   },
   'Line_779' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/logical1',
     'Instance' => 'logical1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/Logical1'
   },
-  'Line_7801' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/concat',
-    'Instance' => 'concat',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Concat'
-  },
-  'Line_7812' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/concat1',
-    'Instance' => 'concat1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Concat1'
-  },
-  'Line_7823' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/constant_x0',
-    'Instance' => 'constant_x0',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Constant'
-  },
-  'Line_7830' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/delay',
-    'Instance' => 'delay',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Delay'
-  },
-  'Line_7845' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/delay1',
-    'Instance' => 'delay1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Delay1'
-  },
-  'Line_7860' => {
+  'Line_7802' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/logical',
     'Instance' => 'logical',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Logical'
   },
-  'Line_7869' => {
+  'Line_7811' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/logical1',
     'Instance' => 'logical1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Logical1'
   },
-  'Line_7878' => {
+  'Line_7820' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/mux1',
     'Instance' => 'mux1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Mux1'
+  },
+  'Line_7830' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/register_x0',
+    'Instance' => 'register_x0',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Register'
+  },
+  'Line_7843' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/register1',
+    'Instance' => 'register1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Register1'
+  },
+  'Line_7856' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/register2',
+    'Instance' => 'register2',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Register2'
+  },
+  'Line_7869' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/register3',
+    'Instance' => 'register3',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Register3'
   },
   'Line_788' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/mux1',
     'Instance' => 'mux1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/Mux1'
   },
-  'Line_7888' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/register_x0',
-    'Instance' => 'register_x0',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Register'
-  },
-  'Line_7901' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/register1',
-    'Instance' => 'register1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Register1'
-  },
-  'Line_7914' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/register2',
-    'Instance' => 'register2',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Register2'
-  },
-  'Line_7927' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/register3',
-    'Instance' => 'register3',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Register3'
-  },
-  'Line_7940' => {
+  'Line_7882' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/relational',
     'Instance' => 'relational',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Relational'
   },
-  'Line_7949' => {
+  'Line_7891' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/relational1',
     'Instance' => 'relational1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Relational1'
   },
-  'Line_7958' => {
+  'Line_7900' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/relational2',
     'Instance' => 'relational2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Relational2'
   },
-  'Line_7967' => {
+  'Line_7909' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/relational3',
     'Instance' => 'relational3',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/Relational3'
   },
-  'Line_7976' => {
+  'Line_7918' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/con0',
     'Instance' => 'con0',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/con0'
+  },
+  'Line_7925' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/con1',
+    'Instance' => 'con1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/con1'
+  },
+  'Line_7932' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/con2',
+    'Instance' => 'con2',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/con2'
+  },
+  'Line_7939' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/con3',
+    'Instance' => 'con3',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/con3'
+  },
+  'Line_7946' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/data_choice',
+    'Instance' => 'data_choice',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/data_choice'
+  },
+  'Line_7956' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/dout_count',
+    'Instance' => 'dout_count',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/dout_count'
+  },
+  'Line_7965' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/dram',
+    'Instance' => 'dram',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/dram'
+  },
+  'Line_7972' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/input_count',
+    'Instance' => 'input_count',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/input_count'
   },
   'Line_798' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/register_x0',
     'Instance' => 'register_x0',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/Register'
   },
-  'Line_7983' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/con1',
-    'Instance' => 'con1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/con1'
-  },
-  'Line_7990' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/con2',
-    'Instance' => 'con2',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/con2'
-  },
-  'Line_7997' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/con3',
-    'Instance' => 'con3',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/con3'
-  },
-  'Line_8004' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/data_choice',
-    'Instance' => 'data_choice',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/data_choice'
-  },
-  'Line_8014' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/dout_count',
-    'Instance' => 'dout_count',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/dout_count'
-  },
-  'Line_8023' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/dram',
-    'Instance' => 'dram',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/dram'
-  },
-  'Line_8030' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/input_count',
-    'Instance' => 'input_count',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/input_count'
-  },
-  'Line_8044' => {
+  'Line_7986' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge/we_choice',
     'Instance' => 'we_choice',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge/we_choice'
   },
-  'Line_8080' => {
+  'Line_8022' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/edge_detect/delay',
     'Instance' => 'delay',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/edge_detect/Delay'
   },
-  'Line_8095' => {
+  'Line_8037' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/edge_detect/inverter',
     'Instance' => 'inverter',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/edge_detect/Inverter'
   },
-  'Line_8103' => {
+  'Line_8045' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/edge_detect/edge_op',
     'Instance' => 'edge_op',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/edge_detect/edge_op'
@@ -3934,145 +3889,160 @@
     'Instance' => 'register1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/Register1'
   },
-  'Line_8168' => {
+  'Line_8110' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/dram_munge',
     'Instance' => 'dram_munge',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/dram_munge'
   },
-  'Line_8178' => {
+  'Line_8120' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/edge_detect',
     'Instance' => 'edge_detect',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/edge_detect'
   },
-  'Line_8185' => {
+  'Line_8127' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/constant_x0',
     'Instance' => 'constant_x0',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/Constant'
   },
-  'Line_8192' => {
+  'Line_8134' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/constant1',
     'Instance' => 'constant1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/Constant1'
   },
-  'Line_8199' => {
+  'Line_8141' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/constant2',
     'Instance' => 'constant2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/Constant2'
   },
-  'Line_8206' => {
+  'Line_8148' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/delay1',
     'Instance' => 'delay1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/Delay1'
   },
-  'Line_8221' => {
+  'Line_8163' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/delay2',
     'Instance' => 'delay2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/Delay2'
   },
-  'Line_8236' => {
+  'Line_8178' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/delay3',
     'Instance' => 'delay3',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/Delay3'
+  },
+  'Line_8193' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/inverter',
+    'Instance' => 'inverter',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/Inverter'
+  },
+  'Line_8201' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/logical',
+    'Instance' => 'logical',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/Logical'
+  },
+  'Line_8210' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/mux1',
+    'Instance' => 'mux1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/Mux1'
+  },
+  'Line_8220' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/mux2',
+    'Instance' => 'mux2',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/Mux2'
+  },
+  'Line_8230' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/register1',
+    'Instance' => 'register1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/Register1'
   },
   'Line_824' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/register2',
     'Instance' => 'register2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/Register2'
   },
-  'Line_8251' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/inverter',
-    'Instance' => 'inverter',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/Inverter'
-  },
-  'Line_8259' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/logical',
-    'Instance' => 'logical',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/Logical'
-  },
-  'Line_8268' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/mux1',
-    'Instance' => 'mux1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/Mux1'
-  },
-  'Line_8278' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/mux2',
-    'Instance' => 'mux2',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/Mux2'
-  },
-  'Line_8288' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/register1',
-    'Instance' => 'register1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/Register1'
-  },
-  'Line_8301' => {
+  'Line_8243' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/register6',
     'Instance' => 'register6',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/Register6'
   },
-  'Line_8314' => {
+  'Line_8256' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/enable',
     'Instance' => 'enable',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/enable'
   },
-  'Line_8325' => {
+  'Line_8267' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/trig_src',
     'Instance' => 'trig_src',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/trig_src'
   },
-  'Line_8336' => {
+  'Line_8278' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl/valid_src',
     'Instance' => 'valid_src',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl/valid_src'
+  },
+  'Line_8320' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/calc_add/add_sub',
+    'Instance' => 'add_sub',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/calc_add/add_sub'
+  },
+  'Line_8329' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/calc_add/concat',
+    'Instance' => 'concat',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/calc_add/concat'
+  },
+  'Line_8338' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/calc_add/const',
+    'Instance' => 'const',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/calc_add/const'
+  },
+  'Line_8345' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/calc_add/convert_addr',
+    'Instance' => 'convert_addr',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/calc_add/convert_addr'
+  },
+  'Line_8366' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/calc_add/lsw',
+    'Instance' => 'lsw',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/calc_add/lsw'
   },
   'Line_837' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/register3',
     'Instance' => 'register3',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/Register3'
   },
-  'Line_8378' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/calc_add/add_sub',
-    'Instance' => 'add_sub',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/calc_add/add_sub'
-  },
-  'Line_8387' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/calc_add/concat',
-    'Instance' => 'concat',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/calc_add/concat'
-  },
-  'Line_8396' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/calc_add/const',
-    'Instance' => 'const',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/calc_add/const'
-  },
-  'Line_8403' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/calc_add/convert_addr',
-    'Instance' => 'convert_addr',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/calc_add/convert_addr'
-  },
-  'Line_8424' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/calc_add/lsw',
-    'Instance' => 'lsw',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/calc_add/lsw'
-  },
-  'Line_8435' => {
+  'Line_8377' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/calc_add/manipulate',
     'Instance' => 'manipulate',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/calc_add/manipulate'
   },
-  'Line_8442' => {
+  'Line_8384' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/calc_add/msw',
     'Instance' => 'msw',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/calc_add/msw'
   },
-  'Line_8453' => {
+  'Line_8395' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/calc_add/mux',
     'Instance' => 'mux',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/calc_add/mux'
   },
-  'Line_8481' => {
+  'Line_8423' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/munge_in/reinterpret_out',
     'Instance' => 'reinterpret_out',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/munge_in/reinterpret_out'
+  },
+  'Line_8469' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/calc_add',
+    'Instance' => 'calc_add',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/calc_add'
+  },
+  'Line_8476' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/munge_in',
+    'Instance' => 'munge_in',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/munge_in'
+  },
+  'Line_8481' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/convert_addr',
+    'Instance' => 'convert_addr',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/convert_addr'
   },
   'Line_85' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/bus_expand/slice2',
@@ -4084,30 +4054,30 @@
     'Instance' => 'relational',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/Relational'
   },
-  'Line_8527' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/calc_add',
-    'Instance' => 'calc_add',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/calc_add'
-  },
-  'Line_8534' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/munge_in',
-    'Instance' => 'munge_in',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/munge_in'
-  },
-  'Line_8539' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/convert_addr',
-    'Instance' => 'convert_addr',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/convert_addr'
-  },
-  'Line_8560' => {
+  'Line_8502' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/convert_din1',
     'Instance' => 'convert_din1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/convert_din1'
   },
-  'Line_8581' => {
+  'Line_8523' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram/convert_we',
     'Instance' => 'convert_we',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram/convert_we'
+  },
+  'Line_8564' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl/io_delay',
+    'Instance' => 'io_delay',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl/io_delay'
+  },
+  'Line_8572' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl/reint1',
+    'Instance' => 'reint1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl/reint1'
+  },
+  'Line_8580' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl/slice_reg',
+    'Instance' => 'slice_reg',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl/slice_reg'
   },
   'Line_859' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/relational1',
@@ -4115,538 +4085,548 @@
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/Relational1'
   },
   'Line_8622' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl/io_delay',
-    'Instance' => 'io_delay',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl/io_delay'
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_combine/concatenate',
+    'Instance' => 'concatenate',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_combine/concatenate'
   },
-  'Line_8630' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl/reint1',
-    'Instance' => 'reint1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl/reint1'
+  'Line_8633' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_combine/reinterpret1',
+    'Instance' => 'reinterpret1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_combine/reinterpret1'
   },
-  'Line_8638' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl/slice_reg',
-    'Instance' => 'slice_reg',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl/slice_reg'
+  'Line_8641' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_combine/reinterpret2',
+    'Instance' => 'reinterpret2',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_combine/reinterpret2'
+  },
+  'Line_8649' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_combine/reinterpret3',
+    'Instance' => 'reinterpret3',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_combine/reinterpret3'
+  },
+  'Line_8657' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_combine/reinterpret4',
+    'Instance' => 'reinterpret4',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_combine/reinterpret4'
   },
   'Line_868' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/relational2',
     'Instance' => 'relational2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/Relational2'
   },
-  'Line_8680' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_combine/concatenate',
-    'Instance' => 'concatenate',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_combine/concatenate'
-  },
-  'Line_8691' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_combine/reinterpret1',
-    'Instance' => 'reinterpret1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_combine/reinterpret1'
-  },
-  'Line_8699' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_combine/reinterpret2',
-    'Instance' => 'reinterpret2',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_combine/reinterpret2'
-  },
-  'Line_8707' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_combine/reinterpret3',
-    'Instance' => 'reinterpret3',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_combine/reinterpret3'
-  },
-  'Line_8715' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_combine/reinterpret4',
-    'Instance' => 'reinterpret4',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_combine/reinterpret4'
-  },
-  'Line_8752' => {
+  'Line_8694' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_split/reinterpret2',
     'Instance' => 'reinterpret2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_split/reinterpret2'
   },
-  'Line_8760' => {
+  'Line_8702' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_split/reinterpret4',
     'Instance' => 'reinterpret4',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_split/reinterpret4'
   },
-  'Line_8768' => {
+  'Line_8710' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_split/slice1',
     'Instance' => 'slice1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_split/slice1'
+  },
+  'Line_8721' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_split/slice2',
+    'Instance' => 'slice2',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_split/slice2'
+  },
+  'Line_8732' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_split/slice3',
+    'Instance' => 'slice3',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_split/slice3'
+  },
+  'Line_8743' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_split/slice4',
+    'Instance' => 'slice4',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_split/slice4'
   },
   'Line_877' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/relational3',
     'Instance' => 'relational3',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/Relational3'
   },
-  'Line_8779' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_split/slice2',
-    'Instance' => 'slice2',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_split/slice2'
-  },
-  'Line_8790' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_split/slice3',
-    'Instance' => 'slice3',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_split/slice3'
-  },
-  'Line_8801' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_split/slice4',
-    'Instance' => 'slice4',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_split/slice4'
-  },
-  'Line_8839' => {
+  'Line_8781' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/status/io_delay',
     'Instance' => 'io_delay',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/status/io_delay'
   },
-  'Line_8847' => {
+  'Line_8789' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/status/cast_gw',
     'Instance' => 'cast_gw',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/status/cast_gw'
+  },
+  'Line_8810' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/status/assert_reg',
+    'Instance' => 'assert_reg',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/status/assert_reg'
+  },
+  'Line_8819' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/status/reint1',
+    'Instance' => 'reint1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/status/reint1'
   },
   'Line_886' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/con0',
     'Instance' => 'con0',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/con0'
   },
-  'Line_8868' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/status/assert_reg',
-    'Instance' => 'assert_reg',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/status/assert_reg'
+  'Line_8896' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen',
+    'Instance' => 'add_gen',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen'
   },
-  'Line_8877' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/status/reint1',
-    'Instance' => 'reint1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/status/reint1'
+  'Line_8910' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl',
+    'Instance' => 'basic_ctrl',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl'
+  },
+  'Line_8923' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram',
+    'Instance' => 'bram',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram'
   },
   'Line_893' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/con1',
     'Instance' => 'con1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/con1'
   },
-  'Line_8954' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_gen',
-    'Instance' => 'add_gen',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_gen'
-  },
-  'Line_8968' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/basic_ctrl',
-    'Instance' => 'basic_ctrl',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/basic_ctrl'
-  },
-  'Line_8981' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/bram',
-    'Instance' => 'bram',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/bram'
-  },
-  'Line_8992' => {
+  'Line_8934' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl',
     'Instance' => 'ctrl',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl'
   },
-  'Line_8997' => {
+  'Line_8939' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_combine',
     'Instance' => 'ctrl_combine',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_combine'
+  },
+  'Line_8947' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_split',
+    'Instance' => 'ctrl_split',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_split'
+  },
+  'Line_8955' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/status',
+    'Instance' => 'status',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/status'
+  },
+  'Line_8962' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_del',
+    'Instance' => 'add_del',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_del'
+  },
+  'Line_8970' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/arm',
+    'Instance' => 'arm',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/arm'
+  },
+  'Line_8977' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/arm_or',
+    'Instance' => 'arm_or',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/arm_or'
+  },
+  'Line_8986' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/cast',
+    'Instance' => 'cast',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/cast'
   },
   'Line_900' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/con2',
     'Instance' => 'con2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/con2'
   },
-  'Line_9005' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ctrl_split',
-    'Instance' => 'ctrl_split',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ctrl_split'
-  },
-  'Line_9013' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/status',
-    'Instance' => 'status',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/status'
-  },
-  'Line_9020' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/add_del',
-    'Instance' => 'add_del',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/add_del'
-  },
-  'Line_9028' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/arm',
-    'Instance' => 'arm',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/arm'
-  },
-  'Line_9035' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/arm_or',
-    'Instance' => 'arm_or',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/arm_or'
-  },
-  'Line_9044' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/cast',
-    'Instance' => 'cast',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/cast'
-  },
-  'Line_9065' => {
+  'Line_9007' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/circ',
     'Instance' => 'circ',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/circ'
+  },
+  'Line_9014' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/circ_or',
+    'Instance' => 'circ_or',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/circ_or'
+  },
+  'Line_9023' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/dat_del',
+    'Instance' => 'dat_del',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/dat_del'
+  },
+  'Line_9031' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/never',
+    'Instance' => 'never',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/never'
+  },
+  'Line_9038' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ri',
+    'Instance' => 'ri',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ri'
+  },
+  'Line_9046' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/we_del',
+    'Instance' => 'we_del',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/we_del'
   },
   'Line_907' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/con3',
     'Instance' => 'con3',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/con3'
   },
-  'Line_9072' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/circ_or',
-    'Instance' => 'circ_or',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/circ_or'
-  },
-  'Line_9081' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/dat_del',
-    'Instance' => 'dat_del',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/dat_del'
-  },
-  'Line_9089' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/never',
-    'Instance' => 'never',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/never'
-  },
-  'Line_9096' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/ri',
-    'Instance' => 'ri',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/ri'
-  },
   'Line_9104' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss/we_del',
-    'Instance' => 'we_del',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss/we_del'
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/buscreate',
+    'Instance' => 'buscreate',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/buscreate'
+  },
+  'Line_9109' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss',
+    'Instance' => 'ss',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss'
+  },
+  'Line_9124' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/assert_pkt_ctr',
+    'Instance' => 'assert_pkt_ctr',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/assert_pkt_ctr'
   },
   'Line_914' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/data_choice',
     'Instance' => 'data_choice',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/data_choice'
   },
-  'Line_9162' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/buscreate',
-    'Instance' => 'buscreate',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/buscreate'
-  },
-  'Line_9167' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/ss',
-    'Instance' => 'ss',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/ss'
-  },
-  'Line_9182' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs1/assert_pkt_ctr',
-    'Instance' => 'assert_pkt_ctr',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs1/assert_pkt_ctr'
-  },
-  'Line_9214' => {
+  'Line_9156' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/buscreate/concatenate',
     'Instance' => 'concatenate',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/buscreate/concatenate'
   },
-  'Line_9223' => {
+  'Line_9165' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/buscreate/reinterpret1',
     'Instance' => 'reinterpret1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/buscreate/reinterpret1'
   },
-  'Line_9231' => {
+  'Line_9173' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/buscreate/reinterpret2',
     'Instance' => 'reinterpret2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/buscreate/reinterpret2'
+  },
+  'Line_9207' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/edge_detect/delay',
+    'Instance' => 'delay',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/edge_detect/Delay'
+  },
+  'Line_9222' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/edge_detect/inverter',
+    'Instance' => 'inverter',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/edge_detect/Inverter'
+  },
+  'Line_9230' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/edge_detect/edge_op',
+    'Instance' => 'edge_op',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/edge_detect/edge_op'
   },
   'Line_924' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/dout_count',
     'Instance' => 'dout_count',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/dout_count'
   },
-  'Line_9265' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/edge_detect/delay',
-    'Instance' => 'delay',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/edge_detect/Delay'
+  'Line_9299' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/edge_detect',
+    'Instance' => 'edge_detect',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/edge_detect'
   },
-  'Line_9280' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/edge_detect/inverter',
-    'Instance' => 'inverter',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/edge_detect/Inverter'
+  'Line_9306' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/concat',
+    'Instance' => 'concat',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Concat'
   },
-  'Line_9288' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/edge_detect/edge_op',
-    'Instance' => 'edge_op',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/edge_detect/edge_op'
+  'Line_9316' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/convert',
+    'Instance' => 'convert',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Convert'
   },
   'Line_933' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/dram',
     'Instance' => 'dram',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/dram'
   },
-  'Line_9357' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/edge_detect',
-    'Instance' => 'edge_detect',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/edge_detect'
-  },
-  'Line_9364' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/concat',
-    'Instance' => 'concat',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Concat'
-  },
-  'Line_9374' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/convert',
-    'Instance' => 'convert',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Convert'
-  },
-  'Line_9395' => {
+  'Line_9337' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/delay',
     'Instance' => 'delay',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Delay'
+  },
+  'Line_9345' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/delay1',
+    'Instance' => 'delay1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Delay1'
+  },
+  'Line_9360' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/delay3',
+    'Instance' => 'delay3',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Delay3'
+  },
+  'Line_9368' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/delay4',
+    'Instance' => 'delay4',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Delay4'
+  },
+  'Line_9376' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/delay6',
+    'Instance' => 'delay6',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Delay6'
+  },
+  'Line_9384' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/inverter',
+    'Instance' => 'inverter',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Inverter'
+  },
+  'Line_9392' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/inverter1',
+    'Instance' => 'inverter1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Inverter1'
   },
   'Line_940' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/input_count',
     'Instance' => 'input_count',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/input_count'
   },
-  'Line_9403' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/delay1',
-    'Instance' => 'delay1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Delay1'
-  },
-  'Line_9418' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/delay3',
-    'Instance' => 'delay3',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Delay3'
-  },
-  'Line_9426' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/delay4',
-    'Instance' => 'delay4',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Delay4'
-  },
-  'Line_9434' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/delay6',
-    'Instance' => 'delay6',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Delay6'
-  },
-  'Line_9442' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/inverter',
-    'Instance' => 'inverter',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Inverter'
-  },
-  'Line_9450' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/inverter1',
-    'Instance' => 'inverter1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Inverter1'
-  },
-  'Line_9458' => {
+  'Line_9400' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/logical1',
     'Instance' => 'logical1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Logical1'
   },
-  'Line_9467' => {
+  'Line_9409' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/logical4',
     'Instance' => 'logical4',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Logical4'
   },
-  'Line_9476' => {
+  'Line_9418' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/logical6',
     'Instance' => 'logical6',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Logical6'
   },
-  'Line_9486' => {
+  'Line_9428' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/register5',
     'Instance' => 'register5',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Register5'
   },
-  'Line_9499' => {
+  'Line_9441' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/shift',
     'Instance' => 'shift',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/Shift'
   },
-  'Line_9507' => {
+  'Line_9449' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/add_gen',
     'Instance' => 'add_gen',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/add_gen'
   },
-  'Line_9521' => {
+  'Line_9463' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/slice1',
     'Instance' => 'slice1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/slice1'
   },
-  'Line_9532' => {
+  'Line_9474' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/slice2',
     'Instance' => 'slice2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/slice2'
+  },
+  'Line_9485' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/slice3',
+    'Instance' => 'slice3',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/slice3'
   },
   'Line_954' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/dram_munge/we_choice',
     'Instance' => 'we_choice',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/dram_munge/we_choice'
   },
-  'Line_9543' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/add_gen/slice3',
-    'Instance' => 'slice3',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/add_gen/slice3'
+  'Line_9552' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/concat',
+    'Instance' => 'concat',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Concat'
+  },
+  'Line_9563' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/concat1',
+    'Instance' => 'concat1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Concat1'
+  },
+  'Line_9574' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/constant_x0',
+    'Instance' => 'constant_x0',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Constant'
+  },
+  'Line_9581' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/delay',
+    'Instance' => 'delay',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Delay'
+  },
+  'Line_9596' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/delay1',
+    'Instance' => 'delay1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Delay1'
   },
   'Line_96' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/bus_expand/slice3',
     'Instance' => 'slice3',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/bus_expand/slice3'
   },
-  'Line_9610' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/concat',
-    'Instance' => 'concat',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Concat'
-  },
-  'Line_9621' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/concat1',
-    'Instance' => 'concat1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Concat1'
-  },
-  'Line_9632' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/constant_x0',
-    'Instance' => 'constant_x0',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Constant'
-  },
-  'Line_9639' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/delay',
-    'Instance' => 'delay',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Delay'
-  },
-  'Line_9654' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/delay1',
-    'Instance' => 'delay1',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Delay1'
-  },
-  'Line_9669' => {
+  'Line_9611' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/logical',
     'Instance' => 'logical',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Logical'
   },
-  'Line_9678' => {
+  'Line_9620' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/logical1',
     'Instance' => 'logical1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Logical1'
   },
-  'Line_9687' => {
+  'Line_9629' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/mux1',
     'Instance' => 'mux1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Mux1'
   },
-  'Line_9697' => {
+  'Line_9639' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/register_x0',
     'Instance' => 'register_x0',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Register'
   },
-  'Line_9710' => {
+  'Line_9652' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/register1',
     'Instance' => 'register1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Register1'
   },
-  'Line_9723' => {
+  'Line_9665' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/register2',
     'Instance' => 'register2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Register2'
   },
-  'Line_9736' => {
+  'Line_9678' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/register3',
     'Instance' => 'register3',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Register3'
   },
-  'Line_9749' => {
+  'Line_9691' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/relational',
     'Instance' => 'relational',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Relational'
   },
-  'Line_9758' => {
+  'Line_9700' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/relational1',
     'Instance' => 'relational1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Relational1'
   },
-  'Line_9767' => {
+  'Line_9709' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/relational2',
     'Instance' => 'relational2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Relational2'
   },
-  'Line_9776' => {
+  'Line_9718' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/relational3',
     'Instance' => 'relational3',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/Relational3'
   },
-  'Line_9785' => {
+  'Line_9727' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/con0',
     'Instance' => 'con0',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/con0'
   },
-  'Line_9792' => {
+  'Line_9734' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/con1',
     'Instance' => 'con1',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/con1'
   },
-  'Line_9799' => {
+  'Line_9741' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/con2',
     'Instance' => 'con2',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/con2'
   },
-  'Line_9806' => {
+  'Line_9748' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/con3',
     'Instance' => 'con3',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/con3'
   },
-  'Line_9813' => {
+  'Line_9755' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/data_choice',
     'Instance' => 'data_choice',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/data_choice'
   },
-  'Line_9823' => {
+  'Line_9765' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/dout_count',
     'Instance' => 'dout_count',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/dout_count'
   },
-  'Line_9832' => {
+  'Line_9774' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/dram',
     'Instance' => 'dram',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/dram'
   },
-  'Line_9839' => {
+  'Line_9781' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/input_count',
     'Instance' => 'input_count',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/input_count'
   },
-  'Line_9853' => {
+  'Line_9795' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/we_choice',
     'Instance' => 'we_choice',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge/we_choice'
   },
-  'Line_9889' => {
+  'Line_9831' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/edge_detect/delay',
     'Instance' => 'delay',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/edge_detect/Delay'
+  },
+  'Line_9846' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/edge_detect/inverter',
+    'Instance' => 'inverter',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/edge_detect/Inverter'
+  },
+  'Line_9854' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/edge_detect/edge_op',
+    'Instance' => 'edge_op',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/edge_detect/edge_op'
   },
   'Line_990' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/d3/ss/basic_ctrl/edge_detect/delay',
     'Instance' => 'delay',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/d3/ss/basic_ctrl/edge_detect/Delay'
   },
-  'Line_9904' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/edge_detect/inverter',
-    'Instance' => 'inverter',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/edge_detect/Inverter'
-  },
-  'Line_9912' => {
-    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/edge_detect/edge_op',
-    'Instance' => 'edge_op',
-    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/edge_detect/edge_op'
-  },
-  'Line_9980' => {
+  'Line_9922' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge',
     'Instance' => 'dram_munge',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/dram_munge'
   },
-  'Line_9990' => {
+  'Line_9932' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/edge_detect',
     'Instance' => 'edge_detect',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/edge_detect'
   },
-  'Line_9997' => {
+  'Line_9939' => {
     'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/constant_x0',
     'Instance' => 'constant_x0',
     'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Constant'
+  },
+  'Line_9946' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/constant1',
+    'Instance' => 'constant1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Constant1'
+  },
+  'Line_9953' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/constant2',
+    'Instance' => 'constant2',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Constant2'
+  },
+  'Line_9960' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/delay1',
+    'Instance' => 'delay1',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Delay1'
+  },
+  'Line_9975' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/delay2',
+    'Instance' => 'delay2',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Delay2'
+  },
+  'Line_9990' => {
+    'CodeInstance' => 'ethernet_one_gbe_skarab_loopback_struct/pkt_ctrs_compare1/ss/basic_ctrl/delay3',
+    'Instance' => 'delay3',
+    'SimulinkInstance' => 'ethernet_one_gbe_skarab_loopback/pkt_ctrs_compare1/ss/basic_ctrl/Delay3'
   }
 }

@@ -1015,7 +1015,7 @@ entity wrapper_buffer_in_ethernet_verilog_wrapper is
     in_valid_rx : in std_logic;
     in_data_rx_ethernet : in std_logic_vector(7 downto 0);
     package_size : in std_logic_vector(9 downto 0);
-    addr_data : in std_logic_vector(7 downto 0);
+    addr_data : in std_logic_vector(10 downto 0);
     data_valid_rx : in std_logic;
     tx_eof : in std_logic_vector(0 downto 0);
     ena_mux : in std_logic_vector(0 downto 0);
@@ -1029,7 +1029,7 @@ architecture structural of wrapper_buffer_in_ethernet_verilog_wrapper is
   signal in_valid_rx_net : std_logic;
   signal in_data_rx_ethernet_net : std_logic_vector(7 downto 0);
   signal package_size_net : std_logic_vector(9 downto 0);
-  signal addr_data_net : std_logic_vector(7 downto 0);
+  signal addr_data_net : std_logic_vector(10 downto 0);
   signal data_valid_rx_net : std_logic;
   signal tx_eof_net : std_logic_vector(0 downto 0);
   signal ena_mux_net : std_logic_vector(0 downto 0);
@@ -1042,7 +1042,7 @@ architecture structural of wrapper_buffer_in_ethernet_verilog_wrapper is
       in_valid_rx : in std_logic;
       in_data_rx_ethernet : in std_logic_vector(7 downto 0);
       package_size : in std_logic_vector(9 downto 0);
-      addr_data : in std_logic_vector(7 downto 0);
+      addr_data : in std_logic_vector(10 downto 0);
       data_valid_rx : in std_logic;
       tx_eof : in std_logic_vector(0 downto 0);
       ena_mux : in std_logic_vector(0 downto 0);

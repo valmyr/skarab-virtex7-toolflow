@@ -530,7 +530,7 @@ pkt_ctrs_compare1/ss	casper:snapshot	provide_outputs	off
 pkt_ctrs_compare1/ss	casper:snapshot	use_dsp48	on
 77777	77777	tags	casper:bitsnap,casper:snapshot,xps:bram,xps:sw_reg,xps:xsg
 77777	77777	system	ethernet_one_gbe_skarab_loopback
-77777	77777	builddate	12-Jun-2026\_19:54:25
+77777	77777	builddate	15-Jun-2026\_08:35:12
 77777	77777	latency	NaN
 77777	77777	myname	ethernet_one_gbe_skarab_loopback/dram
 77777	77777	myname	ethernet_one_gbe_skarab_loopback/dram

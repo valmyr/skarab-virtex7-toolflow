@@ -1,0 +1,5351 @@
+!!python/object:castro.Castro
+design_name: top
+ips: []
+mm_slaves:
+- !!python/object:castro.mm_slave
+  base_address: 2148384768
+  high_address: 2148450304
+  mode: 3
+  name: tx_one_gbe
+  span: 65536
+- !!python/object:castro.mm_slave
+  base_address: 2148450304
+  high_address: 2148581376
+  mode: 3
+  name: d3_ss_bram
+  span: 131072
+- !!python/object:castro.mm_slave
+  base_address: 2148581376
+  high_address: 2148712448
+  mode: 3
+  name: d4_ss_bram
+  span: 131072
+- !!python/object:castro.mm_slave
+  base_address: 2148712448
+  high_address: 2148843520
+  mode: 3
+  name: d5_ss_bram
+  span: 131072
+- !!python/object:castro.mm_slave
+  base_address: 2148843520
+  high_address: 2149105664
+  mode: 3
+  name: pkt_ctrs1_ss_bram
+  span: 262144
+- !!python/object:castro.mm_slave
+  base_address: 2149105664
+  high_address: 2149171200
+  mode: 3
+  name: pkt_ctrs_compare1_ss_bram
+  span: 65536
+- !!python/object:castro.mm_slave
+  base_address: 2149171200
+  high_address: 2149171204
+  mode: 3
+  name: addr_soft_control
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171204
+  high_address: 2149171208
+  mode: 1
+  name: clk_mhz
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171208
+  high_address: 2149171212
+  mode: 3
+  name: d3_ss_ctrl
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171212
+  high_address: 2149171216
+  mode: 1
+  name: d3_ss_status
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171216
+  high_address: 2149171220
+  mode: 3
+  name: d4_ss_ctrl
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171220
+  high_address: 2149171224
+  mode: 1
+  name: d4_ss_status
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171224
+  high_address: 2149171228
+  mode: 3
+  name: d5_ss_ctrl
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171228
+  high_address: 2149171232
+  mode: 1
+  name: d5_ss_status
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171232
+  high_address: 2149171236
+  mode: 1
+  name: data_rx_valmir
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171236
+  high_address: 2149171240
+  mode: 1
+  name: data_soft_control
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171240
+  high_address: 2149171244
+  mode: 1
+  name: err_marker1
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171244
+  high_address: 2149171248
+  mode: 1
+  name: err_pkt_ctr1
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171248
+  high_address: 2149171252
+  mode: 1
+  name: err_pkt_ctr_step1
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171252
+  high_address: 2149171256
+  mode: 1
+  name: err_ramp1
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171256
+  high_address: 2149171260
+  mode: 1
+  name: err_valid_raw1
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171260
+  high_address: 2149171264
+  mode: 1
+  name: err_walk1
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171264
+  high_address: 2149171268
+  mode: 3
+  name: mux_control
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171268
+  high_address: 2149171272
+  mode: 3
+  name: pkt_ctrs1_ss_ctrl
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171272
+  high_address: 2149171276
+  mode: 1
+  name: pkt_ctrs1_ss_status
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171276
+  high_address: 2149171280
+  mode: 3
+  name: pkt_ctrs_compare1_ss_ctrl
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171280
+  high_address: 2149171284
+  mode: 1
+  name: pkt_ctrs_compare1_ss_status
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171284
+  high_address: 2149171288
+  mode: 1
+  name: rx_badframe1
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171288
+  high_address: 2149171292
+  mode: 3
+  name: rx_control1
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171292
+  high_address: 2149171296
+  mode: 1
+  name: rx_eof1
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171296
+  high_address: 2149171300
+  mode: 1
+  name: rx_overrun1
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171300
+  high_address: 2149171304
+  mode: 1
+  name: rx_src_ip
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171304
+  high_address: 2149171308
+  mode: 1
+  name: rx_src_port
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171308
+  high_address: 2149171312
+  mode: 1
+  name: rx_valid1
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171312
+  high_address: 2149171316
+  mode: 1
+  name: tx_afull1
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171316
+  high_address: 2149171320
+  mode: 3
+  name: tx_control
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171320
+  high_address: 2149171324
+  mode: 1
+  name: tx_overflow1
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171324
+  high_address: 2149171328
+  mode: 1
+  name: vaild_rx_valmir1
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171328
+  high_address: 2149171360
+  mode: 1
+  name: sys_block
+  span: 32
+src_files:
+- /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback3/top.v
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_bram
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_bram
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_bram
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_bram
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_bram
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/SKA_10GBE_MAC
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/xaui_to_gmii_fifo/xaui_to_gmii_fifo.xci
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/gmii_to_xaui_fifo/gmii_to_xaui_fifo.xci
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/gmii_to_sgmii/gmii_to_sgmii.xci
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/one_gbe.vhd
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/one_gbe.vhd
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/xaui_to_gmii_translator.vhd
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/gmii_to_xaui_translator.vhd
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/tx_fifo_ext/tx_fifo_ext.xci
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/tx_data_fifo_ext/tx_data_fifo_ext.xci
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/cpu_buffer/cpu_buffer.xci
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/tx_packet_fifo/tx_packet_fifo.xci
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/tx_packet_ctrl_fifo/tx_packet_ctrl_fifo.xci
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/rx_packet_fifo_bram/rx_packet_fifo_bram.xci
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/rx_packet_ctrl_fifo/rx_packet_ctrl_fifo.xci
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/packet_byte_count_fifo/packet_byte_count_fifo.xci
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/skarab_infr.vhd
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wbs_arbiter/timeout.v
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wbs_arbiter/wbs_arbiter.v
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wbs_arbiter/timeout.v
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/WISHBONE
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/cont_microblaze/cont_microblaze.bd
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/cont_microblaze/hdl/cont_microblaze_wrapper.vhd
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/cont_microblaze/EMB123701U1R1.elf
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/xadc_measurement/xadc_measurement.xci
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/counter.v
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/rate_counter.v
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/strobe_gen.vhd
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/skarab_infr.vhd
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/i2c_master_byte_ctrl.vhd
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/skarab_parameters.vhd
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/mezzanine_enable_delay.vhd
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/isp_spi_programmer.vhd
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/clock_frequency_measure.vhd
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/led_manager.vhd
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/i2c_master_top.vhd
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/i2c_master_bit_ctrl.vhd
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/second_gen.vhd
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/icape_controller.vhd
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/FPGA_DNA_CHECKER.vhd
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/sockit_owm.sv
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/cross_clock_fifo_36x16/cross_clock_fifo_36x16.xci
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/cross_clock_fifo_wb_out_73x16/cross_clock_fifo_wb_out_73x16.xci
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/common_clock_fifo_32x16/common_clock_fifo_32x16.xci
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/forty_gbe/ska_cpu_buffer/ska_cpu_buffer.xci
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/forty_gbe/arp_cache/arp_cache.xci
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/forty_gbe/arp_cache/arp_cache.coe
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/isp_spi_buffer/isp_spi_buffer.xci
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/sys_block
+- /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback3/sysgen/hdl_netlist/ethernet_one_gbe_skarab_loopback3.srcs/sources_1/imports/sysgen
+- /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback3/sysgen/hdl_netlist/ethernet_one_gbe_skarab_loopback3.srcs/sources_1/ip/ethernet_one_gbe_skarab_loopback3_c_counter_binary_v12_0_i2/ethernet_one_gbe_skarab_loopback3_c_counter_binary_v12_0_i2.xci
+- /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback3/sysgen/hdl_netlist/ethernet_one_gbe_skarab_loopback3.srcs/sources_1/ip/ethernet_one_gbe_skarab_loopback3_c_addsub_v12_0_i0/ethernet_one_gbe_skarab_loopback3_c_addsub_v12_0_i0.xci
+- /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback3/sysgen/hdl_netlist/ethernet_one_gbe_skarab_loopback3.srcs/sources_1/ip/ethernet_one_gbe_skarab_loopback3_c_counter_binary_v12_0_i4/ethernet_one_gbe_skarab_loopback3_c_counter_binary_v12_0_i4.xci
+- /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback3/sysgen/hdl_netlist/ethernet_one_gbe_skarab_loopback3.srcs/sources_1/ip/ethernet_one_gbe_skarab_loopback3_c_counter_binary_v12_0_i1/ethernet_one_gbe_skarab_loopback3_c_counter_binary_v12_0_i1.xci
+- /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback3/sysgen/hdl_netlist/ethernet_one_gbe_skarab_loopback3.srcs/sources_1/ip/ethernet_one_gbe_skarab_loopback3_c_counter_binary_v12_0_i0/ethernet_one_gbe_skarab_loopback3_c_counter_binary_v12_0_i0.xci
+- /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback3/sysgen/hdl_netlist/ethernet_one_gbe_skarab_loopback3.srcs/sources_1/ip/ethernet_one_gbe_skarab_loopback3_c_counter_binary_v12_0_i3/ethernet_one_gbe_skarab_loopback3_c_counter_binary_v12_0_i3.xci
+- /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback3/wbs_master_arbiter.v
+synthesis: !!python/object:castro.Synthesis
+  clk_constraints:
+  - !!python/object:castro.ClkConstraint
+    clkname: ONE_GBE_MGTREFCLK_P
+    freq_mhz: 125.0
+    period_ns: 8.0
+    port_en: true
+    portname: ONE_GBE_MGTREFCLK_P
+    virtual_en: false
+    waveform_max_ns: 4.0
+    waveform_min_ns: 0.0
+  - !!python/object:castro.ClkConstraint
+    clkname: FPGA_REFCLK_BUF0_P
+    freq_mhz: 156.25
+    period_ns: 6.4
+    port_en: true
+    portname: FPGA_REFCLK_BUF0_P
+    virtual_en: false
+    waveform_max_ns: 3.2
+    waveform_min_ns: 0.0
+  - !!python/object:castro.ClkConstraint
+    clkname: FPGA_REFCLK_BUF1_P
+    freq_mhz: 156.25
+    period_ns: 6.4
+    port_en: true
+    portname: FPGA_REFCLK_BUF1_P
+    virtual_en: false
+    waveform_max_ns: 3.2
+    waveform_min_ns: 0.0
+  - !!python/object:castro.ClkConstraint
+    clkname: FPGA_EMCCLK2
+    freq_mhz: 60.00240009600384
+    period_ns: 16.666
+    port_en: true
+    portname: FPGA_EMCCLK2
+    virtual_en: false
+    waveform_max_ns: 8.333
+    waveform_min_ns: 0.0
+  - !!python/object:castro.ClkConstraint
+    clkname: virtual_emcc_clock
+    freq_mhz: 60.00240009600384
+    period_ns: 16.666
+    port_en: false
+    portname: null
+    virtual_en: true
+    waveform_max_ns: 8.333
+    waveform_min_ns: 0.0
+  clk_grp_constraints:
+  - !!python/object:castro.ClkGrpConstraint
+    clkdomaintype: asynchronous
+    clknamegrp1: -of_objects [get_pins ethernet_one_gbe_skarab_loopback3_tx_one_gbe/gmii_to_sgmii_0/U0/core_clocking_i/mmcm_adv_inst/CLKOUT0]
+    clknamegrp2: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0]
+  - !!python/object:castro.ClkGrpConstraint
+    clkdomaintype: asynchronous
+    clknamegrp1: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0]
+    clknamegrp2: -of_objects [get_pins ethernet_one_gbe_skarab_loopback3_tx_one_gbe/gmii_to_sgmii_0/U0/core_clocking_i/mmcm_adv_inst/CLKOUT0]
+  - !!python/object:castro.ClkGrpConstraint
+    clkdomaintype: asynchronous
+    clknamegrp1: FPGA_EMCCLK2
+    clknamegrp2: -of_objects [get_pins ethernet_one_gbe_skarab_loopback3_tx_one_gbe/gmii_to_sgmii_0/U0/core_clocking_i/mmcm_adv_inst/CLKOUT0]
+  - !!python/object:castro.ClkGrpConstraint
+    clkdomaintype: asynchronous
+    clknamegrp1: -of_objects [get_pins ethernet_one_gbe_skarab_loopback3_tx_one_gbe/gmii_to_sgmii_0/U0/core_clocking_i/mmcm_adv_inst/CLKOUT0]
+    clknamegrp2: FPGA_EMCCLK2
+  - !!python/object:castro.ClkGrpConstraint
+    clkdomaintype: asynchronous
+    clknamegrp1: -of_objects [get_pins ethernet_one_gbe_skarab_loopback3_tx_one_gbe/gmii_to_sgmii_0/U0/core_clocking_i/mmcm_adv_inst/CLKOUT0]
+    clknamegrp2: -of_objects [get_pins skarab_infr/USER_CLK_MMCM_inst/CLKOUT0]
+  - !!python/object:castro.ClkGrpConstraint
+    clkdomaintype: asynchronous
+    clknamegrp1: -of_objects [get_pins skarab_infr/USER_CLK_MMCM_inst/CLKOUT0]
+    clknamegrp2: -of_objects [get_pins ethernet_one_gbe_skarab_loopback3_tx_one_gbe/gmii_to_sgmii_0/U0/core_clocking_i/mmcm_adv_inst/CLKOUT0]
+  - !!python/object:castro.ClkGrpConstraint
+    clkdomaintype: asynchronous
+    clknamegrp1: -of_objects [get_pins ethernet_one_gbe_skarab_loopback3_tx_one_gbe/gmii_to_sgmii_0/U0/core_clocking_i/mmcm_adv_inst/CLKOUT0]
+    clknamegrp2: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+  - !!python/object:castro.ClkGrpConstraint
+    clkdomaintype: asynchronous
+    clknamegrp1: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    clknamegrp2: -of_objects [get_pins ethernet_one_gbe_skarab_loopback3_tx_one_gbe/gmii_to_sgmii_0/U0/core_clocking_i/mmcm_adv_inst/CLKOUT0]
+  - !!python/object:castro.ClkGrpConstraint
+    clkdomaintype: asynchronous
+    clknamegrp1: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0]
+    clknamegrp2: FPGA_EMCCLK2
+  - !!python/object:castro.ClkGrpConstraint
+    clkdomaintype: asynchronous
+    clknamegrp1: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0]
+    clknamegrp2: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+  - !!python/object:castro.ClkGrpConstraint
+    clkdomaintype: asynchronous
+    clknamegrp1: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    clknamegrp2: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0]
+  - !!python/object:castro.ClkGrpConstraint
+    clkdomaintype: asynchronous
+    clknamegrp1: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0]
+    clknamegrp2: -of_objects [get_pins skarab_infr/USER_CLK_MMCM_inst/CLKOUT0]
+  - !!python/object:castro.ClkGrpConstraint
+    clkdomaintype: asynchronous
+    clknamegrp1: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    clknamegrp2: -of_objects [get_pins skarab_infr/USER_CLK_MMCM_inst/CLKOUT0]
+  - !!python/object:castro.ClkGrpConstraint
+    clkdomaintype: asynchronous
+    clknamegrp1: -of_objects [get_pins skarab_infr/USER_CLK_MMCM_inst/CLKOUT0]
+    clknamegrp2: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0]
+  - !!python/object:castro.ClkGrpConstraint
+    clkdomaintype: asynchronous
+    clknamegrp1: -of_objects [get_pins skarab_infr/USER_CLK_MMCM_inst/CLKOUT0]
+    clknamegrp2: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+  - !!python/object:castro.ClkGrpConstraint
+    clkdomaintype: asynchronous
+    clknamegrp1: FPGA_EMCCLK2
+    clknamegrp2: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0]
+  - !!python/object:castro.ClkGrpConstraint
+    clkdomaintype: asynchronous
+    clknamegrp1: -of_objects [get_pins skarab_infr/USER_CLK_MMCM_inst/CLKOUT0]
+    clknamegrp2: FPGA_EMCCLK2
+  - !!python/object:castro.ClkGrpConstraint
+    clkdomaintype: asynchronous
+    clknamegrp1: FPGA_EMCCLK2
+    clknamegrp2: -of_objects [get_pins skarab_infr/USER_CLK_MMCM_inst/CLKOUT0]
+  - !!python/object:castro.ClkGrpConstraint
+    clkdomaintype: asynchronous
+    clknamegrp1: FPGA_EMCCLK2
+    clknamegrp2: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+  - !!python/object:castro.ClkGrpConstraint
+    clkdomaintype: asynchronous
+    clknamegrp1: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    clknamegrp2: FPGA_EMCCLK2
+  false_path_constraints:
+  - !!python/object:castro.FalsePthConstraint
+    destpath: '[get_ports {FPGA_LEDS[*]}]'
+    sourcepath: null
+  fpga_manufacturer: Xilinx
+  fpga_model: xc7vx690tffg1927-2
+  gen_clk_constraints: []
+  input_delay_constraints:
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 3.0
+    consttype: min
+    portname: FLASH_DQ[*]
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: FLASH_DQ[*]
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: USB_FPGA[*]
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: USB_FPGA[*]
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: CONFIG_IO_2
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: CONFIG_IO_2
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: CONFIG_IO_5
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: CONFIG_IO_5
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: DEBUG_UART_RX
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: DEBUG_UART_RX
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: FAN_CONT_FAULT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: FAN_CONT_FAULT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: FAN_CONT_ALERT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: FAN_CONT_ALERT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: FPGA_RESET_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: FPGA_RESET_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: I2C_SCL_FPGA
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: I2C_SCL_FPGA
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: I2C_SDA_FPGA
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: I2C_SDA_FPGA
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_0_FAULT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_0_FAULT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_0_INT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_0_INT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_0_ONE_WIRE
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_0_ONE_WIRE
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_0_PRESENT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_0_PRESENT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_0_SCL_FPGA
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_0_SCL_FPGA
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_0_SDA_FPGA
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_0_SDA_FPGA
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_1_FAULT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_1_FAULT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_1_INT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_1_INT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_1_ONE_WIRE
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_1_ONE_WIRE
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_1_PRESENT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_1_PRESENT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_1_SCL_FPGA
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_1_SCL_FPGA
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_1_SDA_FPGA
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_1_SDA_FPGA
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_2_FAULT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_2_FAULT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_2_INT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_2_INT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_2_ONE_WIRE
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_2_ONE_WIRE
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_2_PRESENT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_2_PRESENT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_2_SCL_FPGA
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_2_SCL_FPGA
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_2_SDA_FPGA
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_2_SDA_FPGA
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_3_FAULT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_3_FAULT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_3_INT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_3_INT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_3_ONE_WIRE
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_3_ONE_WIRE
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_3_PRESENT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_3_PRESENT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_3_SCL_FPGA
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_3_SCL_FPGA
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_3_SDA_FPGA
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_3_SDA_FPGA
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MONITOR_ALERT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MONITOR_ALERT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: ONE_WIRE_EEPROM
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: ONE_WIRE_EEPROM
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: SPI_MISO
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: SPI_MISO
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: USB_I2C_CTRL
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: USB_I2C_CTRL
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: virtual_emcc_clock
+    constdelay_ns: 1.0
+    consttype: min
+    portname: EMCCLK
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: virtual_emcc_clock
+    constdelay_ns: 2.0
+    consttype: max
+    portname: EMCCLK
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: USB_UART_TXD
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: USB_UART_TXD
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: ONE_GBE_INT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: ONE_GBE_INT_N
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: ONE_GBE_LINK
+  - !!python/object:castro.InDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: ONE_GBE_LINK
+  max_delay_constraints:
+  - !!python/object:castro.MaxDelayConstraint
+    constdelay_ns: 1.0
+    destpath: '[get_ports {FPGA_LEDS[*]}]'
+    sourcepath: null
+  min_delay_constraints:
+  - !!python/object:castro.MinDelayConstraint
+    constdelay_ns: 1.0
+    destpath: '[get_ports {FPGA_LEDS[*]}]'
+    sourcepath: null
+  multi_cycle_constraints: []
+  output_delay_constraints:
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: ONE_GBE_RESET_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: ONE_GBE_RESET_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: -2.5
+    consttype: min
+    portname: FLASH_A[*]
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: -3.0
+    consttype: max
+    portname: FLASH_A[*]
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: -2.5
+    consttype: min
+    portname: FLASH_DQ[*]
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: -3.0
+    consttype: max
+    portname: FLASH_DQ[*]
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: -2.5
+    consttype: min
+    portname: FLASH_ADV_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: -3.0
+    consttype: max
+    portname: FLASH_ADV_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: -2.5
+    consttype: min
+    portname: FLASH_CS_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: -3.0
+    consttype: max
+    portname: FLASH_CS_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: -2.5
+    consttype: min
+    portname: FLASH_OE_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: -3.0
+    consttype: max
+    portname: FLASH_OE_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: -2.5
+    consttype: min
+    portname: FLASH_RS0
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: -3.0
+    consttype: max
+    portname: FLASH_RS0
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: -2.5
+    consttype: min
+    portname: FLASH_RS1
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: -3.0
+    consttype: max
+    portname: FLASH_RS1
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: -2.5
+    consttype: min
+    portname: FLASH_WE_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: -3.0
+    consttype: max
+    portname: FLASH_WE_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: -2.5
+    consttype: min
+    portname: SPARTAN_CLK
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: -3.0
+    consttype: max
+    portname: SPARTAN_CLK
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: CONFIG_IO_0
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: CONFIG_IO_0
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: CONFIG_IO_1
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: CONFIG_IO_1
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: CONFIG_IO_3
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: CONFIG_IO_3
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: CONFIG_IO_4
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: CONFIG_IO_4
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: CONFIG_IO_6
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: CONFIG_IO_6
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: CONFIG_IO_7
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: CONFIG_IO_7
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: CONFIG_IO_8
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: CONFIG_IO_8
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: CONFIG_IO_9
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: CONFIG_IO_9
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: CONFIG_IO_10
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: CONFIG_IO_10
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: CONFIG_IO_11
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: CONFIG_IO_11
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: DEBUG_UART_TX
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: DEBUG_UART_TX
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: FPGA_ATX_PSU_KILL
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: FPGA_ATX_PSU_KILL
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: I2C_SCL_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: I2C_SCL_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: I2C_SDA_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: I2C_SDA_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_0_ENABLE_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_0_ENABLE_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_0_ONE_WIRE
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_0_ONE_WIRE
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_0_ONE_WIRE_STRONG_PULLUP_EN_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_0_ONE_WIRE_STRONG_PULLUP_EN_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_0_SCL_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_0_SCL_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_0_SDA_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_0_SDA_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_1_ENABLE_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_1_ENABLE_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_1_ONE_WIRE
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_1_ONE_WIRE
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_1_ONE_WIRE_STRONG_PULLUP_EN_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_1_ONE_WIRE_STRONG_PULLUP_EN_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_1_SCL_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_1_SCL_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_1_SDA_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_1_SDA_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_2_ENABLE_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_2_ENABLE_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_2_ONE_WIRE
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_2_ONE_WIRE
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_2_ONE_WIRE_STRONG_PULLUP_EN_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_2_ONE_WIRE_STRONG_PULLUP_EN_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_2_SCL_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_2_SCL_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_2_SDA_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_2_SDA_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_3_CLK_SEL
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_3_CLK_SEL
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_3_ENABLE_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_3_ENABLE_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_3_ONE_WIRE
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_3_ONE_WIRE
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_3_ONE_WIRE_STRONG_PULLUP_EN_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_3_ONE_WIRE_STRONG_PULLUP_EN_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_3_RESET
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_3_RESET
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_3_SCL_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_3_SCL_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_3_SDA_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_3_SDA_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: MEZZANINE_COMBINED_FAULT
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: MEZZANINE_COMBINED_FAULT
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: ONE_WIRE_EEPROM
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: ONE_WIRE_EEPROM
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: ONE_WIRE_EEPROM_STRONG_PULLUP_EN_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: ONE_WIRE_EEPROM_STRONG_PULLUP_EN_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: SPI_CLK
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: SPI_CLK
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: SPI_CSB
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: SPI_CSB
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: SPI_MOSI
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: SPI_MOSI
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: USB_UART_RXD
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: USB_UART_RXD
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: virtual_emcc_clock
+    constdelay_ns: 1.0
+    consttype: min
+    portname: EMCCLK_FIX
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: virtual_emcc_clock
+    constdelay_ns: 2.0
+    consttype: max
+    portname: EMCCLK_FIX
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: FAN_CONT_RST_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: FAN_CONT_RST_N
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 1.0
+    consttype: min
+    portname: I2C_RESET_FPGA
+  - !!python/object:castro.OutDelayConstraint
+    add_delay_en: true
+    clkname: -of_objects [get_pins skarab_infr/SYS_CLK_MMCM_inst/CLKOUT1]
+    constdelay_ns: 2.0
+    consttype: max
+    portname: I2C_RESET_FPGA
+  pin_constraints:
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - null
+    location:
+    - A6
+    portname: ONE_GBE_SGMII_RX_P
+    portname_indices: &id001 []
+    slew_rate: 0
+    symbolic_indices: &id002
+    - 0
+    symbolic_name: ONE_GBE_SGMII_RX_P
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - null
+    location:
+    - A5
+    portname: ONE_GBE_SGMII_RX_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: ONE_GBE_SGMII_RX_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - null
+    location:
+    - B4
+    portname: ONE_GBE_SGMII_TX_P
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: ONE_GBE_SGMII_TX_P
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - null
+    location:
+    - B3
+    portname: ONE_GBE_SGMII_TX_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: ONE_GBE_SGMII_TX_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - null
+    location:
+    - A9
+    portname: ONE_GBE_MGTREFCLK_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: ONE_GBE_MGTREFCLK_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - null
+    location:
+    - A10
+    portname: ONE_GBE_MGTREFCLK_P
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: ONE_GBE_MGTREFCLK_P
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BD12
+    portname: ONE_GBE_RESET_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: ONE_GBE_RESET_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    location:
+    - BC27
+    - BD27
+    - BD29
+    - BD30
+    - BB30
+    - BC30
+    - BC28
+    - BC29
+    - BA30
+    - AW29
+    - AY29
+    - AW27
+    - AY27
+    - BA31
+    - AY28
+    - BA28
+    portname: FLASH_DQ
+    portname_indices:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    slew_rate: 0
+    symbolic_indices:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    symbolic_name: FLASH_DQ
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    location:
+    - E14
+    - F14
+    - E13
+    - F13
+    portname: USB_FPGA
+    portname_indices:
+    - 0
+    - 1
+    - 2
+    - 3
+    slew_rate: 0
+    symbolic_indices:
+    - 0
+    - 1
+    - 2
+    - 3
+    symbolic_name: USB_FPGA
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    location:
+    - AL29
+    - AL28
+    - AK29
+    - AJ29
+    - AM28
+    - AM27
+    - AK28
+    - AN30
+    - AM30
+    - AN29
+    - AN28
+    - AR29
+    - AR28
+    - AP30
+    - AP29
+    - AT29
+    - AL26
+    - AK26
+    - AK24
+    - AM26
+    - AM25
+    - AM23
+    - AL23
+    - AP26
+    - AN25
+    - AP25
+    - AP24
+    - AU27
+    - AT26
+    portname: FLASH_A
+    portname_indices:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 26
+    - 27
+    - 28
+    slew_rate: 0
+    symbolic_indices:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 26
+    - 27
+    - 28
+    symbolic_name: FLASH_A
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    location:
+    - AY31
+    - AW30
+    - AW31
+    - AV28
+    - AV29
+    - AN27
+    - AP27
+    - AT28
+    - AK27
+    - AW26
+    - AY26
+    - AV25
+    - AW25
+    - AW24
+    - AT25
+    - AK23
+    portname: GND
+    portname_indices:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    slew_rate: 0
+    symbolic_indices:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    symbolic_name: GND
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BB12
+    portname: ONE_GBE_INT_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: ONE_GBE_INT_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BD35
+    portname: FPGA_RESET_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: FPGA_RESET_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - AL25
+    portname: FLASH_WE_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: FLASH_WE_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - AV27
+    portname: FPGA_EMCCLK2
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: FPGA_EMCCLK2
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - B13
+    portname: MEZZANINE_3_ONE_WIRE_STRONG_PULLUP_EN_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_3_ONE_WIRE_STRONG_PULLUP_EN_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BA10
+    portname: MEZZANINE_2_ONE_WIRE_STRONG_PULLUP_EN_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_2_ONE_WIRE_STRONG_PULLUP_EN_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BD34
+    portname: MEZZANINE_1_ONE_WIRE_STRONG_PULLUP_EN_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_1_ONE_WIRE_STRONG_PULLUP_EN_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - C32
+    portname: MEZZANINE_0_ONE_WIRE_STRONG_PULLUP_EN_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_0_ONE_WIRE_STRONG_PULLUP_EN_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - A14
+    portname: MEZZANINE_3_SCL_FPGA
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_3_SCL_FPGA
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BD14
+    portname: MEZZANINE_2_SCL_FPGA
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_2_SCL_FPGA
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BD32
+    portname: MEZZANINE_1_SCL_FPGA
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_1_SCL_FPGA
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - A31
+    portname: MEZZANINE_0_SCL_FPGA
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_0_SCL_FPGA
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BB27
+    portname: EMCCLK_FIX
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: EMCCLK_FIX
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BD17
+    portname: ONE_WIRE_EEPROM
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: ONE_WIRE_EEPROM
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BB18
+    portname: I2C_SCL_FPGA
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: I2C_SCL_FPGA
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVDS
+    location:
+    - AU15
+    portname: FPGA_REFCLK_BUF0_P
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: FPGA_REFCLK_BUF0_P
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVDS
+    location:
+    - null
+    portname: FPGA_REFCLK_BUF0_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: FPGA_REFCLK_BUF0_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BC12
+    portname: ONE_GBE_LINK
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: ONE_GBE_LINK
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BB21
+    portname: SPI_CLK
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: SPI_CLK
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - B15
+    portname: MEZZANINE_3_INT_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_3_INT_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BC13
+    portname: MEZZANINE_2_INT_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_2_INT_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BC33
+    portname: MEZZANINE_1_INT_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_1_INT_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - B31
+    portname: MEZZANINE_0_INT_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_0_INT_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BB20
+    portname: SPI_MISO
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: SPI_MISO
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - C13
+    portname: MEZZANINE_3_PRESENT_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_3_PRESENT_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BA11
+    portname: MEZZANINE_2_PRESENT_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_2_PRESENT_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BA35
+    portname: MEZZANINE_1_PRESENT_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_1_PRESENT_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - D32
+    portname: MEZZANINE_0_PRESENT_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_0_PRESENT_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BD21
+    portname: SPI_CSB
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: SPI_CSB
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVDS
+    location:
+    - AT18
+    portname: FPGA_REFCLK_BUF1_P
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: FPGA_REFCLK_BUF1_P
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVDS
+    location:
+    - null
+    portname: FPGA_REFCLK_BUF1_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: FPGA_REFCLK_BUF1_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - C18
+    portname: PCIE_RST_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: PCIE_RST_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BC20
+    portname: SPI_MOSI
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: SPI_MOSI
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - AY13
+    portname: USB_I2C_CTRL
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: USB_I2C_CTRL
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - AV13
+    portname: DEBUG_UART_RX
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: DEBUG_UART_RX
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BB16
+    portname: USB_UART_RXD
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: USB_UART_RXD
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BB22
+    portname: FAN_CONT_RST_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: FAN_CONT_RST_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - A19
+    portname: CPU_SUS_S3_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: CPU_SUS_S3_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BA20
+    portname: MEZZANINE_COMBINED_FAULT
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_COMBINED_FAULT
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BB28
+    portname: EMCCLK
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: EMCCLK
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BB13
+    portname: MONITOR_ALERT_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MONITOR_ALERT_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BC19
+    portname: I2C_RESET_FPGA
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: I2C_RESET_FPGA
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BC18
+    portname: I2C_SDA_FPGA
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: I2C_SDA_FPGA
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - AV14
+    portname: MEZZANINE_3_FAULT_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_3_FAULT_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - AW14
+    portname: MEZZANINE_2_FAULT_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_2_FAULT_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - AY14
+    portname: MEZZANINE_1_FAULT_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_1_FAULT_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BA14
+    portname: MEZZANINE_0_FAULT_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_0_FAULT_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BD22
+    portname: FAN_CONT_ALERT_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: FAN_CONT_ALERT_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BA29
+    portname: FLASH_CS_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: FLASH_CS_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BC17
+    portname: ONE_WIRE_EEPROM_STRONG_PULLUP_EN_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: ONE_WIRE_EEPROM_STRONG_PULLUP_EN_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - B18
+    portname: CPU_SUS_STAT_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: CPU_SUS_STAT_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BA13
+    portname: USB_UART_TXD
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: USB_UART_TXD
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - AN24
+    portname: FLASH_ADV_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: FLASH_ADV_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BC22
+    portname: FAN_CONT_FAULT_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: FAN_CONT_FAULT_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - A18
+    portname: CPU_PWR_OK
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: CPU_PWR_OK
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - C12
+    portname: MEZZANINE_3_ENABLE_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_3_ENABLE_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - E17
+    portname: MEZZANINE_2_ENABLE_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_2_ENABLE_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - C17
+    portname: MEZZANINE_1_ENABLE_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_1_ENABLE_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - B33
+    portname: MEZZANINE_0_ENABLE_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_0_ENABLE_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BD20
+    portname: DEBUG_UART_TX
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: DEBUG_UART_TX
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BA26
+    portname: SPARTAN_CLK
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: SPARTAN_CLK
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - E12
+    portname: MEZZANINE_3_RESET
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_3_RESET
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - A15
+    portname: MEZZANINE_3_SDA_FPGA
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_3_SDA_FPGA
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BC14
+    portname: MEZZANINE_2_SDA_FPGA
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_2_SDA_FPGA
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BD31
+    portname: MEZZANINE_1_SDA_FPGA
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_1_SDA_FPGA
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - A30
+    portname: MEZZANINE_0_SDA_FPGA
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_0_SDA_FPGA
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - B16
+    portname: CPU_SUS_S4_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: CPU_SUS_S4_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BD26
+    portname: FLASH_WAIT
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: FLASH_WAIT
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BD10
+    portname: FPGA_ATX_PSU_KILL
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: FPGA_ATX_PSU_KILL
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BD11
+    portname: CPU_PWR_BTN_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: CPU_PWR_BTN_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - AL24
+    portname: FLASH_OE_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: FLASH_OE_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - A13
+    portname: MEZZANINE_3_ONE_WIRE
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_3_ONE_WIRE
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BB10
+    portname: MEZZANINE_2_ONE_WIRE
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_2_ONE_WIRE
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BC34
+    portname: MEZZANINE_1_ONE_WIRE
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_1_ONE_WIRE
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - B32
+    portname: MEZZANINE_0_ONE_WIRE
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_0_ONE_WIRE
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - AJ25
+    portname: FLASH_RS1
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: FLASH_RS1
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - AJ26
+    portname: FLASH_RS0
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: FLASH_RS0
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BC10
+    portname: CPU_SYS_RESET_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: CPU_SYS_RESET_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - B12
+    portname: MEZZANINE_3_CLK_SEL
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: MEZZANINE_3_CLK_SEL
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - B17
+    portname: CPU_SUS_S5_N
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: CPU_SUS_S5_N
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BB26
+    portname: CONFIG_IO_0
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: CONFIG_IO_0
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BB25
+    portname: CONFIG_IO_1
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: CONFIG_IO_1
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BC25
+    portname: CONFIG_IO_2
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: CONFIG_IO_2
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BD25
+    portname: CONFIG_IO_3
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: CONFIG_IO_3
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - AY24
+    portname: CONFIG_IO_4
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: CONFIG_IO_4
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BA24
+    portname: CONFIG_IO_5
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: CONFIG_IO_5
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BC24
+    portname: CONFIG_IO_6
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: CONFIG_IO_6
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BD24
+    portname: CONFIG_IO_7
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: CONFIG_IO_7
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - AY23
+    portname: CONFIG_IO_8
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: CONFIG_IO_8
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BA23
+    portname: CONFIG_IO_9
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: CONFIG_IO_9
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BB23
+    portname: CONFIG_IO_10
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: CONFIG_IO_10
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    location:
+    - BC23
+    portname: CONFIG_IO_11
+    portname_indices: *id001
+    slew_rate: 0
+    symbolic_indices: *id002
+    symbolic_name: CONFIG_IO_11
+    termination: ''
+  - !!python/object:castro.PinConstraint
+    drive_strength: 0
+    io_standard:
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    - LVCMOS18
+    location:
+    - A29
+    - C29
+    - D29
+    - E29
+    - A28
+    - B28
+    - C28
+    - E28
+    portname: FPGA_LEDS
+    portname_indices:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    slew_rate: 0
+    symbolic_indices:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    symbolic_name: led
+    termination: ''
+  pin_map:
+    CONFIG_IO_0:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BB26
+    CONFIG_IO_1:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BB25
+    CONFIG_IO_10:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BB23
+    CONFIG_IO_11:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BC23
+    CONFIG_IO_2:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BC25
+    CONFIG_IO_3:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BD25
+    CONFIG_IO_4:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AY24
+    CONFIG_IO_5:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BA24
+    CONFIG_IO_6:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BC24
+    CONFIG_IO_7:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BD24
+    CONFIG_IO_8:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AY23
+    CONFIG_IO_9:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BA23
+    CPU_PWR_BTN_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BD11
+    CPU_PWR_OK:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: A18
+    CPU_SUS_S3_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: A19
+    CPU_SUS_S4_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: B16
+    CPU_SUS_S5_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: B17
+    CPU_SUS_STAT_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: B18
+    CPU_SYS_RESET_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BC10
+    DEBUG_UART_RX:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AV13
+    DEBUG_UART_TX:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BD20
+    EMCCLK:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BB28
+    EMCCLK_FIX:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BB27
+    FAN_CONT_ALERT_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BD22
+    FAN_CONT_FAULT_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BC22
+    FAN_CONT_RST_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BB22
+    FLASH_A:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AL29
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AL28
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AK29
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AJ29
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AM28
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AM27
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AK28
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AN30
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AM30
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AN29
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AN28
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AR29
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AR28
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AP30
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AP29
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AT29
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AL26
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AK26
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AK24
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AM26
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AM25
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AM23
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AL23
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AP26
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AN25
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AP25
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AP24
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AU27
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AT26
+    FLASH_ADV_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AN24
+    FLASH_CS_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BA29
+    FLASH_DQ:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BC27
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BD27
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BD29
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BD30
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BB30
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BC30
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BC28
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BC29
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BA30
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AW29
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AY29
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AW27
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AY27
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BA31
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AY28
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BA28
+    FLASH_OE_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AL24
+    FLASH_RS0:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AJ26
+    FLASH_RS1:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AJ25
+    FLASH_WAIT:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BD26
+    FLASH_WE_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AL25
+    FPGA_ATX_PSU_KILL:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BD10
+    FPGA_EMCCLK2:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AV27
+    FPGA_REFCLK_BUF0_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVDS
+      loc: null
+    FPGA_REFCLK_BUF0_P:
+    - !!python/object:casper_platform.Pin
+      iostd: LVDS
+      loc: AU15
+    FPGA_REFCLK_BUF1_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVDS
+      loc: null
+    FPGA_REFCLK_BUF1_P:
+    - !!python/object:casper_platform.Pin
+      iostd: LVDS
+      loc: AT18
+    FPGA_RESET_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BD35
+    GND:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AY31
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AW30
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AW31
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AV28
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AV29
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AN27
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AP27
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AT28
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AK27
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AW26
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AY26
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AV25
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AW25
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AW24
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AT25
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AK23
+    I2C_RESET_FPGA:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BC19
+    I2C_SCL_FPGA:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BB18
+    I2C_SDA_FPGA:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BC18
+    MEZ0_PHY11_LANE_RX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: Y38
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AA40
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AC40
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AD38
+    MEZ0_PHY11_LANE_RX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: Y37
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AA39
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AC39
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AD37
+    MEZ0_PHY11_LANE_TX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AC44
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AD42
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AE44
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AF42
+    MEZ0_PHY11_LANE_TX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AC43
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AD41
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AE43
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AF41
+    MEZ0_PHY12_LANE_RX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: T38
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: U40
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: V38
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: W40
+    MEZ0_PHY12_LANE_RX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: T37
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: U39
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: V37
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: W39
+    MEZ0_PHY12_LANE_TX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: W44
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: Y42
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AA44
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AB42
+    MEZ0_PHY12_LANE_TX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: W43
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: Y41
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AA43
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AB41
+    MEZ0_PHY21_LANE_RX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: M38
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: N40
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: P38
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: R40
+    MEZ0_PHY21_LANE_RX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: M37
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: N39
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: P37
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: R39
+    MEZ0_PHY21_LANE_TX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: R44
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: T42
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: U44
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: V42
+    MEZ0_PHY21_LANE_TX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: R43
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: T41
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: U43
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: V41
+    MEZ0_PHY22_LANE_RX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: H38
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: J40
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: K38
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: L40
+    MEZ0_PHY22_LANE_RX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: H37
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: J39
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: K37
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: L39
+    MEZ0_PHY22_LANE_TX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: L44
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: M42
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: N44
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: P42
+    MEZ0_PHY22_LANE_TX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: L43
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: M41
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: N43
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: P41
+    MEZ0_REFCLK_0_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AA36
+    MEZ0_REFCLK_0_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AA35
+    MEZ0_REFCLK_1_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: U36
+    MEZ0_REFCLK_1_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: U35
+    MEZ0_REFCLK_2_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: N36
+    MEZ0_REFCLK_2_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: N35
+    MEZ0_REFCLK_3_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: J36
+    MEZ0_REFCLK_3_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: J35
+    MEZ1_PHY11_LANE_RX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AW40
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BA40
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BC40
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BD38
+    MEZ1_PHY11_LANE_RX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AW39
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BA39
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BC39
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BD37
+    MEZ1_PHY11_LANE_TX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AY42
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BA44
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BB42
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BD42
+    MEZ1_PHY11_LANE_TX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AY41
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BA43
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BB41
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BD41
+    MEZ1_PHY12_LANE_RX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AP38
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AR40
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AU40
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AV38
+    MEZ1_PHY12_LANE_RX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AP37
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AR39
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AU39
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AV37
+    MEZ1_PHY12_LANE_TX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AT42
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AU44
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AV42
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AW44
+    MEZ1_PHY12_LANE_TX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AT41
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AU43
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AV41
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AW43
+    MEZ1_PHY21_LANE_RX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AL40
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AM38
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AM42
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AN40
+    MEZ1_PHY21_LANE_RX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AL39
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AM37
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AM41
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AN39
+    MEZ1_PHY21_LANE_TX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AL44
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AN44
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AP42
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AR44
+    MEZ1_PHY21_LANE_TX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AL43
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AN43
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AP41
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AR43
+    MEZ1_PHY22_LANE_RX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AE40
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AG40
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AJ40
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AK38
+    MEZ1_PHY22_LANE_RX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AE39
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AG39
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AJ39
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AK37
+    MEZ1_PHY22_LANE_TX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AG44
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AH42
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AJ44
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AK42
+    MEZ1_PHY22_LANE_TX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AG43
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AH41
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AJ43
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AK41
+    MEZ1_REFCLK_0_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AY38
+    MEZ1_REFCLK_0_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AY37
+    MEZ1_REFCLK_1_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AR36
+    MEZ1_REFCLK_1_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AR35
+    MEZ1_REFCLK_2_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AL36
+    MEZ1_REFCLK_2_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AL35
+    MEZ1_REFCLK_3_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AF38
+    MEZ1_REFCLK_3_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AF37
+    MEZ2_PHY11_LANE_RX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AK7
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AJ5
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AG5
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AE5
+    MEZ2_PHY11_LANE_RX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AK8
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AJ6
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AG6
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AE6
+    MEZ2_PHY11_LANE_TX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AK3
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AJ1
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AH3
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AG1
+    MEZ2_PHY11_LANE_TX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AK4
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AJ2
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AH4
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AG2
+    MEZ2_PHY12_LANE_RX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AN5
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AM3
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AM7
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AL5
+    MEZ2_PHY12_LANE_RX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AN6
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AM4
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AM8
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AL6
+    MEZ2_PHY12_LANE_TX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AR1
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AP3
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AN1
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AL1
+    MEZ2_PHY12_LANE_TX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AR2
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AP4
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AN2
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AL2
+    MEZ2_PHY21_LANE_RX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AV7
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AU5
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AR5
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AP7
+    MEZ2_PHY21_LANE_RX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AV8
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AU6
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AR6
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AP8
+    MEZ2_PHY21_LANE_TX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AW1
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AV3
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AU1
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AT3
+    MEZ2_PHY21_LANE_TX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AW2
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AV4
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AU2
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AT4
+    MEZ2_PHY22_LANE_RX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BD7
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BC5
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BA5
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AW5
+    MEZ2_PHY22_LANE_RX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BD8
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BC6
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BA6
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AW6
+    MEZ2_PHY22_LANE_TX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BD3
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BB3
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BA1
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AY3
+    MEZ2_PHY22_LANE_TX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BD4
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BB4
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: BA2
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AY4
+    MEZ2_REFCLK_0_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AF7
+    MEZ2_REFCLK_0_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AF8
+    MEZ2_REFCLK_1_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AL9
+    MEZ2_REFCLK_1_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AL10
+    MEZ2_REFCLK_2_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AR9
+    MEZ2_REFCLK_2_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AR10
+    MEZ2_REFCLK_3_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AY7
+    MEZ2_REFCLK_3_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AY8
+    MEZ3_PHY11_LANE_RX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: L5
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: K7
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: J5
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: H7
+    MEZ3_PHY11_LANE_RX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: L6
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: K8
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: J6
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: H8
+    MEZ3_PHY11_LANE_TX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: P3
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: N1
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: M3
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: L1
+    MEZ3_PHY11_LANE_TX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: P4
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: N2
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: M4
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: L2
+    MEZ3_PHY12_LANE_RX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: R5
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: P7
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: N5
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: M7
+    MEZ3_PHY12_LANE_RX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: R6
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: P8
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: N6
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: M8
+    MEZ3_PHY12_LANE_TX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: V3
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: U1
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: T3
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: R1
+    MEZ3_PHY12_LANE_TX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: V4
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: U2
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: T4
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: R2
+    MEZ3_PHY21_LANE_RX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: W5
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: V7
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: U5
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: T7
+    MEZ3_PHY21_LANE_RX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: W6
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: V8
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: U6
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: T8
+    MEZ3_PHY21_LANE_TX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AB3
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AA1
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: Y3
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: W1
+    MEZ3_PHY21_LANE_TX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AB4
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AA2
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: Y4
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: W2
+    MEZ3_PHY22_LANE_RX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AD7
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AC5
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AA5
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: Y7
+    MEZ3_PHY22_LANE_RX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AD8
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AC6
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AA6
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: Y8
+    MEZ3_PHY22_LANE_TX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AF3
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AE1
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AD3
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AC1
+    MEZ3_PHY22_LANE_TX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AF4
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AE2
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AD4
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AC2
+    MEZ3_REFCLK_0_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: J9
+    MEZ3_REFCLK_0_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: J10
+    MEZ3_REFCLK_1_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: N9
+    MEZ3_REFCLK_1_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: N10
+    MEZ3_REFCLK_2_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: U9
+    MEZ3_REFCLK_2_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: U10
+    MEZ3_REFCLK_3_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AA9
+    MEZ3_REFCLK_3_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: AA10
+    MEZZANINE_0_CLK_SEL:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: A33
+    MEZZANINE_0_ENABLE_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: B33
+    MEZZANINE_0_FAULT_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BA14
+    MEZZANINE_0_INT_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: B31
+    MEZZANINE_0_ONE_WIRE:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: B32
+    MEZZANINE_0_ONE_WIRE_STRONG_PULLUP_EN_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: C32
+    MEZZANINE_0_PRESENT_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: D32
+    MEZZANINE_0_RESET:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: C33
+    MEZZANINE_0_SCL_FPGA:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: A31
+    MEZZANINE_0_SDA_FPGA:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: A30
+    MEZZANINE_1_CLK_SEL:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: D17
+    MEZZANINE_1_ENABLE_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: C17
+    MEZZANINE_1_FAULT_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AY14
+    MEZZANINE_1_INT_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BC33
+    MEZZANINE_1_ONE_WIRE:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BC34
+    MEZZANINE_1_ONE_WIRE_STRONG_PULLUP_EN_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BD34
+    MEZZANINE_1_PRESENT_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BA35
+    MEZZANINE_1_RESET:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: C15
+    MEZZANINE_1_SCL_FPGA:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BD32
+    MEZZANINE_1_SDA_FPGA:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BD31
+    MEZZANINE_2_CLK_SEL:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: E16
+    MEZZANINE_2_ENABLE_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: E17
+    MEZZANINE_2_FAULT_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AW14
+    MEZZANINE_2_INT_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BC13
+    MEZZANINE_2_ONE_WIRE:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BB10
+    MEZZANINE_2_ONE_WIRE_STRONG_PULLUP_EN_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BA10
+    MEZZANINE_2_PRESENT_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BA11
+    MEZZANINE_2_RESET:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: D15
+    MEZZANINE_2_SCL_FPGA:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BD14
+    MEZZANINE_2_SDA_FPGA:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BC14
+    MEZZANINE_3_CLK_SEL:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: B12
+    MEZZANINE_3_ENABLE_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: C12
+    MEZZANINE_3_FAULT_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AV14
+    MEZZANINE_3_INT_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: B15
+    MEZZANINE_3_ONE_WIRE:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: A13
+    MEZZANINE_3_ONE_WIRE_STRONG_PULLUP_EN_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: B13
+    MEZZANINE_3_PRESENT_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: C13
+    MEZZANINE_3_RESET:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: E12
+    MEZZANINE_3_SCL_FPGA:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: A14
+    MEZZANINE_3_SDA_FPGA:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: A15
+    MEZZANINE_COMBINED_FAULT:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BA20
+    MONITOR_ALERT_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BB13
+    ONE_GBE_INT_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BB12
+    ONE_GBE_LINK:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BC12
+    ONE_GBE_MGTREFCLK_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: A9
+    ONE_GBE_MGTREFCLK_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: A10
+    ONE_GBE_RESET_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BD12
+    ONE_GBE_SGMII_RX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: A5
+    ONE_GBE_SGMII_RX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: A6
+    ONE_GBE_SGMII_TX_N:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: B3
+    ONE_GBE_SGMII_TX_P:
+    - !!python/object:casper_platform.Pin
+      iostd: null
+      loc: B4
+    ONE_WIRE_EEPROM:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BD17
+    ONE_WIRE_EEPROM_STRONG_PULLUP_EN_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BC17
+    PCIE_RST_N:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: C18
+    SPARTAN_CLK:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BA26
+    SPI_CLK:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BB21
+    SPI_CSB:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BD21
+    SPI_MISO:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BB20
+    SPI_MOSI:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BC20
+    USB_FPGA:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: E14
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: F14
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: E13
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: F13
+    USB_I2C_CTRL:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AY13
+    USB_UART_RXD:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BB16
+    USB_UART_TXD:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BA13
+    aux_clk_diff_n:
+    - !!python/object:casper_platform.Pin
+      iostd: LVDS
+      loc: AV19
+    aux_clk_diff_p:
+    - !!python/object:casper_platform.Pin
+      iostd: LVDS
+      loc: AU20
+    gpio:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BC35
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BB35
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BA34
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AY34
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AW34
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BB33
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: BA33
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: AY33
+    led:
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: A29
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: C29
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: D29
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: E29
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: A28
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: B28
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: C28
+    - !!python/object:casper_platform.Pin
+      iostd: LVCMOS18
+      loc: E28
+    sync_in_n:
+    - !!python/object:casper_platform.Pin
+      iostd: LVDS
+      loc: AU21
+    sync_in_p:
+    - !!python/object:casper_platform.Pin
+      iostd: LVDS
+      loc: AT21
+    sync_out_n:
+    - !!python/object:casper_platform.Pin
+      iostd: LVDS
+      loc: AY21
+    sync_out_p:
+    - !!python/object:casper_platform.Pin
+      iostd: LVDS
+      loc: AW21
+  platform_name: skarab
+  raw_constraints:
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports ONE_GBE_RESET_N]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property CONFIG_MODE BPI16 [current_design]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property CONFIG_VOLTAGE 1.8 [current_design]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property CFGBVS GND [current_design]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property BITSTREAM.STARTUP.STARTUPCLK CCLK [current_design]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property BITSTREAM.CONFIG.CONFIGFALLBACK ENABLE [current_design]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property BITSTREAM.CONFIG.TIMER_CFG 0X00040000 [current_design]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property BITSTREAM.CONFIG.EXTMASTERCCLK_EN DIV-2 [current_design]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property BITSTREAM.CONFIG.BPI_SYNC_MODE TYPE1 [current_design]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property LOC ICAP_X0Y1 [get_cells skarab_infr/wishbone_flash_sdram_interface_0/icape_controller_0/ICAPE2_0]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports CONFIG_IO_0]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports CONFIG_IO_1]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports CONFIG_IO_10]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports CONFIG_IO_11]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports CONFIG_IO_3]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports CONFIG_IO_4]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports CONFIG_IO_6]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports CONFIG_IO_7]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports CONFIG_IO_8]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports CONFIG_IO_9]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports CPU_PWR_BTN_N]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports CPU_PWR_OK]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports CPU_SYS_RESET_N]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports DEBUG_UART_TX]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FAN_CONT_RST_N]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_ADV_N]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[0]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[10]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[11]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[12]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[13]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[14]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[15]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[16]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[17]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[18]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[19]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[1]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[20]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[21]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[22]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[23]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[24]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[25]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[26]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[27]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[28]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[2]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[3]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[4]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[5]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[6]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[7]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[8]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_A[9]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_CS_N]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_DQ[0]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_DQ[10]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_DQ[11]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_DQ[12]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_DQ[13]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_DQ[14]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_DQ[15]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_DQ[1]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_DQ[2]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_DQ[3]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_DQ[4]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_DQ[5]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_DQ[6]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_DQ[7]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_DQ[8]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_DQ[9]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_OE_N]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_RS0]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_RS1]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FLASH_WE_N]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FPGA_ATX_PSU_KILL]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports GND[0]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports GND[10]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports GND[11]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports GND[12]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports GND[13]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports GND[14]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports GND[15]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports GND[1]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports GND[2]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports GND[3]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports GND[4]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports GND[5]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports GND[6]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports GND[7]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports GND[8]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports GND[9]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports I2C_RESET_FPGA]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports I2C_SCL_FPGA]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports I2C_SDA_FPGA]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports MEZZANINE_0_ENABLE_N]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports MEZZANINE_0_ONE_WIRE]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports MEZZANINE_0_ONE_WIRE_STRONG_PULLUP_EN_N]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports MEZZANINE_1_ENABLE_N]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports MEZZANINE_1_ONE_WIRE]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports MEZZANINE_1_ONE_WIRE_STRONG_PULLUP_EN_N]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports MEZZANINE_2_ENABLE_N]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports MEZZANINE_2_ONE_WIRE]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports MEZZANINE_2_ONE_WIRE_STRONG_PULLUP_EN_N]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports MEZZANINE_3_CLK_SEL]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports MEZZANINE_3_ENABLE_N]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports MEZZANINE_3_ONE_WIRE]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports MEZZANINE_3_ONE_WIRE_STRONG_PULLUP_EN_N]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports MEZZANINE_3_RESET]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports ONE_WIRE_EEPROM]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports ONE_WIRE_EEPROM_STRONG_PULLUP_EN_N]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports SPARTAN_CLK]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports SPI_CLK]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports SPI_CSB]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports USB_UART_RXD]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FPGA_LEDS[0]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FPGA_LEDS[1]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FPGA_LEDS[2]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FPGA_LEDS[3]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FPGA_LEDS[4]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FPGA_LEDS[5]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FPGA_LEDS[6]]
+
+      '
+  - !!python/object:castro.RawConstraint
+    raw: 'set_property OFFCHIP_TERM NONE [get_ports FPGA_LEDS[7]]
+
+      '
+  synth_tool: ''
+  temp_fpga_model: ''
+  temp_quartus_qsf_files: []
+  vendor_constraints_files: ''
+version: 0.0.0

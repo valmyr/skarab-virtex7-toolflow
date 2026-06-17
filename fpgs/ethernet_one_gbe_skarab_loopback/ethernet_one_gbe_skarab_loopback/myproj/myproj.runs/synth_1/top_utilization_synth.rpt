@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Fri Jun 12 19:58:28 2026
+| Date         : Mon Jun 15 08:39:24 2026
 | Host         : valmyrsilva07-B760M-AORUS-ELITE running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
@@ -30,17 +30,17 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs*                |  9852 |     0 |    433200 |  2.27 |
-|   LUT as Logic             |  9405 |     0 |    433200 |  2.17 |
+| Slice LUTs*                | 15767 |     0 |    433200 |  3.64 |
+|   LUT as Logic             | 15320 |     0 |    433200 |  3.54 |
 |   LUT as Memory            |   447 |     0 |    174200 |  0.26 |
 |     LUT as Distributed RAM |   128 |     0 |           |       |
 |     LUT as Shift Register  |   319 |     0 |           |       |
-| Slice Registers            | 15308 |     0 |    866400 |  1.77 |
-|   Register as Flip Flop    | 15307 |     0 |    866400 |  1.77 |
+| Slice Registers            | 29620 |     0 |    866400 |  3.42 |
+|   Register as Flip Flop    | 29619 |     0 |    866400 |  3.42 |
 |   Register as Latch        |     0 |     0 |    866400 |  0.00 |
 |   Register as AND/OR       |     1 |     0 |    866400 | <0.01 |
-| F7 Muxes                   |   562 |     0 |    216600 |  0.26 |
-| F8 Muxes                   |   136 |     0 |    108300 |  0.13 |
+| F7 Muxes                   |  2434 |     0 |    216600 |  1.12 |
+| F8 Muxes                   |  1072 |     0 |    108300 |  0.99 |
 +----------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -58,9 +58,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 311   |          Yes |           - |          Set |
-| 1604  |          Yes |           - |        Reset |
+| 1664  |          Yes |           - |        Reset |
 | 246   |          Yes |         Set |            - |
-| 13146 |          Yes |       Reset |            - |
+| 27398 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -154,22 +154,22 @@ Table of Contents
 +--------------+-------+---------------------+
 |   Ref Name   |  Used | Functional Category |
 +--------------+-------+---------------------+
-| FDRE         | 13146 |        Flop & Latch |
-| LUT6         |  4621 |                 LUT |
-| LUT2         |  1974 |                 LUT |
-| FDCE         |  1604 |        Flop & Latch |
-| LUT4         |  1462 |                 LUT |
-| LUT5         |  1432 |                 LUT |
-| LUT3         |  1404 |                 LUT |
-| MUXF7        |   562 |               MuxFx |
-| CARRY4       |   371 |          CarryLogic |
+| FDRE         | 27398 |        Flop & Latch |
+| LUT6         |  8916 |                 LUT |
+| LUT5         |  2488 |                 LUT |
+| MUXF7        |  2434 |               MuxFx |
+| LUT2         |  2415 |                 LUT |
+| FDCE         |  1664 |        Flop & Latch |
+| LUT3         |  1576 |                 LUT |
+| LUT4         |  1406 |                 LUT |
+| MUXF8        |  1072 |               MuxFx |
+| CARRY4       |   372 |          CarryLogic |
 | LUT1         |   365 |                 LUT |
 | FDPE         |   311 |        Flop & Latch |
 | SRL16E       |   277 |  Distributed Memory |
 | FDSE         |   246 |        Flop & Latch |
 | RAMB36E1     |   240 |        Block Memory |
 | RAMD32       |   160 |  Distributed Memory |
-| MUXF8        |   136 |               MuxFx |
 | OBUFT        |    66 |                  IO |
 | IBUF         |    64 |                  IO |
 | OBUF         |    62 |                  IO |

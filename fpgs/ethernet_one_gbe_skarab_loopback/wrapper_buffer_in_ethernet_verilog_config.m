@@ -28,7 +28,7 @@ function wrapper_buffer_in_ethernet_verilog_config(this_block)
   this_block.addSimulinkOutport('data_out_buffer');
 
   data_out_buffer_port = this_block.port('ena_mux');
-  data_out_buffer_port.setType('UFix_1_0');
+  data_out_buffer_port.setType('UFix_2_0');
 
   data_out_buffer_port = this_block.port('tx_eof');
   data_out_buffer_port.setType('UFix_1_0');
@@ -62,7 +62,7 @@ function wrapper_buffer_in_ethernet_verilog_config(this_block)
       this_block.setError('Input data type for port "package_size" must have width=10.');
     end
 
-    if (this_block.port('addr_data').width ~= 8);
+    if (this_block.port('addr_data').width ~= 11);
       this_block.setError('Input data type for port "addr_data" must have width=8.');
     end
 

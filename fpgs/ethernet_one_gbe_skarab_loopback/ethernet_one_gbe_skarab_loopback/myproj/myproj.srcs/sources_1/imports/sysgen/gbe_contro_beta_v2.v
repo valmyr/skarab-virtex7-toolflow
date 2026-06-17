@@ -90,7 +90,7 @@ module gbe_control(
             counter_tx_package <=0;    
         end else begin 
             //Condição para envio de dados
-            if(tx_en && counter_tx_package < tx_package_len && ena_dec_reg )begin
+            if(tx_en && counter_tx_package < tx_package_len && ena_dec )begin
                 //Incrementa se o tx_en e ena_decimation forem 1, decimetaion define a taxa de envio
                 counter_tx_package <=counter_tx_package+1;
                 tx_data_reg <= tx_data_reg+1 ;
@@ -107,5 +107,5 @@ module gbe_control(
     assign tx_eof = counter_tx_package == tx_package_len -1 && tx_en;
     //Lógica do Valid 
     assign tx_val = tx_en && ena_dec && 4'hff;
-    assign tx_valid_package = tx_en && counter_tx_package < tx_package_len && ena_dec_reg;
+    assign tx_valid_package = tx_en && counter_tx_package < tx_package_len && ena_dec;
 endmodule

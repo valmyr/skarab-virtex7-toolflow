@@ -9,7 +9,7 @@ def control_fan(pwm=30):
 
 control_fan(pwm=5)
 skarab.upload_to_ram_and_program(fpg) 
-snap = skarab.snapshots.d0_ss.read(
+snap = skarab.snapshots.d5_ss.read(
     arm=True,
     man_trig=True,
     man_valid=True,

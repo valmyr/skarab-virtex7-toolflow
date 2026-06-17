@@ -5,36 +5,30 @@ Matlab 9.4.0.813654 (R2018a)            /usr/local/MATLAB/R2018a
 Vivado 2019.1                           /tools/Xilinx/Vivado/2019.1
 --------------------------------------------------------------------------------
 Summary of Errors:
-Error 0001: ERROR: [USF-XSim-62] 'compile' step failed with error(s)....
-     Block: 'ethernet_one_gbe_skarab_loopback/ System Generator'
-Error 0002: ERROR: [USF-XSim-62] 'compile' step failed with error(s)....
-     Block: 'ethernet_one_gbe_skarab_loopback/clk_mhz/skarab_tx_1gbe_tx_rx_valmir_clk_mhz_user_data_in'
+Error 0001: Input data type for port "addr_data" must have width=8.
+     Block: 'ethernet_one_gbe_skarab_loopback/wrapper_ethernet_buffer_rx_verilog_v1.0.0'
+Error 0002: Input data type for port "addr_data" must have width=8.
+     Block: 'ethernet_one_gbe_skarab_loopback/wrapper_ethernet_buffer_rx_verilog_v1.0.0'
 --------------------------------------------------------------------------------
 
 Error 0001:
 
 Reported by:
-  'ethernet_one_gbe_skarab_loopback/ System Generator'
+  'ethernet_one_gbe_skarab_loopback/wrapper_ethernet_buffer_rx_verilog_v1.0.0'
 
 Details:
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please
-check the Tcl console output or
-'/tmp/xlsimgSxSbe/hdl_netlist/xelab.sim/sim_1/behav/xsim/xvlog.log'
-file for more information.
-Please refer to '/tmp/xlsimgSxSbe/vivado.log' for more details.
+Input data type for port "addr_data" must have width=8.
+Error occurred during "Rate and Type Propagation".
 
 --------------------------------------------------------------------------------
 
 Error 0001:
 
 Reported by:
-  'ethernet_one_gbe_skarab_loopback/clk_mhz/skarab_tx_1gbe_tx_rx_valmir_clk_mhz_user_data_in'
+  'ethernet_one_gbe_skarab_loopback/wrapper_ethernet_buffer_rx_verilog_v1.0.0'
 
 Details:
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please
-check the Tcl console output or
-'/tmp/xlsimgSxSbe/hdl_netlist/xelab.sim/sim_1/behav/xsim/xvlog.log'
-file for more information.
-Please refer to '/tmp/xlsimgSxSbe/vivado.log' for more details.
+Input data type for port "addr_data" must have width=8.
+Error occurred during "Rate and Type Error Checking".
 
 --------------------------------------------------------------------------------

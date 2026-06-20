@@ -146,25 +146,23 @@ module top (
   localparam ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_CONTROL1_WBID0 = 28;
   localparam ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_EOF1_WBID0 = 29;
   localparam ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_OVERRUN1_WBID0 = 30;
-  localparam ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_SRC_IP_WBID0 = 31;
-  localparam ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_SRC_PORT_WBID0 = 32;
-  localparam ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_VALID1_WBID0 = 33;
-  localparam ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_TX_AFULL1_WBID0 = 34;
-  localparam ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_TX_CONTROL_WBID0 = 35;
+  localparam ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_VALID1_WBID0 = 31;
+  localparam ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_TX_AFULL1_WBID0 = 32;
+  localparam ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_TX_CONTROL_WBID0 = 33;
   localparam ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_TX_ONE_GBE_WBID0 = 0;
-  localparam ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_TX_OVERFLOW1_WBID0 = 36;
-  localparam ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_VAILD_RX_VALMIR1_WBID0 = 37;
+  localparam ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_TX_OVERFLOW1_WBID0 = 34;
+  localparam ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_VAILD_RX_VALMIR1_WBID0 = 35;
   localparam N_SUB_ARBS = 2;
-  localparam N_WB_SLAVES = 39;
+  localparam N_WB_SLAVES = 37;
   localparam SLAVE_ADDR = {
     32'h8019c068,
     32'h800dc000
     };
   localparam SLAVE_HIGH = {
-    32'h8019c09f,
+    32'h8019c097,
     32'h8019c067
     };
-  localparam SYS_BLOCK_INST_WBID0 = 38;
+  localparam SYS_BLOCK_INST_WBID0 = 36;
 
 /*
   _____ _                   _     
@@ -336,10 +334,6 @@ module top (
   wire [31:0] ethernet_one_gbe_skarab_loopback1_rx_eof1_user_data_in;
   // sw_reg: rx_overrun1
   wire [31:0] ethernet_one_gbe_skarab_loopback1_rx_overrun1_user_data_in;
-  // sw_reg: rx_src_ip
-  wire [31:0] ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in;
-  // sw_reg: rx_src_port
-  wire [31:0] ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in;
   // sw_reg: rx_valid1
   wire [31:0] ethernet_one_gbe_skarab_loopback1_rx_valid1_user_data_in;
   // sw_reg: tx_afull1
@@ -352,14 +346,14 @@ module top (
   wire [31:0] ethernet_one_gbe_skarab_loopback1_vaild_rx_valmir1_user_data_in;
   // usermodule: ethernet_one_gbe_skarab_loopback1
   wire wbm_err_i;
-  wire [38:0] wbs_ack_i;
+  wire [36:0] wbs_ack_i;
   wire [63:0] wbs_adr_o;
-  wire [38:0] wbs_cyc_o;
-  wire [1247:0] wbs_dat_i;
+  wire [36:0] wbs_cyc_o;
+  wire [1183:0] wbs_dat_i;
   wire [31:0] wbs_dat_o;
-  wire [38:0] wbs_err_i;
+  wire [36:0] wbs_err_i;
   wire [3:0] wbs_sel_o;
-  wire [38:0] wbs_stb_o;
+  wire [36:0] wbs_stb_o;
   wire wbs_we_o;
   // xsg: SKARAB
   wire user_clk;
@@ -1164,46 +1158,12 @@ module top (
     .wb_we_i(wbs_we_o)
   );
 
-  // sw_reg: rx_src_ip
-  wb_register_simulink2ppc  ethernet_one_gbe_skarab_loopback1_rx_src_ip (
-    .user_clk(user_clk),
-    .user_data_in(ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in),
-    .wb_ack_o(wbs_ack_i[ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_SRC_IP_WBID0]),
-    .wb_adr_i(wbs_adr_o[(0+1)*32-1:(0)*32]),
-    .wb_clk_i(wb_clk_i),
-    .wb_cyc_i(wbs_cyc_o[ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_SRC_IP_WBID0]),
-    .wb_dat_i(wbs_dat_o),
-    .wb_dat_o(wbs_dat_i[(ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_SRC_IP_WBID0+1)*32-1:(ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_SRC_IP_WBID0)*32]),
-    .wb_err_o(wbs_err_i[ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_SRC_IP_WBID0]),
-    .wb_rst_i(wb_rst_i),
-    .wb_sel_i(wbs_sel_o),
-    .wb_stb_i(wbs_stb_o[ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_SRC_IP_WBID0]),
-    .wb_we_i(wbs_we_o)
-  );
-
-  // sw_reg: rx_src_port
-  wb_register_simulink2ppc  ethernet_one_gbe_skarab_loopback1_rx_src_port (
-    .user_clk(user_clk),
-    .user_data_in(ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in),
-    .wb_ack_o(wbs_ack_i[ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_SRC_PORT_WBID0]),
-    .wb_adr_i(wbs_adr_o[(1+1)*32-1:(1)*32]),
-    .wb_clk_i(wb_clk_i),
-    .wb_cyc_i(wbs_cyc_o[ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_SRC_PORT_WBID0]),
-    .wb_dat_i(wbs_dat_o),
-    .wb_dat_o(wbs_dat_i[(ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_SRC_PORT_WBID0+1)*32-1:(ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_SRC_PORT_WBID0)*32]),
-    .wb_err_o(wbs_err_i[ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_SRC_PORT_WBID0]),
-    .wb_rst_i(wb_rst_i),
-    .wb_sel_i(wbs_sel_o),
-    .wb_stb_i(wbs_stb_o[ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_SRC_PORT_WBID0]),
-    .wb_we_i(wbs_we_o)
-  );
-
   // sw_reg: rx_valid1
   wb_register_simulink2ppc  ethernet_one_gbe_skarab_loopback1_rx_valid1 (
     .user_clk(user_clk),
     .user_data_in(ethernet_one_gbe_skarab_loopback1_rx_valid1_user_data_in),
     .wb_ack_o(wbs_ack_i[ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_VALID1_WBID0]),
-    .wb_adr_i(wbs_adr_o[(1+1)*32-1:(1)*32]),
+    .wb_adr_i(wbs_adr_o[(0+1)*32-1:(0)*32]),
     .wb_clk_i(wb_clk_i),
     .wb_cyc_i(wbs_cyc_o[ETHERNET_ONE_GBE_SKARAB_LOOPBACK1_RX_VALID1_WBID0]),
     .wb_dat_i(wbs_dat_o),
@@ -1325,8 +1285,6 @@ module top (
     .ethernet_one_gbe_skarab_loopback1_rx_control1_user_data_out(ethernet_one_gbe_skarab_loopback1_rx_control1_user_data_out),
     .ethernet_one_gbe_skarab_loopback1_rx_eof1_user_data_in(ethernet_one_gbe_skarab_loopback1_rx_eof1_user_data_in),
     .ethernet_one_gbe_skarab_loopback1_rx_overrun1_user_data_in(ethernet_one_gbe_skarab_loopback1_rx_overrun1_user_data_in),
-    .ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in(ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in),
-    .ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in(ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in),
     .ethernet_one_gbe_skarab_loopback1_rx_valid1_user_data_in(ethernet_one_gbe_skarab_loopback1_rx_valid1_user_data_in),
     .ethernet_one_gbe_skarab_loopback1_tx_afull1_user_data_in(ethernet_one_gbe_skarab_loopback1_tx_afull1_user_data_in),
     .ethernet_one_gbe_skarab_loopback1_tx_control_user_data_out(ethernet_one_gbe_skarab_loopback1_tx_control_user_data_out),

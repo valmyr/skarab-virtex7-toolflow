@@ -7,6 +7,7 @@ from matplotlib import pyplot as plt
 colab = False
 from matplotlib import pyplot as plt
 from random import randint
+import os
 import numpy as np
 if(colab):
     from IPython import display
@@ -50,20 +51,20 @@ fs=600
 t=np.arange(0,N,1)
 y=np.zeros(N,dtype=np.int8)
 while(True):
-    data, addr = sock.recvfrom((256-8)*8)  # Buffer de 2048 bytes
+    data, addr = sock.recvfrom((256)*8)  # Buffer de 2048 bytes
     bytesize = 8
     kk=0
     incre =0
+    os.system('clear')
 
     print(kk,"--------------------------------fim -----------------------------------------\n")
-    print(data)
     for i in range(0, len(data)-1, bytesize):
         word = int.from_bytes(data[i:i+bytesize], byteorder='big')
         #y[kk] =int(word)
         print(f"Word[{i//bytesize}] = {word}")
         data_.append(word)
         kk+=1
-    print("--------------------------------fim -----------------------------------------\n")
-    break
+    print(kk,"--------------------------------fim -----------------------------------------\n")
+    
     kk+=1
     #if(k>=amostras):break

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date             : Wed Jun 17 10:25:45 2026
+| Date             : Sat Jun 20 03:37:49 2026
 | Host             : valmyrsilva07-B760M-AORUS-ELITE running 64-bit Ubuntu 20.04.6 LTS
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.226        |
+| Total On-Chip Power (W)  | 1.213        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.841        |
+| Dynamic (W)              | 0.829        |
 | Device Static (W)        | 0.385        |
 | Effective TJA (C/W)      | 0.8          |
 | Max Ambient (C)          | 84.0         |
@@ -52,24 +52,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.128 |       20 |       --- |             --- |
-| Slice Logic              |     0.010 |    34263 |       --- |             --- |
-|   LUT as Logic           |     0.008 |    10661 |    433200 |            2.46 |
-|   Register               |     0.001 |    17529 |    866400 |            2.02 |
-|   CARRY4                 |    <0.001 |      586 |    108300 |            0.54 |
+| Clocks                   |     0.131 |       20 |       --- |             --- |
+| Slice Logic              |     0.009 |    33814 |       --- |             --- |
+|   LUT as Logic           |     0.007 |    10569 |    433200 |            2.44 |
+|   Register               |     0.001 |    17246 |    866400 |            1.99 |
+|   CARRY4                 |    <0.001 |      556 |    108300 |            0.51 |
 |   LUT as Distributed RAM |    <0.001 |      580 |    174200 |            0.33 |
-|   F7/F8 Muxes            |    <0.001 |      658 |    433200 |            0.15 |
-|   LUT as Shift Register  |    <0.001 |      178 |    174200 |            0.10 |
-|   Others                 |    <0.001 |     1602 |       --- |             --- |
-| Signals                  |     0.054 |    26911 |       --- |             --- |
-| Block RAM                |     0.149 |    271.5 |      1470 |           18.47 |
+|   F7/F8 Muxes            |    <0.001 |      705 |    433200 |            0.16 |
+|   LUT as Shift Register  |    <0.001 |      176 |    174200 |            0.10 |
+|   Others                 |    <0.001 |     1586 |       --- |             --- |
+| Signals                  |     0.038 |    26479 |       --- |             --- |
+| Block RAM                |     0.150 |    271.5 |      1470 |           18.47 |
 | MMCM                     |     0.298 |        3 |        20 |           15.00 |
 | DSPs                     |     0.003 |        5 |      3600 |            0.14 |
 | I/O                      |     0.006 |      157 |       600 |           26.17 |
 | GTH                      |     0.191 |        1 |       --- |             --- |
 | XADC                     |    <0.001 |        1 |       --- |             --- |
 | Static Power             |     0.385 |          |           |                 |
-| Total                    |     1.226 |          |           |                 |
+| Total                    |     1.213 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,7 +79,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.546 |       0.345 |      0.200 |
+| Vccint    |       1.000 |     0.532 |       0.332 |      0.200 |
 | Vccaux    |       1.800 |     0.220 |       0.166 |      0.053 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -88,7 +88,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.026 |       0.013 |      0.014 |
+| Vccbram   |       1.000 |     0.027 |       0.013 |      0.014 |
 | MGTAVcc   |       1.000 |     0.146 |       0.118 |      0.028 |
 | MGTAVtt   |       1.200 |     0.060 |       0.053 |      0.008 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -167,50 +167,47 @@ Table of Contents
 +-------------------------------------------------------+-----------+
 | Name                                                  | Power (W) |
 +-------------------------------------------------------+-----------+
-| top                                                   |     0.841 |
-|   ethernet_one_gbe_skarab_loopback1_d3_ss_bram        |     0.026 |
-|     bram_inst                                         |     0.026 |
-|       asymmetric_a_wider_than_b.bram_inst             |     0.026 |
-|   ethernet_one_gbe_skarab_loopback1_d4_ss_bram        |     0.026 |
-|     bram_inst                                         |     0.026 |
-|       asymmetric_a_wider_than_b.bram_inst             |     0.026 |
-|   ethernet_one_gbe_skarab_loopback1_d5_ss_bram        |     0.026 |
-|     bram_inst                                         |     0.026 |
-|       asymmetric_a_wider_than_b.bram_inst             |     0.026 |
+| top                                                   |     0.829 |
+|   ethernet_one_gbe_skarab_loopback1_d3_ss_bram        |     0.025 |
+|     bram_inst                                         |     0.025 |
+|       asymmetric_a_wider_than_b.bram_inst             |     0.025 |
+|   ethernet_one_gbe_skarab_loopback1_d4_ss_bram        |     0.025 |
+|     bram_inst                                         |     0.025 |
+|       asymmetric_a_wider_than_b.bram_inst             |     0.025 |
+|   ethernet_one_gbe_skarab_loopback1_d5_ss_bram        |     0.025 |
+|     bram_inst                                         |     0.025 |
+|       asymmetric_a_wider_than_b.bram_inst             |     0.025 |
 |   ethernet_one_gbe_skarab_loopback1_inst              |     0.077 |
 |     ethernet_one_gbe_skarab_loopback1_struct          |     0.077 |
-|       d3                                              |     0.006 |
-|       d4                                              |     0.005 |
+|       d3                                              |     0.005 |
+|       d4                                              |     0.006 |
 |       d5                                              |     0.007 |
-|       delay31                                         |     0.005 |
-|       pkt_ctrs1                                       |     0.011 |
+|       ethernet_system_control_one_gbe_skarab1         |     0.031 |
+|       pkt_ctrs1                                       |     0.008 |
 |       pkt_ctrs_compare1                               |     0.003 |
-|       wrapper_ethernet_buffer_rx_verilog_v1_0_0       |     0.024 |
-|   ethernet_one_gbe_skarab_loopback1_pkt_ctrs1_ss_bram |     0.026 |
-|     bram_inst                                         |     0.026 |
-|       symmetric_ram.bram_inst                         |     0.026 |
-|   ethernet_one_gbe_skarab_loopback1_tx_one_gbe        |     0.403 |
-|     gmii_to_sgmii_0                                   |     0.319 |
-|       U0                                              |     0.319 |
-|     gmii_to_xaui_translator_0                         |     0.009 |
+|   ethernet_one_gbe_skarab_loopback1_pkt_ctrs1_ss_bram |     0.025 |
+|     bram_inst                                         |     0.025 |
+|       symmetric_ram.bram_inst                         |     0.025 |
+|   ethernet_one_gbe_skarab_loopback1_tx_one_gbe        |     0.402 |
+|     gmii_to_sgmii_0                                   |     0.318 |
+|       U0                                              |     0.318 |
+|     gmii_to_xaui_translator_0                         |     0.008 |
 |       gmii_to_xaui_fifo_0                             |     0.005 |
 |       packet_byte_count_fifo_0                        |     0.001 |
 |     kat_ten_gb_eth_0                                  |     0.069 |
-|       ten_gig_eth_mac_inst                            |     0.010 |
+|       ten_gig_eth_mac_inst                            |     0.011 |
 |       tge_rx_inst                                     |     0.012 |
-|       tge_tx_inst                                     |     0.044 |
+|       tge_tx_inst                                     |     0.043 |
 |     xaui_to_gmii_translator_0                         |     0.006 |
 |       xaui_to_gmii_fifo_0                             |     0.005 |
-|   skarab_infr                                         |     0.229 |
+|   skarab_infr                                         |     0.232 |
 |     FPGA_DNA_CHECKER_inst                             |     0.001 |
-|     cont_microblaze_wrapper_0                         |     0.022 |
-|       cont_microblaze_i                               |     0.022 |
+|     cont_microblaze_wrapper_0                         |     0.025 |
+|       cont_microblaze_i                               |     0.025 |
 |     wishbone_flash_sdram_interface_0                  |     0.002 |
 |   sys_block_inst                                      |     0.001 |
-|   wbs_arbiter_inst                                    |     0.019 |
-|     wbs_arbiter_0                                     |     0.017 |
-|     wbs_arbiter_1                                     |     0.001 |
-|     wbs_arbiter_primary                               |     0.001 |
+|   wbs_arbiter_inst                                    |     0.006 |
+|     wbs_arbiter_0                                     |     0.005 |
 +-------------------------------------------------------+-----------+
 
 

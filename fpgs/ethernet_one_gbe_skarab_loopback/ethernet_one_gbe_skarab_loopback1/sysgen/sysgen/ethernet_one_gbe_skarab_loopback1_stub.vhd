@@ -62,8 +62,6 @@ entity ethernet_one_gbe_skarab_loopback1_stub is
     ethernet_one_gbe_skarab_loopback1_rx_badframe1_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_loopback1_rx_eof1_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_loopback1_rx_overrun1_user_data_in : out std_logic_vector( 32-1 downto 0 );
-    ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in : out std_logic_vector( 32-1 downto 0 );
-    ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_loopback1_rx_valid1_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_loopback1_tx_afull1_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_loopback1_tx_one_gbe_app_rx_ack : out std_logic_vector( 1-1 downto 0 );
@@ -140,8 +138,6 @@ begin
     ethernet_one_gbe_skarab_loopback1_rx_badframe1_user_data_in => ethernet_one_gbe_skarab_loopback1_rx_badframe1_user_data_in,
     ethernet_one_gbe_skarab_loopback1_rx_eof1_user_data_in => ethernet_one_gbe_skarab_loopback1_rx_eof1_user_data_in,
     ethernet_one_gbe_skarab_loopback1_rx_overrun1_user_data_in => ethernet_one_gbe_skarab_loopback1_rx_overrun1_user_data_in,
-    ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in => ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in,
-    ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in => ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in,
     ethernet_one_gbe_skarab_loopback1_rx_valid1_user_data_in => ethernet_one_gbe_skarab_loopback1_rx_valid1_user_data_in,
     ethernet_one_gbe_skarab_loopback1_tx_afull1_user_data_in => ethernet_one_gbe_skarab_loopback1_tx_afull1_user_data_in,
     ethernet_one_gbe_skarab_loopback1_tx_one_gbe_app_rx_ack => ethernet_one_gbe_skarab_loopback1_tx_one_gbe_app_rx_ack,

@@ -65,14 +65,129 @@ fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_s
 fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-16_1338.fpg'
 
 fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-16_1523.fpg'
-fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-16_1610.fpg'
-fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-16_1627.fpg'
-fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-16_1653.fpg'
-fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-16_1715.fpg'
-fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-16_1729.fpg'
-fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-17_0959.fpg'
-fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-17_1019.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-17_1230.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-17_1424.fpg'
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-17_1523.fpg'
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-17_1553.fpg'
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-17_1614.fpg'
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-17_1632.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-17_1650.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-17_1952.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-17_2007.fpg'
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-17_1741.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-17_2007.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-17_2017.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-17_2030.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-17_2041.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-17_2100.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-17_2114.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-17_2139.fpg'
+
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-18_1232.fpg'
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-18_1421.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-18_1513.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-18_1624.fpg'
+
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-18_1644.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-18_1708.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-18_1721.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-18_1742.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-18_1820.fpg'
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-18_2105.fpg'
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-19_1651.fpg'
+
+
+
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-18_2245.fpg'
+
+
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-18_2259.fpg'
+
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-18_2332.fpg'
+#PROBLEMA ATUAL
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-18_2344.fpg'
+#PROBLEMA ATUAL
+
+#ethernet_one_gbe_skarab_loopback1_2026-06-18_2332ethernet_one_gbe_skarab_loopback1_2026-06-18_2332
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-19_1356.fpg'
+
+
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-19_1410.fpg'
+
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-19_1447.fpg'
+
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-19_1723.fpg'
+
+
+fpg='fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-19_1651.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-19_1739.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-19_1808.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-19_1826.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-19_1837.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-19_1925.fpg'
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-19_1951.fpg'
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-19_2006.fpg'
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-19_2043.fpg'
+
+
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-19_2053.fpg'
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-19_2108.fpg'
+
+
+
+
+
+
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-19_2122.fpg'
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-19_2134.fpg'
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-19_2206.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-20_0100.fpg'
+
+
+
+
+
+
+
+fpg="/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-20_0122.fpg"
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-20_0147.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-20_0239.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-20_0258.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-20_0310.fpg'
+fpg="/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-20_0330.fpg"
+
+
+
 def control_fan(pwm=30):
+
+
+
     for i in range(5):
         #if(i<4):
 
@@ -83,21 +198,23 @@ def control_fan(pwm=30):
         #os.system("sleep 1")
         #print("fan ",{i+1}," = ",{pwm},"%%")
 
-control_fan(pwm=5)
+control_fan(pwm=20)
 
 fpga.upload_to_ram_and_program(fpg)
 
-#Definir o tamanho do pacote a ser transmitido
+#Definir o tamanho do pacote a ser transmitido software_register
 fpga.registers.tx_control.write(pkt_len=256)
+#fpga.write_int('software_register',1)
 #Habiltar transmissao e resetar o core de ethernet
-fpga.registers.tx_control.write(tx_en=0, pkt_rst="pulse")
-fpga.registers.tx_control.write(tx_en=1, pkt_rst=0)
+fpga.registers.tx_control.write(tx_en=1, pkt_rst="pulse")
+fpga.registers.tx_control.write(pkt_rst="pulse")
 #fpga.registers.tx_control.write(tx_en=1, pkt_rst=0);time.sleep(1);fpga.registers.tx_control.write(tx_en=0, pkt_rst=0)
 #Monitorando os dados do rx
 #while(True):
 #    print(fpga.registers.data_rx_valmir.read_uint())
 #    time.sleep(1)
-fpga.write_int('mux_control',3)
+fpga.write_int('mux_control',1)
+
 for i in range(256):
       fpga.write_int('addr_soft_control',i)
       print("mem[",fpga.read_int('addr_soft_control'),"]","=",fpga.read_int('data_soft_control'))

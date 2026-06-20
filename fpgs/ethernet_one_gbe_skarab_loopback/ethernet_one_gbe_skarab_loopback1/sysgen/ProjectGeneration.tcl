@@ -26,11 +26,6 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 		{{single_reg_w_init.vhd} -lib {xil_defaultlib}}
 		{{xlclockdriver_rd.vhd} -lib {xil_defaultlib}}
 		{{vivado_ip.tcl}}
-		{{gbe_contro_beta_v2.v}}
-		{{conv_pkg.v}}
-		{{synth_reg.v}}
-		{{synth_reg_w_init.v}}
-		{{convert_type.v}}
 		{{wrapper_buffer_in_ethernet_verilog.v}}
 		{{conv_pkg.v}}
 		{{synth_reg.v}}
@@ -53,7 +48,7 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 	set SynthesisTool {Vivado}
 	set TargetDir {/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/sysgen}
 	set TopLevelModule {ethernet_one_gbe_skarab_loopback1}
-	set TopLevelSimulinkHandle 74344
+	set TopLevelSimulinkHandle 79840
 	set VHDLLib {xil_defaultlib}
 	set TopLevelPortInterface {}
 	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_tx_one_gbe_app_tx_overflow Name {ethernet_one_gbe_skarab_loopback1_tx_one_gbe_app_tx_overflow}
@@ -911,36 +906,6 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_overrun1_user_data_in ClockDomain {ethernet_one_gbe_skarab_loopback1}
 	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_overrun1_user_data_in Locs {}
 	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_overrun1_user_data_in IOStandard {}
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in Name {ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in}
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in Type UFix_32_0
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in ArithmeticType xlUnsigned
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in BinaryPoint 0
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in Width 32
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in DatFile {ethernet_one_gbe_skarab_loopback1_rx_src_ip_ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in.dat}
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in IconText {ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in}
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in Direction out
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in Period 1
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in Interface 0
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in InterfaceName {}
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in InterfaceString {DATA}
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in ClockDomain {ethernet_one_gbe_skarab_loopback1}
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in Locs {}
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_ip_user_data_in IOStandard {}
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in Name {ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in}
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in Type UFix_32_0
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in ArithmeticType xlUnsigned
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in BinaryPoint 0
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in Width 32
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in DatFile {ethernet_one_gbe_skarab_loopback1_rx_src_port_ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in.dat}
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in IconText {ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in}
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in Direction out
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in Period 1
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in Interface 0
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in InterfaceName {}
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in InterfaceString {DATA}
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in ClockDomain {ethernet_one_gbe_skarab_loopback1}
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in Locs {}
-	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_src_port_user_data_in IOStandard {}
 	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_valid1_user_data_in Name {ethernet_one_gbe_skarab_loopback1_rx_valid1_user_data_in}
 	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_valid1_user_data_in Type UFix_32_0
 	dict set TopLevelPortInterface ethernet_one_gbe_skarab_loopback1_rx_valid1_user_data_in ArithmeticType xlUnsigned

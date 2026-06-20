@@ -5,9 +5,9 @@ Matlab 9.4.0.813654 (R2018a)            /usr/local/MATLAB/R2018a
 Vivado 2019.1                           /tools/Xilinx/Vivado/2019.1
 --------------------------------------------------------------------------------
 Summary of Errors:
-Error 0001: Input data type for port "rx_valid" must have width=1.
+Error 0001: Input data type for port "debug_ena_mux" must have width=1.
      Block: 'ethernet_one_gbe_skarab_control/Ethernet_System_Control_One_GBE_Skarab1'
-Error 0002: Input data type for port "rx_valid" must have width=1.
+Error 0002: Input data type for port "debug_ena_mux" must have width=1.
      Block: 'ethernet_one_gbe_skarab_control/Ethernet_System_Control_One_GBE_Skarab1'
 --------------------------------------------------------------------------------
 
@@ -17,7 +17,7 @@ Reported by:
   'ethernet_one_gbe_skarab_control/Ethernet_System_Control_One_GBE_Skarab1'
 
 Details:
-Input data type for port "rx_valid" must have width=1.
+Input data type for port "debug_ena_mux" must have width=1.
 Error occurred during "Rate and Type Propagation".
 
 --------------------------------------------------------------------------------
@@ -28,7 +28,7 @@ Reported by:
   'ethernet_one_gbe_skarab_control/Ethernet_System_Control_One_GBE_Skarab1'
 
 Details:
-Input data type for port "rx_valid" must have width=1.
+Input data type for port "debug_ena_mux" must have width=1.
 Error occurred during "Rate and Type Error Checking".
 
 --------------------------------------------------------------------------------

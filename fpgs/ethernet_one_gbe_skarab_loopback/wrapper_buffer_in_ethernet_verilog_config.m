@@ -13,7 +13,7 @@ function wrapper_buffer_in_ethernet_verilog_config(this_block)
 
   this_block.setEntityName('wrapper_buffer_in_ethernet_verilog');
 
-  % System Generator has to assume that your entity  has a combinational feed through; 
+  % System Generator has to assume that your entity  has a combinational feed through; debug_rx_data
   %   if it  doesn't, then comment out the following line:
   this_block.tagAsCombinational;
 
@@ -22,10 +22,27 @@ function wrapper_buffer_in_ethernet_verilog_config(this_block)
   this_block.addSimulinkInport('in_data_rx_ethernet');
   this_block.addSimulinkInport('package_size');
   this_block.addSimulinkInport('addr_data');
-  this_block.addSimulinkInport('data_valid_rx');
-  this_block.addSimulinkInport('tx_eof');
+
+
   this_block.addSimulinkInport('ena_mux');
   this_block.addSimulinkOutport('data_out_buffer');
+    this_block.addSimulinkOutport('tx_val');
+    this_block.addSimulinkOutport('tx_eof');
+  this_block.addSimulinkOutport('tx_ena_out');
+
+
+
+  this_block.addSimulinkOutport('debug_rx_data');
+
+  tx_val_buffer_port = this_block.port('tx_val');
+  tx_val_buffer_port.setType('UFix_1_0');
+
+  tx_ena_out_buffer_port = this_block.port('tx_ena_out');
+  tx_ena_out_buffer_port.setType('UFix_1_0');
+
+  debug_rx_data_port = this_block.port('debug_rx_data');
+  debug_rx_data_port.setType('UFix_8_0');
+
 
   data_out_buffer_port = this_block.port('ena_mux');
   data_out_buffer_port.setType('UFix_2_0');
@@ -66,11 +83,7 @@ function wrapper_buffer_in_ethernet_verilog_config(this_block)
       this_block.setError('Input data type for port "addr_data" must have width=8.');
     end
 
-    if (this_block.port('data_valid_rx').width ~= 1);
-      this_block.setError('Input data type for port "data_valid_rx" must have width=1.');
-    end
 
-    this_block.port('data_valid_rx').useHDLVector(false);
 
   end  % if(inputTypesKnown)
   % -----------------------------

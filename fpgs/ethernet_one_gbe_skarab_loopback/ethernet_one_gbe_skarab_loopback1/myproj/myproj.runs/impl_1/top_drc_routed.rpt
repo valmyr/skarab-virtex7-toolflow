@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Wed Jun 17 10:25:39 2026
+| Date         : Sat Jun 20 03:37:42 2026
 | Host         : valmyrsilva07-B760M-AORUS-ELITE running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
 | Design       : top
@@ -24,12 +24,11 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 49
+             Violations found: 48
 +-----------+----------+-----------------------------------------------------------------+------------+
 | Rule      | Severity | Description                                                     | Violations |
 +-----------+----------+-----------------------------------------------------------------+------------+
 | CHECK-3   | Warning  | Report rule limit reached                                       | 2          |
-| PDRC-153  | Warning  | Gated clock check                                               | 1          |
 | REQP-1839 | Warning  | RAMB36 async control check                                      | 20         |
 | REQP-1840 | Warning  | RAMB18 async control check                                      | 20         |
 | RTSTAT-10 | Warning  | No routable loads                                               | 1          |
@@ -46,11 +45,6 @@ Related violations: <none>
 CHECK-3#2 Warning
 Report rule limit reached  
 REQP-1840 rule limit reached: 20 violations have been found.
-Related violations: <none>
-
-PDRC-153#1 Warning
-Gated clock check  
-Net ethernet_one_gbe_skarab_loopback1_inst/ethernet_one_gbe_skarab_loopback1_struct/wrapper_ethernet_buffer_rx_verilog_v1_0_0/wrapper_buffer_in_ethernet_verilog_inst/unit_buffer_in_ethernet/FSM_onehot_next_state_reg[1]_i_2_n_0 is a gated clock net sourced by a combinational pin ethernet_one_gbe_skarab_loopback1_inst/ethernet_one_gbe_skarab_loopback1_struct/wrapper_ethernet_buffer_rx_verilog_v1_0_0/wrapper_buffer_in_ethernet_verilog_inst/unit_buffer_in_ethernet/FSM_onehot_next_state_reg[1]_i_2/O, cell ethernet_one_gbe_skarab_loopback1_inst/ethernet_one_gbe_skarab_loopback1_struct/wrapper_ethernet_buffer_rx_verilog_v1_0_0/wrapper_buffer_in_ethernet_verilog_inst/unit_buffer_in_ethernet/FSM_onehot_next_state_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 REQP-1839#1 Warning

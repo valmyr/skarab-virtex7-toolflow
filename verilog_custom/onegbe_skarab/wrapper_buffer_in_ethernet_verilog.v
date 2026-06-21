@@ -5,7 +5,7 @@ module wrapper_buffer_in_ethernet_verilog(
     input  wire        in_valid_rx,
     input  wire [7:0]  in_data_rx_ethernet,
     input  wire [9:0]  package_size,
-    input  wire [10:0] addr_data,
+    input  wire [7:0] addr_data,
     output wire [7:0]  data_out_buffer,
     output wire        tx_eof,    
     input  wire [1:0]  ena_mux,

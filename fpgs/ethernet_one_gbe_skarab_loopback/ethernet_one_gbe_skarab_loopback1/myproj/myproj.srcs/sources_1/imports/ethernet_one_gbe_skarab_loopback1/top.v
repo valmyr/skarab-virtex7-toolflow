@@ -1248,6 +1248,7 @@ module top (
   // sys_block: SKARAB
   ethernet_one_gbe_skarab_loopback1  ethernet_one_gbe_skarab_loopback1_inst (
     .clk(user_clk),
+    .ethernet_one_gbe_skarab_loopback1_addr_soft_control_user_data_out(ethernet_one_gbe_skarab_loopback1_addr_soft_control_user_data_out),
     .ethernet_one_gbe_skarab_loopback1_d3_ss_bram_addr(ethernet_one_gbe_skarab_loopback1_d3_ss_bram_addr),
     .ethernet_one_gbe_skarab_loopback1_d3_ss_bram_data_in(ethernet_one_gbe_skarab_loopback1_d3_ss_bram_data_in),
     .ethernet_one_gbe_skarab_loopback1_d3_ss_bram_data_out(ethernet_one_gbe_skarab_loopback1_d3_ss_bram_data_out),
@@ -1309,7 +1310,6 @@ module top (
     .ethernet_one_gbe_skarab_loopback1_tx_one_gbe_app_tx_rst(ethernet_one_gbe_skarab_loopback1_tx_one_gbe_app_tx_rst),
     .ethernet_one_gbe_skarab_loopback1_tx_overflow1_user_data_in(ethernet_one_gbe_skarab_loopback1_tx_overflow1_user_data_in),
     .ethernet_one_gbe_skarab_loopback1_vaild_rx_valmir1_user_data_in(ethernet_one_gbe_skarab_loopback1_vaild_rx_valmir1_user_data_in),
-    .ethernet_one_gbe_skarab_loopback_addr_soft_control_user_data_out(ethernet_one_gbe_skarab_loopback_addr_soft_control_user_data_out),
     .ethernet_one_gbe_skarab_loopback_mux_control_user_data_out(ethernet_one_gbe_skarab_loopback_mux_control_user_data_out),
     .skarab_tx_1gbe_tx_rx_valmir_clk_mhz_user_data_in(skarab_tx_1gbe_tx_rx_valmir_clk_mhz_user_data_in),
     .skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out(skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out),

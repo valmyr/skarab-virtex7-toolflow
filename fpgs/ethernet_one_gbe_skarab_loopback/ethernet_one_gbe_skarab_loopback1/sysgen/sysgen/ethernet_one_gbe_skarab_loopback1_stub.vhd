@@ -4,7 +4,7 @@ use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 entity ethernet_one_gbe_skarab_loopback1_stub is
   port (
-    ethernet_one_gbe_skarab_loopback_addr_soft_control_user_data_out : in std_logic_vector( 32-1 downto 0 );
+    ethernet_one_gbe_skarab_loopback1_addr_soft_control_user_data_out : in std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_loopback1_d3_ss_bram_data_out : in std_logic_vector( 128-1 downto 0 );
     skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out : in std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_loopback1_d4_ss_bram_data_out : in std_logic_vector( 128-1 downto 0 );
@@ -80,7 +80,7 @@ architecture structural of ethernet_one_gbe_skarab_loopback1_stub is
 begin
   sysgen_dut : entity xil_defaultlib.ethernet_one_gbe_skarab_loopback1 
   port map (
-    ethernet_one_gbe_skarab_loopback_addr_soft_control_user_data_out => ethernet_one_gbe_skarab_loopback_addr_soft_control_user_data_out,
+    ethernet_one_gbe_skarab_loopback1_addr_soft_control_user_data_out => ethernet_one_gbe_skarab_loopback1_addr_soft_control_user_data_out,
     ethernet_one_gbe_skarab_loopback1_d3_ss_bram_data_out => ethernet_one_gbe_skarab_loopback1_d3_ss_bram_data_out,
     skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out => skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out,
     ethernet_one_gbe_skarab_loopback1_d4_ss_bram_data_out => ethernet_one_gbe_skarab_loopback1_d4_ss_bram_data_out,

@@ -53,7 +53,7 @@ addr_soft_control	xps:sw_reg	io_delay	0
 addr_soft_control	xps:sw_reg	init_val	0
 addr_soft_control	xps:sw_reg	sample_period	1
 addr_soft_control	xps:sw_reg	names	reg
-addr_soft_control	xps:sw_reg	bitwidths	32
+addr_soft_control	xps:sw_reg	bitwidths	8
 addr_soft_control	xps:sw_reg	bin_pts	0
 addr_soft_control	xps:sw_reg	arith_types	0
 addr_soft_control	xps:sw_reg	sim_port	off
@@ -143,7 +143,7 @@ data_soft_control	xps:sw_reg	io_delay	0
 data_soft_control	xps:sw_reg	init_val	0
 data_soft_control	xps:sw_reg	sample_period	1
 data_soft_control	xps:sw_reg	names	reg
-data_soft_control	xps:sw_reg	bitwidths	32
+data_soft_control	xps:sw_reg	bitwidths	8
 data_soft_control	xps:sw_reg	bin_pts	0
 data_soft_control	xps:sw_reg	arith_types	0
 data_soft_control	xps:sw_reg	sim_port	off
@@ -520,7 +520,7 @@ pkt_ctrs_compare1/ss	casper:snapshot	provide_outputs	off
 pkt_ctrs_compare1/ss	casper:snapshot	use_dsp48	on
 77777	77777	tags	casper:bitsnap,casper:snapshot,xps:bram,xps:sw_reg,xps:xsg
 77777	77777	system	ethernet_one_gbe_skarab_loopback1
-77777	77777	builddate	20-Jun-2026\_03:30:37
+77777	77777	builddate	20-Jun-2026\_21:15:35
 77777	77777	ans	0
 77777	77777	latency	NaN
 77777	77777	latency	NaN

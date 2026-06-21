@@ -64,13 +64,13 @@ module buffer_in_ethernet(
     input  wire in_valid_rx,
     input  wire [7:0] in_data_rx_ethernet,
     input  wire [9:0] package_size,
-    input  wire [10:0] addr_data,
+    input  wire [7:0] addr_data,
     output reg [7:0]  data_out_buffer,
     input  wire [1:0] ena_mux,
     output wire       tx_eof,
     output wire       tx_val,
     output reg        tx_ena_out,
-    output reg [7:0]  debug_rx_data
+    output wire [7:0]  debug_rx_data
 
 
     
@@ -100,7 +100,7 @@ wire [10:0] addr_data_write_mux,addr_data_local_mux_r;
 reg  [10:0] addr_data_write_next;
 reg reg_sync_rx_valid;
 
-wire [7:0]debug_local_data;
+reg [7:0]debug_local_data;
 reg [31:0]counter_dec;
 wire ena_dec;
 
@@ -120,25 +120,20 @@ always@(posedge clk, negedge a_sync_nrst)begin
         data_out_buffer <= 8'hca;
     end else begin
         //Lógica de escrita no buffer
-        if(in_valid_rx)begin
-            mem[addr_data_local_mux_r]  <= current_state_rx == RX_DATA ?  rx_data_ff0: mem[addr_data_local_mux_r];
-            counter       <= current_state_rx == RX_DATA ? counter +1 : 0;
+        if(in_valid_rx && current_state_rx == RX_DATA)begin
+            mem[counter]  <= in_data_rx_ethernet;
+            counter       <=  counter +1;
             rx_data_ff0   <= in_data_rx_ethernet;
             rx_data_ff1   <= rx_data_ff0;
             rx_data_ff2   <= rx_data_ff1;
             rx_data_ff3   <= rx_data_ff2;
-            case(sync_reg_start_frame_reception)
-                1'b0:addr_data_write <= 0;
-                1'b1:addr_data_write <= addr_data_write+1;
-            endcase
         end else begin
-            mem[addr_data_local_mux_r]  <= mem[addr_data_local_mux_r];
-            counter       <= counter < package_size - CMD_SIZE ? counter:      0;
+            mem[counter]  <= mem[counter];
+            counter       <= counter < package_size ? counter:      0;
             rx_data_ff0   <= rx_data_ff0 ;
             rx_data_ff1   <= rx_data_ff1 ;
             rx_data_ff2   <= rx_data_ff2 ;
             rx_data_ff3   <= rx_data_ff3 ;
-            addr_data_write = addr_data_write;
 
         end
         //Lógica de leitura no buffer
@@ -161,19 +156,7 @@ always@(posedge clk, negedge a_sync_nrst)begin
 
     end
 end
-//início da recepção;
-assign start_frame_reception    = rx_data_ff3 ==8'hff && rx_data_ff0 == 8'hff && rx_data_ff1 == 8'hff && rx_data_ff2 == 8'hff;
-//início da transmissão;                                  
-assign start_frame_transmission = rx_data_ff3 ==8'haa && rx_data_ff0 == 8'haa && rx_data_ff1 == 8'haa && rx_data_ff2 == 8'haa;
-    //Lógica de endereços de escrita
-//always@(*) begin
-//    case({reg_sync_rx_valid,sync_reg_start_frame_reception})
-//        2'b00:addr_data_write_next = 0;
-//        2'b01:addr_data_write_next = addr_data_write;
-//        2'b10:addr_data_write_next = 0;
-//        2'b11:addr_data_write_next = addr_data_write + 1;
-//    endcase
-//end
+
 reg  tx_ena_out_w;
 reg sync_data_valid_tx0;
 reg sync_dec;
@@ -182,23 +165,23 @@ reg [7:0] addr_data_t;
         if(!a_sync_nrst)begin
             current_state_tx <= IDLE;
             current_state_rx <= IDLE;
-            debug_rx_data = 8'h0;
             addr_data_t <=0;
             sync_data_valid_tx <=0;
             sync_data_valid_tx0 <=0;
             tx_ena_out =0;
             sync_dec <=0;
+            debug_local_data<=0;
            
         end else begin
             current_state_tx <= next_state_tx;
             current_state_rx <= next_state_rx;
-            addr_data_t <= addr_data;
-            debug_rx_data = mem[addr_data_t];
+
 
             sync_data_valid_tx0 <= ena_dec ;
             sync_data_valid_tx <= !ena_dec && sync_data_valid_tx0;
             tx_ena_out  <=tx_ena_out_w;
             sync_dec <=!tx_ena_out && tx_ena_out_w;
+            debug_local_data = mem[counter];
         end
     end
 
@@ -208,12 +191,12 @@ reg [7:0] addr_data_t;
             IDLE:begin
                 casex(sync_reg_start_frame_reception)
                     1'b1:next_state_rx = RX_DATA;
-                    
+                    1'b0:next_state_rx = IDLE;
                     default:next_state_rx = IDLE;
                 endcase
             end
             RX_DATA:begin
-                casex(counter < package_size - CMD_SIZE)
+                casex(counter < package_size )
                     1'b1:next_state_rx = RX_DATA;
                     1'b0:next_state_rx = IDLE;
                     default:next_state_rx = IDLE;
@@ -255,7 +238,7 @@ reg [7:0] addr_data_t;
 assign addr_data_local_mux = addr_data_local+1;
 assign addr_data_local_mux_r = counter;
 
-assign debug_local_data = mem[counter];
+
 
     assign ena_dec       =  counter_dec == 15-1;
     always @(posedge clk or negedge a_sync_nrst) begin
@@ -268,4 +251,26 @@ assign debug_local_data = mem[counter];
 
 assign tx_eof = (addr_data_local == package_size - 1) ;
 assign tx_val = (tx_ena_out && ena_dec);
+
+
+cmd_sync_detector cmd_start_frame_reception(
+        .clk(clk),
+        .ce(ce),
+        .a_sync_nrst(a_sync_nrst),
+        .rx_data(in_data_rx_ethernet),
+        .rx_valid(in_valid_rx),
+        .frame_cmd(32'h72_65_63_65), //Frame a ser detectado
+        .event_cmd_out(start_frame_reception)
+);
+
+cmd_sync_detector cmd_frame_transmission(
+        .clk(clk),
+        .ce(ce),
+        .a_sync_nrst(a_sync_nrst),
+        .rx_data(in_data_rx_ethernet),
+        .rx_valid(in_valid_rx),
+        .frame_cmd(32'h74_72_61_6E),//Frame a ser detectado
+        .event_cmd_out(start_frame_transmission)
+);
+assign             debug_rx_data = mem[addr_data];
 endmodule

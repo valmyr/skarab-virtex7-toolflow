@@ -5,20 +5,16 @@ Matlab 9.4.0.813654 (R2018a)            /usr/local/MATLAB/R2018a
 Vivado 2019.1                           /tools/Xilinx/Vivado/2019.1
 --------------------------------------------------------------------------------
 Summary of Errors:
-Error 0001: Illegal data type
-     Block: 'ethernet_one_gbe_skarab_loopback1/Convert'
+Error 0001: Input must be driven by SIMULINK integer, single, double ...
+     Block: 'ethernet_one_gbe_skarab_loopback1/addr_soft_control/ethernet_one_gbe_skarab_loopback1_addr_soft_control_user_data_out'
 --------------------------------------------------------------------------------
 
 Error 0001:
 
 Reported by:
-  'ethernet_one_gbe_skarab_loopback1/Convert'
+  'ethernet_one_gbe_skarab_loopback1/addr_soft_control/ethernet_one_gbe_skarab_loopback1_addr_soft_control_user_data_out'
 
 Details:
-The only arithmetic type that can be converted to a boolean is an
-unsigned 1-bit integer --- i.e., a UFix_1_0.  For C-language
-style translation of other types to booleans, use a Relational
-block set to test for values not equal to zero.
-Error occurred during "Rate and Type Error Checking".
-
+Input must be driven by SIMULINK integer, single, double or
+fixed-point data type of data width up to 32 bits.
 --------------------------------------------------------------------------------

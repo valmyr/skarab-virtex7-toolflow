@@ -79,7 +79,7 @@ function wrapper_buffer_in_ethernet_verilog_config(this_block)
       this_block.setError('Input data type for port "package_size" must have width=10.');
     end
 
-    if (this_block.port('addr_data').width ~= 11);
+    if (this_block.port('addr_data').width ~= 8);
       this_block.setError('Input data type for port "addr_data" must have width=8.');
     end
 
@@ -112,7 +112,7 @@ function wrapper_buffer_in_ethernet_verilog_config(this_block)
   %    this_block.addFile('');
   this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/wrapper_buffer_in_ethernet_verilog.v');
   this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/buffer_in_ethernet.v');
-
+  this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/cmd_sync_detector.v')
 return;
 
 

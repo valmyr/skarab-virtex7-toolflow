@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Sat Jun 20 03:37:50 2026
+| Date         : Sat Jun 20 21:22:36 2026
 | Host         : valmyrsilva07-B760M-AORUS-ELITE running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_bus_skew -warn_on_violation -file top_bus_skew_routed.rpt -pb top_bus_skew_routed.pb -rpx top_bus_skew_routed.rpx
 | Design       : top
@@ -23,28 +23,28 @@ Id  Position  From                            To                              Co
 --  --------  ------------------------------  ------------------------------  ------  ---------------  ----------  ---------
 1   279       [get_cells [list {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]}]]
                                               [get_cells [list {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
-                                                                              Slow              4.335       1.428      2.907
+                                                                              Slow              4.335       1.421      2.914
 2   281       [get_cells [list {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]}]]
                                               [get_cells [list {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
-                                                                              Slow              4.335       1.502      2.833
+                                                                              Slow              4.335       1.430      2.905
 3   283       [get_cells [list {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[7]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]}]]
                                               [get_cells [list {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
-                                                                              Slow              4.335       1.546      2.789
+                                                                              Slow              4.335       1.484      2.851
 4   285       [get_cells [list {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[5]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[6]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]}]]
                                               [get_cells [list {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
-                                                                              Slow              4.335       1.539      2.796
+                                                                              Slow              4.335       1.566      2.769
 5   287       [get_cells [list {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]}]]
                                               [get_cells [list {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
-                                                                              Slow              4.335       1.636      2.699
+                                                                              Slow              4.335       1.487      2.848
 6   289       [get_cells [list {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]}]]
                                               [get_cells [list {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
-                                                                              Slow              4.335       1.471      2.864
+                                                                              Slow              4.335       2.109      2.226
 7   291       [get_cells [list {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[7]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]}]]
                                               [get_cells [list {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
-                                                                              Slow              4.335       1.478      2.857
+                                                                              Slow              4.335       1.541      2.794
 8   293       [get_cells [list {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[5]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[6]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]}]]
                                               [get_cells [list {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} {ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
-                                                                              Slow              4.335       1.539      2.796
+                                                                              Slow              4.335       1.623      2.712
 
 
 2. Bus Skew Report Per Constraint
@@ -58,26 +58,26 @@ Endpoints: 4
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 user_clk_mmcm         sys_clk_mmcm          ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
-                                                                            ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
-                                                                                                            Slow         1.428      2.907
+                                                                            ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                                                                                                            Slow         1.421      2.914
 
 
-Slack (MET) :             2.907ns  (requirement - actual skew)
+Slack (MET) :             2.914ns  (requirement - actual skew)
   Endpoint Source:        ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
                             (rising edge-triggered cell FDRE clocked by user_clk_mmcm)
   Endpoint Destination:   ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_mmcm)
-  Reference Source:       ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+  Reference Source:       ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by user_clk_mmcm)
-  Reference Destination:  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+  Reference Destination:  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_mmcm)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            4.335ns
-  Endpoint Relative Delay:    1.041ns
-  Reference Relative Delay:  -0.037ns
-  Relative CRPR:              0.697ns
+  Endpoint Relative Delay:    0.976ns
+  Reference Relative Delay:  -0.064ns
+  Relative CRPR:              0.665ns
   Uncertainty:                1.046ns
-  Actual Bus Skew:            1.428ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            1.421ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -92,12 +92,12 @@ Endpoint path:
                                                       0.077     2.156 r  skarab_infr/USER_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.463     3.619    skarab_infr/user_clk_mmcm
     BUFGCTRL_X0Y19       BUFG (Prop_bufg_I_O)         0.093     3.712 r  skarab_infr/user_clk_BUFG_inst/O
-                         net (fo=4970, routed)        1.303     5.015    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
-    SLICE_X143Y246       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
+                         net (fo=4924, routed)        1.279     4.991    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X139Y283       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X143Y246       FDRE (Prop_fdre_C_Q)         0.204     5.219 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/Q
-                         net (fo=1, routed)           0.379     5.598    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[3]
-    SLICE_X142Y246       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+    SLICE_X139Y283       FDRE (Prop_fdre_C_Q)         0.204     5.195 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.277     5.472    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[3]
+    SLICE_X139Y282       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_mmcm rise edge)
@@ -110,15 +110,15 @@ Endpoint path:
                                                       0.073     1.914 r  skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.350     3.264    skarab_infr/sys_clk_mmcm
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     3.347 r  skarab_infr/sys_clk_BUFG_inst/O
-                         net (fo=2840, routed)        1.166     4.513    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
-    SLICE_X142Y246       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
-                         clock pessimism              0.103     4.616    
-    SLICE_X142Y246       FDRE (Setup_fdre_C_D)       -0.059     4.557    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+                         net (fo=2840, routed)        1.139     4.486    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X139Y282       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.103     4.589    
+    SLICE_X139Y282       FDRE (Setup_fdre_C_D)       -0.093     4.496    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
   -------------------------------------------------------------------
-                         data arrival                           5.598    
-                         clock arrival                          4.557    
+                         data arrival                           5.472    
+                         clock arrival                          4.496    
   -------------------------------------------------------------------
-                         relative delay                         1.041    
+                         relative delay                         0.976    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -133,12 +133,12 @@ Reference path:
                                                       0.073     1.946 r  skarab_infr/USER_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.350     3.296    skarab_infr/user_clk_mmcm
     BUFGCTRL_X0Y19       BUFG (Prop_bufg_I_O)         0.083     3.379 r  skarab_infr/user_clk_BUFG_inst/O
-                         net (fo=4970, routed)        1.168     4.547    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
-    SLICE_X143Y246       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+                         net (fo=4924, routed)        1.137     4.516    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X135Y283       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X143Y246       FDRE (Prop_fdre_C_Q)         0.178     4.725 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]/Q
-                         net (fo=1, routed)           0.260     4.985    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[2]
-    SLICE_X142Y248       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+    SLICE_X135Y283       FDRE (Prop_fdre_C_Q)         0.178     4.694 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]/Q
+                         net (fo=1, routed)           0.243     4.937    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[0]
+    SLICE_X138Y282       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_mmcm rise edge)
@@ -151,15 +151,15 @@ Reference path:
                                                       0.077     2.116 r  skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.463     3.579    skarab_infr/sys_clk_mmcm
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.672 r  skarab_infr/sys_clk_BUFG_inst/O
-                         net (fo=2840, routed)        1.301     4.973    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
-    SLICE_X142Y248       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
-                         clock pessimism             -0.103     4.870    
-    SLICE_X142Y248       FDRE (Hold_fdre_C_D)         0.152     5.022    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
+                         net (fo=2840, routed)        1.280     4.952    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X138Y282       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
+                         clock pessimism             -0.103     4.849    
+    SLICE_X138Y282       FDRE (Hold_fdre_C_D)         0.152     5.001    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
   -------------------------------------------------------------------
-                         data arrival                           4.985    
-                         clock arrival                          5.022    
+                         data arrival                           4.937    
+                         clock arrival                          5.001    
   -------------------------------------------------------------------
-                         relative delay                        -0.037    
+                         relative delay                        -0.064    
 
 
 
@@ -172,10 +172,10 @@ From Clock            To Clock              Endpoint Pin                    Refe
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 sys_clk_mmcm          user_clk_mmcm         ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
                                                                             ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
-                                                                                                            Slow         1.502      2.833
+                                                                                                            Slow         1.430      2.905
 
 
-Slack (MET) :             2.833ns  (requirement - actual skew)
+Slack (MET) :             2.905ns  (requirement - actual skew)
   Endpoint Source:        ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_mmcm)
   Endpoint Destination:   ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
@@ -186,11 +186,11 @@ Slack (MET) :             2.833ns  (requirement - actual skew)
                             (rising edge-triggered cell FDRE clocked by user_clk_mmcm)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            4.335ns
-  Endpoint Relative Delay:    1.015ns
-  Reference Relative Delay:  -0.066ns
-  Relative CRPR:              0.624ns
+  Endpoint Relative Delay:    0.954ns
+  Reference Relative Delay:  -0.091ns
+  Relative CRPR:              0.662ns
   Uncertainty:                1.046ns
-  Actual Bus Skew:            1.502ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            1.430ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -205,12 +205,12 @@ Endpoint path:
                                                       0.077     2.116 r  skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.463     3.579    skarab_infr/sys_clk_mmcm
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.672 r  skarab_infr/sys_clk_BUFG_inst/O
-                         net (fo=2840, routed)        1.301     4.973    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
-    SLICE_X142Y246       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+                         net (fo=2840, routed)        1.279     4.951    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X134Y283       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X142Y246       FDRE (Prop_fdre_C_Q)         0.236     5.209 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
-                         net (fo=1, routed)           0.362     5.570    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[3]
-    SLICE_X143Y246       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+    SLICE_X134Y283       FDRE (Prop_fdre_C_Q)         0.236     5.187 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.294     5.481    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[3]
+    SLICE_X133Y283       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock user_clk_mmcm rise edge)
@@ -223,15 +223,15 @@ Endpoint path:
                                                       0.073     1.946 r  skarab_infr/USER_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.350     3.296    skarab_infr/user_clk_mmcm
     BUFGCTRL_X0Y19       BUFG (Prop_bufg_I_O)         0.083     3.379 r  skarab_infr/user_clk_BUFG_inst/O
-                         net (fo=4970, routed)        1.168     4.547    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
-    SLICE_X143Y246       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
-                         clock pessimism              0.103     4.650    
-    SLICE_X143Y246       FDRE (Setup_fdre_C_D)       -0.094     4.556    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+                         net (fo=4924, routed)        1.134     4.513    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X133Y283       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.103     4.616    
+    SLICE_X133Y283       FDRE (Setup_fdre_C_D)       -0.089     4.527    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
   -------------------------------------------------------------------
-                         data arrival                           5.570    
-                         clock arrival                          4.556    
+                         data arrival                           5.481    
+                         clock arrival                          4.527    
   -------------------------------------------------------------------
-                         relative delay                         1.015    
+                         relative delay                         0.954    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -246,12 +246,12 @@ Reference path:
                                                       0.073     1.914 r  skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.350     3.264    skarab_infr/sys_clk_mmcm
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     3.347 r  skarab_infr/sys_clk_BUFG_inst/O
-                         net (fo=2840, routed)        1.163     4.510    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
-    SLICE_X141Y246       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
+                         net (fo=2840, routed)        1.141     4.488    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X136Y285       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X141Y246       FDRE (Prop_fdre_C_Q)         0.178     4.688 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]/Q
-                         net (fo=1, routed)           0.308     4.997    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[0]
-    SLICE_X140Y246       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+    SLICE_X136Y285       FDRE (Prop_fdre_C_Q)         0.206     4.694 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]/Q
+                         net (fo=1, routed)           0.221     4.915    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[0]
+    SLICE_X135Y285       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock user_clk_mmcm rise edge)
@@ -264,15 +264,15 @@ Reference path:
                                                       0.077     2.156 r  skarab_infr/USER_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.463     3.619    skarab_infr/user_clk_mmcm
     BUFGCTRL_X0Y19       BUFG (Prop_bufg_I_O)         0.093     3.712 r  skarab_infr/user_clk_BUFG_inst/O
-                         net (fo=4970, routed)        1.301     5.013    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
-    SLICE_X140Y246       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
-                         clock pessimism             -0.103     4.910    
-    SLICE_X140Y246       FDRE (Hold_fdre_C_D)         0.152     5.062    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
+                         net (fo=4924, routed)        1.279     4.991    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X135Y285       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
+                         clock pessimism             -0.103     4.888    
+    SLICE_X135Y285       FDRE (Hold_fdre_C_D)         0.118     5.006    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/rx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
   -------------------------------------------------------------------
-                         data arrival                           4.997    
-                         clock arrival                          5.062    
+                         data arrival                           4.915    
+                         clock arrival                          5.006    
   -------------------------------------------------------------------
-                         relative delay                        -0.066    
+                         relative delay                        -0.091    
 
 
 
@@ -283,27 +283,27 @@ Endpoints: 10
 
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
-user_clk_mmcm         sys_clk_mmcm          ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
-                                                                            ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
-                                                                                                            Slow         1.546      2.789
+user_clk_mmcm         sys_clk_mmcm          ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                            ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
+                                                                                                            Slow         1.484      2.851
 
 
-Slack (MET) :             2.789ns  (requirement - actual skew)
-  Endpoint Source:        ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]/C
+Slack (MET) :             2.851ns  (requirement - actual skew)
+  Endpoint Source:        ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
                             (rising edge-triggered cell FDRE clocked by user_clk_mmcm)
-  Endpoint Destination:   ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
+  Endpoint Destination:   ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_mmcm)
-  Reference Source:       ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]/C
+  Reference Source:       ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]/C
                             (rising edge-triggered cell FDRE clocked by user_clk_mmcm)
-  Reference Destination:  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
+  Reference Destination:  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_mmcm)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            4.335ns
-  Endpoint Relative Delay:    1.228ns
-  Reference Relative Delay:   0.081ns
-  Relative CRPR:              0.648ns
+  Endpoint Relative Delay:    1.047ns
+  Reference Relative Delay:  -0.050ns
+  Relative CRPR:              0.660ns
   Uncertainty:                1.046ns
-  Actual Bus Skew:            1.546ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            1.484ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -318,12 +318,12 @@ Endpoint path:
                                                       0.077     2.156 r  skarab_infr/USER_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.463     3.619    skarab_infr/user_clk_mmcm
     BUFGCTRL_X0Y19       BUFG (Prop_bufg_I_O)         0.093     3.712 r  skarab_infr/user_clk_BUFG_inst/O
-                         net (fo=4970, routed)        1.294     5.006    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
-    SLICE_X131Y247       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]/C
+                         net (fo=4924, routed)        1.219     4.931    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X101Y281       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X131Y247       FDRE (Prop_fdre_C_Q)         0.204     5.210 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]/Q
-                         net (fo=1, routed)           0.540     5.750    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[5]
-    SLICE_X131Y246       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
+    SLICE_X101Y281       FDRE (Prop_fdre_C_Q)         0.204     5.135 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.379     5.514    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[3]
+    SLICE_X104Y282       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_mmcm rise edge)
@@ -336,15 +336,15 @@ Endpoint path:
                                                       0.073     1.914 r  skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.350     3.264    skarab_infr/sys_clk_mmcm
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     3.347 r  skarab_infr/sys_clk_BUFG_inst/O
-                         net (fo=2840, routed)        1.157     4.504    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
-    SLICE_X131Y246       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/C
-                         clock pessimism              0.103     4.607    
-    SLICE_X131Y246       FDRE (Setup_fdre_C_D)       -0.085     4.522    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]
+                         net (fo=2840, routed)        1.076     4.423    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X104Y282       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.103     4.526    
+    SLICE_X104Y282       FDRE (Setup_fdre_C_D)       -0.059     4.467    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
   -------------------------------------------------------------------
-                         data arrival                           5.750    
-                         clock arrival                          4.522    
+                         data arrival                           5.514    
+                         clock arrival                          4.467    
   -------------------------------------------------------------------
-                         relative delay                         1.228    
+                         relative delay                         1.047    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -359,12 +359,12 @@ Reference path:
                                                       0.073     1.946 r  skarab_infr/USER_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.350     3.296    skarab_infr/user_clk_mmcm
     BUFGCTRL_X0Y19       BUFG (Prop_bufg_I_O)         0.083     3.379 r  skarab_infr/user_clk_BUFG_inst/O
-                         net (fo=4970, routed)        1.159     4.538    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
-    SLICE_X131Y248       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]/C
+                         net (fo=4924, routed)        1.083     4.462    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X99Y283        FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X131Y248       FDRE (Prop_fdre_C_Q)         0.178     4.716 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]/Q
-                         net (fo=1, routed)           0.381     5.097    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[8]
-    SLICE_X132Y248       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
+    SLICE_X99Y283        FDRE (Prop_fdre_C_Q)         0.178     4.640 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]/Q
+                         net (fo=1, routed)           0.220     4.860    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[4]
+    SLICE_X101Y283       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_mmcm rise edge)
@@ -377,15 +377,15 @@ Reference path:
                                                       0.077     2.116 r  skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.463     3.579    skarab_infr/sys_clk_mmcm
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.672 r  skarab_infr/sys_clk_BUFG_inst/O
-                         net (fo=2840, routed)        1.295     4.967    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
-    SLICE_X132Y248       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/C
-                         clock pessimism             -0.103     4.864    
-    SLICE_X132Y248       FDRE (Hold_fdre_C_D)         0.152     5.016    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]
+                         net (fo=2840, routed)        1.223     4.895    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X101Y283       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/C
+                         clock pessimism             -0.103     4.792    
+    SLICE_X101Y283       FDRE (Hold_fdre_C_D)         0.118     4.910    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]
   -------------------------------------------------------------------
-                         data arrival                           5.097    
-                         clock arrival                          5.016    
+                         data arrival                           4.860    
+                         clock arrival                          4.910    
   -------------------------------------------------------------------
-                         relative delay                         0.081    
+                         relative delay                        -0.050    
 
 
 
@@ -396,27 +396,27 @@ Endpoints: 10
 
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
-sys_clk_mmcm          user_clk_mmcm         ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
-                                                                            ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
-                                                                                                            Slow         1.539      2.796
+sys_clk_mmcm          user_clk_mmcm         ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                            ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
+                                                                                                            Slow         1.566      2.769
 
 
-Slack (MET) :             2.796ns  (requirement - actual skew)
-  Endpoint Source:        ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]/C
+Slack (MET) :             2.769ns  (requirement - actual skew)
+  Endpoint Source:        ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_mmcm)
-  Endpoint Destination:   ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
+  Endpoint Destination:   ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
                             (rising edge-triggered cell FDRE clocked by user_clk_mmcm)
-  Reference Source:       ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]/C
+  Reference Source:       ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_mmcm)
-  Reference Destination:  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
+  Reference Destination:  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
                             (rising edge-triggered cell FDRE clocked by user_clk_mmcm)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            4.335ns
-  Endpoint Relative Delay:    1.085ns
-  Reference Relative Delay:  -0.060ns
-  Relative CRPR:              0.652ns
+  Endpoint Relative Delay:    1.035ns
+  Reference Relative Delay:  -0.068ns
+  Relative CRPR:              0.583ns
   Uncertainty:                1.046ns
-  Actual Bus Skew:            1.539ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            1.566ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -431,12 +431,12 @@ Endpoint path:
                                                       0.077     2.116 r  skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.463     3.579    skarab_infr/sys_clk_mmcm
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.672 r  skarab_infr/sys_clk_BUFG_inst/O
-                         net (fo=2840, routed)        1.292     4.964    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
-    SLICE_X130Y246       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]/C
+                         net (fo=2840, routed)        1.214     4.886    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X104Y281       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X130Y246       FDRE (Prop_fdre_C_Q)         0.236     5.200 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]/Q
-                         net (fo=1, routed)           0.411     5.610    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[7]
-    SLICE_X128Y246       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
+    SLICE_X104Y281       FDRE (Prop_fdre_C_Q)         0.236     5.122 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                         net (fo=1, routed)           0.383     5.505    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[1]
+    SLICE_X104Y280       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock user_clk_mmcm rise edge)
@@ -449,15 +449,15 @@ Endpoint path:
                                                       0.073     1.946 r  skarab_infr/USER_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.350     3.296    skarab_infr/user_clk_mmcm
     BUFGCTRL_X0Y19       BUFG (Prop_bufg_I_O)         0.083     3.379 r  skarab_infr/user_clk_BUFG_inst/O
-                         net (fo=4970, routed)        1.104     4.483    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
-    SLICE_X128Y246       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/C
-                         clock pessimism              0.103     4.586    
-    SLICE_X128Y246       FDRE (Setup_fdre_C_D)       -0.060     4.526    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]
+                         net (fo=4924, routed)        1.073     4.452    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X104Y280       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
+                         clock pessimism              0.103     4.555    
+    SLICE_X104Y280       FDRE (Setup_fdre_C_D)       -0.085     4.470    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
   -------------------------------------------------------------------
-                         data arrival                           5.610    
-                         clock arrival                          4.526    
+                         data arrival                           5.505    
+                         clock arrival                          4.470    
   -------------------------------------------------------------------
-                         relative delay                         1.085    
+                         relative delay                         1.035    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -472,12 +472,12 @@ Reference path:
                                                       0.073     1.914 r  skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.350     3.264    skarab_infr/sys_clk_mmcm
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     3.347 r  skarab_infr/sys_clk_BUFG_inst/O
-                         net (fo=2840, routed)        1.157     4.504    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
-    SLICE_X131Y246       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]/C
+                         net (fo=2840, routed)        1.075     4.422    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X105Y281       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X131Y246       FDRE (Prop_fdre_C_Q)         0.178     4.682 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]/Q
-                         net (fo=1, routed)           0.317     4.999    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[9]
-    SLICE_X132Y246       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
+    SLICE_X105Y281       FDRE (Prop_fdre_C_Q)         0.178     4.600 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]/Q
+                         net (fo=1, routed)           0.298     4.898    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[4]
+    SLICE_X108Y281       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock user_clk_mmcm rise edge)
@@ -490,15 +490,15 @@ Reference path:
                                                       0.077     2.156 r  skarab_infr/USER_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.463     3.619    skarab_infr/user_clk_mmcm
     BUFGCTRL_X0Y19       BUFG (Prop_bufg_I_O)         0.093     3.712 r  skarab_infr/user_clk_BUFG_inst/O
-                         net (fo=4970, routed)        1.297     5.009    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
-    SLICE_X132Y246       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/C
-                         clock pessimism             -0.103     4.906    
-    SLICE_X132Y246       FDRE (Hold_fdre_C_D)         0.153     5.059    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]
+                         net (fo=4924, routed)        1.204     4.916    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X108Y281       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/C
+                         clock pessimism             -0.103     4.813    
+    SLICE_X108Y281       FDRE (Hold_fdre_C_D)         0.153     4.966    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_rx_inst/use_bram.rx_packet_fifo_bram_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]
   -------------------------------------------------------------------
-                         data arrival                           4.999    
-                         clock arrival                          5.059    
+                         data arrival                           4.898    
+                         clock arrival                          4.966    
   -------------------------------------------------------------------
-                         relative delay                        -0.060    
+                         relative delay                        -0.068    
 
 
 
@@ -511,10 +511,10 @@ From Clock            To Clock              Endpoint Pin                    Refe
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 sys_clk_mmcm          user_clk_mmcm         ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
                                                                             ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
-                                                                                                            Slow         1.636      2.699
+                                                                                                            Slow         1.487      2.848
 
 
-Slack (MET) :             2.699ns  (requirement - actual skew)
+Slack (MET) :             2.848ns  (requirement - actual skew)
   Endpoint Source:        ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_mmcm)
   Endpoint Destination:   ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
@@ -525,11 +525,11 @@ Slack (MET) :             2.699ns  (requirement - actual skew)
                             (rising edge-triggered cell FDRE clocked by user_clk_mmcm)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            4.335ns
-  Endpoint Relative Delay:    1.100ns
-  Reference Relative Delay:  -0.128ns
+  Endpoint Relative Delay:    1.006ns
+  Reference Relative Delay:  -0.072ns
   Relative CRPR:              0.638ns
   Uncertainty:                1.046ns
-  Actual Bus Skew:            1.636ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            1.487ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -544,12 +544,12 @@ Endpoint path:
                                                       0.077     2.116 r  skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.463     3.579    skarab_infr/sys_clk_mmcm
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.672 r  skarab_infr/sys_clk_BUFG_inst/O
-                         net (fo=2840, routed)        1.296     4.968    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
-    SLICE_X146Y256       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
+                         net (fo=2840, routed)        1.223     4.895    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X128Y287       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X146Y256       FDRE (Prop_fdre_C_Q)         0.236     5.204 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]/Q
-                         net (fo=1, routed)           0.471     5.675    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[1]
-    SLICE_X146Y257       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+    SLICE_X128Y287       FDRE (Prop_fdre_C_Q)         0.236     5.131 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                         net (fo=1, routed)           0.378     5.509    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[1]
+    SLICE_X128Y286       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock user_clk_mmcm rise edge)
@@ -562,15 +562,15 @@ Endpoint path:
                                                       0.073     1.946 r  skarab_infr/USER_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.350     3.296    skarab_infr/user_clk_mmcm
     BUFGCTRL_X0Y19       BUFG (Prop_bufg_I_O)         0.083     3.379 r  skarab_infr/user_clk_BUFG_inst/O
-                         net (fo=4970, routed)        1.151     4.530    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
-    SLICE_X146Y257       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
-                         clock pessimism              0.103     4.633    
-    SLICE_X146Y257       FDRE (Setup_fdre_C_D)       -0.058     4.575    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
+                         net (fo=4924, routed)        1.080     4.459    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X128Y286       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
+                         clock pessimism              0.103     4.562    
+    SLICE_X128Y286       FDRE (Setup_fdre_C_D)       -0.059     4.503    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
   -------------------------------------------------------------------
-                         data arrival                           5.675    
-                         clock arrival                          4.575    
+                         data arrival                           5.509    
+                         clock arrival                          4.503    
   -------------------------------------------------------------------
-                         relative delay                         1.100    
+                         relative delay                         1.006    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -585,12 +585,12 @@ Reference path:
                                                       0.073     1.914 r  skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.350     3.264    skarab_infr/sys_clk_mmcm
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     3.347 r  skarab_infr/sys_clk_BUFG_inst/O
-                         net (fo=2840, routed)        1.154     4.501    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
-    SLICE_X151Y256       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
+                         net (fo=2840, routed)        1.142     4.489    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X136Y287       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X151Y256       FDRE (Prop_fdre_C_Q)         0.178     4.679 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/Q
-                         net (fo=1, routed)           0.249     4.928    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[3]
-    SLICE_X150Y256       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+    SLICE_X136Y287       FDRE (Prop_fdre_C_Q)         0.206     4.695 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.239     4.934    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[3]
+    SLICE_X133Y287       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock user_clk_mmcm rise edge)
@@ -603,15 +603,15 @@ Reference path:
                                                       0.077     2.156 r  skarab_infr/USER_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.463     3.619    skarab_infr/user_clk_mmcm
     BUFGCTRL_X0Y19       BUFG (Prop_bufg_I_O)         0.093     3.712 r  skarab_infr/user_clk_BUFG_inst/O
-                         net (fo=4970, routed)        1.295     5.007    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
-    SLICE_X150Y256       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
-                         clock pessimism             -0.103     4.904    
-    SLICE_X150Y256       FDRE (Hold_fdre_C_D)         0.152     5.056    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+                         net (fo=4924, routed)        1.280     4.992    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X133Y287       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism             -0.103     4.889    
+    SLICE_X133Y287       FDRE (Hold_fdre_C_D)         0.117     5.006    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
   -------------------------------------------------------------------
-                         data arrival                           4.928    
-                         clock arrival                          5.056    
+                         data arrival                           4.934    
+                         clock arrival                          5.006    
   -------------------------------------------------------------------
-                         relative delay                        -0.128    
+                         relative delay                        -0.072    
 
 
 
@@ -622,27 +622,27 @@ Endpoints: 4
 
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
-user_clk_mmcm         sys_clk_mmcm          ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
-                                                                            ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
-                                                                                                            Slow         1.471      2.864
+user_clk_mmcm         sys_clk_mmcm          ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                                                                            ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                                                            Slow         2.109      2.226
 
 
-Slack (MET) :             2.864ns  (requirement - actual skew)
-  Endpoint Source:        ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
+Slack (MET) :             2.226ns  (requirement - actual skew)
+  Endpoint Source:        ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by user_clk_mmcm)
-  Endpoint Destination:   ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+  Endpoint Destination:   ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_mmcm)
-  Reference Source:       ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
+  Reference Source:       ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
                             (rising edge-triggered cell FDRE clocked by user_clk_mmcm)
-  Reference Destination:  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+  Reference Destination:  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_mmcm)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            4.335ns
-  Endpoint Relative Delay:    1.111ns
-  Reference Relative Delay:  -0.002ns
-  Relative CRPR:              0.688ns
+  Endpoint Relative Delay:    1.770ns
+  Reference Relative Delay:   0.100ns
+  Relative CRPR:              0.607ns
   Uncertainty:                1.046ns
-  Actual Bus Skew:            1.471ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            2.109ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -657,12 +657,12 @@ Endpoint path:
                                                       0.077     2.156 r  skarab_infr/USER_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.463     3.619    skarab_infr/user_clk_mmcm
     BUFGCTRL_X0Y19       BUFG (Prop_bufg_I_O)         0.093     3.712 r  skarab_infr/user_clk_BUFG_inst/O
-                         net (fo=4970, routed)        1.295     5.007    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
-    SLICE_X147Y253       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
+                         net (fo=4924, routed)        1.219     4.931    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X105Y287       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X147Y253       FDRE (Prop_fdre_C_Q)         0.204     5.211 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]/Q
-                         net (fo=1, routed)           0.411     5.622    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[1]
-    SLICE_X149Y253       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+    SLICE_X105Y287       FDRE (Prop_fdre_C_Q)         0.223     5.154 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]/Q
+                         net (fo=1, routed)           1.233     6.387    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[0]
+    SLICE_X142Y287       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_mmcm rise edge)
@@ -675,15 +675,15 @@ Endpoint path:
                                                       0.073     1.914 r  skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.350     3.264    skarab_infr/sys_clk_mmcm
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     3.347 r  skarab_infr/sys_clk_BUFG_inst/O
-                         net (fo=2840, routed)        1.154     4.501    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
-    SLICE_X149Y253       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
-                         clock pessimism              0.103     4.604    
-    SLICE_X149Y253       FDRE (Setup_fdre_C_D)       -0.093     4.511    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
+                         net (fo=2840, routed)        1.146     4.493    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X142Y287       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
+                         clock pessimism              0.103     4.596    
+    SLICE_X142Y287       FDRE (Setup_fdre_C_D)        0.021     4.617    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
   -------------------------------------------------------------------
-                         data arrival                           5.622    
-                         clock arrival                          4.511    
+                         data arrival                           6.387    
+                         clock arrival                          4.617    
   -------------------------------------------------------------------
-                         relative delay                         1.111    
+                         relative delay                         1.770    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -698,12 +698,12 @@ Reference path:
                                                       0.073     1.946 r  skarab_infr/USER_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.350     3.296    skarab_infr/user_clk_mmcm
     BUFGCTRL_X0Y19       BUFG (Prop_bufg_I_O)         0.083     3.379 r  skarab_infr/user_clk_BUFG_inst/O
-                         net (fo=4970, routed)        1.150     4.529    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
-    SLICE_X146Y258       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
+                         net (fo=4924, routed)        1.137     4.516    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X133Y287       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X146Y258       FDRE (Prop_fdre_C_Q)         0.206     4.735 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]/Q
-                         net (fo=1, routed)           0.229     4.964    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[2]
-    SLICE_X149Y257       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+    SLICE_X133Y287       FDRE (Prop_fdre_C_Q)         0.162     4.678 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.367     5.046    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[3]
+    SLICE_X142Y287       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_mmcm rise edge)
@@ -716,15 +716,15 @@ Reference path:
                                                       0.077     2.116 r  skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.463     3.579    skarab_infr/sys_clk_mmcm
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.672 r  skarab_infr/sys_clk_BUFG_inst/O
-                         net (fo=2840, routed)        1.296     4.968    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
-    SLICE_X149Y257       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
-                         clock pessimism             -0.103     4.865    
-    SLICE_X149Y257       FDRE (Hold_fdre_C_D)         0.101     4.966    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
+                         net (fo=2840, routed)        1.288     4.960    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X142Y287       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism             -0.103     4.857    
+    SLICE_X142Y287       FDRE (Hold_fdre_C_D)         0.088     4.945    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_ctrl_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
   -------------------------------------------------------------------
-                         data arrival                           4.964    
-                         clock arrival                          4.966    
+                         data arrival                           5.046    
+                         clock arrival                          4.945    
   -------------------------------------------------------------------
-                         relative delay                        -0.002    
+                         relative delay                         0.100    
 
 
 
@@ -735,27 +735,27 @@ Endpoints: 10
 
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
-sys_clk_mmcm          user_clk_mmcm         ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
-                                                                            ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
-                                                                                                            Slow         1.478      2.857
+sys_clk_mmcm          user_clk_mmcm         ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
+                                                                            ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                                                            Slow         1.541      2.794
 
 
-Slack (MET) :             2.857ns  (requirement - actual skew)
-  Endpoint Source:        ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]/C
+Slack (MET) :             2.794ns  (requirement - actual skew)
+  Endpoint Source:        ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_mmcm)
-  Endpoint Destination:   ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
+  Endpoint Destination:   ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
                             (rising edge-triggered cell FDRE clocked by user_clk_mmcm)
-  Reference Source:       ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+  Reference Source:       ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_mmcm)
-  Reference Destination:  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+  Reference Destination:  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
                             (rising edge-triggered cell FDRE clocked by user_clk_mmcm)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            4.335ns
-  Endpoint Relative Delay:    0.955ns
-  Reference Relative Delay:  -0.137ns
-  Relative CRPR:              0.661ns
+  Endpoint Relative Delay:    1.055ns
+  Reference Relative Delay:  -0.078ns
+  Relative CRPR:              0.638ns
   Uncertainty:                1.046ns
-  Actual Bus Skew:            1.478ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            1.541ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -770,12 +770,12 @@ Endpoint path:
                                                       0.077     2.116 r  skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.463     3.579    skarab_infr/sys_clk_mmcm
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.672 r  skarab_infr/sys_clk_BUFG_inst/O
-                         net (fo=2840, routed)        1.212     4.884    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
-    SLICE_X117Y269       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]/C
+                         net (fo=2840, routed)        1.228     4.900    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X99Y288        FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X117Y269       FDRE (Prop_fdre_C_Q)         0.223     5.107 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]/Q
-                         net (fo=1, routed)           0.391     5.498    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[8]
-    SLICE_X117Y270       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
+    SLICE_X99Y288        FDRE (Prop_fdre_C_Q)         0.204     5.104 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]/Q
+                         net (fo=1, routed)           0.459     5.563    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[5]
+    SLICE_X98Y288        FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock user_clk_mmcm rise edge)
@@ -788,15 +788,15 @@ Endpoint path:
                                                       0.073     1.946 r  skarab_infr/USER_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.350     3.296    skarab_infr/user_clk_mmcm
     BUFGCTRL_X0Y19       BUFG (Prop_bufg_I_O)         0.083     3.379 r  skarab_infr/user_clk_BUFG_inst/O
-                         net (fo=4970, routed)        1.071     4.450    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
-    SLICE_X117Y270       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/C
-                         clock pessimism              0.103     4.553    
-    SLICE_X117Y270       FDRE (Setup_fdre_C_D)       -0.010     4.543    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]
+                         net (fo=4924, routed)        1.086     4.465    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X98Y288        FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/C
+                         clock pessimism              0.103     4.568    
+    SLICE_X98Y288        FDRE (Setup_fdre_C_D)       -0.060     4.508    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]
   -------------------------------------------------------------------
-                         data arrival                           5.498    
-                         clock arrival                          4.543    
+                         data arrival                           5.563    
+                         clock arrival                          4.508    
   -------------------------------------------------------------------
-                         relative delay                         0.955    
+                         relative delay                         1.055    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -811,12 +811,12 @@ Reference path:
                                                       0.073     1.914 r  skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.350     3.264    skarab_infr/sys_clk_mmcm
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     3.347 r  skarab_infr/sys_clk_BUFG_inst/O
-                         net (fo=2840, routed)        1.077     4.424    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
-    SLICE_X117Y265       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+                         net (fo=2840, routed)        1.096     4.443    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X97Y287        FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X117Y265       FDRE (Prop_fdre_C_Q)         0.178     4.602 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]/Q
-                         net (fo=1, routed)           0.238     4.840    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[2]
-    SLICE_X118Y265       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+    SLICE_X97Y287        FDRE (Prop_fdre_C_Q)         0.162     4.605 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.248     4.853    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[3]
+    SLICE_X96Y287        FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock user_clk_mmcm rise edge)
@@ -829,15 +829,15 @@ Reference path:
                                                       0.077     2.156 r  skarab_infr/USER_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.463     3.619    skarab_infr/user_clk_mmcm
     BUFGCTRL_X0Y19       BUFG (Prop_bufg_I_O)         0.093     3.712 r  skarab_infr/user_clk_BUFG_inst/O
-                         net (fo=4970, routed)        1.215     4.927    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
-    SLICE_X118Y265       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
-                         clock pessimism             -0.103     4.824    
-    SLICE_X118Y265       FDRE (Hold_fdre_C_D)         0.153     4.977    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
+                         net (fo=4924, routed)        1.235     4.947    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X96Y287        FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism             -0.103     4.844    
+    SLICE_X96Y287        FDRE (Hold_fdre_C_D)         0.087     4.931    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
   -------------------------------------------------------------------
-                         data arrival                           4.840    
-                         clock arrival                          4.977    
+                         data arrival                           4.853    
+                         clock arrival                          4.931    
   -------------------------------------------------------------------
-                         relative delay                        -0.137    
+                         relative delay                        -0.078    
 
 
 
@@ -848,27 +848,27 @@ Endpoints: 10
 
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
-user_clk_mmcm         sys_clk_mmcm          ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
-                                                                            ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
-                                                                                                            Slow         1.539      2.796
+user_clk_mmcm         sys_clk_mmcm          ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                            ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
+                                                                                                            Slow         1.623      2.712
 
 
-Slack (MET) :             2.796ns  (requirement - actual skew)
-  Endpoint Source:        ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]/C
+Slack (MET) :             2.712ns  (requirement - actual skew)
+  Endpoint Source:        ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
                             (rising edge-triggered cell FDRE clocked by user_clk_mmcm)
-  Endpoint Destination:   ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
+  Endpoint Destination:   ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_mmcm)
-  Reference Source:       ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+  Reference Source:       ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]/C
                             (rising edge-triggered cell FDRE clocked by user_clk_mmcm)
-  Reference Destination:  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+  Reference Destination:  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_mmcm)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            4.335ns
-  Endpoint Relative Delay:    1.145ns
-  Reference Relative Delay:  -0.031ns
-  Relative CRPR:              0.684ns
+  Endpoint Relative Delay:    1.249ns
+  Reference Relative Delay:   0.011ns
+  Relative CRPR:              0.661ns
   Uncertainty:                1.046ns
-  Actual Bus Skew:            1.539ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            1.623ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -883,12 +883,12 @@ Endpoint path:
                                                       0.077     2.156 r  skarab_infr/USER_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.463     3.619    skarab_infr/user_clk_mmcm
     BUFGCTRL_X0Y19       BUFG (Prop_bufg_I_O)         0.093     3.712 r  skarab_infr/user_clk_BUFG_inst/O
-                         net (fo=4970, routed)        1.213     4.925    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
-    SLICE_X114Y266       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]/C
+                         net (fo=4924, routed)        1.246     4.958    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X77Y288        FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X114Y266       FDRE (Prop_fdre_C_Q)         0.236     5.161 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]/Q
-                         net (fo=1, routed)           0.418     5.579    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[9]
-    SLICE_X115Y266       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
+    SLICE_X77Y288        FDRE (Prop_fdre_C_Q)         0.204     5.162 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.566     5.728    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[3]
+    SLICE_X100Y288       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_mmcm rise edge)
@@ -901,15 +901,15 @@ Endpoint path:
                                                       0.073     1.914 r  skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.350     3.264    skarab_infr/sys_clk_mmcm
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     3.347 r  skarab_infr/sys_clk_BUFG_inst/O
-                         net (fo=2840, routed)        1.076     4.423    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
-    SLICE_X115Y266       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/C
-                         clock pessimism              0.103     4.526    
-    SLICE_X115Y266       FDRE (Setup_fdre_C_D)       -0.092     4.434    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]
+                         net (fo=2840, routed)        1.088     4.435    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X100Y288       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.103     4.538    
+    SLICE_X100Y288       FDRE (Setup_fdre_C_D)       -0.059     4.479    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
   -------------------------------------------------------------------
-                         data arrival                           5.579    
-                         clock arrival                          4.434    
+                         data arrival                           5.728    
+                         clock arrival                          4.479    
   -------------------------------------------------------------------
-                         relative delay                         1.145    
+                         relative delay                         1.249    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -924,12 +924,12 @@ Reference path:
                                                       0.073     1.946 r  skarab_infr/USER_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.350     3.296    skarab_infr/user_clk_mmcm
     BUFGCTRL_X0Y19       BUFG (Prop_bufg_I_O)         0.083     3.379 r  skarab_infr/user_clk_BUFG_inst/O
-                         net (fo=4970, routed)        1.076     4.455    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
-    SLICE_X115Y264       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+                         net (fo=4924, routed)        1.106     4.485    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X77Y289        FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X115Y264       FDRE (Prop_fdre_C_Q)         0.162     4.617 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
-                         net (fo=1, routed)           0.227     4.844    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[3]
-    SLICE_X116Y264       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+    SLICE_X77Y289        FDRE (Prop_fdre_C_Q)         0.162     4.647 r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]/Q
+                         net (fo=1, routed)           0.260     4.908    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[7]
+    SLICE_X96Y289        FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_mmcm rise edge)
@@ -942,15 +942,15 @@ Reference path:
                                                       0.077     2.116 r  skarab_infr/SYS_CLK_MMCM_inst/CLKOUT0
                          net (fo=1, routed)           1.463     3.579    skarab_infr/sys_clk_mmcm
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.672 r  skarab_infr/sys_clk_BUFG_inst/O
-                         net (fo=2840, routed)        1.217     4.889    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
-    SLICE_X116Y264       FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
-                         clock pessimism             -0.103     4.786    
-    SLICE_X116Y264       FDRE (Hold_fdre_C_D)         0.089     4.875    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+                         net (fo=2840, routed)        1.238     4.910    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X96Y289        FDRE                                         r  ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/C
+                         clock pessimism             -0.103     4.807    
+    SLICE_X96Y289        FDRE (Hold_fdre_C_D)         0.089     4.896    ethernet_one_gbe_skarab_loopback1_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]
   -------------------------------------------------------------------
-                         data arrival                           4.844    
-                         clock arrival                          4.875    
+                         data arrival                           4.908    
+                         clock arrival                          4.896    
   -------------------------------------------------------------------
-                         relative delay                        -0.031    
+                         relative delay                         0.011    
 
 
 

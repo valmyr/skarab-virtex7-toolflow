@@ -1,6 +1,6 @@
   sysgen_dut : entity xil_defaultlib.ethernet_one_gbe_skarab_loopback1 
   port map (
-    ethernet_one_gbe_skarab_loopback_addr_soft_control_user_data_out => ethernet_one_gbe_skarab_loopback_addr_soft_control_user_data_out,
+    ethernet_one_gbe_skarab_loopback1_addr_soft_control_user_data_out => ethernet_one_gbe_skarab_loopback1_addr_soft_control_user_data_out,
     ethernet_one_gbe_skarab_loopback1_d3_ss_bram_data_out => ethernet_one_gbe_skarab_loopback1_d3_ss_bram_data_out,
     skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out => skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out,
     ethernet_one_gbe_skarab_loopback1_d4_ss_bram_data_out => ethernet_one_gbe_skarab_loopback1_d4_ss_bram_data_out,

@@ -549,7 +549,7 @@ entity wrapper_buffer_in_ethernet_verilog_wrapper is
     in_valid_rx : in std_logic;
     in_data_rx_ethernet : in std_logic_vector(7 downto 0);
     package_size : in std_logic_vector(9 downto 0);
-    addr_data : in std_logic_vector(10 downto 0);
+    addr_data : in std_logic_vector(7 downto 0);
     ena_mux : in std_logic_vector(1 downto 0);
     data_out_buffer : out std_logic_vector(7 downto 0);
     tx_val : out std_logic_vector(0 downto 0);
@@ -565,7 +565,7 @@ architecture structural of wrapper_buffer_in_ethernet_verilog_wrapper is
   signal in_valid_rx_net : std_logic;
   signal in_data_rx_ethernet_net : std_logic_vector(7 downto 0);
   signal package_size_net : std_logic_vector(9 downto 0);
-  signal addr_data_net : std_logic_vector(10 downto 0);
+  signal addr_data_net : std_logic_vector(7 downto 0);
   signal ena_mux_net : std_logic_vector(1 downto 0);
   signal data_out_buffer_net : std_logic_vector(7 downto 0);
   signal tx_val_net : std_logic_vector(0 downto 0);
@@ -580,7 +580,7 @@ architecture structural of wrapper_buffer_in_ethernet_verilog_wrapper is
       in_valid_rx : in std_logic;
       in_data_rx_ethernet : in std_logic_vector(7 downto 0);
       package_size : in std_logic_vector(9 downto 0);
-      addr_data : in std_logic_vector(10 downto 0);
+      addr_data : in std_logic_vector(7 downto 0);
       ena_mux : in std_logic_vector(1 downto 0);
       data_out_buffer : out std_logic_vector(7 downto 0);
       tx_val : out std_logic_vector(0 downto 0);
@@ -622,49 +622,6 @@ begin
       ce => ce_net
     );
 end structural;
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-entity sysgen_inverter_2f12827aa4 is
-  port (
-    ip : in std_logic_vector((1 - 1) downto 0);
-    op : out std_logic_vector((1 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_inverter_2f12827aa4;
-architecture behavior of sysgen_inverter_2f12827aa4
-is
-  signal ip_1_26: boolean;
-  type array_type_op_mem_22_20 is array (0 to (1 - 1)) of boolean;
-  signal op_mem_22_20: array_type_op_mem_22_20 := (
-    0 => false);
-  signal op_mem_22_20_front_din: boolean;
-  signal op_mem_22_20_back: boolean;
-  signal op_mem_22_20_push_front_pop_back_en: std_logic;
-  signal internal_ip_12_1_bitnot: boolean;
-begin
-  ip_1_26 <= ((ip) = "1");
-  op_mem_22_20_back <= op_mem_22_20(0);
-  proc_op_mem_22_20: process (clk)
-  is
-    variable i: integer;
-  begin
-    if (clk'event and (clk = '1')) then
-      if ((ce = '1') and (op_mem_22_20_push_front_pop_back_en = '1')) then
-        op_mem_22_20(0) <= op_mem_22_20_front_din;
-      end if;
-    end if;
-  end process proc_op_mem_22_20;
-  internal_ip_12_1_bitnot <= ((not boolean_to_vector(ip_1_26)) = "1");
-  op_mem_22_20_front_din <= internal_ip_12_1_bitnot;
-  op_mem_22_20_push_front_pop_back_en <= '1';
-  op <= boolean_to_vector(op_mem_22_20_back);
-end behavior;
-
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
 
@@ -984,17 +941,17 @@ use xil_defaultlib.conv_pkg.all;
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
-entity sysgen_reinterpret_4fcd5fb4ab is
+entity sysgen_reinterpret_301c012949 is
   port (
-    input_port : in std_logic_vector((32 - 1) downto 0);
-    output_port : out std_logic_vector((32 - 1) downto 0);
+    input_port : in std_logic_vector((8 - 1) downto 0);
+    output_port : out std_logic_vector((8 - 1) downto 0);
     clk : in std_logic;
     ce : in std_logic;
     clr : in std_logic);
-end sysgen_reinterpret_4fcd5fb4ab;
-architecture behavior of sysgen_reinterpret_4fcd5fb4ab
+end sysgen_reinterpret_301c012949;
+architecture behavior of sysgen_reinterpret_301c012949
 is
-  signal input_port_1_40: unsigned((32 - 1) downto 0);
+  signal input_port_1_40: unsigned((8 - 1) downto 0);
 begin
   input_port_1_40 <= std_logic_vector_to_unsigned(input_port);
   output_port <= unsigned_to_std_logic_vector(input_port_1_40);
@@ -1043,6 +1000,28 @@ begin
   dout <= din;
 end passthrough_arch;
 
+
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+entity sysgen_reinterpret_4fcd5fb4ab is
+  port (
+    input_port : in std_logic_vector((32 - 1) downto 0);
+    output_port : out std_logic_vector((32 - 1) downto 0);
+    clk : in std_logic;
+    ce : in std_logic;
+    clr : in std_logic);
+end sysgen_reinterpret_4fcd5fb4ab;
+architecture behavior of sysgen_reinterpret_4fcd5fb4ab
+is
+  signal input_port_1_40: unsigned((32 - 1) downto 0);
+begin
+  input_port_1_40 <= std_logic_vector_to_unsigned(input_port);
+  output_port <= unsigned_to_std_logic_vector(input_port_1_40);
+end behavior;
 
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
@@ -1372,6 +1351,49 @@ begin
   in2_1_31 <= std_logic_vector_to_unsigned(in2);
   y_2_1_concat <= std_logic_vector_to_unsigned(unsigned_to_std_logic_vector(in0_1_23) & boolean_to_vector(in1_1_27) & unsigned_to_std_logic_vector(in2_1_31));
   y <= unsigned_to_std_logic_vector(y_2_1_concat);
+end behavior;
+
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+entity sysgen_inverter_2f12827aa4 is
+  port (
+    ip : in std_logic_vector((1 - 1) downto 0);
+    op : out std_logic_vector((1 - 1) downto 0);
+    clk : in std_logic;
+    ce : in std_logic;
+    clr : in std_logic);
+end sysgen_inverter_2f12827aa4;
+architecture behavior of sysgen_inverter_2f12827aa4
+is
+  signal ip_1_26: boolean;
+  type array_type_op_mem_22_20 is array (0 to (1 - 1)) of boolean;
+  signal op_mem_22_20: array_type_op_mem_22_20 := (
+    0 => false);
+  signal op_mem_22_20_front_din: boolean;
+  signal op_mem_22_20_back: boolean;
+  signal op_mem_22_20_push_front_pop_back_en: std_logic;
+  signal internal_ip_12_1_bitnot: boolean;
+begin
+  ip_1_26 <= ((ip) = "1");
+  op_mem_22_20_back <= op_mem_22_20(0);
+  proc_op_mem_22_20: process (clk)
+  is
+    variable i: integer;
+  begin
+    if (clk'event and (clk = '1')) then
+      if ((ce = '1') and (op_mem_22_20_push_front_pop_back_en = '1')) then
+        op_mem_22_20(0) <= op_mem_22_20_front_din;
+      end if;
+    end if;
+  end process proc_op_mem_22_20;
+  internal_ip_12_1_bitnot <= ((not boolean_to_vector(ip_1_26)) = "1");
+  op_mem_22_20_front_din <= internal_ip_12_1_bitnot;
+  op_mem_22_20_push_front_pop_back_en <= '1';
+  op <= boolean_to_vector(op_mem_22_20_back);
 end behavior;
 
 library xil_defaultlib;
@@ -2370,28 +2392,6 @@ is
 begin
   d_1_22 <= d;
   q <= d_1_22;
-end behavior;
-
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-entity sysgen_reinterpret_301c012949 is
-  port (
-    input_port : in std_logic_vector((8 - 1) downto 0);
-    output_port : out std_logic_vector((8 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_reinterpret_301c012949;
-architecture behavior of sysgen_reinterpret_301c012949
-is
-  signal input_port_1_40: unsigned((8 - 1) downto 0);
-begin
-  input_port_1_40 <= std_logic_vector_to_unsigned(input_port);
-  output_port <= unsigned_to_std_logic_vector(input_port_1_40);
 end behavior;
 
 library xil_defaultlib;

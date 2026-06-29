@@ -1,0 +1,40 @@
+--------------------------------- Version Log ----------------------------------
+Version                                 Path
+System Generator 2019.1                 /tools/Xilinx/Vivado/2019.1
+Matlab 9.4.0.813654 (R2018a)            /usr/local/MATLAB/R2018a
+Vivado 2019.1                           /tools/Xilinx/Vivado/2019.1
+--------------------------------------------------------------------------------
+Summary of Errors:
+Error 0001: ERROR: [USF-XSim-62] 'compile' step failed with error(s)....
+     Block: 'ethernet_one_gbe_skarab_loopback1_axi/ System Generator'
+Error 0002: ERROR: [USF-XSim-62] 'compile' step failed with error(s)....
+     Block: 'ethernet_one_gbe_skarab_loopback1_axi/clk_mhz/skarab_tx_1gbe_tx_rx_valmir_clk_mhz_user_data_in'
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'ethernet_one_gbe_skarab_loopback1_axi/ System Generator'
+
+Details:
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please
+check the Tcl console output or
+'/tmp/xlsimLYRMLs/hdl_netlist/xelab.sim/sim_1/behav/xsim/xvlog.log'
+file for more information.
+Please refer to '/tmp/xlsimLYRMLs/vivado.log' for more details.
+
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'ethernet_one_gbe_skarab_loopback1_axi/clk_mhz/skarab_tx_1gbe_tx_rx_valmir_clk_mhz_user_data_in'
+
+Details:
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please
+check the Tcl console output or
+'/tmp/xlsimLYRMLs/hdl_netlist/xelab.sim/sim_1/behav/xsim/xvlog.log'
+file for more information.
+Please refer to '/tmp/xlsimLYRMLs/vivado.log' for more details.
+
+--------------------------------------------------------------------------------

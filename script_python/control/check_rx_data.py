@@ -203,17 +203,9 @@ fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_s
 fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-20_1759.fpg'
 
 fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-20_2004.fpg'
-
-
-
-
 fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-20_2031.fpg'
-
 fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-20_2046.fpg'
-
-
 fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-20_2100.fpg'
-
 fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-20_2115.fpg'
 
 
@@ -238,7 +230,7 @@ def control_fan(pwm=30):
         #os.system("sleep 1")
         #print("fan ",{i+1}," = ",{pwm},"%%")
 
-control_fan(pwm=20)
+control_fan(pwm=1)
 
 fpga.upload_to_ram_and_program(fpg)
 

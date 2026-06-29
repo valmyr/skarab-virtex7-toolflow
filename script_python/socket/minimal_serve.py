@@ -6,11 +6,13 @@ import socket
 from matplotlib import pyplot as plt
 colab = False
 from matplotlib import pyplot as plt
+import os
 from random import randint
 import numpy as np
 if(colab):
     from IPython import display
 import time
+import struct
 
 ###########--Plot em tempo Real----###############
 ##Captura do evento de fechar a janela
@@ -35,7 +37,7 @@ rodando = True
 
 
 #####################################################
-plt.ion()
+
 IP = "10.42.0.31"#0a2a001f; ip_const_10_42_0_31
 PORT = 7777
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -49,52 +51,19 @@ j=0
 fs=1000
 t=np.arange(0,window,1)
 t_step = 0
+j=0
 y=np.zeros(N,dtype=np.int8)
 while(True):
-    data, addr = sock.recvfrom(2048)
-
-#    print(f"Recebido de {addr}")
-#    print(f"Tamanho payload: {len(data)} bytes")
-
-    # Mostra payload bruto hexadecimal
-#    print(data.hex())
-
-    # Interpretando como palavras de 32 bits
-
-    bytesize = 8
-    kk=0
-    incre =0
-    for i in range(0, len(data)-1, bytesize):
-        word = int.from_bytes(data[i:i+bytesize], byteorder='big')
-        y[kk] =int(word)
-        print(f"Word[{i//bytesize}] = {word}")
-        data_.append(word)
-        kk+=1
-    while(incre+window<=N):
+        plt.ion()
         ax.cla()
-        data_plot = y[incre:window+incre]
-        time_plot = t+t_step*np.ones(window)
-        ax.plot(time_plot,data_plot)
-        ax_set = ax.set_ylim(-64,64)
-        incre+=step
-        #plt.pause(1 / fs)
-        plt.ioff()
-        if(incre+window>=N):
-            j+=1
-            incre =0
-            kk=0
-            data, addr = sock.recvfrom(2048)
+        data, addr = sock.recvfrom((256)*8)  # Buffer de 2048 bytes
+        os.system('clear')
+        array_d = struct.unpack(f'>{256}Q',data)
+        ax.plot(array_d[4:252],color='red')
+        ax_set = ax.set_ylim(0,256)
+        for i in range(0,256):
+            print(f"\033[91m FPGA \033[00m -> \033[92m PC \033[00m:Word[{i}]={array_d[i]}")
 
-            for i in range(0, len(data)-1, bytesize):
-                word = int.from_bytes(data[i:i+bytesize], byteorder='big')
-                y[kk] =int(word)
-                print(f"Word[{i//bytesize}] = {y[kk]}")
-                data_.append(word)
-                kk+=1
-
-            print("FIM:",j)
-        t_step+=window
-    
-    k+=1
-    #if(k>=amostras):break
-
+        print(j,"============================Recebido=====================",j)
+        plt.pause(1 / fs)
+        j+=1

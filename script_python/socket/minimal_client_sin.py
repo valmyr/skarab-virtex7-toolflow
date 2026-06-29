@@ -8,36 +8,41 @@ SERVER_PORT = 65535
 MESSAGE = bytes([0x01] * 32)
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-fs=10e+3
-f=78
+
 
 
 N= 256
 
-t = np.arange(0,N,1)
-y = np.array(2**5*np.sin(2*np.pi*(f/fs)*t)+2**5,dtype=np.int8).tolist()
+t = np.arange(0,N-8,1)
+
 #74 72 61 6E
 
 #0x72,0x65,0x63,0x65 rece
-#72_65_63_65 rece
-#0x74,0x72,0x61,0x6E tran
-#0x74_72_61_6E tran
-frame_rx = np.array([0x72,0x65,0x63,0x65],dtype=np.int64)
-frame_tx = np.array([0x74,0x72,0x61,0x6E],dtype=np.int64)
+#0x72,0x65,0x63,0x65 tran
+frame_rx = np.array(([0x72,0x65,0x63,0x65]),dtype=np.int64)
+
+frame_tx = np.array(([0x74,0x72,0x61,0x6E]),dtype=np.int64)
+
+frame_tx = np.array(([0x65,0x63,0x65,0x72]),dtype=np.int64)
+frame_rx = np.array(([0x6E,0x61,0x72,0x74]),dtype=np.int64)
 
 
-f1=78
+
+f1=4000
 f2=1000
 f3=700
 fs=10e+4
-t = np.arange(0,N,1)
+t = np.arange(0,N-8,1)
 #y1 = np.array(2**4*np.sin(2*np.pi*(f1/fs)*t)+2**3,dtype=np.int8)
 #y2 = np.array(2**4*np.sin(2*np.pi*(f2/fs)*t)+2**3,dtype=np.int8)
 #y3 = np.array(2**4*np.sin(2*np.pi*(f3/fs)*t)+2**3,dtype=np.int8)
 #data= ((y1+y2+y3)//3).tolist()
 #data =np.arange(start=0,stop=N,dtype=np.int64)
 
-data1=np.arange(start=0,stop=N-8,dtype=np.int64)
+data1=np.arange(start=0,stop=N-8,dtype=np.int64)+   3
+#data1=np.array(2**4*np.sin(2*np.pi*(f1/fs)*t)+2**4,dtype=np.int64)
+print(data1)
+print(len(data1))
 #data1=np.ones(N-8,dtype=np.int64)*35
 data2 =np.concatenate((frame_rx,data1,frame_tx))
 
@@ -49,14 +54,16 @@ k=0
 try:
     while(True):
 
+    
         data_pack = struct.pack(f'>{len(data)}Q', *data)
         sock.sendto(data_pack, (SERVER_IP, SERVER_PORT))
+        #data_pack = struct.pack(f'>{len(data)}Q', *data)
+        #sock.sendto(data_pack, (SERVER_IP, SERVER_PORT))
         #print(data_pack)
         for i in range(0,N):
             print(f"word[{i}]={data[i]}")
         print("============================Enviado=====================",k)
-        break
-        #if(k==200):break
+        if(k==200):break
 except KeyboardInterrupt:
     print("Finalizado pelo usuário")
 

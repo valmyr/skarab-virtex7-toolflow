@@ -206,12 +206,12 @@ fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_s
 fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-20_2031.fpg'
 fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-20_2046.fpg'
 fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-20_2100.fpg'
-fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-20_2115.fpg'
+#fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback1/outputs/ethernet_one_gbe_skarab_loopback1_2026-06-20_2115.fpg'
+#fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-07-22_1435.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-07-22_1642.fpg'
 
 
-
-
-
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-07-22_1642.fpg'
 
 
 
@@ -245,7 +245,7 @@ fpga.registers.tx_control.write(pkt_rst="pulse")
 #while(True):
 #    print(fpga.registers.data_rx_valmir.read_uint())
 #    time.sleep(1)
-fpga.write_int('mux_control',1)
+#fpga.write_int('mux_control',1)
 
 for i in range(256):
       fpga.write_int('addr_soft_control',i)

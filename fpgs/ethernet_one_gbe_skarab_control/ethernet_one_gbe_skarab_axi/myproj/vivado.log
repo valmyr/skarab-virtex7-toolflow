@@ -1,0 +1,83 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Jul 22 16:56:21 2026
+# Process ID: 1099634
+# Current directory: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj
+# Command line: vivado myproj.xpr
+# Log file: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/vivado.log
+# Journal file: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project myproj.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/cont_microblaze/ipshared/peralex.com'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'xadc_measurement' generated file not found '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/xadc_measurement/design.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xadc_measurement' generated file not found '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/xadc_measurement/xadc_measurement/simulation/timing/design.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xadc_measurement' generated file not found '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/xadc_measurement/doc/xadc_wiz_v3_3_changelog.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-2162] IP 'packet_byte_count_fifo' is locked:
+* IP 'packet_byte_count_fifo' is configured as a user-managed IP. In this mode it is the user's responsibility to manage all IP files. * IP definition 'FIFO Generator (13.1)' for IP 'packet_byte_count_fifo' (customized with software release 2016.2) has a newer minor version in the IP Catalog. * IP definition 'FIFO Generator (13.1)' for IP 'packet_byte_count_fifo' (customized with software release 2016.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'gmii_to_xaui_fifo' is locked:
+* IP 'gmii_to_xaui_fifo' is configured as a user-managed IP. In this mode it is the user's responsibility to manage all IP files. * IP definition 'FIFO Generator (13.1)' for IP 'gmii_to_xaui_fifo' (customized with software release 2016.2) has a newer minor version in the IP Catalog. * IP definition 'FIFO Generator (13.1)' for IP 'gmii_to_xaui_fifo' (customized with software release 2016.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'xaui_to_gmii_fifo' is locked:
+* IP 'xaui_to_gmii_fifo' is configured as a user-managed IP. In this mode it is the user's responsibility to manage all IP files. * IP definition 'FIFO Generator (13.1)' for IP 'xaui_to_gmii_fifo' (customized with software release 2016.2) has a newer minor version in the IP Catalog. * IP definition 'FIFO Generator (13.1)' for IP 'xaui_to_gmii_fifo' (customized with software release 2016.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-3664] IP 'rx_packet_fifo_bram' generated file not found '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/rx_packet_fifo_bram/simulation/fifo_generator_vlog_beh.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rx_packet_fifo_bram' generated file not found '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/rx_packet_fifo_bram/sim/rx_packet_fifo_bram.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rx_packet_fifo_bram' generated file not found '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/rx_packet_fifo_bram/doc/fifo_generator_v13_2_changelog.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rx_packet_ctrl_fifo' generated file not found '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/rx_packet_ctrl_fifo/simulation/fifo_generator_vlog_beh.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rx_packet_ctrl_fifo' generated file not found '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/rx_packet_ctrl_fifo/sim/rx_packet_ctrl_fifo.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rx_packet_ctrl_fifo' generated file not found '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/rx_packet_ctrl_fifo/doc/fifo_generator_v13_2_changelog.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'tx_packet_ctrl_fifo' generated file not found '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/tx_packet_ctrl_fifo/simulation/fifo_generator_vlog_beh.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'tx_packet_ctrl_fifo' generated file not found '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/tx_packet_ctrl_fifo/sim/tx_packet_ctrl_fifo.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'tx_packet_ctrl_fifo' generated file not found '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/tx_packet_ctrl_fifo/doc/fifo_generator_v13_2_changelog.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'tx_packet_fifo' generated file not found '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/tx_packet_fifo/simulation/fifo_generator_vlog_beh.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'tx_packet_fifo' generated file not found '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/tx_packet_fifo/sim/tx_packet_fifo.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'tx_packet_fifo' generated file not found '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/tx_packet_fifo/doc/fifo_generator_v13_2_changelog.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'cross_clock_fifo_36x16' generated file not found '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/cross_clock_fifo_36x16/simulation/fifo_generator_vlog_beh.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'cross_clock_fifo_36x16' generated file not found '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/cross_clock_fifo_36x16/sim/cross_clock_fifo_36x16.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'cross_clock_fifo_36x16' generated file not found '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/cross_clock_fifo_36x16/doc/fifo_generator_v13_2_changelog.txt'. Please regenerate to continue.
+update_compile_order -fileset sources_1
+open_bd_design {/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/bd/cont_microblaze/cont_microblaze.bd}
+Adding component instance block -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10
+Adding component instance block -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10
+Adding component instance block -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
+Adding component instance block -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - lmb_bram
+Adding component instance block -- peralex.com:user:axi_slave_wishbone_classic_master:1.0 - axi_slave_wishbone_classic_master_0
+Adding component instance block -- xilinx.com:ip:axi_timebase_wdt:3.0 - axi_timebase_wdt_0
+Adding component instance block -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding component instance block -- xilinx.com:ip:mdm:3.2 - mdm_1
+Adding component instance block -- xilinx.com:ip:microblaze:11.0 - microblaze_0
+Adding component instance block -- xilinx.com:ip:axi_intc:4.1 - microblaze_0_axi_intc
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - microblaze_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_Clk_100M
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /dcm_locked(rst) and /rst_Clk_100M/dcm_locked(undef)
+Successfully read diagram <cont_microblaze> from BD file </home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/bd/cont_microblaze/cont_microblaze.bd>
+regenerate_bd_layout
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:06:40
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/14587
+current_hw_device [get_hw_devices xczu7_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xczu7_0] 0]
+INFO: [Labtools 27-2302] Device xczu7 (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+current_hw_device [get_hw_devices arm_dap_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices arm_dap_1] 0]
+current_hw_device [get_hw_devices xczu7_0]

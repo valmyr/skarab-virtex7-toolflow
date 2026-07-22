@@ -1,0 +1,64 @@
+--------------------------------- Version Log ----------------------------------
+Version                                 Path
+System Generator 2019.1                 /tools/Xilinx/Vivado/2019.1
+Matlab 9.4.0.813654 (R2018a)            /usr/local/MATLAB/R2018a
+Vivado 2019.1                           /tools/Xilinx/Vivado/2019.1
+--------------------------------------------------------------------------------
+Summary of Errors:
+Error 0001: Input data type for port "debug_ena_mux" must have width=1.
+     Block: 'ethernet_one_gbe_skarab_control_teste/Ethernet_System_Control_One_GBE_Skarab2'
+Error 0002: File, /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow...
+     Block: 'ethernet_one_gbe_skarab_control_teste/Ethernet_System_Control_One_GBE_Skarab2'
+Error 0003: Input data type for port "debug_ena_mux" must have width=1.
+     Block: 'ethernet_one_gbe_skarab_control_teste/Ethernet_System_Control_One_GBE_Skarab2'
+Error 0004: File, /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow...
+     Block: 'ethernet_one_gbe_skarab_control_teste/Ethernet_System_Control_One_GBE_Skarab2'
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'ethernet_one_gbe_skarab_control_teste/Ethernet_System_Control_One_GBE_Skarab2'
+
+Details:
+Input data type for port "debug_ena_mux" must have width=1.
+Error occurred during "Rate and Type Propagation".
+
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'ethernet_one_gbe_skarab_control_teste/Ethernet_System_Control_One_GBE_Skarab2'
+
+Details:
+File,
+/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/gbe_control.v,
+does not exist.
+Error occurred during "Rate and Type Propagation".
+
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'ethernet_one_gbe_skarab_control_teste/Ethernet_System_Control_One_GBE_Skarab2'
+
+Details:
+Input data type for port "debug_ena_mux" must have width=1.
+Error occurred during "Rate and Type Error Checking".
+
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'ethernet_one_gbe_skarab_control_teste/Ethernet_System_Control_One_GBE_Skarab2'
+
+Details:
+File,
+/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/gbe_control.v,
+does not exist.
+Error occurred during "Rate and Type Error Checking".
+
+--------------------------------------------------------------------------------

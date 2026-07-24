@@ -48,7 +48,7 @@ k = 0
 amostras = 10
 N =256
 j=0
-fs=1000
+fs=100000
 t=np.arange(0,window,1)
 t_step = 0
 j=0
@@ -63,7 +63,6 @@ while(True):
         ax_set = ax.set_ylim(0,256)
         for i in range(0,256):
             print(f"\033[91m FPGA \033[00m -> \033[92m PC \033[00m:Word[{i}]={array_d[i]}")
-
         print(j,"============================Recebido=====================",j)
         plt.pause(1 / fs)
         j+=1

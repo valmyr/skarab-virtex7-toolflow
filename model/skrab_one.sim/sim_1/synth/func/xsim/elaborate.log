@@ -1,0 +1,40 @@
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto 85b7068df37b489cb03fef3cca552743 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L secureip --snapshot tb_func_synth xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 'package_size' [/home/valmyrsilva07/skrab_one/skrab_one.srcs/sim_1/new/tb.sv:60]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'addr_data' [/home/valmyrsilva07/skrab_one/skrab_one.srcs/sim_1/new/tb.sv:61]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 'tx_package_len' [/home/valmyrsilva07/skrab_one/skrab_one.srcs/sim_1/new/tb.sv:74]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 'tx_package_len' [/home/valmyrsilva07/skrab_one/skrab_one.srcs/sim_1/new/tb.sv:89]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'tx_en00' [/home/valmyrsilva07/skrab_one/skrab_one.srcs/sim_1/new/tb.sv:90]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.FDCE_default
+Compiling module unisims_ver.CARRY4
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.cmd_sync_detector
+Compiling module xil_defaultlib.cmd_sync_detector_0
+Compiling module unisims_ver.OBUF
+Compiling module unisims_ver.MUXF8
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.FDPE_default
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.buffer_in_ethernet
+Compiling module xil_defaultlib.gbe_control
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_func_synth

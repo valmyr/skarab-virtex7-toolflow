@@ -1,0 +1,38 @@
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/Vivado/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L axis_infrastructure_v1_1_1 -L axis_data_fifo_v2_0_17 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by AMD, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 10 for port 'tx_pkt_len' [/home/valmyrsilva07/skrab_one/skrab_one.srcs/sim_1/new/tb.sv:100]
+WARNING: [VRFC 10-9543] actual bit length 1 differs from formal bit length 8 for port 'tx_data' [/home/valmyrsilva07/skrab_one/skrab_one.srcs/sim_1/new/tb.sv:101]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 8 for port 'debug_addr_data' [/home/valmyrsilva07/skrab_one/skrab_one.srcs/sim_1/new/tb.sv:116]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 10 for port 'tx_package_len' [/home/valmyrsilva07/skrab_one/skrab_one.srcs/sim_1/new/tb.sv:126]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 10 for port 'tx_package_len' [/home/valmyrsilva07/skrab_one/skrab_one.srcs/sim_1/new/tb.sv:141]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 1 for port 'tx_en00' [/home/valmyrsilva07/skrab_one/skrab_one.srcs/sim_1/new/tb.sv:142]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module axis_infrastructure_v1_1_1.axis_infrastructure_v1_1_1_util_...
+Compiling module axis_infrastructure_v1_1_1.axis_infrastructure_v1_1_1_util_...
+Compiling module axis_infrastructure_v1_1_1.axis_infrastructure_v1_1_1_util_...
+Compiling module xpm.xpm_cdc_sync_rst(INIT=0,INIT_SYN...
+Compiling module xpm.xpm_fifo_rst(CDC_DEST_SYNC_FF=3)
+Compiling module xpm.xpm_fifo_reg_bit
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=9...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=8...
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(FIFO_WRITE_DEPTH=2...
+Compiling module xpm.xpm_fifo_axis(FIFO_DEPTH=256,TDA...
+Compiling module axis_data_fifo_v2_0_17.axis_data_fifo_v2_0_17_top(C_AXI...
+Compiling module xil_defaultlib.axis_data_fifo_0
+Compiling module xil_defaultlib.cmd_sync_detector
+Compiling module xil_defaultlib.control_axi_stream_gbe
+Compiling module xil_defaultlib.gbe_control
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav

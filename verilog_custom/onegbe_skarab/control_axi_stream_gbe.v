@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: VIRTUS/UFCG
+// Engineer: Valmir F. Silva 
 // 
 // Create Date: 06/19/2026 11:40:32 PM
 // Design Name: 
@@ -35,15 +35,15 @@ module control_axi_stream_gbe(
     input wire        s_axis_tvalid,
     input wire [7:0]  s_axis_tdata,
     input wire        s_axis_tlast,
-    output reg       s_axis_tready,
+    output reg        s_axis_tready,
     //Interface Master AXI Stream (Saída)
-    output reg       m_axis_tvalid,
-    output reg [7:0] m_axis_tdata, 
-    output reg       m_axis_tlast,
-    input  wire        m_axis_tready,
+    output reg        m_axis_tvalid,
+    output reg [7:0]  m_axis_tdata, 
+    output reg        m_axis_tlast,
+    input  wire       m_axis_tready,
     //Debug Sinais
-    input  wire [7:0]  debug_addr_data,
-    output wire [7:0]  debug_rx_data
+    input  wire [7:0] debug_addr_data,
+    output reg [7:0]  debug_rx_data
 );
 
 
@@ -197,7 +197,7 @@ reg [7:0] addr_data_t;
             end
             TX_DATA:begin
                 tx_ena_out_w = 1;
-                case(addr_data_local < tx_pkt_len)///condição ruim
+                case(addr_data_local < tx_pkt_len)
  
                     1'b1:next_state_tx = TX_DATA;
                     1'b0:next_state_tx = IDLE; 
@@ -248,11 +248,162 @@ cmd_sync_detector cmd_frame_transmission(
         .frame_cmd(32'h74_72_61_6E),//Frame a ser detectado
         .event_cmd_out(start_frame_transmission)
 );
-assign             debug_rx_data = mem[debug_addr_data];
+//always@(*)             debug_rx_data = mem[debug_addr_data];
 
 
-    always@(*) m_axis_tvalid = s_axis_tvalid;
-    always@(*) m_axis_tdata =s_axis_tdata;
-    always@(*) m_axis_tlast = s_axis_tlast;
-    always@(*) s_axis_tready = m_axis_tready;
+//    always@(*) m_axis_tvalid = s_axis_tvalid;
+//    always@(*) m_axis_tdata =s_axis_tdata;
+//    always@(*) m_axis_tlast = s_axis_tlast;
+//    always@(*) s_axis_tready = m_axis_tready;
+
+
+//=====================================AXI Master Stream Interface=========================================
+/*
+//Interface Master AXI Stream (Saída)
+    output wire       m_axis_tvalid,
+    output reg [7:0] m_axis_tdata, 
+    output wire       m_axis_tlast,
+    input  wire      m_axis_tready,
+
+*/
+
+
+
+localparam M_IDLE   = 2'b01;
+localparam M_SEND = 2'b10;
+
+
+reg [1:0] m_axis_state;
+reg [1:0] m_axis_next_state;
+wire handshake_sm_axis;
+reg [9:0]m_addr_data;
+reg [9:0]m_addr_data_next;
+
+
+assign handshake_sm_axis = m_axis_tvalid && m_axis_tready;
+
+always@(posedge clk, negedge a_sync_nrst)begin
+    if(!a_sync_nrst)begin
+        m_axis_state <= M_IDLE;
+        m_addr_data <= 0;
+        m_axis_tdata <=0;
+    end else begin
+        m_axis_state <= m_axis_next_state;
+        m_addr_data  <= m_addr_data_next;
+       // m_axis_tdata <= mem[m_addr_data];
+        m_axis_tdata <= m_addr_data;
+
+    end
+end
+
+always@(*) begin
+    case(m_axis_state)
+        M_IDLE:begin
+            m_axis_tvalid = 1'b1;
+            m_axis_next_state = (handshake_sm_axis) ? M_SEND : M_IDLE;
+            m_axis_tlast = 1'b0;
+            m_addr_data_next = 0;
+        end
+        M_SEND:begin
+            if(m_addr_data == tx_pkt_len)begin
+                m_addr_data_next = 0;
+                m_axis_next_state = M_IDLE;
+                m_axis_tvalid = 1'b0;
+                m_axis_tlast = 1'b1;
+            end else if(handshake_sm_axis) begin
+                m_addr_data_next =  m_addr_data +1;
+                m_axis_next_state = M_SEND;
+                m_axis_tvalid = 1'b1;
+                m_axis_tlast = 1'b0;
+            end else begin
+                m_addr_data_next = m_addr_data;
+                m_axis_next_state = M_SEND;
+                m_axis_tvalid = 1'b1;
+                m_axis_tlast = 1'b0;
+            end
+        end
+        default:begin
+            m_axis_next_state = M_IDLE;
+            m_axis_tvalid = 1'b1;
+            m_axis_tlast = 1'b0;
+            m_addr_data_next = 0;
+        end
+    endcase
+end
+
+
+
+//=====================================AXI Slave Stream Interface=========================================
+/*
+
+    //Interface Slave AXI Stream (Entrada)
+    input wire        s_axis_tvalid,
+    input wire [7:0]  s_axis_tdata,
+    input wire        s_axis_tlast,
+    output reg        s_axis_tready,
+
+
+*/
+
+localparam S_IDLE   = 2'b01;
+localparam S_REC = 2'b10;
+
+reg [7:0] mem_tmp[256-1:0];
+
+reg [1:0] s_axis_state;
+reg [1:0] s_axis_next_state;
+wire handshake_ms_axis;
+reg [9:0]s_addr_data;
+reg [9:0]s_addr_data_next;
+
+assign  handshake_ms_axis = s_axis_tvalid && s_axis_tready;
+always@(posedge clk, negedge a_sync_nrst)begin
+    if(!a_sync_nrst)begin
+        s_axis_state <= S_IDLE;
+        s_addr_data <= 0;
+    end else begin
+        s_axis_state <= s_axis_next_state;
+        s_addr_data  <= s_addr_data_next;
+        if(handshake_ms_axis && s_axis_state == S_REC)begin
+            mem_tmp[s_addr_data] <= s_axis_tdata;
+            //mem_tmp[s_addr_data] <= s_addr_data;
+        end else  begin
+            mem_tmp[s_addr_data] <=mem_tmp[s_addr_data];
+
+        end
+    end
+end
+
+always@(*) begin
+    case(s_axis_state)
+        S_IDLE:begin
+            s_axis_next_state = (handshake_ms_axis) ? S_REC : S_IDLE;
+            s_addr_data_next = 0;
+            s_axis_tready = 1;
+        end
+        S_REC:begin
+            if(s_addr_data == tx_pkt_len)begin
+                s_addr_data_next = s_addr_data;
+                s_axis_next_state = S_IDLE;
+                s_axis_tready = 0;
+            end else if(handshake_ms_axis) begin
+                s_addr_data_next =  s_addr_data +1;
+                s_axis_next_state = S_REC;
+                s_axis_tready = 1;
+            end else begin
+                s_addr_data_next = s_addr_data;
+                s_axis_next_state = S_REC;
+                s_axis_tready = 1;
+            end
+        end
+        default:begin
+            s_axis_next_state = S_IDLE;
+            s_addr_data_next = 0;
+            s_axis_tready = 0;
+        end
+    endcase
+end
+
+always@(*)             debug_rx_data = mem_tmp[debug_addr_data];
+
 endmodule

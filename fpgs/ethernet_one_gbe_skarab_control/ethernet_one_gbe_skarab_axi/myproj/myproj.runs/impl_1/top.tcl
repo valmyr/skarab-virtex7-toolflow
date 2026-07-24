@@ -68,7 +68,7 @@ set rc [catch {
   set_param chipscope.maxJobs 8
   open_checkpoint top_postroute_physopt.dcp
   set_property webtalk.parent_dir /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.cache/wt [current_project]
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   add_files /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/cont_microblaze/EMB123701U1R1.elf
   set_property SCOPED_TO_REF cont_microblaze [get_files -all /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/cont_microblaze/EMB123701U1R1.elf]
   set_property SCOPED_TO_CELLS microblaze_0 [get_files -all /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/cont_microblaze/EMB123701U1R1.elf]

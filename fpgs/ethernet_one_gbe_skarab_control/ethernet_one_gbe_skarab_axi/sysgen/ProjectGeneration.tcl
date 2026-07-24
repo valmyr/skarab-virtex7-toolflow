@@ -42,8 +42,8 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 		{{ethernet_one_gbe_skarab_axi.xdc}}
 	}
 	set SimPeriod 1
-	set SimTime 30000
-	set SimulationTime {130638.34780000 ns}
+	set SimTime 3000
+	set SimulationTime {13247.74780000 ns}
 	set SynthStrategyName {Vivado Synthesis Defaults}
 	set SynthesisTool {Vivado}
 	set TargetDir {/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/sysgen}

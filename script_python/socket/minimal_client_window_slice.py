@@ -63,8 +63,9 @@ try:
             print(f"\033[91m PC \033[00m -> \033[92m FPGA \033[00m:Word[{i}]={data[i]}")
         print("============================Enviado=====================",k)
         k+=1
-        time.sleep(1)
-        if(k >=256-2*(2**4)):k=0
+        #time.sleep(1)
+        if(k >256-2*(2**4)):k=0
+        break
         #if(k==200):break
 except KeyboardInterrupt:
     print("Finalizado pelo usuário")

@@ -37,6 +37,153 @@
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
 
+library xpm;
+use xpm.vcomponents.all;
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity ethernet_one_gbe_skarab_axi_xlaxis is
+   generic(tdata_width: integer 		:= -1;
+           tdata_width_net: integer 	:= -1;
+           tdest_width: integer 		:= -1;
+           tid_width: integer 		:= -1;
+           tuser_width: integer 		:= -1;
+           has_aresetn: integer 		:= -1;
+           mem_type: string               := "auto";
+           depth_bits: integer 		:=-1;
+           depth: integer 		:=2048);
+   port(s_aclk: in std_logic;
+        ce: in std_logic;
+        aresetn: in std_logic;
+        s_axis_tdata: in std_logic_vector(tdata_width - 1 downto 0):= (others => '0');
+        s_axis_tdest: in std_logic_vector(tdest_width - 1 downto 0):= (others => '0');
+        s_axis_tstrb: in std_logic_vector(tdata_width/8 - 1 downto 0):= (others => '0');
+        s_axis_tkeep: in std_logic_vector(tdata_width/8 - 1 downto 0):= (others => '0');
+        s_axis_tlast: in std_logic := '0';
+        s_axis_tid  : in std_logic_vector(tid_width - 1 downto 0):= (others => '0');
+        s_axis_tuser: in std_logic_vector(tuser_width - 1 downto 0):= (others => '0');
+        s_axis_tvalid: in std_logic;
+        s_axis_tready: out std_logic;
+        m_axis_tdata: out std_logic_vector(tdata_width - 1 downto 0);
+        m_axis_tdest: out std_logic_vector(tdest_width - 1 downto 0);
+        m_axis_tstrb: out std_logic_vector(tdata_width/8 - 1 downto 0);
+        m_axis_tkeep: out std_logic_vector(tdata_width/8 - 1 downto 0);
+        m_axis_tlast: out std_logic;
+        m_axis_tid  : out std_logic_vector(tid_width - 1 downto 0);
+        m_axis_tuser: out std_logic_vector(tuser_width - 1 downto 0);
+        m_axis_tready: in std_logic;
+        m_axis_tvalid: out std_logic;
+        almost_empty_axis: out std_logic;
+        almost_full_axis: out std_logic;
+        prog_empty_axis: out std_logic;
+        prog_full_axis: out std_logic;
+        axis_data_count: out std_logic_vector( depth_bits - 1 downto 0)
+);
+
+end ethernet_one_gbe_skarab_axi_xlaxis;
+
+architecture behavior of ethernet_one_gbe_skarab_axi_xlaxis is
+begin
+xpm_fifo_axis_inst : xpm_fifo_axis
+generic map (
+CDC_SYNC_STAGES => 2,
+CLOCKING_MODE => "common_clock",
+ECC_MODE => "no_ecc",
+FIFO_DEPTH => depth,
+FIFO_MEMORY_TYPE => mem_type,
+PACKET_FIFO => "false",
+PROG_EMPTY_THRESH => 10,
+PROG_FULL_THRESH => 10,
+RD_DATA_COUNT_WIDTH => 1,
+RELATED_CLOCKS => 0,
+TDATA_WIDTH => tdata_width,
+TDEST_WIDTH => tdest_width,
+TID_WIDTH => tid_width,
+TUSER_WIDTH => tuser_width,
+USE_ADV_FEATURES => "1707",
+WR_DATA_COUNT_WIDTH => depth_bits
+)
+port map (
+almost_empty_axis => almost_empty_axis,
+almost_full_axis => almost_full_axis,
+dbiterr_axis => open,
+m_axis_tdata => m_axis_tdata,
+m_axis_tdest => m_axis_tdest,
+m_axis_tid => m_axis_tid,
+m_axis_tkeep => m_axis_tkeep,
+m_axis_tlast => m_axis_tlast,
+m_axis_tstrb => m_axis_tstrb,
+m_axis_tuser => m_axis_tuser,
+m_axis_tvalid => m_axis_tvalid,
+prog_empty_axis => open,
+prog_full_axis => open,
+rd_data_count_axis => open,
+s_axis_tready => s_axis_tready,
+sbiterr_axis => open,
+wr_data_count_axis => axis_data_count,
+injectdbiterr_axis => '0',
+injectsbiterr_axis => '0',
+m_aclk => s_aclk,
+m_axis_tready => m_axis_tready,
+s_aclk => s_aclk,
+s_aresetn => aresetn,
+s_axis_tdata => s_axis_tdata,
+s_axis_tdest => s_axis_tdest,
+s_axis_tid => s_axis_tid,
+s_axis_tkeep => s_axis_tkeep,
+s_axis_tlast => s_axis_tlast,
+s_axis_tstrb => s_axis_tstrb,
+s_axis_tuser => s_axis_tuser,
+s_axis_tvalid => s_axis_tvalid
+);
+end behavior;
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+--$Header: /devl/xcs/repo/env/Jobs/sysgen/src/xbs/hdl_pkg/xlpassthrough.vhd,v 1.1 2005/07/11 00:50:55 alexc Exp $
+---------------------------------------------------------------------
+--
+--  Filename      : xlpassthrough.vhd
+--
+--  Created       : 07/09/05
+--
+--  Description   : VHDL description of a passthrough block
+--
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+--
+--  Entity        : xlpassthrough
+--
+--  Architecture  : passthrough_arch
+--
+--  Description   : Top level VHDL description of passthrough block. 
+--
+---------------------------------------------------------------------
+library IEEE;
+use IEEE.std_logic_1164.all;
+use work.conv_pkg.all;
+
+entity xlpassthrough is
+    generic (
+        din_width    : integer := 16;            -- Width of input
+        dout_width   : integer := 16             -- Width of output
+        );
+    port (
+        din : in std_logic_vector (din_width-1 downto 0);
+        dout : out std_logic_vector (dout_width-1 downto 0));
+end xlpassthrough;
+
+architecture passthrough_arch of xlpassthrough is
+begin
+  dout <= din;
+end passthrough_arch;
+
+
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
@@ -206,25 +353,6 @@ architecture behavior of sysgen_constant_3f92cf6704
 is
 begin
   op <= "1";
-end behavior;
-
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-entity sysgen_constant_6f12e03268 is
-  port (
-    op : out std_logic_vector((8 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_constant_6f12e03268;
-architecture behavior of sysgen_constant_6f12e03268
-is
-begin
-  op <= "00000001";
 end behavior;
 
 library xil_defaultlib;
@@ -1005,50 +1133,6 @@ begin
   input_port_1_40 <= std_logic_vector_to_unsigned(input_port);
   output_port <= unsigned_to_std_logic_vector(input_port_1_40);
 end behavior;
-
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
---$Header: /devl/xcs/repo/env/Jobs/sysgen/src/xbs/hdl_pkg/xlpassthrough.vhd,v 1.1 2005/07/11 00:50:55 alexc Exp $
----------------------------------------------------------------------
---
---  Filename      : xlpassthrough.vhd
---
---  Created       : 07/09/05
---
---  Description   : VHDL description of a passthrough block
---
----------------------------------------------------------------------
-
-
----------------------------------------------------------------------
---
---  Entity        : xlpassthrough
---
---  Architecture  : passthrough_arch
---
---  Description   : Top level VHDL description of passthrough block. 
---
----------------------------------------------------------------------
-library IEEE;
-use IEEE.std_logic_1164.all;
-use work.conv_pkg.all;
-
-entity xlpassthrough is
-    generic (
-        din_width    : integer := 16;            -- Width of input
-        dout_width   : integer := 16             -- Width of output
-        );
-    port (
-        din : in std_logic_vector (din_width-1 downto 0);
-        dout : out std_logic_vector (dout_width-1 downto 0));
-end xlpassthrough;
-
-architecture passthrough_arch of xlpassthrough is
-begin
-  dout <= din;
-end passthrough_arch;
-
 
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;

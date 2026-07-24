@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Thu Jul 23 22:38:38 2026
+| Date         : Fri Jul 24 18:14:49 2026
 | Host         : valmyrsilva07-B760M-AORUS-ELITE running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -23,13 +23,13 @@ Table of Contents
           Floorplan: checkpoint_top
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 196
+             Violations found: 195
 +-----------+----------+-------------------------------------------------+------------+
 | Rule      | Severity | Description                                     | Violations |
 +-----------+----------+-------------------------------------------------+------------+
 | LUTAR-1   | Warning  | LUT drives async reset alert                    | 14         |
 | PDRC-190  | Warning  | Suboptimally placed synchronized register chain | 10         |
-| SYNTH-6   | Warning  | Timing of a block RAM might be sub-optimal      | 142        |
+| SYNTH-6   | Warning  | Timing of a block RAM might be sub-optimal      | 141        |
 | TIMING-9  | Warning  | Unknown CDC Logic                               | 1          |
 | TIMING-24 | Warning  | Overridden Max delay datapath only              | 28         |
 | XDCB-5    | Warning  | Runtime inefficient way to find pin objects     | 1          |
@@ -109,52 +109,52 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/gmii_to_sgmii_core/gpcs_pma_inst/MGT_RESET.SYNC_ASYNC_RESET/reset_sync5 in site SLICE_X210Y482 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/gmii_to_sgmii_core/gpcs_pma_inst/MGT_RESET.SYNC_ASYNC_RESET/reset_sync6 is not placed in the same (SLICE) site.
+The FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/gmii_to_sgmii_core/gpcs_pma_inst/MGT_RESET.SYNC_ASYNC_RESET/reset_sync5 in site SLICE_X196Y488 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/gmii_to_sgmii_core/gpcs_pma_inst/MGT_RESET.SYNC_ASYNC_RESET/reset_sync6 is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/sgmii_logic/gen_sync_reset/reset_sync5 in site SLICE_X205Y477 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/sgmii_logic/gen_sync_reset/reset_sync6 is not placed in the same (SLICE) site.
+The FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/sgmii_logic/gen_sync_reset/reset_sync5 in site SLICE_X194Y484 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/sgmii_logic/gen_sync_reset/reset_sync6 is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gtwizard_i/gt0_GTWIZARD_i/gtrxreset_seq_i/sync_gtrxreset_in/reset_sync5 in site SLICE_X216Y486 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gtwizard_i/gt0_GTWIZARD_i/gtrxreset_seq_i/sync_gtrxreset_in/reset_sync6 is not placed in the same (SLICE) site.
+The FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gtwizard_i/gt0_GTWIZARD_i/gtrxreset_seq_i/sync_gtrxreset_in/reset_sync5 in site SLICE_X215Y487 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gtwizard_i/gt0_GTWIZARD_i/gtrxreset_seq_i/sync_gtrxreset_in/reset_sync6 is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gtwizard_i/gt0_GTWIZARD_i/gtrxreset_seq_i/sync_rst_sync/reset_sync5 in site SLICE_X210Y486 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gtwizard_i/gt0_GTWIZARD_i/gtrxreset_seq_i/sync_rst_sync/reset_sync6 is not placed in the same (SLICE) site.
+The FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gtwizard_i/gt0_GTWIZARD_i/gtrxreset_seq_i/sync_rst_sync/reset_sync5 in site SLICE_X216Y481 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gtwizard_i/gt0_GTWIZARD_i/gtrxreset_seq_i/sync_rst_sync/reset_sync6 is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/reclock_encommaalign/reset_sync5 in site SLICE_X204Y497 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/reclock_encommaalign/reset_sync6 is not placed in the same (SLICE) site.
+The FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/reclock_encommaalign/reset_sync5 in site SLICE_X202Y497 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/reclock_encommaalign/reset_sync6 is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/reclock_rxreset/reset_sync5 in site SLICE_X210Y491 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/reclock_rxreset/reset_sync6 is not placed in the same (SLICE) site.
+The FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/reclock_rxreset/reset_sync5 in site SLICE_X208Y493 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/reclock_rxreset/reset_sync6 is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/reclock_rxreset_ind_clk/reset_sync5 in site SLICE_X210Y484 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/reclock_rxreset_ind_clk/reset_sync6 is not placed in the same (SLICE) site.
+The FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/reclock_rxreset_ind_clk/reset_sync5 in site SLICE_X209Y490 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/reclock_rxreset_ind_clk/reset_sync6 is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/reclock_txreset/reset_sync5 in site SLICE_X205Y480 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/reclock_txreset/reset_sync6 is not placed in the same (SLICE) site.
+The FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/reclock_txreset/reset_sync5 in site SLICE_X201Y485 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/reclock_txreset/reset_sync6 is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/gmii_to_sgmii_core/gpcs_pma_inst/MGT_RESET.SRESET_PIPE_reg in site SLICE_X211Y486 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/gmii_to_sgmii_core/gpcs_pma_inst/MGT_RESET.SRESET_reg is not placed in the same (SLICE) site.
+The FDRE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/gmii_to_sgmii_core/gpcs_pma_inst/MGT_RESET.SRESET_PIPE_reg in site SLICE_X198Y492 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/gmii_to_sgmii_core/gpcs_pma_inst/MGT_RESET.SRESET_reg is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gt0_rxresetfsm_i/sync_data_valid/data_sync_reg2 in site SLICE_X212Y478 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gt0_rxresetfsm_i/sync_data_valid/data_sync_reg3 is not placed in the same (SLICE) site.
+The FDRE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gt0_rxresetfsm_i/sync_data_valid/data_sync_reg2 in site SLICE_X205Y485 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell ethernet_one_gbe_skarab_axi_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gt0_rxresetfsm_i/sync_data_valid/data_sync_reg3 is not placed in the same (SLICE) site.
 Related violations: <none>
 
 SYNTH-6#1 Warning
@@ -449,72 +449,72 @@ Related violations: <none>
 
 SYNTH-6#59 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_d4_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_5, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_d4_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_4, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#60 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_d4_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_6, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_d4_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_5, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#61 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_d4_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_7, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_d4_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_6, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#62 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_d4_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_8, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_d4_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_7, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#63 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_d4_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_9, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_d4_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_8, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#64 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_d5_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_d4_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_9, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#65 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_d5_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_d5_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#66 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_d5_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_10, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_d5_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#67 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_d5_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_11, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_d5_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_10, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#68 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_d5_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_12, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_d5_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_11, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#69 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_d5_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_13, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_d5_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_12, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#70 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_d5_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_14, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_d5_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_13, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#71 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_d5_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_15, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_d5_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_14, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#72 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_d5_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_16, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_d5_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_15, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#73 Warning
@@ -679,190 +679,185 @@ Related violations: <none>
 
 SYNTH-6#105 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_17, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_18, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#106 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_18, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_19, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#107 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_19, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_2, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#108 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_2, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_20, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#109 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_20, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_21, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#110 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_21, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_22, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#111 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_22, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_23, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#112 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_23, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_24, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#113 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_24, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_25, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#114 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_25, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_26, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#115 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_26, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_27, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#116 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_27, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_28, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#117 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_28, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_29, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#118 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_29, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_3, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#119 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_3, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_30, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#120 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_30, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_31, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#121 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_31, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_4, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#122 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_4, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_5, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#123 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_5, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_6, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#124 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_6, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_7, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#125 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_7, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_8, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#126 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_8, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_9, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#127 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram/bram_inst/symmetric_ram.bram_inst/RAM_reg_1_9, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#128 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_10, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#129 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_10, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_11, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#130 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_11, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_12, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#131 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_12, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_13, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#132 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_13, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_14, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#133 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_14, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_15, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#134 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_15, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_2, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#135 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_2, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_3, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#136 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_3, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_4, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#137 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_4, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_5, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#138 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_5, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_6, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#139 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_6, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_7, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#140 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_7, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
-Related violations: <none>
-
-SYNTH-6#141 Warning
-Timing of a block RAM might be sub-optimal  
 The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_8, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
-SYNTH-6#142 Warning
+SYNTH-6#141 Warning
 Timing of a block RAM might be sub-optimal  
 The timing for the instance ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram/bram_inst/asymmetric_a_wider_than_b.bram_inst/RAM_reg_9, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>

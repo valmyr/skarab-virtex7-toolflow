@@ -1,0 +1,310 @@
+
+*** Running vivado
+    with args -log control_axi_stream_gbe.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source control_axi_stream_gbe.tcl
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri Jul 24 11:38:37 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source control_axi_stream_gbe.tcl -notrace
+Command: synth_design -top control_axi_stream_gbe -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 92905
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2487.066 ; gain = 477.594 ; free physical = 7924 ; free virtual = 29784
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'control_axi_stream_gbe' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:23]
+INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:168]
+INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:175]
+INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:191]
+INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:200]
+INFO: [Synth 8-6157] synthesizing module 'cmd_sync_detector' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/cmd_sync_detector.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'cmd_sync_detector' (0#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/cmd_sync_detector.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'control_axi_stream_gbe' (0#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:23]
+WARNING: [Synth 8-6014] Unused sequential element reg_sync_rx_valid_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:88]
+WARNING: [Synth 8-6014] Unused sequential element addr_data_write_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:89]
+WARNING: [Synth 8-6014] Unused sequential element sync_reg_start_frame_transmission_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:91]
+WARNING: [Synth 8-6014] Unused sequential element rx_data_ff0_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:92]
+WARNING: [Synth 8-6014] Unused sequential element rx_data_ff1_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:93]
+WARNING: [Synth 8-6014] Unused sequential element rx_data_ff2_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:94]
+WARNING: [Synth 8-6014] Unused sequential element addr_data_local_reg_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:95]
+WARNING: [Synth 8-6014] Unused sequential element rx_data_ff3_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:105]
+WARNING: [Synth 8-6014] Unused sequential element addr_data_t_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:144]
+WARNING: [Synth 8-6014] Unused sequential element sync_data_valid_tx_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:145]
+WARNING: [Synth 8-6014] Unused sequential element sync_data_valid_tx0_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:146]
+WARNING: [Synth 8-6014] Unused sequential element sync_dec_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:148]
+WARNING: [Synth 8-6014] Unused sequential element debug_local_data_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:149]
+WARNING: [Synth 8-7137] Register mem_reg in module control_axi_stream_gbe has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register tx_ena_out_reg in module control_axi_stream_gbe has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:147]
+WARNING: [Synth 8-7137] Register mem_tmp_reg in module control_axi_stream_gbe has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_tmp_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:368]
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:118]
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+WARNING: [Synth 8-7129] Port ce in module cmd_sync_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tlast in module control_axi_stream_gbe is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2620.004 ; gain = 610.531 ; free physical = 7786 ; free virtual = 29648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2625.941 ; gain = 616.469 ; free physical = 7785 ; free virtual = 29647
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2625.941 ; gain = 616.469 ; free physical = 7785 ; free virtual = 29647
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2625.941 ; gain = 0.000 ; free physical = 7785 ; free virtual = 29647
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2745.652 ; gain = 0.000 ; free physical = 7777 ; free virtual = 29638
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2745.688 ; gain = 0.000 ; free physical = 7776 ; free virtual = 29638
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2745.688 ; gain = 736.215 ; free physical = 7772 ; free virtual = 29635
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2753.656 ; gain = 744.184 ; free physical = 7772 ; free virtual = 29635
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2753.656 ; gain = 744.184 ; free physical = 7772 ; free virtual = 29635
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'cmd_sync_detector'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_tx_reg' in module 'control_axi_stream_gbe'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_rx_reg' in module 'control_axi_stream_gbe'
+INFO: [Synth 8-802] inferred FSM for state register 'm_axis_state_reg' in module 'control_axi_stream_gbe'
+INFO: [Synth 8-802] inferred FSM for state register 's_axis_state_reg' in module 'control_axi_stream_gbe'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 |                             0000
+*
+                    IDLE |                              001 |                             0001
+                  CMD_S0 |                              010 |                             0010
+                  CMD_S1 |                              011 |                             0100
+               CMD_EVENT |                              100 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'cmd_sync_detector'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                                0 |                              000
+                 RX_DATA |                                1 |                              001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_rx_reg' using encoding 'sequential' in module 'control_axi_stream_gbe'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                                0 |                              000
+                 TX_DATA |                                1 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_tx_reg' using encoding 'sequential' in module 'control_axi_stream_gbe'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                               01 |                               01
+                   S_REC |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 's_axis_state_reg' using encoding 'one-hot' in module 'control_axi_stream_gbe'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  M_IDLE |                               01 |                               01
+                  M_SEND |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'm_axis_state_reg' using encoding 'one-hot' in module 'control_axi_stream_gbe'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2753.656 ; gain = 744.184 ; free physical = 7768 ; free virtual = 29633
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 515   
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input   11 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 14    
+	   2 Input    2 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 17    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7129] Port ce in module control_axi_stream_gbe is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tlast in module control_axi_stream_gbe is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2753.656 ; gain = 744.184 ; free physical = 7701 ; free virtual = 29575
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2753.656 ; gain = 744.184 ; free physical = 7701 ; free virtual = 29576
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2753.656 ; gain = 744.184 ; free physical = 7704 ; free virtual = 29578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2831.469 ; gain = 821.996 ; free physical = 7649 ; free virtual = 29523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2831.469 ; gain = 821.996 ; free physical = 7648 ; free virtual = 29523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2831.469 ; gain = 821.996 ; free physical = 7647 ; free virtual = 29522
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2831.469 ; gain = 821.996 ; free physical = 7647 ; free virtual = 29522
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2831.469 ; gain = 821.996 ; free physical = 7646 ; free virtual = 29520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2831.469 ; gain = 821.996 ; free physical = 7646 ; free virtual = 29520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    12|
+|3     |LUT1   |     2|
+|4     |LUT2   |    10|
+|5     |LUT3   |   278|
+|6     |LUT4   |    61|
+|7     |LUT5   |    30|
+|8     |LUT6   |  1467|
+|9     |MUXF7  |   544|
+|10    |MUXF8  |   272|
+|11    |FDCE   |    92|
+|12    |FDPE   |     6|
+|13    |FDRE   |  4096|
+|14    |IBUF   |    39|
+|15    |OBUF   |    29|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2831.469 ; gain = 821.996 ; free physical = 7646 ; free virtual = 29520
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2831.469 ; gain = 702.250 ; free physical = 7646 ; free virtual = 29520
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2831.477 ; gain = 821.996 ; free physical = 7646 ; free virtual = 29520
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2849.281 ; gain = 0.000 ; free physical = 7795 ; free virtual = 29670
+INFO: [Netlist 29-17] Analyzing 828 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'control_axi_stream_gbe' is not ideal for floorplanning, since the cellview 'control_axi_stream_gbe' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3011.840 ; gain = 0.000 ; free physical = 7671 ; free virtual = 29546
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 3cad1fbd
+INFO: [Common 17-83] Releasing license: Synthesis
+32 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 3011.875 ; gain = 1387.488 ; free physical = 7675 ; free virtual = 29549
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2087.240; main = 2087.240; forked = 287.536
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3746.691; main = 3011.844; forked = 993.031
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3035.852 ; gain = 0.000 ; free physical = 7674 ; free virtual = 29548
+INFO: [Common 17-1381] The checkpoint '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.runs/synth_1/control_axi_stream_gbe.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file control_axi_stream_gbe_utilization_synth.rpt -pb control_axi_stream_gbe_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 24 11:39:01 2026...

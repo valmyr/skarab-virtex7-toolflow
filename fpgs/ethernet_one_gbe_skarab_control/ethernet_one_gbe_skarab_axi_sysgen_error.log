@@ -5,36 +5,17 @@ Matlab 9.4.0.813654 (R2018a)            /usr/local/MATLAB/R2018a
 Vivado 2019.1                           /tools/Xilinx/Vivado/2019.1
 --------------------------------------------------------------------------------
 Summary of Errors:
-Error 0001: ERROR: [USF-XSim-62] 'compile' step failed with error(s)....
-     Block: 'ethernet_one_gbe_skarab_axi/ System Generator'
-Error 0002: ERROR: [USF-XSim-62] 'compile' step failed with error(s)....
-     Block: 'ethernet_one_gbe_skarab_axi/clk_mhz/skarab_tx_1gbe_tx_rx_valmir_clk_mhz_user_data_in'
+Error 0001: Detected a NaN on the input. Cannot convert NaN to boolean.
+
+     Block: 'ethernet_one_gbe_skarab_axi/led5/convert'
 --------------------------------------------------------------------------------
 
 Error 0001:
 
 Reported by:
-  'ethernet_one_gbe_skarab_axi/ System Generator'
+  'ethernet_one_gbe_skarab_axi/led5/convert'
 
 Details:
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please
-check the Tcl console output or
-'/tmp/xlsim2hlH5I/hdl_netlist/xelab.sim/sim_1/behav/xsim/xvlog.log'
-file for more information.
-Please refer to '/tmp/xlsim2hlH5I/vivado.log' for more details.
-
---------------------------------------------------------------------------------
-
-Error 0001:
-
-Reported by:
-  'ethernet_one_gbe_skarab_axi/clk_mhz/skarab_tx_1gbe_tx_rx_valmir_clk_mhz_user_data_in'
-
-Details:
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please
-check the Tcl console output or
-'/tmp/xlsim2hlH5I/hdl_netlist/xelab.sim/sim_1/behav/xsim/xvlog.log'
-file for more information.
-Please refer to '/tmp/xlsim2hlH5I/vivado.log' for more details.
+Detected a NaN on the input. Cannot convert NaN to boolean.
 
 --------------------------------------------------------------------------------

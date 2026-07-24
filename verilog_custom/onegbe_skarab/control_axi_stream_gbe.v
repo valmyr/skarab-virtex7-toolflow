@@ -115,11 +115,13 @@ always@(posedge clk, negedge a_sync_nrst)begin
         //Lógica de leitura no buffer
         if(ena_dec && current_state_tx == TX_DATA )begin
             //tx_data <= addr_data_local;
-            tx_data <= mem[addr_data_local];
+            //tx_data <= mem[addr_data_local];
+            tx_data <= mem_tmp[addr_data_local];
             addr_data_local <= addr_data_local_mux;
             addr_data_local_reg <= addr_data_local;
         end else begin
-            tx_data <= mem[addr_data_local];
+            //tx_data <= mem[addr_data_local];
+            tx_data <= mem_tmp[addr_data_local];
             addr_data_local_reg <= addr_data_local;
             addr_data_local <=addr_data_local < tx_pkt_len ? addr_data_local:0;
         end
@@ -248,7 +250,6 @@ cmd_sync_detector cmd_frame_transmission(
         .frame_cmd(32'h74_72_61_6E),//Frame a ser detectado
         .event_cmd_out(start_frame_transmission)
 );
-//always@(*)             debug_rx_data = mem[debug_addr_data];
 
 
 //    always@(*) m_axis_tvalid = s_axis_tvalid;
@@ -291,7 +292,7 @@ always@(posedge clk, negedge a_sync_nrst)begin
         m_axis_state <= m_axis_next_state;
         m_addr_data  <= m_addr_data_next;
        // m_axis_tdata <= mem[m_addr_data];
-        m_axis_tdata <= m_addr_data;
+        m_axis_tdata <= m_addr_data; //Apenas um contador simples
 
     end
 end
@@ -309,12 +310,12 @@ always@(*) begin
                 m_addr_data_next = 0;
                 m_axis_next_state = M_IDLE;
                 m_axis_tvalid = 1'b0;
-                m_axis_tlast = 1'b1;
+                m_axis_tlast = 1'b0;
             end else if(handshake_sm_axis) begin
                 m_addr_data_next =  m_addr_data +1;
                 m_axis_next_state = M_SEND;
                 m_axis_tvalid = 1'b1;
-                m_axis_tlast = 1'b0;
+                m_axis_tlast = m_addr_data == tx_pkt_len-1;
             end else begin
                 m_addr_data_next = m_addr_data;
                 m_axis_next_state = M_SEND;
@@ -364,9 +365,8 @@ always@(posedge clk, negedge a_sync_nrst)begin
     end else begin
         s_axis_state <= s_axis_next_state;
         s_addr_data  <= s_addr_data_next;
-        if(handshake_ms_axis && s_axis_state == S_REC)begin
-            mem_tmp[s_addr_data] <= s_axis_tdata;
-            //mem_tmp[s_addr_data] <= s_addr_data;
+        if(s_axis_state == S_REC)begin
+            mem_tmp[s_addr_data] <= handshake_ms_axis ? s_axis_tdata : mem_tmp[s_addr_data];
         end else  begin
             mem_tmp[s_addr_data] <=mem_tmp[s_addr_data];
 
@@ -403,7 +403,18 @@ always@(*) begin
         end
     endcase
 end
+/// Debug
+//always@(posedge clk, negedge a_sync_nrst)begin
+//    if(!a_sync_nrst)begin
+//        debug_rx_data <=0;
+//
+//    end else begin
+//        debug_rx_data <= mem[debug_addr_data];
+//    end
+//
+//end
 
-always@(*)             debug_rx_data = mem_tmp[debug_addr_data];
+always@(*) debug_rx_data = 8'hca;
+//always@(*) debug_rx_data = mem[10];
 
 endmodule

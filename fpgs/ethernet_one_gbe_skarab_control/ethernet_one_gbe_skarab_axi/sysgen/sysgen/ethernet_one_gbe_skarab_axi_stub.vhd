@@ -4,7 +4,7 @@ use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 entity ethernet_one_gbe_skarab_axi_stub is
   port (
-    ethernet_one_gbe_skarab_loopback1_addr_soft_control_user_data_out : in std_logic_vector( 32-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_software_register_user_data_out : in std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_d3_ss_bram_data_out : in std_logic_vector( 128-1 downto 0 );
     skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out : in std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_d4_ss_bram_data_out : in std_logic_vector( 128-1 downto 0 );
@@ -43,13 +43,21 @@ entity ethernet_one_gbe_skarab_axi_stub is
     ethernet_one_gbe_skarab_axi_d5_ss_bram_we : out std_logic_vector( 1-1 downto 0 );
     ethernet_one_gbe_skarab_axi_d5_ss_status_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_data_rx_valmir_user_data_in : out std_logic_vector( 32-1 downto 0 );
-    ethernet_one_gbe_skarab_axi_data_soft_control_user_data_in : out std_logic_vector( 32-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_software_register_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_err_marker1_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_err_pkt_ctr1_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_err_pkt_ctr_step1_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_err_ramp1_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_err_valid_raw1_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_err_walk1_user_data_in : out std_logic_vector( 32-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_led0_gateway : out std_logic_vector( 1-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_led1_gateway : out std_logic_vector( 1-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_led2_gateway : out std_logic_vector( 1-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_led3_gateway : out std_logic_vector( 1-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_led4_gateway : out std_logic_vector( 1-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_led5_gateway : out std_logic_vector( 1-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_led6_gateway : out std_logic_vector( 1-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_led7_gateway : out std_logic_vector( 1-1 downto 0 );
     ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_addr : out std_logic_vector( 16-1 downto 0 );
     ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_we : out std_logic_vector( 1-1 downto 0 );
@@ -79,7 +87,7 @@ architecture structural of ethernet_one_gbe_skarab_axi_stub is
 begin
   sysgen_dut : entity xil_defaultlib.ethernet_one_gbe_skarab_axi 
   port map (
-    ethernet_one_gbe_skarab_loopback1_addr_soft_control_user_data_out => ethernet_one_gbe_skarab_loopback1_addr_soft_control_user_data_out,
+    ethernet_one_gbe_skarab_axi_software_register_user_data_out => ethernet_one_gbe_skarab_axi_software_register_user_data_out,
     ethernet_one_gbe_skarab_axi_d3_ss_bram_data_out => ethernet_one_gbe_skarab_axi_d3_ss_bram_data_out,
     skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out => skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out,
     ethernet_one_gbe_skarab_axi_d4_ss_bram_data_out => ethernet_one_gbe_skarab_axi_d4_ss_bram_data_out,
@@ -118,13 +126,21 @@ begin
     ethernet_one_gbe_skarab_axi_d5_ss_bram_we => ethernet_one_gbe_skarab_axi_d5_ss_bram_we,
     ethernet_one_gbe_skarab_axi_d5_ss_status_user_data_in => ethernet_one_gbe_skarab_axi_d5_ss_status_user_data_in,
     ethernet_one_gbe_skarab_axi_data_rx_valmir_user_data_in => ethernet_one_gbe_skarab_axi_data_rx_valmir_user_data_in,
-    ethernet_one_gbe_skarab_axi_data_soft_control_user_data_in => ethernet_one_gbe_skarab_axi_data_soft_control_user_data_in,
+    ethernet_one_gbe_skarab_axi_software_register_user_data_in => ethernet_one_gbe_skarab_axi_software_register_user_data_in,
     ethernet_one_gbe_skarab_axi_err_marker1_user_data_in => ethernet_one_gbe_skarab_axi_err_marker1_user_data_in,
     ethernet_one_gbe_skarab_axi_err_pkt_ctr1_user_data_in => ethernet_one_gbe_skarab_axi_err_pkt_ctr1_user_data_in,
     ethernet_one_gbe_skarab_axi_err_pkt_ctr_step1_user_data_in => ethernet_one_gbe_skarab_axi_err_pkt_ctr_step1_user_data_in,
     ethernet_one_gbe_skarab_axi_err_ramp1_user_data_in => ethernet_one_gbe_skarab_axi_err_ramp1_user_data_in,
     ethernet_one_gbe_skarab_axi_err_valid_raw1_user_data_in => ethernet_one_gbe_skarab_axi_err_valid_raw1_user_data_in,
     ethernet_one_gbe_skarab_axi_err_walk1_user_data_in => ethernet_one_gbe_skarab_axi_err_walk1_user_data_in,
+    ethernet_one_gbe_skarab_axi_led0_gateway => ethernet_one_gbe_skarab_axi_led0_gateway,
+    ethernet_one_gbe_skarab_axi_led1_gateway => ethernet_one_gbe_skarab_axi_led1_gateway,
+    ethernet_one_gbe_skarab_axi_led2_gateway => ethernet_one_gbe_skarab_axi_led2_gateway,
+    ethernet_one_gbe_skarab_axi_led3_gateway => ethernet_one_gbe_skarab_axi_led3_gateway,
+    ethernet_one_gbe_skarab_axi_led4_gateway => ethernet_one_gbe_skarab_axi_led4_gateway,
+    ethernet_one_gbe_skarab_axi_led5_gateway => ethernet_one_gbe_skarab_axi_led5_gateway,
+    ethernet_one_gbe_skarab_axi_led6_gateway => ethernet_one_gbe_skarab_axi_led6_gateway,
+    ethernet_one_gbe_skarab_axi_led7_gateway => ethernet_one_gbe_skarab_axi_led7_gateway,
     ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_addr => ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_addr,
     ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_data_in => ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_data_in,
     ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_we => ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_we,

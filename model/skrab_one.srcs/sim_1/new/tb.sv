@@ -75,7 +75,7 @@ logic m_axis_tvalid;
 logic m_axis_tready;
 logic [7:0] m_axis_tdata;
 
-assign s_axis_aclk = clk;
+//assign s_axis_aclk = clk;
 assign s_axis_aresetn = a_sync_nrst;
 
 axis_data_fifo_0 matlab_fifo(
@@ -152,7 +152,8 @@ logic [7:0]counter;
 initial begin 
     $readmemh("/home/valmyrsilva07/skrab_one/skrab_one.srcs/sim_1/new/mem.hex",mem);
     clk = 0;
-       a_sync_nrst =1;
+    s_axis_aclk = 0;
+     a_sync_nrst =1;
     #4 a_sync_nrst =0;
     #4  a_sync_nrst =1;
 end
@@ -172,6 +173,8 @@ assign in_data_rx_ethernet = mem[counter];
 
 //always #4.37 clk =~clk;
 always #5 clk =~clk;
+
+always #1 s_axis_aclk = ~s_axis_aclk;
 
 
     initial begin

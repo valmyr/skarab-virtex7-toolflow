@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri Jul 24 18:09:25 2026
-# Process ID: 705307
+# Start of session at: Fri Jul 24 23:49:58 2026
+# Process ID: 1629101
 # Current directory: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/arp_cache_synth_1
 # Command line: vivado -log arp_cache.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source arp_cache.tcl
 # Log file: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/arp_cache_synth_1/arp_cache.vds
@@ -141,9 +141,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
 INFO: [Device 21-403] Loading part xc7vx690tffg1927-2
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 705618 
+INFO: Helper process launched with PID 1629357 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1965.988 ; gain = 152.719 ; free physical = 33873 ; free virtual = 45463
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1967.609 ; gain = 152.688 ; free physical = 26862 ; free virtual = 39542
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'arp_cache' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/arp_cache/synth/arp_cache.vhd:74]
 	Parameter C_FAMILY bound to: virtex7 - type: string 
@@ -325,7 +325,7 @@ WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_3_synth has unconnected port S_A
 WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_3_synth has unconnected port S_AXI_WDATA[45]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 2182.004 ; gain = 368.734 ; free physical = 38946 ; free virtual = 50535
+Finished RTL Elaboration : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 2183.320 ; gain = 368.398 ; free physical = 31563 ; free virtual = 44243
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -338,10 +338,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 2193.879 ; gain = 380.609 ; free physical = 38947 ; free virtual = 50536
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 2195.195 ; gain = 380.273 ; free physical = 31567 ; free virtual = 44248
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 2193.879 ; gain = 380.609 ; free physical = 38947 ; free virtual = 50536
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 2195.195 ; gain = 380.273 ; free physical = 31567 ; free virtual = 44248
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -355,30 +355,30 @@ Parsing XDC File [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ether
 Finished Parsing XDC File [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/arp_cache_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2278.723 ; gain = 0.000 ; free physical = 38856 ; free virtual = 50445
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2275.070 ; gain = 0.000 ; free physical = 31474 ; free virtual = 44155
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2278.723 ; gain = 0.000 ; free physical = 38856 ; free virtual = 50445
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2275.070 ; gain = 0.000 ; free physical = 31474 ; free virtual = 44155
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 2278.723 ; gain = 465.453 ; free physical = 38949 ; free virtual = 50538
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 2275.070 ; gain = 460.148 ; free physical = 31554 ; free virtual = 44235
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7vx690tffg1927-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 2278.723 ; gain = 465.453 ; free physical = 38949 ; free virtual = 50538
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 2275.070 ; gain = 460.148 ; free physical = 31554 ; free virtual = 44235
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/arp_cache_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 2278.723 ; gain = 465.453 ; free physical = 38949 ; free virtual = 50538
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 2275.070 ; gain = 460.148 ; free physical = 31554 ; free virtual = 44235
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 2278.723 ; gain = 465.453 ; free physical = 38947 ; free virtual = 50537
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 2275.070 ; gain = 460.148 ; free physical = 31552 ; free virtual = 44234
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -414,7 +414,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 2278.723 ; gain = 465.453 ; free physical = 38942 ; free virtual = 50539
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 2275.070 ; gain = 460.148 ; free physical = 31548 ; free virtual = 44235
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -426,13 +426,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2278.723 ; gain = 465.453 ; free physical = 38826 ; free virtual = 50422
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 2275.070 ; gain = 460.148 ; free physical = 31426 ; free virtual = 44114
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2278.723 ; gain = 465.453 ; free physical = 38826 ; free virtual = 50422
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 2275.070 ; gain = 460.148 ; free physical = 31426 ; free virtual = 44114
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -444,7 +444,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2278.723 ; gain = 465.453 ; free physical = 38824 ; free virtual = 50420
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 2275.070 ; gain = 460.148 ; free physical = 31425 ; free virtual = 44112
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -468,7 +468,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2278.723 ; gain = 465.453 ; free physical = 38824 ; free virtual = 50420
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 2275.070 ; gain = 460.148 ; free physical = 31425 ; free virtual = 44112
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -481,7 +481,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2278.723 ; gain = 465.453 ; free physical = 38824 ; free virtual = 50420
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 2275.070 ; gain = 460.148 ; free physical = 31425 ; free virtual = 44112
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -493,25 +493,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2278.723 ; gain = 465.453 ; free physical = 38824 ; free virtual = 50420
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 2275.070 ; gain = 460.148 ; free physical = 31425 ; free virtual = 44112
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2278.723 ; gain = 465.453 ; free physical = 38824 ; free virtual = 50420
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 2275.070 ; gain = 460.148 ; free physical = 31425 ; free virtual = 44112
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2278.723 ; gain = 465.453 ; free physical = 38824 ; free virtual = 50420
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 2275.070 ; gain = 460.148 ; free physical = 31425 ; free virtual = 44112
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2278.723 ; gain = 465.453 ; free physical = 38824 ; free virtual = 50420
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 2275.070 ; gain = 460.148 ; free physical = 31425 ; free virtual = 44112
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -546,34 +546,34 @@ Report Instance Areas:
 |9     |            \prim_init.ram                   |blk_mem_gen_prim_wrapper_init__parameterized0 |     1|
 +------+---------------------------------------------+----------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2278.723 ; gain = 465.453 ; free physical = 38824 ; free virtual = 50420
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 2275.070 ; gain = 460.148 ; free physical = 31425 ; free virtual = 44112
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 169 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 2278.723 ; gain = 380.609 ; free physical = 38874 ; free virtual = 50471
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2278.723 ; gain = 465.453 ; free physical = 38874 ; free virtual = 50471
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 2275.070 ; gain = 380.273 ; free physical = 31479 ; free virtual = 44166
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 2275.070 ; gain = 460.148 ; free physical = 31479 ; free virtual = 44166
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2278.723 ; gain = 0.000 ; free physical = 38814 ; free virtual = 50410
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2275.070 ; gain = 0.000 ; free physical = 31421 ; free virtual = 44109
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 20 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 2278.723 ; gain = 849.145 ; free physical = 38901 ; free virtual = 50498
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2278.723 ; gain = 0.000 ; free physical = 38902 ; free virtual = 50498
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 2275.070 ; gain = 837.809 ; free physical = 31509 ; free virtual = 44197
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2275.070 ; gain = 0.000 ; free physical = 31509 ; free virtual = 44197
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/arp_cache_synth_1/arp_cache.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
 INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP arp_cache, cache-ID = 8fd4a3d47d841ec9
 INFO: [Coretcl 2-1174] Renamed 8 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2278.723 ; gain = 0.000 ; free physical = 38894 ; free virtual = 50493
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2275.070 ; gain = 0.000 ; free physical = 31508 ; free virtual = 44196
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/arp_cache_synth_1/arp_cache.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file arp_cache_utilization_synth.rpt -pb arp_cache_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jul 24 18:10:10 2026...
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 24 23:50:43 2026...

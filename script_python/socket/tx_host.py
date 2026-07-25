@@ -1,8 +1,33 @@
+#////////////////////////////////////////////////////////////////////////////////
+# Company: VIRTUS/UFCG
+# Engineer: Valmir F. Silva 
+# 
+# Create Date: 06/25/2026 00:20:32 AM
+# Design Name: 
+# Module Name: tx_host
+# Project Name: 
+# Target Devices: 
+# Tool Versions: 
+# Description: 
+# 
+# Dependencies: 
+# 
+# Revision:
+# Revision 0.01 - File Created
+# Additional Comments:
+# 
+#////////////////////////////////////////////////////////////////////////////////
+
+
 import socket
 import time
 import numpy as np
 import struct
 import os
+
+
+DEBUG = False
+
 SERVER_IP = "10.42.0.200"
 SERVER_PORT = 65535
 MESSAGE = bytes([0x01] * 32)
@@ -59,13 +84,13 @@ try:
         #data_pack = struct.pack(f'>{len(data)}Q', *data)
         #sock.sendto(data_pack, (SERVER_IP, SERVER_PORT))
         #print(data_pack)
-        for i in range(0,N):
-            print(f"\033[91m PC \033[00m -> \033[92m FPGA \033[00m:Word[{i}]={data[i]}")
-        print("============================Enviado=====================",k)
+        if(DEBUG):
+            for i in range(0,N):
+                print(f"\033[91m PC \033[00m -> \033[92m FPGA \033[00m:Word[{i}]={data[i]}")
+            print("============================Enviado=====================",k)
         k+=1
-        #time.sleep(1)
-        if(k >256-2*(2**4)):k=0
-        break
+        time.sleep(1/100)
+        if(k >=256-2*(2**4)):k=0
         #if(k==200):break
 except KeyboardInterrupt:
     print("Finalizado pelo usuário")

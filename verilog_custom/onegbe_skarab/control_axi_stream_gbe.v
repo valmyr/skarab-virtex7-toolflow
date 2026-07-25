@@ -291,8 +291,9 @@ always@(posedge clk, negedge a_sync_nrst)begin
     end else begin
         m_axis_state <= m_axis_next_state;
         m_addr_data  <= m_addr_data_next;
-       // m_axis_tdata <= mem[m_addr_data];
-        m_axis_tdata <= m_addr_data; //Apenas um contador simples
+        //Dado real
+        m_axis_tdata <= mem[m_addr_data];
+       // m_axis_tdata <= m_addr_data; //Apenas um contador simples
 
     end
 end
@@ -414,7 +415,7 @@ end
 //
 //end
 
-always@(*) debug_rx_data = 8'hca;
+always@(*) debug_rx_data = mem_tmp[debug_addr_data];
 //always@(*) debug_rx_data = mem[10];
 
 endmodule

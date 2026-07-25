@@ -272,6 +272,21 @@ fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_s
 fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-07-24_1808.fpg'
 
 
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-07-24_1828.fpg'
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-07-24_2330.fpg'
+
+
+
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-07-24_2349.fpg'
+
+
+
+
+
+
+
 
 
 def control_fan(pwm=30):
@@ -308,6 +323,6 @@ fpga.registers.tx_control.write(pkt_rst="pulse")
 
 for i in range(256):
       fpga.write_int('addr_soft_control',i)
-      print("mem[",fpga.read_int('addr_soft_control'),"]","=",fpga.read_int('data_soft_control'))
-      #fpga.write_int('addr_soft_control',i << 6*4)
-      #print("mem[",fpga.read_int('addr_soft_control'),"]","=",fpga.read_int('data_soft_control'))
+      print("mem[",fpga.read_int('addr_soft_control'),"]","=",fpga.read_int('software_register'))
+      fpga.write_int('addr_soft_control',i << 6*4)
+      print("mem[",fpga.read_int('addr_soft_control'),"]","=",fpga.read_int('software_register'))

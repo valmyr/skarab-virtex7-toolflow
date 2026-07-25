@@ -5,7 +5,6 @@ import_files -force /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/eth
 import_files -force /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
 import_files -force /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
 import_files -force /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_bram
-import_files -force /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/gpio_simulink2ext
 import_files -force /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/SKA_10GBE_MAC
 import_files -force /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/xaui_to_gmii_fifo/xaui_to_gmii_fifo.xci
 import_files -force /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/gmii_to_xaui_fifo/gmii_to_xaui_fifo.xci

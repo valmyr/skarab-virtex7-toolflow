@@ -7,13 +7,13 @@ Vivado 2019.1                           /tools/Xilinx/Vivado/2019.1
 Summary of Errors:
 Error 0001: Detected a NaN on the input. Cannot convert NaN to boolean.
 
-     Block: 'ethernet_one_gbe_skarab_axi/led5/convert'
+     Block: 'ethernet_one_gbe_skarab_axi/led4/convert'
 --------------------------------------------------------------------------------
 
 Error 0001:
 
 Reported by:
-  'ethernet_one_gbe_skarab_axi/led5/convert'
+  'ethernet_one_gbe_skarab_axi/led4/convert'
 
 Details:
 Detected a NaN on the input. Cannot convert NaN to boolean.

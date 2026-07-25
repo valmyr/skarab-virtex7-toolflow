@@ -1118,28 +1118,6 @@ use xil_defaultlib.conv_pkg.all;
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
-entity sysgen_reinterpret_f11784c7fa is
-  port (
-    input_port : in std_logic_vector((8 - 1) downto 0);
-    output_port : out std_logic_vector((8 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_reinterpret_f11784c7fa;
-architecture behavior of sysgen_reinterpret_f11784c7fa
-is
-  signal input_port_1_40: unsigned((8 - 1) downto 0);
-begin
-  input_port_1_40 <= std_logic_vector_to_unsigned(input_port);
-  output_port <= unsigned_to_std_logic_vector(input_port_1_40);
-end behavior;
-
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
 entity sysgen_reinterpret_424e85e61b is
   port (
     input_port : in std_logic_vector((32 - 1) downto 0);
@@ -2525,6 +2503,28 @@ is
 begin
   d_1_22 <= d;
   q <= d_1_22;
+end behavior;
+
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+entity sysgen_reinterpret_f11784c7fa is
+  port (
+    input_port : in std_logic_vector((8 - 1) downto 0);
+    output_port : out std_logic_vector((8 - 1) downto 0);
+    clk : in std_logic;
+    ce : in std_logic;
+    clr : in std_logic);
+end sysgen_reinterpret_f11784c7fa;
+architecture behavior of sysgen_reinterpret_f11784c7fa
+is
+  signal input_port_1_40: unsigned((8 - 1) downto 0);
+begin
+  input_port_1_40 <= std_logic_vector_to_unsigned(input_port);
+  output_port <= unsigned_to_std_logic_vector(input_port_1_40);
 end behavior;
 
 library xil_defaultlib;

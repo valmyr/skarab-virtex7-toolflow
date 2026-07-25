@@ -38,22 +38,22 @@
   localparam N_SLAVES_ARB1 = 4;
 
   localparam SLAVE_ADDR_ARB0 = { 32'h8019c064 - 32'h800dc000,//tx_afull1
-32'h8019c060 - 32'h800dc000,//rx_valid1
-32'h8019c05c - 32'h800dc000,//rx_overrun1
-32'h8019c058 - 32'h800dc000,//rx_eof1
-32'h8019c054 - 32'h800dc000,//rx_control1
-32'h8019c050 - 32'h800dc000,//rx_badframe1
-32'h8019c04c - 32'h800dc000,//pkt_ctrs_compare1_ss_status
-32'h8019c048 - 32'h800dc000,//pkt_ctrs_compare1_ss_ctrl
-32'h8019c044 - 32'h800dc000,//pkt_ctrs1_ss_status
-32'h8019c040 - 32'h800dc000,//pkt_ctrs1_ss_ctrl
-32'h8019c03c - 32'h800dc000,//err_walk1
-32'h8019c038 - 32'h800dc000,//err_valid_raw1
-32'h8019c034 - 32'h800dc000,//err_ramp1
-32'h8019c030 - 32'h800dc000,//err_pkt_ctr_step1
-32'h8019c02c - 32'h800dc000,//err_pkt_ctr1
-32'h8019c028 - 32'h800dc000,//err_marker1
-32'h8019c024 - 32'h800dc000,//data_soft_control
+32'h8019c060 - 32'h800dc000,//software_register
+32'h8019c05c - 32'h800dc000,//rx_valid1
+32'h8019c058 - 32'h800dc000,//rx_overrun1
+32'h8019c054 - 32'h800dc000,//rx_eof1
+32'h8019c050 - 32'h800dc000,//rx_control1
+32'h8019c04c - 32'h800dc000,//rx_badframe1
+32'h8019c048 - 32'h800dc000,//pkt_ctrs_compare1_ss_status
+32'h8019c044 - 32'h800dc000,//pkt_ctrs_compare1_ss_ctrl
+32'h8019c040 - 32'h800dc000,//pkt_ctrs1_ss_status
+32'h8019c03c - 32'h800dc000,//pkt_ctrs1_ss_ctrl
+32'h8019c038 - 32'h800dc000,//err_walk1
+32'h8019c034 - 32'h800dc000,//err_valid_raw1
+32'h8019c030 - 32'h800dc000,//err_ramp1
+32'h8019c02c - 32'h800dc000,//err_pkt_ctr_step1
+32'h8019c028 - 32'h800dc000,//err_pkt_ctr1
+32'h8019c024 - 32'h800dc000,//err_marker1
 32'h8019c020 - 32'h800dc000,//data_rx_valmir
 32'h8019c01c - 32'h800dc000,//d5_ss_status
 32'h8019c018 - 32'h800dc000,//d5_ss_ctrl
@@ -70,22 +70,22 @@
 32'h800ec000 - 32'h800dc000,//d3_ss_bram
 32'h800dc000 - 32'h800dc000}; //tx_one_gbe
   localparam SLAVE_HIGH_ARB0 = { 32'h8019c067 - 32'h800dc000,//tx_afull1
-32'h8019c063 - 32'h800dc000,//rx_valid1
-32'h8019c05f - 32'h800dc000,//rx_overrun1
-32'h8019c05b - 32'h800dc000,//rx_eof1
-32'h8019c057 - 32'h800dc000,//rx_control1
-32'h8019c053 - 32'h800dc000,//rx_badframe1
-32'h8019c04f - 32'h800dc000,//pkt_ctrs_compare1_ss_status
-32'h8019c04b - 32'h800dc000,//pkt_ctrs_compare1_ss_ctrl
-32'h8019c047 - 32'h800dc000,//pkt_ctrs1_ss_status
-32'h8019c043 - 32'h800dc000,//pkt_ctrs1_ss_ctrl
-32'h8019c03f - 32'h800dc000,//err_walk1
-32'h8019c03b - 32'h800dc000,//err_valid_raw1
-32'h8019c037 - 32'h800dc000,//err_ramp1
-32'h8019c033 - 32'h800dc000,//err_pkt_ctr_step1
-32'h8019c02f - 32'h800dc000,//err_pkt_ctr1
-32'h8019c02b - 32'h800dc000,//err_marker1
-32'h8019c027 - 32'h800dc000,//data_soft_control
+32'h8019c063 - 32'h800dc000,//software_register
+32'h8019c05f - 32'h800dc000,//rx_valid1
+32'h8019c05b - 32'h800dc000,//rx_overrun1
+32'h8019c057 - 32'h800dc000,//rx_eof1
+32'h8019c053 - 32'h800dc000,//rx_control1
+32'h8019c04f - 32'h800dc000,//rx_badframe1
+32'h8019c04b - 32'h800dc000,//pkt_ctrs_compare1_ss_status
+32'h8019c047 - 32'h800dc000,//pkt_ctrs_compare1_ss_ctrl
+32'h8019c043 - 32'h800dc000,//pkt_ctrs1_ss_status
+32'h8019c03f - 32'h800dc000,//pkt_ctrs1_ss_ctrl
+32'h8019c03b - 32'h800dc000,//err_walk1
+32'h8019c037 - 32'h800dc000,//err_valid_raw1
+32'h8019c033 - 32'h800dc000,//err_ramp1
+32'h8019c02f - 32'h800dc000,//err_pkt_ctr_step1
+32'h8019c02b - 32'h800dc000,//err_pkt_ctr1
+32'h8019c027 - 32'h800dc000,//err_marker1
 32'h8019c023 - 32'h800dc000,//data_rx_valmir
 32'h8019c01f - 32'h800dc000,//d5_ss_status
 32'h8019c01b - 32'h800dc000,//d5_ss_ctrl

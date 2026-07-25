@@ -17,7 +17,7 @@ yellow_blocks:
     init_val: 0
     sample_period: 1
     names: reg
-    bitwidths: 8
+    bitwidths: 32
     bin_pts: 0
     arith_types: 0
     sim_port: off
@@ -173,20 +173,6 @@ yellow_blocks:
     arith_types: 0
     sim_port: off
     show_format: on
-  ethernet_one_gbe_skarab_axi/data_soft_control:
-    name: data_soft_control
-    fullpath: ethernet_one_gbe_skarab_axi/data_soft_control
-    tag: xps:sw_reg
-    io_dir: To Processor
-    io_delay: 0
-    init_val: 0
-    sample_period: 1
-    names: reg
-    bitwidths: 8
-    bin_pts: 0
-    arith_types: 0
-    sim_port: off
-    show_format: on
   ethernet_one_gbe_skarab_axi/err_marker1:
     name: err_marker1
     fullpath: ethernet_one_gbe_skarab_axi/err_marker1
@@ -271,150 +257,6 @@ yellow_blocks:
     arith_types: 0
     sim_port: off
     show_format: on
-  ethernet_one_gbe_skarab_axi/led0:
-    name: led0
-    fullpath: ethernet_one_gbe_skarab_axi/led0
-    tag: xps:gpio
-    io_group: 'ROACH:led'
-    io_group_real: led
-    io_group_custom: 0
-    io_dir: out
-    arith_type: Boolean
-    bitwidth: 1
-    bin_pt: 0
-    bit_index: 0
-    sample_period: 1
-    use_single_ended: off
-    use_ddr: off
-    reg_iob: on
-    reg_clk_phase: 0
-    termination: None
-  ethernet_one_gbe_skarab_axi/led1:
-    name: led1
-    fullpath: ethernet_one_gbe_skarab_axi/led1
-    tag: xps:gpio
-    io_group: 'ROACH:led'
-    io_group_real: led
-    io_group_custom: 0
-    io_dir: out
-    arith_type: Boolean
-    bitwidth: 1
-    bin_pt: 0
-    bit_index: 1
-    sample_period: 1
-    use_single_ended: off
-    use_ddr: off
-    reg_iob: on
-    reg_clk_phase: 0
-    termination: None
-  ethernet_one_gbe_skarab_axi/led2:
-    name: led2
-    fullpath: ethernet_one_gbe_skarab_axi/led2
-    tag: xps:gpio
-    io_group: 'ROACH:led'
-    io_group_real: led
-    io_group_custom: 0
-    io_dir: out
-    arith_type: Boolean
-    bitwidth: 1
-    bin_pt: 0
-    bit_index: 2
-    sample_period: 1
-    use_single_ended: off
-    use_ddr: off
-    reg_iob: on
-    reg_clk_phase: 0
-    termination: None
-  ethernet_one_gbe_skarab_axi/led3:
-    name: led3
-    fullpath: ethernet_one_gbe_skarab_axi/led3
-    tag: xps:gpio
-    io_group: 'ROACH:led'
-    io_group_real: led
-    io_group_custom: 0
-    io_dir: out
-    arith_type: Boolean
-    bitwidth: 1
-    bin_pt: 0
-    bit_index: 3
-    sample_period: 1
-    use_single_ended: off
-    use_ddr: off
-    reg_iob: on
-    reg_clk_phase: 0
-    termination: None
-  ethernet_one_gbe_skarab_axi/led4:
-    name: led4
-    fullpath: ethernet_one_gbe_skarab_axi/led4
-    tag: xps:gpio
-    io_group: 'ROACH:led'
-    io_group_real: led
-    io_group_custom: 0
-    io_dir: out
-    arith_type: Boolean
-    bitwidth: 1
-    bin_pt: 0
-    bit_index: 4
-    sample_period: 1
-    use_single_ended: off
-    use_ddr: off
-    reg_iob: on
-    reg_clk_phase: 0
-    termination: None
-  ethernet_one_gbe_skarab_axi/led5:
-    name: led5
-    fullpath: ethernet_one_gbe_skarab_axi/led5
-    tag: xps:gpio
-    io_group: 'ROACH:led'
-    io_group_real: led
-    io_group_custom: 0
-    io_dir: out
-    arith_type: Boolean
-    bitwidth: 1
-    bin_pt: 0
-    bit_index: 5
-    sample_period: 1
-    use_single_ended: off
-    use_ddr: off
-    reg_iob: on
-    reg_clk_phase: 0
-    termination: None
-  ethernet_one_gbe_skarab_axi/led6:
-    name: led6
-    fullpath: ethernet_one_gbe_skarab_axi/led6
-    tag: xps:gpio
-    io_group: 'ROACH:led'
-    io_group_real: led
-    io_group_custom: 0
-    io_dir: out
-    arith_type: Boolean
-    bitwidth: 1
-    bin_pt: 0
-    bit_index: 6
-    sample_period: 1
-    use_single_ended: off
-    use_ddr: off
-    reg_iob: on
-    reg_clk_phase: 0
-    termination: None
-  ethernet_one_gbe_skarab_axi/led7:
-    name: led7
-    fullpath: ethernet_one_gbe_skarab_axi/led7
-    tag: xps:gpio
-    io_group: 'ROACH:led'
-    io_group_real: led
-    io_group_custom: 0
-    io_dir: out
-    arith_type: Boolean
-    bitwidth: 1
-    bin_pt: 0
-    bit_index: 7
-    sample_period: 1
-    use_single_ended: off
-    use_ddr: off
-    reg_iob: on
-    reg_clk_phase: 0
-    termination: None
   ethernet_one_gbe_skarab_axi/pkt_ctrs1/ss/bram:
     name: bram
     fullpath: ethernet_one_gbe_skarab_axi/pkt_ctrs1/ss/bram
@@ -567,6 +409,20 @@ yellow_blocks:
     arith_types: 0
     sim_port: off
     show_format: on
+  ethernet_one_gbe_skarab_axi/software_register:
+    name: software_register
+    fullpath: ethernet_one_gbe_skarab_axi/software_register
+    tag: xps:sw_reg
+    io_dir: To Processor
+    io_delay: 0
+    init_val: 0
+    sample_period: 1
+    names: reg
+    bitwidths: 32
+    bin_pts: 0
+    arith_types: 0
+    sim_port: off
+    show_format: on
   ethernet_one_gbe_skarab_axi/tx_afull1:
     name: tx_afull1
     fullpath: ethernet_one_gbe_skarab_axi/tx_afull1
@@ -640,7 +496,7 @@ user_modules:
   ethernet_one_gbe_skarab_axi:
     clock: clk
     ports:
-      - ethernet_one_gbe_skarab_axi_software_register_user_data_out
+      - ethernet_one_gbe_skarab_axi_addr_soft_control_user_data_out
       - ethernet_one_gbe_skarab_axi_d3_ss_bram_data_out
       - skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out
       - ethernet_one_gbe_skarab_axi_d4_ss_bram_data_out
@@ -678,21 +534,12 @@ user_modules:
       - ethernet_one_gbe_skarab_axi_d5_ss_bram_we
       - ethernet_one_gbe_skarab_axi_d5_ss_status_user_data_in
       - ethernet_one_gbe_skarab_axi_data_rx_valmir_user_data_in
-      - ethernet_one_gbe_skarab_axi_software_register_user_data_in
       - ethernet_one_gbe_skarab_axi_err_marker1_user_data_in
       - ethernet_one_gbe_skarab_axi_err_pkt_ctr1_user_data_in
       - ethernet_one_gbe_skarab_axi_err_pkt_ctr_step1_user_data_in
       - ethernet_one_gbe_skarab_axi_err_ramp1_user_data_in
       - ethernet_one_gbe_skarab_axi_err_valid_raw1_user_data_in
       - ethernet_one_gbe_skarab_axi_err_walk1_user_data_in
-      - ethernet_one_gbe_skarab_axi_led0_gateway
-      - ethernet_one_gbe_skarab_axi_led1_gateway
-      - ethernet_one_gbe_skarab_axi_led2_gateway
-      - ethernet_one_gbe_skarab_axi_led3_gateway
-      - ethernet_one_gbe_skarab_axi_led4_gateway
-      - ethernet_one_gbe_skarab_axi_led5_gateway
-      - ethernet_one_gbe_skarab_axi_led6_gateway
-      - ethernet_one_gbe_skarab_axi_led7_gateway
       - ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_addr
       - ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_data_in
       - ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_we
@@ -705,6 +552,7 @@ user_modules:
       - ethernet_one_gbe_skarab_axi_rx_eof1_user_data_in
       - ethernet_one_gbe_skarab_axi_rx_overrun1_user_data_in
       - ethernet_one_gbe_skarab_axi_rx_valid1_user_data_in
+      - ethernet_one_gbe_skarab_axi_software_register_user_data_in
       - ethernet_one_gbe_skarab_axi_tx_afull1_user_data_in
       - ethernet_one_gbe_skarab_axi_tx_one_gbe_app_rx_ack
       - ethernet_one_gbe_skarab_axi_tx_one_gbe_app_rx_rst

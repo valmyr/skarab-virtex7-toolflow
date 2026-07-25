@@ -1,7 +1,31 @@
+#////////////////////////////////////////////////////////////////////////////////
+# Company: VIRTUS/UFCG
+# Engineer: Valmir F. Silva 
+# 
+# Create Date: 06/25/2026 00:20:32 AM
+# Design Name: 
+# Module Name: rx_host
+# Project Name: 
+# Target Devices: 
+# Tool Versions: 
+# Description: 
+# 
+# Dependencies: 
+# 
+# Revision:
+# Revision 0.01 - File Created
+# Additional Comments:
+# 
+#////////////////////////////////////////////////////////////////////////////////
+
+
 #sudo ethtool -K enp4s0 rx-checksum off
 #sudo ip addr add 10.42.0.31/24 dev enp4s0
 #gtkterm -b 8 -t 1 -s 115200 -p /dev/ttyUSB7
 #sudo screen /dev/ttyUSB7 115200
+
+DEBUG = False
+
 import socket
 from matplotlib import pyplot as plt
 colab = False
@@ -61,8 +85,9 @@ while(True):
         array_d = struct.unpack(f'>{256}Q',data)
         ax.plot(array_d[4:252],color='red')
         ax_set = ax.set_ylim(0,256)
-        for i in range(0,256):
-            print(f"\033[91m FPGA \033[00m -> \033[92m PC \033[00m:Word[{i}]={array_d[i]}")
-        print(j,"============================Recebido=====================",j)
-        plt.pause(1 / fs)
+        if(DEBUG):
+            for i in range(0,256):
+                print(f"\033[91m FPGA \033[00m -> \033[92m PC \033[00m:Word[{i}]={array_d[i]}")
+            print(j,"============================Recebido=====================",j)
+        plt.pause(1 / 100)
         j+=1

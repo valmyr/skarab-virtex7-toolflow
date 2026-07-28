@@ -86,18 +86,27 @@ data =(data2).tolist()
 data3 =(np.ones(N,dtype=np.int64)).tolist()
 #data =(narange(start=0,stop=N,dtype=np.int64)).tolist()
 print(len(data))
-k=0
+
+zeros = np.zeros(256,dtype=np.int64).tolist()
+k=2
+
+t0 = time.time()
 try:
+    t0 = time.time()
+
     while(True):
         os.system('clear')
         #plt.ion()
         #ax.cla()
-        data1=np.array(2**4*np.sin(2*np.pi*(f1/fs)*t)+2**4,dtype=np.int64)+ k
+        data1 = np.round(2**4*np.sin(2*np.pi*(f1/fs)*t) + 2**4).astype(np.int64) + k
         #data1=np.ones(N-8,dtype=np.int64)*35
         data2 =np.concatenate((frame_tx,data1,frame_rx))
         data =(data2).tolist()
         data_pack = struct.pack(f'>{len(data)}Q', *data)
         sock.sendto(data_pack, (SERVER_IP, SERVER_PORT))
+
+        #data_pack = struct.pack(f'>{len(zeros)}Q', *zeros)
+        #sock.sendto(data_pack, (SERVER_IP, SERVER_PORT))
         #data_pack = struct.pack(f'>{len(data)}Q', *data)
         #sock.sendto(data_pack, (SERVER_IP, SERVER_PORT))
         #print(data_pack)
@@ -108,10 +117,13 @@ try:
                 print(f"\033[91m PC \033[00m -> \033[92m FPGA \033[00m:Word[{i}]={data[i]}")
             print("============================Enviado=====================",k)
 
-        #time.sleep(100)
+        #time.sleep(1/50)
         #plt.pause(1 / 100000000.0)
-        if(k <=200-2*(2**4)):k+=1
-        else: k =0
+        if(abs(time.time() - t0) >= 1e-1): 
+            k+=1
+            t0 = time.time()
+
+        if(k >= 256 - 2*2**4): k =0
         break
 
         #if(k==200):break

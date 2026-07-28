@@ -83,11 +83,11 @@ while(True):
         data, addr = sock.recvfrom((256)*8)  # Buffer de 2048 bytes
         os.system('clear')
         array_d = struct.unpack(f'>{256}Q',data)
-        ax.plot(array_d[4:252],color='red')
+        ax.plot(array_d,color='red')
         ax_set = ax.set_ylim(0,256)
         if(DEBUG):
             for i in range(0,256):
                 print(f"\033[91m FPGA \033[00m -> \033[92m PC \033[00m:Word[{i}]={array_d[i]}")
             print(j,"============================Recebido=====================",j)
-        plt.pause(1 / 100000000.0)
+        plt.pause(1 /100000000000000000.0)
         j+=1

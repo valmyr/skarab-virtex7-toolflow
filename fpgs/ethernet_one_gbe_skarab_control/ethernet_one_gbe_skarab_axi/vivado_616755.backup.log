@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Jul 27 21:06:55 2026
-# Process ID: 427920
+# Start of session at: Tue Jul 28 16:36:46 2026
+# Process ID: 616755
 # Current directory: /home/valmyrsilva07/teste12345/mlib_devel
 # Command line: vivado -jou /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/vivado.jou -log /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/vivado.log -mode batch -source /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/gogogo.tcl
 # Log file: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/vivado.log
@@ -248,7 +248,7 @@ CRITICAL WARNING: [IP_Flow 19-4299] Failed to copy '/home/valmyrsilva07/teste123
 # import_files -force -fileset constrs_1 /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/user_const.xdc
 # set_property top top [current_fileset]
 # update_compile_order -fileset sources_1
-update_compile_order: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 1869.738 ; gain = 408.199 ; free physical = 44453 ; free virtual = 53330
+update_compile_order: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 1876.438 ; gain = 414.137 ; free physical = 47642 ; free virtual = 56518
 # if {[llength [glob -nocomplain [get_property directory [current_project]]/myproj.srcs/sources_1/imports/*.coe]] > 0} {
 # file copy -force {*}[glob [get_property directory [current_project]]/myproj.srcs/sources_1/imports/*.coe] [get_property directory [current_project]]/myproj.srcs/sources_1/ip/
 # }
@@ -258,7 +258,7 @@ update_compile_order: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB
 # import_files -force -fileset constrs_1 /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/Constraints/soc_version.xdc
 # set_property ip_repo_paths /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/cont_microblaze/ipshared/peralex.com/ [current_project]
 # update_compile_order -fileset sources_1
-update_compile_order: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 1869.738 ; gain = 0.000 ; free physical = 44523 ; free virtual = 53393
+update_compile_order: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 1876.438 ; gain = 0.000 ; free physical = 47652 ; free virtual = 56530
 # reset_run synth_1
 # launch_runs synth_1 -jobs 32
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4'...
@@ -283,7 +283,7 @@ INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/valmyrsilva07/virt
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'arp_cache'...
 INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/tx_packet_ctrl_fifo/tx_packet_ctrl_fifo.xci' is already up-to-date
 INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/tx_packet_fifo/tx_packet_fifo.xci' is already up-to-date
-[Mon Jul 27 21:07:38 2026] Launched arp_cache_synth_1, ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i1_synth_1, ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0_synth_1, ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i3_synth_1, ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4_synth_1, ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i2_synth_1, ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i0_synth_1...
+[Tue Jul 28 16:37:29 2026] Launched arp_cache_synth_1, ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i1_synth_1, ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0_synth_1, ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i3_synth_1, ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4_synth_1, ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i2_synth_1, ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i0_synth_1...
 Run output will be captured here:
 arp_cache_synth_1: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/arp_cache_synth_1/runme.log
 ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i1_synth_1: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i1_synth_1/runme.log
@@ -292,11 +292,11 @@ ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i3_synth_1: /home/valmyrsilva
 ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4_synth_1: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4_synth_1/runme.log
 ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i2_synth_1: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i2_synth_1/runme.log
 ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i0_synth_1: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i0_synth_1/runme.log
-[Mon Jul 27 21:07:38 2026] Launched synth_1...
+[Tue Jul 28 16:37:29 2026] Launched synth_1...
 Run output will be captured here: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/runme.log
-launch_runs: Time (s): cpu = 00:00:25 ; elapsed = 00:00:18 . Memory (MB): peak = 1935.656 ; gain = 65.918 ; free physical = 44487 ; free virtual = 53353
+launch_runs: Time (s): cpu = 00:00:26 ; elapsed = 00:00:18 . Memory (MB): peak = 1935.418 ; gain = 58.980 ; free physical = 47794 ; free virtual = 56678
 # wait_on_run synth_1
-[Mon Jul 27 21:07:38 2026] Waiting for synth_1 to finish...
+[Tue Jul 28 16:37:29 2026] Waiting for synth_1 to finish...
 
 *** Running vivado
     with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
@@ -430,10 +430,32 @@ WARNING: [Runs 36-546] Tool Report Strategy 'No Reports' from file '/tools/Xilin
 WARNING: [Runs 36-546] Tool Report Strategy 'Vivado Synthesis Default Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRS2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRS2017.psg'
 WARNING: [Runs 36-546] Tool Report Strategy 'No Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRS2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRS2017.psg'
 source top.tcl -notrace
-Abnormal program termination (11)
-Please check '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/hs_err_pid430509.log' for details
-[Mon Jul 27 21:08:26 2026] synth_1 finished
-wait_on_run: Time (s): cpu = 00:02:30 ; elapsed = 00:00:48 . Memory (MB): peak = 1935.656 ; gain = 0.000 ; free physical = 44483 ; free virtual = 53356
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/cont_microblaze/ipshared/peralex.com'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+Command: synth_design -top top -part xc7vx690tffg1927-2
+Starting synth_design
+INFO: [IP_Flow 19-2162] IP 'packet_byte_count_fifo' is locked:
+* IP 'packet_byte_count_fifo' is configured as a user-managed IP. In this mode it is the user's responsibility to manage all IP files. * IP definition 'FIFO Generator (13.1)' for IP 'packet_byte_count_fifo' (customized with software release 2016.2) has a newer minor version in the IP Catalog. * IP definition 'FIFO Generator (13.1)' for IP 'packet_byte_count_fifo' (customized with software release 2016.2) has a different revision in the IP Catalog.
+INFO: [IP_Flow 19-2162] IP 'gmii_to_xaui_fifo' is locked:
+* IP 'gmii_to_xaui_fifo' is configured as a user-managed IP. In this mode it is the user's responsibility to manage all IP files. * IP definition 'FIFO Generator (13.1)' for IP 'gmii_to_xaui_fifo' (customized with software release 2016.2) has a newer minor version in the IP Catalog. * IP definition 'FIFO Generator (13.1)' for IP 'gmii_to_xaui_fifo' (customized with software release 2016.2) has a different revision in the IP Catalog.
+INFO: [IP_Flow 19-2162] IP 'xaui_to_gmii_fifo' is locked:
+* IP 'xaui_to_gmii_fifo' is configured as a user-managed IP. In this mode it is the user's responsibility to manage all IP files. * IP definition 'FIFO Generator (13.1)' for IP 'xaui_to_gmii_fifo' (customized with software release 2016.2) has a newer minor version in the IP Catalog. * IP definition 'FIFO Generator (13.1)' for IP 'xaui_to_gmii_fifo' (customized with software release 2016.2) has a different revision in the IP Catalog.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Device 21-403] Loading part xc7vx690tffg1927-2
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 620520 
+ERROR: [Synth 8-2715] syntax error near else [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:263]
+INFO: [Synth 8-2350] module control_axi_stream_gbe ignored due to previous errors [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:60]
+Failed to read verilog '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v'
+INFO: [Common 17-83] Releasing license: Synthesis
+10 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 28 16:38:25 2026...
+[Tue Jul 28 16:38:25 2026] synth_1 finished
+wait_on_run: Time (s): cpu = 00:02:38 ; elapsed = 00:00:57 . Memory (MB): peak = 1935.418 ; gain = 0.000 ; free physical = 47640 ; free virtual = 56538
 # open_run synth_1
 ERROR: [Common 17-69] Command failed: Run 'synth_1' failed. Unable to open
-INFO: [Common 17-206] Exiting Vivado at Mon Jul 27 21:08:26 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 28 16:38:25 2026...

@@ -77,12 +77,13 @@ reg [3:0] current_state, next_state;
 always@(posedge clk, negedge a_sync_nrst)begin
     if(!a_sync_nrst)begin
         current_state <=0;
-        event_cmd_out <= 0;
+        event_cmd_out<=0;
     end else begin
         current_state <= next_state;
         event_cmd_out <= rx_valid &&  current_state == CMD_EVENT && frame_cmd[31 :24] == rx_data;
     end
 end
+
 
 
 always@(*)begin

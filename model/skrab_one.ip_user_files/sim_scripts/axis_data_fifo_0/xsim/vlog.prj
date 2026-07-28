@@ -1,4 +1,4 @@
-verilog xil_defaultlib -i "../../../../../../../media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/rsb/busdef" --include "../../../ipstatic/hdl" \
+verilog xil_defaultlib -i "../../../../../../../../../media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/rsb/busdef" --include "../../../ipstatic/hdl" \
 "../../../../skrab_one.gen/sources_1/ip/axis_data_fifo_0/sim/axis_data_fifo_0.v" \
 
 verilog xil_defaultlib "glbl.v"

@@ -16,7 +16,7 @@
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
-// 
+// Square Kilometer Array Reconfigurable Application Board - SKARAB
 //////////////////////////////////////////////////////////////////////////////////
 
 
@@ -42,11 +42,12 @@ module control_axi_stream_gbe(
     output reg        m_axis_tlast,
     input  wire       m_axis_tready,
     //Debug Sinais
-    input  wire [7:0] debug_addr_data,
-    output reg [7:0]  debug_rx_data
+    input  wire [7:0] debug_addr_data_gbe,
+    input  wire [7:0] debug_addr_data_fifo,
+    output reg [7:0]  debug_rx_data_mem_gbe,
+    output reg [7:0]  debug_rx_data_mem_fifo
+
 );
-
-
 
 
 
@@ -79,38 +80,36 @@ reg [7:0]debug_local_data;
 reg [31:0]counter_dec;
 wire ena_dec;
 
+reg  [7:0] counter_tx;
+reg  [7:0] next_state_counter_tx;
+
 reg tx_ena_out;
 reg sync_data_valid_tx;
 always@(posedge clk, negedge a_sync_nrst)begin
     if(!a_sync_nrst)begin
-        counter <= 0;
         addr_data_local <=8'h00;
         reg_sync_rx_valid    <= 0; 
         addr_data_write <=0;
         sync_reg_start_frame_reception<=0;
         sync_reg_start_frame_transmission <=0;
-        rx_data_ff0   <= 0;
-        rx_data_ff1   <= 0;
-        rx_data_ff2   <= 0;
         addr_data_local_reg <= 0;
         tx_data <= 8'hca;
+        counter_tx <= 0;
+        rx_data_ff1 <=0;
     end else begin
         //Lógica de escrita no buffer
-        if(rx_valid && current_state_rx == RX_DATA)begin
-            mem[counter]  <= rx_data;
-            counter       <=  counter +1;
-            rx_data_ff0   <= rx_data;
-            rx_data_ff1   <= rx_data_ff0;
-            rx_data_ff2   <= rx_data_ff1;
-            rx_data_ff3   <= rx_data_ff2;
-        end else begin
-            mem[counter]  <= mem[counter];
-            counter       <= counter < tx_pkt_len ? counter:      0;
-            rx_data_ff0   <= rx_data_ff0 ;
-            rx_data_ff1   <= rx_data_ff1 ;
-            rx_data_ff2   <= rx_data_ff2 ;
-            rx_data_ff3   <= rx_data_ff3 ;
-
+        rx_data_ff1 <= rx_valid ? rx_data :rx_data_ff1;
+        if(rx_valid)begin
+            counter_tx       <=  next_state_counter_tx;
+            if((current_state_rx == RX_DATA)  && counter_tx < 248) begin 
+                mem[counter_tx]  <= rx_data_ff1;
+            end else begin
+                mem[counter_tx]  <= 8'h00;
+            end
+        end
+        else begin
+            counter_tx <= counter_tx;
+            mem[counter_tx]  <= mem[counter_tx];
         end
         //Lógica de leitura no buffer
         if(ena_dec && current_state_tx == TX_DATA )begin
@@ -159,7 +158,7 @@ reg [7:0] addr_data_t;
             sync_data_valid_tx <= !ena_dec && sync_data_valid_tx0;
             tx_ena_out  <=tx_ena_out_w;
             sync_dec <=!tx_ena_out && tx_ena_out_w;
-            debug_local_data = mem[counter];
+            debug_local_data <= mem[counter];
         end
     end
 
@@ -167,20 +166,24 @@ reg [7:0] addr_data_t;
     always@(*)begin
         case(current_state_rx)
             IDLE:begin
-                casex(sync_reg_start_frame_reception)
+                case(sync_reg_start_frame_reception)
                     1'b1:next_state_rx = RX_DATA;
                     1'b0:next_state_rx = IDLE;
                     default:next_state_rx = IDLE;
                 endcase
+
+                next_state_counter_tx = 0;
             end
             RX_DATA:begin
-                casex(counter < tx_pkt_len )
+                next_state_counter_tx = counter_tx +1;
+                case(counter_tx < tx_pkt_len )
                     1'b1:next_state_rx = RX_DATA;
                     1'b0:next_state_rx = IDLE;
                     default:next_state_rx = IDLE;
                 endcase
             end
             default:begin
+                next_state_counter_tx = 0;
                 next_state_rx = IDLE;
             end
         endcase
@@ -190,7 +193,7 @@ reg [7:0] addr_data_t;
     always@(*)begin
         case(current_state_tx)
             IDLE:begin
-                case(start_frame_transmission)//Atualização do estado de transmissão com base na recepção
+                case(sync_reg_start_frame_transmission)//Atualização do estado de transmissão com base na recepção
                     1'b1:next_state_tx = TX_DATA;
                     1'b0:next_state_tx = IDLE;
                     default:next_state_tx = IDLE;
@@ -230,7 +233,7 @@ assign addr_data_local_mux_r = counter;
 assign tx_eof = (addr_data_local == tx_pkt_len - 1) ;
 assign tx_val = (tx_ena_out && ena_dec);
 
-
+//Recepção SKARAB
 cmd_sync_detector cmd_start_frame_reception(
         .clk(clk),
         .ce(ce),
@@ -240,13 +243,13 @@ cmd_sync_detector cmd_start_frame_reception(
         .frame_cmd(32'h72_65_63_65), //Frame a ser detectado
         .event_cmd_out(start_frame_reception)
 );
-
+//Transmissão SKARAB
 cmd_sync_detector cmd_frame_transmission(
         .clk(clk),
         .ce(ce),
         .a_sync_nrst(a_sync_nrst),
-        .rx_data(rx_data),
-        .rx_valid(rx_valid),
+        .rx_data(rx_data),     //FIFO Sinais Temporário
+        .rx_valid(rx_valid),//FIFO Sinais Temporário
         .frame_cmd(32'h74_72_61_6E),//Frame a ser detectado
         .event_cmd_out(start_frame_transmission)
 );
@@ -293,7 +296,6 @@ always@(posedge clk, negedge a_sync_nrst)begin
         m_addr_data  <= m_addr_data_next;
         //Dado real
         m_axis_tdata <= mem[m_addr_data];
-       // m_axis_tdata <= m_addr_data; //Apenas um contador simples
 
     end
 end
@@ -415,7 +417,8 @@ end
 //
 //end
 
-always@(*) debug_rx_data = mem_tmp[debug_addr_data];
-//always@(*) debug_rx_data = mem[10];
+always@(*) debug_rx_data_mem_gbe = mem[debug_addr_data_gbe];
+always@(*) debug_rx_data_mem_fifo = mem_tmp[debug_addr_data_fifo];
+
 
 endmodule

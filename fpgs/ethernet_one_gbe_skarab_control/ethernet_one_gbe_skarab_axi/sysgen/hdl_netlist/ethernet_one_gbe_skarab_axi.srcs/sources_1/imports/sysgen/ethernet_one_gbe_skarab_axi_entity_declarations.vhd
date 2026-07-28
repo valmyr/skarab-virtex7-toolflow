@@ -991,7 +991,8 @@ entity control_axi_stream_gbe_wrapper is
     s_axis_tdata : in std_logic_vector(7 downto 0);
     s_axis_tlast : in std_logic;
     m_axis_tready : in std_logic;
-    debug_addr_data : in std_logic_vector(7 downto 0);
+    debug_addr_data_gbe : in std_logic_vector(7 downto 0);
+    debug_addr_data_fifo : in std_logic_vector(7 downto 0);
     tx_data : out std_logic_vector(7 downto 0);
     tx_val : out std_logic;
     tx_eof : out std_logic;
@@ -999,7 +1000,8 @@ entity control_axi_stream_gbe_wrapper is
     m_axis_tvalid : out std_logic;
     m_axis_tdata : out std_logic_vector(7 downto 0);
     m_axis_tlast : out std_logic;
-    debug_rx_data : out std_logic_vector(7 downto 0);
+    debug_rx_data_mem_gbe : out std_logic_vector(7 downto 0);
+    debug_rx_data_mem_fifo : out std_logic_vector(7 downto 0);
     clk : in std_logic;
     ce : in std_logic
   );
@@ -1013,7 +1015,8 @@ architecture structural of control_axi_stream_gbe_wrapper is
   signal s_axis_tdata_net : std_logic_vector(7 downto 0);
   signal s_axis_tlast_net : std_logic;
   signal m_axis_tready_net : std_logic;
-  signal debug_addr_data_net : std_logic_vector(7 downto 0);
+  signal debug_addr_data_gbe_net : std_logic_vector(7 downto 0);
+  signal debug_addr_data_fifo_net : std_logic_vector(7 downto 0);
   signal tx_data_net : std_logic_vector(7 downto 0);
   signal tx_val_net : std_logic;
   signal tx_eof_net : std_logic;
@@ -1021,7 +1024,8 @@ architecture structural of control_axi_stream_gbe_wrapper is
   signal m_axis_tvalid_net : std_logic;
   signal m_axis_tdata_net : std_logic_vector(7 downto 0);
   signal m_axis_tlast_net : std_logic;
-  signal debug_rx_data_net : std_logic_vector(7 downto 0);
+  signal debug_rx_data_mem_gbe_net : std_logic_vector(7 downto 0);
+  signal debug_rx_data_mem_fifo_net : std_logic_vector(7 downto 0);
   signal clk_net : std_logic;
   signal ce_net : std_logic;
   component control_axi_stream_gbe is
@@ -1034,7 +1038,8 @@ architecture structural of control_axi_stream_gbe_wrapper is
       s_axis_tdata : in std_logic_vector(7 downto 0);
       s_axis_tlast : in std_logic;
       m_axis_tready : in std_logic;
-      debug_addr_data : in std_logic_vector(7 downto 0);
+      debug_addr_data_gbe : in std_logic_vector(7 downto 0);
+      debug_addr_data_fifo : in std_logic_vector(7 downto 0);
       tx_data : out std_logic_vector(7 downto 0);
       tx_val : out std_logic;
       tx_eof : out std_logic;
@@ -1042,7 +1047,8 @@ architecture structural of control_axi_stream_gbe_wrapper is
       m_axis_tvalid : out std_logic;
       m_axis_tdata : out std_logic_vector(7 downto 0);
       m_axis_tlast : out std_logic;
-      debug_rx_data : out std_logic_vector(7 downto 0);
+      debug_rx_data_mem_gbe : out std_logic_vector(7 downto 0);
+      debug_rx_data_mem_fifo : out std_logic_vector(7 downto 0);
       clk : in std_logic;
       ce : in std_logic
     );
@@ -1056,7 +1062,8 @@ begin
   s_axis_tdata_net <= s_axis_tdata;
   s_axis_tlast_net <= s_axis_tlast;
   m_axis_tready_net <= m_axis_tready;
-  debug_addr_data_net <= debug_addr_data;
+  debug_addr_data_gbe_net <= debug_addr_data_gbe;
+  debug_addr_data_fifo_net <= debug_addr_data_fifo;
   tx_data <= tx_data_net;
   tx_val <= tx_val_net;
   tx_eof <= tx_eof_net;
@@ -1064,7 +1071,8 @@ begin
   m_axis_tvalid <= m_axis_tvalid_net;
   m_axis_tdata <= m_axis_tdata_net;
   m_axis_tlast <= m_axis_tlast_net;
-  debug_rx_data <= debug_rx_data_net;
+  debug_rx_data_mem_gbe <= debug_rx_data_mem_gbe_net;
+  debug_rx_data_mem_fifo <= debug_rx_data_mem_fifo_net;
   clk_net <= clk;
   ce_net <= ce;
   control_axi_stream_gbe_inst : control_axi_stream_gbe
@@ -1077,7 +1085,8 @@ begin
       s_axis_tdata => s_axis_tdata_net,
       s_axis_tlast => s_axis_tlast_net,
       m_axis_tready => m_axis_tready_net,
-      debug_addr_data => debug_addr_data_net,
+      debug_addr_data_gbe => debug_addr_data_gbe_net,
+      debug_addr_data_fifo => debug_addr_data_fifo_net,
       tx_data => tx_data_net,
       tx_val => tx_val_net,
       tx_eof => tx_eof_net,
@@ -1085,7 +1094,8 @@ begin
       m_axis_tvalid => m_axis_tvalid_net,
       m_axis_tdata => m_axis_tdata_net,
       m_axis_tlast => m_axis_tlast_net,
-      debug_rx_data => debug_rx_data_net,
+      debug_rx_data_mem_gbe => debug_rx_data_mem_gbe_net,
+      debug_rx_data_mem_fifo => debug_rx_data_mem_fifo_net,
       clk => clk_net,
       ce => ce_net
     );

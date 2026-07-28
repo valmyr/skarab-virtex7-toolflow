@@ -25,7 +25,9 @@ function control_axi_stream_gbe_config(this_block)
   this_block.addSimulinkInport('s_axis_tdata');
   this_block.addSimulinkInport('s_axis_tlast');
   this_block.addSimulinkInport('m_axis_tready');
-  this_block.addSimulinkInport('debug_addr_data');
+  this_block.addSimulinkInport('debug_addr_data_gbe');
+  this_block.addSimulinkInport('debug_addr_data_fifo');
+
 
   this_block.addSimulinkOutport('tx_data');
   this_block.addSimulinkOutport('tx_val');
@@ -34,7 +36,8 @@ function control_axi_stream_gbe_config(this_block)
   this_block.addSimulinkOutport('m_axis_tvalid');
   this_block.addSimulinkOutport('m_axis_tdata');
   this_block.addSimulinkOutport('m_axis_tlast');
-  this_block.addSimulinkOutport('debug_rx_data');
+  this_block.addSimulinkOutport('debug_rx_data_mem_gbe');
+  this_block.addSimulinkOutport('debug_rx_data_mem_fifo');
 
   tx_data_port = this_block.port('tx_data');
   tx_data_port.setType('UFix_8_0');
@@ -55,8 +58,11 @@ function control_axi_stream_gbe_config(this_block)
   m_axis_tlast_port = this_block.port('m_axis_tlast');
   m_axis_tlast_port.setType('UFix_1_0');
   m_axis_tlast_port.useHDLVector(false);
-  debug_rx_data_port = this_block.port('debug_rx_data');
-  debug_rx_data_port.setType('UFix_8_0');
+  debug_rx_data_mem_gbe_port = this_block.port('debug_rx_data_mem_gbe');
+  debug_rx_data_mem_gbe_port.setType('UFix_8_0');
+  debug_rx_data_mem_fifo_port = this_block.port('debug_rx_data_mem_fifo');
+  debug_rx_data_mem_fifo_port.setType('UFix_8_0');
+
 
   % -----------------------------
   if (this_block.inputTypesKnown)
@@ -104,9 +110,14 @@ function control_axi_stream_gbe_config(this_block)
 
     this_block.port('m_axis_tready').useHDLVector(false);
 
-    if (this_block.port('debug_addr_data').width ~= 8);
-      this_block.setError('Input data type for port "debug_addr_data" must have width=8.');
+    if (this_block.port('debug_addr_data_gbe').width ~= 8);
+      this_block.setError('Input data type for port "debug_addr_data_gbe" must have width=8.');
     end
+
+    if (this_block.port('debug_rx_data_mem_fifo').width ~= 8);
+      this_block.setError('Input data type for port "debug_rx_data_mem_fifo" must have width=8.');
+    end
+
 
   end  % if(inputTypesKnown)
   % -----------------------------

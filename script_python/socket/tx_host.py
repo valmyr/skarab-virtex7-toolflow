@@ -25,8 +25,20 @@ import numpy as np
 import struct
 import os
 
+from matplotlib import pyplot as plt
 
-DEBUG = False
+DEBUG = True
+###########--Plot em tempo Real----###############
+##Captura do evento de fechar a janela
+def ao_fechar(event):
+    global rodando
+    rodando = False
+    print("\nJanela fechada. Loop encerrado.")
+
+fig, ax = plt.subplots(figsize=(12, 4))
+ax.set_title("e^At*sint(Bt)")
+fig.canvas.mpl_connect('close_event', ao_fechar)
+
 
 SERVER_IP = "10.42.0.200"
 SERVER_PORT = 65535
@@ -48,7 +60,10 @@ frame_rx = np.array(([0x72,0x65,0x63,0x65]),dtype=np.int64)
 frame_tx = np.array(([0x74,0x72,0x61,0x6E]),dtype=np.int64)
 
 frame_tx = np.array(([0x65,0x63,0x65,0x72]),dtype=np.int64)
+
+
 frame_rx = np.array(([0x6E,0x61,0x72,0x74]),dtype=np.int64)
+frame_tx = np.array(([0x65,0x63,0x65,0x72]),dtype=np.int64)
 
 
 
@@ -65,7 +80,7 @@ t = np.arange(0,N,1)
 
 data1=np.arange(start=0,stop=N-8,dtype=np.int64)+   3
 #data1=np.ones(N-8,dtype=np.int64)*35
-data2 =np.concatenate((frame_rx,data1,frame_tx))
+data2 =np.concatenate((data1[0:128],frame_rx,data1[0:128],frame_tx))
 t = np.arange(0,N-8,1)
 data =(data2).tolist()
 data3 =(np.ones(N,dtype=np.int64)).tolist()
@@ -75,22 +90,30 @@ k=0
 try:
     while(True):
         os.system('clear')
-        data1=np.array(2**4*np.sin(2*np.pi*(f1/fs)*t)+2**4,dtype=np.int64)+  k
+        #plt.ion()
+        #ax.cla()
+        data1=np.array(2**4*np.sin(2*np.pi*(f1/fs)*t)+2**4,dtype=np.int64)+ k
         #data1=np.ones(N-8,dtype=np.int64)*35
-        data2 =np.concatenate((frame_rx,data1,frame_tx))
+        data2 =np.concatenate((frame_tx,data1,frame_rx))
         data =(data2).tolist()
         data_pack = struct.pack(f'>{len(data)}Q', *data)
         sock.sendto(data_pack, (SERVER_IP, SERVER_PORT))
         #data_pack = struct.pack(f'>{len(data)}Q', *data)
         #sock.sendto(data_pack, (SERVER_IP, SERVER_PORT))
         #print(data_pack)
+        #ax.plot(data2,color='red')
+        #ax_set = ax.set_ylim(0,256)
         if(DEBUG):
             for i in range(0,N):
                 print(f"\033[91m PC \033[00m -> \033[92m FPGA \033[00m:Word[{i}]={data[i]}")
             print("============================Enviado=====================",k)
-        k+=1
-        time.sleep(1/100)
-        if(k >=256-2*(2**4)):k=0
+
+        #time.sleep(100)
+        #plt.pause(1 / 100000000.0)
+        if(k <=200-2*(2**4)):k+=1
+        else: k =0
+        break
+
         #if(k==200):break
 except KeyboardInterrupt:
     print("Finalizado pelo usuário")

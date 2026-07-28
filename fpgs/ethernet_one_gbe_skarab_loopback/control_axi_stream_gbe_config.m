@@ -15,7 +15,7 @@ function control_axi_stream_gbe_config(this_block)
 
   % System Generator has to assume that your entity  has a combinational feed through; 
   %   if it  doesn't, then comment out the following line:
-  this_block.tagAsCombinational;
+  %this_block.tagAsCombinational;
 
   this_block.addSimulinkInport('a_sync_nrst');
   this_block.addSimulinkInport('rx_valid');

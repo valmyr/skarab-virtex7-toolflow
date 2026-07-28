@@ -56,9 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 8
 set_param general.usePosixSpawnForFork 1
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7vx485tffg1157-1
 
@@ -67,7 +65,6 @@ set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_property webtalk.parent_dir /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.cache/wt [current_project]
 set_property parent.project_path /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.cache/ip [current_project]

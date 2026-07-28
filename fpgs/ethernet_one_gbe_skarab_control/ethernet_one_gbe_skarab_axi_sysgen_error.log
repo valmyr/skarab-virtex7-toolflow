@@ -5,17 +5,16 @@ Matlab 9.4.0.813654 (R2018a)            /usr/local/MATLAB/R2018a
 Vivado 2019.1                           /tools/Xilinx/Vivado/2019.1
 --------------------------------------------------------------------------------
 Summary of Errors:
-Error 0001: Detected a NaN on the input. Cannot convert NaN to boolean.
-
-     Block: 'ethernet_one_gbe_skarab_axi/led4/convert'
+Error 0001: Input must be driven by SIMULINK integer, single, double ...
+     Block: 'ethernet_one_gbe_skarab_axi/addr_data_fifo/ethernet_one_gbe_skarab_axi_addr_data_fifo_user_data_out'
 --------------------------------------------------------------------------------
 
 Error 0001:
 
 Reported by:
-  'ethernet_one_gbe_skarab_axi/led4/convert'
+  'ethernet_one_gbe_skarab_axi/addr_data_fifo/ethernet_one_gbe_skarab_axi_addr_data_fifo_user_data_out'
 
 Details:
-Detected a NaN on the input. Cannot convert NaN to boolean.
-
+Input must be driven by SIMULINK integer, single, double or
+fixed-point data type of data width up to 32 bits.
 --------------------------------------------------------------------------------

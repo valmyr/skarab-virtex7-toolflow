@@ -58,19 +58,19 @@
     <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="237"/>
+    <Option Name="WTXSimLaunchSim" Val="290"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="2"/>
-    <Option Name="WTModelSimExportSim" Val="2"/>
-    <Option Name="WTQuestaExportSim" Val="2"/>
+    <Option Name="WTXSimExportSim" Val="4"/>
+    <Option Name="WTModelSimExportSim" Val="4"/>
+    <Option Name="WTQuestaExportSim" Val="4"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="2"/>
-    <Option Name="WTRivieraExportSim" Val="2"/>
+    <Option Name="WTVcsExportSim" Val="4"/>
+    <Option Name="WTRivieraExportSim" Val="4"/>
     <Option Name="WTActivehdlExportSim" Val="0"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
@@ -193,17 +193,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="axis_data_fifo_0.xci" FileRelPathName="/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.gen/sources_1/ip/axis_data_fifo_0/hdl/axis_infrastructure_v1_1_vl_rfs.v">
-          <Attr Name="UsedInImplementation" Val="1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="axis_data_fifo_0.xci" FileRelPathName="/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.gen/sources_1/ip/axis_data_fifo_0/sim/axis_data_fifo_0.v">
-          <Attr Name="UsedInImplementation" Val="1"/>
-          <Attr Name="UsedInSynthesis" Val="1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="axis_data_fifo_0.xci" FileRelPathName="/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.gen/sources_1/ip/axis_data_fifo_0/synth/axis_data_fifo_0.v">
-          <Attr Name="UsedInImplementation" Val="1"/>
-          <Attr Name="UsedInSimulation" Val="1"/>
-        </CompFileExtendedInfo>
       </File>
       <Config>
         <Option Name="TopModule" Val="axis_data_fifo_0"/>

@@ -42,187 +42,197 @@ mm_slaves:
   base_address: 2149171200
   high_address: 2149171204
   mode: 3
-  name: addr_soft_control
+  name: addr_data_fifo
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171204
   high_address: 2149171208
-  mode: 1
-  name: clk_mhz
+  mode: 3
+  name: addr_data_gbe
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171208
   high_address: 2149171212
-  mode: 3
-  name: d3_ss_ctrl
+  mode: 1
+  name: clk_mhz
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171212
   high_address: 2149171216
-  mode: 1
-  name: d3_ss_status
+  mode: 3
+  name: d3_ss_ctrl
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171216
   high_address: 2149171220
-  mode: 3
-  name: d4_ss_ctrl
+  mode: 1
+  name: d3_ss_status
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171220
   high_address: 2149171224
-  mode: 1
-  name: d4_ss_status
+  mode: 3
+  name: d4_ss_ctrl
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171224
   high_address: 2149171228
-  mode: 3
-  name: d5_ss_ctrl
+  mode: 1
+  name: d4_ss_status
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171228
   high_address: 2149171232
-  mode: 1
-  name: d5_ss_status
+  mode: 3
+  name: d5_ss_ctrl
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171232
   high_address: 2149171236
   mode: 1
-  name: data_rx_valmir
+  name: d5_ss_status
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171236
   high_address: 2149171240
   mode: 1
-  name: err_marker1
+  name: data_rx_valmir
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171240
   high_address: 2149171244
   mode: 1
-  name: err_pkt_ctr1
+  name: debug_rx_data_mem_fifo
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171244
   high_address: 2149171248
   mode: 1
-  name: err_pkt_ctr_step1
+  name: debug_rx_data_mem_gbe
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171248
   high_address: 2149171252
   mode: 1
-  name: err_ramp1
+  name: err_marker1
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171252
   high_address: 2149171256
   mode: 1
-  name: err_valid_raw1
+  name: err_pkt_ctr1
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171256
   high_address: 2149171260
   mode: 1
-  name: err_walk1
+  name: err_pkt_ctr_step1
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171260
   high_address: 2149171264
-  mode: 3
-  name: pkt_ctrs1_ss_ctrl
+  mode: 1
+  name: err_ramp1
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171264
   high_address: 2149171268
   mode: 1
-  name: pkt_ctrs1_ss_status
+  name: err_valid_raw1
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171268
   high_address: 2149171272
-  mode: 3
-  name: pkt_ctrs_compare1_ss_ctrl
+  mode: 1
+  name: err_walk1
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171272
   high_address: 2149171276
-  mode: 1
-  name: pkt_ctrs_compare1_ss_status
+  mode: 3
+  name: pkt_ctrs1_ss_ctrl
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171276
   high_address: 2149171280
   mode: 1
-  name: rx_badframe1
+  name: pkt_ctrs1_ss_status
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171280
   high_address: 2149171284
   mode: 3
-  name: rx_control1
+  name: pkt_ctrs_compare1_ss_ctrl
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171284
   high_address: 2149171288
   mode: 1
-  name: rx_eof1
+  name: pkt_ctrs_compare1_ss_status
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171288
   high_address: 2149171292
   mode: 1
-  name: rx_overrun1
+  name: rx_badframe1
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171292
   high_address: 2149171296
-  mode: 1
-  name: rx_valid1
+  mode: 3
+  name: rx_control1
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171296
   high_address: 2149171300
   mode: 1
-  name: software_register
+  name: rx_eof1
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171300
   high_address: 2149171304
   mode: 1
-  name: tx_afull1
+  name: rx_overrun1
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171304
   high_address: 2149171308
-  mode: 3
-  name: tx_control
+  mode: 1
+  name: rx_valid1
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171308
   high_address: 2149171312
   mode: 1
-  name: tx_overflow1
+  name: tx_afull1
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171312
   high_address: 2149171316
+  mode: 3
+  name: tx_control
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171316
+  high_address: 2149171320
+  mode: 1
+  name: tx_overflow1
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171320
+  high_address: 2149171324
   mode: 1
   name: vaild_rx_valmir1
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171316
-  high_address: 2149171348
+  base_address: 2149171324
+  high_address: 2149171356
   mode: 1
   name: sys_block
   span: 32
 src_files:
 - /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/top.v
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
-- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
-- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_bram
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_bram
@@ -231,6 +241,11 @@ src_files:
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_bram
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_bram
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
@@ -246,7 +261,6 @@ src_files:
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
-- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc

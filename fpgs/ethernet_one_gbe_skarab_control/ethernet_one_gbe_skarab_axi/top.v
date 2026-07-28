@@ -116,52 +116,54 @@ module top (
 
 
   // usermodule: ethernet_one_gbe_skarab_axi
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_SOFT_CONTROL_WBID0 = 6;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_CLK_MHZ_WBID0 = 7;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_DATA_FIFO_WBID0 = 6;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_DATA_GBE_WBID0 = 7;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_CLK_MHZ_WBID0 = 8;
   localparam ETHERNET_ONE_GBE_SKARAB_AXI_D3_SS_BRAM_WBID0 = 1;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_D3_SS_CTRL_WBID0 = 8;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_D3_SS_STATUS_WBID0 = 9;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_D3_SS_CTRL_WBID0 = 9;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_D3_SS_STATUS_WBID0 = 10;
   localparam ETHERNET_ONE_GBE_SKARAB_AXI_D4_SS_BRAM_WBID0 = 2;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_D4_SS_CTRL_WBID0 = 10;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_D4_SS_STATUS_WBID0 = 11;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_D4_SS_CTRL_WBID0 = 11;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_D4_SS_STATUS_WBID0 = 12;
   localparam ETHERNET_ONE_GBE_SKARAB_AXI_D5_SS_BRAM_WBID0 = 3;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_D5_SS_CTRL_WBID0 = 12;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_D5_SS_STATUS_WBID0 = 13;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_DATA_RX_VALMIR_WBID0 = 14;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_ERR_MARKER1_WBID0 = 15;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_ERR_PKT_CTR1_WBID0 = 16;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_ERR_PKT_CTR_STEP1_WBID0 = 17;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_ERR_RAMP1_WBID0 = 18;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_ERR_VALID_RAW1_WBID0 = 19;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_ERR_WALK1_WBID0 = 20;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_D5_SS_CTRL_WBID0 = 13;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_D5_SS_STATUS_WBID0 = 14;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_DATA_RX_VALMIR_WBID0 = 15;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_DEBUG_RX_DATA_MEM_FIFO_WBID0 = 16;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_DEBUG_RX_DATA_MEM_GBE_WBID0 = 17;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_ERR_MARKER1_WBID0 = 18;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_ERR_PKT_CTR1_WBID0 = 19;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_ERR_PKT_CTR_STEP1_WBID0 = 20;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_ERR_RAMP1_WBID0 = 21;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_ERR_VALID_RAW1_WBID0 = 22;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_ERR_WALK1_WBID0 = 23;
   localparam ETHERNET_ONE_GBE_SKARAB_AXI_PKT_CTRS1_SS_BRAM_WBID0 = 4;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_PKT_CTRS1_SS_CTRL_WBID0 = 21;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_PKT_CTRS1_SS_STATUS_WBID0 = 22;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_PKT_CTRS1_SS_CTRL_WBID0 = 24;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_PKT_CTRS1_SS_STATUS_WBID0 = 25;
   localparam ETHERNET_ONE_GBE_SKARAB_AXI_PKT_CTRS_COMPARE1_SS_BRAM_WBID0 = 5;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_PKT_CTRS_COMPARE1_SS_CTRL_WBID0 = 23;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_PKT_CTRS_COMPARE1_SS_STATUS_WBID0 = 24;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_RX_BADFRAME1_WBID0 = 25;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_RX_CONTROL1_WBID0 = 26;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_RX_EOF1_WBID0 = 27;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_RX_OVERRUN1_WBID0 = 28;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_RX_VALID1_WBID0 = 29;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_SOFTWARE_REGISTER_WBID0 = 30;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_TX_AFULL1_WBID0 = 31;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_TX_CONTROL_WBID0 = 32;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_PKT_CTRS_COMPARE1_SS_CTRL_WBID0 = 26;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_PKT_CTRS_COMPARE1_SS_STATUS_WBID0 = 27;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_RX_BADFRAME1_WBID0 = 28;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_RX_CONTROL1_WBID0 = 29;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_RX_EOF1_WBID0 = 30;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_RX_OVERRUN1_WBID0 = 31;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_RX_VALID1_WBID0 = 32;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_TX_AFULL1_WBID0 = 33;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_TX_CONTROL_WBID0 = 34;
   localparam ETHERNET_ONE_GBE_SKARAB_AXI_TX_ONE_GBE_WBID0 = 0;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_TX_OVERFLOW1_WBID0 = 33;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_VAILD_RX_VALMIR1_WBID0 = 34;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_TX_OVERFLOW1_WBID0 = 35;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_VAILD_RX_VALMIR1_WBID0 = 36;
   localparam N_SUB_ARBS = 2;
-  localparam N_WB_SLAVES = 36;
+  localparam N_WB_SLAVES = 38;
   localparam SLAVE_ADDR = {
     32'h8019c068,
     32'h800dc000
     };
   localparam SLAVE_HIGH = {
-    32'h8019c093,
+    32'h8019c09b,
     32'h8019c067
     };
-  localparam SYS_BLOCK_INST_WBID0 = 35;
+  localparam SYS_BLOCK_INST_WBID0 = 37;
 
 /*
   _____ _                   _     
@@ -283,8 +285,10 @@ module top (
   wire [1:0] xlgmii_txled_1;
   wire [1:0] xlgmii_txled_2;
   wire [1:0] xlgmii_txled_3;
-  // sw_reg: addr_soft_control
-  wire [31:0] ethernet_one_gbe_skarab_axi_addr_soft_control_user_data_out;
+  // sw_reg: addr_data_fifo
+  wire [31:0] ethernet_one_gbe_skarab_axi_addr_data_fifo_user_data_out;
+  // sw_reg: addr_data_gbe
+  wire [31:0] ethernet_one_gbe_skarab_axi_addr_data_gbe_user_data_out;
   // sw_reg: clk_mhz
   wire [31:0] ethernet_one_gbe_skarab_axi_clk_mhz_user_data_in;
   // sw_reg: d3/ss/ctrl
@@ -301,6 +305,10 @@ module top (
   wire [31:0] ethernet_one_gbe_skarab_axi_d5_ss_status_user_data_in;
   // sw_reg: data_rx_valmir
   wire [31:0] ethernet_one_gbe_skarab_axi_data_rx_valmir_user_data_in;
+  // sw_reg: debug_rx_data_mem_fifo
+  wire [31:0] ethernet_one_gbe_skarab_axi_debug_rx_data_mem_fifo_user_data_in;
+  // sw_reg: debug_rx_data_mem_gbe
+  wire [31:0] ethernet_one_gbe_skarab_axi_debug_rx_data_mem_gbe_user_data_in;
   // sw_reg: err_marker1
   wire [31:0] ethernet_one_gbe_skarab_axi_err_marker1_user_data_in;
   // sw_reg: err_pkt_ctr1
@@ -331,8 +339,6 @@ module top (
   wire [31:0] ethernet_one_gbe_skarab_axi_rx_overrun1_user_data_in;
   // sw_reg: rx_valid1
   wire [31:0] ethernet_one_gbe_skarab_axi_rx_valid1_user_data_in;
-  // sw_reg: software_register
-  wire [31:0] ethernet_one_gbe_skarab_axi_software_register_user_data_in;
   // sw_reg: tx_afull1
   wire [31:0] ethernet_one_gbe_skarab_axi_tx_afull1_user_data_in;
   // sw_reg: tx_control
@@ -343,14 +349,14 @@ module top (
   wire [31:0] ethernet_one_gbe_skarab_axi_vaild_rx_valmir1_user_data_in;
   // usermodule: ethernet_one_gbe_skarab_axi
   wire wbm_err_i;
-  wire [35:0] wbs_ack_i;
+  wire [37:0] wbs_ack_i;
   wire [63:0] wbs_adr_o;
-  wire [35:0] wbs_cyc_o;
-  wire [1151:0] wbs_dat_i;
+  wire [37:0] wbs_cyc_o;
+  wire [1215:0] wbs_dat_i;
   wire [31:0] wbs_dat_o;
-  wire [35:0] wbs_err_i;
+  wire [37:0] wbs_err_i;
   wire [3:0] wbs_sel_o;
-  wire [35:0] wbs_stb_o;
+  wire [37:0] wbs_stb_o;
   wire wbs_we_o;
   // xsg: SKARAB
   wire user_clk;
@@ -714,22 +720,41 @@ module top (
     .xlgmii_txled_3(xlgmii_txled_3)
   );
 
-  // sw_reg: addr_soft_control
+  // sw_reg: addr_data_fifo
   wb_register_ppc2simulink #(
     .INIT_VAL(32'h0)
-  ) ethernet_one_gbe_skarab_axi_addr_soft_control (
+  ) ethernet_one_gbe_skarab_axi_addr_data_fifo (
     .user_clk(user_clk),
-    .user_data_out(ethernet_one_gbe_skarab_axi_addr_soft_control_user_data_out),
-    .wb_ack_o(wbs_ack_i[ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_SOFT_CONTROL_WBID0]),
+    .user_data_out(ethernet_one_gbe_skarab_axi_addr_data_fifo_user_data_out),
+    .wb_ack_o(wbs_ack_i[ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_DATA_FIFO_WBID0]),
     .wb_adr_i(wbs_adr_o[(0+1)*32-1:(0)*32]),
     .wb_clk_i(wb_clk_i),
-    .wb_cyc_i(wbs_cyc_o[ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_SOFT_CONTROL_WBID0]),
+    .wb_cyc_i(wbs_cyc_o[ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_DATA_FIFO_WBID0]),
     .wb_dat_i(wbs_dat_o),
-    .wb_dat_o(wbs_dat_i[(ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_SOFT_CONTROL_WBID0+1)*32-1:(ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_SOFT_CONTROL_WBID0)*32]),
-    .wb_err_o(wbs_err_i[ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_SOFT_CONTROL_WBID0]),
+    .wb_dat_o(wbs_dat_i[(ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_DATA_FIFO_WBID0+1)*32-1:(ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_DATA_FIFO_WBID0)*32]),
+    .wb_err_o(wbs_err_i[ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_DATA_FIFO_WBID0]),
     .wb_rst_i(wb_rst_i),
     .wb_sel_i(wbs_sel_o),
-    .wb_stb_i(wbs_stb_o[ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_SOFT_CONTROL_WBID0]),
+    .wb_stb_i(wbs_stb_o[ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_DATA_FIFO_WBID0]),
+    .wb_we_i(wbs_we_o)
+  );
+
+  // sw_reg: addr_data_gbe
+  wb_register_ppc2simulink #(
+    .INIT_VAL(32'h0)
+  ) ethernet_one_gbe_skarab_axi_addr_data_gbe (
+    .user_clk(user_clk),
+    .user_data_out(ethernet_one_gbe_skarab_axi_addr_data_gbe_user_data_out),
+    .wb_ack_o(wbs_ack_i[ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_DATA_GBE_WBID0]),
+    .wb_adr_i(wbs_adr_o[(0+1)*32-1:(0)*32]),
+    .wb_clk_i(wb_clk_i),
+    .wb_cyc_i(wbs_cyc_o[ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_DATA_GBE_WBID0]),
+    .wb_dat_i(wbs_dat_o),
+    .wb_dat_o(wbs_dat_i[(ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_DATA_GBE_WBID0+1)*32-1:(ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_DATA_GBE_WBID0)*32]),
+    .wb_err_o(wbs_err_i[ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_DATA_GBE_WBID0]),
+    .wb_rst_i(wb_rst_i),
+    .wb_sel_i(wbs_sel_o),
+    .wb_stb_i(wbs_stb_o[ETHERNET_ONE_GBE_SKARAB_AXI_ADDR_DATA_GBE_WBID0]),
     .wb_we_i(wbs_we_o)
   );
 
@@ -872,6 +897,40 @@ module top (
     .wb_rst_i(wb_rst_i),
     .wb_sel_i(wbs_sel_o),
     .wb_stb_i(wbs_stb_o[ETHERNET_ONE_GBE_SKARAB_AXI_DATA_RX_VALMIR_WBID0]),
+    .wb_we_i(wbs_we_o)
+  );
+
+  // sw_reg: debug_rx_data_mem_fifo
+  wb_register_simulink2ppc  ethernet_one_gbe_skarab_axi_debug_rx_data_mem_fifo (
+    .user_clk(user_clk),
+    .user_data_in(ethernet_one_gbe_skarab_axi_debug_rx_data_mem_fifo_user_data_in),
+    .wb_ack_o(wbs_ack_i[ETHERNET_ONE_GBE_SKARAB_AXI_DEBUG_RX_DATA_MEM_FIFO_WBID0]),
+    .wb_adr_i(wbs_adr_o[(0+1)*32-1:(0)*32]),
+    .wb_clk_i(wb_clk_i),
+    .wb_cyc_i(wbs_cyc_o[ETHERNET_ONE_GBE_SKARAB_AXI_DEBUG_RX_DATA_MEM_FIFO_WBID0]),
+    .wb_dat_i(wbs_dat_o),
+    .wb_dat_o(wbs_dat_i[(ETHERNET_ONE_GBE_SKARAB_AXI_DEBUG_RX_DATA_MEM_FIFO_WBID0+1)*32-1:(ETHERNET_ONE_GBE_SKARAB_AXI_DEBUG_RX_DATA_MEM_FIFO_WBID0)*32]),
+    .wb_err_o(wbs_err_i[ETHERNET_ONE_GBE_SKARAB_AXI_DEBUG_RX_DATA_MEM_FIFO_WBID0]),
+    .wb_rst_i(wb_rst_i),
+    .wb_sel_i(wbs_sel_o),
+    .wb_stb_i(wbs_stb_o[ETHERNET_ONE_GBE_SKARAB_AXI_DEBUG_RX_DATA_MEM_FIFO_WBID0]),
+    .wb_we_i(wbs_we_o)
+  );
+
+  // sw_reg: debug_rx_data_mem_gbe
+  wb_register_simulink2ppc  ethernet_one_gbe_skarab_axi_debug_rx_data_mem_gbe (
+    .user_clk(user_clk),
+    .user_data_in(ethernet_one_gbe_skarab_axi_debug_rx_data_mem_gbe_user_data_in),
+    .wb_ack_o(wbs_ack_i[ETHERNET_ONE_GBE_SKARAB_AXI_DEBUG_RX_DATA_MEM_GBE_WBID0]),
+    .wb_adr_i(wbs_adr_o[(0+1)*32-1:(0)*32]),
+    .wb_clk_i(wb_clk_i),
+    .wb_cyc_i(wbs_cyc_o[ETHERNET_ONE_GBE_SKARAB_AXI_DEBUG_RX_DATA_MEM_GBE_WBID0]),
+    .wb_dat_i(wbs_dat_o),
+    .wb_dat_o(wbs_dat_i[(ETHERNET_ONE_GBE_SKARAB_AXI_DEBUG_RX_DATA_MEM_GBE_WBID0+1)*32-1:(ETHERNET_ONE_GBE_SKARAB_AXI_DEBUG_RX_DATA_MEM_GBE_WBID0)*32]),
+    .wb_err_o(wbs_err_i[ETHERNET_ONE_GBE_SKARAB_AXI_DEBUG_RX_DATA_MEM_GBE_WBID0]),
+    .wb_rst_i(wb_rst_i),
+    .wb_sel_i(wbs_sel_o),
+    .wb_stb_i(wbs_stb_o[ETHERNET_ONE_GBE_SKARAB_AXI_DEBUG_RX_DATA_MEM_GBE_WBID0]),
     .wb_we_i(wbs_we_o)
   );
 
@@ -1124,7 +1183,7 @@ module top (
     .user_clk(user_clk),
     .user_data_in(ethernet_one_gbe_skarab_axi_rx_valid1_user_data_in),
     .wb_ack_o(wbs_ack_i[ETHERNET_ONE_GBE_SKARAB_AXI_RX_VALID1_WBID0]),
-    .wb_adr_i(wbs_adr_o[(0+1)*32-1:(0)*32]),
+    .wb_adr_i(wbs_adr_o[(1+1)*32-1:(1)*32]),
     .wb_clk_i(wb_clk_i),
     .wb_cyc_i(wbs_cyc_o[ETHERNET_ONE_GBE_SKARAB_AXI_RX_VALID1_WBID0]),
     .wb_dat_i(wbs_dat_o),
@@ -1136,29 +1195,12 @@ module top (
     .wb_we_i(wbs_we_o)
   );
 
-  // sw_reg: software_register
-  wb_register_simulink2ppc  ethernet_one_gbe_skarab_axi_software_register (
-    .user_clk(user_clk),
-    .user_data_in(ethernet_one_gbe_skarab_axi_software_register_user_data_in),
-    .wb_ack_o(wbs_ack_i[ETHERNET_ONE_GBE_SKARAB_AXI_SOFTWARE_REGISTER_WBID0]),
-    .wb_adr_i(wbs_adr_o[(0+1)*32-1:(0)*32]),
-    .wb_clk_i(wb_clk_i),
-    .wb_cyc_i(wbs_cyc_o[ETHERNET_ONE_GBE_SKARAB_AXI_SOFTWARE_REGISTER_WBID0]),
-    .wb_dat_i(wbs_dat_o),
-    .wb_dat_o(wbs_dat_i[(ETHERNET_ONE_GBE_SKARAB_AXI_SOFTWARE_REGISTER_WBID0+1)*32-1:(ETHERNET_ONE_GBE_SKARAB_AXI_SOFTWARE_REGISTER_WBID0)*32]),
-    .wb_err_o(wbs_err_i[ETHERNET_ONE_GBE_SKARAB_AXI_SOFTWARE_REGISTER_WBID0]),
-    .wb_rst_i(wb_rst_i),
-    .wb_sel_i(wbs_sel_o),
-    .wb_stb_i(wbs_stb_o[ETHERNET_ONE_GBE_SKARAB_AXI_SOFTWARE_REGISTER_WBID0]),
-    .wb_we_i(wbs_we_o)
-  );
-
   // sw_reg: tx_afull1
   wb_register_simulink2ppc  ethernet_one_gbe_skarab_axi_tx_afull1 (
     .user_clk(user_clk),
     .user_data_in(ethernet_one_gbe_skarab_axi_tx_afull1_user_data_in),
     .wb_ack_o(wbs_ack_i[ETHERNET_ONE_GBE_SKARAB_AXI_TX_AFULL1_WBID0]),
-    .wb_adr_i(wbs_adr_o[(0+1)*32-1:(0)*32]),
+    .wb_adr_i(wbs_adr_o[(1+1)*32-1:(1)*32]),
     .wb_clk_i(wb_clk_i),
     .wb_cyc_i(wbs_cyc_o[ETHERNET_ONE_GBE_SKARAB_AXI_TX_AFULL1_WBID0]),
     .wb_dat_i(wbs_dat_o),
@@ -1226,7 +1268,8 @@ module top (
   // sys_block: SKARAB
   ethernet_one_gbe_skarab_axi  ethernet_one_gbe_skarab_axi_inst (
     .clk(user_clk),
-    .ethernet_one_gbe_skarab_axi_addr_soft_control_user_data_out(ethernet_one_gbe_skarab_axi_addr_soft_control_user_data_out),
+    .ethernet_one_gbe_skarab_axi_addr_data_fifo_user_data_out(ethernet_one_gbe_skarab_axi_addr_data_fifo_user_data_out),
+    .ethernet_one_gbe_skarab_axi_addr_data_gbe_user_data_out(ethernet_one_gbe_skarab_axi_addr_data_gbe_user_data_out),
     .ethernet_one_gbe_skarab_axi_d3_ss_bram_addr(ethernet_one_gbe_skarab_axi_d3_ss_bram_addr),
     .ethernet_one_gbe_skarab_axi_d3_ss_bram_data_in(ethernet_one_gbe_skarab_axi_d3_ss_bram_data_in),
     .ethernet_one_gbe_skarab_axi_d3_ss_bram_data_out(ethernet_one_gbe_skarab_axi_d3_ss_bram_data_out),
@@ -1243,6 +1286,8 @@ module top (
     .ethernet_one_gbe_skarab_axi_d5_ss_bram_we(ethernet_one_gbe_skarab_axi_d5_ss_bram_we),
     .ethernet_one_gbe_skarab_axi_d5_ss_status_user_data_in(ethernet_one_gbe_skarab_axi_d5_ss_status_user_data_in),
     .ethernet_one_gbe_skarab_axi_data_rx_valmir_user_data_in(ethernet_one_gbe_skarab_axi_data_rx_valmir_user_data_in),
+    .ethernet_one_gbe_skarab_axi_debug_rx_data_mem_fifo_user_data_in(ethernet_one_gbe_skarab_axi_debug_rx_data_mem_fifo_user_data_in),
+    .ethernet_one_gbe_skarab_axi_debug_rx_data_mem_gbe_user_data_in(ethernet_one_gbe_skarab_axi_debug_rx_data_mem_gbe_user_data_in),
     .ethernet_one_gbe_skarab_axi_err_marker1_user_data_in(ethernet_one_gbe_skarab_axi_err_marker1_user_data_in),
     .ethernet_one_gbe_skarab_axi_err_pkt_ctr1_user_data_in(ethernet_one_gbe_skarab_axi_err_pkt_ctr1_user_data_in),
     .ethernet_one_gbe_skarab_axi_err_pkt_ctr_step1_user_data_in(ethernet_one_gbe_skarab_axi_err_pkt_ctr_step1_user_data_in),
@@ -1264,7 +1309,6 @@ module top (
     .ethernet_one_gbe_skarab_axi_rx_eof1_user_data_in(ethernet_one_gbe_skarab_axi_rx_eof1_user_data_in),
     .ethernet_one_gbe_skarab_axi_rx_overrun1_user_data_in(ethernet_one_gbe_skarab_axi_rx_overrun1_user_data_in),
     .ethernet_one_gbe_skarab_axi_rx_valid1_user_data_in(ethernet_one_gbe_skarab_axi_rx_valid1_user_data_in),
-    .ethernet_one_gbe_skarab_axi_software_register_user_data_in(ethernet_one_gbe_skarab_axi_software_register_user_data_in),
     .ethernet_one_gbe_skarab_axi_tx_afull1_user_data_in(ethernet_one_gbe_skarab_axi_tx_afull1_user_data_in),
     .ethernet_one_gbe_skarab_axi_tx_control_user_data_out(ethernet_one_gbe_skarab_axi_tx_control_user_data_out),
     .ethernet_one_gbe_skarab_axi_tx_one_gbe_app_dbg_data(ethernet_one_gbe_skarab_axi_tx_one_gbe_app_dbg_data),

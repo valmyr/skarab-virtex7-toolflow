@@ -66,30 +66,72 @@ logic [7:0] mem[256:0];
 //    .debug_rx_data(debug_rx_data)
 //);
 
-logic s_axis_aresetn;
-logic s_axis_aclk;
-logic s_axis_tvalid;
-logic s_axis_tready;
-logic [7:0]s_axis_tdata;
-logic m_axis_tvalid;
-logic m_axis_tready;
-logic [7:0] m_axis_tdata;
+logic       s_axis_aresetn0;
+logic       s_axis_aclk0;
+logic       s_axis_tvalid0;
+logic       s_axis_tready0;
+logic [7:0] s_axis_tdata0;
+logic       m_axis_tlast0;
+logic       m_axis_tvalid0;
+logic       m_axis_tready0;
+logic [7:0] m_axis_tdata0;
+
+logic       s_axis_aresetn1;
+logic       s_axis_aclk1;
+logic       s_axis_tvalid1;
+logic       s_axis_tready1;
+logic [7:0] s_axis_tdata1;
+logic       m_axis_tlast1;
+logic       m_axis_tvalid1;
+logic       m_axis_tready1;
+logic [7:0] m_axis_tdata1;
+
+
+
+logic       s_axis_aresetn_gbe;
+logic       s_axis_aclk_gbe;
+logic       s_axis_tvalid_gbe;
+logic       s_axis_tready_gbe;
+logic [7:0] s_axis_tdata_gbe;
+logic       m_axis_tlast_gbe;
+logic       m_axis_tvalid_gbe;
+logic       m_axis_tready_gbe;
+logic [7:0] m_axis_tdata_gbe;
 
 //assign s_axis_aclk = clk;
-assign s_axis_aresetn = a_sync_nrst;
 
-axis_data_fifo_0 matlab_fifo(
-  .s_axis_aresetn(s_axis_aresetn),  // input wire s_axis_aresetn
-  .s_axis_aclk(s_axis_aclk),        // input wire s_axis_aclk
-  .s_axis_tlast(s_axis_tlast),    // output wire m_axis_tlast
-  .s_axis_tvalid(s_axis_tvalid),    // input wire s_axis_tvalid
-  .s_axis_tready(s_axis_tready),    // output wire s_axis_tready
-  .s_axis_tdata(s_axis_tdata),      // input wire [7 : 0] s_axis_tdata
-  .m_axis_tvalid(m_axis_tvalid),    // output wire m_axis_tvalid
-  .m_axis_tready(m_axis_tready),    // input wire m_axis_tready
-  .m_axis_tdata(m_axis_tdata),      // output wire [7 : 0] m_axis_tdata
-  .m_axis_tlast(m_axis_tlast)      // output wire m_axis_tlast
+
+assign s_axis_aclk_gbe = clk;
+assign s_axis_aresetn0 = a_sync_nrst;
+assign s_axis_aresetn1 = a_sync_nrst;
+assign s_axis_aresetn_gbe = a_sync_nrst;
+
+axis_data_fifo_0 matlab_fifo0(
+  .s_axis_aresetn(s_axis_aresetn0),  // input wire s_axis_aresetn
+  .s_axis_aclk(s_axis_aclk0),        // input wire s_axis_aclk
+  .s_axis_tlast(s_axis_tlast0),    // output wire m_axis_tlast
+  .s_axis_tvalid(s_axis_tvalid0),    // input wire s_axis_tvalid
+  .s_axis_tready(s_axis_tready0),    // output wire s_axis_tready
+  .s_axis_tdata(s_axis_tdata0),      // input wire [7 : 0] s_axis_tdata
+  .m_axis_tvalid(s_axis_tvalid1),    // output wire m_axis_tvalid
+  .m_axis_tready(s_axis_tready1),    // input wire m_axis_tready
+  .m_axis_tdata(s_axis_tdata1),      // output wire [7 : 0] m_axis_tdata
+  .m_axis_tlast(s_axis_tlast1)      // output wire m_axis_tlast
 );
+
+axis_data_fifo_0 matlab_fifo1(
+  .s_axis_aresetn(s_axis_aresetn1),  // input wire s_axis_aresetn
+  .s_axis_aclk(s_axis_aclk1),        // input wire s_axis_aclk
+  .s_axis_tlast(s_axis_tlast1),    // output wire m_axis_tlast
+  .s_axis_tvalid(s_axis_tvalid1),    // input wire s_axis_tvalid
+  .s_axis_tready(s_axis_tready1),    // output wire s_axis_tready
+  .s_axis_tdata(s_axis_tdata1),      // input wire [7 : 0] s_axis_tdata
+  .m_axis_tvalid(m_axis_tvalid1),    // output wire m_axis_tvalid
+  .m_axis_tready(m_axis_tready1),    // input wire m_axis_tready
+  .m_axis_tdata(m_axis_tdata1),      // output wire [7 : 0] m_axis_tdata
+  .m_axis_tlast(m_axis_tlast1)      // output wire m_axis_tlast
+);
+
 
 control_axi_stream_gbe gbe_control(
     .clk(clk),
@@ -103,18 +145,20 @@ control_axi_stream_gbe gbe_control(
     .tx_eof(),
     ///Axi  Sinais 
     //Interface Slave AXI Stream (Entrada)
-    .s_axis_tvalid(m_axis_tvalid),
-    .s_axis_tdata(m_axis_tdata),
-    .s_axis_tlast(m_axis_tlast),
-    .s_axis_tready(m_axis_tready),
+    .s_axis_tvalid(m_axis_tvalid1),
+    .s_axis_tdata(m_axis_tdata1),
+    .s_axis_tlast(m_axis_tlast1),
+    .s_axis_tready(m_axis_tready1),
     //Interface Master AXI Stream (Saída)
-    .m_axis_tvalid(s_axis_tvalid),
-    .m_axis_tdata(s_axis_tdata), 
-    .m_axis_tlast(s_axis_tlast),
-    .m_axis_tready(s_axis_tready),
+    .m_axis_tvalid(s_axis_tvalid0),
+    .m_axis_tdata(s_axis_tdata0), 
+    .m_axis_tlast(s_axis_tlast0),
+    .m_axis_tready(s_axis_tready0),
     //Debug Sinais
-    .debug_addr_data(10),
-    .debug_rx_data()
+    .debug_addr_data_gbe(0),
+    .debug_addr_data_fifo(0),
+    .debug_rx_data_mem_gbe(),
+    .debug_rx_data_mem_fifo()
 );
 
     
@@ -152,10 +196,12 @@ logic [7:0]counter;
 initial begin 
     $readmemh("/home/valmyrsilva07/skrab_one/skrab_one.srcs/sim_1/new/mem.hex",mem);
     clk = 0;
-    s_axis_aclk = 0;
-     a_sync_nrst =1;
-    #4 a_sync_nrst =0;
-    #4  a_sync_nrst =1;
+    s_axis_aclk0 = 0;
+    s_axis_aclk1 = 0;
+     a_sync_nrst =0;
+    #1 a_sync_nrst =1;
+    #1  a_sync_nrst =0;
+    #1  a_sync_nrst =1;
 end
 
 
@@ -174,7 +220,8 @@ assign in_data_rx_ethernet = mem[counter];
 //always #4.37 clk =~clk;
 always #5 clk =~clk;
 
-always #1 s_axis_aclk = ~s_axis_aclk;
+always #2 s_axis_aclk0 = ~s_axis_aclk0;
+always #2 s_axis_aclk1 = ~s_axis_aclk1;
 
 
     initial begin

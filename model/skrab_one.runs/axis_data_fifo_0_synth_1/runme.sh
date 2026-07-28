@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/valmyrsilva07/skrab_one/skrab_one.runs/axis_data_fifo_0_synth_1'
+HD_PWD='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.runs/axis_data_fifo_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

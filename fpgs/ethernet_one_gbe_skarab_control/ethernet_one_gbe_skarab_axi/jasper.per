@@ -8,9 +8,23 @@ yellow_blocks:
     clk_rate: 230
     sample_period: 1
     synthesis_tool: XST
-  ethernet_one_gbe_skarab_axi/addr_soft_control:
-    name: addr_soft_control
-    fullpath: ethernet_one_gbe_skarab_axi/addr_soft_control
+  ethernet_one_gbe_skarab_axi/addr_data_fifo:
+    name: addr_data_fifo
+    fullpath: ethernet_one_gbe_skarab_axi/addr_data_fifo
+    tag: xps:sw_reg
+    io_dir: From Processor
+    io_delay: 0
+    init_val: 0
+    sample_period: 1
+    names: reg
+    bitwidths: 32
+    bin_pts: 0
+    arith_types: 0
+    sim_port: off
+    show_format: on
+  ethernet_one_gbe_skarab_axi/addr_data_gbe:
+    name: addr_data_gbe
+    fullpath: ethernet_one_gbe_skarab_axi/addr_data_gbe
     tag: xps:sw_reg
     io_dir: From Processor
     io_delay: 0
@@ -169,6 +183,34 @@ yellow_blocks:
     sample_period: 1
     names: reg
     bitwidths: 8
+    bin_pts: 0
+    arith_types: 0
+    sim_port: off
+    show_format: on
+  ethernet_one_gbe_skarab_axi/debug_rx_data_mem_fifo:
+    name: debug_rx_data_mem_fifo
+    fullpath: ethernet_one_gbe_skarab_axi/debug_rx_data_mem_fifo
+    tag: xps:sw_reg
+    io_dir: To Processor
+    io_delay: 0
+    init_val: 0
+    sample_period: 1
+    names: reg
+    bitwidths: 32
+    bin_pts: 0
+    arith_types: 0
+    sim_port: off
+    show_format: on
+  ethernet_one_gbe_skarab_axi/debug_rx_data_mem_gbe:
+    name: debug_rx_data_mem_gbe
+    fullpath: ethernet_one_gbe_skarab_axi/debug_rx_data_mem_gbe
+    tag: xps:sw_reg
+    io_dir: To Processor
+    io_delay: 0
+    init_val: 0
+    sample_period: 1
+    names: reg
+    bitwidths: 32
     bin_pts: 0
     arith_types: 0
     sim_port: off
@@ -409,20 +451,6 @@ yellow_blocks:
     arith_types: 0
     sim_port: off
     show_format: on
-  ethernet_one_gbe_skarab_axi/software_register:
-    name: software_register
-    fullpath: ethernet_one_gbe_skarab_axi/software_register
-    tag: xps:sw_reg
-    io_dir: To Processor
-    io_delay: 0
-    init_val: 0
-    sample_period: 1
-    names: reg
-    bitwidths: 32
-    bin_pts: 0
-    arith_types: 0
-    sim_port: off
-    show_format: on
   ethernet_one_gbe_skarab_axi/tx_afull1:
     name: tx_afull1
     fullpath: ethernet_one_gbe_skarab_axi/tx_afull1
@@ -496,7 +524,8 @@ user_modules:
   ethernet_one_gbe_skarab_axi:
     clock: clk
     ports:
-      - ethernet_one_gbe_skarab_axi_addr_soft_control_user_data_out
+      - ethernet_one_gbe_skarab_axi_addr_data_fifo_user_data_out
+      - ethernet_one_gbe_skarab_axi_addr_data_gbe_user_data_out
       - ethernet_one_gbe_skarab_axi_d3_ss_bram_data_out
       - skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out
       - ethernet_one_gbe_skarab_axi_d4_ss_bram_data_out
@@ -534,6 +563,8 @@ user_modules:
       - ethernet_one_gbe_skarab_axi_d5_ss_bram_we
       - ethernet_one_gbe_skarab_axi_d5_ss_status_user_data_in
       - ethernet_one_gbe_skarab_axi_data_rx_valmir_user_data_in
+      - ethernet_one_gbe_skarab_axi_debug_rx_data_mem_fifo_user_data_in
+      - ethernet_one_gbe_skarab_axi_debug_rx_data_mem_gbe_user_data_in
       - ethernet_one_gbe_skarab_axi_err_marker1_user_data_in
       - ethernet_one_gbe_skarab_axi_err_pkt_ctr1_user_data_in
       - ethernet_one_gbe_skarab_axi_err_pkt_ctr_step1_user_data_in
@@ -552,7 +583,6 @@ user_modules:
       - ethernet_one_gbe_skarab_axi_rx_eof1_user_data_in
       - ethernet_one_gbe_skarab_axi_rx_overrun1_user_data_in
       - ethernet_one_gbe_skarab_axi_rx_valid1_user_data_in
-      - ethernet_one_gbe_skarab_axi_software_register_user_data_in
       - ethernet_one_gbe_skarab_axi_tx_afull1_user_data_in
       - ethernet_one_gbe_skarab_axi_tx_one_gbe_app_rx_ack
       - ethernet_one_gbe_skarab_axi_tx_one_gbe_app_rx_rst

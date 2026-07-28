@@ -4,7 +4,8 @@ use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 entity ethernet_one_gbe_skarab_axi_stub is
   port (
-    ethernet_one_gbe_skarab_axi_addr_soft_control_user_data_out : in std_logic_vector( 32-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_addr_data_fifo_user_data_out : in std_logic_vector( 32-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_addr_data_gbe_user_data_out : in std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_d3_ss_bram_data_out : in std_logic_vector( 128-1 downto 0 );
     skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out : in std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_d4_ss_bram_data_out : in std_logic_vector( 128-1 downto 0 );
@@ -43,6 +44,8 @@ entity ethernet_one_gbe_skarab_axi_stub is
     ethernet_one_gbe_skarab_axi_d5_ss_bram_we : out std_logic_vector( 1-1 downto 0 );
     ethernet_one_gbe_skarab_axi_d5_ss_status_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_data_rx_valmir_user_data_in : out std_logic_vector( 32-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_debug_rx_data_mem_fifo_user_data_in : out std_logic_vector( 32-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_debug_rx_data_mem_gbe_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_err_marker1_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_err_pkt_ctr1_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_err_pkt_ctr_step1_user_data_in : out std_logic_vector( 32-1 downto 0 );
@@ -61,7 +64,6 @@ entity ethernet_one_gbe_skarab_axi_stub is
     ethernet_one_gbe_skarab_axi_rx_eof1_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_rx_overrun1_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_rx_valid1_user_data_in : out std_logic_vector( 32-1 downto 0 );
-    ethernet_one_gbe_skarab_axi_software_register_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_tx_afull1_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_tx_one_gbe_app_rx_ack : out std_logic_vector( 1-1 downto 0 );
     ethernet_one_gbe_skarab_axi_tx_one_gbe_app_rx_rst : out std_logic_vector( 1-1 downto 0 );
@@ -79,7 +81,8 @@ architecture structural of ethernet_one_gbe_skarab_axi_stub is
 begin
   sysgen_dut : entity xil_defaultlib.ethernet_one_gbe_skarab_axi 
   port map (
-    ethernet_one_gbe_skarab_axi_addr_soft_control_user_data_out => ethernet_one_gbe_skarab_axi_addr_soft_control_user_data_out,
+    ethernet_one_gbe_skarab_axi_addr_data_fifo_user_data_out => ethernet_one_gbe_skarab_axi_addr_data_fifo_user_data_out,
+    ethernet_one_gbe_skarab_axi_addr_data_gbe_user_data_out => ethernet_one_gbe_skarab_axi_addr_data_gbe_user_data_out,
     ethernet_one_gbe_skarab_axi_d3_ss_bram_data_out => ethernet_one_gbe_skarab_axi_d3_ss_bram_data_out,
     skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out => skarab_tx_1gbe_tx_rx_valmir_d3_ss_ctrl_user_data_out,
     ethernet_one_gbe_skarab_axi_d4_ss_bram_data_out => ethernet_one_gbe_skarab_axi_d4_ss_bram_data_out,
@@ -118,6 +121,8 @@ begin
     ethernet_one_gbe_skarab_axi_d5_ss_bram_we => ethernet_one_gbe_skarab_axi_d5_ss_bram_we,
     ethernet_one_gbe_skarab_axi_d5_ss_status_user_data_in => ethernet_one_gbe_skarab_axi_d5_ss_status_user_data_in,
     ethernet_one_gbe_skarab_axi_data_rx_valmir_user_data_in => ethernet_one_gbe_skarab_axi_data_rx_valmir_user_data_in,
+    ethernet_one_gbe_skarab_axi_debug_rx_data_mem_fifo_user_data_in => ethernet_one_gbe_skarab_axi_debug_rx_data_mem_fifo_user_data_in,
+    ethernet_one_gbe_skarab_axi_debug_rx_data_mem_gbe_user_data_in => ethernet_one_gbe_skarab_axi_debug_rx_data_mem_gbe_user_data_in,
     ethernet_one_gbe_skarab_axi_err_marker1_user_data_in => ethernet_one_gbe_skarab_axi_err_marker1_user_data_in,
     ethernet_one_gbe_skarab_axi_err_pkt_ctr1_user_data_in => ethernet_one_gbe_skarab_axi_err_pkt_ctr1_user_data_in,
     ethernet_one_gbe_skarab_axi_err_pkt_ctr_step1_user_data_in => ethernet_one_gbe_skarab_axi_err_pkt_ctr_step1_user_data_in,
@@ -136,7 +141,6 @@ begin
     ethernet_one_gbe_skarab_axi_rx_eof1_user_data_in => ethernet_one_gbe_skarab_axi_rx_eof1_user_data_in,
     ethernet_one_gbe_skarab_axi_rx_overrun1_user_data_in => ethernet_one_gbe_skarab_axi_rx_overrun1_user_data_in,
     ethernet_one_gbe_skarab_axi_rx_valid1_user_data_in => ethernet_one_gbe_skarab_axi_rx_valid1_user_data_in,
-    ethernet_one_gbe_skarab_axi_software_register_user_data_in => ethernet_one_gbe_skarab_axi_software_register_user_data_in,
     ethernet_one_gbe_skarab_axi_tx_afull1_user_data_in => ethernet_one_gbe_skarab_axi_tx_afull1_user_data_in,
     ethernet_one_gbe_skarab_axi_tx_one_gbe_app_rx_ack => ethernet_one_gbe_skarab_axi_tx_one_gbe_app_rx_ack,
     ethernet_one_gbe_skarab_axi_tx_one_gbe_app_rx_rst => ethernet_one_gbe_skarab_axi_tx_one_gbe_app_rx_rst,

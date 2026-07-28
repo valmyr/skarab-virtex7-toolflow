@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Jul 25 13:35:37 2026
+# Process ID: 2724469
+# Current directory: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control
+# Command line: vivado ethernet_one_gbe_skarab_axi/myproj/myproj.xpr
+# Log file: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/vivado.log
+# Journal file: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project ethernet_one_gbe_skarab_axi/myproj/myproj.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/bd/cont_microblaze/cont_microblaze.bd}
+report_clock_networks -name control_axi_stream_gbe_inst/clk
+reset_run synth_1

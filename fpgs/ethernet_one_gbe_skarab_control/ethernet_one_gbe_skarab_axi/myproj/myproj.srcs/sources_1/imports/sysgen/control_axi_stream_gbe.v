@@ -98,7 +98,7 @@ reg [2:0]current_state_tx;
 reg [2:0]current_state_rx;
 reg [7:0]counter;
 reg [10:0] addr_data_local;
-reg [10:0] addr_data_local_reg;
+reg [10:0] addr_data_local_next;
 wire [10:0] addr_data_local_mux;
 reg [7:0] mem[256-1:0];
 reg [7:0] mem_tmp[256-1:0];
@@ -134,6 +134,8 @@ always@(posedge clk, negedge a_sync_nrst)begin
         tx_data <= 8'hca;
         counter_tx <= 0;
         rx_data_ff1 <=0;
+        addr_data_local <=0;
+
     end else begin
         //Lógica de escrita no buffer
         rx_data_ff1 <= rx_valid ? rx_data :rx_data_ff1;
@@ -151,13 +153,15 @@ always@(posedge clk, negedge a_sync_nrst)begin
             mem[counter_tx]  <= mem[counter_tx];
         end
         //Lógica de leitura no buffer
+
         if(ena_dec && current_state_tx == TX_DATA )begin
             tx_data <= mem_tmp[addr_data_local];
-            addr_data_local <= addr_data_local + 1;
+            addr_data_local <= addr_data_local_next;
         end else begin
-            tx_data <= tx_data;
-            addr_data_local <=(addr_data_local < tx_pkt_len) ? addr_data_local : 0;
+            tx_data <= addr_data_local < tx_pkt_len ? mem_tmp[addr_data_local]: 0;
+            addr_data_local <= addr_data_local < tx_pkt_len ? addr_data_local_next:0;
         end
+
         reg_sync_rx_valid    <= rx_valid;
         addr_data_write      <= addr_data_write_next;
 
@@ -189,8 +193,8 @@ reg [7:0] addr_data_t;
 
 
             sync_data_valid_tx0 <= ena_dec ;
-            sync_data_valid_tx <= !ena_dec && sync_data_valid_tx0;
-            tx_ena_out  <=tx_ena_out_w;
+            sync_data_valid_tx <= (!ena_dec && sync_data_valid_tx0);
+            tx_ena_out  <= tx_ena_out_w ;
             sync_dec <=!tx_ena_out && tx_ena_out_w;
             debug_local_data <= mem[counter];
         end
@@ -227,24 +231,42 @@ reg [7:0] addr_data_t;
     always@(*)begin
         case(current_state_tx)
             IDLE:begin
-                case(sync_reg_start_frame_transmission)//Atualização do estado de transmissão com base na recepção
+                case(start_frame_transmission)//Atualização do estado de transmissão com base na recepção
                     1'b1:next_state_tx = TX_DATA;
                     1'b0:next_state_tx = IDLE;
                     default:next_state_tx = IDLE;
                 endcase
                 tx_ena_out_w = 0;
+                addr_data_local_next = 0;
             end
             TX_DATA:begin
-                tx_ena_out_w = 1;
                 case(addr_data_local < tx_pkt_len)
  
-                    1'b1:next_state_tx = TX_DATA;
-                    1'b0:next_state_tx = IDLE; 
-                    default:next_state_tx = IDLE;
+                    1'b1:begin
+                        tx_ena_out_w = 1;
+                        next_state_tx = TX_DATA;
+                        //addr_data_local_next = addr_data_local < tx_pkt_len ? addr_data_local + 1 : 0;
+
+                        if(addr_data_local < tx_pkt_len && ena_dec)begin
+                            addr_data_local_next =  addr_data_local + 1;
+                        end else begin
+                            addr_data_local_next =  addr_data_local;
+                            
+                        end
+                    end
+                    1'b0:begin next_state_tx = start_frame_transmission ?  TX_DATA : IDLE; 
+                        addr_data_local_next = 0;
+                        tx_ena_out_w = 0;
+                    end
+                    default:begin next_state_tx = IDLE;
+                                addr_data_local_next = 0;
+                                tx_ena_out_w = 1;
+                    end
                 endcase
             end
             default:begin
                 tx_ena_out_w = 0;
+                addr_data_local_next = 0;
                 next_state_tx = IDLE;
             end
         endcase
@@ -254,18 +276,19 @@ reg [7:0] addr_data_t;
 
 
 
-    assign ena_dec       =  counter_dec == 16-1; //Por padrão 15; 15-1 =4
+    assign ena_dec       =  counter_dec == 15-1; //Por padrão 15; 15-1 =14
     always @(posedge clk or negedge a_sync_nrst) begin
         if(!a_sync_nrst)begin
             counter_dec <= 0;
         end else begin
-            if(tx_ena_out && counter_dec < 16) counter_dec <= counter_dec +1;
+            if(tx_ena_out && counter_dec < 15) counter_dec <= counter_dec +1;
             else                               counter_dec <= 0;
         end
     end
 
 assign tx_eof = (addr_data_local == tx_pkt_len - 1) ;
 assign tx_val = (tx_ena_out && ena_dec);
+
 
 //Recepção SKARAB
 cmd_sync_detector cmd_start_frame_reception(
@@ -326,8 +349,11 @@ always@(posedge clk, negedge a_sync_nrst)begin
         m_addr_data <= 0;
         m_axis_tdata <=0;
     end else begin
-        m_axis_state <= m_axis_next_state;
-        m_addr_data  <= m_addr_data_next;
+        if(handshake_sm_axis)begin
+            m_axis_state <= m_axis_next_state;
+            m_addr_data  <= m_addr_data_next;
+
+        end
         //Dado real
         m_axis_tdata <= mem[m_addr_data];
 
@@ -393,6 +419,7 @@ reg  s_axis_next_state;
 wire handshake_ms_axis;
 reg [9:0]s_addr_data;
 reg [9:0]s_addr_data_next;
+reg [9:0]s_addr_data_delay;
 
 
 
@@ -401,6 +428,7 @@ always@(posedge clk, negedge a_sync_nrst)begin
     if(!a_sync_nrst)begin
         s_axis_state <= S_IDLE;
         s_addr_data <= 0;
+        s_addr_data_delay <= 0;
     end else begin
         //Alteração de sinal habilação
         if(handshake_ms_axis)begin 
@@ -408,7 +436,8 @@ always@(posedge clk, negedge a_sync_nrst)begin
         end
         if(s_axis_state == S_REC && handshake_ms_axis)begin 
             s_addr_data          <= s_addr_data_next;
-            mem_tmp[s_addr_data] <= s_axis_tdata ;
+            s_addr_data_delay <= s_addr_data;
+            mem_tmp[s_addr_data_delay] <= s_axis_tdata ;
         end
     end
 end

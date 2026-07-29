@@ -210,7 +210,11 @@ always_ff@(posedge clk,negedge a_sync_nrst)begin
         counter <= 0;
          in_valid_rx <=0;
     end
-    else begin counter<=in_valid_rx ? counter+1:counter;
+    else begin 
+                
+                
+                counter<=in_valid_rx ? counter+1:(counter < 257) ? counter:0;
+                
                in_valid_rx <=data_valid_rx1;
 
     end
@@ -220,8 +224,8 @@ assign in_data_rx_ethernet = mem[counter];
 //always #4.37 clk =~clk;
 always #5 clk =~clk;
 
-always #2 s_axis_aclk0 = ~s_axis_aclk0;
-always #2 s_axis_aclk1 = ~s_axis_aclk1;
+always #5 s_axis_aclk0 = ~s_axis_aclk0;
+always #5 s_axis_aclk1 = ~s_axis_aclk1;
 
 
     initial begin

@@ -88,7 +88,7 @@ data3 =(np.ones(N,dtype=np.int64)).tolist()
 print(len(data))
 
 zeros = np.zeros(256,dtype=np.int64).tolist()
-k=2
+k=4
 
 t0 = time.time()
 try:

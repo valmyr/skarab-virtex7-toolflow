@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Jul 28 16:49:46 2026
-# Process ID: 637870
+# Start of session at: Tue Jul 28 21:04:50 2026
+# Process ID: 721782
 # Current directory: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1
 # Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/top.vds
@@ -147,12 +147,12 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
 INFO: [Device 21-403] Loading part xc7vx690tffg1927-2
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 637985 
+INFO: Helper process launched with PID 721906 
 WARNING: [Synth 8-6901] identifier 'USER_WIDTH' is used before its declaration [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/wb_bram/wb_bram.v:43]
 WARNING: [Synth 8-6901] identifier 'USER_WIDTH' is used before its declaration [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/wb_bram/wb_bram.v:45]
 WARNING: [Synth 8-6901] identifier 'wbm_sel_i_r3' is used before its declaration [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/wbs_arbiter/wbs_arbiter.v:105]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2007.918 ; gain = 159.625 ; free physical = 46753 ; free virtual = 55882
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2008.957 ; gain = 161.625 ; free physical = 42676 ; free virtual = 52903
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-1565] actual for formal port rst is neither a static name nor a globally static expression [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_infr/skarab_infr.vhd:957]
 WARNING: [Synth 8-1565] actual for formal port rst is neither a static name nor a globally static expression [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_infr/skarab_infr.vhd:991]
@@ -439,20 +439,20 @@ INFO: [Synth 8-6157] synthesizing module 'tge_tx' [/home/valmyrsilva07/virtex7/s
 	Parameter TX_SEND_LAST bound to: 4'b1001 
 	Parameter TX_CPU_WAIT bound to: 4'b1010 
 	Parameter TX_SEND_CPU bound to: 4'b1011 
-INFO: [Synth 8-638] synthesizing module 'tx_data_fifo_ext' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/tx_data_fifo_ext_stub.vhdl:20]
-INFO: [Synth 8-638] synthesizing module 'tx_fifo_ext' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/tx_fifo_ext_stub.vhdl:20]
+INFO: [Synth 8-638] synthesizing module 'tx_data_fifo_ext' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/tx_data_fifo_ext_stub.vhdl:20]
+INFO: [Synth 8-638] synthesizing module 'tx_fifo_ext' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/tx_fifo_ext_stub.vhdl:20]
 INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_tx.v:247]
 INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_tx.v:248]
-INFO: [Synth 8-638] synthesizing module 'cpu_buffer' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/cpu_buffer_stub.vhdl:21]
+INFO: [Synth 8-638] synthesizing module 'cpu_buffer' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/cpu_buffer_stub.vhdl:21]
 INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_tx.v:281]
 INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_tx.v:318]
 INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_tx.v:319]
 INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_tx.v:327]
 INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_tx.v:328]
 INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_tx.v:370]
-INFO: [Synth 8-638] synthesizing module 'tx_packet_fifo' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/tx_packet_fifo_stub.vhdl:23]
-INFO: [Synth 8-638] synthesizing module 'tx_packet_ctrl_fifo' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/tx_packet_ctrl_fifo_stub.vhdl:23]
-INFO: [Synth 8-638] synthesizing module 'arp_cache' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/arp_cache_stub.vhdl:21]
+INFO: [Synth 8-638] synthesizing module 'tx_packet_fifo' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/tx_packet_fifo_stub.vhdl:23]
+INFO: [Synth 8-638] synthesizing module 'tx_packet_ctrl_fifo' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/tx_packet_ctrl_fifo_stub.vhdl:23]
+INFO: [Synth 8-638] synthesizing module 'arp_cache' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/arp_cache_stub.vhdl:21]
 INFO: [Synth 8-155] case statement is not full and has no default [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_tx.v:439]
 INFO: [Synth 8-6155] done synthesizing module 'tge_tx' (13#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_tx.v:2]
 INFO: [Synth 8-6157] synthesizing module 'tge_rx' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_rx.v:2]
@@ -479,7 +479,7 @@ INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [/home/valmyrsi
 INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "NO" *) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_rx.v:395]
 INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_rx.v:396]
 INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_rx.v:397]
-INFO: [Synth 8-638] synthesizing module 'rx_packet_fifo_bram' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/rx_packet_fifo_bram_stub.vhdl:22]
+INFO: [Synth 8-638] synthesizing module 'rx_packet_fifo_bram' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/rx_packet_fifo_bram_stub.vhdl:22]
 INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "NO" *) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_rx.v:513]
 INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_rx.v:513]
 INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "NO" *) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_rx.v:514]
@@ -491,26 +491,26 @@ INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [/home/valmyrsi
 INFO: [Synth 8-155] case statement is not full and has no default [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_rx.v:128]
 INFO: [Synth 8-251] tge_rx_cpu: got good frame, waiting for buffer to become available [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_rx.v:347]
 INFO: [Synth 8-251] tge_rx_cpu: buffer free, swapping now [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_rx.v:356]
-INFO: [Synth 8-638] synthesizing module 'rx_packet_ctrl_fifo' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/rx_packet_ctrl_fifo_stub.vhdl:22]
+INFO: [Synth 8-638] synthesizing module 'rx_packet_ctrl_fifo' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/rx_packet_ctrl_fifo_stub.vhdl:22]
 INFO: [Synth 8-155] case statement is not full and has no default [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_rx.v:524]
 INFO: [Synth 8-6155] done synthesizing module 'tge_rx' (14#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/tge_rx.v:2]
 INFO: [Synth 8-155] case statement is not full and has no default [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/kat_ten_gb_eth.v:397]
 INFO: [Synth 8-6155] done synthesizing module 'kat_ten_gb_eth' (15#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/SKA_10GBE_MAC/kat_ten_gb_eth.v:2]
 INFO: [Synth 8-3491] module 'xaui_to_gmii_translator' declared at '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_one_gbe/xaui_to_gmii_translator.vhd:28' bound to instance 'xaui_to_gmii_translator_0' of component 'xaui_to_gmii_translator' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_one_gbe/one_gbe.vhd:430]
 INFO: [Synth 8-638] synthesizing module 'xaui_to_gmii_translator' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_one_gbe/xaui_to_gmii_translator.vhd:50]
-INFO: [Synth 8-3491] module 'xaui_to_gmii_fifo' declared at '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/xaui_to_gmii_fifo_stub.vhdl:5' bound to instance 'xaui_to_gmii_fifo_0' of component 'xaui_to_gmii_fifo' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_one_gbe/xaui_to_gmii_translator.vhd:161]
-INFO: [Synth 8-638] synthesizing module 'xaui_to_gmii_fifo' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/xaui_to_gmii_fifo_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'xaui_to_gmii_fifo' declared at '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/xaui_to_gmii_fifo_stub.vhdl:5' bound to instance 'xaui_to_gmii_fifo_0' of component 'xaui_to_gmii_fifo' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_one_gbe/xaui_to_gmii_translator.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'xaui_to_gmii_fifo' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/xaui_to_gmii_fifo_stub.vhdl:21]
 INFO: [Synth 8-256] done synthesizing module 'xaui_to_gmii_translator' (16#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_one_gbe/xaui_to_gmii_translator.vhd:50]
 INFO: [Synth 8-3491] module 'gmii_to_xaui_translator' declared at '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_one_gbe/gmii_to_xaui_translator.vhd:28' bound to instance 'gmii_to_xaui_translator_0' of component 'gmii_to_xaui_translator' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_one_gbe/one_gbe.vhd:464]
 INFO: [Synth 8-638] synthesizing module 'gmii_to_xaui_translator' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_one_gbe/gmii_to_xaui_translator.vhd:47]
-INFO: [Synth 8-3491] module 'gmii_to_xaui_fifo' declared at '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/gmii_to_xaui_fifo_stub.vhdl:5' bound to instance 'gmii_to_xaui_fifo_0' of component 'gmii_to_xaui_fifo' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_one_gbe/gmii_to_xaui_translator.vhd:288]
-INFO: [Synth 8-638] synthesizing module 'gmii_to_xaui_fifo' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/gmii_to_xaui_fifo_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'packet_byte_count_fifo' declared at '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/packet_byte_count_fifo_stub.vhdl:5' bound to instance 'packet_byte_count_fifo_0' of component 'packet_byte_count_fifo' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_one_gbe/gmii_to_xaui_translator.vhd:309]
-INFO: [Synth 8-638] synthesizing module 'packet_byte_count_fifo' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/packet_byte_count_fifo_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'gmii_to_xaui_fifo' declared at '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/gmii_to_xaui_fifo_stub.vhdl:5' bound to instance 'gmii_to_xaui_fifo_0' of component 'gmii_to_xaui_fifo' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_one_gbe/gmii_to_xaui_translator.vhd:288]
+INFO: [Synth 8-638] synthesizing module 'gmii_to_xaui_fifo' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/gmii_to_xaui_fifo_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'packet_byte_count_fifo' declared at '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/packet_byte_count_fifo_stub.vhdl:5' bound to instance 'packet_byte_count_fifo_0' of component 'packet_byte_count_fifo' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_one_gbe/gmii_to_xaui_translator.vhd:309]
+INFO: [Synth 8-638] synthesizing module 'packet_byte_count_fifo' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/packet_byte_count_fifo_stub.vhdl:21]
 INFO: [Synth 8-256] done synthesizing module 'gmii_to_xaui_translator' (17#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_one_gbe/gmii_to_xaui_translator.vhd:47]
 WARNING: [Synth 8-5640] Port 'gtrefclk_bufg_out' is missing in component declaration [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_one_gbe/one_gbe.vhd:272]
-INFO: [Synth 8-3491] module 'gmii_to_sgmii' declared at '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/gmii_to_sgmii_stub.vhdl:5' bound to instance 'gmii_to_sgmii_0' of component 'gmii_to_sgmii' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_one_gbe/one_gbe.vhd:566]
-INFO: [Synth 8-638] synthesizing module 'gmii_to_sgmii' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/gmii_to_sgmii_stub.vhdl:48]
+INFO: [Synth 8-3491] module 'gmii_to_sgmii' declared at '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/gmii_to_sgmii_stub.vhdl:5' bound to instance 'gmii_to_sgmii_0' of component 'gmii_to_sgmii' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_one_gbe/one_gbe.vhd:566]
+INFO: [Synth 8-638] synthesizing module 'gmii_to_sgmii' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/gmii_to_sgmii_stub.vhdl:48]
 WARNING: [Synth 8-6014] Unused sequential element xaui_packets_sent_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_one_gbe/one_gbe.vhd:401]
 WARNING: [Synth 8-6014] Unused sequential element gmii_tx_en_z_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_one_gbe/one_gbe.vhd:449]
 WARNING: [Synth 8-6014] Unused sequential element gmii_packets_sent_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_one_gbe/one_gbe.vhd:456]
@@ -2772,11 +2772,11 @@ INFO: [Synth 8-256] done synthesizing module 'wishbone_interconnect' (167#1) [/h
 INFO: [Synth 8-638] synthesizing module 'wishbone_register' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/WISHBONE/wishbone_register.vhd:50]
 INFO: [Synth 8-256] done synthesizing module 'wishbone_register' (168#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/WISHBONE/wishbone_register.vhd:50]
 INFO: [Synth 8-638] synthesizing module 'wishbone_flash_sdram_interface' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/WISHBONE/wishbone_flash_sdram_interface.vhd:90]
-INFO: [Synth 8-638] synthesizing module 'common_clock_fifo_32x16' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/common_clock_fifo_32x16_stub.vhdl:20]
+INFO: [Synth 8-638] synthesizing module 'common_clock_fifo_32x16' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/common_clock_fifo_32x16_stub.vhdl:20]
 INFO: [Synth 8-638] synthesizing module 'isp_spi_programmer' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_infr/isp_spi_programmer.vhd:54]
 INFO: [Synth 8-638] synthesizing module 'strobe_gen' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_infr/strobe_gen.vhd:36]
 INFO: [Synth 8-256] done synthesizing module 'strobe_gen' (169#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_infr/strobe_gen.vhd:36]
-INFO: [Synth 8-638] synthesizing module 'isp_spi_buffer' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/isp_spi_buffer_stub.vhdl:19]
+INFO: [Synth 8-638] synthesizing module 'isp_spi_buffer' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/isp_spi_buffer_stub.vhdl:19]
 INFO: [Synth 8-256] done synthesizing module 'isp_spi_programmer' (170#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_infr/isp_spi_programmer.vhd:54]
 	Parameter BUFR_CLK_DIV_G bound to: 4 - type: string 
 INFO: [Synth 8-638] synthesizing module 'icape_controller' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_infr/icape_controller.vhd:49]
@@ -2852,8 +2852,8 @@ INFO: [Synth 8-638] synthesizing module 'FPGA_DNA_CHECKER' [/home/valmyrsilva07/
 	Parameter SIM_DNA_VALUE bound to: 57'b001110000000111010010010110100100000000100010101000010001 
 INFO: [Synth 8-113] binding component instance 'DNA_PORT_inst' to cell 'DNA_PORT' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_infr/FPGA_DNA_CHECKER.vhd:72]
 INFO: [Synth 8-256] done synthesizing module 'FPGA_DNA_CHECKER' (180#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_infr/FPGA_DNA_CHECKER.vhd:46]
-INFO: [Synth 8-638] synthesizing module 'xadc_measurement' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/xadc_measurement_stub.vhdl:28]
-INFO: [Synth 8-638] synthesizing module 'cross_clock_fifo_wb_out_73x16' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/cross_clock_fifo_wb_out_73x16_stub.vhdl:20]
+INFO: [Synth 8-638] synthesizing module 'xadc_measurement' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/xadc_measurement_stub.vhdl:28]
+INFO: [Synth 8-638] synthesizing module 'cross_clock_fifo_wb_out_73x16' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/cross_clock_fifo_wb_out_73x16_stub.vhdl:20]
 INFO: [Synth 8-638] synthesizing module 'led_manager' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_infr/led_manager.vhd:75]
 WARNING: [Synth 8-614] signal 'eth_led_indicators' is read in the process but is not in the sensitivity list [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_infr/led_manager.vhd:137]
 WARNING: [Synth 8-614] signal 'image_led_indicators' is read in the process but is not in the sensitivity list [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/skarab_infr/led_manager.vhd:170]
@@ -3122,7 +3122,7 @@ INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_xlcounter_f
 	Parameter core_name0 bound to: ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i1 - type: string 
 	Parameter op_width bound to: 18 - type: integer 
 	Parameter op_arith bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i1' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i1_stub.vhdl:15]
+INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i1' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i1_stub.vhdl:15]
 INFO: [Synth 8-256] done synthesizing module 'ethernet_one_gbe_skarab_axi_xlcounter_free' (220#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/ethernet_one_gbe_skarab_axi_entity_declarations.vhd:3497]
 INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_xlslice__parameterized0' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/ethernet_one_gbe_skarab_axi_entity_declarations.vhd:973]
 	Parameter new_msb bound to: 16 - type: integer 
@@ -3194,7 +3194,7 @@ INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_xlcounter_f
 	Parameter core_name0 bound to: ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i2 - type: string 
 	Parameter op_width bound to: 2 - type: integer 
 	Parameter op_arith bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i2' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i2_stub.vhdl:15]
+INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i2' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i2_stub.vhdl:15]
 INFO: [Synth 8-256] done synthesizing module 'ethernet_one_gbe_skarab_axi_xlcounter_free__parameterized0' (232#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/ethernet_one_gbe_skarab_axi_entity_declarations.vhd:3497]
 INFO: [Synth 8-638] synthesizing module 'sysgen_mux_3530c29668' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/ethernet_one_gbe_skarab_axi_entity_declarations.vhd:1686]
 INFO: [Synth 8-256] done synthesizing module 'sysgen_mux_3530c29668' (233#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/ethernet_one_gbe_skarab_axi_entity_declarations.vhd:1686]
@@ -3717,7 +3717,7 @@ INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_xlcounter_f
 	Parameter core_name0 bound to: ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i3 - type: string 
 	Parameter op_width bound to: 19 - type: integer 
 	Parameter op_arith bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i3' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i3_stub.vhdl:15]
+INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i3' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i3_stub.vhdl:15]
 INFO: [Synth 8-256] done synthesizing module 'ethernet_one_gbe_skarab_axi_xlcounter_free__parameterized1' (315#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/ethernet_one_gbe_skarab_axi_entity_declarations.vhd:3497]
 INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_xlslice__parameterized15' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/ethernet_one_gbe_skarab_axi_entity_declarations.vhd:973]
 	Parameter new_msb bound to: 17 - type: integer 
@@ -3933,7 +3933,7 @@ INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_xlcounter_f
 	Parameter core_name0 bound to: ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4 - type: string 
 	Parameter op_width bound to: 17 - type: integer 
 	Parameter op_arith bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4_stub.vhdl:15]
+INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4_stub.vhdl:15]
 INFO: [Synth 8-256] done synthesizing module 'ethernet_one_gbe_skarab_axi_xlcounter_free__parameterized2' (340#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/ethernet_one_gbe_skarab_axi_entity_declarations.vhd:3497]
 INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_xlslice__parameterized20' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/ethernet_one_gbe_skarab_axi_entity_declarations.vhd:973]
 	Parameter new_msb bound to: 15 - type: integer 
@@ -4459,7 +4459,7 @@ INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_xladdsub' [
 	Parameter c_output_width bound to: 33 - type: integer 
 	Parameter c_has_c_in bound to: 0 - type: integer 
 	Parameter c_has_c_out bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0_stub.vhdl:14]
+INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0_stub.vhdl:14]
 INFO: [Synth 8-256] done synthesizing module 'ethernet_one_gbe_skarab_axi_xladdsub' (379#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/ethernet_one_gbe_skarab_axi_entity_declarations.vhd:3310]
 INFO: [Synth 8-638] synthesizing module 'sysgen_concat_e7087c06c2' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/ethernet_one_gbe_skarab_axi_entity_declarations.vhd:201]
 INFO: [Synth 8-256] done synthesizing module 'sysgen_concat_e7087c06c2' (380#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/ethernet_one_gbe_skarab_axi_entity_declarations.vhd:201]
@@ -4624,27 +4624,26 @@ INFO: [Synth 8-6157] synthesizing module 'control_axi_stream_gbe' [/home/valmyrs
 	Parameter M_SEND bound to: 2'b01 
 	Parameter S_IDLE bound to: 1'b1 
 	Parameter S_REC bound to: 1'b0 
-INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:203]
-INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:213]
-INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:230]
-INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:239]
+INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:207]
+INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:217]
+INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:234]
+INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:243]
 INFO: [Synth 8-6157] synthesizing module 'cmd_sync_detector' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/cmd_sync_detector.v:60]
 	Parameter IDLE bound to: 4'b0001 
 	Parameter CMD_S0 bound to: 4'b0010 
 	Parameter CMD_S1 bound to: 4'b0100 
 	Parameter CMD_EVENT bound to: 4'b1000 
 INFO: [Synth 8-6155] done synthesizing module 'cmd_sync_detector' (393#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/cmd_sync_detector.v:60]
-INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:417]
+INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:446]
 WARNING: [Synth 8-6014] Unused sequential element reg_sync_rx_valid_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:130]
 WARNING: [Synth 8-6014] Unused sequential element addr_data_write_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:131]
-WARNING: [Synth 8-6014] Unused sequential element addr_data_t_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:179]
-WARNING: [Synth 8-6014] Unused sequential element sync_data_valid_tx_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:180]
-WARNING: [Synth 8-6014] Unused sequential element sync_data_valid_tx0_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:181]
-WARNING: [Synth 8-6014] Unused sequential element sync_dec_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:183]
-WARNING: [Synth 8-6014] Unused sequential element debug_local_data_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:184]
+WARNING: [Synth 8-6014] Unused sequential element addr_data_t_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:183]
+WARNING: [Synth 8-6014] Unused sequential element sync_data_valid_tx_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:184]
+WARNING: [Synth 8-6014] Unused sequential element sync_data_valid_tx0_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:185]
+WARNING: [Synth 8-6014] Unused sequential element sync_dec_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:187]
+WARNING: [Synth 8-6014] Unused sequential element debug_local_data_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:188]
 WARNING: [Synth 8-5788] Register mem_reg in module control_axi_stream_gbe is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
-WARNING: [Synth 8-5788] Register addr_data_local_reg in module control_axi_stream_gbe is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:155]
-WARNING: [Synth 8-5788] Register tx_ena_out_reg in module control_axi_stream_gbe is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:182]
+WARNING: [Synth 8-5788] Register tx_ena_out_reg in module control_axi_stream_gbe is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/control_axi_stream_gbe.v:186]
 WARNING: [Synth 8-5788] Register mem_tmp_reg in module control_axi_stream_gbe is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
 WARNING: [Synth 8-4767] Trying to implement RAM 'mem_tmp_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
 Reason is one or more of the following :
@@ -4660,7 +4659,7 @@ INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_xlcounter_f
 	Parameter core_name0 bound to: ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i0 - type: string 
 	Parameter op_width bound to: 32 - type: integer 
 	Parameter op_arith bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i0' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-637870-valmyrsilva07-B760M-AORUS-ELITE/realtime/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i0_stub.vhdl:15]
+INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i0' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/.Xil/Vivado-721782-valmyrsilva07-B760M-AORUS-ELITE/realtime/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i0_stub.vhdl:15]
 INFO: [Synth 8-256] done synthesizing module 'ethernet_one_gbe_skarab_axi_xlcounter_free__parameterized3' (395#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/sysgen/ethernet_one_gbe_skarab_axi_entity_declarations.vhd:3497]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
@@ -4856,10 +4855,6 @@ WARNING: [Synth 8-3331] design sys_block has unconnected port wb_adr_i[8]
 WARNING: [Synth 8-3331] design sys_block has unconnected port wb_adr_i[7]
 WARNING: [Synth 8-3331] design sys_block has unconnected port wb_adr_i[1]
 WARNING: [Synth 8-3331] design sys_block has unconnected port wb_adr_i[0]
-WARNING: [Synth 8-3331] design synth_reg__parameterized1 has unconnected port clr
-WARNING: [Synth 8-3331] design ethernet_one_gbe_skarab_axi_xldelay has unconnected port rst
-WARNING: [Synth 8-3331] design synth_reg__parameterized16 has unconnected port clr
-WARNING: [Synth 8-3331] design ethernet_one_gbe_skarab_axi_xldelay__parameterized7 has unconnected port rst
 WARNING: [Synth 8-3331] design ethernet_one_gbe_skarab_axi_xlcounter_free__parameterized3 has unconnected port up[0]
 WARNING: [Synth 8-3331] design ethernet_one_gbe_skarab_axi_xlcounter_free__parameterized3 has unconnected port load[0]
 WARNING: [Synth 8-3331] design ethernet_one_gbe_skarab_axi_xlcounter_free__parameterized3 has unconnected port din[31]
@@ -4885,9 +4880,13 @@ WARNING: [Synth 8-3331] design ethernet_one_gbe_skarab_axi_xlcounter_free__param
 WARNING: [Synth 8-3331] design ethernet_one_gbe_skarab_axi_xlcounter_free__parameterized3 has unconnected port din[11]
 WARNING: [Synth 8-3331] design ethernet_one_gbe_skarab_axi_xlcounter_free__parameterized3 has unconnected port din[10]
 WARNING: [Synth 8-3331] design ethernet_one_gbe_skarab_axi_xlcounter_free__parameterized3 has unconnected port din[9]
+WARNING: [Synth 8-3331] design ethernet_one_gbe_skarab_axi_xlcounter_free__parameterized3 has unconnected port din[8]
+WARNING: [Synth 8-3331] design ethernet_one_gbe_skarab_axi_xlcounter_free__parameterized3 has unconnected port din[7]
+WARNING: [Synth 8-3331] design ethernet_one_gbe_skarab_axi_xlcounter_free__parameterized3 has unconnected port din[6]
+WARNING: [Synth 8-3331] design ethernet_one_gbe_skarab_axi_xlcounter_free__parameterized3 has unconnected port din[5]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 2611.754 ; gain = 763.461 ; free physical = 46388 ; free virtual = 55527
+Finished RTL Elaboration : Time (s): cpu = 00:00:49 ; elapsed = 00:00:57 . Memory (MB): peak = 2611.824 ; gain = 764.492 ; free physical = 42404 ; free virtual = 52620
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -4900,10 +4899,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:57 . Memory (MB): peak = 2617.691 ; gain = 769.398 ; free physical = 46487 ; free virtual = 55625
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:00:59 . Memory (MB): peak = 2620.730 ; gain = 773.398 ; free physical = 42503 ; free virtual = 52718
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:49 ; elapsed = 00:00:57 . Memory (MB): peak = 2617.691 ; gain = 769.398 ; free physical = 46487 ; free virtual = 55625
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:51 ; elapsed = 00:00:59 . Memory (MB): peak = 2620.730 ; gain = 773.398 ; free physical = 42503 ; free virtual = 52718
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 2443 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -5054,7 +5053,7 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2772.535 ; gain = 0.000 ; free physical = 46159 ; free virtual = 55298
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2772.574 ; gain = 0.000 ; free physical = 42182 ; free virtual = 52399
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2046 instances were transformed.
   FDC_1 => FDCE (inverted pins: C): 1 instances
@@ -5072,7 +5071,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 16 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2772.535 ; gain = 0.000 ; free physical = 46159 ; free virtual = 55298
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2772.574 ; gain = 0.000 ; free physical = 42179 ; free virtual = 52396
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'ethernet_one_gbe_skarab_axi_inst/ethernet_one_gbe_skarab_axi_struct/d3/ss/add_gen/add_gen/comp1.core_instance1' at clock pin 'CLK' is different from the actual clock period '4.335', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'ethernet_one_gbe_skarab_axi_inst/ethernet_one_gbe_skarab_axi_struct/d3/ss/basic_ctrl/dram_munge/input_count/comp2.core_instance2' at clock pin 'CLK' is different from the actual clock period '4.335', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'ethernet_one_gbe_skarab_axi_inst/ethernet_one_gbe_skarab_axi_struct/d4/ss/add_gen/add_gen/comp1.core_instance1' at clock pin 'CLK' is different from the actual clock period '4.335', this can lead to different synthesis results.
@@ -5108,7 +5107,7 @@ WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context s
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'ethernet_one_gbe_skarab_axi_tx_one_gbe/kat_ten_gb_eth_0/tge_tx_inst/tx_packet_fifo_inst' at clock pin 'rd_clk' is different from the actual clock period '6.400', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'ethernet_one_gbe_skarab_axi_tx_one_gbe/xaui_to_gmii_translator_0/xaui_to_gmii_fifo_0' at clock pin 'rd_clk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:58 ; elapsed = 00:01:05 . Memory (MB): peak = 2772.535 ; gain = 924.242 ; free physical = 46437 ; free virtual = 55576
+Finished Constraint Validation : Time (s): cpu = 00:01:00 ; elapsed = 00:01:07 . Memory (MB): peak = 2772.574 ; gain = 925.242 ; free physical = 42434 ; free virtual = 52649
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 4 processes.
 ---------------------------------------------------------------------------------
@@ -5116,7 +5115,7 @@ Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7vx690tffg1927-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:58 ; elapsed = 00:01:05 . Memory (MB): peak = 2772.535 ; gain = 924.242 ; free physical = 46437 ; free virtual = 55576
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:00 ; elapsed = 00:01:07 . Memory (MB): peak = 2772.574 ; gain = 925.242 ; free physical = 42433 ; free virtual = 52648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -5194,7 +5193,7 @@ Applied set_property DONT_TOUCH = true for ethernet_one_gbe_skarab_axi_inst/ethe
 Applied set_property DONT_TOUCH = true for ethernet_one_gbe_skarab_axi_inst/ethernet_one_gbe_skarab_axi_struct/axi_fifo/xpm_fifo_axis_inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for ethernet_one_gbe_skarab_axi_inst/ethernet_one_gbe_skarab_axi_struct/axi_fifo1/xpm_fifo_axis_inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:01:05 . Memory (MB): peak = 2772.535 ; gain = 924.242 ; free physical = 46426 ; free virtual = 55565
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:08 . Memory (MB): peak = 2772.574 ; gain = 925.242 ; free physical = 42435 ; free virtual = 52650
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'tx_state_reg' in module 'mac_tx'
 INFO: [Synth 8-5544] ROM "xgmii_txc_val" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -5231,7 +5230,6 @@ INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_re
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'cmd_sync_detector'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_tx_reg' in module 'control_axi_stream_gbe'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_rx_reg' in module 'control_axi_stream_gbe'
-INFO: [Synth 8-802] inferred FSM for state register 'm_axis_state_reg' in module 'control_axi_stream_gbe'
 INFO: [Synth 8-4471] merging register 'wbs_stb_o_reg[1:0]' into 'wbs_cyc_o_reg[1:0]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/wbs_arbiter/wbs_arbiter.v:74]
 INFO: [Synth 8-4471] merging register 'wbs_stb_o_reg[31:0]' into 'wbs_cyc_o_reg[31:0]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/wbs_arbiter/wbs_arbiter.v:74]
 INFO: [Synth 8-4471] merging register 'wbs_stb_o_reg[5:0]' into 'wbs_cyc_o_reg[5:0]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/wbs_arbiter/wbs_arbiter.v:74]
@@ -5482,14 +5480,6 @@ INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using e
                  TX_DATA |                                1 |                              010
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_tx_reg' using encoding 'sequential' in module 'control_axi_stream_gbe'
-INFO: [Synth 8-6159] Found Keep on FSM register 'm_axis_state_reg' in module 'control_axi_stream_gbe', re-encoding will not be performed
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-*
-                  M_IDLE |                               00 |                               00
-                  M_SEND |                               01 |                               01
----------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -5498,7 +5488,7 @@ INFO: [Synth 8-6159] Found Keep on FSM register 'm_axis_state_reg' in module 'co
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_rx_reg' using encoding 'sequential' in module 'control_axi_stream_gbe'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:07 ; elapsed = 00:01:16 . Memory (MB): peak = 2772.535 ; gain = 924.242 ; free physical = 43726 ; free virtual = 52874
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:09 ; elapsed = 00:01:19 . Memory (MB): peak = 2772.574 ; gain = 925.242 ; free physical = 40005 ; free virtual = 50232
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'ethernet_one_gbe_skarab_axi_inst/ethernet_one_gbe_skarab_axi_struct/convert_rx_valid1/bussify/reinterpret1' (sysgen_reinterpret_b12472a9cd) to 'ethernet_one_gbe_skarab_axi_inst/ethernet_one_gbe_skarab_axi_struct/convert_rx_valid1/bussify/reinterpret2'
 INFO: [Synth 8-223] decloning instance 'ethernet_one_gbe_skarab_axi_inst/ethernet_one_gbe_skarab_axi_struct/convert_rx_valid1/bussify/reinterpret1' (sysgen_reinterpret_b12472a9cd) to 'ethernet_one_gbe_skarab_axi_inst/ethernet_one_gbe_skarab_axi_struct/convert_rx_valid1/bussify/reinterpret3'
@@ -5543,7 +5533,7 @@ Report RTL Partitions:
 |2     |wbs_arbiter__parameterized0__GB0 |           1|     32051|
 |3     |wbs_arbiter__parameterized0__GB1 |           1|      8415|
 |4     |wbs_master_arbiter__GC0          |           1|      5168|
-|5     |top__GCB0                        |           1|     31977|
+|5     |top__GCB0                        |           1|     32061|
 |6     |top__GCB1                        |           1|     28970|
 +------+---------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -5631,7 +5621,7 @@ Detailed RTL Component Info :
 	               14 Bit    Registers := 10    
 	               13 Bit    Registers := 5     
 	               11 Bit    Registers := 8     
-	               10 Bit    Registers := 36    
+	               10 Bit    Registers := 37    
 	                9 Bit    Registers := 4     
 	                8 Bit    Registers := 583   
 	                7 Bit    Registers := 8     
@@ -5639,7 +5629,7 @@ Detailed RTL Component Info :
 	                5 Bit    Registers := 13    
 	                4 Bit    Registers := 41    
 	                3 Bit    Registers := 44    
-	                2 Bit    Registers := 79    
+	                2 Bit    Registers := 80    
 	                1 Bit    Registers := 1398  
 +---RAMs : 
 	            2048K Bit         RAMs := 1     
@@ -5686,14 +5676,14 @@ Detailed RTL Component Info :
 	   2 Input     14 Bit        Muxes := 10    
 	   2 Input     13 Bit        Muxes := 4     
 	   2 Input     12 Bit        Muxes := 1     
-	   2 Input     11 Bit        Muxes := 9     
+	   2 Input     11 Bit        Muxes := 12    
 	  14 Input     11 Bit        Muxes := 1     
 	   2 Input     10 Bit        Muxes := 9     
 	   9 Input      9 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 20    
 	   3 Input      9 Bit        Muxes := 1     
 	  13 Input      9 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 238   
+	   2 Input      8 Bit        Muxes := 240   
 	   4 Input      8 Bit        Muxes := 4     
 	   7 Input      8 Bit        Muxes := 1     
 	   6 Input      8 Bit        Muxes := 1     
@@ -5727,8 +5717,8 @@ Detailed RTL Component Info :
 	   9 Input      2 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 3     
 	   3 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1395  
-	   3 Input      1 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 1400  
+	   3 Input      1 Bit        Muxes := 6     
 	   9 Input      1 Bit        Muxes := 6     
 	   4 Input      1 Bit        Muxes := 91    
 	  12 Input      1 Bit        Muxes := 9     
@@ -7912,15 +7902,15 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
 	               11 Bit    Registers := 1     
-	               10 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
 	                8 Bit    Registers := 515   
+	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 4     
 +---Muxes : 
-	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 4     
 	   2 Input     10 Bit        Muxes := 5     
-	   2 Input      8 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 533   
-	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 538   
 Module wb_register_ppc2simulink__1 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -8714,7 +8704,7 @@ WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_HIGH_AUX.ACT_HI_AUX/G
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_HIGH_AUX.ACT_HI_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_swr_state_reg[3]) is unused and will be removed from module kat_ten_gb_eth.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:35 ; elapsed = 00:01:50 . Memory (MB): peak = 2772.535 ; gain = 924.242 ; free physical = 43169 ; free virtual = 52379
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:39 ; elapsed = 00:01:56 . Memory (MB): peak = 2772.574 ; gain = 925.242 ; free physical = 39218 ; free virtual = 49510
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -8870,7 +8860,7 @@ Report RTL Partitions:
 |2     |wbs_arbiter__parameterized0__GB0 |           1|      3642|
 |3     |wbs_arbiter__parameterized0__GB1 |           1|       232|
 |4     |wbs_master_arbiter__GC0          |           1|      1664|
-|5     |top__GCB0                        |           1|     19605|
+|5     |top__GCB0                        |           1|     20682|
 |6     |top__GCB1                        |           1|     18263|
 +------+---------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -8885,13 +8875,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'ethernet_one_gbe_skarab_a
 INFO: [Synth 8-5578] Moved timing constraint from pin 'cont_microblaze_wrapper_0/cont_microblaze_i/microblaze_0/U0/Reset' to pin 'cont_microblaze_wrapper_0/cont_microblaze_i/rst_Clk_100M/U0/FDRE_inst/Q'
 INFO: [Synth 8-5819] Moved 7 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:38 ; elapsed = 00:01:53 . Memory (MB): peak = 2772.535 ; gain = 924.242 ; free physical = 43087 ; free virtual = 52297
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:42 ; elapsed = 00:01:58 . Memory (MB): peak = 2772.574 ; gain = 925.242 ; free physical = 39135 ; free virtual = 49428
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:40 ; elapsed = 00:01:55 . Memory (MB): peak = 2772.535 ; gain = 924.242 ; free physical = 43063 ; free virtual = 52273
+Finished Timing Optimization : Time (s): cpu = 00:01:44 ; elapsed = 00:02:00 . Memory (MB): peak = 2772.574 ; gain = 925.242 ; free physical = 39117 ; free virtual = 49409
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -8930,14 +8920,14 @@ Report RTL Partitions:
 |2     |wbs_arbiter__parameterized0__GB0 |           1|      3642|
 |3     |wbs_arbiter__parameterized0__GB1 |           1|       232|
 |4     |wbs_master_arbiter__GC0          |           1|      1664|
-|5     |top__GCB0                        |           1|     19605|
+|5     |top__GCB0                        |           1|     20682|
 |6     |top__GCB1                        |           1|     18263|
 +------+---------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:46 ; elapsed = 00:02:02 . Memory (MB): peak = 2772.535 ; gain = 924.242 ; free physical = 43079 ; free virtual = 52289
+Finished Technology Mapping : Time (s): cpu = 00:01:51 ; elapsed = 00:02:08 . Memory (MB): peak = 2772.574 ; gain = 925.242 ; free physical = 39132 ; free virtual = 49425
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -8967,7 +8957,7 @@ INFO: [Synth 8-6064] Net ethernet_one_gbe_skarab_axi_d3_ss_bram_we is driving 12
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:47 ; elapsed = 00:02:03 . Memory (MB): peak = 2772.535 ; gain = 924.242 ; free physical = 43077 ; free virtual = 52287
+Finished IO Insertion : Time (s): cpu = 00:01:52 ; elapsed = 00:02:09 . Memory (MB): peak = 2772.574 ; gain = 925.242 ; free physical = 39127 ; free virtual = 49420
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -8980,7 +8970,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:47 ; elapsed = 00:02:03 . Memory (MB): peak = 2772.535 ; gain = 924.242 ; free physical = 43078 ; free virtual = 52288
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:52 ; elapsed = 00:02:09 . Memory (MB): peak = 2772.574 ; gain = 925.242 ; free physical = 39125 ; free virtual = 49418
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -8992,25 +8982,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:49 ; elapsed = 00:02:04 . Memory (MB): peak = 2772.535 ; gain = 924.242 ; free physical = 43082 ; free virtual = 52292
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:54 ; elapsed = 00:02:10 . Memory (MB): peak = 2772.574 ; gain = 925.242 ; free physical = 39121 ; free virtual = 49413
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:49 ; elapsed = 00:02:04 . Memory (MB): peak = 2772.535 ; gain = 924.242 ; free physical = 43083 ; free virtual = 52293
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:54 ; elapsed = 00:02:10 . Memory (MB): peak = 2772.574 ; gain = 925.242 ; free physical = 39121 ; free virtual = 49413
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:49 ; elapsed = 00:02:04 . Memory (MB): peak = 2772.535 ; gain = 924.242 ; free physical = 43083 ; free virtual = 52293
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:54 ; elapsed = 00:02:11 . Memory (MB): peak = 2772.574 ; gain = 925.242 ; free physical = 39123 ; free virtual = 49415
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:49 ; elapsed = 00:02:05 . Memory (MB): peak = 2772.535 ; gain = 924.242 ; free physical = 43083 ; free virtual = 52293
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:54 ; elapsed = 00:02:11 . Memory (MB): peak = 2772.574 ; gain = 925.242 ; free physical = 39123 ; free virtual = 49416
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -9141,22 +9131,22 @@ Report Cell Usage:
 |43    |BSCANE2                                                           |     1|
 |44    |BUFG                                                              |     6|
 |45    |BUFR                                                              |     1|
-|46    |CARRY4                                                            |   276|
+|46    |CARRY4                                                            |   282|
 |47    |DNA_PORT                                                          |     1|
 |48    |ICAPE2                                                            |     1|
-|49    |LUT1                                                              |   376|
-|50    |LUT2                                                              |  2230|
-|51    |LUT3                                                              |  1430|
-|52    |LUT4                                                              |  1573|
-|53    |LUT5                                                              |  1386|
-|54    |LUT6                                                              |  6555|
+|49    |LUT1                                                              |   371|
+|50    |LUT2                                                              |  2277|
+|51    |LUT3                                                              |  1417|
+|52    |LUT4                                                              |  1579|
+|53    |LUT5                                                              |  1360|
+|54    |LUT6                                                              |  6585|
 |55    |LUT6_2                                                            |    96|
 |56    |MMCME2_BASE                                                       |     2|
 |57    |MULT_AND                                                          |     1|
 |58    |MUXCY                                                             |    64|
 |59    |MUXCY_L                                                           |   197|
 |60    |MUXF7                                                             |  1350|
-|61    |MUXF8                                                             |   544|
+|61    |MUXF8                                                             |   536|
 |62    |RAM16X1D                                                          |    32|
 |63    |RAM32M                                                            |    16|
 |64    |RAM64M                                                            |    36|
@@ -9172,12 +9162,12 @@ Report Cell Usage:
 |74    |SRLC32E                                                           |    34|
 |75    |USR_ACCESSE2                                                      |     1|
 |76    |XORCY                                                             |   158|
-|77    |FDCE                                                              |  1628|
+|77    |FDCE                                                              |  1679|
 |78    |FDC_1                                                             |     1|
 |79    |FDE                                                               |  1193|
 |80    |FDPE                                                              |   315|
 |81    |FDR                                                               |   126|
-|82    |FDRE                                                              | 14119|
+|82    |FDRE                                                              | 14096|
 |83    |FDRE_1                                                            |     1|
 |84    |FDS                                                               |     3|
 |85    |FDSE                                                              |   261|
@@ -9192,7 +9182,7 @@ Report Instance Areas:
 +------+-----------------------------------------------------------------------------------------+-----------------------------------------------------------------------+------+
 |      |Instance                                                                                 |Module                                                                 |Cells |
 +------+-----------------------------------------------------------------------------------------+-----------------------------------------------------------------------+------+
-|1     |top                                                                                      |                                                                       | 36269|
+|1     |top                                                                                      |                                                                       | 36334|
 |2     |  ethernet_one_gbe_skarab_axi_addr_data_fifo                                             |wb_register_ppc2simulink                                               |    96|
 |3     |  ethernet_one_gbe_skarab_axi_addr_data_gbe                                              |wb_register_ppc2simulink_0                                             |    96|
 |4     |  ethernet_one_gbe_skarab_axi_clk_mhz                                                    |wb_register_simulink2ppc                                               |     8|
@@ -9220,8 +9210,8 @@ Report Instance Areas:
 |26    |  ethernet_one_gbe_skarab_axi_err_ramp1                                                  |wb_register_simulink2ppc_15                                            |   107|
 |27    |  ethernet_one_gbe_skarab_axi_err_valid_raw1                                             |wb_register_simulink2ppc_16                                            |   107|
 |28    |  ethernet_one_gbe_skarab_axi_err_walk1                                                  |wb_register_simulink2ppc_17                                            |   107|
-|29    |  ethernet_one_gbe_skarab_axi_inst                                                       |ethernet_one_gbe_skarab_axi                                            | 11959|
-|30    |    ethernet_one_gbe_skarab_axi_struct                                                   |ethernet_one_gbe_skarab_axi_struct                                     | 11959|
+|29    |  ethernet_one_gbe_skarab_axi_inst                                                       |ethernet_one_gbe_skarab_axi                                            | 12021|
+|30    |    ethernet_one_gbe_skarab_axi_struct                                                   |ethernet_one_gbe_skarab_axi_struct                                     | 12021|
 |31    |      addsub3                                                                            |ethernet_one_gbe_skarab_axi_xladdsub                                   |    44|
 |32    |      axi_fifo                                                                           |ethernet_one_gbe_skarab_axi_xlaxis__xdcDup__1                          |   318|
 |33    |        xpm_fifo_axis_inst                                                               |xpm_fifo_axis__xdcDup__1                                               |   318|
@@ -9434,12 +9424,12 @@ Report Instance Areas:
 |240   |      delay26                                                                            |ethernet_one_gbe_skarab_axi_xldelay_788                                |     1|
 |241   |        \srl_delay.synth_reg_srl_inst                                                    |synth_reg__parameterized1_935                                          |     1|
 |242   |          \partial_one.last_srlc33e                                                      |srlc33e__parameterized1_936                                            |     1|
-|243   |      delay27                                                                            |ethernet_one_gbe_skarab_axi_xldelay_789                                |     2|
-|244   |        \srl_delay.synth_reg_srl_inst                                                    |synth_reg__parameterized1_933                                          |     2|
-|245   |          \partial_one.last_srlc33e                                                      |srlc33e__parameterized1_934                                            |     2|
-|246   |      delay29                                                                            |ethernet_one_gbe_skarab_axi_xldelay__parameterized5                    |    56|
-|247   |        \srl_delay.synth_reg_srl_inst                                                    |synth_reg__parameterized12                                             |    56|
-|248   |          \partial_one.last_srlc33e                                                      |srlc33e__parameterized11                                               |    56|
+|243   |      delay27                                                                            |ethernet_one_gbe_skarab_axi_xldelay_789                                |     1|
+|244   |        \srl_delay.synth_reg_srl_inst                                                    |synth_reg__parameterized1_933                                          |     1|
+|245   |          \partial_one.last_srlc33e                                                      |srlc33e__parameterized1_934                                            |     1|
+|246   |      delay29                                                                            |ethernet_one_gbe_skarab_axi_xldelay__parameterized5                    |    66|
+|247   |        \srl_delay.synth_reg_srl_inst                                                    |synth_reg__parameterized12                                             |    66|
+|248   |          \partial_one.last_srlc33e                                                      |srlc33e__parameterized11                                               |    66|
 |249   |      delay3                                                                             |ethernet_one_gbe_skarab_axi_xldelay__parameterized3_790                |    10|
 |250   |        \srl_delay.synth_reg_srl_inst                                                    |synth_reg_931                                                          |    10|
 |251   |          \partial_one.last_srlc33e                                                      |srlc33e_932                                                            |    10|
@@ -9482,9 +9472,9 @@ Report Instance Areas:
 |288   |      delay46                                                                            |ethernet_one_gbe_skarab_axi_xldelay_801                                |     1|
 |289   |        \srl_delay.synth_reg_srl_inst                                                    |synth_reg__parameterized1_907                                          |     1|
 |290   |          \partial_one.last_srlc33e                                                      |srlc33e__parameterized1_908                                            |     1|
-|291   |      delay5                                                                             |ethernet_one_gbe_skarab_axi_xldelay_802                                |     1|
-|292   |        \srl_delay.synth_reg_srl_inst                                                    |synth_reg__parameterized1_905                                          |     1|
-|293   |          \partial_one.last_srlc33e                                                      |srlc33e__parameterized1_906                                            |     1|
+|291   |      delay5                                                                             |ethernet_one_gbe_skarab_axi_xldelay_802                                |     2|
+|292   |        \srl_delay.synth_reg_srl_inst                                                    |synth_reg__parameterized1_905                                          |     2|
+|293   |          \partial_one.last_srlc33e                                                      |srlc33e__parameterized1_906                                            |     2|
 |294   |      delay6                                                                             |ethernet_one_gbe_skarab_axi_xldelay_803                                |     1|
 |295   |        \srl_delay.synth_reg_srl_inst                                                    |synth_reg__parameterized1_903                                          |     1|
 |296   |          \partial_one.last_srlc33e                                                      |srlc33e__parameterized1_904                                            |     1|
@@ -9647,10 +9637,10 @@ Report Instance Areas:
 |453   |        cast_gw                                                                          |ethernet_one_gbe_skarab_axi_xlconvert_818                              |    32|
 |454   |          \latency_test.reg                                                              |synth_reg_819                                                          |    32|
 |455   |            \partial_one.last_srlc33e                                                    |srlc33e_820                                                            |    32|
-|456   |      system_control_one_gbe_skarab2                                                     |control_axi_stream_gbe_wrapper                                         |  9119|
-|457   |        control_axi_stream_gbe_inst                                                      |control_axi_stream_gbe                                                 |  9119|
-|458   |          cmd_frame_transmission                                                         |cmd_sync_detector                                                      |     5|
-|459   |          cmd_start_frame_reception                                                      |cmd_sync_detector_817                                                  |     8|
+|456   |      system_control_one_gbe_skarab2                                                     |control_axi_stream_gbe_wrapper                                         |  9171|
+|457   |        control_axi_stream_gbe_inst                                                      |control_axi_stream_gbe                                                 |  9171|
+|458   |          cmd_frame_transmission                                                         |cmd_sync_detector                                                      |     6|
+|459   |          cmd_start_frame_reception                                                      |cmd_sync_detector_817                                                  |     7|
 |460   |      tx_afull1                                                                          |ethernet_one_gbe_skarab_axi_tx_afull1                                  |    32|
 |461   |        cast_gw                                                                          |ethernet_one_gbe_skarab_axi_xlconvert_814                              |    32|
 |462   |          \latency_test.reg                                                              |synth_reg_815                                                          |    32|
@@ -9680,9 +9670,9 @@ Report Instance Areas:
 |486   |  ethernet_one_gbe_skarab_axi_rx_valid1                                                  |wb_register_simulink2ppc_26                                            |   107|
 |487   |  ethernet_one_gbe_skarab_axi_tx_afull1                                                  |wb_register_simulink2ppc_27                                            |   106|
 |488   |  ethernet_one_gbe_skarab_axi_tx_control                                                 |wb_register_ppc2simulink_28                                            |    84|
-|489   |  ethernet_one_gbe_skarab_axi_tx_one_gbe                                                 |one_gbe                                                                |  6358|
+|489   |  ethernet_one_gbe_skarab_axi_tx_one_gbe                                                 |one_gbe                                                                |  6361|
 |490   |    gmii_to_xaui_translator_0                                                            |gmii_to_xaui_translator                                                |   521|
-|491   |    kat_ten_gb_eth_0                                                                     |kat_ten_gb_eth                                                         |  5572|
+|491   |    kat_ten_gb_eth_0                                                                     |kat_ten_gb_eth                                                         |  5575|
 |492   |      ten_gig_eth_mac_inst                                                               |ten_gig_eth_mac                                                        |  2928|
 |493   |        mac_rx_inst                                                                      |mac_rx                                                                 |  1915|
 |494   |          \hardcrc.mac_hard_crc_inst                                                     |mac_hard_crc                                                           |  1525|
@@ -9690,7 +9680,7 @@ Report Instance Areas:
 |496   |        mac_tx_inst                                                                      |mac_tx                                                                 |  1013|
 |497   |          mac_hard_crc_inst                                                              |mac_hard_crc_tx                                                        |   800|
 |498   |            tx_crc                                                                       |tx_crc64                                                               |   800|
-|499   |      tge_rx_inst                                                                        |tge_rx                                                                 |   710|
+|499   |      tge_rx_inst                                                                        |tge_rx                                                                 |   713|
 |500   |      tge_tx_inst                                                                        |tge_tx                                                                 |  1235|
 |501   |      wishbone_ten_gb_eth_attach_inst                                                    |wishbone_ten_gb_eth_attach                                             |   485|
 |502   |    xaui_to_gmii_translator_0                                                            |xaui_to_gmii_translator                                                |   108|
@@ -10689,17 +10679,17 @@ Report Instance Areas:
 |1495  |      timeout_inst                                                                       |timeout                                                                |    30|
 +------+-----------------------------------------------------------------------------------------+-----------------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:49 ; elapsed = 00:02:05 . Memory (MB): peak = 2772.535 ; gain = 924.242 ; free physical = 43083 ; free virtual = 52294
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:54 ; elapsed = 00:02:11 . Memory (MB): peak = 2772.574 ; gain = 925.242 ; free physical = 39123 ; free virtual = 49416
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 73 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:42 ; elapsed = 00:02:00 . Memory (MB): peak = 2772.535 ; gain = 769.398 ; free physical = 46416 ; free virtual = 55628
-Synthesis Optimization Complete : Time (s): cpu = 00:01:50 ; elapsed = 00:02:06 . Memory (MB): peak = 2772.535 ; gain = 924.242 ; free physical = 46420 ; free virtual = 55631
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:47 ; elapsed = 00:02:08 . Memory (MB): peak = 2772.574 ; gain = 773.398 ; free physical = 42461 ; free virtual = 52757
+Synthesis Optimization Complete : Time (s): cpu = 00:01:54 ; elapsed = 00:02:14 . Memory (MB): peak = 2772.574 ; gain = 925.242 ; free physical = 42461 ; free virtual = 52757
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 4371 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 4369 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2780.539 ; gain = 0.000 ; free physical = 46353 ; free virtual = 55564
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2780.578 ; gain = 0.000 ; free physical = 42380 ; free virtual = 52684
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1627 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 86 instances
@@ -10719,12 +10709,12 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-1853 Infos, 369 Warnings, 0 Critical Warnings and 0 Errors encountered.
+1851 Infos, 368 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:56 ; elapsed = 00:02:12 . Memory (MB): peak = 2780.539 ; gain = 1343.656 ; free physical = 46485 ; free virtual = 55696
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2780.539 ; gain = 0.000 ; free physical = 46485 ; free virtual = 55696
+synth_design: Time (s): cpu = 00:02:01 ; elapsed = 00:02:21 . Memory (MB): peak = 2780.578 ; gain = 1342.656 ; free physical = 42508 ; free virtual = 52811
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2780.578 ; gain = 0.000 ; free physical = 42508 ; free virtual = 52811
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jul 28 16:52:06 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 28 21:07:19 2026...

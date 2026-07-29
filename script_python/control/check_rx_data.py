@@ -2,6 +2,7 @@
 import casperfpga
 fpga = casperfpga.CasperFpga('10.42.0.200')
 import time
+from random import randint
 fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_tx_rx/ethernet_one_gbe_skarab_tx_rx/outputs/ethernet_one_gbe_skarab_tx_rx_2026-06-03_0008.fpg'
 
 fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_loopback/ethernet_one_gbe_skarab_loopback/outputs/ethernet_one_gbe_skarab_loopback_2026-06-03_1813.fpg'
@@ -367,6 +368,29 @@ fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_s
 
 fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-07-28_1619.fpg'
 
+
+
+
+
+
+
+
+
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-07-28_1648.fpg'
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-07-28_1807.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-07-28_1900.fpg'
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-07-28_1908.fpg'
+
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-07-28_1924.fpg'
+
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-07-28_2001.fpg'
+fpg='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-07-28_2043.fpg'
+
+
 def debug_mem(addr,mem,start=0,stop=256):
     for i in range(start,stop):
           fpga.write_int(addr,i)
@@ -390,7 +414,7 @@ def control_fan(pwm=30):
         #print("fan ",{i+1}," = ",{pwm},"%%")
 
 
-control_fan(pwm=1)
+control_fan(pwm=randint(0,7)+1)
 
 fpga.upload_to_ram_and_program(fpg)
 
@@ -406,10 +430,6 @@ fpga.registers.tx_control.write(pkt_rst="pulse")
 #    print(fpga.registers.data_rx_valmir.read_uint())
 #    time.sleep(1)
 #fpga.write_int('mux_control',1)
-def debug_mem(addr,mem):
-    for i in range(256):
-          fpga.write_int(addr,i)
-          print("mem[",fpga.read_int(str(addr)),"]","=",fpga.read_int(str(mem)))
 
 
 

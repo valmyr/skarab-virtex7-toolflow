@@ -24,7 +24,7 @@ import time
 import numpy as np
 import struct
 import os
-
+from random import randint
 from matplotlib import pyplot as plt
 
 DEBUG = True
@@ -88,7 +88,7 @@ data3 =(np.ones(N,dtype=np.int64)).tolist()
 print(len(data))
 
 zeros = np.zeros(256,dtype=np.int64).tolist()
-k=4
+k=3
 
 t0 = time.time()
 try:
@@ -98,7 +98,7 @@ try:
         os.system('clear')
         #plt.ion()
         #ax.cla()
-        data1 = np.round(2**4*np.sin(2*np.pi*(f1/fs)*t) + 2**4).astype(np.int64) + k
+        data1 = np.round(2**4*np.sin(2*np.pi*(f1/fs)*t) + 2**4).astype(np.int64)*1+ k+0*randint(0,7)
         #data1=np.ones(N-8,dtype=np.int64)*35
         data2 =np.concatenate((frame_tx,data1,frame_rx))
         data =(data2).tolist()
@@ -119,13 +119,16 @@ try:
 
         #time.sleep(1/50)
         #plt.pause(1 / 100000000.0)
-        if(abs(time.time() - t0) >= 1e-1): 
-            k+=1
-            t0 = time.time()
-
+        #if(abs(time.time() - t0) >= 100): 
+         #   k+=1
+           # t0 = time.time()
+        k+=1
         if(k >= 256 - 2*2**4): k =0
-        break
-
+        #
+        
+        #time.sleep(1/1000)
+        
+        
         #if(k==200):break
 except KeyboardInterrupt:
     print("Finalizado pelo usuário")

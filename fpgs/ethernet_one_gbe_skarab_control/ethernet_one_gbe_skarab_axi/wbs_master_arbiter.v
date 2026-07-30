@@ -35,12 +35,12 @@
   localparam SUBARB_1 = 1;
 
   localparam N_SLAVES_ARB0 = 32;
-  localparam N_SLAVES_ARB1 = 6;
+  localparam N_SLAVES_ARB1 = 7;
 
-  localparam SLAVE_ADDR_ARB0 = { 32'h8019c064 - 32'h800dc000,//rx_overrun1
-32'h8019c060 - 32'h800dc000,//rx_eof1
-32'h8019c05c - 32'h800dc000,//rx_control1
-32'h8019c058 - 32'h800dc000,//rx_badframe1
+  localparam SLAVE_ADDR_ARB0 = { 32'h8019c064 - 32'h800dc000,//rx_eof1
+32'h8019c060 - 32'h800dc000,//rx_control1
+32'h8019c05c - 32'h800dc000,//rx_badframe1
+32'h8019c058 - 32'h800dc000,//read_gbe_or_fifo
 32'h8019c054 - 32'h800dc000,//pkt_ctrs_compare1_ss_status
 32'h8019c050 - 32'h800dc000,//pkt_ctrs_compare1_ss_ctrl
 32'h8019c04c - 32'h800dc000,//pkt_ctrs1_ss_status
@@ -69,10 +69,10 @@
 32'h8010c000 - 32'h800dc000,//d4_ss_bram
 32'h800ec000 - 32'h800dc000,//d3_ss_bram
 32'h800dc000 - 32'h800dc000}; //tx_one_gbe
-  localparam SLAVE_HIGH_ARB0 = { 32'h8019c067 - 32'h800dc000,//rx_overrun1
-32'h8019c063 - 32'h800dc000,//rx_eof1
-32'h8019c05f - 32'h800dc000,//rx_control1
-32'h8019c05b - 32'h800dc000,//rx_badframe1
+  localparam SLAVE_HIGH_ARB0 = { 32'h8019c067 - 32'h800dc000,//rx_eof1
+32'h8019c063 - 32'h800dc000,//rx_control1
+32'h8019c05f - 32'h800dc000,//rx_badframe1
+32'h8019c05b - 32'h800dc000,//read_gbe_or_fifo
 32'h8019c057 - 32'h800dc000,//pkt_ctrs_compare1_ss_status
 32'h8019c053 - 32'h800dc000,//pkt_ctrs_compare1_ss_ctrl
 32'h8019c04f - 32'h800dc000,//pkt_ctrs1_ss_status
@@ -101,18 +101,20 @@
 32'h8012bfff - 32'h800dc000,//d4_ss_bram
 32'h8010bfff - 32'h800dc000,//d3_ss_bram
 32'h800ebfff - 32'h800dc000}; //tx_one_gbe
-  localparam SLAVE_ADDR_ARB1 = { 32'h8019c07c - 32'h8019c068,//sys_block
-32'h8019c078 - 32'h8019c068,//vaild_rx_valmir1
-32'h8019c074 - 32'h8019c068,//tx_overflow1
-32'h8019c070 - 32'h8019c068,//tx_control
-32'h8019c06c - 32'h8019c068,//tx_afull1
-32'h8019c068 - 32'h8019c068}; //rx_valid1
-  localparam SLAVE_HIGH_ARB1 = { 32'h8019c09b - 32'h8019c068,//sys_block
-32'h8019c07b - 32'h8019c068,//vaild_rx_valmir1
-32'h8019c077 - 32'h8019c068,//tx_overflow1
-32'h8019c073 - 32'h8019c068,//tx_control
-32'h8019c06f - 32'h8019c068,//tx_afull1
-32'h8019c06b - 32'h8019c068}; //rx_valid1
+  localparam SLAVE_ADDR_ARB1 = { 32'h8019c080 - 32'h8019c068,//sys_block
+32'h8019c07c - 32'h8019c068,//vaild_rx_valmir1
+32'h8019c078 - 32'h8019c068,//tx_overflow1
+32'h8019c074 - 32'h8019c068,//tx_control
+32'h8019c070 - 32'h8019c068,//tx_afull1
+32'h8019c06c - 32'h8019c068,//rx_valid1
+32'h8019c068 - 32'h8019c068}; //rx_overrun1
+  localparam SLAVE_HIGH_ARB1 = { 32'h8019c09f - 32'h8019c068,//sys_block
+32'h8019c07f - 32'h8019c068,//vaild_rx_valmir1
+32'h8019c07b - 32'h8019c068,//tx_overflow1
+32'h8019c077 - 32'h8019c068,//tx_control
+32'h8019c073 - 32'h8019c068,//tx_afull1
+32'h8019c06f - 32'h8019c068,//rx_valid1
+32'h8019c06b - 32'h8019c068}; //rx_overrun1
 
   wire     [N_SUB_ARBS - 1:0] wb_cyc_o;
       wire     [N_SUB_ARBS - 1:0] wb_stb_o;

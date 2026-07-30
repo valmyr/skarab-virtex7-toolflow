@@ -87,7 +87,6 @@ try:
     t0 = time.time()
 
     while(True):
-        os.system('clear')
         #plt.ion()
         #ax.cla()
         data1 = np.round(2**4*np.sin(2*np.pi*(f1/fs)*t) + 2**4).astype(np.int64) + k
@@ -105,12 +104,13 @@ try:
         if(DEBUG):
             for i in range(0,N-8):
                 print(f"{data[i+4]} == {array_d[i+1]} {data[i+4]==array_d[i+1]}")
-        if(abs(time.time() - t0) >= 10): 
-            k+=1
-            t0 = time.time()
+        k+=1
 
         if(k >= 256 - 2*2**4): k =0
-        
+
+        print("========================================================================",k)
+        time.sleep(2)
+
 
         #if(k==200):break
 except KeyboardInterrupt:

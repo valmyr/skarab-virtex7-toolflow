@@ -16,6 +16,7 @@ entity ethernet_one_gbe_skarab_axi_stub is
     skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs1_ss_ctrl_user_data_out : in std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram_data_out : in std_logic_vector( 64-1 downto 0 );
     skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs_compare1_ss_ctrl_user_data_out : in std_logic_vector( 32-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_read_gbe_or_fifo_user_data_out : in std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_rx_control1_user_data_out : in std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_tx_control_user_data_out : in std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_tx_one_gbe_app_dbg_data : in std_logic_vector( 32-1 downto 0 );
@@ -93,6 +94,7 @@ begin
     skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs1_ss_ctrl_user_data_out => skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs1_ss_ctrl_user_data_out,
     ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram_data_out => ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram_data_out,
     skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs_compare1_ss_ctrl_user_data_out => skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs_compare1_ss_ctrl_user_data_out,
+    ethernet_one_gbe_skarab_axi_read_gbe_or_fifo_user_data_out => ethernet_one_gbe_skarab_axi_read_gbe_or_fifo_user_data_out,
     ethernet_one_gbe_skarab_axi_rx_control1_user_data_out => ethernet_one_gbe_skarab_axi_rx_control1_user_data_out,
     ethernet_one_gbe_skarab_axi_tx_control_user_data_out => ethernet_one_gbe_skarab_axi_tx_control_user_data_out,
     ethernet_one_gbe_skarab_axi_tx_one_gbe_app_dbg_data => ethernet_one_gbe_skarab_axi_tx_one_gbe_app_dbg_data,

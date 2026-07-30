@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1785300366">
+  <File Type="NOC_SOLUTION_FILE" Name="control_axi_stream_gbe.ncr"/>
+  <File Type="NOC_TRAFFIC_SPEC_FILE" Name="control_axi_stream_gbe.nts"/>
+  <File Type="PL_UNMASK_RCDO_FILE" Name="control_axi_stream_gbe_pld_unmask.rcdo"/>
+  <File Type="PL_UNMASK_MARKER_RCDO_FILE" Name="control_axi_stream_gbe_pld_unmask_markers.rcdo"/>
+  <File Type="PL_MASK_RCDO_FILE" Name="control_axi_stream_gbe_pld_mask.rcdo"/>
+  <File Type="PL_MARKER_RCDO_FILE" Name="control_axi_stream_gbe_pld_markers.rcdo"/>
+  <File Type="PL-CLEAR-RCDO-FILE" Name="control_axi_stream_gbe_pld_clear.rcdo"/>
+  <File Type="PL_UNMASK_RNPI_FILE" Name="control_axi_stream_gbe_pld_unmask.rnpi"/>
+  <File Type="PL_SHUTDOWN_RNPI_FILE" Name="control_axi_stream_gbe_pld_shutdown.rnpi"/>
+  <File Type="PL_MASK_RNPI_FILE" Name="control_axi_stream_gbe_pld_mask.rnpi"/>
+  <File Type="PL_MARKER_RNPI_FILE" Name="control_axi_stream_gbe_pld_markers.rnpi"/>
+  <File Type="BOOT_MARKER_RNPI_FILE" Name="control_axi_stream_gbe_boot_markers.rnpi"/>
+  <File Type="PL_RNPI_FILE" Name="control_axi_stream_gbe_pld.rnpi"/>
+  <File Type="BOOT_RNPI_FILE" Name="control_axi_stream_gbe_boot.rnpi"/>
+  <File Type="MARKER-RNPI-FILE" Name="control_axi_stream_gbe_markers.rnpi"/>
+  <File Type="PL-RCDO-FILE" Name="control_axi_stream_gbe_pld.rcdo"/>
+  <File Type="MARKER-RCDO-FILE" Name="control_axi_stream_gbe_markers.rcdo"/>
+  <File Type="RCDO-FILE" Name="control_axi_stream_gbe.rcdo"/>
+  <File Type="PL-LTX-FILE" Name="control_axi_stream_gbe_pld.ltx"/>
+  <File Type="BOOT-LTX-FILE" Name="control_axi_stream_gbe_boot.ltx"/>
+  <File Type="LTX-FILE" Name="control_axi_stream_gbe.ltx"/>
+  <File Type="PL-BIF-FILE" Name="control_axi_stream_gbe_pld.bif"/>
+  <File Type="BOOT-BIF-FILE" Name="control_axi_stream_gbe_boot.bif"/>
+  <File Type="BIF-FILE" Name="control_axi_stream_gbe.bif"/>
+  <File Type="MMI-FILE" Name="control_axi_stream_gbe.mmi"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="control_axi_stream_gbe_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="control_axi_stream_gbe_routed.rqs"/>
+  <File Type="RBD_FILE" Name="control_axi_stream_gbe.rbd"/>
+  <File Type="NPI_FILE" Name="control_axi_stream_gbe.npi"/>
+  <File Type="RNPI_FILE" Name="control_axi_stream_gbe.rnpi"/>
+  <File Type="CFI_FILE" Name="control_axi_stream_gbe.cfi"/>
+  <File Type="RCFI_FILE" Name="control_axi_stream_gbe.rcfi"/>
+  <File Type="PL-PDI-FILE" Name="control_axi_stream_gbe_pld.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="control_axi_stream_gbe_boot.pdi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="buffer_in_ethernet_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="buffer_in_ethernet_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="buffer_in_ethernet_drc_routed.rpx"/>
+  <File Type="ROUTE-PWR-RPX" Name="buffer_in_ethernet_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="buffer_in_ethernet_route_status.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="buffer_in_ethernet_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="buffer_in_ethernet_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="buffer_in_ethernet_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS-PB" Name="buffer_in_ethernet_route_status.pb"/>
+  <File Type="ROUTE-PWR" Name="buffer_in_ethernet_power_routed.rpt"/>
+  <File Type="PLACE-CTRL" Name="buffer_in_ethernet_control_sets_placed.rpt"/>
+  <File Type="OPT-DRC" Name="buffer_in_ethernet_drc_opted.rpt"/>
+  <File Type="ROUTE-DRC" Name="buffer_in_ethernet_drc_routed.rpt"/>
+  <File Type="PLACE-UTIL" Name="buffer_in_ethernet_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="buffer_in_ethernet_utilization_placed.pb"/>
+  <File Type="PLACE-IO" Name="buffer_in_ethernet_io_placed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="buffer_in_ethernet_drc_routed.pb"/>
+  <File Type="OPT-HWDEF" Name="control_axi_stream_gbe.hwdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="buffer_in_ethernet_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-SIMILARITY" Name="buffer_in_ethernet_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="buffer_in_ethernet_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="buffer_in_ethernet_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="buffer_in_ethernet_bus_skew_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="control_axi_stream_gbe_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="buffer_in_ethernet_bus_skew_routed.pb"/>
+  <File Type="PA-TCL" Name="control_axi_stream_gbe.tcl"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="buffer_in_ethernet_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="buffer_in_ethernet_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="buffer_in_ethernet_timing_summary_postroute_physopted.pb"/>
+  <File Type="RDI-RDI" Name="control_axi_stream_gbe.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="buffer_in_ethernet_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="buffer_in_ethernet_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="buffer_in_ethernet_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="control_axi_stream_gbe.bit"/>
+  <File Type="PDI-FILE" Name="control_axi_stream_gbe.pdi"/>
+  <File Type="BG-DRC" Name="control_axi_stream_gbe.drc"/>
+  <File Type="BG-BGN" Name="control_axi_stream_gbe.bgn"/>
+  <File Type="BG-BIN" Name="control_axi_stream_gbe.bin"/>
+  <File Type="BITSTR-MSK" Name="control_axi_stream_gbe.msk"/>
+  <File Type="BITSTR-RBT" Name="control_axi_stream_gbe.rbt"/>
+  <File Type="BITSTR-NKY" Name="control_axi_stream_gbe.nky"/>
+  <File Type="BITSTR-BMM" Name="control_axi_stream_gbe_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="control_axi_stream_gbe.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="control_axi_stream_gbe.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="control_axi_stream_gbe.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="control_axi_stream_gbe_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DCP" Name="control_axi_stream_gbe_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="control_axi_stream_gbe_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="control_axi_stream_gbe_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMING-PB" Name="control_axi_stream_gbe_timing_summary_routed.pb"/>
+  <File Type="OPT-DCP" Name="control_axi_stream_gbe_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="control_axi_stream_gbe_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="control_axi_stream_gbe_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="control_axi_stream_gbe_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="control_axi_stream_gbe_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="control_axi_stream_gbe_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="control_axi_stream_gbe_postroute_physopt_bb.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/buffer_in_ethernet.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/package.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../verilog_custom/onegbe_skarab/cmd_sync_detector.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../verilog_custom/onegbe_skarab/control_axi_stream_gbe.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="control_axi_stream_gbe"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
+  </Strategy>
+</GenRun>

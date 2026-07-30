@@ -2,7 +2,7 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Sat Jul 25 19:48:58 2026
+-- Date        : Thu Jul 30 12:23:58 2026
 -- Host        : valmyrsilva07-B760M-AORUS-ELITE running 64-bit Ubuntu 20.04.6 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0_sim_netlist.vhdl
@@ -117,18 +117,20 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \axis_data_fifo_0_xpm_counter_updn__parameterized0\ is
   port (
-    Q : out STD_LOGIC_VECTOR ( 6 downto 0 );
-    leaving_empty0 : out STD_LOGIC;
+    Q : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    CO : out STD_LOGIC_VECTOR ( 0 to 0 );
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg\ : out STD_LOGIC;
     \FSM_sequential_gen_fwft.curr_fwft_state_reg[1]\ : out STD_LOGIC;
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0\ : out STD_LOGIC;
-    \count_value_i_reg[0]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    rd_en : in STD_LOGIC;
+    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_0\ : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_0\ : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    S : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     ram_empty_i : in STD_LOGIC;
-    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1\ : in STD_LOGIC_VECTOR ( 6 downto 0 );
-    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg\ : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    rd_en : in STD_LOGIC;
+    \count_value_i_reg[0]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     ram_wr_en_i : in STD_LOGIC;
-    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_2\ : in STD_LOGIC;
+    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1\ : in STD_LOGIC;
     clr_full : in STD_LOGIC;
     \count_value_i_reg[0]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     wr_clk : in STD_LOGIC
@@ -138,124 +140,75 @@ entity \axis_data_fifo_0_xpm_counter_updn__parameterized0\ is
 end \axis_data_fifo_0_xpm_counter_updn__parameterized0\;
 
 architecture STRUCTURE of \axis_data_fifo_0_xpm_counter_updn__parameterized0\ is
+  signal \^co\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \^fsm_sequential_gen_fwft.curr_fwft_state_reg[1]\ : STD_LOGIC;
-  signal \^q\ : STD_LOGIC_VECTOR ( 6 downto 0 );
-  signal \count_value_i[0]_i_1__1_n_0\ : STD_LOGIC;
-  signal \count_value_i[1]_i_1__1_n_0\ : STD_LOGIC;
-  signal \count_value_i[2]_i_1__1_n_0\ : STD_LOGIC;
-  signal \count_value_i[3]_i_1__1_n_0\ : STD_LOGIC;
-  signal \count_value_i[4]_i_1__1_n_0\ : STD_LOGIC;
-  signal \count_value_i[5]_i_1__1_n_0\ : STD_LOGIC;
-  signal \count_value_i[6]_i_1__1_n_0\ : STD_LOGIC;
-  signal \count_value_i[6]_i_2__1_n_0\ : STD_LOGIC;
-  signal \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_5_n_0\ : STD_LOGIC;
-  signal \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_6_n_0\ : STD_LOGIC;
-  signal \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_7_n_0\ : STD_LOGIC;
-  signal \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_8_n_0\ : STD_LOGIC;
+  signal \^q\ : STD_LOGIC_VECTOR ( 12 downto 0 );
+  signal \count_value_i[3]_i_2__0_n_0\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__0_n_0\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__0_n_1\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__0_n_2\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__0_n_3\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__0_n_4\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__0_n_5\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__0_n_6\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__0_n_7\ : STD_LOGIC;
+  signal \count_value_i_reg[12]_i_1__0_n_7\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__0_n_0\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__0_n_1\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__0_n_2\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__0_n_3\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__0_n_4\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__0_n_5\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__0_n_6\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__0_n_7\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__0_n_0\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__0_n_1\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__0_n_2\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__0_n_3\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__0_n_4\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__0_n_5\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__0_n_6\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__0_n_7\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_10_n_0\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_11_n_0\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_12_n_0\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_13_n_0\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_14_n_0\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_15_n_0\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_16_n_0\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_9_n_0\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_n_0\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_n_1\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_n_2\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_n_3\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_n_0\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_n_1\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_n_2\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_n_3\ : STD_LOGIC;
   signal going_full1 : STD_LOGIC;
-  signal \^leaving_empty0\ : STD_LOGIC;
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[0]_i_1__1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__1\ : label is "soft_lutpair1";
+  signal \NLW_count_value_i_reg[12]_i_1__0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_count_value_i_reg[12]_i_1__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_3_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_3_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_4_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_4_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
 begin
+  CO(0) <= \^co\(0);
   \FSM_sequential_gen_fwft.curr_fwft_state_reg[1]\ <= \^fsm_sequential_gen_fwft.curr_fwft_state_reg[1]\;
-  Q(6 downto 0) <= \^q\(6 downto 0);
-  leaving_empty0 <= \^leaving_empty0\;
-\count_value_i[0]_i_1__1\: unisim.vcomponents.LUT4
+  Q(12 downto 0) <= \^q\(12 downto 0);
+\count_value_i[3]_i_2__0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"10EF"
+      INIT => X"ABAA5455"
     )
         port map (
-      I0 => rd_en,
-      I1 => \count_value_i_reg[0]_0\(0),
-      I2 => \count_value_i_reg[0]_0\(1),
-      I3 => \^q\(0),
-      O => \count_value_i[0]_i_1__1_n_0\
-    );
-\count_value_i[1]_i_1__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"02FFFD00"
-    )
-        port map (
-      I0 => \count_value_i_reg[0]_0\(1),
-      I1 => \count_value_i_reg[0]_0\(0),
-      I2 => rd_en,
-      I3 => \^q\(0),
-      I4 => \^q\(1),
-      O => \count_value_i[1]_i_1__1_n_0\
-    );
-\count_value_i[2]_i_1__1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"78"
-    )
-        port map (
-      I0 => \^q\(0),
-      I1 => \^q\(1),
-      I2 => \^q\(2),
-      O => \count_value_i[2]_i_1__1_n_0\
-    );
-\count_value_i[3]_i_1__1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7F80"
-    )
-        port map (
-      I0 => \^q\(1),
-      I1 => \^q\(0),
-      I2 => \^q\(2),
-      I3 => \^q\(3),
-      O => \count_value_i[3]_i_1__1_n_0\
-    );
-\count_value_i[4]_i_1__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"7FFF8000"
-    )
-        port map (
-      I0 => \^q\(2),
-      I1 => \^q\(0),
-      I2 => \^q\(1),
-      I3 => \^q\(3),
-      I4 => \^q\(4),
-      O => \count_value_i[4]_i_1__1_n_0\
-    );
-\count_value_i[5]_i_1__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"7FFF8000"
-    )
-        port map (
-      I0 => \^q\(3),
-      I1 => \count_value_i[6]_i_2__1_n_0\,
-      I2 => \^q\(2),
-      I3 => \^q\(4),
-      I4 => \^q\(5),
-      O => \count_value_i[5]_i_1__1_n_0\
-    );
-\count_value_i[6]_i_1__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"7FFFFFFF80000000"
-    )
-        port map (
-      I0 => \^q\(4),
-      I1 => \^q\(2),
-      I2 => \count_value_i[6]_i_2__1_n_0\,
-      I3 => \^q\(3),
-      I4 => \^q\(5),
-      I5 => \^q\(6),
-      O => \count_value_i[6]_i_1__1_n_0\
-    );
-\count_value_i[6]_i_2__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000AAA200000000"
-    )
-        port map (
-      I0 => \^q\(1),
-      I1 => \count_value_i_reg[0]_0\(1),
+      I0 => ram_empty_i,
+      I1 => rd_en,
       I2 => \count_value_i_reg[0]_0\(0),
-      I3 => rd_en,
-      I4 => ram_empty_i,
-      I5 => \^q\(0),
-      O => \count_value_i[6]_i_2__1_n_0\
+      I3 => \count_value_i_reg[0]_0\(1),
+      I4 => \^q\(0),
+      O => \count_value_i[3]_i_2__0_n_0\
     );
 \count_value_i_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -264,9 +217,68 @@ begin
         port map (
       C => wr_clk,
       CE => \^fsm_sequential_gen_fwft.curr_fwft_state_reg[1]\,
-      D => \count_value_i[0]_i_1__1_n_0\,
+      D => \count_value_i_reg[3]_i_1__0_n_7\,
       Q => \^q\(0),
       R => \count_value_i_reg[0]_1\(0)
+    );
+\count_value_i_reg[10]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => \^fsm_sequential_gen_fwft.curr_fwft_state_reg[1]\,
+      D => \count_value_i_reg[11]_i_1__0_n_5\,
+      Q => \^q\(10),
+      R => \count_value_i_reg[0]_1\(0)
+    );
+\count_value_i_reg[11]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => \^fsm_sequential_gen_fwft.curr_fwft_state_reg[1]\,
+      D => \count_value_i_reg[11]_i_1__0_n_4\,
+      Q => \^q\(11),
+      R => \count_value_i_reg[0]_1\(0)
+    );
+\count_value_i_reg[11]_i_1__0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \count_value_i_reg[7]_i_1__0_n_0\,
+      CO(3) => \count_value_i_reg[11]_i_1__0_n_0\,
+      CO(2) => \count_value_i_reg[11]_i_1__0_n_1\,
+      CO(1) => \count_value_i_reg[11]_i_1__0_n_2\,
+      CO(0) => \count_value_i_reg[11]_i_1__0_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \count_value_i_reg[11]_i_1__0_n_4\,
+      O(2) => \count_value_i_reg[11]_i_1__0_n_5\,
+      O(1) => \count_value_i_reg[11]_i_1__0_n_6\,
+      O(0) => \count_value_i_reg[11]_i_1__0_n_7\,
+      S(3 downto 0) => \^q\(11 downto 8)
+    );
+\count_value_i_reg[12]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => \^fsm_sequential_gen_fwft.curr_fwft_state_reg[1]\,
+      D => \count_value_i_reg[12]_i_1__0_n_7\,
+      Q => \^q\(12),
+      R => \count_value_i_reg[0]_1\(0)
+    );
+\count_value_i_reg[12]_i_1__0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \count_value_i_reg[11]_i_1__0_n_0\,
+      CO(3 downto 0) => \NLW_count_value_i_reg[12]_i_1__0_CO_UNCONNECTED\(3 downto 0),
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 1) => \NLW_count_value_i_reg[12]_i_1__0_O_UNCONNECTED\(3 downto 1),
+      O(0) => \count_value_i_reg[12]_i_1__0_n_7\,
+      S(3 downto 1) => B"000",
+      S(0) => \^q\(12)
     );
 \count_value_i_reg[1]\: unisim.vcomponents.FDRE
     generic map(
@@ -275,7 +287,7 @@ begin
         port map (
       C => wr_clk,
       CE => \^fsm_sequential_gen_fwft.curr_fwft_state_reg[1]\,
-      D => \count_value_i[1]_i_1__1_n_0\,
+      D => \count_value_i_reg[3]_i_1__0_n_6\,
       Q => \^q\(1),
       R => \count_value_i_reg[0]_1\(0)
     );
@@ -286,7 +298,7 @@ begin
         port map (
       C => wr_clk,
       CE => \^fsm_sequential_gen_fwft.curr_fwft_state_reg[1]\,
-      D => \count_value_i[2]_i_1__1_n_0\,
+      D => \count_value_i_reg[3]_i_1__0_n_5\,
       Q => \^q\(2),
       R => \count_value_i_reg[0]_1\(0)
     );
@@ -297,9 +309,26 @@ begin
         port map (
       C => wr_clk,
       CE => \^fsm_sequential_gen_fwft.curr_fwft_state_reg[1]\,
-      D => \count_value_i[3]_i_1__1_n_0\,
+      D => \count_value_i_reg[3]_i_1__0_n_4\,
       Q => \^q\(3),
       R => \count_value_i_reg[0]_1\(0)
+    );
+\count_value_i_reg[3]_i_1__0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => \count_value_i_reg[3]_i_1__0_n_0\,
+      CO(2) => \count_value_i_reg[3]_i_1__0_n_1\,
+      CO(1) => \count_value_i_reg[3]_i_1__0_n_2\,
+      CO(0) => \count_value_i_reg[3]_i_1__0_n_3\,
+      CYINIT => '0',
+      DI(3 downto 1) => B"000",
+      DI(0) => \^q\(0),
+      O(3) => \count_value_i_reg[3]_i_1__0_n_4\,
+      O(2) => \count_value_i_reg[3]_i_1__0_n_5\,
+      O(1) => \count_value_i_reg[3]_i_1__0_n_6\,
+      O(0) => \count_value_i_reg[3]_i_1__0_n_7\,
+      S(3 downto 1) => \^q\(3 downto 1),
+      S(0) => \count_value_i[3]_i_2__0_n_0\
     );
 \count_value_i_reg[4]\: unisim.vcomponents.FDRE
     generic map(
@@ -308,7 +337,7 @@ begin
         port map (
       C => wr_clk,
       CE => \^fsm_sequential_gen_fwft.curr_fwft_state_reg[1]\,
-      D => \count_value_i[4]_i_1__1_n_0\,
+      D => \count_value_i_reg[7]_i_1__0_n_7\,
       Q => \^q\(4),
       R => \count_value_i_reg[0]_1\(0)
     );
@@ -319,7 +348,7 @@ begin
         port map (
       C => wr_clk,
       CE => \^fsm_sequential_gen_fwft.curr_fwft_state_reg[1]\,
-      D => \count_value_i[5]_i_1__1_n_0\,
+      D => \count_value_i_reg[7]_i_1__0_n_6\,
       Q => \^q\(5),
       R => \count_value_i_reg[0]_1\(0)
     );
@@ -330,8 +359,56 @@ begin
         port map (
       C => wr_clk,
       CE => \^fsm_sequential_gen_fwft.curr_fwft_state_reg[1]\,
-      D => \count_value_i[6]_i_1__1_n_0\,
+      D => \count_value_i_reg[7]_i_1__0_n_5\,
       Q => \^q\(6),
+      R => \count_value_i_reg[0]_1\(0)
+    );
+\count_value_i_reg[7]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => \^fsm_sequential_gen_fwft.curr_fwft_state_reg[1]\,
+      D => \count_value_i_reg[7]_i_1__0_n_4\,
+      Q => \^q\(7),
+      R => \count_value_i_reg[0]_1\(0)
+    );
+\count_value_i_reg[7]_i_1__0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \count_value_i_reg[3]_i_1__0_n_0\,
+      CO(3) => \count_value_i_reg[7]_i_1__0_n_0\,
+      CO(2) => \count_value_i_reg[7]_i_1__0_n_1\,
+      CO(1) => \count_value_i_reg[7]_i_1__0_n_2\,
+      CO(0) => \count_value_i_reg[7]_i_1__0_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \count_value_i_reg[7]_i_1__0_n_4\,
+      O(2) => \count_value_i_reg[7]_i_1__0_n_5\,
+      O(1) => \count_value_i_reg[7]_i_1__0_n_6\,
+      O(0) => \count_value_i_reg[7]_i_1__0_n_7\,
+      S(3 downto 0) => \^q\(7 downto 4)
+    );
+\count_value_i_reg[8]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => \^fsm_sequential_gen_fwft.curr_fwft_state_reg[1]\,
+      D => \count_value_i_reg[11]_i_1__0_n_7\,
+      Q => \^q\(8),
+      R => \count_value_i_reg[0]_1\(0)
+    );
+\count_value_i_reg[9]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => \^fsm_sequential_gen_fwft.curr_fwft_state_reg[1]\,
+      D => \count_value_i_reg[11]_i_1__0_n_6\,
+      Q => \^q\(9),
       R => \count_value_i_reg[0]_1\(0)
     );
 \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_1\: unisim.vcomponents.LUT6
@@ -341,9 +418,9 @@ begin
         port map (
       I0 => ram_wr_en_i,
       I1 => going_full1,
-      I2 => \^leaving_empty0\,
+      I2 => \^co\(0),
       I3 => \^fsm_sequential_gen_fwft.curr_fwft_state_reg[1]\,
-      I4 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_2\,
+      I4 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1\,
       I5 => clr_full,
       O => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg\
     );
@@ -353,86 +430,168 @@ begin
     )
         port map (
       I0 => clr_full,
-      I1 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_2\,
+      I1 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1\,
       I2 => \^fsm_sequential_gen_fwft.curr_fwft_state_reg[1]\,
-      I3 => \^leaving_empty0\,
+      I3 => \^co\(0),
       I4 => going_full1,
       I5 => ram_wr_en_i,
       O => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0\
     );
-\gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_3\: unisim.vcomponents.LUT4
+\gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_10\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9000"
+      INIT => X"9009000000009009"
     )
         port map (
       I0 => \^q\(6),
-      I1 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1\(6),
-      I2 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_5_n_0\,
-      I3 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_6_n_0\,
-      O => \^leaving_empty0\
+      I1 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_0\(6),
+      I2 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_0\(8),
+      I3 => \^q\(8),
+      I4 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_0\(7),
+      I5 => \^q\(7),
+      O => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_10_n_0\
     );
-\gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_4\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"9000"
-    )
-        port map (
-      I0 => \^q\(6),
-      I1 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg\(6),
-      I2 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_7_n_0\,
-      I3 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_8_n_0\,
-      O => going_full1
-    );
-\gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_5\: unisim.vcomponents.LUT6
+\gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_11\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"9009000000009009"
     )
         port map (
       I0 => \^q\(3),
-      I1 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1\(3),
-      I2 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1\(5),
+      I1 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_0\(3),
+      I2 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_0\(5),
       I3 => \^q\(5),
-      I4 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1\(4),
+      I4 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_0\(4),
       I5 => \^q\(4),
-      O => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_5_n_0\
+      O => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_11_n_0\
     );
-\gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_6\: unisim.vcomponents.LUT6
+\gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_12\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"9009000000009009"
     )
         port map (
       I0 => \^q\(0),
-      I1 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1\(0),
-      I2 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1\(2),
+      I1 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_0\(0),
+      I2 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_0\(2),
       I3 => \^q\(2),
-      I4 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1\(1),
+      I4 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_0\(1),
       I5 => \^q\(1),
-      O => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_6_n_0\
+      O => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_12_n_0\
     );
-\gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_7\: unisim.vcomponents.LUT6
+\gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_13\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"9009000000009009"
+    )
+        port map (
+      I0 => \^q\(9),
+      I1 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_0\(9),
+      I2 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_0\(11),
+      I3 => \^q\(11),
+      I4 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_0\(10),
+      I5 => \^q\(10),
+      O => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_13_n_0\
+    );
+\gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_14\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"9009000000009009"
+    )
+        port map (
+      I0 => \^q\(6),
+      I1 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_0\(6),
+      I2 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_0\(8),
+      I3 => \^q\(8),
+      I4 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_0\(7),
+      I5 => \^q\(7),
+      O => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_14_n_0\
+    );
+\gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_15\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"9009000000009009"
     )
         port map (
       I0 => \^q\(3),
-      I1 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg\(3),
-      I2 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg\(5),
+      I1 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_0\(3),
+      I2 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_0\(5),
       I3 => \^q\(5),
-      I4 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg\(4),
+      I4 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_0\(4),
       I5 => \^q\(4),
-      O => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_7_n_0\
+      O => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_15_n_0\
     );
-\gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_8\: unisim.vcomponents.LUT6
+\gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_16\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"9009000000009009"
     )
         port map (
       I0 => \^q\(0),
-      I1 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg\(0),
-      I2 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg\(2),
+      I1 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_0\(0),
+      I2 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_0\(2),
       I3 => \^q\(2),
-      I4 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg\(1),
+      I4 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_0\(1),
       I5 => \^q\(1),
-      O => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_8_n_0\
+      O => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_16_n_0\
+    );
+\gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_9\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"9009000000009009"
+    )
+        port map (
+      I0 => \^q\(9),
+      I1 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_0\(9),
+      I2 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_0\(11),
+      I3 => \^q\(11),
+      I4 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_0\(10),
+      I5 => \^q\(10),
+      O => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_9_n_0\
+    );
+\gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_3\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_n_0\,
+      CO(3 downto 1) => \NLW_gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_3_CO_UNCONNECTED\(3 downto 1),
+      CO(0) => \^co\(0),
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => \NLW_gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_3_O_UNCONNECTED\(3 downto 0),
+      S(3 downto 1) => B"000",
+      S(0) => S(0)
+    );
+\gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_4\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_n_0\,
+      CO(3 downto 1) => \NLW_gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_4_CO_UNCONNECTED\(3 downto 1),
+      CO(0) => going_full1,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => \NLW_gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_4_O_UNCONNECTED\(3 downto 0),
+      S(3 downto 1) => B"000",
+      S(0) => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg\(0)
+    );
+\gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5\: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_n_0\,
+      CO(2) => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_n_1\,
+      CO(1) => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_n_2\,
+      CO(0) => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_n_3\,
+      CYINIT => '1',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => \NLW_gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_O_UNCONNECTED\(3 downto 0),
+      S(3) => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_9_n_0\,
+      S(2) => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_10_n_0\,
+      S(1) => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_11_n_0\,
+      S(0) => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_12_n_0\
+    );
+\gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7\: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_n_0\,
+      CO(2) => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_n_1\,
+      CO(1) => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_n_2\,
+      CO(0) => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_n_3\,
+      CYINIT => '1',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => \NLW_gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_O_UNCONNECTED\(3 downto 0),
+      S(3) => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_13_n_0\,
+      S(2) => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_14_n_0\,
+      S(1) => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_15_n_0\,
+      S(0) => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_16_n_0\
     );
 \gen_sdpram.xpm_memory_base_inst_i_2\: unisim.vcomponents.LUT4
     generic map(
@@ -453,16 +612,17 @@ use UNISIM.VCOMPONENTS.ALL;
 entity \axis_data_fifo_0_xpm_counter_updn__parameterized0_0\ is
   port (
     ram_empty_i0 : out STD_LOGIC;
-    Q : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    Q : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    \count_value_i_reg[12]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \gen_pntr_flags_cc.ram_empty_i_reg\ : in STD_LOGIC;
-    leaving_empty0 : in STD_LOGIC;
+    CO : in STD_LOGIC_VECTOR ( 0 to 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     ram_empty_i : in STD_LOGIC;
-    wr_en : in STD_LOGIC;
-    \count_value_i_reg[5]_0\ : in STD_LOGIC;
-    \count_value_i_reg[6]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    rst_d1 : in STD_LOGIC;
-    \gen_pntr_flags_cc.ram_empty_i_reg_0\ : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\ : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    S : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \gen_pntr_flags_cc.ram_empty_i_reg_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_3\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \count_value_i_reg[12]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     wr_clk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -470,113 +630,48 @@ entity \axis_data_fifo_0_xpm_counter_updn__parameterized0_0\ is
 end \axis_data_fifo_0_xpm_counter_updn__parameterized0_0\;
 
 architecture STRUCTURE of \axis_data_fifo_0_xpm_counter_updn__parameterized0_0\ is
-  signal \^q\ : STD_LOGIC_VECTOR ( 6 downto 0 );
-  signal \count_value_i[0]_i_1_n_0\ : STD_LOGIC;
-  signal \count_value_i[1]_i_1_n_0\ : STD_LOGIC;
-  signal \count_value_i[2]_i_1_n_0\ : STD_LOGIC;
-  signal \count_value_i[3]_i_1_n_0\ : STD_LOGIC;
-  signal \count_value_i[4]_i_1_n_0\ : STD_LOGIC;
-  signal \count_value_i[5]_i_1__0_n_0\ : STD_LOGIC;
-  signal \count_value_i[6]_i_1__0_n_0\ : STD_LOGIC;
-  signal \count_value_i[6]_i_2__0_n_0\ : STD_LOGIC;
-  signal \gen_pntr_flags_cc.ram_empty_i_i_3_n_0\ : STD_LOGIC;
-  signal \gen_pntr_flags_cc.ram_empty_i_i_4_n_0\ : STD_LOGIC;
+  signal \^q\ : STD_LOGIC_VECTOR ( 12 downto 0 );
+  signal \count_value_i_reg[11]_i_1_n_0\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1_n_1\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1_n_2\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1_n_3\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1_n_4\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1_n_5\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1_n_6\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1_n_7\ : STD_LOGIC;
+  signal \count_value_i_reg[12]_i_1_n_7\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1_n_0\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1_n_1\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1_n_2\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1_n_3\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1_n_4\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1_n_5\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1_n_6\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1_n_7\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1_n_0\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1_n_1\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1_n_2\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1_n_3\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1_n_4\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1_n_5\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1_n_6\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1_n_7\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.ram_empty_i_i_5_n_0\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.ram_empty_i_i_6_n_0\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.ram_empty_i_i_7_n_0\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.ram_empty_i_i_8_n_0\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.ram_empty_i_reg_i_3_n_0\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.ram_empty_i_reg_i_3_n_1\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.ram_empty_i_reg_i_3_n_2\ : STD_LOGIC;
+  signal \gen_pntr_flags_cc.ram_empty_i_reg_i_3_n_3\ : STD_LOGIC;
   signal going_empty1 : STD_LOGIC;
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1\ : label is "soft_lutpair3";
+  signal \NLW_count_value_i_reg[12]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_count_value_i_reg[12]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_gen_pntr_flags_cc.ram_empty_i_reg_i_2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_gen_pntr_flags_cc.ram_empty_i_reg_i_2_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_gen_pntr_flags_cc.ram_empty_i_reg_i_3_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
 begin
-  Q(6 downto 0) <= \^q\(6 downto 0);
-\count_value_i[0]_i_1\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => \^q\(0),
-      O => \count_value_i[0]_i_1_n_0\
-    );
-\count_value_i[1]_i_1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"6"
-    )
-        port map (
-      I0 => \^q\(0),
-      I1 => \^q\(1),
-      O => \count_value_i[1]_i_1_n_0\
-    );
-\count_value_i[2]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"78"
-    )
-        port map (
-      I0 => \^q\(0),
-      I1 => \^q\(1),
-      I2 => \^q\(2),
-      O => \count_value_i[2]_i_1_n_0\
-    );
-\count_value_i[3]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7F80"
-    )
-        port map (
-      I0 => \^q\(1),
-      I1 => \^q\(0),
-      I2 => \^q\(2),
-      I3 => \^q\(3),
-      O => \count_value_i[3]_i_1_n_0\
-    );
-\count_value_i[4]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"7FFF8000"
-    )
-        port map (
-      I0 => \^q\(2),
-      I1 => \^q\(0),
-      I2 => \^q\(1),
-      I3 => \^q\(3),
-      I4 => \^q\(4),
-      O => \count_value_i[4]_i_1_n_0\
-    );
-\count_value_i[5]_i_1__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"7FFF8000"
-    )
-        port map (
-      I0 => \^q\(3),
-      I1 => \count_value_i[6]_i_2__0_n_0\,
-      I2 => \^q\(2),
-      I3 => \^q\(4),
-      I4 => \^q\(5),
-      O => \count_value_i[5]_i_1__0_n_0\
-    );
-\count_value_i[6]_i_1__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"7FFFFFFF80000000"
-    )
-        port map (
-      I0 => \^q\(4),
-      I1 => \^q\(2),
-      I2 => \count_value_i[6]_i_2__0_n_0\,
-      I3 => \^q\(3),
-      I4 => \^q\(5),
-      I5 => \^q\(6),
-      O => \count_value_i[6]_i_1__0_n_0\
-    );
-\count_value_i[6]_i_2__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000800000000"
-    )
-        port map (
-      I0 => \^q\(1),
-      I1 => wr_en,
-      I2 => \count_value_i_reg[5]_0\,
-      I3 => \count_value_i_reg[6]_0\(0),
-      I4 => rst_d1,
-      I5 => \^q\(0),
-      O => \count_value_i[6]_i_2__0_n_0\
-    );
+  Q(12 downto 0) <= \^q\(12 downto 0);
 \count_value_i_reg[0]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -584,9 +679,68 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[0]_i_1_n_0\,
+      D => \count_value_i_reg[3]_i_1_n_7\,
       Q => \^q\(0),
-      R => \count_value_i_reg[6]_0\(0)
+      R => \count_value_i_reg[12]_1\(0)
+    );
+\count_value_i_reg[10]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => E(0),
+      D => \count_value_i_reg[11]_i_1_n_5\,
+      Q => \^q\(10),
+      R => \count_value_i_reg[12]_1\(0)
+    );
+\count_value_i_reg[11]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => E(0),
+      D => \count_value_i_reg[11]_i_1_n_4\,
+      Q => \^q\(11),
+      R => \count_value_i_reg[12]_1\(0)
+    );
+\count_value_i_reg[11]_i_1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \count_value_i_reg[7]_i_1_n_0\,
+      CO(3) => \count_value_i_reg[11]_i_1_n_0\,
+      CO(2) => \count_value_i_reg[11]_i_1_n_1\,
+      CO(1) => \count_value_i_reg[11]_i_1_n_2\,
+      CO(0) => \count_value_i_reg[11]_i_1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \count_value_i_reg[11]_i_1_n_4\,
+      O(2) => \count_value_i_reg[11]_i_1_n_5\,
+      O(1) => \count_value_i_reg[11]_i_1_n_6\,
+      O(0) => \count_value_i_reg[11]_i_1_n_7\,
+      S(3 downto 0) => \^q\(11 downto 8)
+    );
+\count_value_i_reg[12]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => E(0),
+      D => \count_value_i_reg[12]_i_1_n_7\,
+      Q => \^q\(12),
+      R => \count_value_i_reg[12]_1\(0)
+    );
+\count_value_i_reg[12]_i_1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \count_value_i_reg[11]_i_1_n_0\,
+      CO(3 downto 0) => \NLW_count_value_i_reg[12]_i_1_CO_UNCONNECTED\(3 downto 0),
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 1) => \NLW_count_value_i_reg[12]_i_1_O_UNCONNECTED\(3 downto 1),
+      O(0) => \count_value_i_reg[12]_i_1_n_7\,
+      S(3 downto 1) => B"000",
+      S(0) => \^q\(12)
     );
 \count_value_i_reg[1]\: unisim.vcomponents.FDRE
     generic map(
@@ -595,9 +749,9 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[1]_i_1_n_0\,
+      D => \count_value_i_reg[3]_i_1_n_6\,
       Q => \^q\(1),
-      R => \count_value_i_reg[6]_0\(0)
+      R => \count_value_i_reg[12]_1\(0)
     );
 \count_value_i_reg[2]\: unisim.vcomponents.FDRE
     generic map(
@@ -606,9 +760,9 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[2]_i_1_n_0\,
+      D => \count_value_i_reg[3]_i_1_n_5\,
       Q => \^q\(2),
-      R => \count_value_i_reg[6]_0\(0)
+      R => \count_value_i_reg[12]_1\(0)
     );
 \count_value_i_reg[3]\: unisim.vcomponents.FDRE
     generic map(
@@ -617,9 +771,26 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[3]_i_1_n_0\,
+      D => \count_value_i_reg[3]_i_1_n_4\,
       Q => \^q\(3),
-      R => \count_value_i_reg[6]_0\(0)
+      R => \count_value_i_reg[12]_1\(0)
+    );
+\count_value_i_reg[3]_i_1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => \count_value_i_reg[3]_i_1_n_0\,
+      CO(2) => \count_value_i_reg[3]_i_1_n_1\,
+      CO(1) => \count_value_i_reg[3]_i_1_n_2\,
+      CO(0) => \count_value_i_reg[3]_i_1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 1) => B"000",
+      DI(0) => \^q\(0),
+      O(3) => \count_value_i_reg[3]_i_1_n_4\,
+      O(2) => \count_value_i_reg[3]_i_1_n_5\,
+      O(1) => \count_value_i_reg[3]_i_1_n_6\,
+      O(0) => \count_value_i_reg[3]_i_1_n_7\,
+      S(3 downto 1) => \^q\(3 downto 1),
+      S(0) => S(0)
     );
 \count_value_i_reg[4]\: unisim.vcomponents.FDRE
     generic map(
@@ -628,9 +799,9 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[4]_i_1_n_0\,
+      D => \count_value_i_reg[7]_i_1_n_7\,
       Q => \^q\(4),
-      R => \count_value_i_reg[6]_0\(0)
+      R => \count_value_i_reg[12]_1\(0)
     );
 \count_value_i_reg[5]\: unisim.vcomponents.FDRE
     generic map(
@@ -639,9 +810,9 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[5]_i_1__0_n_0\,
+      D => \count_value_i_reg[7]_i_1_n_6\,
       Q => \^q\(5),
-      R => \count_value_i_reg[6]_0\(0)
+      R => \count_value_i_reg[12]_1\(0)
     );
 \count_value_i_reg[6]\: unisim.vcomponents.FDRE
     generic map(
@@ -650,9 +821,66 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[6]_i_1__0_n_0\,
+      D => \count_value_i_reg[7]_i_1_n_5\,
       Q => \^q\(6),
-      R => \count_value_i_reg[6]_0\(0)
+      R => \count_value_i_reg[12]_1\(0)
+    );
+\count_value_i_reg[7]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => E(0),
+      D => \count_value_i_reg[7]_i_1_n_4\,
+      Q => \^q\(7),
+      R => \count_value_i_reg[12]_1\(0)
+    );
+\count_value_i_reg[7]_i_1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \count_value_i_reg[3]_i_1_n_0\,
+      CO(3) => \count_value_i_reg[7]_i_1_n_0\,
+      CO(2) => \count_value_i_reg[7]_i_1_n_1\,
+      CO(1) => \count_value_i_reg[7]_i_1_n_2\,
+      CO(0) => \count_value_i_reg[7]_i_1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \count_value_i_reg[7]_i_1_n_4\,
+      O(2) => \count_value_i_reg[7]_i_1_n_5\,
+      O(1) => \count_value_i_reg[7]_i_1_n_6\,
+      O(0) => \count_value_i_reg[7]_i_1_n_7\,
+      S(3 downto 0) => \^q\(7 downto 4)
+    );
+\count_value_i_reg[8]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => E(0),
+      D => \count_value_i_reg[11]_i_1_n_7\,
+      Q => \^q\(8),
+      R => \count_value_i_reg[12]_1\(0)
+    );
+\count_value_i_reg[9]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => E(0),
+      D => \count_value_i_reg[11]_i_1_n_6\,
+      Q => \^q\(9),
+      R => \count_value_i_reg[12]_1\(0)
+    );
+\gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_6\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \^q\(12),
+      I1 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_3\(0),
+      O => \count_value_i_reg[12]_0\(0)
     );
 \gen_pntr_flags_cc.ram_empty_i_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -661,47 +889,88 @@ begin
         port map (
       I0 => \gen_pntr_flags_cc.ram_empty_i_reg\,
       I1 => going_empty1,
-      I2 => leaving_empty0,
+      I2 => CO(0),
       I3 => E(0),
       I4 => ram_empty_i,
       O => ram_empty_i0
     );
-\gen_pntr_flags_cc.ram_empty_i_i_2\: unisim.vcomponents.LUT4
+\gen_pntr_flags_cc.ram_empty_i_i_5\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9000"
+      INIT => X"9009000000009009"
+    )
+        port map (
+      I0 => \^q\(9),
+      I1 => \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(9),
+      I2 => \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(11),
+      I3 => \^q\(11),
+      I4 => \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(10),
+      I5 => \^q\(10),
+      O => \gen_pntr_flags_cc.ram_empty_i_i_5_n_0\
+    );
+\gen_pntr_flags_cc.ram_empty_i_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"9009000000009009"
     )
         port map (
       I0 => \^q\(6),
-      I1 => \gen_pntr_flags_cc.ram_empty_i_reg_0\(6),
-      I2 => \gen_pntr_flags_cc.ram_empty_i_i_3_n_0\,
-      I3 => \gen_pntr_flags_cc.ram_empty_i_i_4_n_0\,
-      O => going_empty1
+      I1 => \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(6),
+      I2 => \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(8),
+      I3 => \^q\(8),
+      I4 => \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(7),
+      I5 => \^q\(7),
+      O => \gen_pntr_flags_cc.ram_empty_i_i_6_n_0\
     );
-\gen_pntr_flags_cc.ram_empty_i_i_3\: unisim.vcomponents.LUT6
+\gen_pntr_flags_cc.ram_empty_i_i_7\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"9009000000009009"
     )
         port map (
       I0 => \^q\(3),
-      I1 => \gen_pntr_flags_cc.ram_empty_i_reg_0\(3),
-      I2 => \gen_pntr_flags_cc.ram_empty_i_reg_0\(5),
+      I1 => \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(3),
+      I2 => \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(5),
       I3 => \^q\(5),
-      I4 => \gen_pntr_flags_cc.ram_empty_i_reg_0\(4),
+      I4 => \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(4),
       I5 => \^q\(4),
-      O => \gen_pntr_flags_cc.ram_empty_i_i_3_n_0\
+      O => \gen_pntr_flags_cc.ram_empty_i_i_7_n_0\
     );
-\gen_pntr_flags_cc.ram_empty_i_i_4\: unisim.vcomponents.LUT6
+\gen_pntr_flags_cc.ram_empty_i_i_8\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"9009000000009009"
     )
         port map (
       I0 => \^q\(0),
-      I1 => \gen_pntr_flags_cc.ram_empty_i_reg_0\(0),
-      I2 => \gen_pntr_flags_cc.ram_empty_i_reg_0\(2),
+      I1 => \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(0),
+      I2 => \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(2),
       I3 => \^q\(2),
-      I4 => \gen_pntr_flags_cc.ram_empty_i_reg_0\(1),
+      I4 => \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(1),
       I5 => \^q\(1),
-      O => \gen_pntr_flags_cc.ram_empty_i_i_4_n_0\
+      O => \gen_pntr_flags_cc.ram_empty_i_i_8_n_0\
+    );
+\gen_pntr_flags_cc.ram_empty_i_reg_i_2\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \gen_pntr_flags_cc.ram_empty_i_reg_i_3_n_0\,
+      CO(3 downto 1) => \NLW_gen_pntr_flags_cc.ram_empty_i_reg_i_2_CO_UNCONNECTED\(3 downto 1),
+      CO(0) => going_empty1,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => \NLW_gen_pntr_flags_cc.ram_empty_i_reg_i_2_O_UNCONNECTED\(3 downto 0),
+      S(3 downto 1) => B"000",
+      S(0) => \gen_pntr_flags_cc.ram_empty_i_reg_0\(0)
+    );
+\gen_pntr_flags_cc.ram_empty_i_reg_i_3\: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => \gen_pntr_flags_cc.ram_empty_i_reg_i_3_n_0\,
+      CO(2) => \gen_pntr_flags_cc.ram_empty_i_reg_i_3_n_1\,
+      CO(1) => \gen_pntr_flags_cc.ram_empty_i_reg_i_3_n_2\,
+      CO(0) => \gen_pntr_flags_cc.ram_empty_i_reg_i_3_n_3\,
+      CYINIT => '1',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => \NLW_gen_pntr_flags_cc.ram_empty_i_reg_i_3_O_UNCONNECTED\(3 downto 0),
+      S(3) => \gen_pntr_flags_cc.ram_empty_i_i_5_n_0\,
+      S(2) => \gen_pntr_flags_cc.ram_empty_i_i_6_n_0\,
+      S(1) => \gen_pntr_flags_cc.ram_empty_i_i_7_n_0\,
+      S(0) => \gen_pntr_flags_cc.ram_empty_i_i_8_n_0\
     );
 end STRUCTURE;
 library IEEE;
@@ -710,10 +979,12 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \axis_data_fifo_0_xpm_counter_updn__parameterized1\ is
   port (
-    Q : out STD_LOGIC_VECTOR ( 6 downto 0 );
-    \count_value_i_reg[1]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    rd_en : in STD_LOGIC;
+    Q : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    S : out STD_LOGIC_VECTOR ( 0 to 0 );
     ram_empty_i : in STD_LOGIC;
+    rd_en : in STD_LOGIC;
+    \count_value_i_reg[3]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \gen_pntr_flags_cc.ram_empty_i_reg_i_2\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \count_value_i_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     wr_clk : in STD_LOGIC
@@ -723,113 +994,54 @@ entity \axis_data_fifo_0_xpm_counter_updn__parameterized1\ is
 end \axis_data_fifo_0_xpm_counter_updn__parameterized1\;
 
 architecture STRUCTURE of \axis_data_fifo_0_xpm_counter_updn__parameterized1\ is
-  signal \^q\ : STD_LOGIC_VECTOR ( 6 downto 0 );
-  signal \count_value_i[0]_i_1__2_n_0\ : STD_LOGIC;
-  signal \count_value_i[1]_i_1__2_n_0\ : STD_LOGIC;
-  signal \count_value_i[2]_i_1__2_n_0\ : STD_LOGIC;
-  signal \count_value_i[3]_i_1__2_n_0\ : STD_LOGIC;
-  signal \count_value_i[4]_i_1__2_n_0\ : STD_LOGIC;
-  signal \count_value_i[5]_i_1__2_n_0\ : STD_LOGIC;
-  signal \count_value_i[6]_i_1__2_n_0\ : STD_LOGIC;
-  signal \count_value_i[6]_i_2__2_n_0\ : STD_LOGIC;
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__2\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__2\ : label is "soft_lutpair2";
+  signal \^q\ : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal \count_value_i[3]_i_2__1_n_0\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__1_n_0\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__1_n_1\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__1_n_2\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__1_n_3\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__1_n_4\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__1_n_5\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__1_n_6\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__1_n_7\ : STD_LOGIC;
+  signal \count_value_i_reg[12]_i_1__1_n_7\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__1_n_0\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__1_n_1\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__1_n_2\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__1_n_3\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__1_n_4\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__1_n_5\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__1_n_6\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__1_n_7\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__1_n_0\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__1_n_1\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__1_n_2\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__1_n_3\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__1_n_4\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__1_n_5\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__1_n_6\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__1_n_7\ : STD_LOGIC;
+  signal \count_value_i_reg_n_0_[12]\ : STD_LOGIC;
+  signal \NLW_count_value_i_reg[12]_i_1__1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_count_value_i_reg[12]_i_1__1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  attribute ADDER_THRESHOLD : integer;
+  attribute ADDER_THRESHOLD of \count_value_i_reg[11]_i_1__1\ : label is 35;
+  attribute ADDER_THRESHOLD of \count_value_i_reg[12]_i_1__1\ : label is 35;
+  attribute ADDER_THRESHOLD of \count_value_i_reg[3]_i_1__1\ : label is 35;
+  attribute ADDER_THRESHOLD of \count_value_i_reg[7]_i_1__1\ : label is 35;
 begin
-  Q(6 downto 0) <= \^q\(6 downto 0);
-\count_value_i[0]_i_1__2\: unisim.vcomponents.LUT4
+  Q(11 downto 0) <= \^q\(11 downto 0);
+\count_value_i[3]_i_2__1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"10EF"
+      INIT => X"ABAA5455"
     )
         port map (
-      I0 => rd_en,
-      I1 => \count_value_i_reg[1]_0\(0),
-      I2 => \count_value_i_reg[1]_0\(1),
-      I3 => \^q\(0),
-      O => \count_value_i[0]_i_1__2_n_0\
-    );
-\count_value_i[1]_i_1__2\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"02FFFD00"
-    )
-        port map (
-      I0 => \count_value_i_reg[1]_0\(1),
-      I1 => \count_value_i_reg[1]_0\(0),
-      I2 => rd_en,
-      I3 => \^q\(0),
-      I4 => \^q\(1),
-      O => \count_value_i[1]_i_1__2_n_0\
-    );
-\count_value_i[2]_i_1__2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"78"
-    )
-        port map (
-      I0 => \^q\(0),
-      I1 => \^q\(1),
-      I2 => \^q\(2),
-      O => \count_value_i[2]_i_1__2_n_0\
-    );
-\count_value_i[3]_i_1__2\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7F80"
-    )
-        port map (
-      I0 => \^q\(1),
-      I1 => \^q\(0),
-      I2 => \^q\(2),
-      I3 => \^q\(3),
-      O => \count_value_i[3]_i_1__2_n_0\
-    );
-\count_value_i[4]_i_1__2\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"7FFF8000"
-    )
-        port map (
-      I0 => \^q\(2),
-      I1 => \^q\(0),
-      I2 => \^q\(1),
-      I3 => \^q\(3),
-      I4 => \^q\(4),
-      O => \count_value_i[4]_i_1__2_n_0\
-    );
-\count_value_i[5]_i_1__2\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"7FFF8000"
-    )
-        port map (
-      I0 => \^q\(3),
-      I1 => \count_value_i[6]_i_2__2_n_0\,
-      I2 => \^q\(2),
-      I3 => \^q\(4),
-      I4 => \^q\(5),
-      O => \count_value_i[5]_i_1__2_n_0\
-    );
-\count_value_i[6]_i_1__2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"7FFFFFFF80000000"
-    )
-        port map (
-      I0 => \^q\(4),
-      I1 => \^q\(2),
-      I2 => \count_value_i[6]_i_2__2_n_0\,
-      I3 => \^q\(3),
-      I4 => \^q\(5),
-      I5 => \^q\(6),
-      O => \count_value_i[6]_i_1__2_n_0\
-    );
-\count_value_i[6]_i_2__2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000AAA200000000"
-    )
-        port map (
-      I0 => \^q\(1),
-      I1 => \count_value_i_reg[1]_0\(1),
-      I2 => \count_value_i_reg[1]_0\(0),
-      I3 => rd_en,
-      I4 => ram_empty_i,
-      I5 => \^q\(0),
-      O => \count_value_i[6]_i_2__2_n_0\
+      I0 => ram_empty_i,
+      I1 => rd_en,
+      I2 => \count_value_i_reg[3]_0\(0),
+      I3 => \count_value_i_reg[3]_0\(1),
+      I4 => \^q\(0),
+      O => \count_value_i[3]_i_2__1_n_0\
     );
 \count_value_i_reg[0]\: unisim.vcomponents.FDSE
     generic map(
@@ -838,9 +1050,68 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[0]_i_1__2_n_0\,
+      D => \count_value_i_reg[3]_i_1__1_n_7\,
       Q => \^q\(0),
       S => \count_value_i_reg[0]_0\(0)
+    );
+\count_value_i_reg[10]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => E(0),
+      D => \count_value_i_reg[11]_i_1__1_n_5\,
+      Q => \^q\(10),
+      R => \count_value_i_reg[0]_0\(0)
+    );
+\count_value_i_reg[11]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => E(0),
+      D => \count_value_i_reg[11]_i_1__1_n_4\,
+      Q => \^q\(11),
+      R => \count_value_i_reg[0]_0\(0)
+    );
+\count_value_i_reg[11]_i_1__1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \count_value_i_reg[7]_i_1__1_n_0\,
+      CO(3) => \count_value_i_reg[11]_i_1__1_n_0\,
+      CO(2) => \count_value_i_reg[11]_i_1__1_n_1\,
+      CO(1) => \count_value_i_reg[11]_i_1__1_n_2\,
+      CO(0) => \count_value_i_reg[11]_i_1__1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \count_value_i_reg[11]_i_1__1_n_4\,
+      O(2) => \count_value_i_reg[11]_i_1__1_n_5\,
+      O(1) => \count_value_i_reg[11]_i_1__1_n_6\,
+      O(0) => \count_value_i_reg[11]_i_1__1_n_7\,
+      S(3 downto 0) => \^q\(11 downto 8)
+    );
+\count_value_i_reg[12]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => E(0),
+      D => \count_value_i_reg[12]_i_1__1_n_7\,
+      Q => \count_value_i_reg_n_0_[12]\,
+      R => \count_value_i_reg[0]_0\(0)
+    );
+\count_value_i_reg[12]_i_1__1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \count_value_i_reg[11]_i_1__1_n_0\,
+      CO(3 downto 0) => \NLW_count_value_i_reg[12]_i_1__1_CO_UNCONNECTED\(3 downto 0),
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 1) => \NLW_count_value_i_reg[12]_i_1__1_O_UNCONNECTED\(3 downto 1),
+      O(0) => \count_value_i_reg[12]_i_1__1_n_7\,
+      S(3 downto 1) => B"000",
+      S(0) => \count_value_i_reg_n_0_[12]\
     );
 \count_value_i_reg[1]\: unisim.vcomponents.FDRE
     generic map(
@@ -849,7 +1120,7 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[1]_i_1__2_n_0\,
+      D => \count_value_i_reg[3]_i_1__1_n_6\,
       Q => \^q\(1),
       R => \count_value_i_reg[0]_0\(0)
     );
@@ -860,7 +1131,7 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[2]_i_1__2_n_0\,
+      D => \count_value_i_reg[3]_i_1__1_n_5\,
       Q => \^q\(2),
       R => \count_value_i_reg[0]_0\(0)
     );
@@ -871,9 +1142,26 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[3]_i_1__2_n_0\,
+      D => \count_value_i_reg[3]_i_1__1_n_4\,
       Q => \^q\(3),
       R => \count_value_i_reg[0]_0\(0)
+    );
+\count_value_i_reg[3]_i_1__1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => \count_value_i_reg[3]_i_1__1_n_0\,
+      CO(2) => \count_value_i_reg[3]_i_1__1_n_1\,
+      CO(1) => \count_value_i_reg[3]_i_1__1_n_2\,
+      CO(0) => \count_value_i_reg[3]_i_1__1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 1) => B"000",
+      DI(0) => \^q\(0),
+      O(3) => \count_value_i_reg[3]_i_1__1_n_4\,
+      O(2) => \count_value_i_reg[3]_i_1__1_n_5\,
+      O(1) => \count_value_i_reg[3]_i_1__1_n_6\,
+      O(0) => \count_value_i_reg[3]_i_1__1_n_7\,
+      S(3 downto 1) => \^q\(3 downto 1),
+      S(0) => \count_value_i[3]_i_2__1_n_0\
     );
 \count_value_i_reg[4]\: unisim.vcomponents.FDRE
     generic map(
@@ -882,7 +1170,7 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[4]_i_1__2_n_0\,
+      D => \count_value_i_reg[7]_i_1__1_n_7\,
       Q => \^q\(4),
       R => \count_value_i_reg[0]_0\(0)
     );
@@ -893,7 +1181,7 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[5]_i_1__2_n_0\,
+      D => \count_value_i_reg[7]_i_1__1_n_6\,
       Q => \^q\(5),
       R => \count_value_i_reg[0]_0\(0)
     );
@@ -904,9 +1192,66 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[6]_i_1__2_n_0\,
+      D => \count_value_i_reg[7]_i_1__1_n_5\,
       Q => \^q\(6),
       R => \count_value_i_reg[0]_0\(0)
+    );
+\count_value_i_reg[7]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => E(0),
+      D => \count_value_i_reg[7]_i_1__1_n_4\,
+      Q => \^q\(7),
+      R => \count_value_i_reg[0]_0\(0)
+    );
+\count_value_i_reg[7]_i_1__1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \count_value_i_reg[3]_i_1__1_n_0\,
+      CO(3) => \count_value_i_reg[7]_i_1__1_n_0\,
+      CO(2) => \count_value_i_reg[7]_i_1__1_n_1\,
+      CO(1) => \count_value_i_reg[7]_i_1__1_n_2\,
+      CO(0) => \count_value_i_reg[7]_i_1__1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \count_value_i_reg[7]_i_1__1_n_4\,
+      O(2) => \count_value_i_reg[7]_i_1__1_n_5\,
+      O(1) => \count_value_i_reg[7]_i_1__1_n_6\,
+      O(0) => \count_value_i_reg[7]_i_1__1_n_7\,
+      S(3 downto 0) => \^q\(7 downto 4)
+    );
+\count_value_i_reg[8]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => E(0),
+      D => \count_value_i_reg[11]_i_1__1_n_7\,
+      Q => \^q\(8),
+      R => \count_value_i_reg[0]_0\(0)
+    );
+\count_value_i_reg[9]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => E(0),
+      D => \count_value_i_reg[11]_i_1__1_n_6\,
+      Q => \^q\(9),
+      R => \count_value_i_reg[0]_0\(0)
+    );
+\gen_pntr_flags_cc.ram_empty_i_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \count_value_i_reg_n_0_[12]\,
+      I1 => \gen_pntr_flags_cc.ram_empty_i_reg_i_2\(0),
+      O => S(0)
     );
 end STRUCTURE;
 library IEEE;
@@ -915,11 +1260,11 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \axis_data_fifo_0_xpm_counter_updn__parameterized1_1\ is
   port (
-    Q : out STD_LOGIC_VECTOR ( 6 downto 0 );
-    wr_en : in STD_LOGIC;
-    \count_value_i_reg[5]_0\ : in STD_LOGIC;
+    Q : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    \count_value_i_reg[12]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \count_value_i_reg[3]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_4\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \count_value_i_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    rst_d1 : in STD_LOGIC;
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     wr_clk : in STD_LOGIC
   );
@@ -928,110 +1273,42 @@ entity \axis_data_fifo_0_xpm_counter_updn__parameterized1_1\ is
 end \axis_data_fifo_0_xpm_counter_updn__parameterized1_1\;
 
 architecture STRUCTURE of \axis_data_fifo_0_xpm_counter_updn__parameterized1_1\ is
-  signal \^q\ : STD_LOGIC_VECTOR ( 6 downto 0 );
-  signal \count_value_i[0]_i_1__0_n_0\ : STD_LOGIC;
-  signal \count_value_i[1]_i_1__0_n_0\ : STD_LOGIC;
-  signal \count_value_i[2]_i_1__0_n_0\ : STD_LOGIC;
-  signal \count_value_i[3]_i_1__0_n_0\ : STD_LOGIC;
-  signal \count_value_i[4]_i_1__0_n_0\ : STD_LOGIC;
-  signal \count_value_i[5]_i_1_n_0\ : STD_LOGIC;
-  signal \count_value_i[6]_i_1_n_0\ : STD_LOGIC;
-  signal \count_value_i[6]_i_2_n_0\ : STD_LOGIC;
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__0\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__0\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__0\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__0\ : label is "soft_lutpair5";
+  signal \^q\ : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal \count_value_i__0\ : STD_LOGIC_VECTOR ( 12 to 12 );
+  signal \count_value_i_reg[11]_i_1__2_n_0\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__2_n_1\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__2_n_2\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__2_n_3\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__2_n_4\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__2_n_5\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__2_n_6\ : STD_LOGIC;
+  signal \count_value_i_reg[11]_i_1__2_n_7\ : STD_LOGIC;
+  signal \count_value_i_reg[12]_i_1__2_n_7\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__2_n_0\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__2_n_1\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__2_n_2\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__2_n_3\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__2_n_4\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__2_n_5\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__2_n_6\ : STD_LOGIC;
+  signal \count_value_i_reg[3]_i_1__2_n_7\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__2_n_0\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__2_n_1\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__2_n_2\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__2_n_3\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__2_n_4\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__2_n_5\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__2_n_6\ : STD_LOGIC;
+  signal \count_value_i_reg[7]_i_1__2_n_7\ : STD_LOGIC;
+  signal \NLW_count_value_i_reg[12]_i_1__2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_count_value_i_reg[12]_i_1__2_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  attribute ADDER_THRESHOLD : integer;
+  attribute ADDER_THRESHOLD of \count_value_i_reg[11]_i_1__2\ : label is 35;
+  attribute ADDER_THRESHOLD of \count_value_i_reg[12]_i_1__2\ : label is 35;
+  attribute ADDER_THRESHOLD of \count_value_i_reg[3]_i_1__2\ : label is 35;
+  attribute ADDER_THRESHOLD of \count_value_i_reg[7]_i_1__2\ : label is 35;
 begin
-  Q(6 downto 0) <= \^q\(6 downto 0);
-\count_value_i[0]_i_1__0\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => \^q\(0),
-      O => \count_value_i[0]_i_1__0_n_0\
-    );
-\count_value_i[1]_i_1__0\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"6"
-    )
-        port map (
-      I0 => \^q\(0),
-      I1 => \^q\(1),
-      O => \count_value_i[1]_i_1__0_n_0\
-    );
-\count_value_i[2]_i_1__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"78"
-    )
-        port map (
-      I0 => \^q\(0),
-      I1 => \^q\(1),
-      I2 => \^q\(2),
-      O => \count_value_i[2]_i_1__0_n_0\
-    );
-\count_value_i[3]_i_1__0\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7F80"
-    )
-        port map (
-      I0 => \^q\(1),
-      I1 => \^q\(0),
-      I2 => \^q\(2),
-      I3 => \^q\(3),
-      O => \count_value_i[3]_i_1__0_n_0\
-    );
-\count_value_i[4]_i_1__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"7FFF8000"
-    )
-        port map (
-      I0 => \^q\(2),
-      I1 => \^q\(0),
-      I2 => \^q\(1),
-      I3 => \^q\(3),
-      I4 => \^q\(4),
-      O => \count_value_i[4]_i_1__0_n_0\
-    );
-\count_value_i[5]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"7FFF8000"
-    )
-        port map (
-      I0 => \^q\(3),
-      I1 => \count_value_i[6]_i_2_n_0\,
-      I2 => \^q\(2),
-      I3 => \^q\(4),
-      I4 => \^q\(5),
-      O => \count_value_i[5]_i_1_n_0\
-    );
-\count_value_i[6]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"7FFFFFFF80000000"
-    )
-        port map (
-      I0 => \^q\(4),
-      I1 => \^q\(2),
-      I2 => \count_value_i[6]_i_2_n_0\,
-      I3 => \^q\(3),
-      I4 => \^q\(5),
-      I5 => \^q\(6),
-      O => \count_value_i[6]_i_1_n_0\
-    );
-\count_value_i[6]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000800000000"
-    )
-        port map (
-      I0 => \^q\(1),
-      I1 => wr_en,
-      I2 => \count_value_i_reg[5]_0\,
-      I3 => \count_value_i_reg[0]_0\(0),
-      I4 => rst_d1,
-      I5 => \^q\(0),
-      O => \count_value_i[6]_i_2_n_0\
-    );
+  Q(11 downto 0) <= \^q\(11 downto 0);
 \count_value_i_reg[0]\: unisim.vcomponents.FDSE
     generic map(
       INIT => '1'
@@ -1039,9 +1316,68 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[0]_i_1__0_n_0\,
+      D => \count_value_i_reg[3]_i_1__2_n_7\,
       Q => \^q\(0),
       S => \count_value_i_reg[0]_0\(0)
+    );
+\count_value_i_reg[10]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => E(0),
+      D => \count_value_i_reg[11]_i_1__2_n_5\,
+      Q => \^q\(10),
+      R => \count_value_i_reg[0]_0\(0)
+    );
+\count_value_i_reg[11]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => E(0),
+      D => \count_value_i_reg[11]_i_1__2_n_4\,
+      Q => \^q\(11),
+      R => \count_value_i_reg[0]_0\(0)
+    );
+\count_value_i_reg[11]_i_1__2\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \count_value_i_reg[7]_i_1__2_n_0\,
+      CO(3) => \count_value_i_reg[11]_i_1__2_n_0\,
+      CO(2) => \count_value_i_reg[11]_i_1__2_n_1\,
+      CO(1) => \count_value_i_reg[11]_i_1__2_n_2\,
+      CO(0) => \count_value_i_reg[11]_i_1__2_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \count_value_i_reg[11]_i_1__2_n_4\,
+      O(2) => \count_value_i_reg[11]_i_1__2_n_5\,
+      O(1) => \count_value_i_reg[11]_i_1__2_n_6\,
+      O(0) => \count_value_i_reg[11]_i_1__2_n_7\,
+      S(3 downto 0) => \^q\(11 downto 8)
+    );
+\count_value_i_reg[12]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => E(0),
+      D => \count_value_i_reg[12]_i_1__2_n_7\,
+      Q => \count_value_i__0\(12),
+      R => \count_value_i_reg[0]_0\(0)
+    );
+\count_value_i_reg[12]_i_1__2\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \count_value_i_reg[11]_i_1__2_n_0\,
+      CO(3 downto 0) => \NLW_count_value_i_reg[12]_i_1__2_CO_UNCONNECTED\(3 downto 0),
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 1) => \NLW_count_value_i_reg[12]_i_1__2_O_UNCONNECTED\(3 downto 1),
+      O(0) => \count_value_i_reg[12]_i_1__2_n_7\,
+      S(3 downto 1) => B"000",
+      S(0) => \count_value_i__0\(12)
     );
 \count_value_i_reg[1]\: unisim.vcomponents.FDRE
     generic map(
@@ -1050,7 +1386,7 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[1]_i_1__0_n_0\,
+      D => \count_value_i_reg[3]_i_1__2_n_6\,
       Q => \^q\(1),
       R => \count_value_i_reg[0]_0\(0)
     );
@@ -1061,7 +1397,7 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[2]_i_1__0_n_0\,
+      D => \count_value_i_reg[3]_i_1__2_n_5\,
       Q => \^q\(2),
       R => \count_value_i_reg[0]_0\(0)
     );
@@ -1072,9 +1408,26 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[3]_i_1__0_n_0\,
+      D => \count_value_i_reg[3]_i_1__2_n_4\,
       Q => \^q\(3),
       R => \count_value_i_reg[0]_0\(0)
+    );
+\count_value_i_reg[3]_i_1__2\: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => \count_value_i_reg[3]_i_1__2_n_0\,
+      CO(2) => \count_value_i_reg[3]_i_1__2_n_1\,
+      CO(1) => \count_value_i_reg[3]_i_1__2_n_2\,
+      CO(0) => \count_value_i_reg[3]_i_1__2_n_3\,
+      CYINIT => '0',
+      DI(3 downto 1) => B"000",
+      DI(0) => \^q\(0),
+      O(3) => \count_value_i_reg[3]_i_1__2_n_4\,
+      O(2) => \count_value_i_reg[3]_i_1__2_n_5\,
+      O(1) => \count_value_i_reg[3]_i_1__2_n_6\,
+      O(0) => \count_value_i_reg[3]_i_1__2_n_7\,
+      S(3 downto 1) => \^q\(3 downto 1),
+      S(0) => \count_value_i_reg[3]_0\(0)
     );
 \count_value_i_reg[4]\: unisim.vcomponents.FDRE
     generic map(
@@ -1083,7 +1436,7 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[4]_i_1__0_n_0\,
+      D => \count_value_i_reg[7]_i_1__2_n_7\,
       Q => \^q\(4),
       R => \count_value_i_reg[0]_0\(0)
     );
@@ -1094,7 +1447,7 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[5]_i_1_n_0\,
+      D => \count_value_i_reg[7]_i_1__2_n_6\,
       Q => \^q\(5),
       R => \count_value_i_reg[0]_0\(0)
     );
@@ -1105,9 +1458,66 @@ begin
         port map (
       C => wr_clk,
       CE => E(0),
-      D => \count_value_i[6]_i_1_n_0\,
+      D => \count_value_i_reg[7]_i_1__2_n_5\,
       Q => \^q\(6),
       R => \count_value_i_reg[0]_0\(0)
+    );
+\count_value_i_reg[7]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => E(0),
+      D => \count_value_i_reg[7]_i_1__2_n_4\,
+      Q => \^q\(7),
+      R => \count_value_i_reg[0]_0\(0)
+    );
+\count_value_i_reg[7]_i_1__2\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \count_value_i_reg[3]_i_1__2_n_0\,
+      CO(3) => \count_value_i_reg[7]_i_1__2_n_0\,
+      CO(2) => \count_value_i_reg[7]_i_1__2_n_1\,
+      CO(1) => \count_value_i_reg[7]_i_1__2_n_2\,
+      CO(0) => \count_value_i_reg[7]_i_1__2_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \count_value_i_reg[7]_i_1__2_n_4\,
+      O(2) => \count_value_i_reg[7]_i_1__2_n_5\,
+      O(1) => \count_value_i_reg[7]_i_1__2_n_6\,
+      O(0) => \count_value_i_reg[7]_i_1__2_n_7\,
+      S(3 downto 0) => \^q\(7 downto 4)
+    );
+\count_value_i_reg[8]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => E(0),
+      D => \count_value_i_reg[11]_i_1__2_n_7\,
+      Q => \^q\(8),
+      R => \count_value_i_reg[0]_0\(0)
+    );
+\count_value_i_reg[9]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => wr_clk,
+      CE => E(0),
+      D => \count_value_i_reg[11]_i_1__2_n_6\,
+      Q => \^q\(9),
+      R => \count_value_i_reg[0]_0\(0)
+    );
+\gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_i_8\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \count_value_i__0\(12),
+      I1 => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_4\(0),
+      O => \count_value_i_reg[12]_0\(0)
     );
 end STRUCTURE;
 library IEEE;
@@ -1118,9 +1528,15 @@ entity axis_data_fifo_0_xpm_fifo_reg_bit is
   port (
     rst_d1 : out STD_LOGIC;
     clr_full : out STD_LOGIC;
+    S : out STD_LOGIC_VECTOR ( 0 to 0 );
+    d_out_int_reg_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     wr_clk : in STD_LOGIC;
-    rst : in STD_LOGIC
+    rst : in STD_LOGIC;
+    \count_value_i_reg[3]\ : in STD_LOGIC;
+    wr_en : in STD_LOGIC;
+    \count_value_i_reg[3]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \count_value_i_reg[3]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of axis_data_fifo_0_xpm_fifo_reg_bit : entity is "xpm_fifo_reg_bit";
@@ -1130,6 +1546,30 @@ architecture STRUCTURE of axis_data_fifo_0_xpm_fifo_reg_bit is
   signal \^rst_d1\ : STD_LOGIC;
 begin
   rst_d1 <= \^rst_d1\;
+\count_value_i[3]_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FEFF0100"
+    )
+        port map (
+      I0 => \^rst_d1\,
+      I1 => Q(0),
+      I2 => \count_value_i_reg[3]\,
+      I3 => wr_en,
+      I4 => \count_value_i_reg[3]_0\(0),
+      O => S(0)
+    );
+\count_value_i[3]_i_2__2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FEFF0100"
+    )
+        port map (
+      I0 => \^rst_d1\,
+      I1 => Q(0),
+      I2 => \count_value_i_reg[3]\,
+      I3 => wr_en,
+      I4 => \count_value_i_reg[3]_1\(0),
+      O => d_out_int_reg_0(0)
+    );
 d_out_int_reg: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -1162,7 +1602,7 @@ entity axis_data_fifo_0_xpm_fifo_rst is
     Q : out STD_LOGIC_VECTOR ( 0 to 0 );
     rst : in STD_LOGIC;
     wr_en : in STD_LOGIC;
-    \count_value_i_reg[6]\ : in STD_LOGIC;
+    \count_value_i_reg[12]\ : in STD_LOGIC;
     rst_d1 : in STD_LOGIC;
     wr_clk : in STD_LOGIC
   );
@@ -1226,7 +1666,7 @@ begin
     )
         port map (
       I0 => wr_en,
-      I1 => \count_value_i_reg[6]\,
+      I1 => \count_value_i_reg[12]\,
       I2 => \^q\(0),
       I3 => rst_d1,
       O => E(0)
@@ -1266,7 +1706,7 @@ entity axis_data_fifo_0_xpm_memory_base is
     ena : in STD_LOGIC;
     regcea : in STD_LOGIC;
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
-    addra : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    addra : in STD_LOGIC_VECTOR ( 12 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 13 downto 0 );
     injectsbiterra : in STD_LOGIC;
     injectdbiterra : in STD_LOGIC;
@@ -1278,7 +1718,7 @@ entity axis_data_fifo_0_xpm_memory_base is
     enb : in STD_LOGIC;
     regceb : in STD_LOGIC;
     web : in STD_LOGIC_VECTOR ( 0 to 0 );
-    addrb : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 12 downto 0 );
     dinb : in STD_LOGIC_VECTOR ( 13 downto 0 );
     injectsbiterrb : in STD_LOGIC;
     injectdbiterrb : in STD_LOGIC;
@@ -1287,9 +1727,9 @@ entity axis_data_fifo_0_xpm_memory_base is
     dbiterrb : out STD_LOGIC
   );
   attribute ADDR_WIDTH_A : integer;
-  attribute ADDR_WIDTH_A of axis_data_fifo_0_xpm_memory_base : entity is 7;
+  attribute ADDR_WIDTH_A of axis_data_fifo_0_xpm_memory_base : entity is 13;
   attribute ADDR_WIDTH_B : integer;
-  attribute ADDR_WIDTH_B of axis_data_fifo_0_xpm_memory_base : entity is 7;
+  attribute ADDR_WIDTH_B of axis_data_fifo_0_xpm_memory_base : entity is 13;
   attribute AUTO_SLEEP_TIME : integer;
   attribute AUTO_SLEEP_TIME of axis_data_fifo_0_xpm_memory_base : entity is 0;
   attribute BYTE_WRITE_WIDTH_A : integer;
@@ -1319,7 +1759,7 @@ entity axis_data_fifo_0_xpm_memory_base is
   attribute MEMORY_PRIMITIVE : integer;
   attribute MEMORY_PRIMITIVE of axis_data_fifo_0_xpm_memory_base : entity is 0;
   attribute MEMORY_SIZE : integer;
-  attribute MEMORY_SIZE of axis_data_fifo_0_xpm_memory_base : entity is 1792;
+  attribute MEMORY_SIZE of axis_data_fifo_0_xpm_memory_base : entity is 114688;
   attribute MEMORY_TYPE : integer;
   attribute MEMORY_TYPE of axis_data_fifo_0_xpm_memory_base : entity is 1;
   attribute MESSAGE_CONTROL : integer;
@@ -1335,7 +1775,7 @@ entity axis_data_fifo_0_xpm_memory_base is
   attribute P_ENABLE_BYTE_WRITE_B : integer;
   attribute P_ENABLE_BYTE_WRITE_B of axis_data_fifo_0_xpm_memory_base : entity is 0;
   attribute P_MAX_DEPTH_DATA : integer;
-  attribute P_MAX_DEPTH_DATA of axis_data_fifo_0_xpm_memory_base : entity is 128;
+  attribute P_MAX_DEPTH_DATA of axis_data_fifo_0_xpm_memory_base : entity is 8192;
   attribute P_MEMORY_OPT : string;
   attribute P_MEMORY_OPT of axis_data_fifo_0_xpm_memory_base : entity is "yes";
   attribute P_MEMORY_PRIMITIVE : string;
@@ -1391,13 +1831,13 @@ entity axis_data_fifo_0_xpm_memory_base is
   attribute P_WIDTH_ADDR_LSB_WRITE_COLL_B : integer;
   attribute P_WIDTH_ADDR_LSB_WRITE_COLL_B of axis_data_fifo_0_xpm_memory_base : entity is 1;
   attribute P_WIDTH_ADDR_READ_A : integer;
-  attribute P_WIDTH_ADDR_READ_A of axis_data_fifo_0_xpm_memory_base : entity is 7;
+  attribute P_WIDTH_ADDR_READ_A of axis_data_fifo_0_xpm_memory_base : entity is 13;
   attribute P_WIDTH_ADDR_READ_B : integer;
-  attribute P_WIDTH_ADDR_READ_B of axis_data_fifo_0_xpm_memory_base : entity is 7;
+  attribute P_WIDTH_ADDR_READ_B of axis_data_fifo_0_xpm_memory_base : entity is 13;
   attribute P_WIDTH_ADDR_WRITE_A : integer;
-  attribute P_WIDTH_ADDR_WRITE_A of axis_data_fifo_0_xpm_memory_base : entity is 7;
+  attribute P_WIDTH_ADDR_WRITE_A of axis_data_fifo_0_xpm_memory_base : entity is 13;
   attribute P_WIDTH_ADDR_WRITE_B : integer;
-  attribute P_WIDTH_ADDR_WRITE_B of axis_data_fifo_0_xpm_memory_base : entity is 7;
+  attribute P_WIDTH_ADDR_WRITE_B of axis_data_fifo_0_xpm_memory_base : entity is 13;
   attribute P_WIDTH_COL_WRITE_A : integer;
   attribute P_WIDTH_COL_WRITE_A of axis_data_fifo_0_xpm_memory_base : entity is 14;
   attribute P_WIDTH_COL_WRITE_B : integer;
@@ -1454,50 +1894,115 @@ end axis_data_fifo_0_xpm_memory_base;
 
 architecture STRUCTURE of axis_data_fifo_0_xpm_memory_base is
   signal \<const0>\ : STD_LOGIC;
-  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 15 downto 14 );
-  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \^doutb\ : STD_LOGIC_VECTOR ( 13 downto 0 );
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_DBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_INJECTDBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_INJECTSBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_SBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 4 );
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_DBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_INJECTDBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_INJECTSBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_SBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 4 );
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_2_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_2_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 15 downto 1 );
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_2_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_2_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute \MEM.PORTA.ADDRESS_BEGIN\ : integer;
-  attribute \MEM.PORTA.ADDRESS_BEGIN\ of \gen_wr_a.gen_word_narrow.mem_reg\ : label is 0;
+  attribute \MEM.PORTA.ADDRESS_BEGIN\ of \gen_wr_a.gen_word_narrow.mem_reg_0\ : label is 0;
   attribute \MEM.PORTA.ADDRESS_END\ : integer;
-  attribute \MEM.PORTA.ADDRESS_END\ of \gen_wr_a.gen_word_narrow.mem_reg\ : label is 1023;
+  attribute \MEM.PORTA.ADDRESS_END\ of \gen_wr_a.gen_word_narrow.mem_reg_0\ : label is 8191;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ : string;
-  attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of \gen_wr_a.gen_word_narrow.mem_reg\ : label is "p0_d14";
+  attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of \gen_wr_a.gen_word_narrow.mem_reg_0\ : label is "p0_d4";
   attribute \MEM.PORTA.DATA_LSB\ : integer;
-  attribute \MEM.PORTA.DATA_LSB\ of \gen_wr_a.gen_word_narrow.mem_reg\ : label is 0;
+  attribute \MEM.PORTA.DATA_LSB\ of \gen_wr_a.gen_word_narrow.mem_reg_0\ : label is 0;
   attribute \MEM.PORTA.DATA_MSB\ : integer;
-  attribute \MEM.PORTA.DATA_MSB\ of \gen_wr_a.gen_word_narrow.mem_reg\ : label is 13;
+  attribute \MEM.PORTA.DATA_MSB\ of \gen_wr_a.gen_word_narrow.mem_reg_0\ : label is 3;
   attribute \MEM.PORTB.ADDRESS_BEGIN\ : integer;
-  attribute \MEM.PORTB.ADDRESS_BEGIN\ of \gen_wr_a.gen_word_narrow.mem_reg\ : label is 0;
+  attribute \MEM.PORTB.ADDRESS_BEGIN\ of \gen_wr_a.gen_word_narrow.mem_reg_0\ : label is 0;
   attribute \MEM.PORTB.ADDRESS_END\ : integer;
-  attribute \MEM.PORTB.ADDRESS_END\ of \gen_wr_a.gen_word_narrow.mem_reg\ : label is 1023;
+  attribute \MEM.PORTB.ADDRESS_END\ of \gen_wr_a.gen_word_narrow.mem_reg_0\ : label is 8191;
   attribute \MEM.PORTB.DATA_BIT_LAYOUT\ : string;
-  attribute \MEM.PORTB.DATA_BIT_LAYOUT\ of \gen_wr_a.gen_word_narrow.mem_reg\ : label is "p0_d14";
+  attribute \MEM.PORTB.DATA_BIT_LAYOUT\ of \gen_wr_a.gen_word_narrow.mem_reg_0\ : label is "p0_d4";
   attribute \MEM.PORTB.DATA_LSB\ : integer;
-  attribute \MEM.PORTB.DATA_LSB\ of \gen_wr_a.gen_word_narrow.mem_reg\ : label is 0;
+  attribute \MEM.PORTB.DATA_LSB\ of \gen_wr_a.gen_word_narrow.mem_reg_0\ : label is 0;
   attribute \MEM.PORTB.DATA_MSB\ : integer;
-  attribute \MEM.PORTB.DATA_MSB\ of \gen_wr_a.gen_word_narrow.mem_reg\ : label is 13;
+  attribute \MEM.PORTB.DATA_MSB\ of \gen_wr_a.gen_word_narrow.mem_reg_0\ : label is 3;
   attribute METHODOLOGY_DRC_VIOS : string;
-  attribute METHODOLOGY_DRC_VIOS of \gen_wr_a.gen_word_narrow.mem_reg\ : label is "";
+  attribute METHODOLOGY_DRC_VIOS of \gen_wr_a.gen_word_narrow.mem_reg_0\ : label is "";
   attribute RTL_RAM_BITS : integer;
-  attribute RTL_RAM_BITS of \gen_wr_a.gen_word_narrow.mem_reg\ : label is 1792;
+  attribute RTL_RAM_BITS of \gen_wr_a.gen_word_narrow.mem_reg_0\ : label is 114688;
   attribute RTL_RAM_NAME : string;
-  attribute RTL_RAM_NAME of \gen_wr_a.gen_word_narrow.mem_reg\ : label is "xpm_memory_base/gen_wr_a.gen_word_narrow.mem_reg";
+  attribute RTL_RAM_NAME of \gen_wr_a.gen_word_narrow.mem_reg_0\ : label is "xpm_memory_base/gen_wr_a.gen_word_narrow.mem_reg";
   attribute RTL_RAM_STYLE : string;
-  attribute RTL_RAM_STYLE of \gen_wr_a.gen_word_narrow.mem_reg\ : label is "auto";
+  attribute RTL_RAM_STYLE of \gen_wr_a.gen_word_narrow.mem_reg_0\ : label is "auto";
   attribute RTL_RAM_TYPE : string;
-  attribute RTL_RAM_TYPE of \gen_wr_a.gen_word_narrow.mem_reg\ : label is "RAM_SDP";
+  attribute RTL_RAM_TYPE of \gen_wr_a.gen_word_narrow.mem_reg_0\ : label is "RAM_SDP";
   attribute ram_addr_begin : integer;
-  attribute ram_addr_begin of \gen_wr_a.gen_word_narrow.mem_reg\ : label is 0;
+  attribute ram_addr_begin of \gen_wr_a.gen_word_narrow.mem_reg_0\ : label is 0;
   attribute ram_addr_end : integer;
-  attribute ram_addr_end of \gen_wr_a.gen_word_narrow.mem_reg\ : label is 1023;
+  attribute ram_addr_end of \gen_wr_a.gen_word_narrow.mem_reg_0\ : label is 8191;
   attribute ram_offset : integer;
-  attribute ram_offset of \gen_wr_a.gen_word_narrow.mem_reg\ : label is 0;
+  attribute ram_offset of \gen_wr_a.gen_word_narrow.mem_reg_0\ : label is 0;
   attribute ram_slice_begin : integer;
-  attribute ram_slice_begin of \gen_wr_a.gen_word_narrow.mem_reg\ : label is 0;
+  attribute ram_slice_begin of \gen_wr_a.gen_word_narrow.mem_reg_0\ : label is 0;
   attribute ram_slice_end : integer;
-  attribute ram_slice_end of \gen_wr_a.gen_word_narrow.mem_reg\ : label is 13;
+  attribute ram_slice_end of \gen_wr_a.gen_word_narrow.mem_reg_0\ : label is 3;
+  attribute \MEM.PORTA.ADDRESS_BEGIN\ of \gen_wr_a.gen_word_narrow.mem_reg_1\ : label is 0;
+  attribute \MEM.PORTA.ADDRESS_END\ of \gen_wr_a.gen_word_narrow.mem_reg_1\ : label is 8191;
+  attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of \gen_wr_a.gen_word_narrow.mem_reg_1\ : label is "p0_d4";
+  attribute \MEM.PORTA.DATA_LSB\ of \gen_wr_a.gen_word_narrow.mem_reg_1\ : label is 4;
+  attribute \MEM.PORTA.DATA_MSB\ of \gen_wr_a.gen_word_narrow.mem_reg_1\ : label is 7;
+  attribute \MEM.PORTB.ADDRESS_BEGIN\ of \gen_wr_a.gen_word_narrow.mem_reg_1\ : label is 0;
+  attribute \MEM.PORTB.ADDRESS_END\ of \gen_wr_a.gen_word_narrow.mem_reg_1\ : label is 8191;
+  attribute \MEM.PORTB.DATA_BIT_LAYOUT\ of \gen_wr_a.gen_word_narrow.mem_reg_1\ : label is "p0_d4";
+  attribute \MEM.PORTB.DATA_LSB\ of \gen_wr_a.gen_word_narrow.mem_reg_1\ : label is 4;
+  attribute \MEM.PORTB.DATA_MSB\ of \gen_wr_a.gen_word_narrow.mem_reg_1\ : label is 7;
+  attribute METHODOLOGY_DRC_VIOS of \gen_wr_a.gen_word_narrow.mem_reg_1\ : label is "";
+  attribute RTL_RAM_BITS of \gen_wr_a.gen_word_narrow.mem_reg_1\ : label is 114688;
+  attribute RTL_RAM_NAME of \gen_wr_a.gen_word_narrow.mem_reg_1\ : label is "xpm_memory_base/gen_wr_a.gen_word_narrow.mem_reg";
+  attribute RTL_RAM_STYLE of \gen_wr_a.gen_word_narrow.mem_reg_1\ : label is "auto";
+  attribute RTL_RAM_TYPE of \gen_wr_a.gen_word_narrow.mem_reg_1\ : label is "RAM_SDP";
+  attribute ram_addr_begin of \gen_wr_a.gen_word_narrow.mem_reg_1\ : label is 0;
+  attribute ram_addr_end of \gen_wr_a.gen_word_narrow.mem_reg_1\ : label is 8191;
+  attribute ram_offset of \gen_wr_a.gen_word_narrow.mem_reg_1\ : label is 0;
+  attribute ram_slice_begin of \gen_wr_a.gen_word_narrow.mem_reg_1\ : label is 4;
+  attribute ram_slice_end of \gen_wr_a.gen_word_narrow.mem_reg_1\ : label is 7;
+  attribute \MEM.PORTA.ADDRESS_BEGIN\ of \gen_wr_a.gen_word_narrow.mem_reg_2\ : label is 0;
+  attribute \MEM.PORTA.ADDRESS_END\ of \gen_wr_a.gen_word_narrow.mem_reg_2\ : label is 8191;
+  attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of \gen_wr_a.gen_word_narrow.mem_reg_2\ : label is "p0_d1";
+  attribute \MEM.PORTA.DATA_LSB\ of \gen_wr_a.gen_word_narrow.mem_reg_2\ : label is 8;
+  attribute \MEM.PORTA.DATA_MSB\ of \gen_wr_a.gen_word_narrow.mem_reg_2\ : label is 8;
+  attribute \MEM.PORTB.ADDRESS_BEGIN\ of \gen_wr_a.gen_word_narrow.mem_reg_2\ : label is 0;
+  attribute \MEM.PORTB.ADDRESS_END\ of \gen_wr_a.gen_word_narrow.mem_reg_2\ : label is 8191;
+  attribute \MEM.PORTB.DATA_BIT_LAYOUT\ of \gen_wr_a.gen_word_narrow.mem_reg_2\ : label is "p0_d1";
+  attribute \MEM.PORTB.DATA_LSB\ of \gen_wr_a.gen_word_narrow.mem_reg_2\ : label is 8;
+  attribute \MEM.PORTB.DATA_MSB\ of \gen_wr_a.gen_word_narrow.mem_reg_2\ : label is 8;
+  attribute METHODOLOGY_DRC_VIOS of \gen_wr_a.gen_word_narrow.mem_reg_2\ : label is "";
+  attribute RTL_RAM_BITS of \gen_wr_a.gen_word_narrow.mem_reg_2\ : label is 114688;
+  attribute RTL_RAM_NAME of \gen_wr_a.gen_word_narrow.mem_reg_2\ : label is "xpm_memory_base/gen_wr_a.gen_word_narrow.mem_reg";
+  attribute RTL_RAM_STYLE of \gen_wr_a.gen_word_narrow.mem_reg_2\ : label is "auto";
+  attribute RTL_RAM_TYPE of \gen_wr_a.gen_word_narrow.mem_reg_2\ : label is "RAM_SDP";
+  attribute ram_addr_begin of \gen_wr_a.gen_word_narrow.mem_reg_2\ : label is 0;
+  attribute ram_addr_end of \gen_wr_a.gen_word_narrow.mem_reg_2\ : label is 8191;
+  attribute ram_offset of \gen_wr_a.gen_word_narrow.mem_reg_2\ : label is 0;
+  attribute ram_slice_begin of \gen_wr_a.gen_word_narrow.mem_reg_2\ : label is 8;
+  attribute ram_slice_end of \gen_wr_a.gen_word_narrow.mem_reg_2\ : label is 8;
 begin
   dbiterra <= \<const0>\;
   dbiterrb <= \<const0>\;
@@ -1515,13 +2020,444 @@ begin
   douta(2) <= \<const0>\;
   douta(1) <= \<const0>\;
   douta(0) <= \<const0>\;
+  doutb(13) <= \^doutb\(13);
+  doutb(12) <= \<const0>\;
+  doutb(11) <= \<const0>\;
+  doutb(10) <= \<const0>\;
+  doutb(9) <= \<const0>\;
+  doutb(8) <= \<const0>\;
+  doutb(7 downto 0) <= \^doutb\(7 downto 0);
   sbiterra <= \<const0>\;
   sbiterrb <= \<const0>\;
 GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-\gen_wr_a.gen_word_narrow.mem_reg\: unisim.vcomponents.RAMB18E1
+\gen_wr_a.gen_word_narrow.mem_reg_0\: unisim.vcomponents.RAMB36E1
+    generic map(
+      DOA_REG => 0,
+      DOB_REG => 1,
+      EN_ECC_READ => false,
+      EN_ECC_WRITE => false,
+      INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_01 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_02 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_03 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_04 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_05 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_06 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_07 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_08 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_09 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_0A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_0B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_0C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_0D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_0E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_0F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_01 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_02 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_03 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_04 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_05 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_06 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_07 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_08 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_09 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_0A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_0B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_0C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_0D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_0E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_0F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_10 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_11 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_12 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_13 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_14 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_15 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_16 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_17 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_18 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_19 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_1A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_1B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_1C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_1D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_1E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_1F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_20 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_21 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_22 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_23 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_24 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_25 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_26 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_27 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_28 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_29 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_2A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_2B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_2C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_2D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_2E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_2F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_30 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_31 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_32 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_33 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_34 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_35 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_36 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_37 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_38 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_39 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_3A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_3B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_3C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_3D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_3E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_3F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_40 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_41 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_42 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_43 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_44 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_45 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_46 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_47 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_48 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_49 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_4A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_4B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_4C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_4D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_4E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_4F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_50 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_51 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_52 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_53 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_54 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_55 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_56 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_57 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_58 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_59 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_5A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_5B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_5C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_5D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_5E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_5F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_60 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_61 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_62 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_63 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_64 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_65 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_66 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_67 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_68 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_69 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_6A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_6B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_6C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_6D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_6E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_6F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_70 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_71 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_72 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_73 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_74 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_75 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_76 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_77 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_78 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_79 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_7A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_7B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_7C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_7D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_7E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_7F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_A => X"000000000",
+      INIT_B => X"000000000",
+      RAM_EXTENSION_A => "NONE",
+      RAM_EXTENSION_B => "NONE",
+      RAM_MODE => "TDP",
+      RDADDR_COLLISION_HWCONFIG => "DELAYED_WRITE",
+      READ_WIDTH_A => 4,
+      READ_WIDTH_B => 4,
+      RSTREG_PRIORITY_A => "RSTREG",
+      RSTREG_PRIORITY_B => "RSTREG",
+      SIM_COLLISION_CHECK => "ALL",
+      SIM_DEVICE => "7SERIES",
+      SRVAL_A => X"000000000",
+      SRVAL_B => X"000000000",
+      WRITE_MODE_A => "READ_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
+      WRITE_WIDTH_A => 4,
+      WRITE_WIDTH_B => 4
+    )
+        port map (
+      ADDRARDADDR(15) => '1',
+      ADDRARDADDR(14 downto 2) => addra(12 downto 0),
+      ADDRARDADDR(1 downto 0) => B"00",
+      ADDRBWRADDR(15) => '1',
+      ADDRBWRADDR(14 downto 2) => addrb(12 downto 0),
+      ADDRBWRADDR(1 downto 0) => B"00",
+      CASCADEINA => '1',
+      CASCADEINB => '1',
+      CASCADEOUTA => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_CASCADEOUTA_UNCONNECTED\,
+      CASCADEOUTB => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_CASCADEOUTB_UNCONNECTED\,
+      CLKARDCLK => clka,
+      CLKBWRCLK => clka,
+      DBITERR => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_DBITERR_UNCONNECTED\,
+      DIADI(31 downto 4) => B"0000000000000000000000000000",
+      DIADI(3 downto 0) => dina(3 downto 0),
+      DIBDI(31 downto 0) => B"00000000000000000000000000001111",
+      DIPADIP(3 downto 0) => B"0000",
+      DIPBDIP(3 downto 0) => B"0000",
+      DOADO(31 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_DOADO_UNCONNECTED\(31 downto 0),
+      DOBDO(31 downto 4) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_DOBDO_UNCONNECTED\(31 downto 4),
+      DOBDO(3 downto 0) => \^doutb\(3 downto 0),
+      DOPADOP(3 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_DOPADOP_UNCONNECTED\(3 downto 0),
+      DOPBDOP(3 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_DOPBDOP_UNCONNECTED\(3 downto 0),
+      ECCPARITY(7 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_ECCPARITY_UNCONNECTED\(7 downto 0),
+      ENARDEN => wea(0),
+      ENBWREN => enb,
+      INJECTDBITERR => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_INJECTDBITERR_UNCONNECTED\,
+      INJECTSBITERR => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_INJECTSBITERR_UNCONNECTED\,
+      RDADDRECC(8 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_RDADDRECC_UNCONNECTED\(8 downto 0),
+      REGCEAREGCE => '0',
+      REGCEB => regceb,
+      RSTRAMARSTRAM => '0',
+      RSTRAMB => '0',
+      RSTREGARSTREG => '0',
+      RSTREGB => rstb,
+      SBITERR => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_SBITERR_UNCONNECTED\,
+      WEA(3) => wea(0),
+      WEA(2) => wea(0),
+      WEA(1) => wea(0),
+      WEA(0) => '1',
+      WEBWE(7 downto 0) => B"00000000"
+    );
+\gen_wr_a.gen_word_narrow.mem_reg_1\: unisim.vcomponents.RAMB36E1
+    generic map(
+      DOA_REG => 0,
+      DOB_REG => 1,
+      EN_ECC_READ => false,
+      EN_ECC_WRITE => false,
+      INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_01 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_02 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_03 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_04 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_05 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_06 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_07 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_08 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_09 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_0A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_0B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_0C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_0D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_0E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_0F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_01 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_02 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_03 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_04 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_05 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_06 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_07 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_08 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_09 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_0A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_0B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_0C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_0D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_0E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_0F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_10 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_11 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_12 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_13 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_14 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_15 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_16 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_17 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_18 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_19 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_1A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_1B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_1C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_1D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_1E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_1F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_20 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_21 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_22 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_23 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_24 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_25 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_26 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_27 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_28 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_29 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_2A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_2B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_2C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_2D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_2E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_2F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_30 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_31 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_32 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_33 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_34 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_35 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_36 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_37 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_38 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_39 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_3A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_3B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_3C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_3D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_3E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_3F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_40 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_41 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_42 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_43 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_44 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_45 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_46 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_47 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_48 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_49 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_4A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_4B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_4C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_4D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_4E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_4F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_50 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_51 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_52 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_53 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_54 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_55 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_56 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_57 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_58 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_59 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_5A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_5B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_5C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_5D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_5E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_5F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_60 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_61 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_62 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_63 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_64 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_65 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_66 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_67 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_68 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_69 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_6A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_6B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_6C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_6D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_6E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_6F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_70 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_71 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_72 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_73 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_74 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_75 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_76 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_77 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_78 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_79 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_7A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_7B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_7C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_7D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_7E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_7F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_A => X"000000000",
+      INIT_B => X"000000000",
+      RAM_EXTENSION_A => "NONE",
+      RAM_EXTENSION_B => "NONE",
+      RAM_MODE => "TDP",
+      RDADDR_COLLISION_HWCONFIG => "DELAYED_WRITE",
+      READ_WIDTH_A => 4,
+      READ_WIDTH_B => 4,
+      RSTREG_PRIORITY_A => "RSTREG",
+      RSTREG_PRIORITY_B => "RSTREG",
+      SIM_COLLISION_CHECK => "ALL",
+      SIM_DEVICE => "7SERIES",
+      SRVAL_A => X"000000000",
+      SRVAL_B => X"000000000",
+      WRITE_MODE_A => "READ_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
+      WRITE_WIDTH_A => 4,
+      WRITE_WIDTH_B => 4
+    )
+        port map (
+      ADDRARDADDR(15) => '1',
+      ADDRARDADDR(14 downto 2) => addra(12 downto 0),
+      ADDRARDADDR(1 downto 0) => B"00",
+      ADDRBWRADDR(15) => '1',
+      ADDRBWRADDR(14 downto 2) => addrb(12 downto 0),
+      ADDRBWRADDR(1 downto 0) => B"00",
+      CASCADEINA => '1',
+      CASCADEINB => '1',
+      CASCADEOUTA => \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_CASCADEOUTA_UNCONNECTED\,
+      CASCADEOUTB => \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_CASCADEOUTB_UNCONNECTED\,
+      CLKARDCLK => clka,
+      CLKBWRCLK => clka,
+      DBITERR => \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_DBITERR_UNCONNECTED\,
+      DIADI(31 downto 4) => B"0000000000000000000000000000",
+      DIADI(3 downto 0) => dina(7 downto 4),
+      DIBDI(31 downto 0) => B"00000000000000000000000000001111",
+      DIPADIP(3 downto 0) => B"0000",
+      DIPBDIP(3 downto 0) => B"0000",
+      DOADO(31 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_DOADO_UNCONNECTED\(31 downto 0),
+      DOBDO(31 downto 4) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_DOBDO_UNCONNECTED\(31 downto 4),
+      DOBDO(3 downto 0) => \^doutb\(7 downto 4),
+      DOPADOP(3 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_DOPADOP_UNCONNECTED\(3 downto 0),
+      DOPBDOP(3 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_DOPBDOP_UNCONNECTED\(3 downto 0),
+      ECCPARITY(7 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_ECCPARITY_UNCONNECTED\(7 downto 0),
+      ENARDEN => wea(0),
+      ENBWREN => enb,
+      INJECTDBITERR => \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_INJECTDBITERR_UNCONNECTED\,
+      INJECTSBITERR => \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_INJECTSBITERR_UNCONNECTED\,
+      RDADDRECC(8 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_RDADDRECC_UNCONNECTED\(8 downto 0),
+      REGCEAREGCE => '0',
+      REGCEB => regceb,
+      RSTRAMARSTRAM => '0',
+      RSTRAMB => '0',
+      RSTREGARSTREG => '0',
+      RSTREGB => rstb,
+      SBITERR => \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_SBITERR_UNCONNECTED\,
+      WEA(3) => wea(0),
+      WEA(2) => wea(0),
+      WEA(1) => wea(0),
+      WEA(0) => '1',
+      WEBWE(7 downto 0) => B"00000000"
+    );
+\gen_wr_a.gen_word_narrow.mem_reg_2\: unisim.vcomponents.RAMB18E1
     generic map(
       DOA_REG => 0,
       DOB_REG => 1,
@@ -1601,8 +2537,8 @@ GND: unisim.vcomponents.GND
       INIT_B => X"00000",
       RAM_MODE => "TDP",
       RDADDR_COLLISION_HWCONFIG => "DELAYED_WRITE",
-      READ_WIDTH_A => 18,
-      READ_WIDTH_B => 18,
+      READ_WIDTH_A => 2,
+      READ_WIDTH_B => 2,
       RSTREG_PRIORITY_A => "RSTREG",
       RSTREG_PRIORITY_B => "RSTREG",
       SIM_COLLISION_CHECK => "ALL",
@@ -1611,28 +2547,26 @@ GND: unisim.vcomponents.GND
       SRVAL_B => X"00000",
       WRITE_MODE_A => "READ_FIRST",
       WRITE_MODE_B => "WRITE_FIRST",
-      WRITE_WIDTH_A => 18,
-      WRITE_WIDTH_B => 18
+      WRITE_WIDTH_A => 2,
+      WRITE_WIDTH_B => 2
     )
         port map (
-      ADDRARDADDR(13 downto 11) => B"000",
-      ADDRARDADDR(10 downto 4) => addra(6 downto 0),
-      ADDRARDADDR(3 downto 0) => B"0000",
-      ADDRBWRADDR(13 downto 11) => B"000",
-      ADDRBWRADDR(10 downto 4) => addrb(6 downto 0),
-      ADDRBWRADDR(3 downto 0) => B"0000",
+      ADDRARDADDR(13 downto 1) => addra(12 downto 0),
+      ADDRARDADDR(0) => '0',
+      ADDRBWRADDR(13 downto 1) => addrb(12 downto 0),
+      ADDRBWRADDR(0) => '0',
       CLKARDCLK => clka,
       CLKBWRCLK => clka,
-      DIADI(15 downto 14) => B"00",
-      DIADI(13 downto 0) => dina(13 downto 0),
-      DIBDI(15 downto 0) => B"0011111111111111",
+      DIADI(15 downto 1) => B"000000000000000",
+      DIADI(0) => dina(13),
+      DIBDI(15 downto 0) => B"0000000000000001",
       DIPADIP(1 downto 0) => B"00",
       DIPBDIP(1 downto 0) => B"00",
-      DOADO(15 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_DOADO_UNCONNECTED\(15 downto 0),
-      DOBDO(15 downto 14) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_DOBDO_UNCONNECTED\(15 downto 14),
-      DOBDO(13 downto 0) => doutb(13 downto 0),
-      DOPADOP(1 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_DOPADOP_UNCONNECTED\(1 downto 0),
-      DOPBDOP(1 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_DOPBDOP_UNCONNECTED\(1 downto 0),
+      DOADO(15 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_2_DOADO_UNCONNECTED\(15 downto 0),
+      DOBDO(15 downto 1) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_2_DOBDO_UNCONNECTED\(15 downto 1),
+      DOBDO(0) => \^doutb\(13),
+      DOPADOP(1 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_2_DOPADOP_UNCONNECTED\(1 downto 0),
+      DOPBDOP(1 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_2_DOPBDOP_UNCONNECTED\(1 downto 0),
       ENARDEN => wea(0),
       ENBWREN => enb,
       REGCEAREGCE => '0',
@@ -1641,7 +2575,8 @@ GND: unisim.vcomponents.GND
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
       RSTREGB => rstb,
-      WEA(1 downto 0) => B"11",
+      WEA(1) => wea(0),
+      WEA(0) => '1',
       WEBWE(3 downto 0) => B"0000"
     );
 end STRUCTURE;
@@ -1659,7 +2594,7 @@ entity axis_data_fifo_0_xpm_fifo_base is
     full : out STD_LOGIC;
     full_n : out STD_LOGIC;
     prog_full : out STD_LOGIC;
-    wr_data_count : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    wr_data_count : out STD_LOGIC_VECTOR ( 13 downto 0 );
     overflow : out STD_LOGIC;
     wr_rst_busy : out STD_LOGIC;
     almost_full : out STD_LOGIC;
@@ -1669,7 +2604,7 @@ entity axis_data_fifo_0_xpm_fifo_base is
     dout : out STD_LOGIC_VECTOR ( 13 downto 0 );
     empty : out STD_LOGIC;
     prog_empty : out STD_LOGIC;
-    rd_data_count : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    rd_data_count : out STD_LOGIC_VECTOR ( 13 downto 0 );
     underflow : out STD_LOGIC;
     rd_rst_busy : out STD_LOGIC;
     almost_empty : out STD_LOGIC;
@@ -1722,13 +2657,13 @@ entity axis_data_fifo_0_xpm_fifo_base is
   attribute FIFO_MEM_TYPE : integer;
   attribute FIFO_MEM_TYPE of axis_data_fifo_0_xpm_fifo_base : entity is 0;
   attribute FIFO_READ_DEPTH : integer;
-  attribute FIFO_READ_DEPTH of axis_data_fifo_0_xpm_fifo_base : entity is 128;
+  attribute FIFO_READ_DEPTH of axis_data_fifo_0_xpm_fifo_base : entity is 8192;
   attribute FIFO_READ_LATENCY : integer;
   attribute FIFO_READ_LATENCY of axis_data_fifo_0_xpm_fifo_base : entity is 0;
   attribute FIFO_SIZE : integer;
-  attribute FIFO_SIZE of axis_data_fifo_0_xpm_fifo_base : entity is 1792;
+  attribute FIFO_SIZE of axis_data_fifo_0_xpm_fifo_base : entity is 114688;
   attribute FIFO_WRITE_DEPTH : integer;
-  attribute FIFO_WRITE_DEPTH of axis_data_fifo_0_xpm_fifo_base : entity is 128;
+  attribute FIFO_WRITE_DEPTH of axis_data_fifo_0_xpm_fifo_base : entity is 8192;
   attribute FULL_RESET_VALUE : integer;
   attribute FULL_RESET_VALUE of axis_data_fifo_0_xpm_fifo_base : entity is 1;
   attribute FULL_RST_VAL : string;
@@ -1738,13 +2673,13 @@ entity axis_data_fifo_0_xpm_fifo_base is
   attribute PE_THRESH_ADJ : integer;
   attribute PE_THRESH_ADJ of axis_data_fifo_0_xpm_fifo_base : entity is 3;
   attribute PE_THRESH_MAX : integer;
-  attribute PE_THRESH_MAX of axis_data_fifo_0_xpm_fifo_base : entity is 123;
+  attribute PE_THRESH_MAX of axis_data_fifo_0_xpm_fifo_base : entity is 8187;
   attribute PE_THRESH_MIN : integer;
   attribute PE_THRESH_MIN of axis_data_fifo_0_xpm_fifo_base : entity is 5;
   attribute PF_THRESH_ADJ : integer;
   attribute PF_THRESH_ADJ of axis_data_fifo_0_xpm_fifo_base : entity is 9;
   attribute PF_THRESH_MAX : integer;
-  attribute PF_THRESH_MAX of axis_data_fifo_0_xpm_fifo_base : entity is 123;
+  attribute PF_THRESH_MAX of axis_data_fifo_0_xpm_fifo_base : entity is 8187;
   attribute PF_THRESH_MIN : integer;
   attribute PF_THRESH_MIN of axis_data_fifo_0_xpm_fifo_base : entity is 5;
   attribute PROG_EMPTY_THRESH : integer;
@@ -1752,15 +2687,15 @@ entity axis_data_fifo_0_xpm_fifo_base is
   attribute PROG_FULL_THRESH : integer;
   attribute PROG_FULL_THRESH of axis_data_fifo_0_xpm_fifo_base : entity is 11;
   attribute RD_DATA_COUNT_WIDTH : integer;
-  attribute RD_DATA_COUNT_WIDTH of axis_data_fifo_0_xpm_fifo_base : entity is 8;
+  attribute RD_DATA_COUNT_WIDTH of axis_data_fifo_0_xpm_fifo_base : entity is 14;
   attribute RD_DC_WIDTH_EXT : integer;
-  attribute RD_DC_WIDTH_EXT of axis_data_fifo_0_xpm_fifo_base : entity is 8;
+  attribute RD_DC_WIDTH_EXT of axis_data_fifo_0_xpm_fifo_base : entity is 14;
   attribute RD_LATENCY : integer;
   attribute RD_LATENCY of axis_data_fifo_0_xpm_fifo_base : entity is 2;
   attribute RD_MODE : integer;
   attribute RD_MODE of axis_data_fifo_0_xpm_fifo_base : entity is 1;
   attribute RD_PNTR_WIDTH : integer;
-  attribute RD_PNTR_WIDTH of axis_data_fifo_0_xpm_fifo_base : entity is 7;
+  attribute RD_PNTR_WIDTH of axis_data_fifo_0_xpm_fifo_base : entity is 13;
   attribute READ_DATA_WIDTH : integer;
   attribute READ_DATA_WIDTH of axis_data_fifo_0_xpm_fifo_base : entity is 14;
   attribute READ_MODE : integer;
@@ -1784,13 +2719,13 @@ entity axis_data_fifo_0_xpm_fifo_base is
   attribute WRITE_DATA_WIDTH : integer;
   attribute WRITE_DATA_WIDTH of axis_data_fifo_0_xpm_fifo_base : entity is 14;
   attribute WR_DATA_COUNT_WIDTH : integer;
-  attribute WR_DATA_COUNT_WIDTH of axis_data_fifo_0_xpm_fifo_base : entity is 8;
+  attribute WR_DATA_COUNT_WIDTH of axis_data_fifo_0_xpm_fifo_base : entity is 14;
   attribute WR_DC_WIDTH_EXT : integer;
-  attribute WR_DC_WIDTH_EXT of axis_data_fifo_0_xpm_fifo_base : entity is 8;
+  attribute WR_DC_WIDTH_EXT of axis_data_fifo_0_xpm_fifo_base : entity is 14;
   attribute WR_DEPTH_LOG : integer;
-  attribute WR_DEPTH_LOG of axis_data_fifo_0_xpm_fifo_base : entity is 7;
+  attribute WR_DEPTH_LOG of axis_data_fifo_0_xpm_fifo_base : entity is 13;
   attribute WR_PNTR_WIDTH : integer;
-  attribute WR_PNTR_WIDTH of axis_data_fifo_0_xpm_fifo_base : entity is 7;
+  attribute WR_PNTR_WIDTH of axis_data_fifo_0_xpm_fifo_base : entity is 13;
   attribute WR_RD_RATIO : integer;
   attribute WR_RD_RATIO of axis_data_fifo_0_xpm_fifo_base : entity is 0;
   attribute WR_WIDTH_LOG : integer;
@@ -1812,9 +2747,10 @@ end axis_data_fifo_0_xpm_fifo_base;
 architecture STRUCTURE of axis_data_fifo_0_xpm_fifo_base is
   signal \<const0>\ : STD_LOGIC;
   signal clr_full : STD_LOGIC;
-  signal \count_value_i__0\ : STD_LOGIC_VECTOR ( 6 downto 0 );
+  signal \count_value_i__0\ : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal curr_fwft_state : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal data_valid_fwft1 : STD_LOGIC;
+  signal \^dout\ : STD_LOGIC_VECTOR ( 13 downto 0 );
   signal \gen_fwft.empty_fwft_i_reg_n_0\ : STD_LOGIC;
   signal \gen_fwft.gdvld_fwft.data_valid_fwft_i_1_n_0\ : STD_LOGIC;
   signal \gen_fwft.ram_regout_en\ : STD_LOGIC;
@@ -1824,35 +2760,46 @@ architecture STRUCTURE of axis_data_fifo_0_xpm_fifo_base is
   signal ram_empty_i : STD_LOGIC;
   signal ram_empty_i0 : STD_LOGIC;
   signal ram_wr_en_i : STD_LOGIC;
-  signal rd_pntr_ext : STD_LOGIC_VECTOR ( 6 downto 0 );
-  signal rdp_inst_n_10 : STD_LOGIC;
-  signal rdp_inst_n_8 : STD_LOGIC;
-  signal rdp_inst_n_9 : STD_LOGIC;
+  signal rd_pntr_ext : STD_LOGIC_VECTOR ( 12 downto 0 );
+  signal rdp_inst_n_14 : STD_LOGIC;
+  signal rdp_inst_n_15 : STD_LOGIC;
+  signal rdp_inst_n_16 : STD_LOGIC;
   signal rdpp1_inst_n_0 : STD_LOGIC;
   signal rdpp1_inst_n_1 : STD_LOGIC;
+  signal rdpp1_inst_n_10 : STD_LOGIC;
+  signal rdpp1_inst_n_11 : STD_LOGIC;
+  signal rdpp1_inst_n_12 : STD_LOGIC;
   signal rdpp1_inst_n_2 : STD_LOGIC;
   signal rdpp1_inst_n_3 : STD_LOGIC;
   signal rdpp1_inst_n_4 : STD_LOGIC;
   signal rdpp1_inst_n_5 : STD_LOGIC;
   signal rdpp1_inst_n_6 : STD_LOGIC;
+  signal rdpp1_inst_n_7 : STD_LOGIC;
+  signal rdpp1_inst_n_8 : STD_LOGIC;
+  signal rdpp1_inst_n_9 : STD_LOGIC;
   signal rst_d1 : STD_LOGIC;
-  signal wr_pntr_ext : STD_LOGIC_VECTOR ( 6 downto 0 );
+  signal rst_d1_inst_n_2 : STD_LOGIC;
+  signal rst_d1_inst_n_3 : STD_LOGIC;
+  signal wr_pntr_ext : STD_LOGIC_VECTOR ( 12 downto 0 );
+  signal wrp_inst_n_14 : STD_LOGIC;
+  signal wrpp1_inst_n_12 : STD_LOGIC;
   signal xpm_fifo_rst_inst_n_1 : STD_LOGIC;
   signal \NLW_gen_sdpram.xpm_memory_base_inst_dbiterra_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_gen_sdpram.xpm_memory_base_inst_dbiterrb_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_gen_sdpram.xpm_memory_base_inst_sbiterra_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_gen_sdpram.xpm_memory_base_inst_sbiterrb_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED\ : STD_LOGIC_VECTOR ( 13 downto 0 );
+  signal \NLW_gen_sdpram.xpm_memory_base_inst_doutb_UNCONNECTED\ : STD_LOGIC_VECTOR ( 12 downto 8 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1\ : label is "soft_lutpair0";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_fwft.curr_fwft_state_reg[0]\ : label is "invalid:00,stage1_valid:01,both_stages_valid:10,stage2_valid:11";
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_fwft.curr_fwft_state_reg[1]\ : label is "invalid:00,stage1_valid:01,both_stages_valid:10,stage2_valid:11";
   attribute ADDR_WIDTH_A : integer;
-  attribute ADDR_WIDTH_A of \gen_sdpram.xpm_memory_base_inst\ : label is 7;
+  attribute ADDR_WIDTH_A of \gen_sdpram.xpm_memory_base_inst\ : label is 13;
   attribute ADDR_WIDTH_B : integer;
-  attribute ADDR_WIDTH_B of \gen_sdpram.xpm_memory_base_inst\ : label is 7;
+  attribute ADDR_WIDTH_B of \gen_sdpram.xpm_memory_base_inst\ : label is 13;
   attribute AUTO_SLEEP_TIME : integer;
   attribute AUTO_SLEEP_TIME of \gen_sdpram.xpm_memory_base_inst\ : label is 0;
   attribute BYTE_WRITE_WIDTH_A : integer;
@@ -1879,11 +2826,11 @@ architecture STRUCTURE of axis_data_fifo_0_xpm_fifo_base is
   attribute \MEM.ADDRESS_SPACE_DATA_LSB\ : integer;
   attribute \MEM.ADDRESS_SPACE_DATA_LSB\ of \gen_sdpram.xpm_memory_base_inst\ : label is 0;
   attribute \MEM.ADDRESS_SPACE_DATA_MSB\ : integer;
-  attribute \MEM.ADDRESS_SPACE_DATA_MSB\ of \gen_sdpram.xpm_memory_base_inst\ : label is 13;
+  attribute \MEM.ADDRESS_SPACE_DATA_MSB\ of \gen_sdpram.xpm_memory_base_inst\ : label is 8;
   attribute \MEM.ADDRESS_SPACE_END\ : integer;
-  attribute \MEM.ADDRESS_SPACE_END\ of \gen_sdpram.xpm_memory_base_inst\ : label is 1023;
+  attribute \MEM.ADDRESS_SPACE_END\ of \gen_sdpram.xpm_memory_base_inst\ : label is 8191;
   attribute \MEM.CORE_MEMORY_WIDTH\ : integer;
-  attribute \MEM.CORE_MEMORY_WIDTH\ of \gen_sdpram.xpm_memory_base_inst\ : label is 14;
+  attribute \MEM.CORE_MEMORY_WIDTH\ of \gen_sdpram.xpm_memory_base_inst\ : label is 9;
   attribute MEMORY_INIT_FILE : string;
   attribute MEMORY_INIT_FILE of \gen_sdpram.xpm_memory_base_inst\ : label is "none";
   attribute MEMORY_INIT_PARAM : string;
@@ -1893,7 +2840,7 @@ architecture STRUCTURE of axis_data_fifo_0_xpm_fifo_base is
   attribute MEMORY_PRIMITIVE : integer;
   attribute MEMORY_PRIMITIVE of \gen_sdpram.xpm_memory_base_inst\ : label is 0;
   attribute MEMORY_SIZE : integer;
-  attribute MEMORY_SIZE of \gen_sdpram.xpm_memory_base_inst\ : label is 1792;
+  attribute MEMORY_SIZE of \gen_sdpram.xpm_memory_base_inst\ : label is 114688;
   attribute MEMORY_TYPE : integer;
   attribute MEMORY_TYPE of \gen_sdpram.xpm_memory_base_inst\ : label is 1;
   attribute MESSAGE_CONTROL : integer;
@@ -1907,7 +2854,7 @@ architecture STRUCTURE of axis_data_fifo_0_xpm_fifo_base is
   attribute P_ENABLE_BYTE_WRITE_B : integer;
   attribute P_ENABLE_BYTE_WRITE_B of \gen_sdpram.xpm_memory_base_inst\ : label is 0;
   attribute P_MAX_DEPTH_DATA : integer;
-  attribute P_MAX_DEPTH_DATA of \gen_sdpram.xpm_memory_base_inst\ : label is 128;
+  attribute P_MAX_DEPTH_DATA of \gen_sdpram.xpm_memory_base_inst\ : label is 8192;
   attribute P_MEMORY_OPT : string;
   attribute P_MEMORY_OPT of \gen_sdpram.xpm_memory_base_inst\ : label is "yes";
   attribute P_MEMORY_PRIMITIVE : string;
@@ -1963,13 +2910,13 @@ architecture STRUCTURE of axis_data_fifo_0_xpm_fifo_base is
   attribute P_WIDTH_ADDR_LSB_WRITE_COLL_B : integer;
   attribute P_WIDTH_ADDR_LSB_WRITE_COLL_B of \gen_sdpram.xpm_memory_base_inst\ : label is 1;
   attribute P_WIDTH_ADDR_READ_A : integer;
-  attribute P_WIDTH_ADDR_READ_A of \gen_sdpram.xpm_memory_base_inst\ : label is 7;
+  attribute P_WIDTH_ADDR_READ_A of \gen_sdpram.xpm_memory_base_inst\ : label is 13;
   attribute P_WIDTH_ADDR_READ_B : integer;
-  attribute P_WIDTH_ADDR_READ_B of \gen_sdpram.xpm_memory_base_inst\ : label is 7;
+  attribute P_WIDTH_ADDR_READ_B of \gen_sdpram.xpm_memory_base_inst\ : label is 13;
   attribute P_WIDTH_ADDR_WRITE_A : integer;
-  attribute P_WIDTH_ADDR_WRITE_A of \gen_sdpram.xpm_memory_base_inst\ : label is 7;
+  attribute P_WIDTH_ADDR_WRITE_A of \gen_sdpram.xpm_memory_base_inst\ : label is 13;
   attribute P_WIDTH_ADDR_WRITE_B : integer;
-  attribute P_WIDTH_ADDR_WRITE_B of \gen_sdpram.xpm_memory_base_inst\ : label is 7;
+  attribute P_WIDTH_ADDR_WRITE_B of \gen_sdpram.xpm_memory_base_inst\ : label is 13;
   attribute P_WIDTH_COL_WRITE_A : integer;
   attribute P_WIDTH_COL_WRITE_A of \gen_sdpram.xpm_memory_base_inst\ : label is 14;
   attribute P_WIDTH_COL_WRITE_B : integer;
@@ -2020,11 +2967,24 @@ begin
   almost_empty <= \<const0>\;
   almost_full <= \<const0>\;
   dbiterr <= \<const0>\;
+  dout(13) <= \^dout\(13);
+  dout(12) <= \<const0>\;
+  dout(11) <= \<const0>\;
+  dout(10) <= \<const0>\;
+  dout(9) <= \<const0>\;
+  dout(8) <= \<const0>\;
+  dout(7 downto 0) <= \^dout\(7 downto 0);
   empty <= \<const0>\;
   full <= \<const0>\;
   overflow <= \<const0>\;
   prog_empty <= \<const0>\;
   prog_full <= \<const0>\;
+  rd_data_count(13) <= \<const0>\;
+  rd_data_count(12) <= \<const0>\;
+  rd_data_count(11) <= \<const0>\;
+  rd_data_count(10) <= \<const0>\;
+  rd_data_count(9) <= \<const0>\;
+  rd_data_count(8) <= \<const0>\;
   rd_data_count(7) <= \<const0>\;
   rd_data_count(6) <= \<const0>\;
   rd_data_count(5) <= \<const0>\;
@@ -2037,6 +2997,12 @@ begin
   sbiterr <= \<const0>\;
   underflow <= \<const0>\;
   wr_ack <= \<const0>\;
+  wr_data_count(13) <= \<const0>\;
+  wr_data_count(12) <= \<const0>\;
+  wr_data_count(11) <= \<const0>\;
+  wr_data_count(10) <= \<const0>\;
+  wr_data_count(9) <= \<const0>\;
+  wr_data_count(8) <= \<const0>\;
   wr_data_count(7) <= \<const0>\;
   wr_data_count(6) <= \<const0>\;
   wr_data_count(5) <= \<const0>\;
@@ -2145,7 +3111,7 @@ GND: unisim.vcomponents.GND
         port map (
       C => wr_clk,
       CE => '1',
-      D => rdp_inst_n_8,
+      D => rdp_inst_n_14,
       Q => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_n_0\,
       S => xpm_fifo_rst_inst_n_1
     );
@@ -2156,7 +3122,7 @@ GND: unisim.vcomponents.GND
         port map (
       C => wr_clk,
       CE => '1',
-      D => rdp_inst_n_10,
+      D => rdp_inst_n_16,
       Q => full_n,
       R => xpm_fifo_rst_inst_n_1
     );
@@ -2173,18 +3139,22 @@ GND: unisim.vcomponents.GND
     );
 \gen_sdpram.xpm_memory_base_inst\: entity work.axis_data_fifo_0_xpm_memory_base
      port map (
-      addra(6 downto 0) => wr_pntr_ext(6 downto 0),
-      addrb(6 downto 0) => rd_pntr_ext(6 downto 0),
+      addra(12 downto 0) => wr_pntr_ext(12 downto 0),
+      addrb(12 downto 0) => rd_pntr_ext(12 downto 0),
       clka => wr_clk,
       clkb => '0',
       dbiterra => \NLW_gen_sdpram.xpm_memory_base_inst_dbiterra_UNCONNECTED\,
       dbiterrb => \NLW_gen_sdpram.xpm_memory_base_inst_dbiterrb_UNCONNECTED\,
-      dina(13 downto 0) => din(13 downto 0),
+      dina(13) => din(13),
+      dina(12 downto 8) => B"00000",
+      dina(7 downto 0) => din(7 downto 0),
       dinb(13 downto 0) => B"00000000000000",
       douta(13 downto 0) => \NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED\(13 downto 0),
-      doutb(13 downto 0) => dout(13 downto 0),
+      doutb(13) => \^dout\(13),
+      doutb(12 downto 8) => \NLW_gen_sdpram.xpm_memory_base_inst_doutb_UNCONNECTED\(12 downto 8),
+      doutb(7 downto 0) => \^dout\(7 downto 0),
       ena => '0',
-      enb => rdp_inst_n_9,
+      enb => rdp_inst_n_15,
       injectdbiterra => '0',
       injectdbiterrb => '0',
       injectsbiterra => '0',
@@ -2211,17 +3181,19 @@ GND: unisim.vcomponents.GND
     );
 rdp_inst: entity work.\axis_data_fifo_0_xpm_counter_updn__parameterized0\
      port map (
-      \FSM_sequential_gen_fwft.curr_fwft_state_reg[1]\ => rdp_inst_n_9,
-      Q(6 downto 0) => rd_pntr_ext(6 downto 0),
+      CO(0) => leaving_empty0,
+      \FSM_sequential_gen_fwft.curr_fwft_state_reg[1]\ => rdp_inst_n_15,
+      Q(12 downto 0) => rd_pntr_ext(12 downto 0),
+      S(0) => wrp_inst_n_14,
       clr_full => clr_full,
       \count_value_i_reg[0]_0\(1 downto 0) => curr_fwft_state(1 downto 0),
       \count_value_i_reg[0]_1\(0) => xpm_fifo_rst_inst_n_1,
-      \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg\ => rdp_inst_n_8,
-      \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0\ => rdp_inst_n_10,
-      \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1\(6 downto 0) => wr_pntr_ext(6 downto 0),
-      \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_2\ => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_n_0\,
-      \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg\(6 downto 0) => \count_value_i__0\(6 downto 0),
-      leaving_empty0 => leaving_empty0,
+      \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg\ => rdp_inst_n_14,
+      \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0\ => rdp_inst_n_16,
+      \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1\ => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_n_0\,
+      \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg\(0) => wrpp1_inst_n_12,
+      \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_5_0\(11 downto 0) => wr_pntr_ext(11 downto 0),
+      \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_7_0\(11 downto 0) => \count_value_i__0\(11 downto 0),
       ram_empty_i => ram_empty_i,
       ram_wr_en_i => ram_wr_en_i,
       rd_en => rd_en,
@@ -2229,16 +3201,23 @@ rdp_inst: entity work.\axis_data_fifo_0_xpm_counter_updn__parameterized0\
     );
 rdpp1_inst: entity work.\axis_data_fifo_0_xpm_counter_updn__parameterized1\
      port map (
-      E(0) => rdp_inst_n_9,
-      Q(6) => rdpp1_inst_n_0,
-      Q(5) => rdpp1_inst_n_1,
-      Q(4) => rdpp1_inst_n_2,
-      Q(3) => rdpp1_inst_n_3,
-      Q(2) => rdpp1_inst_n_4,
-      Q(1) => rdpp1_inst_n_5,
-      Q(0) => rdpp1_inst_n_6,
+      E(0) => rdp_inst_n_15,
+      Q(11) => rdpp1_inst_n_0,
+      Q(10) => rdpp1_inst_n_1,
+      Q(9) => rdpp1_inst_n_2,
+      Q(8) => rdpp1_inst_n_3,
+      Q(7) => rdpp1_inst_n_4,
+      Q(6) => rdpp1_inst_n_5,
+      Q(5) => rdpp1_inst_n_6,
+      Q(4) => rdpp1_inst_n_7,
+      Q(3) => rdpp1_inst_n_8,
+      Q(2) => rdpp1_inst_n_9,
+      Q(1) => rdpp1_inst_n_10,
+      Q(0) => rdpp1_inst_n_11,
+      S(0) => rdpp1_inst_n_12,
       \count_value_i_reg[0]_0\(0) => xpm_fifo_rst_inst_n_1,
-      \count_value_i_reg[1]_0\(1 downto 0) => curr_fwft_state(1 downto 0),
+      \count_value_i_reg[3]_0\(1 downto 0) => curr_fwft_state(1 downto 0),
+      \gen_pntr_flags_cc.ram_empty_i_reg_i_2\(0) => wr_pntr_ext(12),
       ram_empty_i => ram_empty_i,
       rd_en => rd_en,
       wr_clk => wr_clk
@@ -2246,47 +3225,59 @@ rdpp1_inst: entity work.\axis_data_fifo_0_xpm_counter_updn__parameterized1\
 rst_d1_inst: entity work.axis_data_fifo_0_xpm_fifo_reg_bit
      port map (
       Q(0) => xpm_fifo_rst_inst_n_1,
+      S(0) => rst_d1_inst_n_2,
       clr_full => clr_full,
+      \count_value_i_reg[3]\ => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_n_0\,
+      \count_value_i_reg[3]_0\(0) => wr_pntr_ext(0),
+      \count_value_i_reg[3]_1\(0) => \count_value_i__0\(0),
+      d_out_int_reg_0(0) => rst_d1_inst_n_3,
       rst => rst,
-      rst_d1 => rst_d1,
-      wr_clk => wr_clk
-    );
-wrp_inst: entity work.\axis_data_fifo_0_xpm_counter_updn__parameterized0_0\
-     port map (
-      E(0) => ram_wr_en_i,
-      Q(6 downto 0) => wr_pntr_ext(6 downto 0),
-      \count_value_i_reg[5]_0\ => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_n_0\,
-      \count_value_i_reg[6]_0\(0) => xpm_fifo_rst_inst_n_1,
-      \gen_pntr_flags_cc.ram_empty_i_reg\ => rdp_inst_n_9,
-      \gen_pntr_flags_cc.ram_empty_i_reg_0\(6) => rdpp1_inst_n_0,
-      \gen_pntr_flags_cc.ram_empty_i_reg_0\(5) => rdpp1_inst_n_1,
-      \gen_pntr_flags_cc.ram_empty_i_reg_0\(4) => rdpp1_inst_n_2,
-      \gen_pntr_flags_cc.ram_empty_i_reg_0\(3) => rdpp1_inst_n_3,
-      \gen_pntr_flags_cc.ram_empty_i_reg_0\(2) => rdpp1_inst_n_4,
-      \gen_pntr_flags_cc.ram_empty_i_reg_0\(1) => rdpp1_inst_n_5,
-      \gen_pntr_flags_cc.ram_empty_i_reg_0\(0) => rdpp1_inst_n_6,
-      leaving_empty0 => leaving_empty0,
-      ram_empty_i => ram_empty_i,
-      ram_empty_i0 => ram_empty_i0,
       rst_d1 => rst_d1,
       wr_clk => wr_clk,
       wr_en => wr_en
+    );
+wrp_inst: entity work.\axis_data_fifo_0_xpm_counter_updn__parameterized0_0\
+     port map (
+      CO(0) => leaving_empty0,
+      E(0) => ram_wr_en_i,
+      Q(12 downto 0) => wr_pntr_ext(12 downto 0),
+      S(0) => rst_d1_inst_n_2,
+      \count_value_i_reg[12]_0\(0) => wrp_inst_n_14,
+      \count_value_i_reg[12]_1\(0) => xpm_fifo_rst_inst_n_1,
+      \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_3\(0) => rd_pntr_ext(12),
+      \gen_pntr_flags_cc.ram_empty_i_reg\ => rdp_inst_n_15,
+      \gen_pntr_flags_cc.ram_empty_i_reg_0\(0) => rdpp1_inst_n_12,
+      \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(11) => rdpp1_inst_n_0,
+      \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(10) => rdpp1_inst_n_1,
+      \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(9) => rdpp1_inst_n_2,
+      \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(8) => rdpp1_inst_n_3,
+      \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(7) => rdpp1_inst_n_4,
+      \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(6) => rdpp1_inst_n_5,
+      \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(5) => rdpp1_inst_n_6,
+      \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(4) => rdpp1_inst_n_7,
+      \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(3) => rdpp1_inst_n_8,
+      \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(2) => rdpp1_inst_n_9,
+      \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(1) => rdpp1_inst_n_10,
+      \gen_pntr_flags_cc.ram_empty_i_reg_i_3_0\(0) => rdpp1_inst_n_11,
+      ram_empty_i => ram_empty_i,
+      ram_empty_i0 => ram_empty_i0,
+      wr_clk => wr_clk
     );
 wrpp1_inst: entity work.\axis_data_fifo_0_xpm_counter_updn__parameterized1_1\
      port map (
       E(0) => ram_wr_en_i,
-      Q(6 downto 0) => \count_value_i__0\(6 downto 0),
+      Q(11 downto 0) => \count_value_i__0\(11 downto 0),
       \count_value_i_reg[0]_0\(0) => xpm_fifo_rst_inst_n_1,
-      \count_value_i_reg[5]_0\ => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_n_0\,
-      rst_d1 => rst_d1,
-      wr_clk => wr_clk,
-      wr_en => wr_en
+      \count_value_i_reg[12]_0\(0) => wrpp1_inst_n_12,
+      \count_value_i_reg[3]_0\(0) => rst_d1_inst_n_3,
+      \gen_pntr_flags_cc.gen_full_rst_val.ram_full_n_reg_i_4\(0) => rd_pntr_ext(12),
+      wr_clk => wr_clk
     );
 xpm_fifo_rst_inst: entity work.axis_data_fifo_0_xpm_fifo_rst
      port map (
       E(0) => ram_wr_en_i,
       Q(0) => xpm_fifo_rst_inst_n_1,
-      \count_value_i_reg[6]\ => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_n_0\,
+      \count_value_i_reg[12]\ => \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_n_0\,
       rst => rst,
       rst_d1 => rst_d1,
       wr_clk => wr_clk,
@@ -2321,10 +3312,10 @@ entity axis_data_fifo_0_xpm_fifo_axis is
     m_axis_tdest : out STD_LOGIC_VECTOR ( 0 to 0 );
     m_axis_tuser : out STD_LOGIC_VECTOR ( 0 to 0 );
     prog_full_axis : out STD_LOGIC;
-    wr_data_count_axis : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    wr_data_count_axis : out STD_LOGIC_VECTOR ( 13 downto 0 );
     almost_full_axis : out STD_LOGIC;
     prog_empty_axis : out STD_LOGIC;
-    rd_data_count_axis : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    rd_data_count_axis : out STD_LOGIC_VECTOR ( 13 downto 0 );
     almost_empty_axis : out STD_LOGIC;
     injectsbiterr_axis : in STD_LOGIC;
     injectdbiterr_axis : in STD_LOGIC;
@@ -2356,11 +3347,11 @@ entity axis_data_fifo_0_xpm_fifo_axis is
   attribute EN_SIM_ASSERT_ERR : string;
   attribute EN_SIM_ASSERT_ERR of axis_data_fifo_0_xpm_fifo_axis : entity is "warning";
   attribute FIFO_DEPTH : integer;
-  attribute FIFO_DEPTH of axis_data_fifo_0_xpm_fifo_axis : entity is 128;
+  attribute FIFO_DEPTH of axis_data_fifo_0_xpm_fifo_axis : entity is 8192;
   attribute FIFO_MEMORY_TYPE : string;
   attribute FIFO_MEMORY_TYPE of axis_data_fifo_0_xpm_fifo_axis : entity is "auto";
   attribute LOG_DEPTH_AXIS : integer;
-  attribute LOG_DEPTH_AXIS of axis_data_fifo_0_xpm_fifo_axis : entity is 7;
+  attribute LOG_DEPTH_AXIS of axis_data_fifo_0_xpm_fifo_axis : entity is 13;
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of axis_data_fifo_0_xpm_fifo_axis : entity is "xpm_fifo_axis";
   attribute PACKET_FIFO : string;
@@ -2380,7 +3371,7 @@ entity axis_data_fifo_0_xpm_fifo_axis is
   attribute P_PKT_MODE : integer;
   attribute P_PKT_MODE of axis_data_fifo_0_xpm_fifo_axis : entity is 0;
   attribute RD_DATA_COUNT_WIDTH : integer;
-  attribute RD_DATA_COUNT_WIDTH of axis_data_fifo_0_xpm_fifo_axis : entity is 8;
+  attribute RD_DATA_COUNT_WIDTH of axis_data_fifo_0_xpm_fifo_axis : entity is 14;
   attribute RELATED_CLOCKS : integer;
   attribute RELATED_CLOCKS of axis_data_fifo_0_xpm_fifo_axis : entity is 0;
   attribute SIM_ASSERT_CHK : integer;
@@ -2412,7 +3403,7 @@ entity axis_data_fifo_0_xpm_fifo_axis is
   attribute USE_ADV_FEATURES_INT : integer;
   attribute USE_ADV_FEATURES_INT of axis_data_fifo_0_xpm_fifo_axis : entity is 825241648;
   attribute WR_DATA_COUNT_WIDTH : integer;
-  attribute WR_DATA_COUNT_WIDTH of axis_data_fifo_0_xpm_fifo_axis : entity is 8;
+  attribute WR_DATA_COUNT_WIDTH of axis_data_fifo_0_xpm_fifo_axis : entity is 14;
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of axis_data_fifo_0_xpm_fifo_axis : entity is "TRUE";
   attribute dont_touch : string;
@@ -2438,8 +3429,9 @@ architecture STRUCTURE of axis_data_fifo_0_xpm_fifo_axis is
   signal NLW_xpm_fifo_base_inst_underflow_UNCONNECTED : STD_LOGIC;
   signal NLW_xpm_fifo_base_inst_wr_ack_UNCONNECTED : STD_LOGIC;
   signal NLW_xpm_fifo_base_inst_wr_rst_busy_UNCONNECTED : STD_LOGIC;
-  signal NLW_xpm_fifo_base_inst_rd_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal NLW_xpm_fifo_base_inst_wr_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal NLW_xpm_fifo_base_inst_dout_UNCONNECTED : STD_LOGIC_VECTOR ( 12 downto 8 );
+  signal NLW_xpm_fifo_base_inst_rd_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 13 downto 0 );
+  signal NLW_xpm_fifo_base_inst_wr_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 13 downto 0 );
   attribute DEF_VAL : string;
   attribute DEF_VAL of \gaxis_rst_sync.xpm_cdc_sync_rst_inst\ : label is "1'b0";
   attribute DEST_SYNC_FF : integer;
@@ -2495,13 +3487,13 @@ architecture STRUCTURE of axis_data_fifo_0_xpm_fifo_axis is
   attribute FIFO_MEM_TYPE : integer;
   attribute FIFO_MEM_TYPE of xpm_fifo_base_inst : label is 0;
   attribute FIFO_READ_DEPTH : integer;
-  attribute FIFO_READ_DEPTH of xpm_fifo_base_inst : label is 128;
+  attribute FIFO_READ_DEPTH of xpm_fifo_base_inst : label is 8192;
   attribute FIFO_READ_LATENCY : integer;
   attribute FIFO_READ_LATENCY of xpm_fifo_base_inst : label is 0;
   attribute FIFO_SIZE : integer;
-  attribute FIFO_SIZE of xpm_fifo_base_inst : label is 1792;
+  attribute FIFO_SIZE of xpm_fifo_base_inst : label is 114688;
   attribute FIFO_WRITE_DEPTH : integer;
-  attribute FIFO_WRITE_DEPTH of xpm_fifo_base_inst : label is 128;
+  attribute FIFO_WRITE_DEPTH of xpm_fifo_base_inst : label is 8192;
   attribute FULL_RESET_VALUE : integer;
   attribute FULL_RESET_VALUE of xpm_fifo_base_inst : label is 1;
   attribute FULL_RST_VAL : string;
@@ -2511,26 +3503,26 @@ architecture STRUCTURE of axis_data_fifo_0_xpm_fifo_axis is
   attribute PE_THRESH_ADJ : integer;
   attribute PE_THRESH_ADJ of xpm_fifo_base_inst : label is 3;
   attribute PE_THRESH_MAX : integer;
-  attribute PE_THRESH_MAX of xpm_fifo_base_inst : label is 123;
+  attribute PE_THRESH_MAX of xpm_fifo_base_inst : label is 8187;
   attribute PE_THRESH_MIN : integer;
   attribute PE_THRESH_MIN of xpm_fifo_base_inst : label is 5;
   attribute PF_THRESH_ADJ : integer;
   attribute PF_THRESH_ADJ of xpm_fifo_base_inst : label is 9;
   attribute PF_THRESH_MAX : integer;
-  attribute PF_THRESH_MAX of xpm_fifo_base_inst : label is 123;
+  attribute PF_THRESH_MAX of xpm_fifo_base_inst : label is 8187;
   attribute PF_THRESH_MIN : integer;
   attribute PF_THRESH_MIN of xpm_fifo_base_inst : label is 5;
   attribute PROG_EMPTY_THRESH of xpm_fifo_base_inst : label is 5;
   attribute PROG_FULL_THRESH of xpm_fifo_base_inst : label is 11;
-  attribute RD_DATA_COUNT_WIDTH of xpm_fifo_base_inst : label is 8;
+  attribute RD_DATA_COUNT_WIDTH of xpm_fifo_base_inst : label is 14;
   attribute RD_DC_WIDTH_EXT : integer;
-  attribute RD_DC_WIDTH_EXT of xpm_fifo_base_inst : label is 8;
+  attribute RD_DC_WIDTH_EXT of xpm_fifo_base_inst : label is 14;
   attribute RD_LATENCY : integer;
   attribute RD_LATENCY of xpm_fifo_base_inst : label is 2;
   attribute RD_MODE : integer;
   attribute RD_MODE of xpm_fifo_base_inst : label is 1;
   attribute RD_PNTR_WIDTH : integer;
-  attribute RD_PNTR_WIDTH of xpm_fifo_base_inst : label is 7;
+  attribute RD_PNTR_WIDTH of xpm_fifo_base_inst : label is 13;
   attribute READ_DATA_WIDTH : integer;
   attribute READ_DATA_WIDTH of xpm_fifo_base_inst : label is 14;
   attribute READ_MODE : integer;
@@ -2549,13 +3541,13 @@ architecture STRUCTURE of axis_data_fifo_0_xpm_fifo_axis is
   attribute WIDTH_RATIO of xpm_fifo_base_inst : label is 1;
   attribute WRITE_DATA_WIDTH : integer;
   attribute WRITE_DATA_WIDTH of xpm_fifo_base_inst : label is 14;
-  attribute WR_DATA_COUNT_WIDTH of xpm_fifo_base_inst : label is 8;
+  attribute WR_DATA_COUNT_WIDTH of xpm_fifo_base_inst : label is 14;
   attribute WR_DC_WIDTH_EXT : integer;
-  attribute WR_DC_WIDTH_EXT of xpm_fifo_base_inst : label is 8;
+  attribute WR_DC_WIDTH_EXT of xpm_fifo_base_inst : label is 14;
   attribute WR_DEPTH_LOG : integer;
-  attribute WR_DEPTH_LOG of xpm_fifo_base_inst : label is 7;
+  attribute WR_DEPTH_LOG of xpm_fifo_base_inst : label is 13;
   attribute WR_PNTR_WIDTH : integer;
-  attribute WR_PNTR_WIDTH of xpm_fifo_base_inst : label is 7;
+  attribute WR_PNTR_WIDTH of xpm_fifo_base_inst : label is 13;
   attribute WR_RD_RATIO : integer;
   attribute WR_RD_RATIO of xpm_fifo_base_inst : label is 0;
   attribute WR_WIDTH_LOG : integer;
@@ -2573,9 +3565,20 @@ begin
   almost_empty_axis <= \<const0>\;
   almost_full_axis <= \<const0>\;
   dbiterr_axis <= \<const0>\;
+  m_axis_tdest(0) <= \<const0>\;
+  m_axis_tid(0) <= \<const0>\;
+  m_axis_tkeep(0) <= \<const0>\;
+  m_axis_tstrb(0) <= \<const0>\;
+  m_axis_tuser(0) <= \<const0>\;
   m_axis_tvalid <= \^m_axis_tvalid\;
   prog_empty_axis <= \<const0>\;
   prog_full_axis <= \<const0>\;
+  rd_data_count_axis(13) <= \<const0>\;
+  rd_data_count_axis(12) <= \<const0>\;
+  rd_data_count_axis(11) <= \<const0>\;
+  rd_data_count_axis(10) <= \<const0>\;
+  rd_data_count_axis(9) <= \<const0>\;
+  rd_data_count_axis(8) <= \<const0>\;
   rd_data_count_axis(7) <= \<const0>\;
   rd_data_count_axis(6) <= \<const0>\;
   rd_data_count_axis(5) <= \<const0>\;
@@ -2585,6 +3588,12 @@ begin
   rd_data_count_axis(1) <= \<const0>\;
   rd_data_count_axis(0) <= \<const0>\;
   sbiterr_axis <= \<const0>\;
+  wr_data_count_axis(13) <= \<const0>\;
+  wr_data_count_axis(12) <= \<const0>\;
+  wr_data_count_axis(11) <= \<const0>\;
+  wr_data_count_axis(10) <= \<const0>\;
+  wr_data_count_axis(9) <= \<const0>\;
+  wr_data_count_axis(8) <= \<const0>\;
   wr_data_count_axis(7) <= \<const0>\;
   wr_data_count_axis(6) <= \<const0>\;
   wr_data_count_axis(5) <= \<const0>\;
@@ -2618,18 +3627,10 @@ xpm_fifo_base_inst: entity work.axis_data_fifo_0_xpm_fifo_base
       data_valid => \^m_axis_tvalid\,
       dbiterr => NLW_xpm_fifo_base_inst_dbiterr_UNCONNECTED,
       din(13) => s_axis_tlast,
-      din(12) => s_axis_tuser(0),
-      din(11) => s_axis_tdest(0),
-      din(10) => s_axis_tid(0),
-      din(9) => s_axis_tkeep(0),
-      din(8) => s_axis_tstrb(0),
+      din(12 downto 8) => B"00000",
       din(7 downto 0) => s_axis_tdata(7 downto 0),
       dout(13) => m_axis_tlast,
-      dout(12) => m_axis_tuser(0),
-      dout(11) => m_axis_tdest(0),
-      dout(10) => m_axis_tid(0),
-      dout(9) => m_axis_tkeep(0),
-      dout(8) => m_axis_tstrb(0),
+      dout(12 downto 8) => NLW_xpm_fifo_base_inst_dout_UNCONNECTED(12 downto 8),
       dout(7 downto 0) => m_axis_tdata(7 downto 0),
       empty => NLW_xpm_fifo_base_inst_empty_UNCONNECTED,
       full => NLW_xpm_fifo_base_inst_full_UNCONNECTED,
@@ -2640,7 +3641,7 @@ xpm_fifo_base_inst: entity work.axis_data_fifo_0_xpm_fifo_base
       prog_empty => NLW_xpm_fifo_base_inst_prog_empty_UNCONNECTED,
       prog_full => NLW_xpm_fifo_base_inst_prog_full_UNCONNECTED,
       rd_clk => '0',
-      rd_data_count(7 downto 0) => NLW_xpm_fifo_base_inst_rd_data_count_UNCONNECTED(7 downto 0),
+      rd_data_count(13 downto 0) => NLW_xpm_fifo_base_inst_rd_data_count_UNCONNECTED(13 downto 0),
       rd_en => xpm_fifo_base_inst_i_1_n_0,
       rd_rst_busy => NLW_xpm_fifo_base_inst_rd_rst_busy_UNCONNECTED,
       rst => rst_axis,
@@ -2649,7 +3650,7 @@ xpm_fifo_base_inst: entity work.axis_data_fifo_0_xpm_fifo_base
       underflow => NLW_xpm_fifo_base_inst_underflow_UNCONNECTED,
       wr_ack => NLW_xpm_fifo_base_inst_wr_ack_UNCONNECTED,
       wr_clk => s_aclk,
-      wr_data_count(7 downto 0) => NLW_xpm_fifo_base_inst_wr_data_count_UNCONNECTED(7 downto 0),
+      wr_data_count(13 downto 0) => NLW_xpm_fifo_base_inst_wr_data_count_UNCONNECTED(13 downto 0),
       wr_en => s_axis_tvalid,
       wr_rst_busy => NLW_xpm_fifo_base_inst_wr_rst_busy_UNCONNECTED
     );
@@ -2720,7 +3721,7 @@ entity axis_data_fifo_0_axis_data_fifo_v2_0_17_top is
   attribute C_FAMILY : string;
   attribute C_FAMILY of axis_data_fifo_0_axis_data_fifo_v2_0_17_top : entity is "virtex7";
   attribute C_FIFO_DEPTH : integer;
-  attribute C_FIFO_DEPTH of axis_data_fifo_0_axis_data_fifo_v2_0_17_top : entity is 128;
+  attribute C_FIFO_DEPTH of axis_data_fifo_0_axis_data_fifo_v2_0_17_top : entity is 8192;
   attribute C_FIFO_MEMORY_TYPE : string;
   attribute C_FIFO_MEMORY_TYPE of axis_data_fifo_0_axis_data_fifo_v2_0_17_top : entity is "auto";
   attribute C_FIFO_MODE : integer;
@@ -2780,7 +3781,7 @@ entity axis_data_fifo_0_axis_data_fifo_v2_0_17_top is
   attribute LP_ECC_MODE : string;
   attribute LP_ECC_MODE of axis_data_fifo_0_axis_data_fifo_v2_0_17_top : entity is "no_ecc";
   attribute LP_FIFO_DEPTH : integer;
-  attribute LP_FIFO_DEPTH of axis_data_fifo_0_axis_data_fifo_v2_0_17_top : entity is 128;
+  attribute LP_FIFO_DEPTH of axis_data_fifo_0_axis_data_fifo_v2_0_17_top : entity is 8192;
   attribute LP_FIFO_MEMORY_TYPE : string;
   attribute LP_FIFO_MEMORY_TYPE of axis_data_fifo_0_axis_data_fifo_v2_0_17_top : entity is "auto";
   attribute LP_M_ACLKEN_CAN_TOGGLE : integer;
@@ -2792,7 +3793,7 @@ entity axis_data_fifo_0_axis_data_fifo_v2_0_17_top is
   attribute LP_PROG_FULL_THRESH : integer;
   attribute LP_PROG_FULL_THRESH of axis_data_fifo_0_axis_data_fifo_v2_0_17_top : entity is 11;
   attribute LP_RD_DATA_COUNT_WIDTH : integer;
-  attribute LP_RD_DATA_COUNT_WIDTH of axis_data_fifo_0_axis_data_fifo_v2_0_17_top : entity is 8;
+  attribute LP_RD_DATA_COUNT_WIDTH of axis_data_fifo_0_axis_data_fifo_v2_0_17_top : entity is 14;
   attribute LP_RELATED_CLOCKS : integer;
   attribute LP_RELATED_CLOCKS of axis_data_fifo_0_axis_data_fifo_v2_0_17_top : entity is 0;
   attribute LP_S_ACLKEN_CAN_TOGGLE : integer;
@@ -2808,7 +3809,7 @@ entity axis_data_fifo_0_axis_data_fifo_v2_0_17_top is
   attribute LP_USE_ADV_FEATURES : integer;
   attribute LP_USE_ADV_FEATURES of axis_data_fifo_0_axis_data_fifo_v2_0_17_top : entity is 825241648;
   attribute LP_WR_DATA_COUNT_WIDTH : integer;
-  attribute LP_WR_DATA_COUNT_WIDTH of axis_data_fifo_0_axis_data_fifo_v2_0_17_top : entity is 8;
+  attribute LP_WR_DATA_COUNT_WIDTH of axis_data_fifo_0_axis_data_fifo_v2_0_17_top : entity is 14;
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of axis_data_fifo_0_axis_data_fifo_v2_0_17_top : entity is "axis_data_fifo_v2_0_17_top";
 end axis_data_fifo_0_axis_data_fifo_v2_0_17_top;
@@ -2837,6 +3838,18 @@ architecture STRUCTURE of axis_data_fifo_0_axis_data_fifo_v2_0_17_top is
   signal \gen_fifo.xpm_fifo_axis_inst_n_35\ : STD_LOGIC;
   signal \gen_fifo.xpm_fifo_axis_inst_n_36\ : STD_LOGIC;
   signal \gen_fifo.xpm_fifo_axis_inst_n_37\ : STD_LOGIC;
+  signal \gen_fifo.xpm_fifo_axis_inst_n_38\ : STD_LOGIC;
+  signal \gen_fifo.xpm_fifo_axis_inst_n_39\ : STD_LOGIC;
+  signal \gen_fifo.xpm_fifo_axis_inst_n_40\ : STD_LOGIC;
+  signal \gen_fifo.xpm_fifo_axis_inst_n_41\ : STD_LOGIC;
+  signal \gen_fifo.xpm_fifo_axis_inst_n_42\ : STD_LOGIC;
+  signal \gen_fifo.xpm_fifo_axis_inst_n_43\ : STD_LOGIC;
+  signal \gen_fifo.xpm_fifo_axis_inst_n_44\ : STD_LOGIC;
+  signal \gen_fifo.xpm_fifo_axis_inst_n_45\ : STD_LOGIC;
+  signal \gen_fifo.xpm_fifo_axis_inst_n_46\ : STD_LOGIC;
+  signal \gen_fifo.xpm_fifo_axis_inst_n_47\ : STD_LOGIC;
+  signal \gen_fifo.xpm_fifo_axis_inst_n_48\ : STD_LOGIC;
+  signal \gen_fifo.xpm_fifo_axis_inst_n_49\ : STD_LOGIC;
   signal \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tdest_UNCONNECTED\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tid_UNCONNECTED\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tkeep_UNCONNECTED\ : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -2869,11 +3882,11 @@ architecture STRUCTURE of axis_data_fifo_0_axis_data_fifo_v2_0_17_top is
   attribute EN_SIM_ASSERT_ERR : string;
   attribute EN_SIM_ASSERT_ERR of \gen_fifo.xpm_fifo_axis_inst\ : label is "warning";
   attribute FIFO_DEPTH : integer;
-  attribute FIFO_DEPTH of \gen_fifo.xpm_fifo_axis_inst\ : label is 128;
+  attribute FIFO_DEPTH of \gen_fifo.xpm_fifo_axis_inst\ : label is 8192;
   attribute FIFO_MEMORY_TYPE : integer;
   attribute FIFO_MEMORY_TYPE of \gen_fifo.xpm_fifo_axis_inst\ : label is 0;
   attribute LOG_DEPTH_AXIS : integer;
-  attribute LOG_DEPTH_AXIS of \gen_fifo.xpm_fifo_axis_inst\ : label is 7;
+  attribute LOG_DEPTH_AXIS of \gen_fifo.xpm_fifo_axis_inst\ : label is 13;
   attribute PACKET_FIFO : string;
   attribute PACKET_FIFO of \gen_fifo.xpm_fifo_axis_inst\ : label is "false";
   attribute PKT_SIZE_LT8 : string;
@@ -2891,7 +3904,7 @@ architecture STRUCTURE of axis_data_fifo_0_axis_data_fifo_v2_0_17_top is
   attribute P_PKT_MODE : integer;
   attribute P_PKT_MODE of \gen_fifo.xpm_fifo_axis_inst\ : label is 0;
   attribute RD_DATA_COUNT_WIDTH : integer;
-  attribute RD_DATA_COUNT_WIDTH of \gen_fifo.xpm_fifo_axis_inst\ : label is 8;
+  attribute RD_DATA_COUNT_WIDTH of \gen_fifo.xpm_fifo_axis_inst\ : label is 14;
   attribute RELATED_CLOCKS : integer;
   attribute RELATED_CLOCKS of \gen_fifo.xpm_fifo_axis_inst\ : label is 0;
   attribute SIM_ASSERT_CHK : integer;
@@ -2923,7 +3936,7 @@ architecture STRUCTURE of axis_data_fifo_0_axis_data_fifo_v2_0_17_top is
   attribute USE_ADV_FEATURES_INT : integer;
   attribute USE_ADV_FEATURES_INT of \gen_fifo.xpm_fifo_axis_inst\ : label is 825241648;
   attribute WR_DATA_COUNT_WIDTH : integer;
-  attribute WR_DATA_COUNT_WIDTH of \gen_fifo.xpm_fifo_axis_inst\ : label is 8;
+  attribute WR_DATA_COUNT_WIDTH of \gen_fifo.xpm_fifo_axis_inst\ : label is 14;
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of \gen_fifo.xpm_fifo_axis_inst\ : label is "TRUE";
 begin
@@ -3008,9 +4021,9 @@ GND: unisim.vcomponents.GND
     );
 \gen_fifo.xpm_fifo_axis_inst\: entity work.axis_data_fifo_0_xpm_fifo_axis
      port map (
-      almost_empty_axis => \gen_fifo.xpm_fifo_axis_inst_n_35\,
-      almost_full_axis => \gen_fifo.xpm_fifo_axis_inst_n_25\,
-      dbiterr_axis => \gen_fifo.xpm_fifo_axis_inst_n_37\,
+      almost_empty_axis => \gen_fifo.xpm_fifo_axis_inst_n_47\,
+      almost_full_axis => \gen_fifo.xpm_fifo_axis_inst_n_31\,
+      dbiterr_axis => \gen_fifo.xpm_fifo_axis_inst_n_49\,
       injectdbiterr_axis => '0',
       injectsbiterr_axis => '0',
       m_aclk => s_axis_aclk,
@@ -3023,16 +4036,22 @@ GND: unisim.vcomponents.GND
       m_axis_tstrb(0) => \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tstrb_UNCONNECTED\(0),
       m_axis_tuser(0) => \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tuser_UNCONNECTED\(0),
       m_axis_tvalid => m_axis_tvalid,
-      prog_empty_axis => \gen_fifo.xpm_fifo_axis_inst_n_26\,
+      prog_empty_axis => \gen_fifo.xpm_fifo_axis_inst_n_32\,
       prog_full_axis => \gen_fifo.xpm_fifo_axis_inst_n_16\,
-      rd_data_count_axis(7) => \gen_fifo.xpm_fifo_axis_inst_n_27\,
-      rd_data_count_axis(6) => \gen_fifo.xpm_fifo_axis_inst_n_28\,
-      rd_data_count_axis(5) => \gen_fifo.xpm_fifo_axis_inst_n_29\,
-      rd_data_count_axis(4) => \gen_fifo.xpm_fifo_axis_inst_n_30\,
-      rd_data_count_axis(3) => \gen_fifo.xpm_fifo_axis_inst_n_31\,
-      rd_data_count_axis(2) => \gen_fifo.xpm_fifo_axis_inst_n_32\,
-      rd_data_count_axis(1) => \gen_fifo.xpm_fifo_axis_inst_n_33\,
-      rd_data_count_axis(0) => \gen_fifo.xpm_fifo_axis_inst_n_34\,
+      rd_data_count_axis(13) => \gen_fifo.xpm_fifo_axis_inst_n_33\,
+      rd_data_count_axis(12) => \gen_fifo.xpm_fifo_axis_inst_n_34\,
+      rd_data_count_axis(11) => \gen_fifo.xpm_fifo_axis_inst_n_35\,
+      rd_data_count_axis(10) => \gen_fifo.xpm_fifo_axis_inst_n_36\,
+      rd_data_count_axis(9) => \gen_fifo.xpm_fifo_axis_inst_n_37\,
+      rd_data_count_axis(8) => \gen_fifo.xpm_fifo_axis_inst_n_38\,
+      rd_data_count_axis(7) => \gen_fifo.xpm_fifo_axis_inst_n_39\,
+      rd_data_count_axis(6) => \gen_fifo.xpm_fifo_axis_inst_n_40\,
+      rd_data_count_axis(5) => \gen_fifo.xpm_fifo_axis_inst_n_41\,
+      rd_data_count_axis(4) => \gen_fifo.xpm_fifo_axis_inst_n_42\,
+      rd_data_count_axis(3) => \gen_fifo.xpm_fifo_axis_inst_n_43\,
+      rd_data_count_axis(2) => \gen_fifo.xpm_fifo_axis_inst_n_44\,
+      rd_data_count_axis(1) => \gen_fifo.xpm_fifo_axis_inst_n_45\,
+      rd_data_count_axis(0) => \gen_fifo.xpm_fifo_axis_inst_n_46\,
       s_aclk => s_axis_aclk,
       s_aresetn => s_axis_aresetn,
       s_axis_tdata(7 downto 0) => s_axis_tdata(7 downto 0),
@@ -3044,15 +4063,21 @@ GND: unisim.vcomponents.GND
       s_axis_tstrb(0) => '0',
       s_axis_tuser(0) => '0',
       s_axis_tvalid => s_axis_tvalid,
-      sbiterr_axis => \gen_fifo.xpm_fifo_axis_inst_n_36\,
-      wr_data_count_axis(7) => \gen_fifo.xpm_fifo_axis_inst_n_17\,
-      wr_data_count_axis(6) => \gen_fifo.xpm_fifo_axis_inst_n_18\,
-      wr_data_count_axis(5) => \gen_fifo.xpm_fifo_axis_inst_n_19\,
-      wr_data_count_axis(4) => \gen_fifo.xpm_fifo_axis_inst_n_20\,
-      wr_data_count_axis(3) => \gen_fifo.xpm_fifo_axis_inst_n_21\,
-      wr_data_count_axis(2) => \gen_fifo.xpm_fifo_axis_inst_n_22\,
-      wr_data_count_axis(1) => \gen_fifo.xpm_fifo_axis_inst_n_23\,
-      wr_data_count_axis(0) => \gen_fifo.xpm_fifo_axis_inst_n_24\
+      sbiterr_axis => \gen_fifo.xpm_fifo_axis_inst_n_48\,
+      wr_data_count_axis(13) => \gen_fifo.xpm_fifo_axis_inst_n_17\,
+      wr_data_count_axis(12) => \gen_fifo.xpm_fifo_axis_inst_n_18\,
+      wr_data_count_axis(11) => \gen_fifo.xpm_fifo_axis_inst_n_19\,
+      wr_data_count_axis(10) => \gen_fifo.xpm_fifo_axis_inst_n_20\,
+      wr_data_count_axis(9) => \gen_fifo.xpm_fifo_axis_inst_n_21\,
+      wr_data_count_axis(8) => \gen_fifo.xpm_fifo_axis_inst_n_22\,
+      wr_data_count_axis(7) => \gen_fifo.xpm_fifo_axis_inst_n_23\,
+      wr_data_count_axis(6) => \gen_fifo.xpm_fifo_axis_inst_n_24\,
+      wr_data_count_axis(5) => \gen_fifo.xpm_fifo_axis_inst_n_25\,
+      wr_data_count_axis(4) => \gen_fifo.xpm_fifo_axis_inst_n_26\,
+      wr_data_count_axis(3) => \gen_fifo.xpm_fifo_axis_inst_n_27\,
+      wr_data_count_axis(2) => \gen_fifo.xpm_fifo_axis_inst_n_28\,
+      wr_data_count_axis(1) => \gen_fifo.xpm_fifo_axis_inst_n_29\,
+      wr_data_count_axis(0) => \gen_fifo.xpm_fifo_axis_inst_n_30\
     );
 end STRUCTURE;
 library IEEE;
@@ -3113,7 +4138,7 @@ architecture STRUCTURE of axis_data_fifo_0 is
   attribute C_FAMILY : string;
   attribute C_FAMILY of inst : label is "virtex7";
   attribute C_FIFO_DEPTH : integer;
-  attribute C_FIFO_DEPTH of inst : label is 128;
+  attribute C_FIFO_DEPTH of inst : label is 8192;
   attribute C_FIFO_MEMORY_TYPE : string;
   attribute C_FIFO_MEMORY_TYPE of inst : label is "auto";
   attribute C_FIFO_MODE : integer;
@@ -3173,7 +4198,7 @@ architecture STRUCTURE of axis_data_fifo_0 is
   attribute LP_ECC_MODE : string;
   attribute LP_ECC_MODE of inst : label is "no_ecc";
   attribute LP_FIFO_DEPTH : integer;
-  attribute LP_FIFO_DEPTH of inst : label is 128;
+  attribute LP_FIFO_DEPTH of inst : label is 8192;
   attribute LP_FIFO_MEMORY_TYPE : string;
   attribute LP_FIFO_MEMORY_TYPE of inst : label is "auto";
   attribute LP_M_ACLKEN_CAN_TOGGLE : integer;
@@ -3185,7 +4210,7 @@ architecture STRUCTURE of axis_data_fifo_0 is
   attribute LP_PROG_FULL_THRESH : integer;
   attribute LP_PROG_FULL_THRESH of inst : label is 11;
   attribute LP_RD_DATA_COUNT_WIDTH : integer;
-  attribute LP_RD_DATA_COUNT_WIDTH of inst : label is 8;
+  attribute LP_RD_DATA_COUNT_WIDTH of inst : label is 14;
   attribute LP_RELATED_CLOCKS : integer;
   attribute LP_RELATED_CLOCKS of inst : label is 0;
   attribute LP_S_ACLKEN_CAN_TOGGLE : integer;
@@ -3201,7 +4226,7 @@ architecture STRUCTURE of axis_data_fifo_0 is
   attribute LP_USE_ADV_FEATURES : integer;
   attribute LP_USE_ADV_FEATURES of inst : label is 825241648;
   attribute LP_WR_DATA_COUNT_WIDTH : integer;
-  attribute LP_WR_DATA_COUNT_WIDTH of inst : label is 8;
+  attribute LP_WR_DATA_COUNT_WIDTH of inst : label is 14;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of m_axis_tlast : signal is "xilinx.com:interface:axis:1.0 M_AXIS TLAST";
   attribute X_INTERFACE_INFO of m_axis_tready : signal is "xilinx.com:interface:axis:1.0 M_AXIS TREADY";

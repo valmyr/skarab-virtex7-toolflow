@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Sat Jul 25 19:48:57 2026
+| Date         : Thu Jul 30 12:23:58 2026
 | Host         : valmyrsilva07-B760M-AORUS-ELITE running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_utilization -file axis_data_fifo_0_utilization_synth.rpt -pb axis_data_fifo_0_utilization_synth.pb
 | Design       : axis_data_fifo_0
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |   47 |     0 |          0 |    303600 |  0.02 |
-|   LUT as Logic          |   47 |     0 |          0 |    303600 |  0.02 |
+| Slice LUTs*             |   32 |     0 |          0 |    303600 |  0.01 |
+|   LUT as Logic          |   32 |     0 |          0 |    303600 |  0.01 |
 |   LUT as Memory         |    0 |     0 |          0 |    130800 |  0.00 |
-| Slice Registers         |   45 |     0 |          0 |    607200 | <0.01 |
-|   Register as Flip Flop |   45 |     0 |          0 |    607200 | <0.01 |
+| Slice Registers         |   69 |     0 |          0 |    607200 |  0.01 |
+|   Register as Flip Flop |   69 |     0 |          0 |    607200 |  0.01 |
 |   Register as Latch     |    0 |     0 |          0 |    607200 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |    151800 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |     75900 |  0.00 |
@@ -62,7 +62,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 8     |          Yes |         Set |            - |
-| 37    |          Yes |       Reset |            - |
+| 61    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -72,8 +72,9 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-------------------+------+-------+------------+-----------+-------+
 |     Site Type     | Used | Fixed | Prohibited | Available | Util% |
 +-------------------+------+-------+------------+-----------+-------+
-| Block RAM Tile    |  0.5 |     0 |          0 |      1030 |  0.05 |
-|   RAMB36/FIFO*    |    0 |     0 |          0 |      1030 |  0.00 |
+| Block RAM Tile    |  2.5 |     0 |          0 |      1030 |  0.24 |
+|   RAMB36/FIFO*    |    2 |     0 |          0 |      1030 |  0.19 |
+|     RAMB36E1 only |    2 |       |            |           |       |
 |   RAMB18          |    1 |     0 |          0 |      2060 |  0.05 |
 |     RAMB18E1 only |    1 |       |            |           |       |
 +-------------------+------+-------+------------+-----------+-------+
@@ -157,15 +158,17 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   37 |        Flop & Latch |
-| LUT6     |   16 |                 LUT |
-| LUT4     |   15 |                 LUT |
-| LUT5     |   11 |                 LUT |
+| FDRE     |   61 |        Flop & Latch |
+| CARRY4   |   22 |          CarryLogic |
+| LUT6     |   14 |                 LUT |
 | FDSE     |    8 |        Flop & Latch |
-| LUT3     |    6 |                 LUT |
-| LUT2     |    4 |                 LUT |
-| LUT1     |    3 |                 LUT |
+| LUT4     |    6 |                 LUT |
+| LUT5     |    5 |                 LUT |
+| LUT2     |    5 |                 LUT |
+| RAMB36E1 |    2 |        Block Memory |
+| LUT3     |    2 |                 LUT |
 | RAMB18E1 |    1 |        Block Memory |
+| LUT1     |    1 |                 LUT |
 +----------+------+---------------------+
 
 

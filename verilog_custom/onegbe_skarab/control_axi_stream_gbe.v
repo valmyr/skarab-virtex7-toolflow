@@ -45,7 +45,8 @@ module control_axi_stream_gbe(
     input  wire [7:0] debug_addr_data_gbe,
     input  wire [7:0] debug_addr_data_fifo,
     output reg [7:0]  debug_rx_data_mem_gbe,
-    output reg [7:0]  debug_rx_data_mem_fifo
+    output reg [7:0]  debug_rx_data_mem_fifo,
+    input  wire       debug_read_gbe_or_fifo
 
 );
 
@@ -59,23 +60,19 @@ reg [2:0]next_state_tx;
 reg [2:0]next_state_rx;
 reg [2:0]current_state_tx;
 reg [2:0]current_state_rx;
-reg [7:0]counter;
 reg [10:0] addr_data_local;
 reg [10:0] addr_data_local_next;
 wire [10:0] addr_data_local_mux;
 reg [7:0] mem[256-1:0];
 reg [7:0] mem_tmp[256-1:0];
 
-reg   tx_eof_ff;
-reg  [7:0] rx_data_ff3 ,rx_data_ff2, rx_data_ff0, rx_data_ff1;
+reg  [7:0] rx_data_ff0, rx_data_ff1;
 wire start_frame_reception;
 wire start_frame_transmission;
 
 reg sync_reg_start_frame_reception;
 reg sync_reg_start_frame_transmission;
-reg  [10:0] addr_data_write;
 wire [10:0] addr_data_write_mux,addr_data_local_mux_r;
-reg  [10:0] addr_data_write_next;
 reg reg_sync_rx_valid;
 
 reg [7:0]debug_local_data;
@@ -91,7 +88,6 @@ always@(posedge clk, negedge a_sync_nrst)begin
     if(!a_sync_nrst)begin
         //addr_data_local <=8'h00;
         reg_sync_rx_valid    <= 0; 
-        addr_data_write <=0;
         sync_reg_start_frame_reception<=0;
         sync_reg_start_frame_transmission <=0;
         tx_data <= 8'hca;
@@ -118,15 +114,21 @@ always@(posedge clk, negedge a_sync_nrst)begin
         //Lógica de leitura no buffer
 
         if(ena_dec && current_state_tx == TX_DATA )begin
-            tx_data <= mem_tmp[addr_data_local];
+            tx_data <= debug_read_gbe_or_fifo ? mem[addr_data_local] : mem_tmp[addr_data_local];
             addr_data_local <= addr_data_local_next;
         end else begin
-            tx_data <= addr_data_local < tx_pkt_len ? mem_tmp[addr_data_local]: 0;
+
+
+            if(addr_data_local < tx_pkt_len)begin
+                tx_data <= debug_read_gbe_or_fifo ? mem[addr_data_local] : mem_tmp[addr_data_local];
+            end else begin
+                tx_data <= 0;
+            end
             addr_data_local <= addr_data_local < tx_pkt_len ? addr_data_local_next:0;
+
         end
 
         reg_sync_rx_valid    <= rx_valid;
-        addr_data_write      <= addr_data_write_next;
 
         sync_reg_start_frame_reception   <= start_frame_reception   ;
         sync_reg_start_frame_transmission<=  start_frame_transmission;
@@ -159,7 +161,6 @@ reg [7:0] addr_data_t;
             sync_data_valid_tx <= (!ena_dec && sync_data_valid_tx0);
             tx_ena_out  <= tx_ena_out_w ;
             sync_dec <=!tx_ena_out && tx_ena_out_w;
-            debug_local_data <= mem[counter];
         end
     end
 
@@ -177,7 +178,7 @@ reg [7:0] addr_data_t;
             end
             RX_DATA:begin
                 next_state_counter_tx = counter_tx +1;
-                case(counter_tx < tx_pkt_len )
+                case(counter_tx < tx_pkt_len-1 )
                     1'b1:next_state_rx = RX_DATA;
                     1'b0:next_state_rx = IDLE;
                     default:next_state_rx = IDLE;
@@ -194,7 +195,7 @@ reg [7:0] addr_data_t;
     always@(*)begin
         case(current_state_tx)
             IDLE:begin
-                case(start_frame_transmission)//Atualização do estado de transmissão com base na recepção
+                case(sync_reg_start_frame_transmission)//Atualização do estado de transmissão com base na recepção
                     1'b1:next_state_tx = TX_DATA;
                     1'b0:next_state_tx = IDLE;
                     default:next_state_tx = IDLE;
@@ -217,7 +218,7 @@ reg [7:0] addr_data_t;
                             
                         end
                     end
-                    1'b0:begin next_state_tx = start_frame_transmission ?  TX_DATA : IDLE; 
+                    1'b0:begin next_state_tx = sync_reg_start_frame_transmission ?  TX_DATA : IDLE; 
                         addr_data_local_next = 0;
                         tx_ena_out_w = 0;
                     end
@@ -299,24 +300,24 @@ localparam M_SEND = 2'b01;
 
 (* keep = "true" *)reg [1:0] m_axis_state;
 reg [1:0] m_axis_next_state;
-wire handshake_sm_axis;
+reg handshake_sm_axis;
 reg [9:0]m_addr_data;
 reg [9:0]m_addr_data_next;
 
 
-assign handshake_sm_axis = m_axis_tvalid && m_axis_tready;
 
 always@(posedge clk, negedge a_sync_nrst)begin
     if(!a_sync_nrst)begin
         m_axis_state <= M_IDLE;
         m_addr_data <= 0;
         m_axis_tdata <=0;
+        handshake_sm_axis <=0;
     end else begin
-        if(handshake_sm_axis)begin
-            m_axis_state <= m_axis_next_state;
+        handshake_sm_axis <= m_axis_tvalid && m_axis_tready;    
+        m_axis_state <= m_axis_next_state;
+        if(m_axis_state == M_SEND)
+            //Não existe a necessidade de dependência do handshake no endereço.
             m_addr_data  <= m_addr_data_next;
-
-        end
         //Dado real
         m_axis_tdata <= mem[m_addr_data];
 
@@ -326,14 +327,14 @@ end
 always@(*) begin
     case(m_axis_state)
         M_IDLE:begin
-            m_axis_tvalid = sync_reg_start_frame_transmission;//RemovaTemporário
+            m_axis_tvalid = addr_data_local == tx_pkt_len;//RemovaTemporário
             //m_axis_tvalid = 1;//RemovaTemporário
             m_axis_next_state = (handshake_sm_axis) ? M_SEND : M_IDLE;
             m_axis_tlast = 1'b0;
             m_addr_data_next = 0;
         end
         M_SEND:begin
-            if(m_addr_data == tx_pkt_len)begin
+            if(m_addr_data == tx_pkt_len-1)begin
                 m_addr_data_next = 0;
                 m_axis_next_state = M_IDLE;
                 m_axis_tvalid = 1'b0;
@@ -344,6 +345,7 @@ always@(*) begin
                 m_axis_tvalid = 1'b1;
                 m_axis_tlast = m_addr_data == tx_pkt_len-1;
             end else begin
+
                 m_addr_data_next = m_addr_data;
                 m_axis_next_state = M_SEND;
                 m_axis_tvalid = 1'b1;
@@ -379,28 +381,30 @@ localparam S_REC = 1'b0;
 
 reg  s_axis_state;
 reg  s_axis_next_state;
-wire handshake_ms_axis;
+reg handshake_ms_axis;
 reg [9:0]s_addr_data;
 reg [9:0]s_addr_data_next;
 reg [9:0]s_addr_data_delay;
 
 
 
-assign  handshake_ms_axis = s_axis_tvalid && s_axis_tready;
+
 always@(posedge clk, negedge a_sync_nrst)begin
     if(!a_sync_nrst)begin
         s_axis_state <= S_IDLE;
         s_addr_data <= 0;
         s_addr_data_delay <= 0;
+        handshake_ms_axis <=0;
     end else begin
         //Alteração de sinal habilação
-        if(handshake_ms_axis)begin 
-            s_axis_state <= s_axis_next_state;
-        end
+        handshake_ms_axis <= s_axis_tvalid && s_axis_tready;
+        s_axis_state <= s_axis_next_state;
         if(s_axis_state == S_REC && handshake_ms_axis)begin 
             s_addr_data          <= s_addr_data_next;
             s_addr_data_delay <= s_addr_data;
-            mem_tmp[s_addr_data_delay] <= s_axis_tdata ;
+            mem_tmp[s_addr_data] <= s_axis_tdata ;
+        end else begin
+            s_addr_data          <= 0;
         end
     end
 end
@@ -413,7 +417,7 @@ always@(*) begin
             s_axis_tready = 1;
         end
         S_REC:begin
-            if(s_addr_data == tx_pkt_len)begin
+            if(s_addr_data == tx_pkt_len-1)begin
                 s_addr_data_next = 0; //Manter o valor anterior
                 s_axis_next_state = S_IDLE;
                 s_axis_tready = 0;
@@ -430,7 +434,7 @@ always@(*) begin
         default:begin
             s_axis_next_state = S_IDLE;
             s_addr_data_next = 0;
-            s_axis_tready = 0;
+            s_axis_tready = 1;
         end
     endcase
 end

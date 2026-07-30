@@ -158,7 +158,8 @@ control_axi_stream_gbe gbe_control(
     .debug_addr_data_gbe(0),
     .debug_addr_data_fifo(0),
     .debug_rx_data_mem_gbe(),
-    .debug_rx_data_mem_fifo()
+    .debug_rx_data_mem_fifo(),
+    .debug_read_gbe_or_fifo(0)
 );
 
     
@@ -196,6 +197,7 @@ logic [7:0]counter;
 initial begin 
     $readmemh("/home/valmyrsilva07/skrab_one/skrab_one.srcs/sim_1/new/mem.hex",mem);
     clk = 0;
+    ce = 0;
     s_axis_aclk0 = 0;
     s_axis_aclk1 = 0;
      a_sync_nrst =0;
@@ -213,7 +215,7 @@ always_ff@(posedge clk,negedge a_sync_nrst)begin
     else begin 
                 
                 
-                counter<=in_valid_rx ? counter+1:(counter < 257) ? counter:0;
+                counter<=in_valid_rx ? counter+1:(counter < 256) ? counter:0;
                 
                in_valid_rx <=data_valid_rx1;
 
@@ -223,7 +225,6 @@ assign in_data_rx_ethernet = mem[counter];
 
 //always #4.37 clk =~clk;
 always #5 clk =~clk;
-
 always #5 s_axis_aclk0 = ~s_axis_aclk0;
 always #5 s_axis_aclk1 = ~s_axis_aclk1;
 

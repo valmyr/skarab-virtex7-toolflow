@@ -1,93 +1,68 @@
-#////////////////////////////////////////////////////////////////////////////////
-# Company: VIRTUS/UFCG
-# Engineer: Valmir F. Silva 
-# 
-# Create Date: 06/25/2026 00:20:32 AM
-# Design Name: 
-# Module Name: rx_host
-# Project Name: 
-# Target Devices: 
-# Tool Versions: 
-# Description: 
-# 
-# Dependencies: 
-# 
-# Revision:
-# Revision 0.01 - File Created
-# Additional Comments:
-# 
-#////////////////////////////////////////////////////////////////////////////////
-
-
-#sudo ethtool -K enp4s0 rx-checksum off
-#sudo ip addr add 10.42.0.31/24 dev enp4s0
-#gtkterm -b 8 -t 1 -s 115200 -p /dev/ttyUSB7
-#sudo screen /dev/ttyUSB7 115200
-
-DEBUG = True
-
 import socket
-from matplotlib import pyplot as plt
-colab = False
-from matplotlib import pyplot as plt
-import os
-from random import randint
-import numpy as np
-if(colab):
-    from IPython import display
-import time
 import struct
+import numpy as np
+from matplotlib import pyplot as plt
 
-###########--Plot em tempo Real----###############
-##Captura do evento de fechar a janela
-def ao_fechar(event):
-    global rodando
-    rodando = False
-    print("\nJanela fechada. Loop encerrado.")
+DEBUG = False
 
-fig, ax = plt.subplots(figsize=(12, 4))
-ax.set_title("e^At*sint(Bt)")
-fig.canvas.mpl_connect('close_event', ao_fechar)
-
-
-fs =30
-#Passo de incremento
-step = 2
-#Incremento
-incre=0
-#Tamanho da janela
-window = 128
-rodando = True
-
-
-#####################################################
-
-IP = "10.42.0.31"#0a2a001f; ip_const_10_42_0_31
+IP = "10.42.0.31"
 PORT = 7777
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.bind((IP, PORT))
+sock.setblocking(False)
 print(f"Escutando em {IP}:{PORT}")
-data_ = []
-k = 0
-amostras = 10
-N =256
-j=0
-fs=100000
-t=np.arange(0,window,1)
-t_step = 0
-j=0
-y=np.zeros(N,dtype=np.int8)
-while(True):
-        plt.ion()
-        ax.cla()
-        data, addr = sock.recvfrom((256)*8)  # Buffer de 2048 bytes
-        os.system('clear')
-        array_d = struct.unpack(f'>{256}Q',data)
-        ax.plot(array_d,color='red')
-        ax_set = ax.set_ylim(0,256)
-        if(DEBUG):
-            for i in range(0,256):
-                print(f"\033[91m FPGA \033[00m -> \033[92m PC \033[00m:Word[{i}]={array_d[i]}")
-            print(j,"============================Recebido=====================",j)
-        plt.pause(1 /100000000000000000.0)
-        j+=1
+
+fig, ax = plt.subplots(figsize=(12, 4))
+ax.set_title("e^At*sint(Bt)")
+ax.set_ylim(0, 256)
+
+x = np.arange(256)
+y0 = np.zeros(256)
+line, = ax.plot(x, y0, color='red')
+
+rodando = True
+def ao_fechar(event):
+    global rodando
+    rodando = False
+fig.canvas.mpl_connect('close_event', ao_fechar)
+
+plt.show(block=False)
+fig.canvas.draw()  # desenha o "fundo" (título, eixos, grade) uma vez
+
+# guarda uma cópia do fundo limpo, sem a linha
+background = fig.canvas.copy_from_bbox(ax.bbox)
+
+PKT_SIZE = 256 * 8
+j = 0
+
+while rodando:
+    ultimo_pacote = None
+    while True:
+        try:
+            data, addr = sock.recvfrom(PKT_SIZE)
+            ultimo_pacote = data
+        except BlockingIOError:
+            break
+
+    if ultimo_pacote is None:
+        fig.canvas.flush_events()
+        continue
+
+    array_d = struct.unpack(f'>256Q', ultimo_pacote)
+
+    # 1. restaura o fundo limpo (isso "apaga" a linha anterior)
+    fig.canvas.restore_region(background)
+
+    # 2. atualiza os dados da linha
+    line.set_ydata(array_d)
+
+    # 3. redesenha só a linha sobre o fundo restaurado
+    ax.draw_artist(line)
+
+    # 4. manda pra tela só a região que mudou
+    fig.canvas.blit(ax.bbox)
+    fig.canvas.flush_events()
+
+    if DEBUG:
+        print(j, "recebido")
+    j += 1

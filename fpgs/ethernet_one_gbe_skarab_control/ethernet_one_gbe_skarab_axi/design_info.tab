@@ -268,6 +268,16 @@ pkt_ctrs_compare1/ss/status	xps:sw_reg	bin_pts	0
 pkt_ctrs_compare1/ss/status	xps:sw_reg	arith_types	0
 pkt_ctrs_compare1/ss/status	xps:sw_reg	sim_port	off
 pkt_ctrs_compare1/ss/status	xps:sw_reg	show_format	on
+read_gbe_or_fifo	xps:sw_reg	io_dir	From\_Processor
+read_gbe_or_fifo	xps:sw_reg	io_delay	0
+read_gbe_or_fifo	xps:sw_reg	init_val	0
+read_gbe_or_fifo	xps:sw_reg	sample_period	1
+read_gbe_or_fifo	xps:sw_reg	names	reg
+read_gbe_or_fifo	xps:sw_reg	bitwidths	32
+read_gbe_or_fifo	xps:sw_reg	bin_pts	0
+read_gbe_or_fifo	xps:sw_reg	arith_types	0
+read_gbe_or_fifo	xps:sw_reg	sim_port	off
+read_gbe_or_fifo	xps:sw_reg	show_format	off
 rx_badframe1	xps:sw_reg	io_dir	To\_Processor
 rx_badframe1	xps:sw_reg	io_delay	0
 rx_badframe1	xps:sw_reg	init_val	0
@@ -530,6 +540,7 @@ pkt_ctrs_compare1/ss	casper:snapshot	provide_outputs	off
 pkt_ctrs_compare1/ss	casper:snapshot	use_dsp48	on
 77777	77777	tags	casper:bitsnap,casper:snapshot,xps:bram,xps:sw_reg,xps:xsg
 77777	77777	system	ethernet_one_gbe_skarab_axi
-77777	77777	builddate	28-Jul-2026\_21:03:08
+77777	77777	builddate	30-Jul-2026\_17:18:48
+77777	77777	latency	NaN
 77777	77777	latency	NaN
 77777	77777	xlSgRoot	/tools/Xilinx/Vivado/2019.1/lib/lnx64.o/matlab/sysgen.mexa64

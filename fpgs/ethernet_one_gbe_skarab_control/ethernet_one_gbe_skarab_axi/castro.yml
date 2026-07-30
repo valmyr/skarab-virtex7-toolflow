@@ -173,60 +173,66 @@ mm_slaves:
 - !!python/object:castro.mm_slave
   base_address: 2149171288
   high_address: 2149171292
-  mode: 1
-  name: rx_badframe1
+  mode: 3
+  name: read_gbe_or_fifo
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171292
   high_address: 2149171296
-  mode: 3
-  name: rx_control1
+  mode: 1
+  name: rx_badframe1
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171296
   high_address: 2149171300
-  mode: 1
-  name: rx_eof1
+  mode: 3
+  name: rx_control1
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171300
   high_address: 2149171304
   mode: 1
-  name: rx_overrun1
+  name: rx_eof1
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171304
   high_address: 2149171308
   mode: 1
-  name: rx_valid1
+  name: rx_overrun1
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171308
   high_address: 2149171312
   mode: 1
-  name: tx_afull1
+  name: rx_valid1
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171312
   high_address: 2149171316
-  mode: 3
-  name: tx_control
+  mode: 1
+  name: tx_afull1
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171316
   high_address: 2149171320
-  mode: 1
-  name: tx_overflow1
+  mode: 3
+  name: tx_control
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171320
   high_address: 2149171324
   mode: 1
-  name: vaild_rx_valmir1
+  name: tx_overflow1
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171324
-  high_address: 2149171356
+  high_address: 2149171328
+  mode: 1
+  name: vaild_rx_valmir1
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171328
+  high_address: 2149171360
   mode: 1
   name: sys_block
   span: 32
@@ -259,6 +265,7 @@ src_files:
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_bram
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc

@@ -27,7 +27,7 @@ function control_axi_stream_gbe_config(this_block)
   this_block.addSimulinkInport('m_axis_tready');
   this_block.addSimulinkInport('debug_addr_data_gbe');
   this_block.addSimulinkInport('debug_addr_data_fifo');
-
+  this_block.addSimulinkInport('debug_read_gbe_or_fifo');
 
   this_block.addSimulinkOutport('tx_data');
   this_block.addSimulinkOutport('tx_val');
@@ -117,7 +117,9 @@ function control_axi_stream_gbe_config(this_block)
     if (this_block.port('debug_rx_data_mem_fifo').width ~= 8);
       this_block.setError('Input data type for port "debug_rx_data_mem_fifo" must have width=8.');
     end
-
+    if (this_block.port('debug_read_gbe_or_fifo').width ~= 1);
+      this_block.setError('Input data type for port "debug_rx_data_mem_fifo" must have width=1.');
+    end
 
   end  % if(inputTypesKnown)
   % -----------------------------

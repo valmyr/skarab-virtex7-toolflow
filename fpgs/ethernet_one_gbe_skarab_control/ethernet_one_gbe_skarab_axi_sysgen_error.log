@@ -6,13 +6,13 @@ Vivado 2019.1                           /tools/Xilinx/Vivado/2019.1
 --------------------------------------------------------------------------------
 Summary of Errors:
 Error 0001: Input must be driven by SIMULINK integer, single, double ...
-     Block: 'ethernet_one_gbe_skarab_axi/addr_data_fifo/ethernet_one_gbe_skarab_axi_addr_data_fifo_user_data_out'
+     Block: 'ethernet_one_gbe_skarab_axi/read_gbe_or_fifo/ethernet_one_gbe_skarab_axi_read_gbe_or_fifo_user_data_out'
 --------------------------------------------------------------------------------
 
 Error 0001:
 
 Reported by:
-  'ethernet_one_gbe_skarab_axi/addr_data_fifo/ethernet_one_gbe_skarab_axi_addr_data_fifo_user_data_out'
+  'ethernet_one_gbe_skarab_axi/read_gbe_or_fifo/ethernet_one_gbe_skarab_axi_read_gbe_or_fifo_user_data_out'
 
 Details:
 Input must be driven by SIMULINK integer, single, double or

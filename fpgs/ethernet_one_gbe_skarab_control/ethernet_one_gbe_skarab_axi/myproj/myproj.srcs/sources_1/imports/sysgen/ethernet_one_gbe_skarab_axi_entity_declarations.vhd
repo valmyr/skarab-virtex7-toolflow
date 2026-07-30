@@ -993,6 +993,7 @@ entity control_axi_stream_gbe_wrapper is
     m_axis_tready : in std_logic;
     debug_addr_data_gbe : in std_logic_vector(7 downto 0);
     debug_addr_data_fifo : in std_logic_vector(7 downto 0);
+    debug_read_gbe_or_fifo : in std_logic_vector(0 downto 0);
     tx_data : out std_logic_vector(7 downto 0);
     tx_val : out std_logic;
     tx_eof : out std_logic;
@@ -1017,6 +1018,7 @@ architecture structural of control_axi_stream_gbe_wrapper is
   signal m_axis_tready_net : std_logic;
   signal debug_addr_data_gbe_net : std_logic_vector(7 downto 0);
   signal debug_addr_data_fifo_net : std_logic_vector(7 downto 0);
+  signal debug_read_gbe_or_fifo_net : std_logic_vector(0 downto 0);
   signal tx_data_net : std_logic_vector(7 downto 0);
   signal tx_val_net : std_logic;
   signal tx_eof_net : std_logic;
@@ -1040,6 +1042,7 @@ architecture structural of control_axi_stream_gbe_wrapper is
       m_axis_tready : in std_logic;
       debug_addr_data_gbe : in std_logic_vector(7 downto 0);
       debug_addr_data_fifo : in std_logic_vector(7 downto 0);
+      debug_read_gbe_or_fifo : in std_logic_vector(0 downto 0);
       tx_data : out std_logic_vector(7 downto 0);
       tx_val : out std_logic;
       tx_eof : out std_logic;
@@ -1064,6 +1067,7 @@ begin
   m_axis_tready_net <= m_axis_tready;
   debug_addr_data_gbe_net <= debug_addr_data_gbe;
   debug_addr_data_fifo_net <= debug_addr_data_fifo;
+  debug_read_gbe_or_fifo_net <= debug_read_gbe_or_fifo;
   tx_data <= tx_data_net;
   tx_val <= tx_val_net;
   tx_eof <= tx_eof_net;
@@ -1087,6 +1091,7 @@ begin
       m_axis_tready => m_axis_tready_net,
       debug_addr_data_gbe => debug_addr_data_gbe_net,
       debug_addr_data_fifo => debug_addr_data_fifo_net,
+      debug_read_gbe_or_fifo => debug_read_gbe_or_fifo_net,
       tx_data => tx_data_net,
       tx_val => tx_val_net,
       tx_eof => tx_eof_net,

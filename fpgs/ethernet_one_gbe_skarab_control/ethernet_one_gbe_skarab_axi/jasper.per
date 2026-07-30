@@ -381,6 +381,20 @@ yellow_blocks:
     arith_types: 0
     sim_port: off
     show_format: on
+  ethernet_one_gbe_skarab_axi/read_gbe_or_fifo:
+    name: read_gbe_or_fifo
+    fullpath: ethernet_one_gbe_skarab_axi/read_gbe_or_fifo
+    tag: xps:sw_reg
+    io_dir: From Processor
+    io_delay: 0
+    init_val: 0
+    sample_period: 1
+    names: reg
+    bitwidths: 32
+    bin_pts: 0
+    arith_types: 0
+    sim_port: off
+    show_format: off
   ethernet_one_gbe_skarab_axi/rx_badframe1:
     name: rx_badframe1
     fullpath: ethernet_one_gbe_skarab_axi/rx_badframe1
@@ -536,6 +550,7 @@ user_modules:
       - skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs1_ss_ctrl_user_data_out
       - ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram_data_out
       - skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs_compare1_ss_ctrl_user_data_out
+      - ethernet_one_gbe_skarab_axi_read_gbe_or_fifo_user_data_out
       - ethernet_one_gbe_skarab_axi_rx_control1_user_data_out
       - ethernet_one_gbe_skarab_axi_tx_control_user_data_out
       - ethernet_one_gbe_skarab_axi_tx_one_gbe_app_dbg_data

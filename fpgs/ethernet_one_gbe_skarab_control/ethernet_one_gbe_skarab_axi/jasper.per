@@ -5,7 +5,7 @@ yellow_blocks:
     tag: xps:xsg
     hw_sys: 'SKARAB:xc7vx690t'
     clk_src: sys_clk
-    clk_rate: 230
+    clk_rate: 300
     sample_period: 1
     synthesis_tool: XST
   ethernet_one_gbe_skarab_axi/addr_data_fifo:
@@ -206,6 +206,20 @@ yellow_blocks:
     fullpath: ethernet_one_gbe_skarab_axi/debug_rx_data_mem_gbe
     tag: xps:sw_reg
     io_dir: To Processor
+    io_delay: 0
+    init_val: 0
+    sample_period: 1
+    names: reg
+    bitwidths: 32
+    bin_pts: 0
+    arith_types: 0
+    sim_port: off
+    show_format: on
+  ethernet_one_gbe_skarab_axi/dec_dactor:
+    name: dec_dactor
+    fullpath: ethernet_one_gbe_skarab_axi/dec_dactor
+    tag: xps:sw_reg
+    io_dir: From Processor
     io_delay: 0
     init_val: 0
     sample_period: 1
@@ -546,6 +560,7 @@ user_modules:
       - skarab_tx_1gbe_tx_rx_valmir_d4_ss_ctrl_user_data_out
       - ethernet_one_gbe_skarab_axi_d5_ss_bram_data_out
       - skarab_tx_1gbe_tx_rx_valmir_d5_ss_ctrl_user_data_out
+      - ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out
       - ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_data_out
       - skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs1_ss_ctrl_user_data_out
       - ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram_data_out

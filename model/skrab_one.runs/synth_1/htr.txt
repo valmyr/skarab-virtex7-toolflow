@@ -7,4 +7,4 @@
 # Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 #
 
-vivado -log control_axi_stream_gbe.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source control_axi_stream_gbe.tcl
+vivado -log buffer_in_ethernet.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source buffer_in_ethernet.tcl

@@ -3,11 +3,11 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Wed Jul 29 01:45:36 2026
-# Process ID         : 1678269
+# Start of session at: Fri Jul 31 19:03:41 2026
+# Process ID         : 2830569
 # Current directory  : /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.runs/synth_1
-# Command line       : vivado -log control_axi_stream_gbe.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source control_axi_stream_gbe.tcl
-# Log file           : /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.runs/synth_1/control_axi_stream_gbe.vds
+# Command line       : vivado -log buffer_in_ethernet.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source buffer_in_ethernet.tcl
+# Log file           : /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.runs/synth_1/buffer_in_ethernet.vds
 # Journal file       : /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.runs/synth_1/vivado.jou
 # Running On         : valmyrsilva07-B760M-AORUS-ELITE
 # Platform           : Ubuntu
@@ -19,6 +19,6 @@
 # Host memory        : 67239 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 69386 MB
-# Available Virtual  : 51087 MB
+# Available Virtual  : 31937 MB
 #-----------------------------------------------------------
-source control_axi_stream_gbe.tcl -notrace
+source buffer_in_ethernet.tcl -notrace

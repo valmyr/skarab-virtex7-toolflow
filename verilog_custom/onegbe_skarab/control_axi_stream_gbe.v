@@ -15,8 +15,11 @@
 // 
 // Revision:
 // Revision 0.01 - File Created
-// Additional Comments:
-// Square Kilometer Array Reconfigurable Application Board - SKARAB
+// Revision 0.02 - Correção: captura do primeiro byte de dado perdido na
+//                 transição IDLE->RX_DATA (causa raiz do vazamento do byte
+//                 0x6E/110 de frame_rx para dentro de mem[], observado nos
+//                 índices 246/247). Ver comentário na condição de escrita.
+// Additional Comments: Square Kilometer Array Reconfigurable Application Board - SKARAB
 //////////////////////////////////////////////////////////////////////////////////
 
 
@@ -46,7 +49,8 @@ module control_axi_stream_gbe(
     input  wire [7:0] debug_addr_data_fifo,
     output reg [7:0]  debug_rx_data_mem_gbe,
     output reg [7:0]  debug_rx_data_mem_fifo,
-    input  wire       debug_read_gbe_or_fifo
+    input  wire       debug_read_gbe_or_fifo,
+    input wire [9:0]       decim_factor
 
 );
 
@@ -97,12 +101,21 @@ always@(posedge clk, negedge a_sync_nrst)begin
 
     end else begin
         //Lógica de escrita no buffer
-        rx_data_ff1 <= rx_valid ? rx_data :rx_data_ff1;
+        //rx_data_ff1 <= rx_valid ? rx_data :rx_data_ff1;
         if(rx_valid)begin
             counter_tx       <=  next_state_counter_tx;
-            if((current_state_rx == RX_DATA)  && counter_tx < 248) begin 
+            // CORREÇÃO: inclui start_frame_reception na condição.
+            // No ciclo em que o cmd_sync_detector pulsa start_frame_reception,
+            // current_state_rx ainda é IDLE (a transição de estado só se
+            // efetiva no ciclo seguinte), mas rx_data já é o PRIMEIRO byte
+            // de dado real (data1[0]). Sem esta condição extra, esse byte
+            // era descartado (mem[counter_tx] <= 8'h00), deslocando toda a
+            // captura em 1 posição e empurrando o primeiro byte do comando
+            // de fim (0x6E / 110) para dentro da região de dado, no lugar
+            // do último byte real esperado.
+            if(((current_state_rx == RX_DATA) || start_frame_reception)  && counter_tx < 248) begin 
                 //248 é o tamanho do pacote menos os códigos de commandos, no caso: 256 - 2*(4) = 248
-                mem[counter_tx]  <= rx_data_ff1;
+                mem[counter_tx]  <= rx_data;
             end else begin
                 mem[counter_tx]  <= 8'h00;
             end
@@ -133,6 +146,7 @@ always@(posedge clk, negedge a_sync_nrst)begin
         sync_reg_start_frame_reception   <= start_frame_reception   ;
         sync_reg_start_frame_transmission<=  start_frame_transmission;
         //tx_ena_out <=current_state_tx == TX_DATA;
+
 
     end
 end
@@ -168,13 +182,18 @@ reg [7:0] addr_data_t;
     always@(*)begin
         case(current_state_rx)
             IDLE:begin
-                case(sync_reg_start_frame_reception)
+                case(start_frame_reception)
                     1'b1:next_state_rx = RX_DATA;
                     1'b0:next_state_rx = IDLE;
                     default:next_state_rx = IDLE;
                 endcase
 
-                next_state_counter_tx = 0;
+                // CORREÇÃO: se start_frame_reception pulsou neste ciclo,
+                // o byte presente (data1[0]) já foi capturado em mem[0]
+                // pela condição adicionada no bloco de escrita. O próximo
+                // endereço precisa ser 1, não 0 — senão o próximo byte
+                // (data1[1]) sobrescreve mem[0], anulando a correção.
+                next_state_counter_tx = start_frame_reception ? 1 : 0;
             end
             RX_DATA:begin
                 next_state_counter_tx = counter_tx +1;
@@ -195,7 +214,7 @@ reg [7:0] addr_data_t;
     always@(*)begin
         case(current_state_tx)
             IDLE:begin
-                case(sync_reg_start_frame_transmission)//Atualização do estado de transmissão com base na recepção
+                case(start_frame_transmission)//Atualização do estado de transmissão com base na recepção
                     1'b1:next_state_tx = TX_DATA;
                     1'b0:next_state_tx = IDLE;
                     default:next_state_tx = IDLE;
@@ -218,7 +237,7 @@ reg [7:0] addr_data_t;
                             
                         end
                     end
-                    1'b0:begin next_state_tx = sync_reg_start_frame_transmission ?  TX_DATA : IDLE; 
+                    1'b0:begin next_state_tx = start_frame_transmission ?  TX_DATA : IDLE; 
                         addr_data_local_next = 0;
                         tx_ena_out_w = 0;
                     end
@@ -240,12 +259,12 @@ reg [7:0] addr_data_t;
 
 
 
-    assign ena_dec       =  counter_dec == 15-1; //Por padrão 15; 15-1 =14
+    assign ena_dec       =  counter_dec == decim_factor-1; //Por padrão 15; 15-1 =14
     always @(posedge clk or negedge a_sync_nrst) begin
         if(!a_sync_nrst)begin
             counter_dec <= 0;
         end else begin
-            if(tx_ena_out && counter_dec < 15) counter_dec <= counter_dec +1;
+            if(tx_ena_out && counter_dec < decim_factor) counter_dec <= counter_dec +1;
             else                               counter_dec <= 0;
         end
     end
@@ -399,11 +418,18 @@ always@(posedge clk, negedge a_sync_nrst)begin
         //Alteração de sinal habilação
         handshake_ms_axis <= s_axis_tvalid && s_axis_tready;
         s_axis_state <= s_axis_next_state;
-        if(s_axis_state == S_REC && handshake_ms_axis)begin 
+        // CORREÇÃO: mesmo padrão de bug do lado RX. A condição antiga
+        // (s_axis_state == S_REC && handshake_ms_axis) descartava o
+        // PRIMEIRO byte, capturado no ciclo em que a transição
+        // S_IDLE->S_REC ocorre (state ainda é S_IDLE nesse ciclo).
+        // Também corrige um bug latente: durante stall de backpressure
+        // (S_REC sem handshake), s_addr_data era resetado para 0,
+        // perdendo a posição de escrita corrente.
+        if(handshake_ms_axis)begin 
             s_addr_data          <= s_addr_data_next;
             s_addr_data_delay <= s_addr_data;
             mem_tmp[s_addr_data] <= s_axis_tdata ;
-        end else begin
+        end else if(s_axis_state == S_IDLE) begin
             s_addr_data          <= 0;
         end
     end
@@ -413,7 +439,10 @@ always@(*) begin
     case(s_axis_state)
         S_IDLE:begin
             s_axis_next_state = (handshake_ms_axis) ? S_REC : S_IDLE;
-            s_addr_data_next = 0;
+            // Se o handshake ocorre neste ciclo, o byte 0 já foi
+            // consumido (gravado em mem_tmp[0] no bloco sequencial acima),
+            // então o próximo endereço deve ser 1, não 0.
+            s_addr_data_next = 1;
             s_axis_tready = 1;
         end
         S_REC:begin

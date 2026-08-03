@@ -2,9 +2,10 @@ import socket
 import struct
 import numpy as np
 from matplotlib import pyplot as plt
-
+from random import randint
 DEBUG = False
 
+SAMPLES = 247
 IP = "10.42.0.31"
 PORT = 7777
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -14,10 +15,10 @@ print(f"Escutando em {IP}:{PORT}")
 
 fig, ax = plt.subplots(figsize=(12, 4))
 ax.set_title("e^At*sint(Bt)")
-ax.set_ylim(0, 256)
+ax.set_ylim(0, SAMPLES)
 
-x = np.arange(256)
-y0 = np.zeros(256)
+x = np.arange(SAMPLES)
+y0 = np.zeros(SAMPLES)
 line, = ax.plot(x, y0, color='red')
 
 rodando = True
@@ -32,7 +33,7 @@ fig.canvas.draw()  # desenha o "fundo" (título, eixos, grade) uma vez
 # guarda uma cópia do fundo limpo, sem a linha
 background = fig.canvas.copy_from_bbox(ax.bbox)
 
-PKT_SIZE = 256 * 8
+PKT_SIZE = SAMPLES * 8
 j = 0
 
 while rodando:
@@ -48,7 +49,7 @@ while rodando:
         fig.canvas.flush_events()
         continue
 
-    array_d = struct.unpack(f'>256Q', ultimo_pacote)
+    array_d = struct.unpack(f'>247Q', ultimo_pacote)
 
     # 1. restaura o fundo limpo (isso "apaga" a linha anterior)
     fig.canvas.restore_region(background)

@@ -1,0 +1,214 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date             : Sat Aug  1 19:46:22 2026
+| Host             : valmyrsilva07-B760M-AORUS-ELITE running 64-bit Ubuntu 20.04.6 LTS
+| Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
+| Design           : top
+| Device           : xc7vx690tffg1927-2
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 1.212        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.827        |
+| Device Static (W)        | 0.385        |
+| Effective TJA (C/W)      | 0.8          |
+| Max Ambient (C)          | 84.0         |
+| Junction Temperature (C) | 26.0         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.116 |       20 |       --- |             --- |
+| Slice Logic              |     0.012 |    29580 |       --- |             --- |
+|   LUT as Logic           |     0.009 |     9581 |    433200 |            2.21 |
+|   Register               |     0.001 |    14537 |    866400 |            1.68 |
+|   CARRY4                 |    <0.001 |      539 |    108300 |            0.50 |
+|   LUT as Distributed RAM |    <0.001 |      580 |    174200 |            0.33 |
+|   F7/F8 Muxes            |    <0.001 |      296 |    433200 |            0.07 |
+|   LUT as Shift Register  |    <0.001 |      174 |    174200 |            0.10 |
+|   Others                 |    <0.001 |     1571 |       --- |             --- |
+| Signals                  |     0.046 |    23221 |       --- |             --- |
+| Block RAM                |     0.154 |      273 |      1470 |           18.57 |
+| MMCM                     |     0.298 |        3 |        20 |           15.00 |
+| DSPs                     |     0.003 |        5 |      3600 |            0.14 |
+| I/O                      |     0.006 |      157 |       600 |           26.17 |
+| GTH                      |     0.191 |        1 |       --- |             --- |
+| XADC                     |    <0.001 |        1 |       --- |             --- |
+| Static Power             |     0.385 |          |           |                 |
+| Total                    |     1.212 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.531 |       0.331 |      0.200 |
+| Vccaux    |       1.800 |     0.220 |       0.166 |      0.053 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.002 |       0.001 |      0.001 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.027 |       0.013 |      0.014 |
+| MGTAVcc   |       1.000 |     0.146 |       0.118 |      0.028 |
+| MGTAVtt   |       1.200 |     0.060 |       0.053 |      0.008 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| MGTZVccl  |       1.075 |     0.000 |       0.000 |      0.000 |
+| MGTZAVcc  |       1.075 |     0.000 |       0.000 |      0.000 |
+| MGTZVcch  |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 0.8                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 1.2                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                                                                                                                   | Domain                                                                                                                                          | Constraint (ns) |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| CLKFBIN                                                                                                                                                 | skarab_infr/CLKFBIN                                                                                                                             |             6.4 |
+| FPGA_EMCCLK2                                                                                                                                            | FPGA_EMCCLK2                                                                                                                                    |            16.7 |
+| FPGA_REFCLK_BUF0_P                                                                                                                                      | FPGA_REFCLK_BUF0_P                                                                                                                              |             6.4 |
+| ONE_GBE_MGTREFCLK_P                                                                                                                                     | ONE_GBE_MGTREFCLK_P                                                                                                                             |             8.0 |
+| bsp_clk_mmcm                                                                                                                                            | skarab_infr/bsp_clk_mmcm                                                                                                                        |            25.6 |
+| clkfbout                                                                                                                                                | ethernet_one_gbe_skarab_loop_tx_one_gbe/gmii_to_sgmii_0/U0/core_clocking_i/clkfbout                                                             |            16.0 |
+| clkout0                                                                                                                                                 | ethernet_one_gbe_skarab_loop_tx_one_gbe/gmii_to_sgmii_0/U0/core_clocking_i/clkout0                                                              |             8.0 |
+| clkout1                                                                                                                                                 | ethernet_one_gbe_skarab_loop_tx_one_gbe/gmii_to_sgmii_0/U0/core_clocking_i/clkout1                                                              |            16.0 |
+| ethernet_one_gbe_skarab_loop_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gtwizard_i/gt0_GTWIZARD_i/gthe2_i/RXOUTCLK | ethernet_one_gbe_skarab_loop_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gtwizard_i/gt0_GTWIZARD_i/rxoutclk |            16.0 |
+| ethernet_one_gbe_skarab_loop_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gtwizard_i/gt0_GTWIZARD_i/gthe2_i/TXOUTCLK | ethernet_one_gbe_skarab_loop_tx_one_gbe/gmii_to_sgmii_0/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gtwizard_i/gt0_GTWIZARD_i/txoutclk |            16.0 |
+| icape_clk                                                                                                                                               | skarab_infr/wishbone_flash_sdram_interface_0/icape_controller_0/icape_clk                                                                       |           102.4 |
+| skarab_infr/cont_microblaze_wrapper_0/cont_microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK                                                   | skarab_infr/cont_microblaze_wrapper_0/cont_microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/DRCK                                                            |            33.3 |
+| skarab_infr/cont_microblaze_wrapper_0/cont_microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE                                                 | skarab_infr/cont_microblaze_wrapper_0/cont_microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0                                                    |            33.3 |
+| sys_clk_mmcm                                                                                                                                            | skarab_infr/sys_clk_mmcm                                                                                                                        |             6.4 |
+| user_clk_mmcm                                                                                                                                           | skarab_infr/user_clk_mmcm                                                                                                                       |             4.3 |
+| user_clk_mmcm_fb                                                                                                                                        | skarab_infr/user_clk_mmcm_fb                                                                                                                    |            89.6 |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++--------------------------------------------------+-----------+
+| Name                                             | Power (W) |
++--------------------------------------------------+-----------+
+| top                                              |     0.827 |
+|   ethernet_one_gbe_skarab_loop_d3_ss_bram        |     0.026 |
+|     bram_inst                                    |     0.026 |
+|       asymmetric_a_wider_than_b.bram_inst        |     0.026 |
+|   ethernet_one_gbe_skarab_loop_d4_ss_bram        |     0.026 |
+|     bram_inst                                    |     0.026 |
+|       asymmetric_a_wider_than_b.bram_inst        |     0.026 |
+|   ethernet_one_gbe_skarab_loop_d5_ss_bram        |     0.026 |
+|     bram_inst                                    |     0.026 |
+|       asymmetric_a_wider_than_b.bram_inst        |     0.026 |
+|   ethernet_one_gbe_skarab_loop_inst              |     0.060 |
+|     ethernet_one_gbe_skarab_loop_struct          |     0.060 |
+|       axi_fifo1                                  |     0.005 |
+|       axi_fifo2                                  |     0.003 |
+|       d3                                         |     0.005 |
+|       d4                                         |     0.005 |
+|       d5                                         |     0.008 |
+|       pkt_ctrs1                                  |     0.011 |
+|       pkt_ctrs_compare1                          |     0.003 |
+|   ethernet_one_gbe_skarab_loop_pkt_ctrs1_ss_bram |     0.027 |
+|     bram_inst                                    |     0.026 |
+|       symmetric_ram.bram_inst                    |     0.026 |
+|   ethernet_one_gbe_skarab_loop_tx_one_gbe        |     0.408 |
+|     gmii_to_sgmii_0                              |     0.318 |
+|       U0                                         |     0.318 |
+|     gmii_to_xaui_translator_0                    |     0.008 |
+|       gmii_to_xaui_fifo_0                        |     0.005 |
+|       packet_byte_count_fifo_0                   |     0.001 |
+|     kat_ten_gb_eth_0                             |     0.076 |
+|       ten_gig_eth_mac_inst                       |     0.011 |
+|       tge_rx_inst                                |     0.014 |
+|       tge_tx_inst                                |     0.048 |
+|     xaui_to_gmii_translator_0                    |     0.006 |
+|       xaui_to_gmii_fifo_0                        |     0.005 |
+|   skarab_infr                                    |     0.228 |
+|     FPGA_DNA_CHECKER_inst                        |     0.001 |
+|     cont_microblaze_wrapper_0                    |     0.022 |
+|       cont_microblaze_i                          |     0.021 |
+|     wishbone_flash_sdram_interface_0             |     0.002 |
+|   sys_block_inst                                 |     0.002 |
+|   wbs_arbiter_inst                               |     0.014 |
+|     wbs_arbiter_0                                |     0.013 |
++--------------------------------------------------+-----------+
+
+

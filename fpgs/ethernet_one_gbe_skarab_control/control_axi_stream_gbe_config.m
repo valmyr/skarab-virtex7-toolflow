@@ -28,6 +28,8 @@ function control_axi_stream_gbe_config(this_block)
   this_block.addSimulinkInport('debug_addr_data_gbe');
   this_block.addSimulinkInport('debug_addr_data_fifo');
   this_block.addSimulinkInport('debug_read_gbe_or_fifo');
+  this_block.addSimulinkInport('decim_factor');
+  
 
   this_block.addSimulinkOutport('tx_data');
   this_block.addSimulinkOutport('tx_val');
@@ -66,7 +68,7 @@ function control_axi_stream_gbe_config(this_block)
 
   % -----------------------------
   if (this_block.inputTypesKnown)
-    % do input type checking, dynamic output type and generic setup in this code block.
+    % do input type checking, dynamic output type and generic setup in this code block.decim_factor
 
     if (this_block.port('a_sync_nrst').width ~= 1);
       this_block.setError('Input data type for port "a_sync_nrst" must have width=1.');
@@ -120,8 +122,12 @@ function control_axi_stream_gbe_config(this_block)
     if (this_block.port('debug_read_gbe_or_fifo').width ~= 1);
       this_block.setError('Input data type for port "debug_rx_data_mem_fifo" must have width=1.');
     end
+    
+    if (this_block.port('decim_factor').width ~= 10);
+      this_block.setError('Input data type for port "debug_rx_data_mem_fifo" must have width=1.');
+    end
 
-  end  % if(inputTypesKnown)
+  end  % if(inputTypesKnown)decim_factor
   % -----------------------------
 
   % -----------------------------
@@ -148,6 +154,7 @@ function control_axi_stream_gbe_config(this_block)
   %    this_block.addFile('');
   this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v');
   this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/cmd_sync_detector.v');
+  %this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/sync_fifo_peek.v')
 return;
 
 

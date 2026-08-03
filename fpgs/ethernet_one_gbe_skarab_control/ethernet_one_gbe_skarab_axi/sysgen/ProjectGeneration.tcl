@@ -10,7 +10,7 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 	set DSPFamily {virtex7}
 	set DSPPackage {ffg1927}
 	set DSPSpeed {-2}
-	set FPGAClockPeriod 4.3478
+	set FPGAClockPeriod 3.3333
 	set GenerateTestBench 0
 	set HDLLanguage {vhdl}
 	set IPOOCCacheRootPath {/home/valmyrsilva07/.Xilinx/Sysgen/SysgenVivado/lnx64.o/ip}
@@ -43,7 +43,7 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 	}
 	set SimPeriod 1
 	set SimTime 3000
-	set SimulationTime {13247.74780000 ns}
+	set SimulationTime {10203.23330000 ns}
 	set SynthStrategyName {Vivado Synthesis Defaults}
 	set SynthesisTool {Vivado}
 	set TargetDir {/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/sysgen}
@@ -321,6 +321,21 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 	dict set TopLevelPortInterface ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_data_out ClockDomain {ethernet_one_gbe_skarab_axi}
 	dict set TopLevelPortInterface ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_data_out Locs {}
 	dict set TopLevelPortInterface ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_data_out IOStandard {}
+	dict set TopLevelPortInterface ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out Name {ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out}
+	dict set TopLevelPortInterface ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out Type UFix_32_0
+	dict set TopLevelPortInterface ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out ArithmeticType xlUnsigned
+	dict set TopLevelPortInterface ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out BinaryPoint 0
+	dict set TopLevelPortInterface ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out Width 32
+	dict set TopLevelPortInterface ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out DatFile {ethernet_one_gbe_skarab_axi_dec_dactor_ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out.dat}
+	dict set TopLevelPortInterface ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out IconText {ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out}
+	dict set TopLevelPortInterface ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out Direction in
+	dict set TopLevelPortInterface ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out Period 1
+	dict set TopLevelPortInterface ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out Interface 0
+	dict set TopLevelPortInterface ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out InterfaceName {}
+	dict set TopLevelPortInterface ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out InterfaceString {DATA}
+	dict set TopLevelPortInterface ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out ClockDomain {ethernet_one_gbe_skarab_axi}
+	dict set TopLevelPortInterface ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out Locs {}
+	dict set TopLevelPortInterface ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out IOStandard {}
 	dict set TopLevelPortInterface skarab_tx_1gbe_tx_rx_valmir_d5_ss_ctrl_user_data_out Name {skarab_tx_1gbe_tx_rx_valmir_d5_ss_ctrl_user_data_out}
 	dict set TopLevelPortInterface skarab_tx_1gbe_tx_rx_valmir_d5_ss_ctrl_user_data_out Type UFix_32_0
 	dict set TopLevelPortInterface skarab_tx_1gbe_tx_rx_valmir_d5_ss_ctrl_user_data_out ArithmeticType xlUnsigned

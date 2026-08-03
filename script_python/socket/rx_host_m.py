@@ -24,7 +24,7 @@
 #gtkterm -b 8 -t 1 -s 115200 -p /dev/ttyUSB7
 #sudo screen /dev/ttyUSB7 115200
 
-DEBUG = True
+DEBUG = False
 
 import socket
 from matplotlib import pyplot as plt
@@ -80,15 +80,15 @@ y=np.zeros(N,dtype=np.int8)
 while(True):
         #plt.ion()
         #ax.cla()
-        data, addr = sock.recvfrom((256)*8)  # Buffer de 2048 bytes
+        data, addr = sock.recvfrom((N)*8)  # Buffer de 2048 bytes
         if(DEBUG):
             os.system('clear')
 
-        array_d = struct.unpack(f'>{256}Q',data)
+        array_d = struct.unpack(f'>{N}Q',data)
         #ax.plot(array_d,color='red')
         #ax_set = ax.set_ylim(0,256)
         if(DEBUG):
-            for i in range(0,256):
+            for i in range(0,N):
                 print(f"\033[91m FPGA \033[00m -> \033[92m PC \033[00m:Word[{i}]={array_d[i]}")
             print(j,"============================Recebido=====================",j)
         #plt.pause(1 /100000000000000000.0)

@@ -159,7 +159,8 @@ control_axi_stream_gbe gbe_control(
     .debug_addr_data_fifo(0),
     .debug_rx_data_mem_gbe(),
     .debug_rx_data_mem_fifo(),
-    .debug_read_gbe_or_fifo(0)
+    .debug_read_gbe_or_fifo(1),
+    .decim_factor(15)
 );
 
     

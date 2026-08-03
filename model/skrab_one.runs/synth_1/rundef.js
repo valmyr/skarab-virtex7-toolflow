@@ -28,7 +28,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log control_axi_stream_gbe.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source control_axi_stream_gbe.tcl" );
+         "-log buffer_in_ethernet.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source buffer_in_ethernet.tcl" );
 
 
 

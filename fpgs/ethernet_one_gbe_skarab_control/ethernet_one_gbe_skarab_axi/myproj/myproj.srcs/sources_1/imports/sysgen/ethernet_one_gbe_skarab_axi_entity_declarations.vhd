@@ -994,6 +994,7 @@ entity control_axi_stream_gbe_wrapper is
     debug_addr_data_gbe : in std_logic_vector(7 downto 0);
     debug_addr_data_fifo : in std_logic_vector(7 downto 0);
     debug_read_gbe_or_fifo : in std_logic_vector(0 downto 0);
+    decim_factor : in std_logic_vector(9 downto 0);
     tx_data : out std_logic_vector(7 downto 0);
     tx_val : out std_logic;
     tx_eof : out std_logic;
@@ -1019,6 +1020,7 @@ architecture structural of control_axi_stream_gbe_wrapper is
   signal debug_addr_data_gbe_net : std_logic_vector(7 downto 0);
   signal debug_addr_data_fifo_net : std_logic_vector(7 downto 0);
   signal debug_read_gbe_or_fifo_net : std_logic_vector(0 downto 0);
+  signal decim_factor_net : std_logic_vector(9 downto 0);
   signal tx_data_net : std_logic_vector(7 downto 0);
   signal tx_val_net : std_logic;
   signal tx_eof_net : std_logic;
@@ -1043,6 +1045,7 @@ architecture structural of control_axi_stream_gbe_wrapper is
       debug_addr_data_gbe : in std_logic_vector(7 downto 0);
       debug_addr_data_fifo : in std_logic_vector(7 downto 0);
       debug_read_gbe_or_fifo : in std_logic_vector(0 downto 0);
+      decim_factor : in std_logic_vector(9 downto 0);
       tx_data : out std_logic_vector(7 downto 0);
       tx_val : out std_logic;
       tx_eof : out std_logic;
@@ -1068,6 +1071,7 @@ begin
   debug_addr_data_gbe_net <= debug_addr_data_gbe;
   debug_addr_data_fifo_net <= debug_addr_data_fifo;
   debug_read_gbe_or_fifo_net <= debug_read_gbe_or_fifo;
+  decim_factor_net <= decim_factor;
   tx_data <= tx_data_net;
   tx_val <= tx_val_net;
   tx_eof <= tx_eof_net;
@@ -1092,6 +1096,7 @@ begin
       debug_addr_data_gbe => debug_addr_data_gbe_net,
       debug_addr_data_fifo => debug_addr_data_fifo_net,
       debug_read_gbe_or_fifo => debug_read_gbe_or_fifo_net,
+      decim_factor => decim_factor_net,
       tx_data => tx_data_net,
       tx_val => tx_val_net,
       tx_eof => tx_eof_net,

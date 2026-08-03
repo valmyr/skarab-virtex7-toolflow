@@ -5,16 +5,34 @@ Matlab 9.4.0.813654 (R2018a)            /usr/local/MATLAB/R2018a
 Vivado 2019.1                           /tools/Xilinx/Vivado/2019.1
 --------------------------------------------------------------------------------
 Summary of Errors:
-Error 0001: Input must be driven by SIMULINK integer, single, double ...
-     Block: 'ethernet_one_gbe_skarab_axi/read_gbe_or_fifo/ethernet_one_gbe_skarab_axi_read_gbe_or_fifo_user_data_out'
+Error 0001: File, /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow...
+     Block: 'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
+Error 0002: File, /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow...
+     Block: 'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
 --------------------------------------------------------------------------------
 
 Error 0001:
 
 Reported by:
-  'ethernet_one_gbe_skarab_axi/read_gbe_or_fifo/ethernet_one_gbe_skarab_axi_read_gbe_or_fifo_user_data_out'
+  'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
 
 Details:
-Input must be driven by SIMULINK integer, single, double or
-fixed-point data type of data width up to 32 bits.
+File,
+/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/sync_fifo_peek.v,
+does not exist.
+Error occurred during "Rate and Type Propagation".
+
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
+
+Details:
+File,
+/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/sync_fifo_peek.v,
+does not exist.
+Error occurred during "Rate and Type Error Checking".
+
 --------------------------------------------------------------------------------

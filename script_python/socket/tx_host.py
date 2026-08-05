@@ -28,7 +28,7 @@ import os
 from random import randint
 from matplotlib import pyplot as plt
 
-DEBUG = False
+DEBUG = True
 
 
 SERVER_IP = "10.42.0.200"

@@ -71,7 +71,7 @@ FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_s
 
 
 LOOPBACK_SIMPLES =not(bool("loop" in FPG))
-PKT_LEN = 128
+PKT_LEN = 256
 
 
 CONTROL_GBE_OR_FIFO_MEM_READ = 'read_gbe_or_fifo'
@@ -125,7 +125,7 @@ def main():
         fpga.registers.tx_control.write(tx_en=1, pkt_rst="pulse")
         fpga.registers.tx_control.write(pkt_rst="pulse")
         # Seleciona a fonte de dados a ser lida (GbE ou FIFO)
-        fpga.write_int(CONTROL_GBE_OR_FIFO_MEM_READ, 1)
+        fpga.write_int(CONTROL_GBE_OR_FIFO_MEM_READ, 0)  # 1 = GbE, 0 = FIFO
         # Decimação a partir do clock estimado da FPGA
         clk_ghz = fpga.estimate_fpga_clock() / 1000
         dec_dactor = int((clk_ghz * 256.0 / RATE) + 1)

@@ -492,8 +492,13 @@ always@(posedge clk, negedge a_sync_nrst)begin
         s_addr_data_delay <= 0;
         handshake_ms_axis <=0;
     end else begin
-        s_addr_data          <= s_addr_data_next;
+        //s_addr_data          <= s_addr_data_next;
         s_axis_state <= s_axis_next_state;
+        if(s_axis_tvalid && s_axis_tready)begin
+            mem_tmp[s_addr_data] <= s_axis_tdata ;   
+            s_addr_data <= (s_addr_data == tx_pkt_len-1)? 0 : s_addr_data+1;     
+        end 
+
     end
 end
 
@@ -503,36 +508,30 @@ always@(*) begin
             s_axis_tready = 1;
             if((s_axis_tvalid))begin
                 s_axis_next_state = S_REC;
-                s_addr_data_next = s_addr_data +1; 
-                mem_tmp[s_addr_data] = s_axis_tdata ;
-
+//                s_addr_data_next = s_addr_data +1; 
             end else begin
                 s_axis_next_state = S_IDLE;
-                s_addr_data_next = 0;
-                mem_tmp[0] = mem_tmp[0] ;
+//                s_addr_data_next = 0;
             end
         end
         S_REC:begin
             if(s_addr_data == tx_pkt_len)begin
-                s_addr_data_next = 0; //Manter o valor anterior
+//                s_addr_data_next = 0; //Manter o valor anterior
                 s_axis_next_state = S_IDLE;
                 s_axis_tready = 0;
-                mem_tmp[0] = mem_tmp[0] ;
             end else if(s_axis_tvalid) begin
-                s_addr_data_next =  s_addr_data +1;
+//               s_addr_data_next =  s_addr_data +1;
                 s_axis_next_state = S_REC;
                 s_axis_tready = 1;
-                mem_tmp[s_addr_data] = s_axis_tdata ;
             end else begin
-                s_addr_data_next = s_addr_data;
+//                s_addr_data_next = s_addr_data;
                 s_axis_next_state = S_REC;
                 s_axis_tready = 1;
-                mem_tmp[0] = mem_tmp[0] ;
             end
         end
         default:begin
             s_axis_next_state = S_IDLE;
-            s_addr_data_next = 0;
+//            s_addr_data_next = 0;
             s_axis_tready = 1;
         end
     endcase

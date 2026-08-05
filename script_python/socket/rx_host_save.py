@@ -7,7 +7,7 @@ PORT = 7777
 OUTPUT_FILE = '../../received_data.bin'
 N = 256
 
-timeout = 5  # Timeout in seconds
+timeout = 60*5  # Timeout in seconds
 t0 = time.time()
 
 # Create a UDP socket

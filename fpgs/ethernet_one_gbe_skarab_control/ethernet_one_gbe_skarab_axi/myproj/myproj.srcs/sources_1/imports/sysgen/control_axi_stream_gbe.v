@@ -50,12 +50,61 @@
 // 
 // Dependencies: 
 // 
-// Revision:
-// Revision 0.01 - File Created
-// Revision 0.02 - Correção: captura do primeiro byte de dado perdido na
-//                 transição IDLE->RX_DATA (causa raiz do vazamento do byte
-//                 0x6E/110 de frame_rx para dentro de mem[], observado nos
-//                 índices 246/247). Ver comentário na condição de escrita.
+// Revision 0.03 - Correção definitiva: perda de bytes na captura de RX.
+//                 Causa raiz identificada: suposição incorreta de que
+//                 rx_valid era um sinal PULSANTE (1 ciclo por byte).
+//                 Na realidade rx_valid é um sinal de NÍVEL, permanecendo
+//                 em 1 continuamente do primeiro byte do comando até o
+//                 último byte do payload (padrão MII/GMII/AXI-Stream
+//                 convencional), com 1 byte novo em rx_data a cada ciclo
+//                 de clock enquanto ativo.
+//
+//                 Essa suposição errada causou 2 sintomas em cadeia:
+//                 1) Ao trocar para nível puro, o contador de endereço
+//                    (counter_rx) e a condição de escrita (data_capture_rx)
+//                    avançavam de forma dessincronizada: o índice avançava
+//                    mesmo em ciclos em que a FSM ainda não permitia
+//                    escrita (transição IDLE->RX_DATA), descartando
+//                    silenciosamente 1-2 bytes no início de cada frame.
+//                 2) O mesmo padrão deixava lixo residual do frame
+//                    anterior (bytes do comando "tran"/"rece", ex. 0x6E)
+//                    em mem[0] e no último índice do buffer.
+//
+//                 Correção aplicada:
+//                 a) next_state_counter_rx passou a ser 0 (não 1) na
+//                    transição IDLE->RX_DATA, corrigindo o offset base.
+//                 b) data_capture_rx passou a incluir start_frame_reception
+//                    diretamente (via OR combinacional), cobrindo o ciclo
+//                    exato do pulso de início de frame sem esperar a FSM
+//                    estabilizar em RX_DATA.
+//                 c) Unificado o avanço do contador (counter_rx) e a
+//                    escrita em mem[] sob um único enable (we_rx =
+//                    pulse_rx_valid && data_capture_rx), eliminando de
+//                    forma estrutural a possibilidade do índice avançar
+//                    sem escrever (ou escrever sem avançar) — a causa
+//                    raiz do sintoma (2).
+//
+//                 Validado em hardware (SKARAB) com payload de teste em
+//                 rampa incremental (0..255), 256 bytes exatos = limite
+//                 de mem[]. Recepção e eco (via tx_data) bateram byte a
+//                 byte com o payload enviado, sem offset, sem lixo
+//                 residual, sem duplicação.
+//
+//                 PENDENTE (não coberto por esta revisão):
+//                 - Profundidade de mem[]/mem_tmp[] (256) vs. largura de
+//                   tx_pkt_len/counter_rx (10 bits, até 1023): sem
+//                   proteção contra estouro se tx_pkt_len > 256.
+//                 - Off-by-one em ena_dec (decimador do lado TX):
+//                   counter_dec avança até decim_factor, não
+//                   decim_factor-1, alongando o período real em 1 ciclo.
+//                 - Escrita combinacional em mem_tmp[] dentro de
+//                   always@(*) na interface AXI escrava (S_IDLE/S_REC):
+//                   mesmo padrão de risco já corrigido no caminho RX
+//                   legado, ainda não revisado no caminho AXI-Stream.
+//                 - Caminho de transmissão (tx_data/tx_val/counter_tx)
+//                   ainda usa a estrutura antiga sem a unificação
+//                   contador+leitura aplicada no RX; não testado nesta
+//                   revisão.
 // Additional Comments: Square Kilometer Array Reconfigurable Application Board - SKARAB
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -480,8 +529,13 @@ always@(posedge clk, negedge a_sync_nrst)begin
         s_addr_data_delay <= 0;
         handshake_ms_axis <=0;
     end else begin
-        s_addr_data          <= s_addr_data_next;
+        //s_addr_data          <= s_addr_data_next;
         s_axis_state <= s_axis_next_state;
+        if(s_axis_tvalid && s_axis_tready)begin
+            mem_tmp[s_addr_data] <= s_axis_tdata ;   
+            s_addr_data <= (s_addr_data == tx_pkt_len-1)? 0 : s_addr_data+1;     
+        end 
+
     end
 end
 
@@ -491,36 +545,30 @@ always@(*) begin
             s_axis_tready = 1;
             if((s_axis_tvalid))begin
                 s_axis_next_state = S_REC;
-                s_addr_data_next = s_addr_data +1; 
-                mem_tmp[s_addr_data] = s_axis_tdata ;
-
+//                s_addr_data_next = s_addr_data +1; 
             end else begin
                 s_axis_next_state = S_IDLE;
-                s_addr_data_next = 0;
-                mem_tmp[0] = mem_tmp[0] ;
+//                s_addr_data_next = 0;
             end
         end
         S_REC:begin
             if(s_addr_data == tx_pkt_len)begin
-                s_addr_data_next = 0; //Manter o valor anterior
+//                s_addr_data_next = 0; //Manter o valor anterior
                 s_axis_next_state = S_IDLE;
                 s_axis_tready = 0;
-                mem_tmp[0] = mem_tmp[0] ;
             end else if(s_axis_tvalid) begin
-                s_addr_data_next =  s_addr_data +1;
+//               s_addr_data_next =  s_addr_data +1;
                 s_axis_next_state = S_REC;
                 s_axis_tready = 1;
-                mem_tmp[s_addr_data] = s_axis_tdata ;
             end else begin
-                s_addr_data_next = s_addr_data;
+//                s_addr_data_next = s_addr_data;
                 s_axis_next_state = S_REC;
                 s_axis_tready = 1;
-                mem_tmp[0] = mem_tmp[0] ;
             end
         end
         default:begin
             s_axis_next_state = S_IDLE;
-            s_addr_data_next = 0;
+//            s_addr_data_next = 0;
             s_axis_tready = 1;
         end
     endcase

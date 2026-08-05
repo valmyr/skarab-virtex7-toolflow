@@ -70,7 +70,7 @@ print(f"Escutando em {IP}:{PORT}")
 data_ = []
 k = 0
 amostras = 10
-N =64
+N =256
 j=0
 fs=100000
 t=np.arange(0,window,1)

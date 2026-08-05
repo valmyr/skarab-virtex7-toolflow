@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1785535419">
-  <File Type="RDS-DCP" Name="buffer_in_ethernet.dcp"/>
-  <File Type="RDS-RDS" Name="buffer_in_ethernet.vds"/>
-  <File Type="RDS-UTIL" Name="buffer_in_ethernet_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="buffer_in_ethernet_utilization_synth.pb"/>
-  <File Type="PA-TCL" Name="buffer_in_ethernet.tcl"/>
-  <File Type="REPORTS-TCL" Name="buffer_in_ethernet_reports.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1785884905">
+  <File Type="VDS-TIMING-PB" Name="top_dut_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_dut_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="top_dut.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="top_dut_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="top_dut_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_dut_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="top_dut.vds"/>
+  <File Type="REPORTS-TCL" Name="top_dut_reports.tcl"/>
+  <File Type="PA-TCL" Name="top_dut.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../verilog_custom/onegbe_skarab/control_axi_stream_gbe.v">
+    <File Path="$PSRCDIR/sources_1/new/buffer_in_ethernet.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -24,6 +27,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../verilog_custom/onegbe_skarab/cmd_sync_detector.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -31,7 +41,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/buffer_in_ethernet.v">
+    <File Path="$PPRDIR/../verilog_custom/onegbe_skarab/control_axi_stream_gbe.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/wrapper_top_dut.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -40,8 +57,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="buffer_in_ethernet"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="top_dut"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">

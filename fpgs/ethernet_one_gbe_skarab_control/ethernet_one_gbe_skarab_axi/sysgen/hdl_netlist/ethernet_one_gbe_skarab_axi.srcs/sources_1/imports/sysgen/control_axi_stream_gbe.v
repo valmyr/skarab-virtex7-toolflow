@@ -101,9 +101,9 @@ reg [2:0]next_state_tx;
 reg [2:0]next_state_rx;
 reg [2:0]current_state_tx;
 reg [2:0]current_state_rx;
-reg [10:0] addr_data_local;
-reg [10:0] addr_data_local_next;
-wire [10:0] addr_data_local_mux;
+reg [10:0] counter_tx;
+reg [10:0] counter_tx_next;
+wire [10:0] counter_tx_mux;
 reg [7:0] mem[256-1:0];
 reg [7:0] mem_tmp[256-1:0];
 
@@ -113,72 +113,77 @@ wire start_frame_transmission;
 
 reg sync_reg_start_frame_reception;
 reg sync_reg_start_frame_transmission;
-wire [10:0] addr_data_write_mux,addr_data_local_mux_r;
+wire [10:0] addr_data_write_mux,counter_tx_mux_r;
 reg reg_sync_rx_valid;
 
 reg [7:0]debug_local_data;
 reg [31:0]counter_dec;
 wire ena_dec;
 
-reg  [7:0] counter_tx;
-reg  [7:0] next_state_counter_tx;
-
+reg  [9:0] counter_rx;
+reg  [9:0] next_state_counter_rx;
+reg data_capture_rx;
+reg data_capture_tx;
 reg tx_ena_out;
 reg sync_data_valid_tx;
+
+reg pulse_rx_valid;
+reg rx_valid1;
+/*
+always@(posedge clk, negedge a_sync_nrst)begin
+    if(!a_sync_nrst)begin 
+        rx_valid1 <=0;
+    end
+    else begin 
+        rx_valid1 <= rx_valid;
+
+    end
+    
+end
+always@(*) pulse_rx_valid = rx_valid && ~rx_valid1;
+
+*/
+always@(*) pulse_rx_valid = rx_valid;
+wire we_rx = pulse_rx_valid && data_capture_rx;
+wire tkt_eof_rx = (counter_rx == tx_pkt_len - 1);
+
 always@(posedge clk, negedge a_sync_nrst)begin
     if(!a_sync_nrst)begin
-        //addr_data_local <=8'h00;
+        //counter_tx <=8'h00;
         reg_sync_rx_valid    <= 0; 
         sync_reg_start_frame_reception<=0;
         sync_reg_start_frame_transmission <=0;
         tx_data <= 8'hca;
-        counter_tx <= 0;
+        counter_rx <= 0;
         rx_data_ff1 <=0;
-        addr_data_local <=0;
+        counter_tx <=0;
 
     end else begin
         //Lógica de escrita no buffer
         //rx_data_ff1 <= rx_valid ? rx_data :rx_data_ff1;
-        if(rx_valid)begin
-            counter_tx       <=  next_state_counter_tx;
-            // CORREÇÃO: inclui start_frame_reception na condição.
-            // No ciclo em que o cmd_sync_detector pulsa start_frame_reception,
-            // current_state_rx ainda é IDLE (a transição de estado só se
-            // efetiva no ciclo seguinte), mas rx_data já é o PRIMEIRO byte
-            // de dado real (data1[0]). Sem esta condição extra, esse byte
-            // era descartado (mem[counter_tx] <= 8'h00), deslocando toda a
-            // captura em 1 posição e empurrando o primeiro byte do comando
-            // de fim (0x6E / 110) para dentro da região de dado, no lugar
-            // do último byte real esperado.
-            if(((current_state_rx == RX_DATA) || start_frame_reception)  && counter_tx < 248) begin 
-                //248 é o tamanho do pacote menos os códigos de commandos, no caso: 256 - 2*(4) = 248
-                mem[counter_tx]  <= rx_data;
-            end else begin
-                mem[counter_tx]  <= 8'h00;
-            end
+
+        if(we_rx)begin
+            counter_rx       <= !tkt_eof_rx ? counter_rx + 1'b1: 8'h00;
+            mem[counter_rx]  <= rx_data;
         end
-        else begin
-            counter_tx <= counter_tx;
-            mem[counter_tx]  <= mem[counter_tx];
-        end
+
         //Lógica de leitura no buffer
 
         if(ena_dec && current_state_tx == TX_DATA )begin
-            tx_data <= debug_read_gbe_or_fifo ? mem[addr_data_local] : mem_tmp[addr_data_local];
-            addr_data_local <= addr_data_local_next;
+            tx_data <= debug_read_gbe_or_fifo ? mem[counter_tx] : mem_tmp[counter_tx];
+            counter_tx <= counter_tx_next;
         end else begin
 
 
-            if(addr_data_local < tx_pkt_len)begin
-                tx_data <= debug_read_gbe_or_fifo ? mem[addr_data_local] : mem_tmp[addr_data_local];
+            if(counter_tx < tx_pkt_len)begin
+                tx_data <= debug_read_gbe_or_fifo ? mem[counter_tx] : mem_tmp[counter_tx];
             end else begin
                 tx_data <= 0;
             end
-            addr_data_local <= addr_data_local < tx_pkt_len ? addr_data_local_next:0;
+            counter_tx <= counter_tx < tx_pkt_len ? counter_tx_next:0;
 
         end
 
-        reg_sync_rx_valid    <= rx_valid;
 
         sync_reg_start_frame_reception   <= start_frame_reception   ;
         sync_reg_start_frame_transmission<=  start_frame_transmission;
@@ -188,6 +193,9 @@ always@(posedge clk, negedge a_sync_nrst)begin
     end
 end
 
+
+always@(*) data_capture_rx = (current_state_rx == RX_DATA) || start_frame_reception ;
+always@(*)data_capture_tx = (current_state_tx == TX_DATA);
 reg  tx_ena_out_w;
 reg sync_data_valid_tx0;
 reg sync_dec;
@@ -204,8 +212,9 @@ reg [7:0] addr_data_t;
             debug_local_data<=0;
            
         end else begin
-            current_state_tx <= next_state_tx;
+
             current_state_rx <= next_state_rx;
+            current_state_tx <= next_state_tx;
 
 
             sync_data_valid_tx0 <= ena_dec ;
@@ -225,23 +234,21 @@ reg [7:0] addr_data_t;
                     default:next_state_rx = IDLE;
                 endcase
 
-                // CORREÇÃO: se start_frame_reception pulsou neste ciclo,
-                // o byte presente (data1[0]) já foi capturado em mem[0]
-                // pela condição adicionada no bloco de escrita. O próximo
-                // endereço precisa ser 1, não 0 — senão o próximo byte
-                // (data1[1]) sobrescreve mem[0], anulando a correção.
-                next_state_counter_tx = start_frame_reception ? 1 : 0;
+
+                next_state_counter_rx = 0;
             end
             RX_DATA:begin
-                next_state_counter_tx = counter_tx +1;
-                case(counter_tx < tx_pkt_len-1 )
-                    1'b1:next_state_rx = RX_DATA;
-                    1'b0:next_state_rx = IDLE;
-                    default:next_state_rx = IDLE;
-                endcase
+                if(counter_rx == tx_pkt_len-1)begin
+                        next_state_rx = IDLE;
+                        next_state_counter_rx = 0;   
+                end else begin
+                    next_state_rx = RX_DATA;
+                    next_state_counter_rx = counter_rx +1;
+
+                end
             end
             default:begin
-                next_state_counter_tx = 0;
+                next_state_counter_rx = 0;
                 next_state_rx = IDLE;
             end
         endcase
@@ -257,36 +264,36 @@ reg [7:0] addr_data_t;
                     default:next_state_tx = IDLE;
                 endcase
                 tx_ena_out_w = 0;
-                addr_data_local_next = 0;
+                counter_tx_next = 0;
             end
             TX_DATA:begin
-                case(addr_data_local < tx_pkt_len)
+                case(counter_tx < tx_pkt_len)
  
                     1'b1:begin
                         tx_ena_out_w = 1;
                         next_state_tx = TX_DATA;
-                        //addr_data_local_next = addr_data_local < tx_pkt_len ? addr_data_local + 1 : 0;
+                        //counter_tx_next = counter_tx < tx_pkt_len ? counter_tx + 1 : 0;
 
-                        if(addr_data_local < tx_pkt_len && ena_dec)begin
-                            addr_data_local_next =  addr_data_local + 1;
+                        if(counter_tx < tx_pkt_len && ena_dec)begin
+                            counter_tx_next =  counter_tx + 1;
                         end else begin
-                            addr_data_local_next =  addr_data_local;
+                            counter_tx_next =  counter_tx;
                             
                         end
                     end
                     1'b0:begin next_state_tx = start_frame_transmission ?  TX_DATA : IDLE; 
-                        addr_data_local_next = 0;
+                        counter_tx_next = 0;
                         tx_ena_out_w = 0;
                     end
                     default:begin next_state_tx = IDLE;
-                                addr_data_local_next = 0;
+                                counter_tx_next = 0;
                                 tx_ena_out_w = 1;
                     end
                 endcase
             end
             default:begin
                 tx_ena_out_w = 0;
-                addr_data_local_next = 0;
+                counter_tx_next = 0;
                 next_state_tx = IDLE;
             end
         endcase
@@ -306,7 +313,7 @@ reg [7:0] addr_data_t;
         end
     end
 
-assign tx_eof = (addr_data_local == tx_pkt_len - 1) ;
+assign tx_eof = (counter_tx == tx_pkt_len-1) ;
 assign tx_val = (tx_ena_out && ena_dec);
 
 
@@ -316,7 +323,7 @@ cmd_sync_detector cmd_start_frame_reception(
         .ce(ce),
         .a_sync_nrst(a_sync_nrst),
         .rx_data(rx_data),
-        .rx_valid(rx_valid),
+        .rx_valid(pulse_rx_valid),
         .frame_cmd(32'h72_65_63_65), //Frame a ser detectado
         .event_cmd_out(start_frame_reception)
 );
@@ -326,7 +333,7 @@ cmd_sync_detector cmd_frame_transmission(
         .ce(ce),
         .a_sync_nrst(a_sync_nrst),
         .rx_data(rx_data),     //FIFO Sinais Temporário
-        .rx_valid(rx_valid),//FIFO Sinais Temporário
+        .rx_valid(pulse_rx_valid),//FIFO Sinais Temporário
         .frame_cmd(32'h74_72_61_6E),//Frame a ser detectado
         .event_cmd_out(start_frame_transmission)
 );
@@ -356,7 +363,6 @@ localparam M_SEND = 2'b01;
 
 (* keep = "true" *)reg [1:0] m_axis_state;
 reg [1:0] m_axis_next_state;
-reg handshake_sm_axis;
 reg [9:0]m_addr_data;
 reg [9:0]m_addr_data_next;
 
@@ -366,16 +372,11 @@ always@(posedge clk, negedge a_sync_nrst)begin
     if(!a_sync_nrst)begin
         m_axis_state <= M_IDLE;
         m_addr_data <= 0;
-        m_axis_tdata <=0;
-        handshake_sm_axis <=0;
+        //m_axis_tdata <=0;
     end else begin
-        handshake_sm_axis <= m_axis_tvalid && m_axis_tready;    
         m_axis_state <= m_axis_next_state;
-        if(m_axis_state == M_SEND)
-            //Não existe a necessidade de dependência do handshake no endereço.
-            m_addr_data  <= m_addr_data_next;
-        //Dado real
-        m_axis_tdata <= mem[m_addr_data];
+        m_addr_data  <= m_addr_data_next;
+        //m_axis_tdata <= mem[m_addr_data];
 
     end
 end
@@ -383,36 +384,57 @@ end
 always@(*) begin
     case(m_axis_state)
         M_IDLE:begin
-            m_axis_tvalid = addr_data_local == tx_pkt_len;//RemovaTemporário
-            //m_axis_tvalid = 1;//RemovaTemporário
-            m_axis_next_state = (handshake_sm_axis) ? M_SEND : M_IDLE;
+            m_axis_tvalid = counter_rx == tx_pkt_len-1;
             m_axis_tlast = 1'b0;
             m_addr_data_next = 0;
+            if(m_axis_tvalid && m_axis_tready)begin
+                m_addr_data_next = m_addr_data +1;
+                m_axis_next_state=M_SEND;
+                m_axis_tdata = mem[m_addr_data];
+
+            end else begin
+                m_addr_data_next =0;
+                m_axis_next_state = M_IDLE;
+                m_axis_tdata = 'h00;
+
+            end
         end
         M_SEND:begin
-            if(m_addr_data == tx_pkt_len-1)begin
+            if(m_addr_data == tx_pkt_len)begin
                 m_addr_data_next = 0;
                 m_axis_next_state = M_IDLE;
                 m_axis_tvalid = 1'b0;
                 m_axis_tlast = 1'b0;
-            end else if(handshake_sm_axis) begin
+                m_axis_tdata = 'h00;
+            end else if(m_axis_tready) begin
                 m_addr_data_next =  m_addr_data +1;
                 m_axis_next_state = M_SEND;
                 m_axis_tvalid = 1'b1;
                 m_axis_tlast = m_addr_data == tx_pkt_len-1;
+                m_axis_tdata = mem[m_addr_data];
             end else begin
-
+                m_axis_tdata = 'h00;
                 m_addr_data_next = m_addr_data;
                 m_axis_next_state = M_SEND;
                 m_axis_tvalid = 1'b1;
-                m_axis_tlast = 1'b0;
+                m_axis_tlast = m_addr_data == tx_pkt_len-1;
             end
         end
         default:begin
-            m_axis_next_state = M_IDLE;
-            m_axis_tvalid = 1'b1;
+            m_axis_tvalid = counter_rx == tx_pkt_len-1;
             m_axis_tlast = 1'b0;
             m_addr_data_next = 0;
+            if(m_axis_tready)begin
+                m_addr_data_next = m_addr_data +1;
+                m_axis_next_state=M_SEND;
+                m_axis_tdata = mem[m_addr_data];
+
+            end else begin
+                m_addr_data_next =0;
+                m_axis_next_state = M_IDLE;
+                m_axis_tdata = 'h00;
+
+            end
         end
     endcase
 end
@@ -442,8 +464,14 @@ reg [9:0]s_addr_data;
 reg [9:0]s_addr_data_next;
 reg [9:0]s_addr_data_delay;
 
+reg [7:0]debug_axi_fifo2mem;
 
-
+always@(*)begin 
+    if(s_addr_data < 8'h100)
+        debug_axi_fifo2mem = mem_tmp[s_addr_data];
+    else 
+        debug_axi_fifo2mem = 0;
+end
 
 always@(posedge clk, negedge a_sync_nrst)begin
     if(!a_sync_nrst)begin
@@ -452,49 +480,42 @@ always@(posedge clk, negedge a_sync_nrst)begin
         s_addr_data_delay <= 0;
         handshake_ms_axis <=0;
     end else begin
-        //Alteração de sinal habilação
-        handshake_ms_axis <= s_axis_tvalid && s_axis_tready;
+        s_addr_data          <= s_addr_data_next;
         s_axis_state <= s_axis_next_state;
-        // CORREÇÃO: mesmo padrão de bug do lado RX. A condição antiga
-        // (s_axis_state == S_REC && handshake_ms_axis) descartava o
-        // PRIMEIRO byte, capturado no ciclo em que a transição
-        // S_IDLE->S_REC ocorre (state ainda é S_IDLE nesse ciclo).
-        // Também corrige um bug latente: durante stall de backpressure
-        // (S_REC sem handshake), s_addr_data era resetado para 0,
-        // perdendo a posição de escrita corrente.
-        if(handshake_ms_axis)begin 
-            s_addr_data          <= s_addr_data_next;
-            s_addr_data_delay <= s_addr_data;
-            mem_tmp[s_addr_data] <= s_axis_tdata ;
-        end else if(s_axis_state == S_IDLE) begin
-            s_addr_data          <= 0;
-        end
     end
 end
 
 always@(*) begin
     case(s_axis_state)
         S_IDLE:begin
-            s_axis_next_state = (handshake_ms_axis) ? S_REC : S_IDLE;
-            // Se o handshake ocorre neste ciclo, o byte 0 já foi
-            // consumido (gravado em mem_tmp[0] no bloco sequencial acima),
-            // então o próximo endereço deve ser 1, não 0.
-            s_addr_data_next = 1;
             s_axis_tready = 1;
+            if((s_axis_tvalid))begin
+                s_axis_next_state = S_REC;
+                s_addr_data_next = s_addr_data +1; 
+                mem_tmp[s_addr_data] = s_axis_tdata ;
+
+            end else begin
+                s_axis_next_state = S_IDLE;
+                s_addr_data_next = 0;
+                mem_tmp[0] = mem_tmp[0] ;
+            end
         end
         S_REC:begin
-            if(s_addr_data == tx_pkt_len-1)begin
+            if(s_addr_data == tx_pkt_len)begin
                 s_addr_data_next = 0; //Manter o valor anterior
                 s_axis_next_state = S_IDLE;
                 s_axis_tready = 0;
-            end else if(handshake_ms_axis) begin
+                mem_tmp[0] = mem_tmp[0] ;
+            end else if(s_axis_tvalid) begin
                 s_addr_data_next =  s_addr_data +1;
                 s_axis_next_state = S_REC;
-                s_axis_tready = s_addr_data < 256;
+                s_axis_tready = 1;
+                mem_tmp[s_addr_data] = s_axis_tdata ;
             end else begin
                 s_addr_data_next = s_addr_data;
                 s_axis_next_state = S_REC;
-                s_axis_tready = s_addr_data < 256;
+                s_axis_tready = 1;
+                mem_tmp[0] = mem_tmp[0] ;
             end
         end
         default:begin

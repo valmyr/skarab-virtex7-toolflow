@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log buffer_in_ethernet.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source buffer_in_ethernet.tcl
+EAStep vivado -log top_dut.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_dut.tcl

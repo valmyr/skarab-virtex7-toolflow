@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date             : Mon Aug  3 18:36:02 2026
+| Date             : Tue Aug  4 22:34:18 2026
 | Host             : valmyrsilva07-B760M-AORUS-ELITE running 64-bit Ubuntu 20.04.6 LTS
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.430        |
+| Total On-Chip Power (W)  | 1.223        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.043        |
-| Device Static (W)        | 0.386        |
+| Dynamic (W)              | 0.838        |
+| Device Static (W)        | 0.385        |
 | Effective TJA (C/W)      | 0.8          |
-| Max Ambient (C)          | 83.8         |
-| Junction Temperature (C) | 26.2         |
+| Max Ambient (C)          | 84.0         |
+| Junction Temperature (C) | 26.0         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,24 +52,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.193 |       20 |       --- |             --- |
-| Slice Logic              |     0.039 |    47819 |       --- |             --- |
-|   LUT as Logic           |     0.024 |    14487 |    433200 |            3.34 |
-|   LUT as Distributed RAM |     0.009 |     3652 |    174200 |            2.10 |
-|   Register               |     0.004 |    22019 |    866400 |            2.54 |
-|   CARRY4                 |     0.001 |      608 |    108300 |            0.56 |
-|   F7/F8 Muxes            |    <0.001 |     2756 |    433200 |            0.64 |
-|   LUT as Shift Register  |    <0.001 |      175 |    174200 |            0.10 |
-|   Others                 |    <0.001 |     1671 |       --- |             --- |
-| Signals                  |     0.148 |    32961 |       --- |             --- |
+| Clocks                   |     0.115 |       20 |       --- |             --- |
+| Slice Logic              |     0.019 |    43927 |       --- |             --- |
+|   LUT as Logic           |     0.015 |    13792 |    433200 |            3.18 |
+|   LUT as Distributed RAM |     0.001 |     2116 |    174200 |            1.21 |
+|   Register               |     0.001 |    20508 |    866400 |            2.37 |
+|   CARRY4                 |    <0.001 |      588 |    108300 |            0.54 |
+|   F7/F8 Muxes            |    <0.001 |     2548 |    433200 |            0.59 |
+|   LUT as Shift Register  |    <0.001 |      176 |    174200 |            0.10 |
+|   Others                 |    <0.001 |     1613 |       --- |             --- |
+| Signals                  |     0.053 |    31093 |       --- |             --- |
 | Block RAM                |     0.150 |    271.5 |      1470 |           18.47 |
-| MMCM                     |     0.310 |        3 |        20 |           15.00 |
-| DSPs                     |     0.005 |        5 |      3600 |            0.14 |
+| MMCM                     |     0.301 |        3 |        20 |           15.00 |
+| DSPs                     |     0.003 |        5 |      3600 |            0.14 |
 | I/O                      |     0.006 |      157 |       600 |           26.17 |
 | GTH                      |     0.191 |        1 |       --- |             --- |
 | XADC                     |    <0.001 |        1 |       --- |             --- |
-| Static Power             |     0.386 |          |           |                 |
-| Total                    |     1.430 |          |           |                 |
+| Static Power             |     0.385 |          |           |                 |
+| Total                    |     1.223 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,8 +79,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.738 |       0.536 |      0.202 |
-| Vccaux    |       1.800 |     0.226 |       0.173 |      0.053 |
+| Vccint    |       1.000 |     0.539 |       0.339 |      0.200 |
+| Vccaux    |       1.800 |     0.221 |       0.168 |      0.053 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.002 |       0.001 |      0.001 |
@@ -88,7 +88,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.027 |       0.013 |      0.014 |
+| Vccbram   |       1.000 |     0.026 |       0.013 |      0.014 |
 | MGTAVcc   |       1.000 |     0.146 |       0.118 |      0.028 |
 | MGTAVtt   |       1.200 |     0.060 |       0.053 |      0.008 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -102,17 +102,17 @@ Table of Contents
 1.3 Confidence Level
 --------------------
 
-+-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
-+-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-| Design implementation state | High       | Design is routed                                       |                                                                                                            |
-| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
-| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
-| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
-| Device models               | High       | Device models are Production                           |                                                                                                            |
-|                             |            |                                                        |                                                                                                            |
-| Overall confidence level    | Low        |                                                        |                                                                                                            |
-+-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification  | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 
 2. Settings
@@ -153,8 +153,8 @@ Table of Contents
 | skarab_infr/cont_microblaze_wrapper_0/cont_microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK                                                  | skarab_infr/cont_microblaze_wrapper_0/cont_microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/DRCK                                                           |            33.3 |
 | skarab_infr/cont_microblaze_wrapper_0/cont_microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE                                                | skarab_infr/cont_microblaze_wrapper_0/cont_microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0                                                   |            33.3 |
 | sys_clk_mmcm                                                                                                                                           | skarab_infr/sys_clk_mmcm                                                                                                                       |             6.4 |
-| user_clk_mmcm                                                                                                                                          | skarab_infr/user_clk_mmcm                                                                                                                      |             3.3 |
-| user_clk_mmcm_fb                                                                                                                                       | skarab_infr/user_clk_mmcm_fb                                                                                                                   |            51.2 |
+| user_clk_mmcm                                                                                                                                          | skarab_infr/user_clk_mmcm                                                                                                                      |             6.7 |
+| user_clk_mmcm_fb                                                                                                                                       | skarab_infr/user_clk_mmcm_fb                                                                                                                   |            32.0 |
 +--------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
@@ -167,49 +167,48 @@ Table of Contents
 +-------------------------------------------------+-----------+
 | Name                                            | Power (W) |
 +-------------------------------------------------+-----------+
-| top                                             |     1.043 |
-|   ethernet_one_gbe_skarab_axi_d3_ss_bram        |     0.026 |
-|     bram_inst                                   |     0.026 |
-|       asymmetric_a_wider_than_b.bram_inst       |     0.026 |
-|   ethernet_one_gbe_skarab_axi_d4_ss_bram        |     0.026 |
-|     bram_inst                                   |     0.026 |
-|       asymmetric_a_wider_than_b.bram_inst       |     0.026 |
+| top                                             |     0.838 |
+|   ethernet_one_gbe_skarab_axi_d3_ss_bram        |     0.025 |
+|     bram_inst                                   |     0.025 |
+|       asymmetric_a_wider_than_b.bram_inst       |     0.025 |
+|   ethernet_one_gbe_skarab_axi_d4_ss_bram        |     0.025 |
+|     bram_inst                                   |     0.025 |
+|       asymmetric_a_wider_than_b.bram_inst       |     0.025 |
 |   ethernet_one_gbe_skarab_axi_d5_ss_bram        |     0.025 |
 |     bram_inst                                   |     0.025 |
 |       asymmetric_a_wider_than_b.bram_inst       |     0.025 |
-|   ethernet_one_gbe_skarab_axi_inst              |     0.260 |
-|     ethernet_one_gbe_skarab_axi_struct          |     0.260 |
-|       axi_fifo                                  |     0.072 |
-|       axi_fifo1                                 |     0.062 |
-|       d3                                        |     0.007 |
-|       d4                                        |     0.009 |
-|       d5                                        |     0.008 |
-|       delay9                                    |     0.006 |
-|       pkt_ctrs1                                 |     0.015 |
-|       pkt_ctrs_compare1                         |     0.006 |
-|       system_control_one_gbe_skarab2            |     0.062 |
+|   ethernet_one_gbe_skarab_axi_inst              |     0.078 |
+|     ethernet_one_gbe_skarab_axi_struct          |     0.078 |
+|       axi_fifo                                  |     0.014 |
+|       axi_fifo1                                 |     0.014 |
+|       d3                                        |     0.002 |
+|       d4                                        |     0.004 |
+|       d5                                        |     0.003 |
+|       pkt_ctrs1                                 |     0.004 |
+|       pkt_ctrs_compare1                         |     0.002 |
+|       system_control_one_gbe_skarab2            |     0.026 |
 |   ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram |     0.026 |
 |     bram_inst                                   |     0.026 |
 |       symmetric_ram.bram_inst                   |     0.026 |
-|   ethernet_one_gbe_skarab_axi_tx_one_gbe        |     0.410 |
+|   ethernet_one_gbe_skarab_axi_tx_one_gbe        |     0.401 |
 |     gmii_to_sgmii_0                             |     0.319 |
 |       U0                                        |     0.319 |
-|     gmii_to_xaui_translator_0                   |     0.009 |
+|     gmii_to_xaui_translator_0                   |     0.008 |
 |       gmii_to_xaui_fifo_0                       |     0.005 |
 |       packet_byte_count_fifo_0                  |     0.001 |
-|     kat_ten_gb_eth_0                            |     0.078 |
-|       ten_gig_eth_mac_inst                      |     0.012 |
-|       tge_rx_inst                               |     0.018 |
-|       tge_tx_inst                               |     0.045 |
-|     xaui_to_gmii_translator_0                   |     0.003 |
-|       xaui_to_gmii_fifo_0                       |     0.003 |
-|   skarab_infr                                   |     0.242 |
-|     cont_microblaze_wrapper_0                   |     0.024 |
-|       cont_microblaze_i                         |     0.024 |
+|     kat_ten_gb_eth_0                            |     0.067 |
+|       ten_gig_eth_mac_inst                      |     0.010 |
+|       tge_rx_inst                               |     0.011 |
+|       tge_tx_inst                               |     0.042 |
+|     xaui_to_gmii_translator_0                   |     0.006 |
+|       xaui_to_gmii_fifo_0                       |     0.005 |
+|   skarab_infr                                   |     0.235 |
+|     FPGA_DNA_CHECKER_inst                       |     0.001 |
+|     cont_microblaze_wrapper_0                   |     0.025 |
+|       cont_microblaze_i                         |     0.025 |
 |     wishbone_flash_sdram_interface_0            |     0.002 |
-|   sys_block_inst                                |     0.001 |
-|   wbs_arbiter_inst                              |     0.018 |
-|     wbs_arbiter_0                               |     0.015 |
+|   wbs_arbiter_inst                              |     0.016 |
+|     wbs_arbiter_0                               |     0.013 |
 |     wbs_arbiter_1                               |     0.002 |
 |     wbs_arbiter_primary                         |     0.001 |
 +-------------------------------------------------+-----------+

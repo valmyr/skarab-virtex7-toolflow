@@ -1,103 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1785535419">
-  <File Type="NOC_SOLUTION_FILE" Name="buffer_in_ethernet.ncr"/>
-  <File Type="NOC_TRAFFIC_SPEC_FILE" Name="buffer_in_ethernet.nts"/>
-  <File Type="PL_UNMASK_RCDO_FILE" Name="buffer_in_ethernet_pld_unmask.rcdo"/>
-  <File Type="PL_UNMASK_MARKER_RCDO_FILE" Name="buffer_in_ethernet_pld_unmask_markers.rcdo"/>
-  <File Type="PL_MASK_RCDO_FILE" Name="buffer_in_ethernet_pld_mask.rcdo"/>
-  <File Type="PL_MARKER_RCDO_FILE" Name="buffer_in_ethernet_pld_markers.rcdo"/>
-  <File Type="PL-CLEAR-RCDO-FILE" Name="buffer_in_ethernet_pld_clear.rcdo"/>
-  <File Type="PL_UNMASK_RNPI_FILE" Name="buffer_in_ethernet_pld_unmask.rnpi"/>
-  <File Type="PL_SHUTDOWN_RNPI_FILE" Name="buffer_in_ethernet_pld_shutdown.rnpi"/>
-  <File Type="PL_MASK_RNPI_FILE" Name="buffer_in_ethernet_pld_mask.rnpi"/>
-  <File Type="PL_MARKER_RNPI_FILE" Name="buffer_in_ethernet_pld_markers.rnpi"/>
-  <File Type="BOOT_MARKER_RNPI_FILE" Name="buffer_in_ethernet_boot_markers.rnpi"/>
-  <File Type="PL_RNPI_FILE" Name="buffer_in_ethernet_pld.rnpi"/>
-  <File Type="BOOT_RNPI_FILE" Name="buffer_in_ethernet_boot.rnpi"/>
-  <File Type="MARKER-RNPI-FILE" Name="buffer_in_ethernet_markers.rnpi"/>
-  <File Type="PL-RCDO-FILE" Name="buffer_in_ethernet_pld.rcdo"/>
-  <File Type="MARKER-RCDO-FILE" Name="buffer_in_ethernet_markers.rcdo"/>
-  <File Type="RCDO-FILE" Name="buffer_in_ethernet.rcdo"/>
-  <File Type="PL-LTX-FILE" Name="buffer_in_ethernet_pld.ltx"/>
-  <File Type="BOOT-LTX-FILE" Name="buffer_in_ethernet_boot.ltx"/>
-  <File Type="LTX-FILE" Name="buffer_in_ethernet.ltx"/>
-  <File Type="PL-BIF-FILE" Name="buffer_in_ethernet_pld.bif"/>
-  <File Type="BOOT-BIF-FILE" Name="buffer_in_ethernet_boot.bif"/>
-  <File Type="BIF-FILE" Name="buffer_in_ethernet.bif"/>
-  <File Type="MMI-FILE" Name="buffer_in_ethernet.mmi"/>
+<GenRun Id="impl_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1785884905">
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="buffer_in_ethernet_postroute_physopted.rqs"/>
-  <File Type="ROUTE-RQS" Name="buffer_in_ethernet_routed.rqs"/>
-  <File Type="RBD_FILE" Name="buffer_in_ethernet.rbd"/>
-  <File Type="NPI_FILE" Name="buffer_in_ethernet.npi"/>
-  <File Type="RNPI_FILE" Name="buffer_in_ethernet.rnpi"/>
-  <File Type="CFI_FILE" Name="buffer_in_ethernet.cfi"/>
-  <File Type="RCFI_FILE" Name="buffer_in_ethernet.rcfi"/>
-  <File Type="PL-PDI-FILE" Name="buffer_in_ethernet_pld.pdi"/>
-  <File Type="BOOT-PDI-FILE" Name="buffer_in_ethernet_boot.pdi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="buffer_in_ethernet_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="buffer_in_ethernet_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="buffer_in_ethernet_drc_routed.rpx"/>
-  <File Type="ROUTE-PWR-RPX" Name="buffer_in_ethernet_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="buffer_in_ethernet_route_status.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="buffer_in_ethernet_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="buffer_in_ethernet_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="buffer_in_ethernet_power_summary_routed.pb"/>
-  <File Type="ROUTE-STATUS-PB" Name="buffer_in_ethernet_route_status.pb"/>
-  <File Type="ROUTE-PWR" Name="buffer_in_ethernet_power_routed.rpt"/>
-  <File Type="PLACE-CTRL" Name="buffer_in_ethernet_control_sets_placed.rpt"/>
-  <File Type="OPT-DRC" Name="buffer_in_ethernet_drc_opted.rpt"/>
-  <File Type="ROUTE-DRC" Name="buffer_in_ethernet_drc_routed.rpt"/>
-  <File Type="PLACE-UTIL" Name="buffer_in_ethernet_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="buffer_in_ethernet_utilization_placed.pb"/>
-  <File Type="PLACE-IO" Name="buffer_in_ethernet_io_placed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="buffer_in_ethernet_drc_routed.pb"/>
-  <File Type="OPT-HWDEF" Name="buffer_in_ethernet.hwdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="buffer_in_ethernet_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-SIMILARITY" Name="buffer_in_ethernet_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="buffer_in_ethernet_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="buffer_in_ethernet_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="buffer_in_ethernet_bus_skew_routed.rpx"/>
-  <File Type="REPORTS-TCL" Name="buffer_in_ethernet_reports.tcl"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="buffer_in_ethernet_bus_skew_routed.pb"/>
-  <File Type="PA-TCL" Name="buffer_in_ethernet.tcl"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="buffer_in_ethernet_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="buffer_in_ethernet_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="buffer_in_ethernet_timing_summary_postroute_physopted.pb"/>
-  <File Type="RDI-RDI" Name="buffer_in_ethernet.vdi"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="buffer_in_ethernet_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="top_dut_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="top_dut_routed.rqs"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="top_dut.vdi"/>
+  <File Type="BG-DRC" Name="top_dut.drc"/>
+  <File Type="BG-BGN" Name="top_dut.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="top_dut.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="top_dut.ltx"/>
+  <File Type="PL-LTX-FILE" Name="top_dut_pld.ltx"/>
+  <File Type="BOOT-LTX-FILE" Name="top_dut_boot.ltx"/>
+  <File Type="LTX-FILE" Name="top_dut.ltx"/>
+  <File Type="PL-BIF-FILE" Name="top_dut_pld.bif"/>
+  <File Type="BOOT-BIF-FILE" Name="top_dut_boot.bif"/>
+  <File Type="BIF-FILE" Name="top_dut.bif"/>
+  <File Type="MMI-FILE" Name="top_dut.mmi"/>
+  <File Type="RBD_FILE" Name="top_dut.rbd"/>
+  <File Type="NPI_FILE" Name="top_dut.npi"/>
+  <File Type="PL_UNMASK_RCDO_FILE" Name="top_dut_pld_unmask.rcdo"/>
+  <File Type="PL_UNMASK_MARKER_RCDO_FILE" Name="top_dut_pld_unmask_markers.rcdo"/>
+  <File Type="PL_MASK_RCDO_FILE" Name="top_dut_pld_mask.rcdo"/>
+  <File Type="PL_MARKER_RCDO_FILE" Name="top_dut_pld_markers.rcdo"/>
+  <File Type="PL-CLEAR-RCDO-FILE" Name="top_dut_pld_clear.rcdo"/>
+  <File Type="PL-RCDO-FILE" Name="top_dut_pld.rcdo"/>
+  <File Type="PL_UNMASK_RNPI_FILE" Name="top_dut_pld_unmask.rnpi"/>
+  <File Type="PL_SHUTDOWN_RNPI_FILE" Name="top_dut_pld_shutdown.rnpi"/>
+  <File Type="PL_MASK_RNPI_FILE" Name="top_dut_pld_mask.rnpi"/>
+  <File Type="PL_MARKER_RNPI_FILE" Name="top_dut_pld_markers.rnpi"/>
+  <File Type="PL_RNPI_FILE" Name="top_dut_pld.rnpi"/>
+  <File Type="BOOT_MARKER_RNPI_FILE" Name="top_dut_boot_markers.rnpi"/>
+  <File Type="BOOT_RNPI_FILE" Name="top_dut_boot.rnpi"/>
+  <File Type="MARKER-RCDO-FILE" Name="top_dut_markers.rcdo"/>
+  <File Type="MARKER-RNPI-FILE" Name="top_dut_markers.rnpi"/>
+  <File Type="RCDO-FILE" Name="top_dut.rcdo"/>
+  <File Type="RNPI_FILE" Name="top_dut.rnpi"/>
+  <File Type="CFI_FILE" Name="top_dut.cfi"/>
+  <File Type="RCFI_FILE" Name="top_dut.rcfi"/>
+  <File Type="PL-PDI-FILE" Name="top_dut_pld.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="top_dut_boot.pdi"/>
+  <File Type="PDI-FILE" Name="top_dut.pdi"/>
+  <File Type="BITSTR-MMI" Name="top_dut.mmi"/>
+  <File Type="BITSTR-BMM" Name="top_dut_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="top_dut.nky"/>
+  <File Type="BITSTR-RBT" Name="top_dut.rbt"/>
+  <File Type="BITSTR-MSK" Name="top_dut.msk"/>
+  <File Type="BG-BIN" Name="top_dut.bin"/>
+  <File Type="BG-BIT" Name="top_dut.bit"/>
+  <File Type="NOC_SOLUTION_FILE" Name="top_dut.ncr"/>
+  <File Type="NOC_TRAFFIC_SPEC_FILE" Name="top_dut.nts"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="buffer_in_ethernet_bus_skew_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="buffer_in_ethernet_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="buffer_in_ethernet.bit"/>
-  <File Type="PDI-FILE" Name="buffer_in_ethernet.pdi"/>
-  <File Type="BG-DRC" Name="buffer_in_ethernet.drc"/>
-  <File Type="BG-BGN" Name="buffer_in_ethernet.bgn"/>
-  <File Type="BG-BIN" Name="buffer_in_ethernet.bin"/>
-  <File Type="BITSTR-MSK" Name="buffer_in_ethernet.msk"/>
-  <File Type="BITSTR-RBT" Name="buffer_in_ethernet.rbt"/>
-  <File Type="BITSTR-NKY" Name="buffer_in_ethernet.nky"/>
-  <File Type="BITSTR-BMM" Name="buffer_in_ethernet_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="buffer_in_ethernet.mmi"/>
-  <File Type="BITSTR-SYSDEF" Name="buffer_in_ethernet.sysdef"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="buffer_in_ethernet.ltx"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="buffer_in_ethernet_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-DCP" Name="buffer_in_ethernet_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="buffer_in_ethernet_routed_error.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="buffer_in_ethernet_routed_bb.dcp"/>
-  <File Type="ROUTE-TIMING-PB" Name="buffer_in_ethernet_timing_summary_routed.pb"/>
-  <File Type="OPT-DCP" Name="buffer_in_ethernet_opt.dcp"/>
-  <File Type="PLACE-DCP" Name="buffer_in_ethernet_placed.dcp"/>
-  <File Type="PWROPT-DCP" Name="buffer_in_ethernet_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="buffer_in_ethernet_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="buffer_in_ethernet_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="buffer_in_ethernet_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="buffer_in_ethernet_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="buffer_in_ethernet_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="buffer_in_ethernet_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="buffer_in_ethernet_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="buffer_in_ethernet_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="top_dut_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="top_dut_postroute_physopt.dcp"/>
+  <File Type="ROUTE-RQS-PB" Name="top_dut_rqs_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="top_dut_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="top_dut_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="top_dut_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="top_dut_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="top_dut_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="top_dut_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="top_dut_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="top_dut_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="top_dut_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="top_dut_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="top_dut_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="top_dut_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="top_dut_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="top_dut_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="top_dut_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="top_dut_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="top_dut_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="top_dut_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="top_dut_drc_routed.rpt"/>
+  <File Type="ROUTE-UTIL-PB" Name="top_dut_utilization_routed.pb"/>
+  <File Type="ROUTE-UTIL" Name="top_dut_utilization_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="top_dut_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="top_dut_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="top_dut_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="top_dut_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="top_dut_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="top_dut_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="top_dut_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="top_dut_postplace_pwropt.dcp"/>
+  <File Type="PLACE-RQA-PB" Name="top_dut_rqa_placed.pb"/>
+  <File Type="PLACE-TIMING" Name="top_dut_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="top_dut_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="top_dut_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="top_dut_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="top_dut_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="top_dut_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="top_dut_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="top_dut_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="top_dut_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="top_dut_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="top_dut_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="top_dut_pwropt.dcp"/>
+  <File Type="OPT-RQA-PB" Name="top_dut_rqa_opted.pb"/>
+  <File Type="OPT-TIMING" Name="top_dut_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="top_dut.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="top_dut_methodology_drc_opted.rpt"/>
+  <File Type="OPT-UTIL-PB" Name="top_dut_utilization_opted.pb"/>
+  <File Type="OPT-UTIL" Name="top_dut_utilization_opted.rpt"/>
+  <File Type="OPT-DRC" Name="top_dut_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="top_dut_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="top_dut_timing_summary_init.rpt"/>
+  <File Type="REPORTS-TCL" Name="top_dut_reports.tcl"/>
+  <File Type="PA-TCL" Name="top_dut.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../verilog_custom/onegbe_skarab/control_axi_stream_gbe.v">
+    <File Path="$PSRCDIR/sources_1/new/buffer_in_ethernet.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -113,6 +131,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../verilog_custom/onegbe_skarab/cmd_sync_detector.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -120,7 +145,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/buffer_in_ethernet.v">
+    <File Path="$PPRDIR/../verilog_custom/onegbe_skarab/control_axi_stream_gbe.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/wrapper_top_dut.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -129,8 +161,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="buffer_in_ethernet"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="top_dut"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -156,6 +187,5 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
-    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>

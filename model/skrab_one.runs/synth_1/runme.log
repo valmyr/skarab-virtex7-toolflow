@@ -1,73 +1,205 @@
 
 *** Running vivado
-    with args -log buffer_in_ethernet.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source buffer_in_ethernet.tcl
+    with args -log top_dut.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_dut.tcl
 
 
 ****** Vivado v2025.2 (64-bit)
   **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Fri Jul 31 19:03:41 2026
+  **** Start of session at: Tue Aug  4 20:08:26 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
-source buffer_in_ethernet.tcl -notrace
-Command: synth_design -top buffer_in_ethernet -part xc7vx485tffg1157-1
+source top_dut.tcl -notrace
+Command: synth_design -top top_dut -part xc7vx485tffg1157-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 2830634
+INFO: [Synth 8-7075] Helper process launched with PID 441048
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2063.309 ; gain = 438.922 ; free physical = 10472 ; free virtual = 29413
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2495.621 ; gain = 481.875 ; free physical = 33211 ; free virtual = 43828
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'buffer_in_ethernet' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:23]
-INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:155]
-INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:162]
-INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:178]
-INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:187]
+WARNING: [Synth 8-10929] literal value 'h100 truncated to fit in 8 bits [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:434]
+INFO: [Synth 8-6157] synthesizing module 'top_dut' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv:25]
+INFO: [Synth 8-6157] synthesizing module 'axis_data_fifo_0' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.gen/sources_1/ip/axis_data_fifo_0/synth/axis_data_fifo_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axis_data_fifo_v2_0_17_top' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.gen/sources_1/ip/axis_data_fifo_0/hdl/axis_data_fifo_v2_0_vl_rfs.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_1_util_aclken_converter_wrapper' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.gen/sources_1/ip/axis_data_fifo_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:596]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_1_util_axis2vector' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.gen/sources_1/ip/axis_data_fifo_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:805]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_1_util_axis2vector' (0#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.gen/sources_1/ip/axis_data_fifo_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:805]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_1_util_vector2axis' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.gen/sources_1/ip/axis_data_fifo_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_1_util_vector2axis' (0#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.gen/sources_1/ip/axis_data_fifo_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_1_util_aclken_converter_wrapper' (0#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.gen/sources_1/ip/axis_data_fifo_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:596]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_axis' [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2530]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (0#1) [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:522]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-226] default block is never used [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1220]
+INFO: [Synth 8-226] default block is never used [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1287]
+INFO: [Synth 8-226] default block is never used [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1309]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1927]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (0#1) [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1927]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (0#1) [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (0#1) [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (0#1) [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (0#1) [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (0#1) [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (0#1) [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_axis' (0#1) [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2530]
+INFO: [Synth 8-6155] done synthesizing module 'axis_data_fifo_v2_0_17_top' (0#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.gen/sources_1/ip/axis_data_fifo_0/hdl/axis_data_fifo_v2_0_vl_rfs.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'axis_data_fifo_0' (0#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.gen/sources_1/ip/axis_data_fifo_0/synth/axis_data_fifo_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'control_axi_stream_gbe' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:26]
+INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:195]
+INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:225]
+INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:234]
 INFO: [Synth 8-6157] synthesizing module 'cmd_sync_detector' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/cmd_sync_detector.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'cmd_sync_detector' (0#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/cmd_sync_detector.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'buffer_in_ethernet' (0#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:23]
-WARNING: [Synth 8-6014] Unused sequential element reg_sync_rx_valid_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:75]
-WARNING: [Synth 8-6014] Unused sequential element addr_data_write_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:76]
-WARNING: [Synth 8-6014] Unused sequential element sync_reg_start_frame_transmission_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:78]
-WARNING: [Synth 8-6014] Unused sequential element rx_data_ff0_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:79]
-WARNING: [Synth 8-6014] Unused sequential element rx_data_ff1_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:80]
-WARNING: [Synth 8-6014] Unused sequential element rx_data_ff2_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:81]
-WARNING: [Synth 8-6014] Unused sequential element addr_data_local_reg_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:82]
-WARNING: [Synth 8-6014] Unused sequential element rx_data_ff3_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:92]
-WARNING: [Synth 8-6014] Unused sequential element addr_data_t_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:131]
-WARNING: [Synth 8-6014] Unused sequential element sync_data_valid_tx_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:132]
-WARNING: [Synth 8-6014] Unused sequential element sync_data_valid_tx0_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:133]
-WARNING: [Synth 8-6014] Unused sequential element sync_dec_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:135]
-WARNING: [Synth 8-6014] Unused sequential element debug_local_data_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:136]
-WARNING: [Synth 8-7137] Register mem_reg in module buffer_in_ethernet has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
-WARNING: [Synth 8-7137] Register tx_ena_out_reg in module buffer_in_ethernet has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:134]
-WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/buffer_in_ethernet.v:105]
+INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:453]
+INFO: [Synth 8-6155] done synthesizing module 'control_axi_stream_gbe' (0#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:26]
+WARNING: [Synth 8-689] width (1) of port connection 'tx_data' does not match port width (8) of module 'control_axi_stream_gbe' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv:153]
+WARNING: [Synth 8-7071] port 'tx_val' of module 'control_axi_stream_gbe' is unconnected for instance 'gbe_control' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv:142]
+WARNING: [Synth 8-7071] port 'tx_eof' of module 'control_axi_stream_gbe' is unconnected for instance 'gbe_control' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv:142]
+WARNING: [Synth 8-7023] instance 'gbe_control' of module 'control_axi_stream_gbe' has 23 connections declared, but only 21 given [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv:142]
+INFO: [Synth 8-6155] done synthesizing module 'top_dut' (0#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv:25]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3087]
+WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:550]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1404]
+WARNING: [Synth 8-6014] Unused sequential element reg_sync_rx_valid_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:112]
+WARNING: [Synth 8-6014] Unused sequential element sync_reg_start_frame_reception_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:113]
+WARNING: [Synth 8-6014] Unused sequential element sync_reg_start_frame_transmission_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:114]
+WARNING: [Synth 8-6014] Unused sequential element rx_data_ff1_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:117]
+WARNING: [Synth 8-6014] Unused sequential element addr_data_t_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:171]
+WARNING: [Synth 8-6014] Unused sequential element sync_data_valid_tx_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:172]
+WARNING: [Synth 8-6014] Unused sequential element sync_data_valid_tx0_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:173]
+WARNING: [Synth 8-6014] Unused sequential element sync_dec_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:175]
+WARNING: [Synth 8-6014] Unused sequential element debug_local_data_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:176]
+WARNING: [Synth 8-6014] Unused sequential element s_addr_data_delay_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:444]
+WARNING: [Synth 8-6014] Unused sequential element handshake_ms_axis_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:445]
+WARNING: [Synth 8-7137] Register mem_reg in module control_axi_stream_gbe has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register tx_ena_out_reg in module control_axi_stream_gbe has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:174]
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:137]
 Reason is one or more of the following :
 	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+WARNING: [Synth 8-3848] Net tx_data in module/entity top_dut does not have driver. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv:37]
+WARNING: [Synth 8-3848] Net tx_val in module/entity top_dut does not have driver. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv:38]
+WARNING: [Synth 8-3848] Net tx_eof in module/entity top_dut does not have driver. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv:39]
+WARNING: [Synth 8-3848] Net data_valid_rx in module/entity top_dut does not have driver. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv:42]
+WARNING: [Synth 8-3848] Net data_valid_rx1 in module/entity top_dut does not have driver. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv:43]
 WARNING: [Synth 8-7129] Port ce in module cmd_sync_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ena_mux[1] in module buffer_in_ethernet is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ena_mux[0] in module buffer_in_ethernet is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tlast in module control_axi_stream_gbe is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module axis_infrastructure_v1_1_1_util_aclken_converter_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESETN in module axis_infrastructure_v1_1_1_util_aclken_converter_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLKEN in module axis_infrastructure_v1_1_1_util_aclken_converter_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLKEN in module axis_infrastructure_v1_1_1_util_aclken_converter_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_clk in module xpm_fifo_rst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sleep in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rsta in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[13] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[12] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[11] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[10] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[9] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[8] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[7] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[6] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[5] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[4] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[3] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[2] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[1] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[0] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_aclk in module xpm_fifo_axis is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_aclk in module axis_data_fifo_v2_0_17_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_data[7] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_data[6] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_data[5] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_data[4] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_data[3] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_data[2] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_data[1] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_data[0] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_val[3] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_val[2] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_val[1] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_val[0] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_eof in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_valid_rx in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_valid_rx1 in module top_dut is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2165.277 ; gain = 540.891 ; free physical = 10356 ; free virtual = 29298
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2676.590 ; gain = 662.844 ; free physical = 32951 ; free virtual = 43595
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2180.121 ; gain = 555.734 ; free physical = 10350 ; free virtual = 29292
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2676.590 ; gain = 662.844 ; free physical = 32951 ; free virtual = 43595
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2676.590 ; gain = 662.844 ; free physical = 32951 ; free virtual = 43595
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2676.590 ; gain = 0.000 ; free physical = 32951 ; free virtual = 43595
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst_axis.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_dut_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_dut_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 4 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2778.426 ; gain = 0.000 ; free physical = 32938 ; free virtual = 43582
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2778.461 ; gain = 0.000 ; free physical = 32937 ; free virtual = 43581
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2778.461 ; gain = 764.715 ; free physical = 36844 ; free virtual = 47495
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7vx485tffg1157-1
-INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2180.121 ; gain = 555.734 ; free physical = 10351 ; free virtual = 29292
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2786.430 ; gain = 772.684 ; free physical = 36844 ; free virtual = 47495
 ---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2786.430 ; gain = 772.684 ; free physical = 36841 ; free virtual = 47491
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'cmd_sync_detector'
-INFO: [Synth 8-802] inferred FSM for state register 'current_state_tx_reg' in module 'buffer_in_ethernet'
-INFO: [Synth 8-802] inferred FSM for state register 'current_state_rx_reg' in module 'buffer_in_ethernet'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_tx_reg' in module 'control_axi_stream_gbe'
+INFO: [Synth 8-802] inferred FSM for state register 'm_axis_state_reg' in module 'control_axi_stream_gbe'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -83,41 +215,156 @@ INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using e
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
                     IDLE |                                0 |                              000
-                 RX_DATA |                                1 |                              001
+                 TX_DATA |                                1 |                              010
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'current_state_rx_reg' using encoding 'sequential' in module 'buffer_in_ethernet'
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_tx_reg' using encoding 'sequential' in module 'control_axi_stream_gbe'
+INFO: [Synth 8-6159] Found Keep on FSM register 'm_axis_state_reg' in module 'control_axi_stream_gbe', re-encoding will not be performed
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    IDLE |                                0 |                              000
-                 TX_DATA |                                1 |                              010
+*
+                  M_IDLE |                               00 |                               00
+                  M_SEND |                               01 |                               01
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'current_state_tx_reg' using encoding 'sequential' in module 'buffer_in_ethernet'
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[255]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[254]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[253]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[252]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[251]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[250]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[249]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[248]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[247]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[246]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[245]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[244]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[243]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[242]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[241]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[240]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[239]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[238]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[237]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[236]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[235]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[234]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[233]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[232]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[231]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[230]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[229]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[228]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[227]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[226]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[225]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[224]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[223]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[222]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[221]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[220]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[219]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[218]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[217]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[216]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[215]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[214]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[213]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[212]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[211]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[210]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[209]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[208]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[207]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[206]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[205]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[204]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[203]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[202]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[201]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[200]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[199]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[198]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[197]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[196]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[195]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[194]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[193]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[192]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[191]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[190]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[189]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[188]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[187]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[186]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[185]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[184]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[183]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[182]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[181]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[180]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[179]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[178]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[177]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[176]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[175]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[174]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[173]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[172]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[171]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[170]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[169]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[168]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[167]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[166]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[165]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[164]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[163]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[162]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[161]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[160]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[159]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[158]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[157]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_tmp_reg[156]' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v:459]
+INFO: [Common 17-14] Message 'Synth 8-327' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2221.184 ; gain = 596.797 ; free physical = 10296 ; free virtual = 29238
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2786.430 ; gain = 772.684 ; free physical = 36861 ; free virtual = 47511
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 2     
+	   4 Input   16 Bit       Adders := 4     
+	   4 Input   15 Bit       Adders := 6     
 	   2 Input   11 Bit       Adders := 1     
-	   2 Input    8 Bit       Adders := 1     
-	   2 Input    4 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 3     
+	   4 Input    2 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 4     
+	               15 Bit    Registers := 6     
+	               14 Bit    Registers := 4     
 	               11 Bit    Registers := 1     
-	                8 Bit    Registers := 258   
-	                1 Bit    Registers := 4     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 257   
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 24    
++---RAMs : 
+	             448K Bit	(32768 X 14 bit)          RAMs := 2     
 +---Muxes : 
-	   2 Input   11 Bit        Muxes := 1     
-	   2 Input    8 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 4     
+	   2 Input   10 Bit        Muxes := 11    
+	   2 Input    8 Bit        Muxes := 7     
 	   5 Input    3 Bit        Muxes := 2     
 	   2 Input    3 Bit        Muxes := 14    
-	   2 Input    1 Bit        Muxes := 10    
+	   2 Input    2 Bit        Muxes := 62    
+	   4 Input    2 Bit        Muxes := 14    
+	   4 Input    1 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 292   
+	   3 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -130,28 +377,219 @@ BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-7129] Port ce in module buffer_in_ethernet is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ena_mux[1] in module buffer_in_ethernet is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ena_mux[0] in module buffer_in_ethernet is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ce in module control_axi_stream_gbe is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tlast in module control_axi_stream_gbe is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rsta in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[13] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[12] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[11] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[10] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[9] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[8] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[7] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[6] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[5] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[4] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[3] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[2] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[1] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[0] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_aclk in module xpm_fifo_axis is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_data[7] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_data[6] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_data[5] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_data[4] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_data[3] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_data[2] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_data[1] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_data[0] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_val[3] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_val[2] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_val[1] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_val[0] in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_eof in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_valid_rx in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_valid_rx1 in module top_dut is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[255][7]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[255][6]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[255][5]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[255][4]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[255][3]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[255][2]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[255][1]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[255][0]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[254][7]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[254][6]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[254][5]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[254][4]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[254][3]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[254][2]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[254][1]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[254][0]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[253][7]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[253][6]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[253][5]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[253][4]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[253][3]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[253][2]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[253][1]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[253][0]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[252][7]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[252][6]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[252][5]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[252][4]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[252][3]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[252][2]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[252][1]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[252][0]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[251][7]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[251][6]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[251][5]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[251][4]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[251][3]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[251][2]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[251][1]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[251][0]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[250][7]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[250][6]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[250][5]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[250][4]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[250][3]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[250][2]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[250][1]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[250][0]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[249][7]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[249][6]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[249][5]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[249][4]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[249][3]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[249][2]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[249][1]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[249][0]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[248][7]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[248][6]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[248][5]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[248][4]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[248][3]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[248][2]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[248][1]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[248][0]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[247][7]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[247][6]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[247][5]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[247][4]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[247][3]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[247][2]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[247][1]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[247][0]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[246][7]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[246][6]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[246][5]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[246][4]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[246][3]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[246][2]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[246][1]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[246][0]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[245][7]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[245][6]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[245][5]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[245][4]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[245][3]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[245][2]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[245][1]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[245][0]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[244][7]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[244][6]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[244][5]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[244][4]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[244][3]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[244][2]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[244][1]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[244][0]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[243][7]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[243][6]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[243][5]) is unused and will be removed from module control_axi_stream_gbe.
+WARNING: [Synth 8-3332] Sequential element (mem_tmp_reg[243][4]) is unused and will be removed from module control_axi_stream_gbe.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2654.324 ; gain = 1029.938 ; free physical = 9867 ; free virtual = 28817
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2786.430 ; gain = 772.684 ; free physical = 36764 ; free virtual = 47443
 ---------------------------------------------------------------------------------
-No constraint files found.
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++--------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                         | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|xpm_fifo_axis:/xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 32 K x 14(READ_FIRST)  | W |   | 32 K x 14(WRITE_FIRST) |   | R | Port A and B     | 0      | 14     | 
+|xpm_fifo_axis:/xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 32 K x 14(READ_FIRST)  | W |   | 32 K x 14(WRITE_FIRST) |   | R | Port A and B     | 0      | 14     | 
++--------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2816.430 ; gain = 802.684 ; free physical = 36682 ; free virtual = 47408
+---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 2654.324 ; gain = 1029.938 ; free physical = 9865 ; free virtual = 28816
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2816.430 ; gain = 802.684 ; free physical = 36681 ; free virtual = 47408
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++--------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                         | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|xpm_fifo_axis:/xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 32 K x 14(READ_FIRST)  | W |   | 32 K x 14(WRITE_FIRST) |   | R | Port A and B     | 0      | 14     | 
+|xpm_fifo_axis:/xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 32 K x 14(READ_FIRST)  | W |   | 32 K x 14(WRITE_FIRST) |   | R | Port A and B     | 0      | 14     | 
++--------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2654.324 ; gain = 1029.938 ; free physical = 9864 ; free virtual = 28815
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2827.453 ; gain = 813.707 ; free physical = 36666 ; free virtual = 47397
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -169,37 +607,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2753.137 ; gain = 1128.750 ; free physical = 9784 ; free virtual = 28735
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3003.266 ; gain = 989.520 ; free physical = 37905 ; free virtual = 48401
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2753.137 ; gain = 1128.750 ; free physical = 9784 ; free virtual = 28735
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3003.266 ; gain = 989.520 ; free physical = 37904 ; free virtual = 48400
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2753.137 ; gain = 1128.750 ; free physical = 9784 ; free virtual = 28734
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3003.266 ; gain = 989.520 ; free physical = 37903 ; free virtual = 48399
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2753.137 ; gain = 1128.750 ; free physical = 9784 ; free virtual = 28734
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3003.266 ; gain = 989.520 ; free physical = 37903 ; free virtual = 48399
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2753.137 ; gain = 1128.750 ; free physical = 9783 ; free virtual = 28733
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3006.234 ; gain = 992.488 ; free physical = 37903 ; free virtual = 48398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2753.137 ; gain = 1128.750 ; free physical = 9783 ; free virtual = 28733
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3006.234 ; gain = 992.488 ; free physical = 37902 ; free virtual = 48398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -212,59 +650,53 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |     7|
-|3     |LUT1   |     2|
-|4     |LUT2   |    55|
-|5     |LUT3   |    18|
-|6     |LUT4   |    67|
-|7     |LUT5   |    21|
-|8     |LUT6   |  1373|
-|9     |MUXF7  |   544|
-|10    |MUXF8  |   272|
-|11    |FDCE   |    54|
-|12    |FDPE   |     4|
-|13    |FDRE   |  2048|
-|14    |IBUF   |    29|
-|15    |OBUF   |    19|
-+------+-------+------+
-
-Report Instance Areas: 
-+------+----------------------------+--------------------+------+
-|      |Instance                    |Module              |Cells |
-+------+----------------------------+--------------------+------+
-|1     |top                         |                    |  4514|
-|2     |  cmd_frame_transmission    |cmd_sync_detector   |    31|
-|3     |  cmd_start_frame_reception |cmd_sync_detector_0 |    13|
-+------+----------------------------+--------------------+------+
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    65|
+|3     |LUT1     |     9|
+|4     |LUT2     |    80|
+|5     |LUT3     |    71|
+|6     |LUT4     |    69|
+|7     |LUT5     |    31|
+|8     |LUT6     |   951|
+|9     |MUXF7    |   306|
+|10    |MUXF8    |   153|
+|11    |RAMB36E1 |    28|
+|13    |FDCE     |    95|
+|14    |FDPE     |     1|
+|15    |FDRE     |  2205|
+|16    |FDSE     |    16|
+|17    |IBUF     |    11|
+|18    |OBUF     |     1|
+|19    |OBUFT    |    15|
++------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2753.137 ; gain = 1128.750 ; free physical = 9783 ; free virtual = 28733
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3006.234 ; gain = 992.488 ; free physical = 37902 ; free virtual = 48398
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2753.137 ; gain = 1128.750 ; free physical = 9783 ; free virtual = 28733
-Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2753.145 ; gain = 1128.750 ; free physical = 9783 ; free virtual = 28733
+Synthesis finished with 0 errors, 0 critical warnings and 2343 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3006.234 ; gain = 890.617 ; free physical = 37902 ; free virtual = 48398
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3006.242 ; gain = 992.488 ; free physical = 37902 ; free virtual = 48398
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2768.012 ; gain = 0.000 ; free physical = 9938 ; free virtual = 28889
-INFO: [Netlist 29-17] Analyzing 823 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3006.242 ; gain = 0.000 ; free physical = 38065 ; free virtual = 48560
+INFO: [Netlist 29-17] Analyzing 552 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'buffer_in_ethernet' is not ideal for floorplanning, since the cellview 'buffer_in_ethernet' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+WARNING: [Netlist 29-101] Netlist 'top_dut' is not ideal for floorplanning, since the cellview 'control_axi_stream_gbe' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2929.535 ; gain = 0.000 ; free physical = 9818 ; free virtual = 28769
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3062.262 ; gain = 0.000 ; free physical = 38037 ; free virtual = 48533
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 4ab57e7b
+Synth Design complete | Checksum: d89b6ae2
 INFO: [Common 17-83] Releasing license: Synthesis
-26 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
+89 Infos, 313 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 2929.570 ; gain = 1305.184 ; free physical = 9816 ; free virtual = 28767
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2079.360; main = 2060.877; forked = 287.646
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3647.359; main = 2929.539; forked = 993.031
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2953.547 ; gain = 0.000 ; free physical = 9817 ; free virtual = 28767
-INFO: [Common 17-1381] The checkpoint '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.runs/synth_1/buffer_in_ethernet.dcp' has been generated.
-INFO: [Vivado 12-24828] Executing command : report_utilization -file buffer_in_ethernet_utilization_synth.rpt -pb buffer_in_ethernet_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jul 31 19:03:57 2026...
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:26 . Memory (MB): peak = 3062.297 ; gain = 1437.910 ; free physical = 38037 ; free virtual = 48532
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2135.951; main = 2135.951; forked = 282.600
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3779.469; main = 3062.266; forked = 993.035
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3086.273 ; gain = 0.000 ; free physical = 38037 ; free virtual = 48532
+INFO: [Common 17-1381] The checkpoint '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.runs/synth_1/top_dut.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file top_dut_utilization_synth.rpt -pb top_dut_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Aug  4 20:08:55 2026...

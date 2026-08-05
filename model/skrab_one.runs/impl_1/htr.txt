@@ -7,4 +7,4 @@
 # Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 #
 
-vivado -log buffer_in_ethernet.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source buffer_in_ethernet.tcl -notrace
+vivado -log top_dut.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_dut.tcl -notrace

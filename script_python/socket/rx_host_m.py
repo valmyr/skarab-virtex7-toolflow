@@ -24,7 +24,7 @@
 #gtkterm -b 8 -t 1 -s 115200 -p /dev/ttyUSB7
 #sudo screen /dev/ttyUSB7 115200
 
-DEBUG = False
+DEBUG = True
 
 import socket
 from matplotlib import pyplot as plt
@@ -70,7 +70,7 @@ print(f"Escutando em {IP}:{PORT}")
 data_ = []
 k = 0
 amostras = 10
-N =256
+N =64
 j=0
 fs=100000
 t=np.arange(0,window,1)
@@ -89,7 +89,7 @@ while(True):
         #ax_set = ax.set_ylim(0,256)
         if(DEBUG):
             for i in range(0,N):
-                print(f"\033[91m FPGA \033[00m -> \033[92m PC \033[00m:Word[{i}]={array_d[i]}")
+                print(f"\033[91m FPGA \033[00m -> \033[92m PC \033[00m:Word[{i}]={np.int64(array_d[i])}")
             print(j,"============================Recebido=====================",j)
         #plt.pause(1 /100000000000000000.0)
         j+=1

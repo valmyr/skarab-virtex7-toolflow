@@ -46,7 +46,7 @@ module gbe_control(
     reg [7:0] tx_data_reg;
 
     //Envio de uma onda dente de Serra
-    assign tx_data   = tx_data_reg[7] ? {1'b1,~tx_data_reg[6:0]}: {1'b0,tx_data_reg[6:0]};
+    assign tx_data   =0;
     assign counter_tmp = counter_tx_package;
     assign tx_afull  =0;
 

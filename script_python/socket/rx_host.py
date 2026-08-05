@@ -5,7 +5,8 @@ from matplotlib import pyplot as plt
 from random import randint
 DEBUG = False
 
-SAMPLES = 247
+N=256
+SAMPLES = N
 IP = "10.42.0.31"
 PORT = 7777
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -15,7 +16,7 @@ print(f"Escutando em {IP}:{PORT}")
 
 fig, ax = plt.subplots(figsize=(12, 4))
 ax.set_title("e^At*sint(Bt)")
-ax.set_ylim(0, SAMPLES)
+ax.set_ylim(0, 256)
 
 x = np.arange(SAMPLES)
 y0 = np.zeros(SAMPLES)
@@ -49,7 +50,7 @@ while rodando:
         fig.canvas.flush_events()
         continue
 
-    array_d = struct.unpack(f'>247Q', ultimo_pacote)
+    array_d = struct.unpack(f'>{N}Q', ultimo_pacote)
 
     # 1. restaura o fundo limpo (isso "apaga" a linha anterior)
     fig.canvas.restore_region(background)

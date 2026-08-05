@@ -44,13 +44,13 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 fs=10e+3
 f=78
 
-sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock.bind((IP, PORT))
+#sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+#sock.bind((IP, PORT))
 N= 256
 
 
-frame_tx = np.array(([0x6E,0x61,0x72,0x74]),dtype=np.int8)
-frame_rx = np.array(([0x65,0x63,0x65,0x72]),dtype=np.int8)
+frame_rx = np.array(([0x6E,0x61,0x72,0x74]),dtype=np.int8)
+frame_tx = np.array(([0x65,0x63,0x65,0x72]),dtype=np.int8)
 
 
 f1=1000
@@ -60,10 +60,10 @@ fs=10e+4
 t = np.arange(0,N,1)
 
 
-data1=np.arange(start=0,stop=N-8,dtype=np.int64)+   3
+data1=np.arange(start=0,stop=N,dtype=np.int64)+   3
 #data1=np.ones(N-8,dtype=np.int64)*35
 data2 =np.concatenate((data1[0:128],frame_rx,data1[0:128],frame_tx))
-t = np.arange(0,N-8,1)
+t = np.arange(0,N,1)
 data =(data2).tolist()
 data3 =(np.ones(N,dtype=np.int64)).tolist()
 #data =(narange(start=0,stop=N,dtype=np.int64)).tolist()
@@ -76,21 +76,24 @@ try:
     t0 = time.time()
 
     while(True):
-        data1 = (np.round(2**4 * np.sin(2 * np.pi * (f1 / fs) * t) + 2**4).astype(np.int64)* 1 + k + 0 * randint(0, 7))
-        data1 = np.mod(data1, N).astype(np.uint8)
-        data =np.concatenate((frame_tx,data1,frame_rx))
-        data_pack = struct.pack(f'>{N}Q', *data.tolist())
+        data1 = (np.round(2**4 * np.sin(2 * np.pi * (f1 / fs) * t) + 2**4+k ).astype(np.int64))
+        #data1 = np.ones(N,dtype=np.int64)*k#np.arange(0,N,1,dtype=np.int64)+1 # de 1 a 255
+        #data1 = np.mod(data1, N).astype(np.int64)
+        #data1[N-1] = 0xcc
+        #data1 = np.arange(0,N,dtype=np.int64)
+        data   =np.concatenate((frame_tx,data1,frame_rx))
+        data_pack = struct.pack(f'>{N+8}Q', *data.tolist())
         sock.sendto(data_pack, (SERVER_IP, SERVER_PORT))
         #data, addr = sock.recvfrom((N)*8)  # Buffer de 2048 bytes
         #array_d = struct.unpack(f'>{N}Q',data)
 
         if(DEBUG):
-            for i in range(0,N):
+            for i in range(0,N+8):
                 print(f"\033[91m PC \033[00m -> \033[92m FPGA \033[00m:Word[{i}]={data[i]}")
             print("============================Enviado=====================",k)
         k+=1
-        if(k >= 30): k =0
-
+        if(k >=256-2*2**4): k =0
+        time.sleep(0.01)
 except KeyboardInterrupt:
     print("Finalizado pelo usuário")
 

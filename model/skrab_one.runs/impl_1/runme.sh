@@ -39,6 +39,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log buffer_in_ethernet.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source buffer_in_ethernet.tcl -notrace
+EAStep vivado -log top_dut.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_dut.tcl -notrace
 
 

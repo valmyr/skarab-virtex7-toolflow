@@ -1,6 +1,6 @@
 SKARAB	xps:xsg	hw_sys	SKARAB:xc7vx690t
 SKARAB	xps:xsg	clk_src	sys_clk
-SKARAB	xps:xsg	clk_rate	300
+SKARAB	xps:xsg	clk_rate	150
 SKARAB	xps:xsg	sample_period	1
 SKARAB	xps:xsg	synthesis_tool	XST
 d3/ss/bram	xps:bram	arith_type	Unsigned
@@ -550,6 +550,7 @@ pkt_ctrs_compare1/ss	casper:snapshot	provide_outputs	off
 pkt_ctrs_compare1/ss	casper:snapshot	use_dsp48	on
 77777	77777	tags	casper:bitsnap,casper:snapshot,xps:bram,xps:sw_reg,xps:xsg
 77777	77777	system	ethernet_one_gbe_skarab_axi
-77777	77777	builddate	03-Aug-2026\_18:28:02
+77777	77777	builddate	04-Aug-2026\_22:27:32
+77777	77777	latency	NaN
 77777	77777	latency	NaN
 77777	77777	xlSgRoot	/tools/Xilinx/Vivado/2019.1/lib/lnx64.o/matlab/sysgen.mexa64

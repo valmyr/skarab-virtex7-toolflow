@@ -58,7 +58,7 @@ INTERVALO_RELATORIO_S = 2.0  # CORREÇÃO: reporta por tempo decorrido também,
 
 f1 = 1000
 fs = 10e+4
-t = np.arange(0, N - 8, 1)
+t = np.arange(0, N , 1)
 
 k = 2
 rodada = 0

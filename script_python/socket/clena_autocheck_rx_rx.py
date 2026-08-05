@@ -73,14 +73,6 @@ def validar_entrada(data, frame_tx, frame_rx, tam_esperado):
 
 def validar_saida(data1, recebido, codigo_erro):
     esperado_saida = np.concatenate((data1, np.zeros(8, dtype=np.int64)))
-    print((esperado_saida))
-    print()
-    print((data1))
-    print()
-
-    print((recebido))
-
-    time.sleep(3)
     acertos = esperado_saida == recebido
     n_erros = int(np.sum(~acertos))
     taxa_acerto = 100.0 * np.sum(acertos) / len(acertos)

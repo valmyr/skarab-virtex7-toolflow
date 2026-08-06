@@ -7,6 +7,7 @@
 **Orientação:** Prof. Dr. Gutemberg Gonçalves dos Santos Júnior
 
 **Plataforma alvo:** SKARAB (Square Kilometer Array Reconfigurable Application Board), ecossistema CASPER
+
 **Contexto:** módulo de controle da interface GbE de gerenciamento, atuando como canal auxiliar de comando/dados entre host (PC) e FPGA, complementar ao caminho de processamento de sinal de alta velocidade (10/40GbE).
 
 
@@ -705,4 +706,5 @@ while rodando:
 <p align="center">
 <img title="Diagrama de Blocos Simulink" alt="Alt text" src="images/control_one_gbe.png" width="100%" height="100%">
 </p>
+
 [Path de Correção da API casperfpga para python2.7](https://youtu.be/omPAlH5oBUo?si=3I-0S11s5vJFtD_3).

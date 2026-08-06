@@ -705,3 +705,4 @@ while rodando:
 <p align="center">
 <img title="Diagrama de Blocos Simulink" alt="Alt text" src="images/control_one_gbe.png" width="100%" height="100%">
 </p>
+[Path de Correção da API casperfpga para python2.7](https://youtu.be/omPAlH5oBUo?si=3I-0S11s5vJFtD_3).

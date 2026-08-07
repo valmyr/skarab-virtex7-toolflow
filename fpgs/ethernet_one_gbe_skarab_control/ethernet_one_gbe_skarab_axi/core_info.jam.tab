@@ -16,7 +16,7 @@ d5_ss_status                1 8019c020         4                0
 data_rx_valmir              1 8019c024         4                0 
 debug_rx_data_mem_fifo      1 8019c028         4                0 
 debug_rx_data_mem_gbe       1 8019c02c         4                0 
-dec_dactor                  3 8019c030         4                0 
+dec_factor                  3 8019c030         4                0 
 err_marker1                 1 8019c034         4                0 
 err_pkt_ctr1                1 8019c038         4                0 
 err_pkt_ctr_step1           1 8019c03c         4                0 
@@ -36,10 +36,11 @@ rx_valid1                   1 8019c070         4                0
 tx_afull1                   1 8019c074         4                0 
 tx_control                  3 8019c078         4                0 
 tx_overflow1                1 8019c07c         4                0 
-vaild_rx_valmir1            1 8019c080         4                0 
-sys_block                   1 8019c084         20               3 
-sys_board_id                1 8019c084         4                3 
-sys_rev                     1 8019c088         4                3 
-sys_rev_rcs                 1 8019c090         4                3 
-sys_scratchpad              3 8019c094         4                3 
-sys_clkcounter              1 8019c098         4                3 
+tx_pkt_len                  3 8019c080         4                0 
+vaild_rx_valmir1            1 8019c084         4                0 
+sys_block                   1 8019c088         20               3 
+sys_board_id                1 8019c088         4                3 
+sys_rev                     1 8019c08c         4                3 
+sys_rev_rcs                 1 8019c094         4                3 
+sys_scratchpad              3 8019c098         4                3 
+sys_clkcounter              1 8019c09c         4                3 

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Tue Aug  4 20:09:36 2026
+| Date         : Thu Aug  6 20:47:35 2026
 | Host         : valmyrsilva07-B760M-AORUS-ELITE running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_timing_summary -max_paths 10 -report_unconstrained -file top_dut_timing_summary_routed.rpt -pb top_dut_timing_summary_routed.pb -rpx top_dut_timing_summary_routed.rpx -warn_on_violation
 | Design       : top_dut
@@ -43,7 +43,7 @@ Timing Summary Report
 
 Rule       Severity          Description                  Violations  
 ---------  ----------------  ---------------------------  ----------  
-TIMING-17  Critical Warning  Non-clocked sequential cell  1000        
+TIMING-17  Critical Warning  Non-clocked sequential cell  324         
 
 Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
 
@@ -53,12 +53,12 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (2372)
+1. checking no_clock (324)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (5731)
+4. checking unconstrained_internal_endpoints (1691)
 5. checking no_input_delay (10)
-6. checking no_output_delay (1)
+6. checking no_output_delay (10)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
 9. checking loops (0)
@@ -66,9 +66,9 @@ Table of Contents
 11. checking partial_output_delay (0)
 12. checking latch_loops (0)
 
-1. checking no_clock (2372)
----------------------------
- There are 2372 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+1. checking no_clock (324)
+--------------------------
+ There are 324 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
 
 2. checking constant_clock (0)
@@ -81,9 +81,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (5731)
+4. checking unconstrained_internal_endpoints (1691)
 ---------------------------------------------------
- There are 5731 pins that are not constrained for maximum delay. (HIGH)
+ There are 1691 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -95,9 +95,9 @@ Table of Contents
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
-6. checking no_output_delay (1)
--------------------------------
- There is 1 port with no output delay specified. (HIGH)
+6. checking no_output_delay (10)
+--------------------------------
+ There are 10 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -142,7 +142,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-        inf        0.000                      0                 5734          inf        0.000                      0                 5734           NA           NA                      NA                    NA  
+        inf        0.000                      0                 1703          inf        0.000                      0                 1703           NA           NA                      NA                    NA  
 
 
 All user specified timing constraints are met.
@@ -225,7 +225,7 @@ Slack:                    inf
   Destination:            matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        3.471ns  (logic 0.779ns (22.443%)  route 2.692ns (77.557%))
+  Data Path Delay:        2.802ns  (logic 0.779ns (27.806%)  route 2.023ns (72.194%))
   Logic Levels:           2  (IBUF=1 LUT1=1)
   Timing Exception:       False Path
 
@@ -234,10 +234,10 @@ Slack:                    inf
     AM25                                              0.000     0.000 f  a_sync_nrst (IN)
                          net (fo=0)                   0.000     0.000    a_sync_nrst
     AM25                 IBUF (Prop_ibuf_I_O)         0.726     0.726 f  a_sync_nrst_IBUF_inst/O
-                         net (fo=7, routed)           2.373     3.099    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/s_aresetn
-    SLICE_X32Y51         LUT1 (Prop_lut1_I0_O)        0.053     3.152 r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst_i_1/O
-                         net (fo=1, routed)           0.319     3.471    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/src_rst
-    SLICE_X32Y51         FDRE                                         r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/D
+                         net (fo=3, routed)           1.497     2.224    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/s_aresetn
+    SLICE_X44Y51         LUT1 (Prop_lut1_I0_O)        0.053     2.277 r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst_i_1/O
+                         net (fo=1, routed)           0.525     2.802    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/src_rst
+    SLICE_X37Y51         FDRE                                         r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -246,7 +246,7 @@ Slack:                    inf
   Destination:            matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        2.260ns  (logic 0.779ns (34.467%)  route 1.481ns (65.533%))
+  Data Path Delay:        1.973ns  (logic 0.779ns (39.489%)  route 1.194ns (60.511%))
   Logic Levels:           2  (IBUF=1 LUT1=1)
   Timing Exception:       False Path
 
@@ -255,10 +255,10 @@ Slack:                    inf
     AM25                                              0.000     0.000 f  a_sync_nrst (IN)
                          net (fo=0)                   0.000     0.000    a_sync_nrst
     AM25                 IBUF (Prop_ibuf_I_O)         0.726     0.726 f  a_sync_nrst_IBUF_inst/O
-                         net (fo=7, routed)           1.001     1.727    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/s_aresetn
-    SLICE_X49Y53         LUT1 (Prop_lut1_I0_O)        0.053     1.780 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst_i_1/O
-                         net (fo=1, routed)           0.480     2.260    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/src_rst
-    SLICE_X49Y53         FDRE                                         r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/D
+                         net (fo=3, routed)           1.194     1.920    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/s_aresetn
+    SLICE_X46Y53         LUT1 (Prop_lut1_I0_O)        0.053     1.973 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst_i_1/O
+                         net (fo=1, routed)           0.000     1.973    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/src_rst
+    SLICE_X46Y53         FDRE                                         r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
 
@@ -273,7 +273,7 @@ Slack:                    inf
   Destination:            matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.777ns  (logic 0.155ns (19.924%)  route 0.622ns (80.076%))
+  Data Path Delay:        0.759ns  (logic 0.155ns (20.409%)  route 0.604ns (79.591%))
   Logic Levels:           2  (IBUF=1 LUT1=1)
   Timing Exception:       False Path
 
@@ -282,10 +282,10 @@ Slack:                    inf
     AM25                                              0.000     0.000 f  a_sync_nrst (IN)
                          net (fo=0)                   0.000     0.000    a_sync_nrst
     AM25                 IBUF (Prop_ibuf_I_O)         0.127     0.127 f  a_sync_nrst_IBUF_inst/O
-                         net (fo=7, routed)           0.440     0.567    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/s_aresetn
-    SLICE_X49Y53         LUT1 (Prop_lut1_I0_O)        0.028     0.595 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst_i_1/O
-                         net (fo=1, routed)           0.182     0.777    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/src_rst
-    SLICE_X49Y53         FDRE                                         r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/D
+                         net (fo=3, routed)           0.604     0.731    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/s_aresetn
+    SLICE_X46Y53         LUT1 (Prop_lut1_I0_O)        0.028     0.759 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst_i_1/O
+                         net (fo=1, routed)           0.000     0.759    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/src_rst
+    SLICE_X46Y53         FDRE                                         r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -294,7 +294,7 @@ Slack:                    inf
   Destination:            matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        1.535ns  (logic 0.155ns (10.087%)  route 1.380ns (89.913%))
+  Data Path Delay:        1.136ns  (logic 0.155ns (13.635%)  route 0.981ns (86.365%))
   Logic Levels:           2  (IBUF=1 LUT1=1)
   Timing Exception:       False Path
 
@@ -303,10 +303,10 @@ Slack:                    inf
     AM25                                              0.000     0.000 f  a_sync_nrst (IN)
                          net (fo=0)                   0.000     0.000    a_sync_nrst
     AM25                 IBUF (Prop_ibuf_I_O)         0.127     0.127 f  a_sync_nrst_IBUF_inst/O
-                         net (fo=7, routed)           1.258     1.385    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/s_aresetn
-    SLICE_X32Y51         LUT1 (Prop_lut1_I0_O)        0.028     1.413 r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst_i_1/O
-                         net (fo=1, routed)           0.122     1.535    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/src_rst
-    SLICE_X32Y51         FDRE                                         r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/D
+                         net (fo=3, routed)           0.739     0.866    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/s_aresetn
+    SLICE_X44Y51         LUT1 (Prop_lut1_I0_O)        0.028     0.894 r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst_i_1/O
+                         net (fo=1, routed)           0.241     1.136    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/src_rst
+    SLICE_X37Y51         FDRE                                         r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
 
@@ -318,282 +318,344 @@ Path Group:  (none)
 From Clock:  
   To Clock:  
 
-Max Delay          5732 Endpoints
-Min Delay          5732 Endpoints
+Max Delay          1701 Endpoints
+Min Delay          1701 Endpoints
 --------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 gbe_control/m_addr_data_reg[0]/C
+  Source:                 gbe_control/s_addr_data_reg[3]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_2/DIADI[0]
+  Destination:            tx_val
+                            (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        11.395ns  (logic 1.089ns (9.557%)  route 10.306ns (90.443%))
-  Logic Levels:           8  (FDCE=1 LUT5=1 LUT6=2 MUXF7=2 MUXF8=2)
+  Data Path Delay:        6.860ns  (logic 3.329ns (48.520%)  route 3.532ns (51.480%))
+  Logic Levels:           7  (CARRY4=3 FDCE=1 LUT3=1 LUT4=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X27Y40         FDCE                         0.000     0.000 r  gbe_control/m_addr_data_reg[0]/C
-    SLICE_X27Y40         FDCE (Prop_fdce_C_Q)         0.246     0.246 r  gbe_control/m_addr_data_reg[0]/Q
-                         net (fo=521, routed)         7.926     8.172    gbe_control/m_addr_data[0]
-    SLICE_X11Y28         LUT6 (Prop_lut6_I4_O)        0.158     8.330 r  gbe_control/matlab_fifo0_i_846/O
-                         net (fo=1, routed)           0.000     8.330    gbe_control/matlab_fifo0_i_846_n_0
-    SLICE_X11Y28         MUXF7 (Prop_muxf7_I0_O)      0.143     8.473 r  gbe_control/matlab_fifo0_i_400/O
-                         net (fo=1, routed)           0.000     8.473    gbe_control/matlab_fifo0_i_400_n_0
-    SLICE_X11Y28         MUXF8 (Prop_muxf8_I0_O)      0.056     8.529 r  gbe_control/matlab_fifo0_i_177/O
-                         net (fo=1, routed)           0.891     9.419    gbe_control/matlab_fifo0_i_177_n_0
-    SLICE_X26Y28         LUT6 (Prop_lut6_I5_O)        0.153     9.572 r  gbe_control/matlab_fifo0_i_73/O
-                         net (fo=1, routed)           0.000     9.572    gbe_control/matlab_fifo0_i_73_n_0
-    SLICE_X26Y28         MUXF7 (Prop_muxf7_I1_O)      0.123     9.695 r  gbe_control/matlab_fifo0_i_41/O
-                         net (fo=1, routed)           0.000     9.695    gbe_control/matlab_fifo0_i_41_n_0
-    SLICE_X26Y28         MUXF8 (Prop_muxf8_I1_O)      0.054     9.749 r  gbe_control/matlab_fifo0_i_18/O
-                         net (fo=1, routed)           0.852    10.601    gbe_control/matlab_fifo0_i_18_n_0
-    SLICE_X26Y39         LUT5 (Prop_lut5_I4_O)        0.156    10.757 r  gbe_control/matlab_fifo0_i_7/O
-                         net (fo=1, routed)           0.638    11.395    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/dina[2]
-    RAMB36_X2Y8          RAMB36E1                                     r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_2/DIADI[0]
+    SLICE_X46Y57         FDCE                         0.000     0.000 r  gbe_control/s_addr_data_reg[3]/C
+    SLICE_X46Y57         FDCE (Prop_fdce_C_Q)         0.308     0.308 r  gbe_control/s_addr_data_reg[3]/Q
+                         net (fo=3, routed)           0.688     0.996    gbe_control/s_addr_data_reg[3]
+    SLICE_X45Y59         LUT3 (Prop_lut3_I2_O)        0.053     1.049 r  gbe_control/tx_eof_OBUF_inst_i_13/O
+                         net (fo=1, routed)           0.000     1.049    gbe_control/tx_eof_OBUF_inst_i_13_n_0
+    SLICE_X45Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     1.373 r  gbe_control/tx_eof_OBUF_inst_i_6/CO[3]
+                         net (fo=1, routed)           0.000     1.373    gbe_control/tx_eof_OBUF_inst_i_6_n_0
+    SLICE_X45Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     1.431 r  gbe_control/tx_eof_OBUF_inst_i_2/CO[3]
+                         net (fo=1, routed)           0.000     1.431    gbe_control/tx_eof_OBUF_inst_i_2_n_0
+    SLICE_X45Y61         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.132     1.563 r  gbe_control/tx_eof_OBUF_inst_i_1/CO[2]
+                         net (fo=43, routed)          1.246     2.808    gbe_control/tx_eof
+    SLICE_X47Y65         LUT4 (Prop_lut4_I3_O)        0.161     2.969 r  gbe_control/tx_val_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.598     4.568    tx_val_OBUF
+    AK26                 OBUF (Prop_obuf_I_O)         2.293     6.860 r  tx_val_OBUF_inst/O
+                         net (fo=0)                   0.000     6.860    tx_val
+    AK26                                                              r  tx_val (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 gbe_control/m_addr_data_reg[0]/C
+  Source:                 gbe_control/s_addr_data_reg[3]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_6/DIADI[0]
+  Destination:            tx_data[7]
+                            (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        11.351ns  (logic 1.094ns (9.638%)  route 10.257ns (90.362%))
-  Logic Levels:           8  (FDCE=1 LUT5=1 LUT6=2 MUXF7=2 MUXF8=2)
+  Data Path Delay:        6.751ns  (logic 3.421ns (50.670%)  route 3.330ns (49.330%))
+  Logic Levels:           7  (CARRY4=3 FDCE=1 LUT3=1 LUT5=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X27Y40         FDCE                         0.000     0.000 r  gbe_control/m_addr_data_reg[0]/C
-    SLICE_X27Y40         FDCE (Prop_fdce_C_Q)         0.246     0.246 r  gbe_control/m_addr_data_reg[0]/Q
-                         net (fo=521, routed)         8.156     8.402    gbe_control/m_addr_data[0]
-    SLICE_X11Y30         LUT6 (Prop_lut6_I4_O)        0.158     8.560 r  gbe_control/matlab_fifo0_i_591/O
-                         net (fo=1, routed)           0.000     8.560    gbe_control/matlab_fifo0_i_591_n_0
-    SLICE_X11Y30         MUXF7 (Prop_muxf7_I1_O)      0.145     8.705 r  gbe_control/matlab_fifo0_i_272/O
-                         net (fo=1, routed)           0.000     8.705    gbe_control/matlab_fifo0_i_272_n_0
-    SLICE_X11Y30         MUXF8 (Prop_muxf8_I0_O)      0.056     8.761 r  gbe_control/matlab_fifo0_i_113/O
-                         net (fo=1, routed)           0.874     9.635    gbe_control/matlab_fifo0_i_113_n_0
-    SLICE_X25Y28         LUT6 (Prop_lut6_I5_O)        0.153     9.788 r  gbe_control/matlab_fifo0_i_57/O
-                         net (fo=1, routed)           0.000     9.788    gbe_control/matlab_fifo0_i_57_n_0
-    SLICE_X25Y28         MUXF7 (Prop_muxf7_I1_O)      0.129     9.917 r  gbe_control/matlab_fifo0_i_33/O
-                         net (fo=1, routed)           0.000     9.917    gbe_control/matlab_fifo0_i_33_n_0
-    SLICE_X25Y28         MUXF8 (Prop_muxf8_I1_O)      0.054     9.971 r  gbe_control/matlab_fifo0_i_14/O
-                         net (fo=1, routed)           0.339    10.310    gbe_control/matlab_fifo0_i_14_n_0
-    SLICE_X22Y28         LUT5 (Prop_lut5_I4_O)        0.153    10.463 r  gbe_control/matlab_fifo0_i_3/O
-                         net (fo=1, routed)           0.888    11.351    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/dina[6]
-    RAMB36_X1Y9          RAMB36E1                                     r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_6/DIADI[0]
+    SLICE_X46Y57         FDCE                         0.000     0.000 r  gbe_control/s_addr_data_reg[3]/C
+    SLICE_X46Y57         FDCE (Prop_fdce_C_Q)         0.308     0.308 r  gbe_control/s_addr_data_reg[3]/Q
+                         net (fo=3, routed)           0.688     0.996    gbe_control/s_addr_data_reg[3]
+    SLICE_X45Y59         LUT3 (Prop_lut3_I2_O)        0.053     1.049 r  gbe_control/tx_eof_OBUF_inst_i_13/O
+                         net (fo=1, routed)           0.000     1.049    gbe_control/tx_eof_OBUF_inst_i_13_n_0
+    SLICE_X45Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     1.373 r  gbe_control/tx_eof_OBUF_inst_i_6/CO[3]
+                         net (fo=1, routed)           0.000     1.373    gbe_control/tx_eof_OBUF_inst_i_6_n_0
+    SLICE_X45Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     1.431 r  gbe_control/tx_eof_OBUF_inst_i_2/CO[3]
+                         net (fo=1, routed)           0.000     1.431    gbe_control/tx_eof_OBUF_inst_i_2_n_0
+    SLICE_X45Y61         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.132     1.563 r  gbe_control/tx_eof_OBUF_inst_i_1/CO[2]
+                         net (fo=43, routed)          1.246     2.808    gbe_control/tx_eof
+    SLICE_X47Y65         LUT5 (Prop_lut5_I0_O)        0.172     2.980 r  gbe_control/tx_data_OBUF[7]_inst_i_1/O
+                         net (fo=1, routed)           1.397     4.377    tx_data_OBUF[7]
+    AH25                 OBUF (Prop_obuf_I_O)         2.374     6.751 r  tx_data_OBUF[7]_inst/O
+                         net (fo=0)                   0.000     6.751    tx_data[7]
+    AH25                                                              r  tx_data[7] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 gbe_control/m_addr_data_reg[0]/C
+  Source:                 gbe_control/s_addr_data_reg[3]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_1/DIADI[0]
+  Destination:            matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_6/ENBWREN
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        11.130ns  (logic 1.089ns (9.784%)  route 10.041ns (90.216%))
-  Logic Levels:           8  (FDCE=1 LUT5=1 LUT6=2 MUXF7=2 MUXF8=2)
+  Data Path Delay:        6.392ns  (logic 1.269ns (19.853%)  route 5.123ns (80.147%))
+  Logic Levels:           8  (CARRY4=3 FDCE=1 LUT2=2 LUT3=1 LUT4=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X27Y40         FDCE                         0.000     0.000 r  gbe_control/m_addr_data_reg[0]/C
-    SLICE_X27Y40         FDCE (Prop_fdce_C_Q)         0.246     0.246 r  gbe_control/m_addr_data_reg[0]/Q
-                         net (fo=521, routed)         8.189     8.435    gbe_control/m_addr_data[0]
-    SLICE_X13Y29         LUT6 (Prop_lut6_I4_O)        0.158     8.593 r  gbe_control/matlab_fifo0_i_910/O
-                         net (fo=1, routed)           0.000     8.593    gbe_control/matlab_fifo0_i_910_n_0
-    SLICE_X13Y29         MUXF7 (Prop_muxf7_I0_O)      0.143     8.736 r  gbe_control/matlab_fifo0_i_432/O
-                         net (fo=1, routed)           0.000     8.736    gbe_control/matlab_fifo0_i_432_n_0
-    SLICE_X13Y29         MUXF8 (Prop_muxf8_I0_O)      0.056     8.792 r  gbe_control/matlab_fifo0_i_193/O
-                         net (fo=1, routed)           0.641     9.432    gbe_control/matlab_fifo0_i_193_n_0
-    SLICE_X24Y28         LUT6 (Prop_lut6_I5_O)        0.153     9.585 r  gbe_control/matlab_fifo0_i_77/O
-                         net (fo=1, routed)           0.000     9.585    gbe_control/matlab_fifo0_i_77_n_0
-    SLICE_X24Y28         MUXF7 (Prop_muxf7_I1_O)      0.123     9.708 r  gbe_control/matlab_fifo0_i_43/O
-                         net (fo=1, routed)           0.000     9.708    gbe_control/matlab_fifo0_i_43_n_0
-    SLICE_X24Y28         MUXF8 (Prop_muxf8_I1_O)      0.054     9.762 r  gbe_control/matlab_fifo0_i_19/O
-                         net (fo=1, routed)           0.660    10.422    gbe_control/matlab_fifo0_i_19_n_0
-    SLICE_X22Y28         LUT5 (Prop_lut5_I4_O)        0.156    10.578 r  gbe_control/matlab_fifo0_i_8/O
-                         net (fo=1, routed)           0.553    11.130    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/dina[1]
-    RAMB36_X1Y6          RAMB36E1                                     r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_1/DIADI[0]
+    SLICE_X46Y57         FDCE                         0.000     0.000 r  gbe_control/s_addr_data_reg[3]/C
+    SLICE_X46Y57         FDCE (Prop_fdce_C_Q)         0.308     0.308 f  gbe_control/s_addr_data_reg[3]/Q
+                         net (fo=3, routed)           0.688     0.996    gbe_control/s_addr_data_reg[3]
+    SLICE_X44Y59         LUT3 (Prop_lut3_I2_O)        0.053     1.049 r  gbe_control/tx_data_OBUF[7]_inst_i_14/O
+                         net (fo=1, routed)           0.000     1.049    gbe_control/tx_data_OBUF[7]_inst_i_14_n_0
+    SLICE_X44Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     1.373 r  gbe_control/tx_data_OBUF[7]_inst_i_7/CO[3]
+                         net (fo=1, routed)           0.000     1.373    gbe_control/tx_data_OBUF[7]_inst_i_7_n_0
+    SLICE_X44Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     1.431 r  gbe_control/tx_data_OBUF[7]_inst_i_3/CO[3]
+                         net (fo=1, routed)           0.000     1.431    gbe_control/tx_data_OBUF[7]_inst_i_3_n_0
+    SLICE_X44Y61         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.132     1.563 f  gbe_control/tx_data_OBUF[7]_inst_i_2/CO[2]
+                         net (fo=12, routed)          0.576     2.138    gbe_control/s_axis_next_state0
+    SLICE_X47Y60         LUT2 (Prop_lut2_I1_O)        0.171     2.309 r  gbe_control/matlab_fifo1_i_1/O
+                         net (fo=1, routed)           0.304     2.613    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/m_axis_tready
+    SLICE_X47Y60         LUT2 (Prop_lut2_I1_O)        0.170     2.783 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst_i_1/O
+                         net (fo=8, routed)           0.706     3.489    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/rd_en
+    SLICE_X49Y58         LUT4 (Prop_lut4_I2_O)        0.053     3.542 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/gen_sdpram.xpm_memory_base_inst_i_2/O
+                         net (fo=47, routed)          2.850     6.392    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/enb
+    RAMB36_X2Y8          RAMB36E1                                     r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_6/ENBWREN
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 gbe_control/m_addr_data_reg[0]/C
+  Source:                 gbe_control/s_addr_data_reg[3]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_5/DIADI[0]
+  Destination:            tx_data[2]
+                            (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        11.063ns  (logic 1.076ns (9.726%)  route 9.987ns (90.274%))
-  Logic Levels:           8  (FDCE=1 LUT5=1 LUT6=2 MUXF7=2 MUXF8=2)
+  Data Path Delay:        6.366ns  (logic 3.333ns (52.362%)  route 3.033ns (47.638%))
+  Logic Levels:           7  (CARRY4=3 FDCE=1 LUT3=1 LUT5=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X27Y40         FDCE                         0.000     0.000 r  gbe_control/m_addr_data_reg[0]/C
-    SLICE_X27Y40         FDCE (Prop_fdce_C_Q)         0.246     0.246 r  gbe_control/m_addr_data_reg[0]/Q
-                         net (fo=521, routed)         8.028     8.274    gbe_control/m_addr_data[0]
-    SLICE_X13Y30         LUT6 (Prop_lut6_I4_O)        0.158     8.432 r  gbe_control/matlab_fifo0_i_657/O
-                         net (fo=1, routed)           0.000     8.432    gbe_control/matlab_fifo0_i_657_n_0
-    SLICE_X13Y30         MUXF7 (Prop_muxf7_I1_O)      0.129     8.561 r  gbe_control/matlab_fifo0_i_305/O
-                         net (fo=1, routed)           0.000     8.561    gbe_control/matlab_fifo0_i_305_n_0
-    SLICE_X13Y30         MUXF8 (Prop_muxf8_I1_O)      0.054     8.615 r  gbe_control/matlab_fifo0_i_129/O
-                         net (fo=1, routed)           0.808     9.423    gbe_control/matlab_fifo0_i_129_n_0
-    SLICE_X27Y28         LUT6 (Prop_lut6_I5_O)        0.153     9.576 r  gbe_control/matlab_fifo0_i_61/O
-                         net (fo=1, routed)           0.000     9.576    gbe_control/matlab_fifo0_i_61_n_0
-    SLICE_X27Y28         MUXF7 (Prop_muxf7_I1_O)      0.129     9.705 r  gbe_control/matlab_fifo0_i_35/O
-                         net (fo=1, routed)           0.000     9.705    gbe_control/matlab_fifo0_i_35_n_0
-    SLICE_X27Y28         MUXF8 (Prop_muxf8_I1_O)      0.054     9.759 r  gbe_control/matlab_fifo0_i_15/O
-                         net (fo=1, routed)           0.574    10.333    gbe_control/matlab_fifo0_i_15_n_0
-    SLICE_X28Y27         LUT5 (Prop_lut5_I4_O)        0.153    10.486 r  gbe_control/matlab_fifo0_i_4/O
-                         net (fo=1, routed)           0.577    11.063    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/dina[5]
-    RAMB36_X2Y4          RAMB36E1                                     r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_5/DIADI[0]
+    SLICE_X46Y57         FDCE                         0.000     0.000 r  gbe_control/s_addr_data_reg[3]/C
+    SLICE_X46Y57         FDCE (Prop_fdce_C_Q)         0.308     0.308 f  gbe_control/s_addr_data_reg[3]/Q
+                         net (fo=3, routed)           0.688     0.996    gbe_control/s_addr_data_reg[3]
+    SLICE_X44Y59         LUT3 (Prop_lut3_I2_O)        0.053     1.049 r  gbe_control/tx_data_OBUF[7]_inst_i_14/O
+                         net (fo=1, routed)           0.000     1.049    gbe_control/tx_data_OBUF[7]_inst_i_14_n_0
+    SLICE_X44Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     1.373 r  gbe_control/tx_data_OBUF[7]_inst_i_7/CO[3]
+                         net (fo=1, routed)           0.000     1.373    gbe_control/tx_data_OBUF[7]_inst_i_7_n_0
+    SLICE_X44Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     1.431 r  gbe_control/tx_data_OBUF[7]_inst_i_3/CO[3]
+                         net (fo=1, routed)           0.000     1.431    gbe_control/tx_data_OBUF[7]_inst_i_3_n_0
+    SLICE_X44Y61         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.132     1.563 f  gbe_control/tx_data_OBUF[7]_inst_i_2/CO[2]
+                         net (fo=12, routed)          0.939     2.502    gbe_control/s_axis_next_state0
+    SLICE_X47Y65         LUT5 (Prop_lut5_I3_O)        0.161     2.663 r  gbe_control/tx_data_OBUF[2]_inst_i_1/O
+                         net (fo=1, routed)           1.406     4.069    tx_data_OBUF[2]
+    AM26                 OBUF (Prop_obuf_I_O)         2.297     6.366 r  tx_data_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     6.366    tx_data[2]
+    AM26                                                              r  tx_data[2] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 gbe_control/m_addr_data_reg[0]/C
+  Source:                 gbe_control/s_addr_data_reg[3]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_3/DIADI[0]
+  Destination:            matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_6/REGCEB
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        10.970ns  (logic 1.086ns (9.900%)  route 9.884ns (90.101%))
-  Logic Levels:           8  (FDCE=1 LUT5=1 LUT6=2 MUXF7=2 MUXF8=2)
+  Data Path Delay:        6.340ns  (logic 1.269ns (20.017%)  route 5.071ns (79.983%))
+  Logic Levels:           8  (CARRY4=3 FDCE=1 LUT2=2 LUT3=2)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X27Y40         FDCE                         0.000     0.000 r  gbe_control/m_addr_data_reg[0]/C
-    SLICE_X27Y40         FDCE (Prop_fdce_C_Q)         0.246     0.246 r  gbe_control/m_addr_data_reg[0]/Q
-                         net (fo=521, routed)         8.065     8.311    gbe_control/m_addr_data[0]
-    SLICE_X12Y28         LUT6 (Prop_lut6_I4_O)        0.158     8.469 r  gbe_control/matlab_fifo0_i_782/O
-                         net (fo=1, routed)           0.000     8.469    gbe_control/matlab_fifo0_i_782_n_0
-    SLICE_X12Y28         MUXF7 (Prop_muxf7_I0_O)      0.136     8.605 r  gbe_control/matlab_fifo0_i_368/O
-                         net (fo=1, routed)           0.000     8.605    gbe_control/matlab_fifo0_i_368_n_0
-    SLICE_X12Y28         MUXF8 (Prop_muxf8_I0_O)      0.057     8.662 r  gbe_control/matlab_fifo0_i_161/O
-                         net (fo=1, routed)           0.641     9.303    gbe_control/matlab_fifo0_i_161_n_0
-    SLICE_X24Y27         LUT6 (Prop_lut6_I5_O)        0.156     9.459 r  gbe_control/matlab_fifo0_i_69/O
-                         net (fo=1, routed)           0.000     9.459    gbe_control/matlab_fifo0_i_69_n_0
-    SLICE_X24Y27         MUXF7 (Prop_muxf7_I1_O)      0.123     9.582 r  gbe_control/matlab_fifo0_i_39/O
-                         net (fo=1, routed)           0.000     9.582    gbe_control/matlab_fifo0_i_39_n_0
-    SLICE_X24Y27         MUXF8 (Prop_muxf8_I1_O)      0.054     9.636 r  gbe_control/matlab_fifo0_i_17/O
-                         net (fo=1, routed)           0.563    10.199    gbe_control/matlab_fifo0_i_17_n_0
-    SLICE_X22Y27         LUT5 (Prop_lut5_I4_O)        0.156    10.355 r  gbe_control/matlab_fifo0_i_6/O
-                         net (fo=1, routed)           0.615    10.970    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/dina[3]
-    RAMB36_X1Y4          RAMB36E1                                     r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_3/DIADI[0]
+    SLICE_X46Y57         FDCE                         0.000     0.000 r  gbe_control/s_addr_data_reg[3]/C
+    SLICE_X46Y57         FDCE (Prop_fdce_C_Q)         0.308     0.308 f  gbe_control/s_addr_data_reg[3]/Q
+                         net (fo=3, routed)           0.688     0.996    gbe_control/s_addr_data_reg[3]
+    SLICE_X44Y59         LUT3 (Prop_lut3_I2_O)        0.053     1.049 r  gbe_control/tx_data_OBUF[7]_inst_i_14/O
+                         net (fo=1, routed)           0.000     1.049    gbe_control/tx_data_OBUF[7]_inst_i_14_n_0
+    SLICE_X44Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     1.373 r  gbe_control/tx_data_OBUF[7]_inst_i_7/CO[3]
+                         net (fo=1, routed)           0.000     1.373    gbe_control/tx_data_OBUF[7]_inst_i_7_n_0
+    SLICE_X44Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     1.431 r  gbe_control/tx_data_OBUF[7]_inst_i_3/CO[3]
+                         net (fo=1, routed)           0.000     1.431    gbe_control/tx_data_OBUF[7]_inst_i_3_n_0
+    SLICE_X44Y61         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.132     1.563 f  gbe_control/tx_data_OBUF[7]_inst_i_2/CO[2]
+                         net (fo=12, routed)          0.576     2.138    gbe_control/s_axis_next_state0
+    SLICE_X47Y60         LUT2 (Prop_lut2_I1_O)        0.171     2.309 r  gbe_control/matlab_fifo1_i_1/O
+                         net (fo=1, routed)           0.304     2.613    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/m_axis_tready
+    SLICE_X47Y60         LUT2 (Prop_lut2_I1_O)        0.170     2.783 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst_i_1/O
+                         net (fo=8, routed)           0.915     3.699    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rd_en
+    SLICE_X49Y59         LUT3 (Prop_lut3_I2_O)        0.053     3.752 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst_i_3/O
+                         net (fo=14, routed)          2.588     6.340    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/regceb
+    RAMB36_X2Y8          RAMB36E1                                     r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_6/REGCEB
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 gbe_control/m_addr_data_reg[0]/C
+  Source:                 gbe_control/s_addr_data_reg[3]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_4/DIADI[0]
+  Destination:            tx_data[6]
+                            (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        10.949ns  (logic 1.089ns (9.946%)  route 9.860ns (90.054%))
-  Logic Levels:           8  (FDCE=1 LUT5=1 LUT6=2 MUXF7=2 MUXF8=2)
+  Data Path Delay:        6.288ns  (logic 3.296ns (52.413%)  route 2.992ns (47.587%))
+  Logic Levels:           7  (CARRY4=3 FDCE=1 LUT3=1 LUT5=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X27Y40         FDCE                         0.000     0.000 r  gbe_control/m_addr_data_reg[0]/C
-    SLICE_X27Y40         FDCE (Prop_fdce_C_Q)         0.246     0.246 r  gbe_control/m_addr_data_reg[0]/Q
-                         net (fo=521, routed)         8.179     8.425    gbe_control/m_addr_data[0]
-    SLICE_X15Y29         LUT6 (Prop_lut6_I4_O)        0.158     8.583 r  gbe_control/matlab_fifo0_i_718/O
-                         net (fo=1, routed)           0.000     8.583    gbe_control/matlab_fifo0_i_718_n_0
-    SLICE_X15Y29         MUXF7 (Prop_muxf7_I0_O)      0.143     8.726 r  gbe_control/matlab_fifo0_i_336/O
-                         net (fo=1, routed)           0.000     8.726    gbe_control/matlab_fifo0_i_336_n_0
-    SLICE_X15Y29         MUXF8 (Prop_muxf8_I0_O)      0.056     8.782 r  gbe_control/matlab_fifo0_i_145/O
-                         net (fo=1, routed)           0.532     9.314    gbe_control/matlab_fifo0_i_145_n_0
-    SLICE_X24Y29         LUT6 (Prop_lut6_I5_O)        0.153     9.467 r  gbe_control/matlab_fifo0_i_65/O
-                         net (fo=1, routed)           0.000     9.467    gbe_control/matlab_fifo0_i_65_n_0
-    SLICE_X24Y29         MUXF7 (Prop_muxf7_I1_O)      0.123     9.590 r  gbe_control/matlab_fifo0_i_37/O
-                         net (fo=1, routed)           0.000     9.590    gbe_control/matlab_fifo0_i_37_n_0
-    SLICE_X24Y29         MUXF8 (Prop_muxf8_I1_O)      0.054     9.644 r  gbe_control/matlab_fifo0_i_16/O
-                         net (fo=1, routed)           0.229     9.873    gbe_control/matlab_fifo0_i_16_n_0
-    SLICE_X27Y29         LUT5 (Prop_lut5_I4_O)        0.156    10.029 r  gbe_control/matlab_fifo0_i_5/O
-                         net (fo=1, routed)           0.920    10.949    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/dina[4]
-    RAMB36_X3Y6          RAMB36E1                                     r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_4/DIADI[0]
+    SLICE_X46Y57         FDCE                         0.000     0.000 r  gbe_control/s_addr_data_reg[3]/C
+    SLICE_X46Y57         FDCE (Prop_fdce_C_Q)         0.308     0.308 f  gbe_control/s_addr_data_reg[3]/Q
+                         net (fo=3, routed)           0.688     0.996    gbe_control/s_addr_data_reg[3]
+    SLICE_X44Y59         LUT3 (Prop_lut3_I2_O)        0.053     1.049 r  gbe_control/tx_data_OBUF[7]_inst_i_14/O
+                         net (fo=1, routed)           0.000     1.049    gbe_control/tx_data_OBUF[7]_inst_i_14_n_0
+    SLICE_X44Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     1.373 r  gbe_control/tx_data_OBUF[7]_inst_i_7/CO[3]
+                         net (fo=1, routed)           0.000     1.373    gbe_control/tx_data_OBUF[7]_inst_i_7_n_0
+    SLICE_X44Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     1.431 r  gbe_control/tx_data_OBUF[7]_inst_i_3/CO[3]
+                         net (fo=1, routed)           0.000     1.431    gbe_control/tx_data_OBUF[7]_inst_i_3_n_0
+    SLICE_X44Y61         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.132     1.563 f  gbe_control/tx_data_OBUF[7]_inst_i_2/CO[2]
+                         net (fo=12, routed)          0.819     2.381    gbe_control/s_axis_next_state0
+    SLICE_X47Y63         LUT5 (Prop_lut5_I3_O)        0.161     2.542 r  gbe_control/tx_data_OBUF[6]_inst_i_1/O
+                         net (fo=1, routed)           1.486     4.028    tx_data_OBUF[6]
+    AH24                 OBUF (Prop_obuf_I_O)         2.260     6.288 r  tx_data_OBUF[6]_inst/O
+                         net (fo=0)                   0.000     6.288    tx_data[6]
+    AH24                                                              r  tx_data[6] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 gbe_control/m_addr_data_reg[0]/C
+  Source:                 gbe_control/s_addr_data_reg[3]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_7/DIADI[0]
+  Destination:            tx_data[5]
+                            (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        10.823ns  (logic 1.086ns (10.035%)  route 9.737ns (89.965%))
-  Logic Levels:           8  (FDCE=1 LUT5=1 LUT6=2 MUXF7=2 MUXF8=2)
+  Data Path Delay:        6.232ns  (logic 3.298ns (52.910%)  route 2.935ns (47.090%))
+  Logic Levels:           7  (CARRY4=3 FDCE=1 LUT3=1 LUT5=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X27Y40         FDCE                         0.000     0.000 r  gbe_control/m_addr_data_reg[0]/C
-    SLICE_X27Y40         FDCE (Prop_fdce_C_Q)         0.246     0.246 r  gbe_control/m_addr_data_reg[0]/Q
-                         net (fo=521, routed)         8.064     8.310    gbe_control/m_addr_data[0]
-    SLICE_X10Y29         LUT6 (Prop_lut6_I4_O)        0.158     8.468 r  gbe_control/matlab_fifo0_i_526/O
-                         net (fo=1, routed)           0.000     8.468    gbe_control/matlab_fifo0_i_526_n_0
-    SLICE_X10Y29         MUXF7 (Prop_muxf7_I0_O)      0.136     8.604 r  gbe_control/matlab_fifo0_i_240/O
-                         net (fo=1, routed)           0.000     8.604    gbe_control/matlab_fifo0_i_240_n_0
-    SLICE_X10Y29         MUXF8 (Prop_muxf8_I0_O)      0.057     8.661 r  gbe_control/matlab_fifo0_i_97/O
-                         net (fo=1, routed)           0.999     9.660    gbe_control/matlab_fifo0_i_97_n_0
-    SLICE_X26Y27         LUT6 (Prop_lut6_I5_O)        0.156     9.816 r  gbe_control/matlab_fifo0_i_53/O
-                         net (fo=1, routed)           0.000     9.816    gbe_control/matlab_fifo0_i_53_n_0
-    SLICE_X26Y27         MUXF7 (Prop_muxf7_I1_O)      0.123     9.939 r  gbe_control/matlab_fifo0_i_31/O
-                         net (fo=1, routed)           0.000     9.939    gbe_control/matlab_fifo0_i_31_n_0
-    SLICE_X26Y27         MUXF8 (Prop_muxf8_I1_O)      0.054     9.993 r  gbe_control/matlab_fifo0_i_13/O
-                         net (fo=1, routed)           0.245    10.238    gbe_control/matlab_fifo0_i_13_n_0
-    SLICE_X28Y27         LUT5 (Prop_lut5_I4_O)        0.156    10.394 r  gbe_control/matlab_fifo0_i_2/O
-                         net (fo=1, routed)           0.429    10.823    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/dina[7]
-    RAMB36_X2Y5          RAMB36E1                                     r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_7/DIADI[0]
+    SLICE_X46Y57         FDCE                         0.000     0.000 r  gbe_control/s_addr_data_reg[3]/C
+    SLICE_X46Y57         FDCE (Prop_fdce_C_Q)         0.308     0.308 r  gbe_control/s_addr_data_reg[3]/Q
+                         net (fo=3, routed)           0.688     0.996    gbe_control/s_addr_data_reg[3]
+    SLICE_X45Y59         LUT3 (Prop_lut3_I2_O)        0.053     1.049 r  gbe_control/tx_eof_OBUF_inst_i_13/O
+                         net (fo=1, routed)           0.000     1.049    gbe_control/tx_eof_OBUF_inst_i_13_n_0
+    SLICE_X45Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     1.373 r  gbe_control/tx_eof_OBUF_inst_i_6/CO[3]
+                         net (fo=1, routed)           0.000     1.373    gbe_control/tx_eof_OBUF_inst_i_6_n_0
+    SLICE_X45Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     1.431 r  gbe_control/tx_eof_OBUF_inst_i_2/CO[3]
+                         net (fo=1, routed)           0.000     1.431    gbe_control/tx_eof_OBUF_inst_i_2_n_0
+    SLICE_X45Y61         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.132     1.563 r  gbe_control/tx_eof_OBUF_inst_i_1/CO[2]
+                         net (fo=43, routed)          0.719     2.282    gbe_control/tx_eof
+    SLICE_X47Y60         LUT5 (Prop_lut5_I0_O)        0.161     2.443 r  gbe_control/tx_data_OBUF[5]_inst_i_1/O
+                         net (fo=1, routed)           1.528     3.971    tx_data_OBUF[5]
+    AJ25                 OBUF (Prop_obuf_I_O)         2.262     6.232 r  tx_data_OBUF[5]_inst/O
+                         net (fo=0)                   0.000     6.232    tx_data[5]
+    AJ25                                                              r  tx_data[5] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 in_data_rx_ethernet[4]
-                            (input port)
-  Destination:            gbe_control/mem_reg[21][4]/D
+  Source:                 gbe_control/s_addr_data_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            tx_data[3]
+                            (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        9.881ns  (logic 0.738ns (7.467%)  route 9.143ns (92.533%))
-  Logic Levels:           1  (IBUF=1)
+  Data Path Delay:        6.221ns  (logic 3.317ns (53.316%)  route 2.904ns (46.684%))
+  Logic Levels:           7  (CARRY4=3 FDCE=1 LUT3=1 LUT5=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    AP25                                              0.000     0.000 r  in_data_rx_ethernet[4] (IN)
-                         net (fo=0)                   0.000     0.000    in_data_rx_ethernet[4]
-    AP25                 IBUF (Prop_ibuf_I_O)         0.738     0.738 r  in_data_rx_ethernet_IBUF[4]_inst/O
-                         net (fo=261, routed)         9.143     9.881    gbe_control/in_data_rx_ethernet_IBUF[4]
-    SLICE_X38Y20         FDRE                                         r  gbe_control/mem_reg[21][4]/D
+    SLICE_X46Y57         FDCE                         0.000     0.000 r  gbe_control/s_addr_data_reg[3]/C
+    SLICE_X46Y57         FDCE (Prop_fdce_C_Q)         0.308     0.308 f  gbe_control/s_addr_data_reg[3]/Q
+                         net (fo=3, routed)           0.688     0.996    gbe_control/s_addr_data_reg[3]
+    SLICE_X44Y59         LUT3 (Prop_lut3_I2_O)        0.053     1.049 r  gbe_control/tx_data_OBUF[7]_inst_i_14/O
+                         net (fo=1, routed)           0.000     1.049    gbe_control/tx_data_OBUF[7]_inst_i_14_n_0
+    SLICE_X44Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     1.373 r  gbe_control/tx_data_OBUF[7]_inst_i_7/CO[3]
+                         net (fo=1, routed)           0.000     1.373    gbe_control/tx_data_OBUF[7]_inst_i_7_n_0
+    SLICE_X44Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     1.431 r  gbe_control/tx_data_OBUF[7]_inst_i_3/CO[3]
+                         net (fo=1, routed)           0.000     1.431    gbe_control/tx_data_OBUF[7]_inst_i_3_n_0
+    SLICE_X44Y61         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.132     1.563 f  gbe_control/tx_data_OBUF[7]_inst_i_2/CO[2]
+                         net (fo=12, routed)          0.820     2.382    gbe_control/s_axis_next_state0
+    SLICE_X47Y63         LUT5 (Prop_lut5_I3_O)        0.161     2.543 r  gbe_control/tx_data_OBUF[3]_inst_i_1/O
+                         net (fo=1, routed)           1.397     3.940    tx_data_OBUF[3]
+    AL26                 OBUF (Prop_obuf_I_O)         2.281     6.221 r  tx_data_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     6.221    tx_data[3]
+    AL26                                                              r  tx_data[3] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 in_data_rx_ethernet[4]
-                            (input port)
-  Destination:            gbe_control/mem_reg[24][4]/D
+  Source:                 gbe_control/s_addr_data_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            tx_data[4]
+                            (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        9.800ns  (logic 0.738ns (7.529%)  route 9.062ns (92.471%))
-  Logic Levels:           1  (IBUF=1)
+  Data Path Delay:        6.165ns  (logic 3.325ns (53.944%)  route 2.839ns (46.056%))
+  Logic Levels:           7  (CARRY4=3 FDCE=1 LUT3=1 LUT5=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    AP25                                              0.000     0.000 r  in_data_rx_ethernet[4] (IN)
-                         net (fo=0)                   0.000     0.000    in_data_rx_ethernet[4]
-    AP25                 IBUF (Prop_ibuf_I_O)         0.738     0.738 r  in_data_rx_ethernet_IBUF[4]_inst/O
-                         net (fo=261, routed)         9.062     9.800    gbe_control/in_data_rx_ethernet_IBUF[4]
-    SLICE_X40Y18         FDRE                                         r  gbe_control/mem_reg[24][4]/D
+    SLICE_X46Y57         FDCE                         0.000     0.000 r  gbe_control/s_addr_data_reg[3]/C
+    SLICE_X46Y57         FDCE (Prop_fdce_C_Q)         0.308     0.308 r  gbe_control/s_addr_data_reg[3]/Q
+                         net (fo=3, routed)           0.688     0.996    gbe_control/s_addr_data_reg[3]
+    SLICE_X45Y59         LUT3 (Prop_lut3_I2_O)        0.053     1.049 r  gbe_control/tx_eof_OBUF_inst_i_13/O
+                         net (fo=1, routed)           0.000     1.049    gbe_control/tx_eof_OBUF_inst_i_13_n_0
+    SLICE_X45Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     1.373 r  gbe_control/tx_eof_OBUF_inst_i_6/CO[3]
+                         net (fo=1, routed)           0.000     1.373    gbe_control/tx_eof_OBUF_inst_i_6_n_0
+    SLICE_X45Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     1.431 r  gbe_control/tx_eof_OBUF_inst_i_2/CO[3]
+                         net (fo=1, routed)           0.000     1.431    gbe_control/tx_eof_OBUF_inst_i_2_n_0
+    SLICE_X45Y61         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.132     1.563 r  gbe_control/tx_eof_OBUF_inst_i_1/CO[2]
+                         net (fo=43, routed)          0.712     2.274    gbe_control/tx_eof
+    SLICE_X47Y63         LUT5 (Prop_lut5_I0_O)        0.161     2.435 r  gbe_control/tx_data_OBUF[4]_inst_i_1/O
+                         net (fo=1, routed)           1.440     3.875    tx_data_OBUF[4]
+    AL25                 OBUF (Prop_obuf_I_O)         2.289     6.165 r  tx_data_OBUF[4]_inst/O
+                         net (fo=0)                   0.000     6.165    tx_data[4]
+    AL25                                                              r  tx_data[4] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 in_data_rx_ethernet[2]
-                            (input port)
-  Destination:            gbe_control/mem_reg[130][2]/D
+  Source:                 gbe_control/s_addr_data_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_1/ENBWREN
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        9.752ns  (logic 0.739ns (7.581%)  route 9.013ns (92.419%))
-  Logic Levels:           1  (IBUF=1)
+  Data Path Delay:        6.154ns  (logic 1.269ns (20.620%)  route 4.885ns (79.380%))
+  Logic Levels:           8  (CARRY4=3 FDCE=1 LUT2=2 LUT3=1 LUT4=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    AN27                                              0.000     0.000 r  in_data_rx_ethernet[2] (IN)
-                         net (fo=0)                   0.000     0.000    in_data_rx_ethernet[2]
-    AN27                 IBUF (Prop_ibuf_I_O)         0.739     0.739 r  in_data_rx_ethernet_IBUF[2]_inst/O
-                         net (fo=261, routed)         9.013     9.752    gbe_control/in_data_rx_ethernet_IBUF[2]
-    SLICE_X38Y37         FDRE                                         r  gbe_control/mem_reg[130][2]/D
+    SLICE_X46Y57         FDCE                         0.000     0.000 r  gbe_control/s_addr_data_reg[3]/C
+    SLICE_X46Y57         FDCE (Prop_fdce_C_Q)         0.308     0.308 f  gbe_control/s_addr_data_reg[3]/Q
+                         net (fo=3, routed)           0.688     0.996    gbe_control/s_addr_data_reg[3]
+    SLICE_X44Y59         LUT3 (Prop_lut3_I2_O)        0.053     1.049 r  gbe_control/tx_data_OBUF[7]_inst_i_14/O
+                         net (fo=1, routed)           0.000     1.049    gbe_control/tx_data_OBUF[7]_inst_i_14_n_0
+    SLICE_X44Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     1.373 r  gbe_control/tx_data_OBUF[7]_inst_i_7/CO[3]
+                         net (fo=1, routed)           0.000     1.373    gbe_control/tx_data_OBUF[7]_inst_i_7_n_0
+    SLICE_X44Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     1.431 r  gbe_control/tx_data_OBUF[7]_inst_i_3/CO[3]
+                         net (fo=1, routed)           0.000     1.431    gbe_control/tx_data_OBUF[7]_inst_i_3_n_0
+    SLICE_X44Y61         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.132     1.563 f  gbe_control/tx_data_OBUF[7]_inst_i_2/CO[2]
+                         net (fo=12, routed)          0.576     2.138    gbe_control/s_axis_next_state0
+    SLICE_X47Y60         LUT2 (Prop_lut2_I1_O)        0.171     2.309 r  gbe_control/matlab_fifo1_i_1/O
+                         net (fo=1, routed)           0.304     2.613    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/m_axis_tready
+    SLICE_X47Y60         LUT2 (Prop_lut2_I1_O)        0.170     2.783 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst_i_1/O
+                         net (fo=8, routed)           0.706     3.489    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/rd_en
+    SLICE_X49Y58         LUT4 (Prop_lut4_I2_O)        0.053     3.542 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/gen_sdpram.xpm_memory_base_inst_i_2/O
+                         net (fo=47, routed)          2.612     6.154    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/enb
+    RAMB36_X3Y7          RAMB36E1                                     r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_1/ENBWREN
   -------------------------------------------------------------------    -------------------
 
 
@@ -603,9 +665,9 @@ Slack:                    inf
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/C
+  Source:                 matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[1]/D
+  Destination:            matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[1]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
   Data Path Delay:        0.155ns  (logic 0.100ns (64.432%)  route 0.055ns (35.568%))
@@ -613,16 +675,16 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X49Y53         FDRE                         0.000     0.000 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/C
-    SLICE_X49Y53         FDRE (Prop_fdre_C_Q)         0.100     0.100 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/Q
-                         net (fo=1, routed)           0.055     0.155    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff[0]
-    SLICE_X49Y53         FDRE                                         r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[1]/D
+    SLICE_X37Y51         FDRE                         0.000     0.000 r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/C
+    SLICE_X37Y51         FDRE (Prop_fdre_C_Q)         0.100     0.100 r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/Q
+                         net (fo=1, routed)           0.055     0.155    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff[0]
+    SLICE_X37Y51         FDRE                                         r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/C
+  Source:                 matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[1]/D
+  Destination:            matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[1]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
   Data Path Delay:        0.173ns  (logic 0.118ns (68.129%)  route 0.055ns (31.871%))
@@ -630,27 +692,10 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X32Y51         FDRE                         0.000     0.000 r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/C
-    SLICE_X32Y51         FDRE (Prop_fdre_C_Q)         0.118     0.118 r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/Q
-                         net (fo=1, routed)           0.055     0.173    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff[0]
-    SLICE_X32Y51         FDRE                                         r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[1]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[1]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[2]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.200ns  (logic 0.091ns (45.603%)  route 0.109ns (54.397%))
-  Logic Levels:           1  (FDRE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X49Y53         FDRE                         0.000     0.000 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[1]/C
-    SLICE_X49Y53         FDRE (Prop_fdre_C_Q)         0.091     0.091 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[1]/Q
-                         net (fo=1, routed)           0.109     0.200    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff[1]
-    SLICE_X49Y53         FDRE                                         r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[2]/D
+    SLICE_X46Y53         FDRE                         0.000     0.000 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/C
+    SLICE_X46Y53         FDRE (Prop_fdre_C_Q)         0.118     0.118 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[0]/Q
+                         net (fo=1, routed)           0.055     0.173    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff[0]
+    SLICE_X46Y53         FDRE                                         r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -659,72 +704,51 @@ Slack:                    inf
   Destination:            matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[2]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.200ns  (logic 0.091ns (45.603%)  route 0.109ns (54.397%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y51         FDRE                         0.000     0.000 r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[1]/C
+    SLICE_X37Y51         FDRE (Prop_fdre_C_Q)         0.091     0.091 r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[1]/Q
+                         net (fo=1, routed)           0.109     0.200    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff[1]
+    SLICE_X37Y51         FDRE                                         r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
   Data Path Delay:        0.215ns  (logic 0.107ns (49.839%)  route 0.108ns (50.161%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X32Y51         FDRE                         0.000     0.000 r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[1]/C
-    SLICE_X32Y51         FDRE (Prop_fdre_C_Q)         0.107     0.107 r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[1]/Q
-                         net (fo=1, routed)           0.108     0.215    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff[1]
-    SLICE_X32Y51         FDRE                                         r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[2]/D
+    SLICE_X46Y53         FDRE                         0.000     0.000 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[1]/C
+    SLICE_X46Y53         FDRE (Prop_fdre_C_Q)         0.107     0.107 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[1]/Q
+                         net (fo=1, routed)           0.108     0.215    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff[1]
+    SLICE_X46Y53         FDRE                                         r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst/syncstages_ff_reg[2]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 gbe_control/s_addr_data_reg[1]/C
+  Source:                 gbe_control/cmd_start_frame_reception/FSM_sequential_current_state_reg[0]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            gbe_control/s_addr_data_reg[2]/D
+  Destination:            gbe_control/cmd_start_frame_reception/event_cmd_out_reg/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.230ns  (logic 0.157ns (68.399%)  route 0.073ns (31.601%))
-  Logic Levels:           2  (FDCE=1 LUT6=1)
+  Data Path Delay:        0.233ns  (logic 0.146ns (62.531%)  route 0.087ns (37.469%))
+  Logic Levels:           2  (FDCE=1 LUT4=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X53Y53         FDCE                         0.000     0.000 r  gbe_control/s_addr_data_reg[1]/C
-    SLICE_X53Y53         FDCE (Prop_fdce_C_Q)         0.091     0.091 r  gbe_control/s_addr_data_reg[1]/Q
-                         net (fo=8, routed)           0.073     0.164    gbe_control/s_addr_data[1]
-    SLICE_X53Y53         LUT6 (Prop_lut6_I3_O)        0.066     0.230 r  gbe_control/s_addr_data[2]_i_1/O
-                         net (fo=1, routed)           0.000     0.230    gbe_control/s_addr_data_next[2]
-    SLICE_X53Y53         FDCE                                         r  gbe_control/s_addr_data_reg[2]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 gbe_control/rx_valid1_reg/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            gbe_control/cmd_frame_transmission/FSM_sequential_current_state_reg[2]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.233ns  (logic 0.128ns (55.008%)  route 0.105ns (44.992%))
-  Logic Levels:           2  (FDCE=1 LUT6=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X41Y44         FDCE                         0.000     0.000 r  gbe_control/rx_valid1_reg/C
-    SLICE_X41Y44         FDCE (Prop_fdce_C_Q)         0.100     0.100 r  gbe_control/rx_valid1_reg/Q
-                         net (fo=10, routed)          0.105     0.205    gbe_control/cmd_frame_transmission/rx_valid1
-    SLICE_X40Y44         LUT6 (Prop_lut6_I4_O)        0.028     0.233 r  gbe_control/cmd_frame_transmission/FSM_sequential_current_state[2]_i_1/O
-                         net (fo=1, routed)           0.000     0.233    gbe_control/cmd_frame_transmission/next_state[2]
-    SLICE_X40Y44         FDCE                                         r  gbe_control/cmd_frame_transmission/FSM_sequential_current_state_reg[2]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 gbe_control/s_addr_data_reg[3]/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            gbe_control/s_addr_data_reg[4]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.246ns  (logic 0.171ns (69.469%)  route 0.075ns (30.531%))
-  Logic Levels:           2  (FDCE=1 LUT6=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X52Y53         FDCE                         0.000     0.000 r  gbe_control/s_addr_data_reg[3]/C
-    SLICE_X52Y53         FDCE (Prop_fdce_C_Q)         0.107     0.107 r  gbe_control/s_addr_data_reg[3]/Q
-                         net (fo=7, routed)           0.075     0.182    gbe_control/s_addr_data[3]
-    SLICE_X52Y53         LUT6 (Prop_lut6_I3_O)        0.064     0.246 r  gbe_control/s_addr_data[4]_i_1/O
-                         net (fo=1, routed)           0.000     0.246    gbe_control/s_addr_data_next[4]
-    SLICE_X52Y53         FDCE                                         r  gbe_control/s_addr_data_reg[4]/D
+    SLICE_X42Y53         FDCE                         0.000     0.000 r  gbe_control/cmd_start_frame_reception/FSM_sequential_current_state_reg[0]/C
+    SLICE_X42Y53         FDCE (Prop_fdce_C_Q)         0.118     0.118 f  gbe_control/cmd_start_frame_reception/FSM_sequential_current_state_reg[0]/Q
+                         net (fo=5, routed)           0.087     0.205    gbe_control/cmd_start_frame_reception/current_state[0]
+    SLICE_X43Y53         LUT4 (Prop_lut4_I1_O)        0.028     0.233 r  gbe_control/cmd_start_frame_reception/event_cmd_out_i_1/O
+                         net (fo=1, routed)           0.000     0.233    gbe_control/cmd_start_frame_reception/event_cmd_out_i_1_n_0
+    SLICE_X43Y53         FDCE                                         r  gbe_control/cmd_start_frame_reception/event_cmd_out_reg/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -733,55 +757,90 @@ Slack:                    inf
   Destination:            matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.empty_fwft_i_reg/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.251ns  (logic 0.157ns (62.497%)  route 0.094ns (37.503%))
+  Data Path Delay:        0.240ns  (logic 0.157ns (65.399%)  route 0.083ns (34.601%))
   Logic Levels:           2  (FDRE=1 LUT4=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X55Y48         FDRE                         0.000     0.000 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[1]/C
-    SLICE_X55Y48         FDRE (Prop_fdre_C_Q)         0.091     0.091 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[1]/Q
-                         net (fo=8, routed)           0.094     0.185    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/curr_fwft_state[1]
-    SLICE_X55Y48         LUT4 (Prop_lut4_I2_O)        0.066     0.251 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.empty_fwft_i_i_1/O
-                         net (fo=1, routed)           0.000     0.251    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/data_valid_fwft1
-    SLICE_X55Y48         FDSE                                         r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.empty_fwft_i_reg/D
+    SLICE_X49Y59         FDRE                         0.000     0.000 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[1]/C
+    SLICE_X49Y59         FDRE (Prop_fdre_C_Q)         0.091     0.091 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[1]/Q
+                         net (fo=8, routed)           0.083     0.174    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/curr_fwft_state[1]
+    SLICE_X49Y59         LUT4 (Prop_lut4_I2_O)        0.066     0.240 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.empty_fwft_i_i_1/O
+                         net (fo=1, routed)           0.000     0.240    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/data_valid_fwft1
+    SLICE_X49Y59         FDSE                                         r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.empty_fwft_i_reg/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.empty_fwft_i_reg/C
-                            (rising edge-triggered cell FDSE)
+  Source:                 matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[1]/C
+                            (rising edge-triggered cell FDRE)
   Destination:            matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.empty_fwft_i_reg/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.268ns  (logic 0.128ns (47.839%)  route 0.140ns (52.161%))
-  Logic Levels:           2  (FDSE=1 LUT4=1)
+  Data Path Delay:        0.244ns  (logic 0.171ns (70.060%)  route 0.073ns (29.940%))
+  Logic Levels:           2  (FDRE=1 LUT4=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X27Y43         FDSE                         0.000     0.000 r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.empty_fwft_i_reg/C
-    SLICE_X27Y43         FDSE (Prop_fdse_C_Q)         0.100     0.100 r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.empty_fwft_i_reg/Q
-                         net (fo=2, routed)           0.140     0.240    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.empty_fwft_i_reg_n_0
-    SLICE_X27Y43         LUT4 (Prop_lut4_I3_O)        0.028     0.268 r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.empty_fwft_i_i_1/O
-                         net (fo=1, routed)           0.000     0.268    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/data_valid_fwft1
-    SLICE_X27Y43         FDSE                                         r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.empty_fwft_i_reg/D
+    SLICE_X36Y51         FDRE                         0.000     0.000 r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[1]/C
+    SLICE_X36Y51         FDRE (Prop_fdre_C_Q)         0.107     0.107 r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[1]/Q
+                         net (fo=8, routed)           0.073     0.180    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/curr_fwft_state[1]
+    SLICE_X36Y51         LUT4 (Prop_lut4_I2_O)        0.064     0.244 r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.empty_fwft_i_i_1/O
+                         net (fo=1, routed)           0.000     0.244    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/data_valid_fwft1
+    SLICE_X36Y51         FDSE                                         r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.empty_fwft_i_reg/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 gbe_control/cmd_frame_transmission/FSM_sequential_current_state_reg[1]/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            gbe_control/cmd_frame_transmission/event_cmd_out_reg/D
+  Source:                 matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[0]/C
+                            (rising edge-triggered cell FDSE)
+  Destination:            matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[1]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.269ns  (logic 0.146ns (54.273%)  route 0.123ns (45.727%))
-  Logic Levels:           2  (FDCE=1 LUT6=1)
+  Data Path Delay:        0.266ns  (logic 0.190ns (71.298%)  route 0.076ns (28.702%))
+  Logic Levels:           2  (CARRY4=1 FDSE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X40Y44         FDCE                         0.000     0.000 r  gbe_control/cmd_frame_transmission/FSM_sequential_current_state_reg[1]/C
-    SLICE_X40Y44         FDCE (Prop_fdce_C_Q)         0.118     0.118 f  gbe_control/cmd_frame_transmission/FSM_sequential_current_state_reg[1]/Q
-                         net (fo=4, routed)           0.123     0.241    gbe_control/cmd_frame_transmission/current_state[1]
-    SLICE_X40Y44         LUT6 (Prop_lut6_I4_O)        0.028     0.269 r  gbe_control/cmd_frame_transmission/event_cmd_out_i_1/O
-                         net (fo=1, routed)           0.000     0.269    gbe_control/cmd_frame_transmission/event_cmd_out_i_1_n_0
-    SLICE_X40Y44         FDCE                                         r  gbe_control/cmd_frame_transmission/event_cmd_out_reg/D
+    SLICE_X51Y59         FDSE                         0.000     0.000 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[0]/C
+    SLICE_X51Y59         FDSE (Prop_fdse_C_Q)         0.100     0.100 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[0]/Q
+                         net (fo=3, routed)           0.076     0.176    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/Q[0]
+    SLICE_X51Y59         CARRY4 (Prop_carry4_DI[0]_O[1])
+                                                      0.090     0.266 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[3]_i_1__1/O[1]
+                         net (fo=1, routed)           0.000     0.266    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[3]_i_1__1_n_6
+    SLICE_X51Y59         FDRE                                         r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/power_on_rst_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/power_on_rst_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.271ns  (logic 0.118ns (43.472%)  route 0.153ns (56.528%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y51         FDRE                         0.000     0.000 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/power_on_rst_reg[0]/C
+    SLICE_X46Y51         FDRE (Prop_fdre_C_Q)         0.118     0.118 r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/power_on_rst_reg[0]/Q
+                         net (fo=1, routed)           0.153     0.271    matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/power_on_rst_reg_n_0_[0]
+    SLICE_X46Y51         FDRE                                         r  matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/power_on_rst_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_cc.fifo_wr_rst_cc_reg[0]/C
+                            (rising edge-triggered cell FDSE)
+  Destination:            matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_cc.fifo_wr_rst_cc_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.272ns  (logic 0.118ns (43.312%)  route 0.154ns (56.688%))
+  Logic Levels:           1  (FDSE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y49         FDSE                         0.000     0.000 r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_cc.fifo_wr_rst_cc_reg[0]/C
+    SLICE_X36Y49         FDSE (Prop_fdse_C_Q)         0.118     0.118 r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_cc.fifo_wr_rst_cc_reg[0]/Q
+                         net (fo=1, routed)           0.154     0.272    matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_cc.fifo_wr_rst_cc[0]
+    SLICE_X36Y49         FDSE                                         r  matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_cc.fifo_wr_rst_cc_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
 

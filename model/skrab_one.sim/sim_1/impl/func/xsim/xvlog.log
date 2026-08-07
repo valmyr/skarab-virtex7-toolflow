@@ -1,0 +1,32 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.sim/sim_1/impl/func/xsim/tb_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_data_fifo_0
+INFO: [VRFC 10-311] analyzing module axis_data_fifo_0__xdcDup__1
+INFO: [VRFC 10-311] analyzing module axis_data_fifo_v2_0_17_top
+INFO: [VRFC 10-311] analyzing module axis_data_fifo_v2_0_17_top__xdcDup__1
+INFO: [VRFC 10-311] analyzing module cmd_sync_detector
+INFO: [VRFC 10-311] analyzing module control_axi_stream_gbe
+INFO: [VRFC 10-311] analyzing module top_dut
+INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
+INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst__2
+INFO: [VRFC 10-311] analyzing module xpm_counter_updn__parameterized0
+INFO: [VRFC 10-311] analyzing module xpm_counter_updn__parameterized0_0
+INFO: [VRFC 10-311] analyzing module xpm_counter_updn__parameterized0_2
+INFO: [VRFC 10-311] analyzing module xpm_counter_updn__parameterized0_5
+INFO: [VRFC 10-311] analyzing module xpm_counter_updn__parameterized1
+INFO: [VRFC 10-311] analyzing module xpm_counter_updn__parameterized1_1
+INFO: [VRFC 10-311] analyzing module xpm_counter_updn__parameterized1_3
+INFO: [VRFC 10-311] analyzing module xpm_counter_updn__parameterized1_6
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axis
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axis__2
+INFO: [VRFC 10-311] analyzing module xpm_fifo_base
+INFO: [VRFC 10-311] analyzing module xpm_fifo_base__2
+INFO: [VRFC 10-311] analyzing module xpm_fifo_reg_bit
+INFO: [VRFC 10-311] analyzing module xpm_fifo_reg_bit_4
+INFO: [VRFC 10-311] analyzing module xpm_fifo_rst
+INFO: [VRFC 10-311] analyzing module xpm_fifo_rst_7
+INFO: [VRFC 10-311] analyzing module xpm_memory_base
+INFO: [VRFC 10-311] analyzing module xpm_memory_base__2
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/package.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gbe_control
+WARNING: [VRFC 10-8497] literal value 'hff truncated to fit in 4 bits [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/package.v:94]

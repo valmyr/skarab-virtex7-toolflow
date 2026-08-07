@@ -986,7 +986,7 @@ entity control_axi_stream_gbe_wrapper is
     a_sync_nrst : in std_logic;
     rx_valid : in std_logic;
     rx_data : in std_logic_vector(7 downto 0);
-    tx_pkt_len : in std_logic_vector(9 downto 0);
+    tx_pkt_len : in std_logic_vector(15 downto 0);
     s_axis_tvalid : in std_logic;
     s_axis_tdata : in std_logic_vector(7 downto 0);
     s_axis_tlast : in std_logic;
@@ -1012,7 +1012,7 @@ architecture structural of control_axi_stream_gbe_wrapper is
   signal a_sync_nrst_net : std_logic;
   signal rx_valid_net : std_logic;
   signal rx_data_net : std_logic_vector(7 downto 0);
-  signal tx_pkt_len_net : std_logic_vector(9 downto 0);
+  signal tx_pkt_len_net : std_logic_vector(15 downto 0);
   signal s_axis_tvalid_net : std_logic;
   signal s_axis_tdata_net : std_logic_vector(7 downto 0);
   signal s_axis_tlast_net : std_logic;
@@ -1037,7 +1037,7 @@ architecture structural of control_axi_stream_gbe_wrapper is
       a_sync_nrst : in std_logic;
       rx_valid : in std_logic;
       rx_data : in std_logic_vector(7 downto 0);
-      tx_pkt_len : in std_logic_vector(9 downto 0);
+      tx_pkt_len : in std_logic_vector(15 downto 0);
       s_axis_tvalid : in std_logic;
       s_axis_tdata : in std_logic_vector(7 downto 0);
       s_axis_tlast : in std_logic;

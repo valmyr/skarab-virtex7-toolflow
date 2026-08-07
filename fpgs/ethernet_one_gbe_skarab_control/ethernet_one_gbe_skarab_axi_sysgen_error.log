@@ -5,9 +5,9 @@ Matlab 9.4.0.813654 (R2018a)            /usr/local/MATLAB/R2018a
 Vivado 2019.1                           /tools/Xilinx/Vivado/2019.1
 --------------------------------------------------------------------------------
 Summary of Errors:
-Error 0001: File, /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow...
+Error 0001: Input data type for port "tx_pkt_len" must have width=10.
      Block: 'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
-Error 0002: File, /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow...
+Error 0002: Input data type for port "tx_pkt_len" must have width=10.
      Block: 'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
 --------------------------------------------------------------------------------
 
@@ -17,9 +17,7 @@ Reported by:
   'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
 
 Details:
-File,
-/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/sync_fifo_peek.v,
-does not exist.
+Input data type for port "tx_pkt_len" must have width=10.
 Error occurred during "Rate and Type Propagation".
 
 --------------------------------------------------------------------------------
@@ -30,9 +28,7 @@ Reported by:
   'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
 
 Details:
-File,
-/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/sync_fifo_peek.v,
-does not exist.
+Input data type for port "tx_pkt_len" must have width=10.
 Error occurred during "Rate and Type Error Checking".
 
 --------------------------------------------------------------------------------

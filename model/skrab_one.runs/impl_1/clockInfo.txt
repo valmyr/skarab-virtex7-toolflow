@@ -1,6 +1,6 @@
 -------------------------------------
 | Tool Version : Vivado v.2025.2
-| Date         : Tue Aug  4 20:09:10 2026
+| Date         : Thu Aug  6 20:47:08 2026
 | Host         : valmyrsilva07-B760M-AORUS-ELITE
 | Design       : design_1
 | Device       : xc7vx485t-ffg1157-1--

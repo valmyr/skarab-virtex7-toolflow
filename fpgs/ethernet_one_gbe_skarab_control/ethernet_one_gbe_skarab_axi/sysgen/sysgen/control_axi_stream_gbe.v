@@ -49,7 +49,7 @@
 // Description: 
 // 
 // Dependencies: 
-// 
+// Revision 0.04 - Escrita e leitura direto nas FIFOs do projeto SIMULINK. Remoção das memórias registradores mem_gbe_debug/mem_tmp.
 // Revision 0.03 - Correção definitiva: perda de bytes na captura de RX.
 //                 Causa raiz identificada: suposição incorreta de que
 //                 rx_valid era um sinal PULSANTE (1 ciclo por byte).
@@ -68,7 +68,7 @@
 //                    silenciosamente 1-2 bytes no início de cada frame.
 //                 2) O mesmo padrão deixava lixo residual do frame
 //                    anterior (bytes do comando "tran"/"rece", ex. 0x6E)
-//                    em mem[0] e no último índice do buffer.
+//                    em mem_gbe_debug[0] e no último índice do buffer.
 //
 //                 Correção aplicada:
 //                 a) next_state_counter_rx passou a ser 0 (não 1) na
@@ -78,33 +78,12 @@
 //                    exato do pulso de início de frame sem esperar a FSM
 //                    estabilizar em RX_DATA.
 //                 c) Unificado o avanço do contador (counter_rx) e a
-//                    escrita em mem[] sob um único enable (we_rx =
+//                    escrita em mem_gbe_debug[] sob um único enable (we_rx =
 //                    pulse_rx_valid && data_capture_rx), eliminando de
 //                    forma estrutural a possibilidade do índice avançar
 //                    sem escrever (ou escrever sem avançar) — a causa
 //                    raiz do sintoma (2).
 //
-//                 Validado em hardware (SKARAB) com payload de teste em
-//                 rampa incremental (0..255), 256 bytes exatos = limite
-//                 de mem[]. Recepção e eco (via tx_data) bateram byte a
-//                 byte com o payload enviado, sem offset, sem lixo
-//                 residual, sem duplicação.
-//
-//                 PENDENTE (não coberto por esta revisão):
-//                 - Profundidade de mem[]/mem_tmp[] (256) vs. largura de
-//                   tx_pkt_len/counter_rx (10 bits, até 1023): sem
-//                   proteção contra estouro se tx_pkt_len > 256.
-//                 - Off-by-one em ena_dec (decimador do lado TX):
-//                   counter_dec avança até decim_factor, não
-//                   decim_factor-1, alongando o período real em 1 ciclo.
-//                 - Escrita combinacional em mem_tmp[] dentro de
-//                   always@(*) na interface AXI escrava (S_IDLE/S_REC):
-//                   mesmo padrão de risco já corrigido no caminho RX
-//                   legado, ainda não revisado no caminho AXI-Stream.
-//                 - Caminho de transmissão (tx_data/tx_val/counter_tx)
-//                   ainda usa a estrutura antiga sem a unificação
-//                   contador+leitura aplicada no RX; não testado nesta
-//                   revisão.
 // Additional Comments: Square Kilometer Array Reconfigurable Application Board - SKARAB
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -115,10 +94,10 @@ module control_axi_stream_gbe(
     input  wire        ce, //Sem uso
     input  wire        rx_valid,
     input  wire [7:0]  rx_data,
-    input  wire [9:0]  tx_pkt_len,
+    input  wire [15:0]  tx_pkt_len,
     output reg  [7:0]  tx_data,
-    output wire        tx_val,
-    output wire        tx_eof,
+    output reg        tx_val,
+    output reg        tx_eof,
     ///Axi  Sinais 
     //Interface Slave AXI Stream (Entrada)
     input wire        s_axis_tvalid,
@@ -136,7 +115,7 @@ module control_axi_stream_gbe(
     output reg [7:0]  debug_rx_data_mem_gbe,
     output reg [7:0]  debug_rx_data_mem_fifo,
     input  wire       debug_read_gbe_or_fifo,
-    input wire [9:0]       decim_factor
+    input wire [9:0]  decim_factor
 
 );
 
@@ -150,27 +129,24 @@ reg [2:0]next_state_tx;
 reg [2:0]next_state_rx;
 reg [2:0]current_state_tx;
 reg [2:0]current_state_rx;
-reg [10:0] counter_tx;
-reg [10:0] counter_tx_next;
-wire [10:0] counter_tx_mux;
-reg [7:0] mem[256-1:0];
+reg [15:0] counter_tx;
+reg [15:0] counter_tx_next;
+wire [15:0] counter_tx_mux;
+reg [7:0] mem_gbe_debug[256-1:0];
 reg [7:0] mem_tmp[256-1:0];
 
 reg  [7:0] rx_data_ff0, rx_data_ff1;
 wire start_frame_reception;
 wire start_frame_transmission;
-
-reg sync_reg_start_frame_reception;
-reg sync_reg_start_frame_transmission;
-wire [10:0] addr_data_write_mux,counter_tx_mux_r;
+wire [15:0] addr_data_write_mux,counter_tx_mux_r;
 reg reg_sync_rx_valid;
 
 reg [7:0]debug_local_data;
-reg [31:0]counter_dec;
+reg [15:0]counter_dec;
 wire ena_dec;
 
-reg  [9:0] counter_rx;
-reg  [9:0] next_state_counter_rx;
+reg  [15:0] counter_rx;
+reg  [15:0] next_state_counter_rx;
 reg data_capture_rx;
 reg data_capture_tx;
 reg tx_ena_out;
@@ -178,6 +154,11 @@ reg sync_data_valid_tx;
 
 reg pulse_rx_valid;
 reg rx_valid1;
+
+reg  tx_ena_out_w;
+reg sync_data_valid_tx0;
+reg sync_dec;
+reg [7:0] addr_data_t;
 /*
 always@(posedge clk, negedge a_sync_nrst)begin
     if(!a_sync_nrst)begin 
@@ -194,61 +175,53 @@ always@(*) pulse_rx_valid = rx_valid && ~rx_valid1;
 */
 always@(*) pulse_rx_valid = rx_valid;
 wire we_rx = pulse_rx_valid && data_capture_rx;
-wire tkt_eof_rx = (counter_rx == tx_pkt_len - 1);
+wire pkt_eof_rx = (counter_rx == tx_pkt_len - 1);
 
 always@(posedge clk, negedge a_sync_nrst)begin
     if(!a_sync_nrst)begin
         //counter_tx <=8'h00;
         reg_sync_rx_valid    <= 0; 
-        sync_reg_start_frame_reception<=0;
-        sync_reg_start_frame_transmission <=0;
-        tx_data <= 8'hca;
         counter_rx <= 0;
         rx_data_ff1 <=0;
         counter_tx <=0;
 
     end else begin
         //Lógica de escrita no buffer
-        //rx_data_ff1 <= rx_valid ? rx_data :rx_data_ff1;
-
         if(we_rx)begin
-            counter_rx       <= !tkt_eof_rx ? counter_rx + 1'b1: 8'h00;
-            mem[counter_rx]  <= rx_data;
+            counter_rx       <= !pkt_eof_rx ? counter_rx + 1'b1: 8'h00;
+            mem_gbe_debug[counter_rx]  <= rx_data;
         end
 
         //Lógica de leitura no buffer
-
-        if(ena_dec && current_state_tx == TX_DATA )begin
-            tx_data <= debug_read_gbe_or_fifo ? mem[counter_tx] : mem_tmp[counter_tx];
-            counter_tx <= counter_tx_next;
+        //if(ena_dec && current_state_tx == TX_DATA )begin
+        //tx_val <= tx_ena_out_w; //Remoção do sinal de decimação para avaliação de necessidade de desse módulo no projeto.
+        if((data_capture_tx))begin
+            counter_tx <= counter_tx + 1'b1;
         end else begin
-
-
-            if(counter_tx < tx_pkt_len)begin
-                tx_data <= debug_read_gbe_or_fifo ? mem[counter_tx] : mem_tmp[counter_tx];
-            end else begin
-                tx_data <= 0;
-            end
-            counter_tx <= counter_tx < tx_pkt_len ? counter_tx_next:0;
-
+            counter_tx <= 0;
         end
-
-
-        sync_reg_start_frame_reception   <= start_frame_reception   ;
-        sync_reg_start_frame_transmission<=  start_frame_transmission;
-        //tx_ena_out <=current_state_tx == TX_DATA;
-
 
     end
 end
 
 
+always @(*) begin 
+    if(tx_val)
+//        tx_data = debug_read_gbe_or_fifo ? mem_gbe_debug[counter_tx] : mem_tmp[counter_tx];
+          tx_data = s_axis_tdata;
+    else 
+        tx_data = 'h00;
+end
+
+always@(*) tx_val = (tx_ena_out_w || tx_eof); //Remoção do sinal de decimação para avaliação de necessidade de desse módulo no projeto.
+always@(*) tx_eof = (s_addr_data == tx_pkt_len-1) ;
 always@(*) data_capture_rx = (current_state_rx == RX_DATA) || start_frame_reception ;
-always@(*)data_capture_tx = (current_state_tx == TX_DATA);
-reg  tx_ena_out_w;
-reg sync_data_valid_tx0;
-reg sync_dec;
-reg [7:0] addr_data_t;
+//always@(*) data_capture_tx = (current_state_tx == TX_DATA) || start_frame_transmission;
+always@(*) data_capture_tx = (s_axis_state == S_REC) || start_frame_transmission;
+
+//s_axis_state
+
+
     always@(posedge clk, negedge a_sync_nrst)begin
         if(!a_sync_nrst)begin
             current_state_tx <= IDLE;
@@ -303,67 +276,58 @@ reg [7:0] addr_data_t;
         endcase
     end
 
-    //Lógica de próximo estado da FSM de controle TX
-    always@(*)begin
-        case(current_state_tx)
-            IDLE:begin
-                case(start_frame_transmission)//Atualização do estado de transmissão com base na recepção
-                    1'b1:next_state_tx = TX_DATA;
-                    1'b0:next_state_tx = IDLE;
-                    default:next_state_tx = IDLE;
-                endcase
-                tx_ena_out_w = 0;
-                counter_tx_next = 0;
-            end
-            TX_DATA:begin
-                case(counter_tx < tx_pkt_len)
- 
-                    1'b1:begin
-                        tx_ena_out_w = 1;
-                        next_state_tx = TX_DATA;
-                        //counter_tx_next = counter_tx < tx_pkt_len ? counter_tx + 1 : 0;
-
-                        if(counter_tx < tx_pkt_len && ena_dec)begin
-                            counter_tx_next =  counter_tx + 1;
-                        end else begin
-                            counter_tx_next =  counter_tx;
-                            
-                        end
-                    end
-                    1'b0:begin next_state_tx = start_frame_transmission ?  TX_DATA : IDLE; 
-                        counter_tx_next = 0;
-                        tx_ena_out_w = 0;
-                    end
-                    default:begin next_state_tx = IDLE;
-                                counter_tx_next = 0;
-                                tx_ena_out_w = 1;
-                    end
-                endcase
-            end
-            default:begin
-                tx_ena_out_w = 0;
-                counter_tx_next = 0;
-                next_state_tx = IDLE;
-            end
-        endcase
-    end
+    // Deixou de ser necessário, pois a lógica foi incluida no AXI 4 Stream Slave 
+    //Lógica de próximo estado da FSM de controle TX 
+    //always@(*)begin
+    //    case(current_state_tx)
+    //        IDLE:begin
+    //            counter_tx_next = 0;
+    //            if(start_frame_transmission)begin
+    //                next_state_tx = TX_DATA;
+    //                tx_ena_out_w = 1;
+    //            end else begin
+    //                next_state_tx = IDLE;
+    //                tx_ena_out_w = 0;
+    //            end
+    //        end
+    //        TX_DATA:begin
+    //            if(counter_tx < tx_pkt_len-1)begin
+    //                next_state_tx = TX_DATA;
+    //                counter_tx_next =  counter_tx + 1;
+    //                tx_ena_out_w = 1;
+    //            end else begin
+    //                next_state_tx =  IDLE; 
+    //                counter_tx_next = 0;
+    //                tx_ena_out_w = 0;
+    //            end
+    //        end
+    //        default:begin
+    //            tx_ena_out_w = 0;
+    //            counter_tx_next = 0;
+    //            next_state_tx = IDLE;
+    //        end
+    //    endcase
+    //end
 
 
 
 
+// Após uma avaliação, notou-se que a decimação é desnecessária.
+//
+//
+//    assign ena_dec       =  counter_dec == decim_factor-1; //Por padrão 15; 15-1 =14
+//    always @(posedge clk or negedge a_sync_nrst) begin
+//        if(!a_sync_nrst)begin
+//            counter_dec <= 0;
+//        end else begin
+//            if(tx_ena_out && counter_dec < decim_factor) counter_dec <= counter_dec +1;
+//            else                               counter_dec <= 0;
+//        end
+//    end
+//
+//assign tx_eof = (counter_tx == tx_pkt_len-1) ;
+//assign tx_val = (tx_ena_out && ena_dec); 
 
-    assign ena_dec       =  counter_dec == decim_factor-1; //Por padrão 15; 15-1 =14
-    always @(posedge clk or negedge a_sync_nrst) begin
-        if(!a_sync_nrst)begin
-            counter_dec <= 0;
-        end else begin
-            if(tx_ena_out && counter_dec < decim_factor) counter_dec <= counter_dec +1;
-            else                               counter_dec <= 0;
-        end
-    end
-
-assign tx_eof = (counter_tx == tx_pkt_len-1) ;
-assign tx_val = (tx_ena_out && ena_dec);
 
 
 //Recepção SKARAB
@@ -412,8 +376,8 @@ localparam M_SEND = 2'b01;
 
 (* keep = "true" *)reg [1:0] m_axis_state;
 reg [1:0] m_axis_next_state;
-reg [9:0]m_addr_data;
-reg [9:0]m_addr_data_next;
+reg [15:0]m_addr_data;
+reg [15:0]m_addr_data_next;
 
 
 
@@ -421,11 +385,9 @@ always@(posedge clk, negedge a_sync_nrst)begin
     if(!a_sync_nrst)begin
         m_axis_state <= M_IDLE;
         m_addr_data <= 0;
-        //m_axis_tdata <=0;
     end else begin
         m_axis_state <= m_axis_next_state;
         m_addr_data  <= m_addr_data_next;
-        //m_axis_tdata <= mem[m_addr_data];
 
     end
 end
@@ -433,13 +395,14 @@ end
 always@(*) begin
     case(m_axis_state)
         M_IDLE:begin
-            m_axis_tvalid = counter_rx == tx_pkt_len-1;
+//          m_axis_tvalid = counter_rx == tx_pkt_len-1;
+            m_axis_tvalid = we_rx; // Alteração dedicada à inclusão direta da escrita na FIFO do projeto Simulink, eliminando a memória intermediária mem_gbe_debug[].
             m_axis_tlast = 1'b0;
             m_addr_data_next = 0;
             if(m_axis_tvalid && m_axis_tready)begin
                 m_addr_data_next = m_addr_data +1;
                 m_axis_next_state=M_SEND;
-                m_axis_tdata = mem[m_addr_data];
+                m_axis_tdata = rx_data; // Inclusão da FIFO 
 
             end else begin
                 m_addr_data_next =0;
@@ -460,10 +423,10 @@ always@(*) begin
                 m_axis_next_state = M_SEND;
                 m_axis_tvalid = 1'b1;
                 m_axis_tlast = m_addr_data == tx_pkt_len-1;
-                m_axis_tdata = mem[m_addr_data];
+                m_axis_tdata = rx_data;// Inclusão da FIFO 
             end else begin
                 m_axis_tdata = 'h00;
-                m_addr_data_next = m_addr_data;
+                m_addr_data_next = m_addr_data; 
                 m_axis_next_state = M_SEND;
                 m_axis_tvalid = 1'b1;
                 m_axis_tlast = m_addr_data == tx_pkt_len-1;
@@ -476,7 +439,7 @@ always@(*) begin
             if(m_axis_tready)begin
                 m_addr_data_next = m_addr_data +1;
                 m_axis_next_state=M_SEND;
-                m_axis_tdata = mem[m_addr_data];
+                m_axis_tdata = rx_data; // Inclusão da FIFO
 
             end else begin
                 m_addr_data_next =0;
@@ -509,9 +472,9 @@ localparam S_REC = 1'b0;
 reg  s_axis_state;
 reg  s_axis_next_state;
 reg handshake_ms_axis;
-reg [9:0]s_addr_data;
-reg [9:0]s_addr_data_next;
-reg [9:0]s_addr_data_delay;
+reg [15:0]s_addr_data;
+reg [15:0]s_addr_data_next;
+reg [15:0]s_addr_data_delay;
 
 reg [7:0]debug_axi_fifo2mem;
 
@@ -529,7 +492,6 @@ always@(posedge clk, negedge a_sync_nrst)begin
         s_addr_data_delay <= 0;
         handshake_ms_axis <=0;
     end else begin
-        //s_addr_data          <= s_addr_data_next;
         s_axis_state <= s_axis_next_state;
         if(s_axis_tvalid && s_axis_tready)begin
             mem_tmp[s_addr_data] <= s_axis_tdata ;   
@@ -545,35 +507,35 @@ always@(*) begin
             s_axis_tready = 1;
             if((s_axis_tvalid))begin
                 s_axis_next_state = S_REC;
-//                s_addr_data_next = s_addr_data +1; 
+                tx_ena_out_w = 0;
             end else begin
                 s_axis_next_state = S_IDLE;
-//                s_addr_data_next = 0;
+                tx_ena_out_w = 0;
             end
         end
         S_REC:begin
             if(s_addr_data == tx_pkt_len)begin
-//                s_addr_data_next = 0; //Manter o valor anterior
                 s_axis_next_state = S_IDLE;
                 s_axis_tready = 0;
+                tx_ena_out_w = 0;
             end else if(s_axis_tvalid) begin
-//               s_addr_data_next =  s_addr_data +1;
                 s_axis_next_state = S_REC;
                 s_axis_tready = 1;
+                tx_ena_out_w = 1;
             end else begin
-//                s_addr_data_next = s_addr_data;
                 s_axis_next_state = S_REC;
                 s_axis_tready = 1;
+                tx_ena_out_w = 0;
             end
         end
         default:begin
             s_axis_next_state = S_IDLE;
-//            s_addr_data_next = 0;
             s_axis_tready = 1;
+            tx_ena_out_w = 0;
         end
     endcase
 end
-always@(*) debug_rx_data_mem_gbe = mem[debug_addr_data_gbe];
+always@(*) debug_rx_data_mem_gbe = mem_gbe_debug[debug_addr_data_gbe];
 always@(*) debug_rx_data_mem_fifo = mem_tmp[debug_addr_data_fifo];
 
 

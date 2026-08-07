@@ -23,7 +23,7 @@ sock.settimeout(1)
 print(f"RX {IP}:{PORT}")
 print(f"TX {SERVER_IP}:{SERVER_PORT}")
 
-N = 256  # TESTE DE CONTROLE: tamanho que cabe inteiro na FIFO de 256
+N = 512  # TESTE DE CONTROLE: tamanho que cabe inteiro na FIFO de 256
          # elementos, sem estourar em rajada. Se o throughput ficar
          # estável aqui (sem quedas), confirma que a instabilidade com
          # N=1024 vem do descompasso pacote/FIFO, não de algo novo do reboot.
@@ -41,7 +41,7 @@ INTERVALO_RELATORIO = 1000
 
 f1 = 1000
 fs = 10e+4
-t = np.arange(0, N - 8, 1)
+t = np.arange(0, N, 1)
 
 k = 2
 rodada = 0
@@ -72,7 +72,7 @@ def validar_entrada(data, frame_tx, frame_rx, tam_esperado):
 
 
 def validar_saida(data1, recebido, codigo_erro):
-    esperado_saida = np.concatenate((data1, np.zeros(8, dtype=np.int64)))
+    esperado_saida = data1
     acertos = esperado_saida == recebido
     n_erros = int(np.sum(~acertos))
     taxa_acerto = 100.0 * np.sum(acertos) / len(acertos)
@@ -87,7 +87,7 @@ try:
         data2 = np.concatenate((frame_tx, data1, frame_rx))
         data = data2.tolist()
 
-        if not validar_entrada(data, frame_tx, frame_rx, tam_esperado=N):
+        if not validar_entrada(data, frame_tx, frame_rx, tam_esperado=N+8):
             total_falhas_entrada += 1
 
         data_pack = struct.pack(f'>{len(data)}Q', *data)

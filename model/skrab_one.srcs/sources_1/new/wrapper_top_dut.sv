@@ -35,7 +35,7 @@ module top_dut (
     // TX
     output logic        tx_ena_out,
     output logic [7:0]  tx_data,
-    output logic [3:0]  tx_val,
+    output logic        tx_val,
     output logic        tx_eof,
 
     // Debug
@@ -150,7 +150,9 @@ module top_dut (
 
         .tx_pkt_len(10'd256),
 
-        .tx_data(tx_ena_out),
+        .tx_data(tx_data),
+        .tx_val(tx_val),
+        .tx_eof(tx_eof),
 
         // AXI Slave
         .s_axis_tvalid(m_axis_tvalid1),
@@ -172,7 +174,7 @@ module top_dut (
         .debug_rx_data_mem_gbe(),
         .debug_rx_data_mem_fifo(),
 
-        .debug_read_gbe_or_fifo(1'b1),
+        .debug_read_gbe_or_fifo(1'b0),
 
         .decim_factor(32'd15)
 

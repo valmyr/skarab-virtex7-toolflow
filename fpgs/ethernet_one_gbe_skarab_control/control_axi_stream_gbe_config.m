@@ -86,7 +86,7 @@ function control_axi_stream_gbe_config(this_block)
       this_block.setError('Input data type for port "rx_data" must have width=8.');
     end
 
-    if (this_block.port('tx_pkt_len').width ~= 10);
+    if (this_block.port('tx_pkt_len').width ~= 16);
       this_block.setError('Input data type for port "tx_pkt_len" must have width=10.');
     end
 

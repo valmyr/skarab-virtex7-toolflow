@@ -3,7 +3,7 @@ import struct
 import numpy as np
 from matplotlib import pyplot as plt
 from random import randint
-DEBUG = False
+DEBUG = True
 
 N=256
 SAMPLES = N

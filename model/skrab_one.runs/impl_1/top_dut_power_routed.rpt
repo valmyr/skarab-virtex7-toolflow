@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date             : Tue Aug  4 20:09:37 2026
+| Date             : Thu Aug  6 20:47:36 2026
 | Host             : valmyrsilva07-B760M-AORUS-ELITE running 64-bit Ubuntu 20.04.6 LTS
 | Command          : report_power -file top_dut_power_routed.rpt -pb top_dut_power_summary_routed.pb -rpx top_dut_power_routed.rpx
 | Design           : top_dut
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 5.381        |
+| Total On-Chip Power (W)  | 8.466        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 5.084        |
-| Device Static (W)        | 0.297        |
+| Dynamic (W)              | 8.129        |
+| Device Static (W)        | 0.338        |
 | Effective TJA (C/W)      | 1.4          |
-| Max Ambient (C)          | 77.5         |
-| Junction Temperature (C) | 32.5         |
+| Max Ambient (C)          | 73.2         |
+| Junction Temperature (C) | 36.8         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,18 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.525 |     4094 |       --- |             --- |
-|   LUT as Logic |     0.435 |     1145 |    303600 |            0.38 |
-|   CARRY4       |     0.066 |       65 |     75900 |            0.09 |
-|   Register     |     0.017 |     2316 |    607200 |            0.38 |
+| Slice Logic    |     0.584 |      654 |       --- |             --- |
+|   LUT as Logic |     0.409 |      251 |    303600 |            0.08 |
+|   CARRY4       |     0.126 |       83 |     75900 |            0.11 |
+|   Register     |     0.043 |      268 |    607200 |            0.04 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   F7/F8 Muxes  |    <0.001 |      459 |    303600 |            0.15 |
-|   Others       |     0.000 |       43 |       --- |             --- |
-| Signals        |     3.059 |     2958 |       --- |             --- |
-| Block RAM      |     1.416 |       28 |      1030 |            2.72 |
-| I/O            |     0.085 |       27 |       600 |            4.50 |
-| Static Power   |     0.297 |          |           |                 |
-| Total          |     5.381 |          |           |                 |
+|   Others       |     0.000 |       41 |       --- |             --- |
+| Signals        |     1.824 |      449 |       --- |             --- |
+| Block RAM      |     2.466 |       28 |      1030 |            2.72 |
+| I/O            |     3.255 |       24 |       600 |            4.00 |
+| Static Power   |     0.338 |          |           |                 |
+| Total          |     8.466 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,16 +72,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     5.108 |       4.924 |      0.183 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.040 |       0.001 |      0.039 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     4.936 |       4.715 |      0.221 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.301 |       0.261 |      0.041 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vcco18    |       1.800 |     0.024 |       0.023 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     1.526 |       1.525 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.120 |       0.115 |      0.005 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.205 |       0.199 |      0.006 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -144,16 +143,15 @@ Table of Contents
 +-----------------------------------+-----------+
 | Name                              | Power (W) |
 +-----------------------------------+-----------+
-| top_dut                           |     5.084 |
-|   gbe_control                     |     0.581 |
-|     cmd_frame_transmission        |     0.039 |
-|     cmd_start_frame_reception     |     0.015 |
-|   matlab_fifo0                    |     1.218 |
-|     inst                          |     1.218 |
-|       gen_fifo.xpm_fifo_axis_inst |     1.218 |
-|   matlab_fifo1                    |     1.149 |
-|     inst                          |     1.149 |
-|       gen_fifo.xpm_fifo_axis_inst |     1.149 |
+| top_dut                           |     8.129 |
+|   gbe_control                     |     0.479 |
+|     cmd_start_frame_reception     |     0.074 |
+|   matlab_fifo0                    |     2.215 |
+|     inst                          |     2.215 |
+|       gen_fifo.xpm_fifo_axis_inst |     2.215 |
+|   matlab_fifo1                    |     2.052 |
+|     inst                          |     2.052 |
+|       gen_fifo.xpm_fifo_axis_inst |     2.052 |
 +-----------------------------------+-----------+
 
 

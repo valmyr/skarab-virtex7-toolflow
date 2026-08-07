@@ -114,7 +114,7 @@ mm_slaves:
   base_address: 2149171248
   high_address: 2149171252
   mode: 3
-  name: dec_dactor
+  name: dec_factor
   span: 4
 - !!python/object:castro.mm_slave
   base_address: 2149171252
@@ -233,12 +233,18 @@ mm_slaves:
 - !!python/object:castro.mm_slave
   base_address: 2149171328
   high_address: 2149171332
+  mode: 3
+  name: tx_pkt_len
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149171332
+  high_address: 2149171336
   mode: 1
   name: vaild_rx_valmir1
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171332
-  high_address: 2149171364
+  base_address: 2149171336
+  high_address: 2149171368
   mode: 1
   name: sys_block
   span: 32
@@ -297,6 +303,7 @@ src_files:
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/rx_packet_ctrl_fifo/rx_packet_ctrl_fifo.xci
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_one_gbe/packet_byte_count_fifo/packet_byte_count_fifo.xci
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/skarab_infr.vhd
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wbs_arbiter/timeout.v

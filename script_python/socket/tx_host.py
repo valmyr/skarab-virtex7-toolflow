@@ -76,6 +76,8 @@ try:
     t0 = time.time()
 
     while(True):
+        if(DEBUG):
+            os.system("clear")
         data1 = (np.round(2**4 * np.sin(2 * np.pi * (f1 / fs) * t) + 2**4+k ).astype(np.int64))
         #data1 = np.ones(N,dtype=np.int64)*k#np.arange(0,N,1,dtype=np.int64)+1 # de 1 a 255
         #data1 = np.mod(data1, N).astype(np.int64)
@@ -93,7 +95,7 @@ try:
             print("============================Enviado=====================",k)
         k+=1
         if(k >=256-2*2**4): k =0
-        time.sleep(0.01)
+        time.sleep(10)
 except KeyboardInterrupt:
     print("Finalizado pelo usuário")
 

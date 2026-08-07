@@ -131,7 +131,7 @@ module top (
   localparam ETHERNET_ONE_GBE_SKARAB_AXI_DATA_RX_VALMIR_WBID0 = 15;
   localparam ETHERNET_ONE_GBE_SKARAB_AXI_DEBUG_RX_DATA_MEM_FIFO_WBID0 = 16;
   localparam ETHERNET_ONE_GBE_SKARAB_AXI_DEBUG_RX_DATA_MEM_GBE_WBID0 = 17;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_DEC_DACTOR_WBID0 = 18;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_DEC_FACTOR_WBID0 = 18;
   localparam ETHERNET_ONE_GBE_SKARAB_AXI_ERR_MARKER1_WBID0 = 19;
   localparam ETHERNET_ONE_GBE_SKARAB_AXI_ERR_PKT_CTR1_WBID0 = 20;
   localparam ETHERNET_ONE_GBE_SKARAB_AXI_ERR_PKT_CTR_STEP1_WBID0 = 21;
@@ -154,18 +154,19 @@ module top (
   localparam ETHERNET_ONE_GBE_SKARAB_AXI_TX_CONTROL_WBID0 = 36;
   localparam ETHERNET_ONE_GBE_SKARAB_AXI_TX_ONE_GBE_WBID0 = 0;
   localparam ETHERNET_ONE_GBE_SKARAB_AXI_TX_OVERFLOW1_WBID0 = 37;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_VAILD_RX_VALMIR1_WBID0 = 38;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_TX_PKT_LEN_WBID0 = 38;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_VAILD_RX_VALMIR1_WBID0 = 39;
   localparam N_SUB_ARBS = 2;
-  localparam N_WB_SLAVES = 40;
+  localparam N_WB_SLAVES = 41;
   localparam SLAVE_ADDR = {
     32'h8019c068,
     32'h800dc000
     };
   localparam SLAVE_HIGH = {
-    32'h8019c0a3,
+    32'h8019c0a7,
     32'h8019c067
     };
-  localparam SYS_BLOCK_INST_WBID0 = 39;
+  localparam SYS_BLOCK_INST_WBID0 = 40;
 
 /*
   _____ _                   _     
@@ -311,8 +312,8 @@ module top (
   wire [31:0] ethernet_one_gbe_skarab_axi_debug_rx_data_mem_fifo_user_data_in;
   // sw_reg: debug_rx_data_mem_gbe
   wire [31:0] ethernet_one_gbe_skarab_axi_debug_rx_data_mem_gbe_user_data_in;
-  // sw_reg: dec_dactor
-  wire [31:0] ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out;
+  // sw_reg: dec_factor
+  wire [31:0] ethernet_one_gbe_skarab_axi_dec_factor_user_data_out;
   // sw_reg: err_marker1
   wire [31:0] ethernet_one_gbe_skarab_axi_err_marker1_user_data_in;
   // sw_reg: err_pkt_ctr1
@@ -351,18 +352,20 @@ module top (
   wire [31:0] ethernet_one_gbe_skarab_axi_tx_control_user_data_out;
   // sw_reg: tx_overflow1
   wire [31:0] ethernet_one_gbe_skarab_axi_tx_overflow1_user_data_in;
+  // sw_reg: tx_pkt_len
+  wire [31:0] ethernet_one_gbe_skarab_axi_tx_pkt_len_user_data_out;
   // sw_reg: vaild_rx_valmir1
   wire [31:0] ethernet_one_gbe_skarab_axi_vaild_rx_valmir1_user_data_in;
   // usermodule: ethernet_one_gbe_skarab_axi
   wire wbm_err_i;
-  wire [39:0] wbs_ack_i;
+  wire [40:0] wbs_ack_i;
   wire [63:0] wbs_adr_o;
-  wire [39:0] wbs_cyc_o;
-  wire [1279:0] wbs_dat_i;
+  wire [40:0] wbs_cyc_o;
+  wire [1311:0] wbs_dat_i;
   wire [31:0] wbs_dat_o;
-  wire [39:0] wbs_err_i;
+  wire [40:0] wbs_err_i;
   wire [3:0] wbs_sel_o;
-  wire [39:0] wbs_stb_o;
+  wire [40:0] wbs_stb_o;
   wire wbs_we_o;
   // xsg: SKARAB
   wire user_clk;
@@ -940,22 +943,22 @@ module top (
     .wb_we_i(wbs_we_o)
   );
 
-  // sw_reg: dec_dactor
+  // sw_reg: dec_factor
   wb_register_ppc2simulink #(
     .INIT_VAL(32'h0)
-  ) ethernet_one_gbe_skarab_axi_dec_dactor (
+  ) ethernet_one_gbe_skarab_axi_dec_factor (
     .user_clk(user_clk),
-    .user_data_out(ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out),
-    .wb_ack_o(wbs_ack_i[ETHERNET_ONE_GBE_SKARAB_AXI_DEC_DACTOR_WBID0]),
+    .user_data_out(ethernet_one_gbe_skarab_axi_dec_factor_user_data_out),
+    .wb_ack_o(wbs_ack_i[ETHERNET_ONE_GBE_SKARAB_AXI_DEC_FACTOR_WBID0]),
     .wb_adr_i(wbs_adr_o[(0+1)*32-1:(0)*32]),
     .wb_clk_i(wb_clk_i),
-    .wb_cyc_i(wbs_cyc_o[ETHERNET_ONE_GBE_SKARAB_AXI_DEC_DACTOR_WBID0]),
+    .wb_cyc_i(wbs_cyc_o[ETHERNET_ONE_GBE_SKARAB_AXI_DEC_FACTOR_WBID0]),
     .wb_dat_i(wbs_dat_o),
-    .wb_dat_o(wbs_dat_i[(ETHERNET_ONE_GBE_SKARAB_AXI_DEC_DACTOR_WBID0+1)*32-1:(ETHERNET_ONE_GBE_SKARAB_AXI_DEC_DACTOR_WBID0)*32]),
-    .wb_err_o(wbs_err_i[ETHERNET_ONE_GBE_SKARAB_AXI_DEC_DACTOR_WBID0]),
+    .wb_dat_o(wbs_dat_i[(ETHERNET_ONE_GBE_SKARAB_AXI_DEC_FACTOR_WBID0+1)*32-1:(ETHERNET_ONE_GBE_SKARAB_AXI_DEC_FACTOR_WBID0)*32]),
+    .wb_err_o(wbs_err_i[ETHERNET_ONE_GBE_SKARAB_AXI_DEC_FACTOR_WBID0]),
     .wb_rst_i(wb_rst_i),
     .wb_sel_i(wbs_sel_o),
-    .wb_stb_i(wbs_stb_o[ETHERNET_ONE_GBE_SKARAB_AXI_DEC_DACTOR_WBID0]),
+    .wb_stb_i(wbs_stb_o[ETHERNET_ONE_GBE_SKARAB_AXI_DEC_FACTOR_WBID0]),
     .wb_we_i(wbs_we_o)
   );
 
@@ -1289,6 +1292,25 @@ module top (
     .wb_rst_i(wb_rst_i),
     .wb_sel_i(wbs_sel_o),
     .wb_stb_i(wbs_stb_o[ETHERNET_ONE_GBE_SKARAB_AXI_TX_OVERFLOW1_WBID0]),
+    .wb_we_i(wbs_we_o)
+  );
+
+  // sw_reg: tx_pkt_len
+  wb_register_ppc2simulink #(
+    .INIT_VAL(32'h0)
+  ) ethernet_one_gbe_skarab_axi_tx_pkt_len (
+    .user_clk(user_clk),
+    .user_data_out(ethernet_one_gbe_skarab_axi_tx_pkt_len_user_data_out),
+    .wb_ack_o(wbs_ack_i[ETHERNET_ONE_GBE_SKARAB_AXI_TX_PKT_LEN_WBID0]),
+    .wb_adr_i(wbs_adr_o[(1+1)*32-1:(1)*32]),
+    .wb_clk_i(wb_clk_i),
+    .wb_cyc_i(wbs_cyc_o[ETHERNET_ONE_GBE_SKARAB_AXI_TX_PKT_LEN_WBID0]),
+    .wb_dat_i(wbs_dat_o),
+    .wb_dat_o(wbs_dat_i[(ETHERNET_ONE_GBE_SKARAB_AXI_TX_PKT_LEN_WBID0+1)*32-1:(ETHERNET_ONE_GBE_SKARAB_AXI_TX_PKT_LEN_WBID0)*32]),
+    .wb_err_o(wbs_err_i[ETHERNET_ONE_GBE_SKARAB_AXI_TX_PKT_LEN_WBID0]),
+    .wb_rst_i(wb_rst_i),
+    .wb_sel_i(wbs_sel_o),
+    .wb_stb_i(wbs_stb_o[ETHERNET_ONE_GBE_SKARAB_AXI_TX_PKT_LEN_WBID0]),
     .wb_we_i(wbs_we_o)
   );
 

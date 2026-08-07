@@ -96,8 +96,7 @@ def validar_saida(data1, recebido, codigo_erro):
     Por isso o "esperado" da saída é reconstruído aqui a partir de data1,
     não reaproveitado do pacote que foi enviado.
     """
-    esperado_saida = np.concatenate((data1, np.zeros(8, dtype=np.int64)))
-
+    esperado_saida = data1
     acertos = esperado_saida == recebido
     n_erros = int(np.sum(~acertos))
     taxa_acerto = 100.0 * np.sum(acertos) / len(acertos)
@@ -146,7 +145,7 @@ frame_rx = np.array([0x6E, 0x61, 0x72, 0x74], dtype=np.int64)  # "nart" ("tran")
 
 f1 = 1000
 fs = 100000
-t = np.arange(0, N - 8)
+t = np.arange(0, N)
 
 k = 2
 rodada = 0
@@ -169,7 +168,7 @@ try:
 
         # ===== VALIDAÇÃO DE ENTRADA (TX) =====
         # Checagem local, antes de enviar — não depende do hardware
-        val_entrada = validar_entrada(data, frame_tx, frame_rx, tam_esperado=N)
+        val_entrada = validar_entrada(data, frame_tx, frame_rx, tam_esperado=N+8)
         if not val_entrada["ok"]:
             total_falhas_entrada += 1
             if DEBUG:

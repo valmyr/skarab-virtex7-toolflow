@@ -1,0 +1,75 @@
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/Vivado/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L secureip --snapshot tb_func_impl xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by AMD, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 10 for port 'tx_package_len' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sim_1/new/tb.sv:75]
+WARNING: [VRFC 10-9543] actual bit length 4 differs from formal bit length 1 for port 'tx_val' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sim_1/new/tb.sv:111]
+WARNING: [VRFC 10-3823] variable 'tx_data' might have multiple concurrent drivers [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sim_1/new/tb.sv:110]
+WARNING: [VRFC 10-3823] variable 'tx_val' might have multiple concurrent drivers [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sim_1/new/tb.sv:111]
+WARNING: [VRFC 10-3823] variable 'tx_eof' might have multiple concurrent drivers [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sim_1/new/tb.sv:112]
+WARNING: [VRFC 10-3823] variable 'data_valid_rx' might have multiple concurrent drivers [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sim_1/new/tb.sv:115]
+WARNING: [VRFC 10-3823] variable 'data_valid_rx1' might have multiple concurrent drivers [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sim_1/new/tb.sv:116]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 10 for port 'tx_package_len' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sim_1/new/tb.sv:90]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 1 for port 'tx_en00' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sim_1/new/tb.sv:91]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.gbe_control
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.OBUFT
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.FDCE_default
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module xil_defaultlib.cmd_sync_detector
+Compiling module unisims_ver.CARRY4
+Compiling module unisims_ver.FDPE_default
+Compiling module xil_defaultlib.control_axi_stream_gbe
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.xpm_cdc_sync_rst__2
+Compiling module unisims_ver.FDSE_default
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(DOB_REG=1,REA...
+Compiling module unisims_ver.RAMB36E1(DOB_REG=1,READ_WIDTH_A=...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(READ_WIDTH_A=1,READ_WID...
+Compiling module xil_defaultlib.xpm_memory_base__2
+Compiling module xil_defaultlib.xpm_counter_updn__parameterized0...
+Compiling module xil_defaultlib.xpm_counter_updn__parameterized1...
+Compiling module xil_defaultlib.xpm_fifo_reg_bit_4
+Compiling module xil_defaultlib.xpm_counter_updn__parameterized0...
+Compiling module xil_defaultlib.xpm_counter_updn__parameterized1...
+Compiling module xil_defaultlib.xpm_fifo_rst_7
+Compiling module xil_defaultlib.xpm_fifo_base__2
+Compiling module xil_defaultlib.xpm_fifo_axis__2
+Compiling module xil_defaultlib.axis_data_fifo_v2_0_17_top__xdcD...
+Compiling module xil_defaultlib.axis_data_fifo_0__xdcDup__1
+Compiling module xil_defaultlib.xpm_cdc_sync_rst
+Compiling module xil_defaultlib.xpm_memory_base
+Compiling module xil_defaultlib.xpm_counter_updn__parameterized0
+Compiling module xil_defaultlib.xpm_counter_updn__parameterized1
+Compiling module xil_defaultlib.xpm_fifo_reg_bit
+Compiling module xil_defaultlib.xpm_counter_updn__parameterized0...
+Compiling module xil_defaultlib.xpm_counter_updn__parameterized1...
+Compiling module xil_defaultlib.xpm_fifo_rst
+Compiling module xil_defaultlib.xpm_fifo_base
+Compiling module xil_defaultlib.xpm_fifo_axis
+Compiling module xil_defaultlib.axis_data_fifo_v2_0_17_top
+Compiling module xil_defaultlib.axis_data_fifo_0
+Compiling module unisims_ver.OBUF
+Compiling module xil_defaultlib.top_dut
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_func_impl

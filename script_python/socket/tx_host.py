@@ -28,7 +28,7 @@ import os
 from random import randint
 from matplotlib import pyplot as plt
 
-DEBUG = True
+DEBUG = False
 
 
 SERVER_IP = "10.42.0.200"
@@ -46,7 +46,7 @@ f=78
 
 #sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 #sock.bind((IP, PORT))
-N= 256
+N= 1024
 
 
 frame_rx = np.array(([0x6E,0x61,0x72,0x74]),dtype=np.int8)
@@ -95,7 +95,7 @@ try:
             print("============================Enviado=====================",k)
         k+=1
         if(k >=256-2*2**4): k =0
-        time.sleep(10)
+        #time.sleep(10)
 except KeyboardInterrupt:
     print("Finalizado pelo usuário")
 

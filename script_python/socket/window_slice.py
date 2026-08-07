@@ -98,7 +98,7 @@ try:
                 n_words = len(frame_pack) // 8
                 print(f"\033[91m PC \033[00m -> \033[92m FPGA \033[00m: "
                       f"Frame {idx+1}/{n_frames} enviado ({n_words} words)")
-            time.sleep(1/1000.0)
+            time.sleep(1/60.0)
         if DEBUG:
             print("============================ Janela completa enviada ============================")
 except KeyboardInterrupt:

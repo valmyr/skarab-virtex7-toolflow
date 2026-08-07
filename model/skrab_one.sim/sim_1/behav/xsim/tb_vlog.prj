@@ -2,7 +2,7 @@
 verilog xil_defaultlib  --include "../../../../../../../../../media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/rsb/busdef" --include "../../../../skrab_one.ip_user_files/ipstatic/hdl" \
 "../../../../skrab_one.gen/sources_1/ip/axis_data_fifo_0/sim/axis_data_fifo_0.v" \
 "../../../../../verilog_custom/onegbe_skarab/cmd_sync_detector.v" \
-"../../../../../verilog_custom/onegbe_skarab/control_axi_stream_gbe.v" \
+"../../../../../verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v" \
 "../../../../skrab_one.srcs/sources_1/new/package.v" \
 
 sv xil_defaultlib  --include "../../../../../../../../../media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/rsb/busdef" --include "../../../../skrab_one.ip_user_files/ipstatic/hdl" \

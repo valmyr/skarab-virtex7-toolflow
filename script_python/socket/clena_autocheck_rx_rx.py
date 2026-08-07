@@ -37,7 +37,7 @@ frame_rx = np.array([0x6E, 0x61, 0x72, 0x74], dtype=np.int64)  # "nart"/tran
 
 
 CODIGO_ERRO = 110
-INTERVALO_RELATORIO = 1000
+INTERVALO_RELATORIO = 20000
 
 f1 = 1000
 fs = 10e+4
@@ -132,7 +132,7 @@ try:
             n_rodadas_janela = rodada - rodada_ultimo_relatorio
 
             pacotes_por_s = n_rodadas_janela / janela_s if janela_s > 0 else 0
-            throughput_mbps = (pacotes_por_s * BYTES_POR_PACOTE * 2 * 8) / 1e6
+            throughput_mbps = (pacotes_por_s * BYTES_POR_PACOTE * 8) / 1e6
             latencia_media_ms = soma_latencia / n_rodadas_janela if n_rodadas_janela else 0
             taxa_acerto_media = soma_taxa_acerto / n_rodadas_janela if n_rodadas_janela else 0
 

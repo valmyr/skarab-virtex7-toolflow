@@ -12712,8 +12712,8 @@ begin
   );
   axi_fifo : entity xil_defaultlib.ethernet_one_gbe_skarab_axi_xlaxis 
   generic map (
-    depth => 4096,
-    depth_bits => 13,
+    depth => 131072,
+    depth_bits => 18,
     has_aresetn => 0,
     mem_type => "distributed",
     tdata_width => 8,
@@ -12737,8 +12737,8 @@ begin
   );
   axi_fifo1 : entity xil_defaultlib.ethernet_one_gbe_skarab_axi_xlaxis 
   generic map (
-    depth => 4096,
-    depth_bits => 13,
+    depth => 131072,
+    depth_bits => 18,
     has_aresetn => 0,
     mem_type => "distributed",
     tdata_width => 8,

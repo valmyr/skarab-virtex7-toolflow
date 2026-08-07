@@ -353,7 +353,7 @@ tx_control	xps:sw_reg	io_delay	0
 tx_control	xps:sw_reg	init_val	0
 tx_control	xps:sw_reg	sample_period	1
 tx_control	xps:sw_reg	names	[gbe_rst\_dbg_rst\_pkt_rst\_tx_en\_pkt_len\_snap_arm]
-tx_control	xps:sw_reg	bitwidths	[1\_1\_1\_1\_10\_1]
+tx_control	xps:sw_reg	bitwidths	[1\_1\_1\_1\_16\_1]
 tx_control	xps:sw_reg	bin_pts	0
 tx_control	xps:sw_reg	arith_types	[2\_2\_2\_2\_0\_2]
 tx_control	xps:sw_reg	sim_port	on
@@ -368,16 +368,6 @@ tx_overflow1	xps:sw_reg	bin_pts	0
 tx_overflow1	xps:sw_reg	arith_types	0
 tx_overflow1	xps:sw_reg	sim_port	off
 tx_overflow1	xps:sw_reg	show_format	on
-tx_pkt_len	xps:sw_reg	io_dir	From\_Processor
-tx_pkt_len	xps:sw_reg	io_delay	0
-tx_pkt_len	xps:sw_reg	init_val	0
-tx_pkt_len	xps:sw_reg	sample_period	1
-tx_pkt_len	xps:sw_reg	names	reg
-tx_pkt_len	xps:sw_reg	bitwidths	32
-tx_pkt_len	xps:sw_reg	bin_pts	0
-tx_pkt_len	xps:sw_reg	arith_types	0
-tx_pkt_len	xps:sw_reg	sim_port	off
-tx_pkt_len	xps:sw_reg	show_format	on
 vaild_rx_valmir1	xps:sw_reg	io_dir	To\_Processor
 vaild_rx_valmir1	xps:sw_reg	io_delay	0
 vaild_rx_valmir1	xps:sw_reg	init_val	0
@@ -560,7 +550,7 @@ pkt_ctrs_compare1/ss	casper:snapshot	provide_outputs	off
 pkt_ctrs_compare1/ss	casper:snapshot	use_dsp48	on
 77777	77777	tags	casper:bitsnap,casper:snapshot,xps:bram,xps:sw_reg,xps:xsg
 77777	77777	system	ethernet_one_gbe_skarab_axi
-77777	77777	builddate	06-Aug-2026\_21:21:03
+77777	77777	builddate	06-Aug-2026\_23:32:53
 77777	77777	latency	NaN
 77777	77777	latency	NaN
 77777	77777	xlSgRoot	/tools/Xilinx/Vivado/2019.1/lib/lnx64.o/matlab/sysgen.mexa64

@@ -23,7 +23,7 @@ sock.settimeout(1)
 print(f"RX {IP}:{PORT}")
 print(f"TX {SERVER_IP}:{SERVER_PORT}")
 
-N = 512  # TESTE DE CONTROLE: tamanho que cabe inteiro na FIFO de 256
+N = 1024  # TESTE DE CONTROLE: tamanho que cabe inteiro na FIFO de 256
          # elementos, sem estourar em rajada. Se o throughput ficar
          # estável aqui (sem quedas), confirma que a instabilidade com
          # N=1024 vem do descompasso pacote/FIFO, não de algo novo do reboot.

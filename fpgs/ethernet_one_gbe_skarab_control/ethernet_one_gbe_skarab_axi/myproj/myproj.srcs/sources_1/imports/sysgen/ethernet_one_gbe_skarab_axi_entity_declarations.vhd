@@ -3187,28 +3187,6 @@ use xil_defaultlib.conv_pkg.all;
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
-entity sysgen_reinterpret_529d3bdb7d is
-  port (
-    input_port : in std_logic_vector((10 - 1) downto 0);
-    output_port : out std_logic_vector((10 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_reinterpret_529d3bdb7d;
-architecture behavior of sysgen_reinterpret_529d3bdb7d
-is
-  signal input_port_1_40: unsigned((10 - 1) downto 0);
-begin
-  input_port_1_40 <= std_logic_vector_to_unsigned(input_port);
-  output_port <= unsigned_to_std_logic_vector(input_port_1_40);
-end behavior;
-
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
 entity sysgen_delay_f6f192e277 is
   port (
     d : in std_logic_vector((1 - 1) downto 0);

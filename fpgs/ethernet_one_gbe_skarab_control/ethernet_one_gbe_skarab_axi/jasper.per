@@ -502,7 +502,7 @@ yellow_blocks:
     init_val: 0
     sample_period: 1
     names: [gbe_rst dbg_rst pkt_rst tx_en pkt_len snap_arm]
-    bitwidths: 1   1   1   1  10   1
+    bitwidths: 1   1   1   1  16   1
     bin_pts: 0
     arith_types: 2  2  2  2  0  2
     sim_port: on
@@ -524,20 +524,6 @@ yellow_blocks:
     fullpath: ethernet_one_gbe_skarab_axi/tx_overflow1
     tag: xps:sw_reg
     io_dir: To Processor
-    io_delay: 0
-    init_val: 0
-    sample_period: 1
-    names: reg
-    bitwidths: 32
-    bin_pts: 0
-    arith_types: 0
-    sim_port: off
-    show_format: on
-  ethernet_one_gbe_skarab_axi/tx_pkt_len:
-    name: tx_pkt_len
-    fullpath: ethernet_one_gbe_skarab_axi/tx_pkt_len
-    tag: xps:sw_reg
-    io_dir: From Processor
     io_delay: 0
     init_val: 0
     sample_period: 1
@@ -593,7 +579,6 @@ user_modules:
       - ethernet_one_gbe_skarab_axi_tx_one_gbe_app_rx_srcport
       - ethernet_one_gbe_skarab_axi_tx_one_gbe_app_tx_afull
       - ethernet_one_gbe_skarab_axi_tx_one_gbe_app_tx_overflow
-      - ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out
       - skarab_tx_1gbe_tx_rx_valmir_clk_mhz_user_data_in
       - ethernet_one_gbe_skarab_axi_d3_ss_bram_addr
       - ethernet_one_gbe_skarab_axi_d3_ss_bram_data_in

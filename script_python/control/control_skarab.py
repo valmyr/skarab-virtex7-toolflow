@@ -82,9 +82,24 @@ FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_s
 FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-08-06_1932.fpg'
 #FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-08-06_2046.fpg'
 FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-08-06_2121.fpg'
+FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-08-06_2121.fpg'
+FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-08-06_2251.fpg'
+FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-08-06_2316.fpg'
+FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-08-06_2333.fpg'
+
+
+
+
+
+
+
+
+
+
+
 
 LOOPBACK_SIMPLES =not(bool("loop" in FPG))
-PKT_LEN = 512
+PKT_LEN = 1024
 
 
 CONTROL_GBE_OR_FIFO_MEM_READ = 'read_gbe_or_fifo'
@@ -134,7 +149,8 @@ def main():
     if(LOOPBACK_SIMPLES):
         # Tamanho do pacote a ser transmitido
         fpga.registers.tx_control.write(pkt_len=PKT_LEN) 
-        fpga.write_int("tx_pkt_len",PKT_LEN)
+        #fpga.write_int("pkt_len",PKT_LEN)
+        #print(fpga.read_int('pkt_len'))
         # Habilita transmissão e reseta o core de ethernet
         fpga.registers.tx_control.write(tx_en=1, pkt_rst="pulse")
         fpga.registers.tx_control.write(pkt_rst="pulse")

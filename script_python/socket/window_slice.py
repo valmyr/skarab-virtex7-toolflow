@@ -25,7 +25,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 # ------------------------- Parâmetros do sinal -------------------------
 N_TOTAL = 1024*2048     # número total de amostras da janela do sinal
-N       = 256       # tamanho máximo por frame (payload). Pacote = N+8 words
+N       = 1024       # tamanho máximo por frame (payload). Pacote = N+8 words
 N_FRAMES = N_TOTAL // N   # quantidade de frames necessários p/ cobrir N_TOTAL
 
 assert N_TOTAL % N == 0, "N_TOTAL precisa ser múltiplo de N (256)"
@@ -98,7 +98,7 @@ try:
                 n_words = len(frame_pack) // 8
                 print(f"\033[91m PC \033[00m -> \033[92m FPGA \033[00m: "
                       f"Frame {idx+1}/{n_frames} enviado ({n_words} words)")
-            time.sleep(1/10.)
+            time.sleep(1/1000.0)
         if DEBUG:
             print("============================ Janela completa enviada ============================")
 except KeyboardInterrupt:

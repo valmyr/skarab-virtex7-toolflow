@@ -31,7 +31,6 @@ entity ethernet_one_gbe_skarab_axi_stub is
     ethernet_one_gbe_skarab_axi_tx_one_gbe_app_rx_srcport : in std_logic_vector( 16-1 downto 0 );
     ethernet_one_gbe_skarab_axi_tx_one_gbe_app_tx_afull : in std_logic_vector( 1-1 downto 0 );
     ethernet_one_gbe_skarab_axi_tx_one_gbe_app_tx_overflow : in std_logic_vector( 1-1 downto 0 );
-    ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out_x0 : in std_logic_vector( 32-1 downto 0 );
     clk : in std_logic;
     skarab_tx_1gbe_tx_rx_valmir_clk_mhz_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_d3_ss_bram_addr : out std_logic_vector( 13-1 downto 0 );
@@ -111,7 +110,6 @@ begin
     ethernet_one_gbe_skarab_axi_tx_one_gbe_app_rx_srcport => ethernet_one_gbe_skarab_axi_tx_one_gbe_app_rx_srcport,
     ethernet_one_gbe_skarab_axi_tx_one_gbe_app_tx_afull => ethernet_one_gbe_skarab_axi_tx_one_gbe_app_tx_afull,
     ethernet_one_gbe_skarab_axi_tx_one_gbe_app_tx_overflow => ethernet_one_gbe_skarab_axi_tx_one_gbe_app_tx_overflow,
-    ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out_x0 => ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out_x0,
     clk => clk,
     skarab_tx_1gbe_tx_rx_valmir_clk_mhz_user_data_in => skarab_tx_1gbe_tx_rx_valmir_clk_mhz_user_data_in,
     ethernet_one_gbe_skarab_axi_d3_ss_bram_addr => ethernet_one_gbe_skarab_axi_d3_ss_bram_addr,

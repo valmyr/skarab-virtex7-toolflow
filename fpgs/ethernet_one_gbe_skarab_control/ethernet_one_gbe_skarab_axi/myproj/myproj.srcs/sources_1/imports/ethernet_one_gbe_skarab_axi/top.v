@@ -154,19 +154,18 @@ module top (
   localparam ETHERNET_ONE_GBE_SKARAB_AXI_TX_CONTROL_WBID0 = 36;
   localparam ETHERNET_ONE_GBE_SKARAB_AXI_TX_ONE_GBE_WBID0 = 0;
   localparam ETHERNET_ONE_GBE_SKARAB_AXI_TX_OVERFLOW1_WBID0 = 37;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_TX_PKT_LEN_WBID0 = 38;
-  localparam ETHERNET_ONE_GBE_SKARAB_AXI_VAILD_RX_VALMIR1_WBID0 = 39;
+  localparam ETHERNET_ONE_GBE_SKARAB_AXI_VAILD_RX_VALMIR1_WBID0 = 38;
   localparam N_SUB_ARBS = 2;
-  localparam N_WB_SLAVES = 41;
+  localparam N_WB_SLAVES = 40;
   localparam SLAVE_ADDR = {
     32'h8019c068,
     32'h800dc000
     };
   localparam SLAVE_HIGH = {
-    32'h8019c0a7,
+    32'h8019c0a3,
     32'h8019c067
     };
-  localparam SYS_BLOCK_INST_WBID0 = 40;
+  localparam SYS_BLOCK_INST_WBID0 = 39;
 
 /*
   _____ _                   _     
@@ -352,20 +351,18 @@ module top (
   wire [31:0] ethernet_one_gbe_skarab_axi_tx_control_user_data_out;
   // sw_reg: tx_overflow1
   wire [31:0] ethernet_one_gbe_skarab_axi_tx_overflow1_user_data_in;
-  // sw_reg: tx_pkt_len
-  wire [31:0] ethernet_one_gbe_skarab_axi_tx_pkt_len_user_data_out;
   // sw_reg: vaild_rx_valmir1
   wire [31:0] ethernet_one_gbe_skarab_axi_vaild_rx_valmir1_user_data_in;
   // usermodule: ethernet_one_gbe_skarab_axi
   wire wbm_err_i;
-  wire [40:0] wbs_ack_i;
+  wire [39:0] wbs_ack_i;
   wire [63:0] wbs_adr_o;
-  wire [40:0] wbs_cyc_o;
-  wire [1311:0] wbs_dat_i;
+  wire [39:0] wbs_cyc_o;
+  wire [1279:0] wbs_dat_i;
   wire [31:0] wbs_dat_o;
-  wire [40:0] wbs_err_i;
+  wire [39:0] wbs_err_i;
   wire [3:0] wbs_sel_o;
-  wire [40:0] wbs_stb_o;
+  wire [39:0] wbs_stb_o;
   wire wbs_we_o;
   // xsg: SKARAB
   wire user_clk;
@@ -1292,25 +1289,6 @@ module top (
     .wb_rst_i(wb_rst_i),
     .wb_sel_i(wbs_sel_o),
     .wb_stb_i(wbs_stb_o[ETHERNET_ONE_GBE_SKARAB_AXI_TX_OVERFLOW1_WBID0]),
-    .wb_we_i(wbs_we_o)
-  );
-
-  // sw_reg: tx_pkt_len
-  wb_register_ppc2simulink #(
-    .INIT_VAL(32'h0)
-  ) ethernet_one_gbe_skarab_axi_tx_pkt_len (
-    .user_clk(user_clk),
-    .user_data_out(ethernet_one_gbe_skarab_axi_tx_pkt_len_user_data_out),
-    .wb_ack_o(wbs_ack_i[ETHERNET_ONE_GBE_SKARAB_AXI_TX_PKT_LEN_WBID0]),
-    .wb_adr_i(wbs_adr_o[(1+1)*32-1:(1)*32]),
-    .wb_clk_i(wb_clk_i),
-    .wb_cyc_i(wbs_cyc_o[ETHERNET_ONE_GBE_SKARAB_AXI_TX_PKT_LEN_WBID0]),
-    .wb_dat_i(wbs_dat_o),
-    .wb_dat_o(wbs_dat_i[(ETHERNET_ONE_GBE_SKARAB_AXI_TX_PKT_LEN_WBID0+1)*32-1:(ETHERNET_ONE_GBE_SKARAB_AXI_TX_PKT_LEN_WBID0)*32]),
-    .wb_err_o(wbs_err_i[ETHERNET_ONE_GBE_SKARAB_AXI_TX_PKT_LEN_WBID0]),
-    .wb_rst_i(wb_rst_i),
-    .wb_sel_i(wbs_sel_o),
-    .wb_stb_i(wbs_stb_o[ETHERNET_ONE_GBE_SKARAB_AXI_TX_PKT_LEN_WBID0]),
     .wb_we_i(wbs_we_o)
   );
 

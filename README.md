@@ -4,6 +4,8 @@
 
 **VIRTUS/UFCG** — Engenheiro: Valmir F. Silva
 
+**XMEN/UFCG** — Engenheiro: Marcos Antônio I. Luz
+
 **Orientação:** Prof. Dr. Gutemberg Gonçalves dos Santos Júnior
 
 **Plataforma alvo:** SKARAB (Square Kilometer Array Reconfigurable Application Board), ecossistema CASPER

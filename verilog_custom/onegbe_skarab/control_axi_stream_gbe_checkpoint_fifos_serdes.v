@@ -1,5 +1,4 @@
 `timescale 1ns / 1ps
-```verilog
 //////////////////////////////////////////////////////////////////////////////////
 // Company: VIRTUS/UFCG
 // Engineer: Valmir F. Silva
@@ -105,7 +104,7 @@
 //
 // Módulo de controle da interface GbE de gerenciamento da SKARAB.
 //////////////////////////////////////////////////////////////////////////////////
-```
+
 
 
 module control_axi_stream_gbe(
@@ -573,6 +572,88 @@ always@(*) debug_rx_data_mem_fifo = mem_tmp[debug_addr_data_fifo];
 //
 // Módulo de controle da interface GbE de gerenciamento da SKARAB.
 //===============================================================================
+  localparam INPUT_WIDTH = 8;
+  localparam OUTPUT_WIDTH = 8;
+  localparam NUM_ELEMENTS = 8;
+  
 
+//===================================== Serializer =====================================
+
+  wire u_unit_serializer_out_en;
+  wire u_unit_serializer_out_sys_clk;
+  wire u_unit_serializer_out_sys_rst;
+  wire [INPUT_WIDTH-1:0] u_unit_serializer_out_s_tdata;
+  wire u_unit_serializer_out_s_tvalid;
+  wire u_unit_serializer_out_s_tready;
+  wire u_unit_serializer_out_s_tlast;
+  wire [OUTPUT_WIDTH-1:0] u_unit_serializer_out_m_tdata;
+  wire u_unit_serializer_out_m_tvalid;
+  wire u_unit_serializer_out_m_tready;
+  wire u_unit_serializer_out_m_tlast;
+
+
+
+  serializer #(
+    .OUTPUT_WIDTH(OUTPUT_WIDTH),
+    .NUM_ELEMENTS(NUM_ELEMENTS)
+  ) u_unit_serializer_out (
+    .clk(u_unit_serializer_out_sys_clk),
+    .rst(u_unit_serializer_out_sys_rst),
+    .en(u_unit_serializer_out_en),
+    
+    .s_tready(u_unit_serializer_out_s_tready),
+    .s_tvalid(u_unit_serializer_out_s_tvalid),
+    .s_tdata(u_unit_serializer_out_s_tdata),
+    .s_tlast(u_unit_serializer_out_s_tlast),
+
+    .m_tready(u_unit_serializer_out_m_tready),
+    .m_tvalid(u_unit_serializer_out_m_tvalid),
+    .m_tdata(u_unit_serializer_out_m_tdata),
+    .m_tlast(u_unit_serializer_out_m_tlast)
+  );
+//===================================== Deserializer =====================================
+
+  wire u_unit_deserializer_out_en;
+  wire u_unit_deserializer_out_sys_clk;
+  wire u_unit_deserializer_out_sys_rst;
+  wire [OUTPUT_WIDTH-1:0] u_unit_deserializer_out_s_tdata;
+  wire u_unit_deserializer_out_s_tvalid;
+  wire u_unit_deserializer_out_s_tready;
+  wire u_unit_deserializer_out_s_tlast;
+  wire [INPUT_WIDTH-1:0] u_unit_deserializer_out_m_tdata;
+  wire u_unit_deserializer_out_m_tvalid;
+  wire u_unit_deserializer_out_m_tready;
+  wire u_unit_deserializer_out_m_tlast;
+
+
+
+  assign u_unit_deserializer_out_sys_clk = clk;
+  assign u_unit_deserializer_out_sys_rst = ~a_sync_nrst;
+
+  assign u_unit_deserializer_out_en = data_capture_rx;
+  assign u_unit_deserializer_out_s_tvalid = m_axis_tvalid;
+  assign u_unit_deserializer_out_s_tlast = 0;//8*1024
+  //assign u_unit_deserializer_out_m_tready = m_axis_tready;
+  assign u_unit_deserializer_out_s_tdata = m_axis_tdata;
+  assign u_unit_deserializer_out_m_tready = 1'b1; // Sempre pronto para receber dados do deserializer
+
+   deserializer #(
+    .INPUT_WIDTH(INPUT_WIDTH),
+    .NUM_ELEMENTS(NUM_ELEMENTS)
+  ) u_unit_deserializer_out (
+    .clk(u_unit_deserializer_out_sys_clk),
+    .rst(u_unit_deserializer_out_sys_rst),
+    .en(u_unit_deserializer_out_en),
+
+    .s_tready(u_unit_deserializer_out_s_tready),
+    .s_tvalid(u_unit_deserializer_out_s_tvalid),
+    .s_tdata(u_unit_deserializer_out_s_tdata),
+    .s_tlast(u_unit_deserializer_out_s_tlast),
+
+    .m_tready(u_unit_deserializer_out_m_tready),
+    .m_tvalid(u_unit_deserializer_out_m_tvalid),
+    .m_tdata(u_unit_deserializer_out_m_tdata),
+    .m_tlast(u_unit_deserializer_out_m_tlast)
+  );
 
 endmodule

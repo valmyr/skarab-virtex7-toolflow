@@ -56,7 +56,11 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-15060-valmyrsilva07-B760M-AORUS-ELITE/incrSyn
+set_param checkpoint.writeSynthRtdsInDcp 1
 set_param general.usePosixSpawnForFork 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7vx485tffg1157-1
 
@@ -73,7 +77,11 @@ set_property ip_output_repo /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib -sv /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv
+read_verilog -library xil_defaultlib -sv {
+  /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/serdes/deserializer.sv
+  /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/serdes/serializer.sv
+  /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv
+}
 read_verilog -library xil_defaultlib {
   /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/cmd_sync_detector.v
   /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v

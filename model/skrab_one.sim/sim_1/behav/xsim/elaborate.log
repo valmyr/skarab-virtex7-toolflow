@@ -12,6 +12,8 @@ WARNING: [VRFC 10-9543] actual bit length 10 differs from formal bit length 16 f
 WARNING: [VRFC 10-9543] actual bit length 11 differs from formal bit length 8 for port 'debug_addr_data_gbe' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv:171]
 WARNING: [VRFC 10-9543] actual bit length 11 differs from formal bit length 8 for port 'debug_addr_data_fifo' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv:172]
 WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 10 for port 'decim_factor' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv:179]
+WARNING: [VRFC 10-9543] actual bit length 8 differs from formal bit length 64 for port 's_tdata' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:606]
+WARNING: [VRFC 10-9543] actual bit length 8 differs from formal bit length 64 for port 'm_tdata' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:656]
 WARNING: [VRFC 10-3823] variable 'tx_data' might have multiple concurrent drivers [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sim_1/new/tb.sv:110]
 WARNING: [VRFC 10-3823] variable 'tx_val' might have multiple concurrent drivers [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sim_1/new/tb.sv:111]
 WARNING: [VRFC 10-3823] variable 'tx_eof' might have multiple concurrent drivers [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sim_1/new/tb.sv:112]
@@ -39,6 +41,8 @@ Compiling module xpm.xpm_fifo_axis(FIFO_DEPTH=32768,T...
 Compiling module axis_data_fifo_v2_0_17.axis_data_fifo_v2_0_17_top(C_AXI...
 Compiling module xil_defaultlib.axis_data_fifo_0
 Compiling module xil_defaultlib.cmd_sync_detector
+Compiling module xil_defaultlib.serializer(NUM_ELEMENTS=8)
+Compiling module xil_defaultlib.deserializer(NUM_ELEMENTS=8)
 Compiling module xil_defaultlib.control_axi_stream_gbe
 Compiling module xil_defaultlib.top_dut
 Compiling module xil_defaultlib.tb

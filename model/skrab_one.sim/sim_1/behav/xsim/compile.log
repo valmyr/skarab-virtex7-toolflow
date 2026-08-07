@@ -1,5 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module control_axi_stream_gbe
-WARNING: [VRFC 10-8497] literal value 'h100 truncated to fit in 8 bits [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:445]
-WARNING: [VRFC 10-3380] identifier 's_addr_data' is used before its declaration [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:180]
-WARNING: [VRFC 10-3380] identifier 's_axis_state' is used before its declaration [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:183]

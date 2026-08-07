@@ -50,11 +50,13 @@ module deserializer #(
   
   assign handshake_input  = s_tvalid && s_tready;
   assign handshake_output = m_tvalid && m_tready;
-  assign s_tready         = en && !m_tvalid;
+  //assign s_tready         = en && !m_tvalid; // Com backpressure, o deserializer não vai receber dados se o downstream não estiver pronto. 
+  assign s_tready         = en; //Sem backpressure, o deserializer vai receber dados mesmo que o downstream não esteja pronto.
   
   always_comb begin
     next_shift_reg = {shift_reg[OUTPUT_WIDTH-INPUT_WIDTH-1:0], s_tdata};
   end
+  
   
   always_ff @ (posedge clk or posedge rst) begin
     if (rst) begin

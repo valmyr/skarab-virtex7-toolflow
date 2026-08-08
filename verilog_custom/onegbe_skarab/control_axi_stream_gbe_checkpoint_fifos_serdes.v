@@ -113,19 +113,19 @@ module control_axi_stream_gbe(
     input  wire        ce, //Sem uso
     input  wire        rx_valid,
     input  wire [7:0]  rx_data,
-    input  wire [15:0]  tx_pkt_len,
+    input  wire [15:0] tx_pkt_len,
     output reg  [7:0]  tx_data,
-    output reg        tx_val,
-    output reg        tx_eof,
+    output reg         tx_val,
+    output reg         tx_eof,
     ///Axi  Sinais 
     //Interface Slave AXI Stream (Entrada)
     input wire        s_axis_tvalid,
-    input wire [7:0]  s_axis_tdata,
+    input wire [63:0] s_axis_tdata,
     input wire        s_axis_tlast,
     output reg        s_axis_tready,
     //Interface Master AXI Stream (Saída)
     output reg        m_axis_tvalid,
-    output reg [63:0]  m_axis_tdata, 
+    output reg [63:0] m_axis_tdata, 
     output reg        m_axis_tlast,
     input  wire       m_axis_tready,
     //Debug Sinais
@@ -594,7 +594,24 @@ always@(*) debug_rx_data_mem_fifo = mem_tmp[debug_addr_data_fifo];
   wire                    u_unit_serializer_out_m_tready;
   wire                    u_unit_serializer_out_m_tlast;
 
+ //Atribuição dos sinais serializer do AXI Master para o bloco FIFO AXI Stream SLAVE para o barramneto de N Bytes 
 
+ /*
+    input wire        s_axis_tvalid,
+    input wire [63:0] s_axis_tdata,
+    input wire        s_axis_tlast,
+    output reg        s_axis_tready,
+ */
+ assign u_unit_serializer_out_en = 1'b1; //Sem uso, pois o bloco serializer é sempre habilitado.
+ assign u_unit_serializer_out_sys_clk = clk;
+ assign u_unit_serializer_out_sys_rst = ~a_sync_nrst;
+
+ assign u_unit_serializer_out_s_tvalid = s_axis_tvalid;
+ assign u_unit_serializer_out_s_tdata  = s_axis_tdata;
+ assign u_unit_serializer_out_s_tlast  = s_axis_tlast;
+
+ assign u_unit_serializer_out_m_tready=1'b1; // Sempre pronto para receber dados do serializer
+ always@(*) s_axis_tready = u_unit_serializer_out_s_tready;
 
   serializer #(
     .OUTPUT_WIDTH(OUTPUT_WIDTH),
@@ -641,7 +658,7 @@ always@(*) debug_rx_data_mem_fifo = mem_tmp[debug_addr_data_fifo];
  //do wrapper do Simulink.
 /*
     output reg        m_axis_tvalid,
-    output reg [7:0]  m_axis_tdata, 
+    output reg [63:0] m_axis_tdata, 
     output reg        m_axis_tlast,
     input  wire       m_axis_tready,
 */

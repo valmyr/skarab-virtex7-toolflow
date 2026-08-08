@@ -125,7 +125,7 @@ module control_axi_stream_gbe(
     output reg        s_axis_tready,
     //Interface Master AXI Stream (Saída)
     output reg        m_axis_tvalid,
-    output reg [7:0]  m_axis_tdata, 
+    output reg [63:0]  m_axis_tdata, 
     output reg        m_axis_tlast,
     input  wire       m_axis_tready,
     //Debug Sinais
@@ -387,7 +387,10 @@ cmd_sync_detector cmd_frame_transmission(
 
 */
 
-
+reg       m_axis_tvalid_ethert2des;
+reg [7:0] m_axis_tdata_ethert2des;
+reg       m_axis_tlast_ethert2des;
+wire      m_axis_tready_ethert2des;
 
 localparam M_IDLE   = 2'b00;
 localparam M_SEND = 2'b01;
@@ -398,7 +401,7 @@ reg [1:0] m_axis_next_state;
 reg [15:0]m_addr_data;
 reg [15:0]m_addr_data_next;
 
-
+assign m_axis_tready_ethert2des = m_axis_tready;
 
 always@(posedge clk, negedge a_sync_nrst)begin
     if(!a_sync_nrst)begin
@@ -415,18 +418,18 @@ always@(*) begin
     case(m_axis_state)
         M_IDLE:begin
 //          m_axis_tvalid = counter_rx == tx_pkt_len-1;
-            m_axis_tvalid = we_rx; // Alteração dedicada à inclusão direta da escrita na FIFO do projeto Simulink, eliminando a memória intermediária mem_gbe_debug[].
-            m_axis_tlast = 1'b0;
+            m_axis_tvalid_ethert2des = we_rx; // Alteração dedicada à inclusão direta da escrita na FIFO do projeto Simulink, eliminando a memória intermediária mem_gbe_debug[].
+            m_axis_tlast_ethert2des = 1'b0;
             m_addr_data_next = 0;
-            if(m_axis_tvalid && m_axis_tready)begin
+            if(m_axis_tvalid_ethert2des && m_axis_tready_ethert2des)begin
                 m_addr_data_next = m_addr_data +1;
                 m_axis_next_state=M_SEND;
-                m_axis_tdata = rx_data; // Inclusão da FIFO 
+                m_axis_tdata_ethert2des = rx_data; // Inclusão da FIFO 
 
             end else begin
                 m_addr_data_next =0;
                 m_axis_next_state = M_IDLE;
-                m_axis_tdata = 'h00;
+                m_axis_tdata_ethert2des = 'h00;
 
             end
         end
@@ -434,36 +437,36 @@ always@(*) begin
             if(m_addr_data == tx_pkt_len)begin
                 m_addr_data_next = 0;
                 m_axis_next_state = M_IDLE;
-                m_axis_tvalid = 1'b0;
-                m_axis_tlast = 1'b0;
-                m_axis_tdata = 'h00;
-            end else if(m_axis_tready) begin
+                m_axis_tvalid_ethert2des = 1'b0;
+                m_axis_tlast_ethert2des = 1'b0;
+                m_axis_tdata_ethert2des = 'h00;
+            end else if(m_axis_tready_ethert2des) begin
                 m_addr_data_next =  m_addr_data +1;
                 m_axis_next_state = M_SEND;
-                m_axis_tvalid = 1'b1;
-                m_axis_tlast = m_addr_data == tx_pkt_len-1;
-                m_axis_tdata = rx_data;// Inclusão da FIFO 
+                m_axis_tvalid_ethert2des = 1'b1;
+                m_axis_tlast_ethert2des = m_addr_data == tx_pkt_len-1;
+                m_axis_tdata_ethert2des = rx_data;// Inclusão da FIFO 
             end else begin
-                m_axis_tdata = 'h00;
+                m_axis_tdata_ethert2des = 'h00;
                 m_addr_data_next = m_addr_data; 
                 m_axis_next_state = M_SEND;
-                m_axis_tvalid = 1'b1;
-                m_axis_tlast = m_addr_data == tx_pkt_len-1;
+                m_axis_tvalid_ethert2des = 1'b1;
+                m_axis_tlast_ethert2des = m_addr_data == tx_pkt_len-1;
             end
         end
         default:begin
-            m_axis_tvalid = counter_rx == tx_pkt_len-1;
-            m_axis_tlast = 1'b0;
+            m_axis_tvalid_ethert2des = counter_rx == tx_pkt_len-1;
+            m_axis_tlast_ethert2des = 1'b0;
             m_addr_data_next = 0;
-            if(m_axis_tready)begin
+            if(m_axis_tready_ethert2des)begin
                 m_addr_data_next = m_addr_data +1;
                 m_axis_next_state=M_SEND;
-                m_axis_tdata = rx_data; // Inclusão da FIFO
+                m_axis_tdata_ethert2des = rx_data; // Inclusão da FIFO
 
             end else begin
                 m_addr_data_next =0;
                 m_axis_next_state = M_IDLE;
-                m_axis_tdata = 'h00;
+                m_axis_tdata_ethert2des = 'h00;
 
             end
         end
@@ -575,21 +578,21 @@ always@(*) debug_rx_data_mem_fifo = mem_tmp[debug_addr_data_fifo];
   localparam INPUT_WIDTH = 8;
   localparam OUTPUT_WIDTH = 8;
   localparam NUM_ELEMENTS = 8;
-  
+  localparam COMMON = NUM_ELEMENTS * INPUT_WIDTH;
 
 //===================================== Serializer =====================================
 
-  wire u_unit_serializer_out_en;
-  wire u_unit_serializer_out_sys_clk;
-  wire u_unit_serializer_out_sys_rst;
-  wire [INPUT_WIDTH-1:0] u_unit_serializer_out_s_tdata;
-  wire u_unit_serializer_out_s_tvalid;
-  wire u_unit_serializer_out_s_tready;
-  wire u_unit_serializer_out_s_tlast;
+  wire                    u_unit_serializer_out_en;
+  wire                    u_unit_serializer_out_sys_clk;
+  wire                    u_unit_serializer_out_sys_rst;
+  wire [COMMON-1:0]       u_unit_serializer_out_s_tdata;
+  wire                    u_unit_serializer_out_s_tvalid;
+  wire                    u_unit_serializer_out_s_tready;
+  wire                    u_unit_serializer_out_s_tlast;
   wire [OUTPUT_WIDTH-1:0] u_unit_serializer_out_m_tdata;
-  wire u_unit_serializer_out_m_tvalid;
-  wire u_unit_serializer_out_m_tready;
-  wire u_unit_serializer_out_m_tlast;
+  wire                    u_unit_serializer_out_m_tvalid;
+  wire                    u_unit_serializer_out_m_tready;
+  wire                    u_unit_serializer_out_m_tlast;
 
 
 
@@ -613,29 +616,40 @@ always@(*) debug_rx_data_mem_fifo = mem_tmp[debug_addr_data_fifo];
   );
 //===================================== Deserializer =====================================
 
-  wire u_unit_deserializer_out_en;
-  wire u_unit_deserializer_out_sys_clk;
-  wire u_unit_deserializer_out_sys_rst;
-  wire [OUTPUT_WIDTH-1:0] u_unit_deserializer_out_s_tdata;
-  wire u_unit_deserializer_out_s_tvalid;
-  wire u_unit_deserializer_out_s_tready;
-  wire u_unit_deserializer_out_s_tlast;
-  wire [INPUT_WIDTH-1:0] u_unit_deserializer_out_m_tdata;
-  wire u_unit_deserializer_out_m_tvalid;
-  wire u_unit_deserializer_out_m_tready;
-  wire u_unit_deserializer_out_m_tlast;
+  wire                                u_unit_deserializer_out_en;
+  wire                                u_unit_deserializer_out_sys_clk;
+  wire                                u_unit_deserializer_out_sys_rst;
+  wire [OUTPUT_WIDTH-1:0]             u_unit_deserializer_out_s_tdata;
+  wire                                u_unit_deserializer_out_s_tvalid;
+  wire                                u_unit_deserializer_out_s_tready;
+  wire                                u_unit_deserializer_out_s_tlast;
+  wire [COMMON-1:0]                   u_unit_deserializer_out_m_tdata;
+  wire                                u_unit_deserializer_out_m_tvalid;
+  wire                                u_unit_deserializer_out_m_tready;
+  wire                                u_unit_deserializer_out_m_tlast;
 
+ //Atribuição dos sinais do Ethernet para o bloco deserializer SLAVE 1 Bytes.
 
-
-  assign u_unit_deserializer_out_sys_clk = clk;
-  assign u_unit_deserializer_out_sys_rst = ~a_sync_nrst;
-
-  assign u_unit_deserializer_out_en = data_capture_rx;
-  assign u_unit_deserializer_out_s_tvalid = m_axis_tvalid;
-  assign u_unit_deserializer_out_s_tlast = 0;//8*1024
-  //assign u_unit_deserializer_out_m_tready = m_axis_tready;
-  assign u_unit_deserializer_out_s_tdata = m_axis_tdata;
+  assign u_unit_deserializer_out_sys_clk  = clk;
+  assign u_unit_deserializer_out_sys_rst  = ~a_sync_nrst;
+  assign u_unit_deserializer_out_en       = data_capture_rx;
+  assign u_unit_deserializer_out_s_tvalid = m_axis_tvalid_ethert2des;
+  assign u_unit_deserializer_out_s_tlast  = 0;//8*1024
+  assign u_unit_deserializer_out_s_tdata  = m_axis_tdata_ethert2des;
   assign u_unit_deserializer_out_m_tready = 1'b1; // Sempre pronto para receber dados do deserializer
+ //Atribuição dos sinais do AXI Stream MASTER deserializer para o bloco FIFO AXI Stream SLAVE para o barramneto de N Bytes 
+ //do wrapper do Simulink.
+/*
+    output reg        m_axis_tvalid,
+    output reg [7:0]  m_axis_tdata, 
+    output reg        m_axis_tlast,
+    input  wire       m_axis_tready,
+*/
+
+    always@(*)m_axis_tvalid = u_unit_deserializer_out_m_tvalid;
+    always@(*)m_axis_tlast  = u_unit_deserializer_out_m_tlast;
+    always@(*)m_axis_tdata  = u_unit_deserializer_out_m_tdata;
+    
 
    deserializer #(
     .INPUT_WIDTH(INPUT_WIDTH),

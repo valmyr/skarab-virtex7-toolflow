@@ -53,12 +53,12 @@ module top_dut (
 
     logic s_axis_tvalid0;
     logic s_axis_tready0;
-    logic [7:0] s_axis_tdata0;
+    logic [63:0] s_axis_tdata0;
     logic s_axis_tlast0;
 
     logic m_axis_tvalid0;
     logic m_axis_tready0;
-    logic [7:0] m_axis_tdata0;
+    logic [63:0] m_axis_tdata0;
     logic m_axis_tlast0;
 
 
@@ -71,12 +71,12 @@ module top_dut (
 
     logic s_axis_tvalid1;
     logic s_axis_tready1;
-    logic [7:0] s_axis_tdata1;
+    logic [63:0] s_axis_tdata1;
     logic s_axis_tlast1;
 
     logic m_axis_tvalid1;
     logic m_axis_tready1;
-    logic [7:0] m_axis_tdata1;
+    logic [63:0] m_axis_tdata1;
     logic m_axis_tlast1;
 
 

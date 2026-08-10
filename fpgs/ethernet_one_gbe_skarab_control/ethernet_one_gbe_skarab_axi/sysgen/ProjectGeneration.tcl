@@ -10,7 +10,7 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 	set DSPFamily {virtex7}
 	set DSPPackage {ffg1927}
 	set DSPSpeed {-2}
-	set FPGAClockPeriod 6.6667
+	set FPGAClockPeriod 4
 	set GenerateTestBench 0
 	set HDLLanguage {vhdl}
 	set IPOOCCacheRootPath {/home/valmyrsilva07/.Xilinx/Sysgen/SysgenVivado/lnx64.o/ip}
@@ -53,7 +53,7 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 	}
 	set SimPeriod 1
 	set SimTime 3000
-	set SimulationTime {20206.76670000 ns}
+	set SimulationTime {12204.00000000 ns}
 	set SynthStrategyName {Vivado Synthesis Defaults}
 	set SynthesisTool {Vivado}
 	set TargetDir {/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/sysgen}

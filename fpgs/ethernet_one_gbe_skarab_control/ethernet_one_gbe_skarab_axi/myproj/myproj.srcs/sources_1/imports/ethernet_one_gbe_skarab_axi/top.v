@@ -556,7 +556,7 @@ module top (
   // skarab: SKARAB
   skarab_infr #(
     .DIVCLK(5),
-    .DIVIDE(5.0),
+    .DIVIDE(3.0),
     .MULTIPLY(24.0)
   ) skarab_infr (
     .CONFIG_IO_0(CONFIG_IO_0),

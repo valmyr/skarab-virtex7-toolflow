@@ -133,8 +133,10 @@ function control_axi_stream_gbe_config(this_block)
 
   %    this_block.addFile('');
   %    this_block.addFile('');
-  this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v');
+  this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v');
   this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/cmd_sync_detector.v');
+  this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/deserializer.sv');
+  this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/serializer.sv');
 
 return;
 

@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1786157240">
-  <File Type="VDS-TIMING-PB" Name="top_dut_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="top_dut_timing_summary_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1786374459">
   <File Type="RDS-DCP" Name="top_dut.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="top_dut_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="top_dut_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="top_dut_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="top_dut.vds"/>
-  <File Type="REPORTS-TCL" Name="top_dut_reports.tcl"/>
+  <File Type="RDS-UTIL" Name="top_dut_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="top_dut_utilization_synth.pb"/>
   <File Type="PA-TCL" Name="top_dut.tcl"/>
+  <File Type="REPORTS-TCL" Name="top_dut_reports.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/buffer_in_ethernet.v">

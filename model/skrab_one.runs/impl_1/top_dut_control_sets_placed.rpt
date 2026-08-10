@@ -1,0 +1,96 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Mon Aug 10 12:13:45 2026
+| Host         : valmyrsilva07-B760M-AORUS-ELITE running 64-bit Ubuntu 20.04.6 LTS
+| Command      : report_control_sets -verbose -file top_dut_control_sets_placed.rpt
+| Design       : top_dut
+| Device       : xc7vx485t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    18 |
+|    Minimum number of control sets                        |    18 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    48 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    18 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |    12 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              14 |            4 |
+| No           | No                    | Yes                    |               8 |            3 |
+| No           | Yes                   | No                     |              20 |            9 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             239 |          151 |
+| Yes          | Yes                   | No                     |             159 |           67 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+--------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |                                                       Enable Signal                                                      |                                     Set/Reset Signal                                     | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+--------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG |                                                                                                                          | matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/rst_i |                1 |              3 |         3.00 |
+|  clk_IBUF_BUFG |                                                                                                                          | matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/rst_i |                1 |              3 |         3.00 |
+|  clk_IBUF_BUFG |                                                                                                                          | matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                4 |              7 |         1.75 |
+|  clk_IBUF_BUFG |                                                                                                                          | matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG |                                                                                                                          | gbe_control/u_unit_deserializer_out/u_unit_serializer_out_sys_rst                        |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG |                                                                                                                          |                                                                                          |                4 |             14 |         3.50 |
+|  clk_IBUF_BUFG | gbe_control/u_unit_serializer_out/s_axis_state_reg                                                                       | gbe_control/u_unit_deserializer_out/u_unit_serializer_out_sys_rst                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG | gbe_control/cmd_start_frame_reception/current_state_rx_reg[0]                                                            | gbe_control/u_unit_deserializer_out/u_unit_serializer_out_sys_rst                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG | gbe_control/m_addr_data[15]_i_1_n_0                                                                                      | gbe_control/u_unit_deserializer_out/u_unit_serializer_out_sys_rst                        |                3 |             16 |         5.33 |
+|  clk_IBUF_BUFG | matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.ram_regout_en                                  | matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |               16 |             19 |         1.19 |
+|  clk_IBUF_BUFG | matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.ram_regout_en                                  | matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |               19 |             20 |         1.05 |
+|  clk_IBUF_BUFG | matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/E[0]                                  | matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                8 |             30 |         3.75 |
+|  clk_IBUF_BUFG | matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[1] | matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                8 |             30 |         3.75 |
+|  clk_IBUF_BUFG | matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[1] | matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                8 |             30 |         3.75 |
+|  clk_IBUF_BUFG | matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/E[0]                                  | matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                8 |             30 |         3.75 |
+|  clk_IBUF_BUFG | gbe_control/cmd_start_frame_reception/E[0]                                                                               | gbe_control/u_unit_deserializer_out/u_unit_serializer_out_sys_rst                        |               49 |             59 |         1.20 |
+|  clk_IBUF_BUFG | gbe_control/u_unit_deserializer_out/m_tdata[63]_i_1_n_0                                                                  | gbe_control/u_unit_deserializer_out/u_unit_serializer_out_sys_rst                        |               47 |             65 |         1.38 |
+|  clk_IBUF_BUFG | gbe_control/u_unit_serializer_out/cnt[0]                                                                                 | gbe_control/u_unit_deserializer_out/u_unit_serializer_out_sys_rst                        |               44 |             67 |         1.52 |
++----------------+--------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

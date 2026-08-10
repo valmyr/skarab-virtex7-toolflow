@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Fri Aug  7 16:28:58 2026
-# Process ID         : 150536
+# Start of session at: Mon Aug 10 12:07:40 2026
+# Process ID         : 141108
 # Current directory  : /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.runs/synth_1
 # Command line       : vivado -log top_dut.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_dut.tcl
 # Log file           : /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.runs/synth_1/top_dut.vds
@@ -19,7 +19,7 @@
 # Host memory        : 67239 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 69386 MB
-# Available Virtual  : 43730 MB
+# Available Virtual  : 44997 MB
 #-----------------------------------------------------------
 source top_dut.tcl -notrace
 Command: synth_design -top top_dut -part xc7vx485tffg1157-1
@@ -29,23 +29,24 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx48
 INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 150668
+INFO: [Synth 8-7075] Helper process launched with PID 141237
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2504.285 ; gain = 486.906 ; free physical = 25165 ; free virtual = 40338
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2503.352 ; gain = 486.875 ; free physical = 26566 ; free virtual = 41423
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-10929] literal value 'h100 truncated to fit in 8 bits [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:501]
-INFO: [Synth 8-11241] undeclared symbol 'u_unit_deserializer_in_sys_clk', assumed default net type 'wire' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:641]
-INFO: [Synth 8-11241] undeclared symbol 'u_unit_deserializer_in_sys_rst', assumed default net type 'wire' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:642]
-INFO: [Synth 8-11241] undeclared symbol 'u_unit_deserializer_in_en', assumed default net type 'wire' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:643]
-INFO: [Synth 8-11241] undeclared symbol 'u_unit_deserializer_in_s_tready', assumed default net type 'wire' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:645]
-INFO: [Synth 8-11241] undeclared symbol 'u_unit_deserializer_in_s_tvalid', assumed default net type 'wire' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:646]
-INFO: [Synth 8-11241] undeclared symbol 'u_unit_deserializer_in_m_tready', assumed default net type 'wire' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:650]
-INFO: [Synth 8-11241] undeclared symbol 'u_unit_deserializer_in_m_tvalid', assumed default net type 'wire' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:651]
-INFO: [Synth 8-11241] undeclared symbol 'u_unit_deserializer_in_m_tdata', assumed default net type 'wire' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:652]
-INFO: [Synth 8-11241] undeclared symbol 'u_unit_deserializer_in_m_tlast', assumed default net type 'wire' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:653]
+WARNING: [Synth 8-10714] extra semicolon is not allowed here in this dialect; use SystemVerilog mode instead [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:618]
+WARNING: [Synth 8-6901] identifier 'u_unit_serializer_out_m_tdata' is used before its declaration [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:230]
 WARNING: [Synth 8-6901] identifier 's_addr_data' is used before its declaration [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:236]
 WARNING: [Synth 8-6901] identifier 's_axis_state' is used before its declaration [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:239]
 WARNING: [Synth 8-6901] identifier 'S_REC' is used before its declaration [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:239]
+WARNING: [Synth 8-6901] identifier 'u_unit_serializer_out_m_tvalid' is used before its declaration [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:518]
+WARNING: [Synth 8-6901] identifier 'u_unit_serializer_out_m_tready' is used before its declaration [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:518]
+WARNING: [Synth 8-6901] identifier 'u_unit_serializer_out_m_tready' is used before its declaration [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:532]
+WARNING: [Synth 8-6901] identifier 'u_unit_serializer_out_m_tvalid' is used before its declaration [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:533]
+WARNING: [Synth 8-6901] identifier 'u_unit_serializer_out_m_tready' is used before its declaration [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:545]
+WARNING: [Synth 8-6901] identifier 'u_unit_serializer_out_m_tvalid' is used before its declaration [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:547]
+WARNING: [Synth 8-6901] identifier 'u_unit_serializer_out_m_tready' is used before its declaration [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:549]
+WARNING: [Synth 8-6901] identifier 'u_unit_serializer_out_m_tready' is used before its declaration [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:555]
+WARNING: [Synth 8-6901] identifier 'u_unit_serializer_out_m_tready' is used before its declaration [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:562]
 INFO: [Synth 8-6157] synthesizing module 'top_dut' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv:25]
 INFO: [Synth 8-6157] synthesizing module 'axis_data_fifo_0' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.gen/sources_1/ip/axis_data_fifo_0/synth/axis_data_fifo_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'axis_data_fifo_v2_0_17_top' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.gen/sources_1/ip/axis_data_fifo_0/hdl/axis_data_fifo_v2_0_vl_rfs.v:53]
@@ -85,16 +86,15 @@ INFO: [Synth 8-6157] synthesizing module 'control_axi_stream_gbe' [/home/valmyrs
 INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:272]
 INFO: [Synth 8-6157] synthesizing module 'cmd_sync_detector' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/cmd_sync_detector.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'cmd_sync_detector' (0#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/cmd_sync_detector.v:23]
-INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:524]
+INFO: [Synth 8-226] default block is never used [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:529]
 INFO: [Synth 8-6157] synthesizing module 'serializer' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/serdes/serializer.sv:25]
 	Parameter OUTPUT_WIDTH bound to: 8 - type: integer 
 	Parameter NUM_ELEMENTS bound to: 8 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'serializer' (0#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/serdes/serializer.sv:25]
 INFO: [Synth 8-6157] synthesizing module 'deserializer' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/serdes/deserializer.sv:24]
-	Parameter INPUT_WIDTH bound to: 64 - type: integer 
+	Parameter INPUT_WIDTH bound to: 8 - type: integer 
 	Parameter NUM_ELEMENTS bound to: 8 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'deserializer' (0#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/serdes/deserializer.sv:24]
-WARNING: [Synth 8-689] width (1) of port connection 'm_tdata' does not match port width (512) of module 'deserializer' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:652]
 INFO: [Synth 8-6155] done synthesizing module 'control_axi_stream_gbe' (0#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:110]
 INFO: [Synth 8-6155] done synthesizing module 'top_dut' (0#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv:25]
 WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [/media/valmyrsilva07/243aad91-22c0-42a8-ba29-06c4e186c14c/xmen/Music/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3087]
@@ -110,32 +110,20 @@ WARNING: [Synth 8-6014] Unused sequential element sync_data_valid_tx0_reg was re
 WARNING: [Synth 8-6014] Unused sequential element tx_ena_out_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:251]
 WARNING: [Synth 8-6014] Unused sequential element sync_dec_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:252]
 WARNING: [Synth 8-6014] Unused sequential element debug_local_data_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:253]
-WARNING: [Synth 8-6014] Unused sequential element s_addr_data_delay_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:511]
-WARNING: [Synth 8-6014] Unused sequential element handshake_ms_axis_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:512]
+WARNING: [Synth 8-6014] Unused sequential element s_addr_data_delay_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:514]
+WARNING: [Synth 8-6014] Unused sequential element handshake_ms_axis_reg was removed.  [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:515]
 WARNING: [Synth 8-7137] Register mem_gbe_debug_reg in module control_axi_stream_gbe has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
 WARNING: [Synth 8-7137] Register mem_tmp_reg in module control_axi_stream_gbe has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
 WARNING: [Synth 8-4767] Trying to implement RAM 'mem_gbe_debug_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:211]
 Reason is one or more of the following :
 	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
-WARNING: [Synth 8-4767] Trying to implement RAM 'mem_tmp_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:516]
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_tmp_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:519]
 Reason is one or more of the following :
 	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
-WARNING: [Synth 8-3848] Net u_unit_deserializer_in_sys_clk in module/entity control_axi_stream_gbe does not have driver. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:641]
-WARNING: [Synth 8-3848] Net u_unit_deserializer_in_sys_rst in module/entity control_axi_stream_gbe does not have driver. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:642]
-WARNING: [Synth 8-3848] Net u_unit_deserializer_in_en in module/entity control_axi_stream_gbe does not have driver. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:643]
-WARNING: [Synth 8-3848] Net u_unit_deserializer_in_s_tvalid in module/entity control_axi_stream_gbe does not have driver. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:646]
-WARNING: [Synth 8-3848] Net u_unit_deserializer_in_m_tready in module/entity control_axi_stream_gbe does not have driver. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:650]
-WARNING: [Synth 8-3848] Net u_unit_serializer_out_s_tdata in module/entity control_axi_stream_gbe does not have driver. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:586]
-WARNING: [Synth 8-3848] Net u_unit_serializer_out_s_tvalid in module/entity control_axi_stream_gbe does not have driver. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:587]
-WARNING: [Synth 8-3848] Net u_unit_serializer_out_s_tlast in module/entity control_axi_stream_gbe does not have driver. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:589]
-WARNING: [Synth 8-3848] Net u_unit_serializer_out_m_tready in module/entity control_axi_stream_gbe does not have driver. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:592]
-WARNING: [Synth 8-3848] Net u_unit_deserializer_out_s_tdata in module/entity control_axi_stream_gbe does not have driver. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:624]
-WARNING: [Synth 8-3848] Net u_unit_deserializer_out_s_tlast in module/entity control_axi_stream_gbe does not have driver. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v:627]
 WARNING: [Synth 8-3848] Net tx_ena_out in module/entity top_dut does not have driver. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv:36]
 WARNING: [Synth 8-3848] Net data_valid_rx in module/entity top_dut does not have driver. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv:42]
 WARNING: [Synth 8-3848] Net data_valid_rx1 in module/entity top_dut does not have driver. [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.srcs/sources_1/new/wrapper_top_dut.sv:43]
 WARNING: [Synth 8-7129] Port ce in module cmd_sync_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axis_tlast in module control_axi_stream_gbe is either unconnected or has no load
 WARNING: [Synth 8-7129] Port debug_read_gbe_or_fifo in module control_axi_stream_gbe is either unconnected or has no load
 WARNING: [Synth 8-7129] Port decim_factor[9] in module control_axi_stream_gbe is either unconnected or has no load
 WARNING: [Synth 8-7129] Port decim_factor[8] in module control_axi_stream_gbe is either unconnected or has no load
@@ -158,6 +146,76 @@ WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base is either unconnec
 WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
 WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
 WARNING: [Synth 8-7129] Port clkb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[83] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[82] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[81] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[80] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[79] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[78] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[77] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[76] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[75] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[74] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[73] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[72] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[71] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[70] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[69] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[68] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[67] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[66] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[65] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[64] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[63] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[62] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[61] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[60] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[59] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[58] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[57] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[56] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[55] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[54] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[53] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[52] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[51] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[50] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[49] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[48] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[47] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[46] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[45] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[44] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[43] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[42] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[41] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[40] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[39] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[38] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[37] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[36] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[35] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[34] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[33] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[32] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[31] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[30] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[29] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[28] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[27] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[26] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[25] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[24] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[23] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[22] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[21] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[20] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[19] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[18] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[17] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[16] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[15] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[14] in module xpm_memory_base is either unconnected or has no load
 WARNING: [Synth 8-7129] Port dinb[13] in module xpm_memory_base is either unconnected or has no load
 WARNING: [Synth 8-7129] Port dinb[12] in module xpm_memory_base is either unconnected or has no load
 WARNING: [Synth 8-7129] Port dinb[11] in module xpm_memory_base is either unconnected or has no load
@@ -165,33 +223,20 @@ WARNING: [Synth 8-7129] Port dinb[10] in module xpm_memory_base is either unconn
 WARNING: [Synth 8-7129] Port dinb[9] in module xpm_memory_base is either unconnected or has no load
 WARNING: [Synth 8-7129] Port dinb[8] in module xpm_memory_base is either unconnected or has no load
 WARNING: [Synth 8-7129] Port dinb[7] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[6] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[5] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[4] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[3] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[2] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[1] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[0] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_aclk in module xpm_fifo_axis is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axis_aclk in module axis_data_fifo_v2_0_17_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port tx_ena_out in module top_dut is either unconnected or has no load
-WARNING: [Synth 8-7129] Port data_valid_rx in module top_dut is either unconnected or has no load
-WARNING: [Synth 8-7129] Port data_valid_rx1 in module top_dut is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2647.254 ; gain = 629.875 ; free physical = 25002 ; free virtual = 40176
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2654.914 ; gain = 638.438 ; free physical = 26382 ; free virtual = 41239
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2653.191 ; gain = 635.812 ; free physical = 25002 ; free virtual = 40177
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2660.852 ; gain = 644.375 ; free physical = 26381 ; free virtual = 41238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2653.191 ; gain = 635.812 ; free physical = 25002 ; free virtual = 40177
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2660.852 ; gain = 644.375 ; free physical = 26381 ; free virtual = 41238
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2653.191 ; gain = 0.000 ; free physical = 25002 ; free virtual = 40176
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2660.852 ; gain = 0.000 ; free physical = 26381 ; free virtual = 41238
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -203,26 +248,26 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/top_dut_prop
 INFO: [Project 1-1714] 4 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2763.902 ; gain = 0.000 ; free physical = 24972 ; free virtual = 40149
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2771.594 ; gain = 0.000 ; free physical = 26365 ; free virtual = 41223
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2763.938 ; gain = 0.000 ; free physical = 24972 ; free virtual = 40149
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2771.629 ; gain = 0.000 ; free physical = 26364 ; free virtual = 41223
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2763.938 ; gain = 746.559 ; free physical = 24972 ; free virtual = 40146
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2771.629 ; gain = 755.152 ; free physical = 26365 ; free virtual = 41223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7vx485tffg1157-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2771.906 ; gain = 754.527 ; free physical = 24972 ; free virtual = 40146
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2779.598 ; gain = 763.121 ; free physical = 26365 ; free virtual = 41223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2771.906 ; gain = 754.527 ; free physical = 24972 ; free virtual = 40146
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2779.598 ; gain = 763.121 ; free physical = 26365 ; free virtual = 41223
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'cmd_sync_detector'
@@ -256,7 +301,7 @@ INFO: [Synth 8-6159] Found Keep on FSM register 'm_axis_state_reg' in module 'co
                   M_SEND |                               01 |                               01
 ---------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2771.906 ; gain = 754.527 ; free physical = 24970 ; free virtual = 40145
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2779.598 ; gain = 763.121 ; free physical = 26371 ; free virtual = 41231
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -270,29 +315,27 @@ Detailed RTL Component Info :
 	   2 Input    3 Bit       Adders := 2     
 	   4 Input    2 Bit       Adders := 2     
 +---Registers : 
-	              512 Bit    Registers := 2     
-	               64 Bit    Registers := 1     
+	               84 Bit    Registers := 4     
+	               64 Bit    Registers := 3     
 	               16 Bit    Registers := 5     
 	               15 Bit    Registers := 6     
-	               14 Bit    Registers := 4     
 	                8 Bit    Registers := 513   
 	                4 Bit    Registers := 2     
 	                3 Bit    Registers := 5     
 	                2 Bit    Registers := 4     
 	                1 Bit    Registers := 28    
 +---RAMs : 
-	             448K Bit	(32768 X 14 bit)          RAMs := 2     
+	            2688K Bit	(32768 X 84 bit)          RAMs := 2     
 +---Muxes : 
-	   2 Input  512 Bit        Muxes := 4     
-	   2 Input   64 Bit        Muxes := 3     
+	   2 Input   64 Bit        Muxes := 7     
 	   2 Input   16 Bit        Muxes := 5     
-	   2 Input    8 Bit        Muxes := 8     
+	   2 Input    8 Bit        Muxes := 7     
 	   5 Input    3 Bit        Muxes := 2     
 	   2 Input    3 Bit        Muxes := 19    
 	   2 Input    2 Bit        Muxes := 62    
 	   4 Input    2 Bit        Muxes := 14    
 	   4 Input    1 Bit        Muxes := 4     
-	   2 Input    1 Bit        Muxes := 42    
+	   2 Input    1 Bit        Muxes := 40    
 	   3 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -309,49 +352,11 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-7129] Port ce in module control_axi_stream_gbe is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axis_tlast in module control_axi_stream_gbe is either unconnected or has no load
-WARNING: [Synth 8-7129] Port debug_read_gbe_or_fifo in module control_axi_stream_gbe is either unconnected or has no load
-WARNING: [Synth 8-7129] Port decim_factor[9] in module control_axi_stream_gbe is either unconnected or has no load
-WARNING: [Synth 8-7129] Port decim_factor[8] in module control_axi_stream_gbe is either unconnected or has no load
-WARNING: [Synth 8-7129] Port decim_factor[7] in module control_axi_stream_gbe is either unconnected or has no load
-WARNING: [Synth 8-7129] Port decim_factor[6] in module control_axi_stream_gbe is either unconnected or has no load
-WARNING: [Synth 8-7129] Port decim_factor[5] in module control_axi_stream_gbe is either unconnected or has no load
-WARNING: [Synth 8-7129] Port decim_factor[4] in module control_axi_stream_gbe is either unconnected or has no load
-WARNING: [Synth 8-7129] Port decim_factor[3] in module control_axi_stream_gbe is either unconnected or has no load
-WARNING: [Synth 8-7129] Port decim_factor[2] in module control_axi_stream_gbe is either unconnected or has no load
-WARNING: [Synth 8-7129] Port decim_factor[1] in module control_axi_stream_gbe is either unconnected or has no load
-WARNING: [Synth 8-7129] Port decim_factor[0] in module control_axi_stream_gbe is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rsta in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port clkb in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[13] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[12] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[11] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[10] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[9] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[8] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[7] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[6] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[5] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[4] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[3] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[2] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[1] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[0] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_aclk in module xpm_fifo_axis is either unconnected or has no load
-WARNING: [Synth 8-7129] Port tx_ena_out in module top_dut is either unconnected or has no load
-WARNING: [Synth 8-7129] Port data_valid_rx in module top_dut is either unconnected or has no load
-WARNING: [Synth 8-7129] Port data_valid_rx1 in module top_dut is either unconnected or has no load
 WARNING: [Synth 8-3332] Sequential element (cmd_frame_transmission/FSM_sequential_current_state_reg[2]) is unused and will be removed from module control_axi_stream_gbe.
 WARNING: [Synth 8-3332] Sequential element (cmd_frame_transmission/FSM_sequential_current_state_reg[1]) is unused and will be removed from module control_axi_stream_gbe.
 WARNING: [Synth 8-3332] Sequential element (cmd_frame_transmission/FSM_sequential_current_state_reg[0]) is unused and will be removed from module control_axi_stream_gbe.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2771.906 ; gain = 754.527 ; free physical = 24894 ; free virtual = 40081
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2779.598 ; gain = 763.121 ; free physical = 26334 ; free virtual = 41210
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -361,8 +366,8 @@ Block RAM: Preliminary Mapping Report (see note below)
 +--------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |Module Name                                                         | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +--------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|xpm_fifo_axis:/xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 32 K x 14(READ_FIRST)  | W |   | 32 K x 14(WRITE_FIRST) |   | R | Port A and B     | 0      | 14     | 
-|xpm_fifo_axis:/xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 32 K x 14(READ_FIRST)  | W |   | 32 K x 14(WRITE_FIRST) |   | R | Port A and B     | 0      | 14     | 
+|xpm_fifo_axis:/xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 32 K x 84(READ_FIRST)  | W |   | 32 K x 84(WRITE_FIRST) |   | R | Port A and B     | 0      | 84     | 
+|xpm_fifo_axis:/xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 32 K x 84(READ_FIRST)  | W |   | 32 K x 84(WRITE_FIRST) |   | R | Port A and B     | 0      | 84     | 
 +--------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
@@ -373,13 +378,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2798.906 ; gain = 781.527 ; free physical = 24831 ; free virtual = 40018
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2816.598 ; gain = 800.121 ; free physical = 26260 ; free virtual = 41135
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2798.906 ; gain = 781.527 ; free physical = 24831 ; free virtual = 40018
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2818.598 ; gain = 802.121 ; free physical = 26258 ; free virtual = 41134
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -389,8 +394,8 @@ Block RAM: Final Mapping Report
 +--------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |Module Name                                                         | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +--------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|xpm_fifo_axis:/xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 32 K x 14(READ_FIRST)  | W |   | 32 K x 14(WRITE_FIRST) |   | R | Port A and B     | 0      | 14     | 
-|xpm_fifo_axis:/xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 32 K x 14(READ_FIRST)  | W |   | 32 K x 14(WRITE_FIRST) |   | R | Port A and B     | 0      | 14     | 
+|xpm_fifo_axis:/xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 32 K x 84(READ_FIRST)  | W |   | 32 K x 84(WRITE_FIRST) |   | R | Port A and B     | 0      | 84     | 
+|xpm_fifo_axis:/xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 32 K x 84(READ_FIRST)  | W |   | 32 K x 84(WRITE_FIRST) |   | R | Port A and B     | 0      | 84     | 
 +--------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 ---------------------------------------------------------------------------------
@@ -399,19 +404,47 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_64 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_65 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_66 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_67 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_68 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_69 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_70 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_71 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_72 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_73 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_74 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_75 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_76 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_77 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_78 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_79 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_80 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_81 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_82 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_64 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_65 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_66 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_67 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_68 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_69 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_70 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_71 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_72 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_73 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_74 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_75 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_76 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_77 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_78 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_79 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_80 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_81 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_82 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance matlab_fifo1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_83 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2808.922 ; gain = 791.543 ; free physical = 24822 ; free virtual = 40009
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2826.605 ; gain = 810.129 ; free physical = 26249 ; free virtual = 41125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -429,37 +462,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2991.734 ; gain = 974.355 ; free physical = 24660 ; free virtual = 39847
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3005.418 ; gain = 988.941 ; free physical = 26090 ; free virtual = 40966
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2991.734 ; gain = 974.355 ; free physical = 24660 ; free virtual = 39847
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3005.418 ; gain = 988.941 ; free physical = 26090 ; free virtual = 40966
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2991.734 ; gain = 974.355 ; free physical = 24660 ; free virtual = 39847
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3005.418 ; gain = 988.941 ; free physical = 26090 ; free virtual = 40965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2991.734 ; gain = 974.355 ; free physical = 24660 ; free virtual = 39847
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3005.418 ; gain = 988.941 ; free physical = 26090 ; free virtual = 40965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2994.703 ; gain = 977.324 ; free physical = 24660 ; free virtual = 39847
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3008.387 ; gain = 991.910 ; free physical = 26089 ; free virtual = 40965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2994.703 ; gain = 977.324 ; free physical = 24660 ; free virtual = 39847
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3008.387 ; gain = 991.910 ; free physical = 26089 ; free virtual = 40965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -476,46 +509,46 @@ Report Cell Usage:
 |      |Cell     |Count |
 +------+---------+------+
 |1     |BUFG     |     1|
-|2     |CARRY4   |    66|
+|2     |CARRY4   |    64|
 |3     |LUT1     |    10|
-|4     |LUT2     |    38|
-|5     |LUT3     |    33|
-|6     |LUT4     |    18|
-|7     |LUT5     |    31|
-|8     |LUT6     |    54|
-|9     |RAMB36E1 |    28|
-|11    |FDCE     |    55|
+|4     |LUT2     |    54|
+|5     |LUT3     |    39|
+|6     |LUT4     |    21|
+|7     |LUT5     |    74|
+|8     |LUT6     |   161|
+|9     |RAMB36E1 |   168|
+|11    |FDCE     |   247|
 |12    |FDPE     |     1|
-|13    |FDRE     |   149|
+|13    |FDRE     |   177|
 |14    |FDSE     |    16|
 |15    |IBUF     |    11|
 |16    |OBUF     |    10|
 |17    |OBUFT    |     3|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2994.703 ; gain = 977.324 ; free physical = 24660 ; free virtual = 39847
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3008.387 ; gain = 991.910 ; free physical = 26089 ; free virtual = 40965
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 41 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2994.703 ; gain = 866.578 ; free physical = 24660 ; free virtual = 39847
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2994.711 ; gain = 977.324 ; free physical = 24660 ; free virtual = 39847
+Synthesis finished with 0 errors, 0 critical warnings and 110 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3008.387 ; gain = 881.133 ; free physical = 26089 ; free virtual = 40965
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3008.395 ; gain = 991.910 ; free physical = 26089 ; free virtual = 40965
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2994.711 ; gain = 0.000 ; free physical = 24826 ; free virtual = 40013
-INFO: [Netlist 29-17] Analyzing 94 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3008.395 ; gain = 0.000 ; free physical = 26255 ; free virtual = 41130
+INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3050.730 ; gain = 0.000 ; free physical = 24826 ; free virtual = 40013
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3064.414 ; gain = 0.000 ; free physical = 26252 ; free virtual = 41127
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 334a93ab
+Synth Design complete | Checksum: f106009d
 INFO: [Common 17-83] Releasing license: Synthesis
-88 Infos, 124 Warnings, 0 Critical Warnings and 0 Errors encountered.
+108 Infos, 139 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 3050.766 ; gain = 1421.441 ; free physical = 24825 ; free virtual = 40012
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2126.495; main = 2126.495; forked = 287.276
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3764.941; main = 3050.734; forked = 993.031
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3074.742 ; gain = 0.000 ; free physical = 24825 ; free virtual = 40012
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 3064.449 ; gain = 1437.098 ; free physical = 26252 ; free virtual = 41127
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2158.542; main = 2158.542; forked = 285.570
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3772.633; main = 3064.418; forked = 993.031
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3088.426 ; gain = 0.000 ; free physical = 26252 ; free virtual = 41127
 INFO: [Common 17-1381] The checkpoint '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/skrab_one.runs/synth_1/top_dut.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file top_dut_utilization_synth.rpt -pb top_dut_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Aug  7 16:29:22 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 10 12:08:04 2026...

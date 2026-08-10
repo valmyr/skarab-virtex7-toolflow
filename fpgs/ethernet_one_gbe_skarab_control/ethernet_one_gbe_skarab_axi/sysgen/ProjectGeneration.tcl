@@ -26,12 +26,22 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 		{{single_reg_w_init.vhd} -lib {xil_defaultlib}}
 		{{xlclockdriver_rd.vhd} -lib {xil_defaultlib}}
 		{{vivado_ip.tcl}}
-		{{control_axi_stream_gbe.v}}
+		{{cmd_sync_detector.v}}
 		{{conv_pkg.v}}
 		{{synth_reg.v}}
 		{{synth_reg_w_init.v}}
 		{{convert_type.v}}
-		{{cmd_sync_detector.v}}
+		{{deserializer.v}}
+		{{conv_pkg.v}}
+		{{synth_reg.v}}
+		{{synth_reg_w_init.v}}
+		{{convert_type.v}}
+		{{serializer.v}}
+		{{conv_pkg.v}}
+		{{synth_reg.v}}
+		{{synth_reg_w_init.v}}
+		{{convert_type.v}}
+		{{control_axi_stream_gbe.v}}
 		{{conv_pkg.v}}
 		{{synth_reg.v}}
 		{{synth_reg_w_init.v}}

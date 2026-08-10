@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+
 //////////////////////////////////////////////////////////////////////////////////
 // Company: VIRTUS/UFCG
 // Engineer: Valmir F. Silva
@@ -107,7 +108,7 @@
 
 
 
-module control_axi_stream_gbe(
+module control_axi_stream_gbe_checkpoint_fifos_serdes(
     input  wire        clk,
     input  wire        a_sync_nrst,
     input  wire        ce, //Sem uso
@@ -227,9 +228,9 @@ end
 always @(*) begin 
     if(tx_val)
 //        tx_data = debug_read_gbe_or_fifo ? mem_gbe_debug[counter_tx] : mem_tmp[counter_tx];
-          tx_data = s_axis_tdata;
+          tx_data = u_unit_serializer_out_m_tdata;
     else 
-        tx_data = 'h00;
+        tx_data = 'hxx;
 end
 
 always@(*) tx_val = (tx_ena_out_w || tx_eof); //Remoção do sinal de decimação para avaliação de necessidade de desse módulo no projeto.
@@ -501,7 +502,7 @@ reg [15:0]s_addr_data_delay;
 reg [7:0]debug_axi_fifo2mem;
 
 always@(*)begin 
-    if(s_addr_data < 8'h100)
+    if(s_addr_data < 9'h100)
         debug_axi_fifo2mem = mem_tmp[s_addr_data];
     else 
         debug_axi_fifo2mem = 0;
@@ -515,21 +516,24 @@ always@(posedge clk, negedge a_sync_nrst)begin
         handshake_ms_axis <=0;
     end else begin
         s_axis_state <= s_axis_next_state;
-        if(s_axis_tvalid && s_axis_tready)begin
+        if(u_unit_serializer_out_m_tvalid && u_unit_serializer_out_m_tready )begin
             mem_tmp[s_addr_data] <= s_axis_tdata ;   
             s_addr_data <= (s_addr_data == tx_pkt_len-1)? 0 : s_addr_data+1;     
-        end 
+            s_addr_data_delay <=(s_addr_data_delay == tx_pkt_len-1)? 0 : s_addr_data_delay+1;   
 
+        end
     end
 end
+//Inclusão da lógica do serializador
 
 always@(*) begin
     case(s_axis_state)
         S_IDLE:begin
-            s_axis_tready = 1;
-            if((s_axis_tvalid))begin
+            //s_axis_tready = 1;
+            u_unit_serializer_out_m_tready = 1;
+            if((u_unit_serializer_out_m_tvalid))begin
                 s_axis_next_state = S_REC;
-                tx_ena_out_w = 0;
+                tx_ena_out_w = 1; //Era 0
             end else begin
                 s_axis_next_state = S_IDLE;
                 tx_ena_out_w = 0;
@@ -538,21 +542,26 @@ always@(*) begin
         S_REC:begin
             if(s_addr_data == tx_pkt_len)begin
                 s_axis_next_state = S_IDLE;
-                s_axis_tready = 0;
+            //  s_axis_tready = 0;
+                u_unit_serializer_out_m_tready = 0;
                 tx_ena_out_w = 0;
-            end else if(s_axis_tvalid) begin
+            end else if(u_unit_serializer_out_m_tvalid) begin
                 s_axis_next_state = S_REC;
-                s_axis_tready = 1;
+                u_unit_serializer_out_m_tready = 1;
+            //    s_axis_tready = 1;
                 tx_ena_out_w = 1;
             end else begin
                 s_axis_next_state = S_REC;
-                s_axis_tready = 1;
+            //    s_axis_tready = 1;
+                u_unit_serializer_out_m_tready = 1;
                 tx_ena_out_w = 0;
             end
         end
         default:begin
             s_axis_next_state = S_IDLE;
-            s_axis_tready = 1;
+        //    s_axis_tready = 1;
+            u_unit_serializer_out_m_tready = 1;
+
             tx_ena_out_w = 0;
         end
     endcase
@@ -591,7 +600,7 @@ always@(*) debug_rx_data_mem_fifo = mem_tmp[debug_addr_data_fifo];
   wire                    u_unit_serializer_out_s_tlast;
   wire [OUTPUT_WIDTH-1:0] u_unit_serializer_out_m_tdata;
   wire                    u_unit_serializer_out_m_tvalid;
-  wire                    u_unit_serializer_out_m_tready;
+  reg                     u_unit_serializer_out_m_tready;
   wire                    u_unit_serializer_out_m_tlast;
 
  //Atribuição dos sinais serializer do AXI Master para o bloco FIFO AXI Stream SLAVE para o barramneto de N Bytes 
@@ -607,11 +616,11 @@ always@(*) debug_rx_data_mem_fifo = mem_tmp[debug_addr_data_fifo];
  assign u_unit_serializer_out_sys_rst = ~a_sync_nrst;
 
  assign u_unit_serializer_out_s_tvalid = s_axis_tvalid;
+;
  assign u_unit_serializer_out_s_tdata  = s_axis_tdata;
  assign u_unit_serializer_out_s_tlast  = s_axis_tlast;
-
- assign u_unit_serializer_out_m_tready=1'b1; // Sempre pronto para receber dados do serializer
- always@(*) s_axis_tready = u_unit_serializer_out_s_tready;
+ always@(*)s_axis_tready = u_unit_serializer_out_s_tready;
+// assign u_unit_serializer_out_m_tready=1'b1; // Sempre pronto para receber dados do serializer
 
   serializer #(
     .OUTPUT_WIDTH(OUTPUT_WIDTH),

@@ -25,8 +25,6 @@ Compiling module unisims_ver.BUFG
 Compiling module unisims_ver.OBUFT
 Compiling module unisims_ver.LUT5
 Compiling module unisims_ver.LUT6
-Compiling module unisims_ver.x_lut1_mux2
-Compiling module unisims_ver.LUT1
 Compiling module unisims_ver.LUT4
 Compiling module unisims_ver.FDCE_default
 Compiling module unisims_ver.x_lut3_mux8
@@ -34,8 +32,12 @@ Compiling module unisims_ver.LUT3
 Compiling module unisims_ver.x_lut2_mux4
 Compiling module unisims_ver.LUT2
 Compiling module xil_defaultlib.cmd_sync_detector
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
 Compiling module unisims_ver.CARRY4
 Compiling module unisims_ver.FDPE_default
+Compiling module xil_defaultlib.deserializer
+Compiling module xil_defaultlib.serializer
 Compiling module xil_defaultlib.control_axi_stream_gbe
 Compiling module unisims_ver.GND
 Compiling module unisims_ver.FDRE_default

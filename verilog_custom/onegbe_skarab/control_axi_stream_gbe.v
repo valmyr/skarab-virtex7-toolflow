@@ -1,55 +1,111 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: VIRTUS/UFCG
-// Engineer: Valmir F. Silva 
-// 
+// Engineer: Valmir F. Silva
+//
 // Create Date: 06/19/2026 11:40:32 PM
-// Design Name: 
+// Design Name:
 // Module Name: control_axi_stream_gbe
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// Revision 0.04 - Escrita e leitura direto nas FIFOs do projeto SIMULINK. Remoção das memórias registradores mem_gbe_debug/mem_tmp.
-// Revision 0.03 - Correção definitiva: perda de bytes na captura de RX.
-//                 Causa raiz identificada: suposição incorreta de que
-//                 rx_valid era um sinal PULSANTE (1 ciclo por byte).
-//                 Na realidade rx_valid é um sinal de NÍVEL, permanecendo
-//                 em 1 continuamente do primeiro byte do comando até o
-//                 último byte do payload (padrão MII/GMII/AXI-Stream
-//                 convencional), com 1 byte novo em rx_data a cada ciclo
-//                 de clock enquanto ativo.
+// Project Name:
+// Target Devices:
+// Tool Versions:
 //
-//                 Essa suposição errada causou 2 sintomas em cadeia:
-//                 1) Ao trocar para nível puro, o contador de endereço
-//                    (counter_rx) e a condição de escrita (data_capture_rx)
-//                    avançavam de forma dessincronizada: o índice avançava
-//                    mesmo em ciclos em que a FSM ainda não permitia
-//                    escrita (transição IDLE->RX_DATA), descartando
-//                    silenciosamente 1-2 bytes no início de cada frame.
-//                 2) O mesmo padrão deixava lixo residual do frame
-//                    anterior (bytes do comando "tran"/"rece", ex. 0x6E)
-//                    em mem_gbe_debug[0] e no último índice do buffer.
+// Description:
+// Módulo responsável pelo controle do fluxo de dados da interface GbE de
+// gerenciamento da SKARAB, realizando a interface entre o protocolo Ethernet
+// e os canais AXI-Stream/FIFOs utilizados no projeto.
 //
-//                 Correção aplicada:
-//                 a) next_state_counter_rx passou a ser 0 (não 1) na
-//                    transição IDLE->RX_DATA, corrigindo o offset base.
-//                 b) data_capture_rx passou a incluir start_frame_reception
-//                    diretamente (via OR combinacional), cobrindo o ciclo
-//                    exato do pulso de início de frame sem esperar a FSM
-//                    estabilizar em RX_DATA.
-//                 c) Unificado o avanço do contador (counter_rx) e a
-//                    escrita em mem_gbe_debug[] sob um único enable (we_rx =
-//                    pulse_rx_valid && data_capture_rx), eliminando de
-//                    forma estrutural a possibilidade do índice avançar
-//                    sem escrever (ou escrever sem avançar) — a causa
-//                    raiz do sintoma (2).
+// Dependencies:
 //
-// Additional Comments: Square Kilometer Array Reconfigurable Application Board - SKARAB
+// Revision:
+// Revision 0.05 - Integração do bloco SerDes (Serializer/Deserializer) ao
+//                 fluxo de dados da interface GbE.
+//
+//                 O SerDes foi integrado para contornar a limitação do bloco
+//                 1 GbE, que utiliza elementos de 1 Byte no fluxo de dados.
+//                 O bloco permite a serialização e desserialização estruturada
+//                 dos dados, possibilitando o processamento de informações
+//                 com diferentes larguras de dados no fluxo de comunicação.
+//
+//                 A arquitetura permite a utilização do SerDes tanto com a
+//                 interface 1 GbE quanto com a interface 40 GbE, proporcionando
+//                 maior flexibilidade na organização e transferência dos dados.
+//
+//                 O bloco SerDes foi originalmente desenvolvido por
+//                 Marcos Antônio I. Luz e integrado ao fluxo deste projeto
+//                 por Valmir F. Silva.
+//
+// Revision 0.04 - Escrita e leitura diretamente nas FIFOs do projeto
+//                 SIMULINK. Remoção das memórias auxiliares
+//                 mem_gbe_debug e mem_tmp.
+//
+//                 Remoção da limitação anterior de 256 elementos por
+//                 pacote, permitindo o processamento de pacotes com
+//                 tamanho definido de acordo com a capacidade máxima
+//                 suportada pela interface de rede.
+//
+//                 A configuração da interface Ethernet passou a utilizar
+//                 o maior MTU suportado pela interface enp4s0, com
+//                 maxmtu = 9194 bytes, permitindo ampliar o tamanho dos
+//                 pacotes transferidos em relação à configuração anterior.
+//
+//                 Essa alteração elimina a restrição artificial de
+//                 256 elementos imposta pelo fluxo anterior e permite
+//                 explorar pacotes maiores, respeitando os limites da
+//                 interface Ethernet e da configuração de MTU utilizada.
+
+//
+// Revision 0.03 - Correção da perda de bytes durante a captura dos dados de RX.
+//
+//                 Causa raiz:
+//                 Foi identificada uma interpretação incorreta do sinal
+//                 rx_valid, inicialmente tratado como um sinal pulsante
+//                 (1 ciclo por byte). Na realidade, rx_valid é um sinal de
+//                 nível, permanecendo ativo durante todo o recebimento do
+//                 frame, com um novo byte disponível em rx_data a cada ciclo
+//                 de clock enquanto o sinal estiver ativo.
+//
+//                 Consequências:
+//                 1) O contador counter_rx e a condição de escrita
+//                    data_capture_rx avançavam de forma dessincronizada.
+//                    Durante a transição IDLE -> RX_DATA, o contador podia
+//                    avançar antes que a FSM habilitasse efetivamente a
+//                    escrita, ocasionando a perda de 1 a 2 bytes no início
+//                    de determinados frames.
+//
+//                 2) A condição anterior também permitia a permanência de
+//                    dados residuais do frame anterior, incluindo bytes dos
+//                    comandos "tran" e "rece" (por exemplo, 0x6E), em
+//                    posições de mem_gbe_debug[].
+//
+//                 Correções aplicadas:
+//                 a) next_state_counter_rx passou a assumir o valor 0 na
+//                    transição IDLE -> RX_DATA, corrigindo o deslocamento
+//                    inicial do contador.
+//
+//                 b) data_capture_rx passou a considerar diretamente o sinal
+//                    start_frame_reception por meio de lógica combinacional,
+//                    garantindo a captura do byte correspondente ao início
+//                    do frame sem depender da estabilização da FSM em
+//                    RX_DATA.
+//
+//                 c) O avanço de counter_rx e a escrita em mem_gbe_debug[]
+//                    foram unificados sob um único enable:
+//
+//                    we_rx = pulse_rx_valid && data_capture_rx
+//
+//                    Essa alteração garante que o contador somente avance
+//                    quando houver uma escrita efetiva, eliminando a
+//                    possibilidade estrutural de dessincronização entre o
+//                    endereço de escrita e os dados recebidos.
+//
+// Additional Comments:
+// Square Kilometer Array Reconfigurable Application Board (SKARAB)
+//
+// Módulo de controle da interface GbE de gerenciamento da SKARAB.
 //////////////////////////////////////////////////////////////////////////////////
 
+//`sv off
 
 module control_axi_stream_gbe(
     input  wire        clk,
@@ -57,19 +113,19 @@ module control_axi_stream_gbe(
     input  wire        ce, //Sem uso
     input  wire        rx_valid,
     input  wire [7:0]  rx_data,
-    input  wire [15:0]  tx_pkt_len,
+    input  wire [15:0] tx_pkt_len,
     output reg  [7:0]  tx_data,
-    output reg        tx_val,
-    output reg        tx_eof,
+    output reg         tx_val,
+    output reg         tx_eof,
     ///Axi  Sinais 
     //Interface Slave AXI Stream (Entrada)
     input wire        s_axis_tvalid,
-    input wire [7:0]  s_axis_tdata,
+    input wire [63:0] s_axis_tdata,
     input wire        s_axis_tlast,
     output reg        s_axis_tready,
     //Interface Master AXI Stream (Saída)
     output reg        m_axis_tvalid,
-    output reg [7:0]  m_axis_tdata, 
+    output reg [63:0] m_axis_tdata, 
     output reg        m_axis_tlast,
     input  wire       m_axis_tready,
     //Debug Sinais
@@ -171,9 +227,9 @@ end
 always @(*) begin 
     if(tx_val)
 //        tx_data = debug_read_gbe_or_fifo ? mem_gbe_debug[counter_tx] : mem_tmp[counter_tx];
-          tx_data = s_axis_tdata;
+          tx_data = u_unit_serializer_out_m_tdata;
     else 
-        tx_data = 'h00;
+        tx_data = 'hxx;
 end
 
 always@(*) tx_val = (tx_ena_out_w || tx_eof); //Remoção do sinal de decimação para avaliação de necessidade de desse módulo no projeto.
@@ -331,7 +387,10 @@ cmd_sync_detector cmd_frame_transmission(
 
 */
 
-
+reg       m_axis_tvalid_ethert2des;
+reg [7:0] m_axis_tdata_ethert2des;
+reg       m_axis_tlast_ethert2des;
+wire      m_axis_tready_ethert2des;
 
 localparam M_IDLE   = 2'b00;
 localparam M_SEND = 2'b01;
@@ -342,7 +401,7 @@ reg [1:0] m_axis_next_state;
 reg [15:0]m_addr_data;
 reg [15:0]m_addr_data_next;
 
-
+assign m_axis_tready_ethert2des = m_axis_tready;
 
 always@(posedge clk, negedge a_sync_nrst)begin
     if(!a_sync_nrst)begin
@@ -359,18 +418,18 @@ always@(*) begin
     case(m_axis_state)
         M_IDLE:begin
 //          m_axis_tvalid = counter_rx == tx_pkt_len-1;
-            m_axis_tvalid = we_rx; // Alteração dedicada à inclusão direta da escrita na FIFO do projeto Simulink, eliminando a memória intermediária mem_gbe_debug[].
-            m_axis_tlast = 1'b0;
+            m_axis_tvalid_ethert2des = we_rx; // Alteração dedicada à inclusão direta da escrita na FIFO do projeto Simulink, eliminando a memória intermediária mem_gbe_debug[].
+            m_axis_tlast_ethert2des = 1'b0;
             m_addr_data_next = 0;
-            if(m_axis_tvalid && m_axis_tready)begin
+            if(m_axis_tvalid_ethert2des && m_axis_tready_ethert2des)begin
                 m_addr_data_next = m_addr_data +1;
                 m_axis_next_state=M_SEND;
-                m_axis_tdata = rx_data; // Inclusão da FIFO 
+                m_axis_tdata_ethert2des = rx_data; // Inclusão da FIFO 
 
             end else begin
                 m_addr_data_next =0;
                 m_axis_next_state = M_IDLE;
-                m_axis_tdata = 'h00;
+                m_axis_tdata_ethert2des = 'h00;
 
             end
         end
@@ -378,36 +437,36 @@ always@(*) begin
             if(m_addr_data == tx_pkt_len)begin
                 m_addr_data_next = 0;
                 m_axis_next_state = M_IDLE;
-                m_axis_tvalid = 1'b0;
-                m_axis_tlast = 1'b0;
-                m_axis_tdata = 'h00;
-            end else if(m_axis_tready) begin
+                m_axis_tvalid_ethert2des = 1'b0;
+                m_axis_tlast_ethert2des = 1'b0;
+                m_axis_tdata_ethert2des = 'h00;
+            end else if(m_axis_tready_ethert2des) begin
                 m_addr_data_next =  m_addr_data +1;
                 m_axis_next_state = M_SEND;
-                m_axis_tvalid = 1'b1;
-                m_axis_tlast = m_addr_data == tx_pkt_len-1;
-                m_axis_tdata = rx_data;// Inclusão da FIFO 
+                m_axis_tvalid_ethert2des = 1'b1;
+                m_axis_tlast_ethert2des = m_addr_data == tx_pkt_len-1;
+                m_axis_tdata_ethert2des = rx_data;// Inclusão da FIFO 
             end else begin
-                m_axis_tdata = 'h00;
+                m_axis_tdata_ethert2des = 'h00;
                 m_addr_data_next = m_addr_data; 
                 m_axis_next_state = M_SEND;
-                m_axis_tvalid = 1'b1;
-                m_axis_tlast = m_addr_data == tx_pkt_len-1;
+                m_axis_tvalid_ethert2des = 1'b1;
+                m_axis_tlast_ethert2des = m_addr_data == tx_pkt_len-1;
             end
         end
         default:begin
-            m_axis_tvalid = counter_rx == tx_pkt_len-1;
-            m_axis_tlast = 1'b0;
+            m_axis_tvalid_ethert2des = counter_rx == tx_pkt_len-1;
+            m_axis_tlast_ethert2des = 1'b0;
             m_addr_data_next = 0;
-            if(m_axis_tready)begin
+            if(m_axis_tready_ethert2des)begin
                 m_addr_data_next = m_addr_data +1;
                 m_axis_next_state=M_SEND;
-                m_axis_tdata = rx_data; // Inclusão da FIFO
+                m_axis_tdata_ethert2des = rx_data; // Inclusão da FIFO
 
             end else begin
                 m_addr_data_next =0;
                 m_axis_next_state = M_IDLE;
-                m_axis_tdata = 'h00;
+                m_axis_tdata_ethert2des = 'h00;
 
             end
         end
@@ -442,7 +501,7 @@ reg [15:0]s_addr_data_delay;
 reg [7:0]debug_axi_fifo2mem;
 
 always@(*)begin 
-    if(s_addr_data < 8'h100)
+    if(s_addr_data < 9'h100)
         debug_axi_fifo2mem = mem_tmp[s_addr_data];
     else 
         debug_axi_fifo2mem = 0;
@@ -456,21 +515,24 @@ always@(posedge clk, negedge a_sync_nrst)begin
         handshake_ms_axis <=0;
     end else begin
         s_axis_state <= s_axis_next_state;
-        if(s_axis_tvalid && s_axis_tready)begin
+        if(u_unit_serializer_out_m_tvalid && u_unit_serializer_out_m_tready )begin
             mem_tmp[s_addr_data] <= s_axis_tdata ;   
             s_addr_data <= (s_addr_data == tx_pkt_len-1)? 0 : s_addr_data+1;     
-        end 
+            s_addr_data_delay <=(s_addr_data_delay == tx_pkt_len-1)? 0 : s_addr_data_delay+1;   
 
+        end
     end
 end
+//Inclusão da lógica do serializador
 
 always@(*) begin
     case(s_axis_state)
         S_IDLE:begin
-            s_axis_tready = 1;
-            if((s_axis_tvalid))begin
+            //s_axis_tready = 1;
+            u_unit_serializer_out_m_tready = 1;
+            if((u_unit_serializer_out_m_tvalid))begin
                 s_axis_next_state = S_REC;
-                tx_ena_out_w = 0;
+                tx_ena_out_w = 1; //Era 0
             end else begin
                 s_axis_next_state = S_IDLE;
                 tx_ena_out_w = 0;
@@ -479,21 +541,26 @@ always@(*) begin
         S_REC:begin
             if(s_addr_data == tx_pkt_len)begin
                 s_axis_next_state = S_IDLE;
-                s_axis_tready = 0;
+            //  s_axis_tready = 0;
+                u_unit_serializer_out_m_tready = 0;
                 tx_ena_out_w = 0;
-            end else if(s_axis_tvalid) begin
+            end else if(u_unit_serializer_out_m_tvalid) begin
                 s_axis_next_state = S_REC;
-                s_axis_tready = 1;
+                u_unit_serializer_out_m_tready = 1;
+            //    s_axis_tready = 1;
                 tx_ena_out_w = 1;
             end else begin
                 s_axis_next_state = S_REC;
-                s_axis_tready = 1;
+            //    s_axis_tready = 1;
+                u_unit_serializer_out_m_tready = 1;
                 tx_ena_out_w = 0;
             end
         end
         default:begin
             s_axis_next_state = S_IDLE;
-            s_axis_tready = 1;
+        //    s_axis_tready = 1;
+            u_unit_serializer_out_m_tready = 1;
+
             tx_ena_out_w = 0;
         end
     endcase
@@ -501,5 +568,131 @@ end
 always@(*) debug_rx_data_mem_gbe = mem_gbe_debug[debug_addr_data_gbe];
 always@(*) debug_rx_data_mem_fifo = mem_tmp[debug_addr_data_fifo];
 
+//===================================== SerDes =====================================
+// Este bloco foi desenvolvido para contornar uma limitação da interface 1 GbE,
+// cujo fluxo de dados é limitado a 1 Byte por elemento do pacote.
+//
+// O SerDes (Serializer/Deserializer) foi integrado ao fluxo de dados com o
+// objetivo de estruturar e ampliar o tratamento dos dados, permitindo a
+// serialização e desserialização de informações de forma compatível com
+// diferentes interfaces Ethernet, podendo ser utilizado tanto com o bloco
+// 1 GbE quanto com o bloco 40 GbE.
+//
+// O bloco SerDes foi originalmente desenvolvido por Marcos Antônio I. Luz
+// e posteriormente integrado ao fluxo do projeto por Valmir F. Silva.
+//
+// Módulo de controle da interface GbE de gerenciamento da SKARAB.
+//===============================================================================
+  localparam INPUT_WIDTH = 8;
+  localparam OUTPUT_WIDTH = 8;
+  localparam NUM_ELEMENTS = 8;
+  localparam COMMON = NUM_ELEMENTS * INPUT_WIDTH;
+
+//===================================== Serializer =====================================
+
+  wire                    u_unit_serializer_out_en;
+  wire                    u_unit_serializer_out_sys_clk;
+  wire                    u_unit_serializer_out_sys_rst;
+  wire [COMMON-1:0]       u_unit_serializer_out_s_tdata;
+  wire                    u_unit_serializer_out_s_tvalid;
+  wire                    u_unit_serializer_out_s_tready;
+  wire                    u_unit_serializer_out_s_tlast;
+  wire [OUTPUT_WIDTH-1:0] u_unit_serializer_out_m_tdata;
+  wire                    u_unit_serializer_out_m_tvalid;
+  reg                     u_unit_serializer_out_m_tready;
+  wire                    u_unit_serializer_out_m_tlast;
+
+ //Atribuição dos sinais serializer do AXI Master para o bloco FIFO AXI Stream SLAVE para o barramneto de N Bytes 
+
+ /*
+    input wire        s_axis_tvalid,
+    input wire [63:0] s_axis_tdata,
+    input wire        s_axis_tlast,
+    output reg        s_axis_tready,
+ */
+ assign u_unit_serializer_out_en = 1'b1; //Sem uso, pois o bloco serializer é sempre habilitado.
+ assign u_unit_serializer_out_sys_clk = clk;
+ assign u_unit_serializer_out_sys_rst = ~a_sync_nrst;
+
+ assign u_unit_serializer_out_s_tvalid = s_axis_tvalid;
+;
+ assign u_unit_serializer_out_s_tdata  = s_axis_tdata;
+ assign u_unit_serializer_out_s_tlast  = s_axis_tlast;
+ always@(*)s_axis_tready = u_unit_serializer_out_s_tready;
+// assign u_unit_serializer_out_m_tready=1'b1; // Sempre pronto para receber dados do serializer
+
+  serializer #(
+    .OUTPUT_WIDTH(OUTPUT_WIDTH),
+    .NUM_ELEMENTS(NUM_ELEMENTS)
+  ) u_unit_serializer_out (
+    .clk(u_unit_serializer_out_sys_clk),
+    .rst(u_unit_serializer_out_sys_rst),
+    .en(u_unit_serializer_out_en),
+    
+    .s_tready(u_unit_serializer_out_s_tready),
+    .s_tvalid(u_unit_serializer_out_s_tvalid),
+    .s_tdata(u_unit_serializer_out_s_tdata),
+    .s_tlast(u_unit_serializer_out_s_tlast),
+
+    .m_tready(u_unit_serializer_out_m_tready),
+    .m_tvalid(u_unit_serializer_out_m_tvalid),
+    .m_tdata(u_unit_serializer_out_m_tdata),
+    .m_tlast(u_unit_serializer_out_m_tlast)
+  );
+//===================================== Deserializer =====================================
+
+  wire                                u_unit_deserializer_out_en;
+  wire                                u_unit_deserializer_out_sys_clk;
+  wire                                u_unit_deserializer_out_sys_rst;
+  wire [OUTPUT_WIDTH-1:0]             u_unit_deserializer_out_s_tdata;
+  wire                                u_unit_deserializer_out_s_tvalid;
+  wire                                u_unit_deserializer_out_s_tready;
+  wire                                u_unit_deserializer_out_s_tlast;
+  wire [COMMON-1:0]                   u_unit_deserializer_out_m_tdata;
+  wire                                u_unit_deserializer_out_m_tvalid;
+  wire                                u_unit_deserializer_out_m_tready;
+  wire                                u_unit_deserializer_out_m_tlast;
+
+ //Atribuição dos sinais do Ethernet para o bloco deserializer SLAVE 1 Bytes.
+
+  assign u_unit_deserializer_out_sys_clk  = clk;
+  assign u_unit_deserializer_out_sys_rst  = ~a_sync_nrst;
+  assign u_unit_deserializer_out_en       = data_capture_rx;
+  assign u_unit_deserializer_out_s_tvalid = m_axis_tvalid_ethert2des;
+  assign u_unit_deserializer_out_s_tlast  = 0;//8*1024
+  assign u_unit_deserializer_out_s_tdata  = m_axis_tdata_ethert2des;
+  assign u_unit_deserializer_out_m_tready = 1'b1; // Sempre pronto para receber dados do deserializer
+ //Atribuição dos sinais do AXI Stream MASTER deserializer para o bloco FIFO AXI Stream SLAVE para o barramneto de N Bytes 
+ //do wrapper do Simulink.
+/*
+    output reg        m_axis_tvalid,
+    output reg [63:0] m_axis_tdata, 
+    output reg        m_axis_tlast,
+    input  wire       m_axis_tready,
+*/
+
+    always@(*)m_axis_tvalid = u_unit_deserializer_out_m_tvalid;
+    always@(*)m_axis_tlast  = u_unit_deserializer_out_m_tlast;
+    always@(*)m_axis_tdata  = u_unit_deserializer_out_m_tdata;
+    
+
+   deserializer #(
+    .INPUT_WIDTH(INPUT_WIDTH),
+    .NUM_ELEMENTS(NUM_ELEMENTS)
+  ) u_unit_deserializer_out (
+    .clk(u_unit_deserializer_out_sys_clk),
+    .rst(u_unit_deserializer_out_sys_rst),
+    .en(u_unit_deserializer_out_en),
+
+    .s_tready(u_unit_deserializer_out_s_tready),
+    .s_tvalid(u_unit_deserializer_out_s_tvalid),
+    .s_tdata(u_unit_deserializer_out_s_tdata),
+    .s_tlast(u_unit_deserializer_out_s_tlast),
+
+    .m_tready(u_unit_deserializer_out_m_tready),
+    .m_tvalid(u_unit_deserializer_out_m_tvalid),
+    .m_tdata(u_unit_deserializer_out_m_tdata),
+    .m_tlast(u_unit_deserializer_out_m_tlast)
+  );
 
 endmodule

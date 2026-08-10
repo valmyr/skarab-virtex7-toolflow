@@ -148,7 +148,7 @@ module top_dut (
         .rx_valid(in_valid_rx),
         .rx_data(in_data_rx_ethernet),
 
-        .tx_pkt_len(10'd256),
+        .tx_pkt_len(16'd256),
 
         .tx_data(tx_data),
         .tx_val(tx_val),

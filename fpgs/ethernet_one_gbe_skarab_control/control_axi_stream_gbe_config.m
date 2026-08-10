@@ -56,7 +56,7 @@ function control_axi_stream_gbe_config(this_block)
   m_axis_tvalid_port.setType('UFix_1_0');
   m_axis_tvalid_port.useHDLVector(false);
   m_axis_tdata_port = this_block.port('m_axis_tdata');
-  m_axis_tdata_port.setType('UFix_8_0');
+  m_axis_tdata_port.setType('UFix_64_0');
   m_axis_tlast_port = this_block.port('m_axis_tlast');
   m_axis_tlast_port.setType('UFix_1_0');
   m_axis_tlast_port.useHDLVector(false);
@@ -96,8 +96,8 @@ function control_axi_stream_gbe_config(this_block)
 
     this_block.port('s_axis_tvalid').useHDLVector(false);
 
-    if (this_block.port('s_axis_tdata').width ~= 8);
-      this_block.setError('Input data type for port "s_axis_tdata" must have width=8.');
+    if (this_block.port('s_axis_tdata').width ~= 64);
+      this_block.setError('Input data type for port "s_axis_tdata" must have width=64.');
     end
 
     if (this_block.port('s_axis_tlast').width ~= 1);
@@ -152,9 +152,23 @@ function control_axi_stream_gbe_config(this_block)
 
   %    this_block.addFile('');
   %    this_block.addFile('');
-  this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v');
+
   this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/cmd_sync_detector.v');
+  this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/serdes/deserializer.v');
+  this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/serdes/serializer.v');
+  this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v');
+    
+  
   %this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/sync_fifo_peek.v')
+  
+  %this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/cmd_sync_detector.v');
+  %f1 = this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/serdes/deserializer.sv');
+  %f1.setFileType('SystemVerilog');
+  
+  %f2 = this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/serdes/serializer.sv');
+  %f2.setFileType('SystemVerilog');
+  
+  %this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v');
 return;
 
 

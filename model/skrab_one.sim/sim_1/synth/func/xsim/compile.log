@@ -5,6 +5,8 @@ INFO: [VRFC 10-311] analyzing module axis_data_fifo_v2_0_17_top
 INFO: [VRFC 10-311] analyzing module axis_data_fifo_v2_0_17_top__xdcDup__1
 INFO: [VRFC 10-311] analyzing module cmd_sync_detector
 INFO: [VRFC 10-311] analyzing module control_axi_stream_gbe
+INFO: [VRFC 10-311] analyzing module deserializer
+INFO: [VRFC 10-311] analyzing module serializer
 INFO: [VRFC 10-311] analyzing module top_dut
 INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
 INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst__2

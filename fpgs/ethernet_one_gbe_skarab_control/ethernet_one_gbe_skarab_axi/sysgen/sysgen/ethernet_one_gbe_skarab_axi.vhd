@@ -12267,15 +12267,15 @@ architecture structural of ethernet_one_gbe_skarab_axi_struct is
   signal delay6_q_net : std_logic_vector( 1-1 downto 0 );
   signal delay68_q_net : std_logic_vector( 32-1 downto 0 );
   signal axi_fifo_m_axis_tvalid_net : std_logic;
-  signal axi_fifo_m_axis_tdata_net : std_logic_vector( 8-1 downto 0 );
+  signal axi_fifo_m_axis_tdata_net : std_logic_vector( 64-1 downto 0 );
   signal axi_fifo_m_axis_tlast_net : std_logic;
   signal axi_fifo_s_axis_tready_net : std_logic;
   signal mf_tready : std_logic;
   signal sf_tvalid : std_logic;
-  signal sf_tdata : std_logic_vector( 8-1 downto 0 );
+  signal sf_tdata : std_logic_vector( 64-1 downto 0 );
   signal sf_tlast : std_logic;
   signal mf_tvalid : std_logic;
-  signal mf_tdata : std_logic_vector( 8-1 downto 0 );
+  signal mf_tdata : std_logic_vector( 64-1 downto 0 );
   signal mf_tlast : std_logic;
   signal sf_tready : std_logic;
   signal addsub3_s_net : std_logic_vector( 33-1 downto 0 );
@@ -12284,14 +12284,14 @@ architecture structural of ethernet_one_gbe_skarab_axi_struct is
   signal delay46_q_net : std_logic_vector( 1-1 downto 0 );
   signal assert1_dout_net : std_logic_vector( 1-1 downto 0 );
   signal delay44_q_net : std_logic_vector( 1-1 downto 0 );
-  signal assert2_dout_net : std_logic_vector( 8-1 downto 0 );
-  signal delay43_q_net : std_logic_vector( 8-1 downto 0 );
+  signal assert2_dout_net : std_logic_vector( 64-1 downto 0 );
+  signal delay43_q_net : std_logic_vector( 64-1 downto 0 );
   signal assert3_dout_net : std_logic_vector( 1-1 downto 0 );
   signal delay42_q_net : std_logic_vector( 1-1 downto 0 );
   signal assert4_dout_net : std_logic_vector( 1-1 downto 0 );
   signal delay5_q_net : std_logic_vector( 1-1 downto 0 );
-  signal assert5_dout_net : std_logic_vector( 8-1 downto 0 );
-  signal delay9_q_net : std_logic_vector( 8-1 downto 0 );
+  signal assert5_dout_net : std_logic_vector( 64-1 downto 0 );
+  signal delay9_q_net : std_logic_vector( 64-1 downto 0 );
   signal assert6_dout_net : std_logic_vector( 1-1 downto 0 );
   signal delay31_q_net : std_logic_vector( 1-1 downto 0 );
   signal assert7_dout_net : std_logic_vector( 1-1 downto 0 );
@@ -12322,7 +12322,7 @@ architecture structural of ethernet_one_gbe_skarab_axi_struct is
   signal delay29_q_net : std_logic_vector( 16-1 downto 0 );
   signal logical11_y_net : std_logic_vector( 1-1 downto 0 );
   signal system_control_one_gbe_skarab2_m_axis_tlast_net : std_logic_vector( 1-1 downto 0 );
-  signal system_control_one_gbe_skarab2_m_axis_tdata_net : std_logic_vector( 8-1 downto 0 );
+  signal system_control_one_gbe_skarab2_m_axis_tdata_net : std_logic_vector( 64-1 downto 0 );
   signal system_control_one_gbe_skarab2_m_axis_tvalid_net : std_logic_vector( 1-1 downto 0 );
   signal system_control_one_gbe_skarab2_s_axis_tready_net : std_logic_vector( 1-1 downto 0 );
   signal pkt_counter14_op_net : std_logic_vector( 32-1 downto 0 );
@@ -12712,12 +12712,12 @@ begin
   );
   axi_fifo : entity xil_defaultlib.ethernet_one_gbe_skarab_axi_xlaxis 
   generic map (
-    depth => 131072,
-    depth_bits => 18,
+    depth => 8192,
+    depth_bits => 14,
     has_aresetn => 0,
     mem_type => "distributed",
-    tdata_width => 8,
-    tdata_width_net => 8,
+    tdata_width => 64,
+    tdata_width_net => 64,
     tdest_width => 4,
     tid_width => 8,
     tuser_width => 4
@@ -12737,12 +12737,12 @@ begin
   );
   axi_fifo1 : entity xil_defaultlib.ethernet_one_gbe_skarab_axi_xlaxis 
   generic map (
-    depth => 131072,
-    depth_bits => 18,
+    depth => 8192,
+    depth_bits => 14,
     has_aresetn => 0,
     mem_type => "distributed",
-    tdata_width => 8,
-    tdata_width_net => 8,
+    tdata_width => 64,
+    tdata_width_net => 64,
     tdest_width => 4,
     tid_width => 8,
     tuser_width => 4
@@ -12811,8 +12811,8 @@ begin
   );
   assert2 : entity xil_defaultlib.xlpassthrough 
   generic map (
-    din_width => 8,
-    dout_width => 8
+    din_width => 64,
+    dout_width => 64
   )
   port map (
     din => delay43_q_net,
@@ -12838,8 +12838,8 @@ begin
   );
   assert5 : entity xil_defaultlib.xlpassthrough 
   generic map (
-    din_width => 8,
-    dout_width => 8
+    din_width => 64,
+    dout_width => 64
   )
   port map (
     din => delay9_q_net,
@@ -13033,10 +13033,10 @@ begin
     bool_conversion => 0,
     din_arith => 1,
     din_bin_pt => 0,
-    din_width => 8,
+    din_width => 64,
     dout_arith => 1,
     dout_bin_pt => 0,
-    dout_width => 8,
+    dout_width => 64,
     latency => 0,
     overflow => xlWrap,
     quantization => xlTruncate
@@ -13471,7 +13471,7 @@ begin
     latency => 1,
     reg_retiming => 0,
     reset => 0,
-    width => 8
+    width => 64
   )
   port map (
     en => '1',
@@ -13651,7 +13651,7 @@ begin
     latency => 1,
     reg_retiming => 0,
     reset => 0,
-    width => 8
+    width => 64
   )
   port map (
     en => '1',

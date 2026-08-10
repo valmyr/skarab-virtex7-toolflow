@@ -988,7 +988,7 @@ entity control_axi_stream_gbe_wrapper is
     rx_data : in std_logic_vector(7 downto 0);
     tx_pkt_len : in std_logic_vector(15 downto 0);
     s_axis_tvalid : in std_logic;
-    s_axis_tdata : in std_logic_vector(7 downto 0);
+    s_axis_tdata : in std_logic_vector(63 downto 0);
     s_axis_tlast : in std_logic;
     m_axis_tready : in std_logic;
     debug_addr_data_gbe : in std_logic_vector(7 downto 0);
@@ -1000,7 +1000,7 @@ entity control_axi_stream_gbe_wrapper is
     tx_eof : out std_logic;
     s_axis_tready : out std_logic;
     m_axis_tvalid : out std_logic;
-    m_axis_tdata : out std_logic_vector(7 downto 0);
+    m_axis_tdata : out std_logic_vector(63 downto 0);
     m_axis_tlast : out std_logic;
     debug_rx_data_mem_gbe : out std_logic_vector(7 downto 0);
     debug_rx_data_mem_fifo : out std_logic_vector(7 downto 0);
@@ -1014,7 +1014,7 @@ architecture structural of control_axi_stream_gbe_wrapper is
   signal rx_data_net : std_logic_vector(7 downto 0);
   signal tx_pkt_len_net : std_logic_vector(15 downto 0);
   signal s_axis_tvalid_net : std_logic;
-  signal s_axis_tdata_net : std_logic_vector(7 downto 0);
+  signal s_axis_tdata_net : std_logic_vector(63 downto 0);
   signal s_axis_tlast_net : std_logic;
   signal m_axis_tready_net : std_logic;
   signal debug_addr_data_gbe_net : std_logic_vector(7 downto 0);
@@ -1026,7 +1026,7 @@ architecture structural of control_axi_stream_gbe_wrapper is
   signal tx_eof_net : std_logic;
   signal s_axis_tready_net : std_logic;
   signal m_axis_tvalid_net : std_logic;
-  signal m_axis_tdata_net : std_logic_vector(7 downto 0);
+  signal m_axis_tdata_net : std_logic_vector(63 downto 0);
   signal m_axis_tlast_net : std_logic;
   signal debug_rx_data_mem_gbe_net : std_logic_vector(7 downto 0);
   signal debug_rx_data_mem_fifo_net : std_logic_vector(7 downto 0);
@@ -1039,7 +1039,7 @@ architecture structural of control_axi_stream_gbe_wrapper is
       rx_data : in std_logic_vector(7 downto 0);
       tx_pkt_len : in std_logic_vector(15 downto 0);
       s_axis_tvalid : in std_logic;
-      s_axis_tdata : in std_logic_vector(7 downto 0);
+      s_axis_tdata : in std_logic_vector(63 downto 0);
       s_axis_tlast : in std_logic;
       m_axis_tready : in std_logic;
       debug_addr_data_gbe : in std_logic_vector(7 downto 0);
@@ -1051,7 +1051,7 @@ architecture structural of control_axi_stream_gbe_wrapper is
       tx_eof : out std_logic;
       s_axis_tready : out std_logic;
       m_axis_tvalid : out std_logic;
-      m_axis_tdata : out std_logic_vector(7 downto 0);
+      m_axis_tdata : out std_logic_vector(63 downto 0);
       m_axis_tlast : out std_logic;
       debug_rx_data_mem_gbe : out std_logic_vector(7 downto 0);
       debug_rx_data_mem_fifo : out std_logic_vector(7 downto 0);

@@ -3610,12 +3610,11 @@ use IEEE.numeric_std.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
 
-entity xlfir_compiler_80b58611f44be07b5c5f5c1cdabb093e is 
+entity xlfir_compiler_757422385dd956f2fc70237829a67c0b is 
   port(
     ce:in std_logic;
     clk:in std_logic;
-    en:in std_logic;
-    m_axis_data_tdata_real:out std_logic_vector(19 downto 0);
+    m_axis_data_tdata_real:out std_logic_vector(16 downto 0);
     m_axis_data_tlast:out std_logic;
     m_axis_data_tvalid:out std_logic;
     s_axis_data_tdata_real:in std_logic_vector(15 downto 0);
@@ -3625,9 +3624,9 @@ entity xlfir_compiler_80b58611f44be07b5c5f5c1cdabb093e is
     src_ce:in std_logic;
     src_clk:in std_logic
   );
-end xlfir_compiler_80b58611f44be07b5c5f5c1cdabb093e; 
+end xlfir_compiler_757422385dd956f2fc70237829a67c0b; 
 
-architecture behavior of xlfir_compiler_80b58611f44be07b5c5f5c1cdabb093e  is
+architecture behavior of xlfir_compiler_757422385dd956f2fc70237829a67c0b  is
   component ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0
     port(
       aclk:in std_logic;
@@ -3641,17 +3640,15 @@ architecture behavior of xlfir_compiler_80b58611f44be07b5c5f5c1cdabb093e  is
       s_axis_data_tvalid:in std_logic
     );
 end component;
-signal aclken_net: std_logic := '0';
 signal m_axis_data_tdata_net: std_logic_vector(23 downto 0) := (others=>'0');
 signal s_axis_data_tdata_net: std_logic_vector(15 downto 0) := (others=>'0');
 begin
-  aclken_net <= en and ce;
-  m_axis_data_tdata_real <= m_axis_data_tdata_net(19 downto 0);
+  m_axis_data_tdata_real <= m_axis_data_tdata_net(16 downto 0);
   s_axis_data_tdata_net(15 downto 0) <= s_axis_data_tdata_real;
   ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0_instance : ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0
     port map(
       aclk=>clk,
-      aclken=>aclken_net,
+      aclken=>ce,
       m_axis_data_tdata=>m_axis_data_tdata_net,
       m_axis_data_tlast=>m_axis_data_tlast,
       m_axis_data_tvalid=>m_axis_data_tvalid,

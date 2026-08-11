@@ -108,7 +108,7 @@ output wire m_axis_tlast;
     .C_SYNCHRONIZER_STAGE(3),
     .C_ACLKEN_CONV_MODE(0),
     .C_ECC_MODE(0),
-    .C_FIFO_MEMORY_TYPE("auto"),
+    .C_FIFO_MEMORY_TYPE("distributed"),
     .C_USE_ADV_FEATURES(825241648),
     .C_PROG_EMPTY_THRESH(5),
     .C_PROG_FULL_THRESH(11)

@@ -1538,3 +1538,589 @@ expandTreeTable((HResource) null, "xpm_fifo_axis_inst (xpm_fifo_axis) ; 21992 ; 
 selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "xpm_fifo_axis_inst (xpm_fifo_axis) ; 21992 ; 12706 ; 1649 ; 776 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 4, "xpm_fifo_axis_inst (xpm_fifo_axis)", 0, false, false, false, false, false, true); // z (O, cl) - Double Click
 expandTreeTable((HResource) null, "xpm_fifo_base_inst (xpm_fifo_base__2) ; 21990 ; 12702 ; 1649 ; 776 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 5); // z (O, cl)
 selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2) ; 21906 ; 12586 ; 1649 ; 776 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 6, "gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)", 0, true); // z (O, cl) - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 3,766 MB. GUI used memory: 155 MB. Current time: 8/10/26, 6:35:47 PM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,764 MB. GUI used memory: 155 MB. Current time: 8/10/26, 7:05:47 PM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,763 MB. GUI used memory: 154 MB. Current time: 8/10/26, 7:35:47 PM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,759 MB. GUI used memory: 153 MB. Current time: 8/10/26, 8:05:47 PM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,759 MB. GUI used memory: 153 MB. Current time: 8/10/26, 8:35:47 PM BRT
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,199 MB. GUI used memory: 154 MB. Current time: 8/10/26, 8:42:57 PM BRT
+// TclEventType: DG_GRAPH_STALE
+// [Engine Memory]: 4,173 MB (+43402kb) [04:56:58]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 415ms to process. Increasing delay to 3000 ms.
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,248 MB. GUI used memory: 158 MB. Current time: 8/10/26, 9:08:07 PM BRT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DG_GRAPH_STALE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,297 MB. GUI used memory: 158 MB. Current time: 8/10/26, 9:17:27 PM BRT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,321 MB. GUI used memory: 157 MB. Current time: 8/10/26, 9:17:47 PM BRT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 280 MB (+2441kb) [05:40:41]
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 295 MB (+1789kb) [05:41:02]
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 312 MB (+2231kb) [05:46:17]
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// [Engine Memory]: 4,392 MB (+11178kb) [05:52:41]
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 329 MB (+1053kb) [05:53:17]
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 347 MB (+1901kb) [05:55:56]
+// [GUI Memory]: 365 MB (+738kb) [06:00:41]
+// HMemoryUtils.trashcanNow. Engine heap size: 3,968 MB. GUI used memory: 161 MB. Current time: 8/10/26, 9:47:52 PM BRT
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,406 MB. GUI used memory: 157 MB. Current time: 8/10/26, 9:49:12 PM BRT
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,001 MB. GUI used memory: 157 MB. Current time: 8/10/26, 10:19:12 PM BRT
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,443 MB. GUI used memory: 157 MB. Current time: 8/10/26, 10:40:42 PM BRT
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 158 MB. Current time: 8/10/26, 11:10:42 PM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/10/26, 11:40:42 PM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/11/26, 12:10:42 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/11/26, 12:40:42 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/11/26, 1:10:42 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/11/26, 1:40:42 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/11/26, 2:10:42 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/11/26, 2:40:43 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/11/26, 3:10:43 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/11/26, 3:40:43 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/11/26, 4:10:43 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/11/26, 4:40:43 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/11/26, 5:10:43 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/11/26, 5:40:43 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/11/26, 6:10:43 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/11/26, 6:40:43 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/11/26, 7:10:43 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/11/26, 7:40:43 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/11/26, 8:10:43 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/11/26, 8:40:43 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/11/26, 9:10:43 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,033 MB. GUI used memory: 157 MB. Current time: 8/11/26, 9:40:43 AM BRT
+// ah (cl): Synthesis Failed: addNotify
+// ah (cl): Synthesis Failed: addNotify
+// ah (cl): Synthesis Completed: addNotify
+// ah (cl): Synthesis Failed: addNotify
+// ah (cl): Synthesis Failed: addNotify
+// ah (cl): Synthesis Completed: addNotify
+// ah (cl): Synthesis Completed: addNotify
+// Elapsed time: 56138 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Completed"); // ah (cl)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Completed"); // ah (cl)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Failed"); // ah (cl)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Failed"); // ah (cl)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Completed"); // ah (cl)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Failed"); // ah (cl)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Failed"); // ah (cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 4,034 MB. GUI used memory: 164 MB. Current time: 8/11/26, 10:10:43 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,034 MB. GUI used memory: 164 MB. Current time: 8/11/26, 10:40:43 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,034 MB. GUI used memory: 164 MB. Current time: 8/11/26, 11:10:43 AM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,034 MB. GUI used memory: 164 MB. Current time: 8/11/26, 11:40:43 AM BRT
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ah (cl): Synthesis Completed: addNotify
+// PAPropertyPanels.initPanels (gen_sdpram.xpm_memory_base_inst (xpm_memory_base__2)) elapsed time: 0.2s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,066 MB. GUI used memory: 165 MB. Current time: 8/11/26, 12:10:43 PM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,066 MB. GUI used memory: 164 MB. Current time: 8/11/26, 12:40:43 PM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,066 MB. GUI used memory: 164 MB. Current time: 8/11/26, 1:10:43 PM BRT
+// Elapsed time: 13695 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Completed"); // ah (cl)
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // h (cS, cl)
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,016 MB. GUI used memory: 139 MB. Current time: 8/11/26, 1:30:36 PM BRT
+// Engine heap size: 4,016 MB. GUI used memory: 139 MB. Current time: 8/11/26, 1:30:36 PM BRT
+// TclEventType: CURR_DESIGN_SET
+unMaximizeFrame(PAResourceOtoP.PAViews_UTILIZATION, "Utilization - utilization_1"); // az (aK, cl)
+// Tcl Message: close_design 
+// by (cl):  Closing : addNotify
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Closing"); // by (cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,800 MB. GUI used memory: 94 MB. Current time: 8/11/26, 2:00:38 PM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,799 MB. GUI used memory: 94 MB. Current time: 8/11/26, 2:30:38 PM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,798 MB. GUI used memory: 94 MB. Current time: 8/11/26, 3:00:38 PM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,798 MB. GUI used memory: 94 MB. Current time: 8/11/26, 3:30:39 PM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,798 MB. GUI used memory: 94 MB. Current time: 8/11/26, 4:00:39 PM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,798 MB. GUI used memory: 94 MB. Current time: 8/11/26, 4:30:39 PM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,798 MB. GUI used memory: 94 MB. Current time: 8/11/26, 5:00:39 PM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,798 MB. GUI used memory: 94 MB. Current time: 8/11/26, 5:30:39 PM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,798 MB. GUI used memory: 94 MB. Current time: 8/11/26, 6:00:39 PM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,798 MB. GUI used memory: 94 MB. Current time: 8/11/26, 6:30:39 PM BRT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,798 MB. GUI used memory: 94 MB. Current time: 8/11/26, 7:00:39 PM BRT

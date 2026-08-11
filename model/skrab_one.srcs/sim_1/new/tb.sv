@@ -50,7 +50,7 @@ module tb;
     logic  [31:0]counter_tmp; 
     logic  tx_valid_package;
 logic data_valid_rx1;
-logic [7:0] mem_tb_memory[264:0];
+logic [7:0] mem_tb_memory[8202:0];
 //buffer_in_ethernet unit_buffer_in_ethernet(
 //    .clk(clk),
 //    .a_sync_nrst(a_sync_nrst),
@@ -87,7 +87,7 @@ gbe_control gbe0(
     .clk(clk),//ok
     .ce(ce),//ok
     .decimation_factor(15),//ok
-    .tx_package_len(256),//ok
+    .tx_package_len(1024),//ok
     .tx_en00(1), //ok
     .tx_val(),
     .tx_eof(),
@@ -117,7 +117,7 @@ top_dut dut (
 );
 
 
-logic [9:0]counter;
+logic [32:0]counter;
 initial begin 
     $readmemh("/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/model/data_mem.mem",mem_tb_memory);
     clk = 0;
@@ -139,8 +139,8 @@ always_ff@(posedge clk,negedge a_sync_nrst)begin
     in_valid_rx <= 1'b1;
     if(in_valid_rx)begin
          in_data_rx_ethernet <= mem_tb_memory[counter];
-         if(counter < 264) counter <= counter + 1;
-         else counter <= 0;
+         if(counter < 8202) counter <= counter + 1;
+         else counter <= 5;
      
     end
 

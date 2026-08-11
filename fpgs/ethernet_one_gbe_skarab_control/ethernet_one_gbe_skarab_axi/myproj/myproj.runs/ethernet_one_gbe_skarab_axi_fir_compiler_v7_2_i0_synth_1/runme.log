@@ -140,23 +140,23 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
 INFO: [Device 21-403] Loading part xc7vx690tffg1927-2
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 784244 
+INFO: Helper process launched with PID 2159645 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1965.797 ; gain = 153.719 ; free physical = 1268 ; free virtual = 26582
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1966.988 ; gain = 152.688 ; free physical = 1731 ; free virtual = 28431
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0/synth/ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0.vhd:73]
 	Parameter C_XDEVICEFAMILY bound to: virtex7 - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
 	Parameter C_COMPONENT_NAME bound to: ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0 - type: string 
 	Parameter C_COEF_FILE bound to: ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0.mif - type: string 
-	Parameter C_COEF_FILE_LINES bound to: 8 - type: integer 
+	Parameter C_COEF_FILE_LINES bound to: 1 - type: integer 
 	Parameter C_FILTER_TYPE bound to: 0 - type: integer 
 	Parameter C_INTERP_RATE bound to: 1 - type: integer 
 	Parameter C_DECIM_RATE bound to: 1 - type: integer 
 	Parameter C_ZERO_PACKING_FACTOR bound to: 1 - type: integer 
 	Parameter C_SYMMETRY bound to: 1 - type: integer 
 	Parameter C_NUM_FILTS bound to: 1 - type: integer 
-	Parameter C_NUM_TAPS bound to: 16 - type: integer 
+	Parameter C_NUM_TAPS bound to: 2 - type: integer 
 	Parameter C_NUM_CHANNELS bound to: 1 - type: integer 
 	Parameter C_CHANNEL_PATTERN bound to: fixed - type: string 
 	Parameter C_ROUND_MODE bound to: 0 - type: integer 
@@ -164,7 +164,7 @@ INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_fir_compile
 	Parameter C_NUM_RELOAD_SLOTS bound to: 1 - type: integer 
 	Parameter C_COL_MODE bound to: 1 - type: integer 
 	Parameter C_COL_PIPE_LEN bound to: 4 - type: integer 
-	Parameter C_COL_CONFIG bound to: 8 - type: string 
+	Parameter C_COL_CONFIG bound to: 1 - type: string 
 	Parameter C_OPTIMIZATION bound to: 0 - type: integer 
 	Parameter C_DATA_PATH_WIDTHS bound to: 16 - type: string 
 	Parameter C_DATA_IP_PATH_WIDTHS bound to: 16 - type: string 
@@ -177,14 +177,14 @@ INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_fir_compile
 	Parameter C_PX_PATH_SRC bound to: 0 - type: string 
 	Parameter C_DATA_PATH_SIGN bound to: 0 - type: string 
 	Parameter C_COEF_PATH_SIGN bound to: 1 - type: string 
-	Parameter C_ACCUM_PATH_WIDTHS bound to: 20 - type: string 
-	Parameter C_OUTPUT_WIDTH bound to: 20 - type: integer 
-	Parameter C_OUTPUT_PATH_WIDTHS bound to: 20 - type: string 
-	Parameter C_ACCUM_OP_PATH_WIDTHS bound to: 20 - type: string 
+	Parameter C_ACCUM_PATH_WIDTHS bound to: 17 - type: string 
+	Parameter C_OUTPUT_WIDTH bound to: 17 - type: integer 
+	Parameter C_OUTPUT_PATH_WIDTHS bound to: 17 - type: string 
+	Parameter C_ACCUM_OP_PATH_WIDTHS bound to: 17 - type: string 
 	Parameter C_EXT_MULT_CNFG bound to: none - type: string 
 	Parameter C_DATA_PATH_PSAMP_SRC bound to: 0 - type: string 
 	Parameter C_OP_PATH_PSAMP_SRC bound to: 0 - type: string 
-	Parameter C_NUM_MADDS bound to: 8 - type: integer 
+	Parameter C_NUM_MADDS bound to: 1 - type: integer 
 	Parameter C_OPT_MADDS bound to: none - type: string 
 	Parameter C_OVERSAMPLING_RATE bound to: 1 - type: integer 
 	Parameter C_INPUT_RATE bound to: 1 - type: integer 
@@ -198,7 +198,7 @@ INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_fir_compile
 	Parameter C_DATA_MEM_PACKING bound to: 0 - type: integer 
 	Parameter C_COEF_MEM_PACKING bound to: 0 - type: integer 
 	Parameter C_FILTS_PACKED bound to: 0 - type: integer 
-	Parameter C_LATENCY bound to: 14 - type: integer 
+	Parameter C_LATENCY bound to: 7 - type: integer 
 	Parameter C_HAS_ARESETn bound to: 0 - type: integer 
 	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
 	Parameter C_DATA_HAS_TLAST bound to: 2 - type: integer 
@@ -219,109 +219,109 @@ INFO: [Synth 8-3491] module 'fir_compiler_v7_2_12' declared at '/home/valmyrsilv
 WARNING: [Synth 8-5858] RAM p_casc_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
 WARNING: [Synth 8-5858] RAM p_path_out_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
 INFO: [Synth 8-256] done synthesizing module 'ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0' (11#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0/synth/ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0.vhd:73]
-WARNING: [Synth 8-3331] design delay__parameterized11 has unconnected port SCLR
-WARNING: [Synth 8-3331] design delay__parameterized11 has unconnected port SCLR_ALT
-WARNING: [Synth 8-3331] design buff__parameterized0 has unconnected port RE
-WARNING: [Synth 8-3331] design buff__parameterized0 has unconnected port SCLR
 WARNING: [Synth 8-3331] design delay__parameterized2 has unconnected port SCLR_ALT
 WARNING: [Synth 8-3331] design buff has unconnected port RE
 WARNING: [Synth 8-3331] design buff has unconnected port SCLR
-WARNING: [Synth 8-3331] design delay__parameterized14 has unconnected port WE
-WARNING: [Synth 8-3331] design delay__parameterized14 has unconnected port CE
-WARNING: [Synth 8-3331] design delay__parameterized14 has unconnected port SCLR
-WARNING: [Synth 8-3331] design delay__parameterized14 has unconnected port SCLR_ALT
-WARNING: [Synth 8-3331] design delay__parameterized14 has unconnected port CLK
-WARNING: [Synth 8-3331] design delay__parameterized13 has unconnected port WE
-WARNING: [Synth 8-3331] design delay__parameterized13 has unconnected port CE
-WARNING: [Synth 8-3331] design delay__parameterized13 has unconnected port SCLR
-WARNING: [Synth 8-3331] design delay__parameterized13 has unconnected port SCLR_ALT
-WARNING: [Synth 8-3331] design delay__parameterized13 has unconnected port CLK
+WARNING: [Synth 8-3331] design delay__parameterized5 has unconnected port WE
+WARNING: [Synth 8-3331] design delay__parameterized5 has unconnected port CE
+WARNING: [Synth 8-3331] design delay__parameterized5 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized5 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized5 has unconnected port CLK
+WARNING: [Synth 8-3331] design delay__parameterized7 has unconnected port WE
+WARNING: [Synth 8-3331] design delay__parameterized7 has unconnected port CE
+WARNING: [Synth 8-3331] design delay__parameterized7 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized7 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized7 has unconnected port CLK
 WARNING: [Synth 8-3331] design calc has unconnected port PRE_ADDSUB
 WARNING: [Synth 8-3331] design calc has unconnected port CED
-WARNING: [Synth 8-3331] design delay__parameterized12 has unconnected port WE
-WARNING: [Synth 8-3331] design delay__parameterized12 has unconnected port CE
-WARNING: [Synth 8-3331] design delay__parameterized12 has unconnected port SCLR
-WARNING: [Synth 8-3331] design delay__parameterized12 has unconnected port SCLR_ALT
-WARNING: [Synth 8-3331] design delay__parameterized12 has unconnected port CLK
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[fab][57]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[fab][56]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[fab][55]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[fab][54]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[fab][53]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[fab][52]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[fab][51]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[fab][50]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[fab][49]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[fab][48]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[casc][62]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[casc][61]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[casc][60]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[casc][59]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[casc][58]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[casc][57]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[casc][56]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[casc][55]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[casc][54]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[casc][53]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[casc][52]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[casc][51]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[casc][50]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[casc][49]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[casc][48]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port P_EN
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port OPCODE[9]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port OPCODE[8]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port OPCODE[7]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port OPCODE[6]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port OPCODE[5]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port OPCODE[4]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port OPCODE[3]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port OPCODE[2]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port OPCODE[1]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port OPCODE[0]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[19]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[18]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[17]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[16]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[15]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[14]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[13]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[12]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[11]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[10]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[9]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[8]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[7]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[6]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[5]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[4]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[3]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[2]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[1]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[0]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[fab][57]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[fab][56]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[fab][55]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[fab][54]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[fab][53]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[fab][52]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[fab][51]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[fab][50]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[fab][49]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[fab][48]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][62]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][61]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][60]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][59]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][58]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][57]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][56]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][55]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][54]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][53]
+WARNING: [Synth 8-3331] design delay__parameterized6 has unconnected port WE
+WARNING: [Synth 8-3331] design delay__parameterized6 has unconnected port CE
+WARNING: [Synth 8-3331] design delay__parameterized6 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized6 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized6 has unconnected port CLK
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[fab][57]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[fab][56]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[fab][55]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[fab][54]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[fab][53]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[fab][52]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[fab][51]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[fab][50]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[fab][49]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[fab][48]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[casc][62]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[casc][61]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[casc][60]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[casc][59]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[casc][58]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[casc][57]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[casc][56]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[casc][55]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[casc][54]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[casc][53]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[casc][52]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[casc][51]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[casc][50]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[casc][49]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port POUT[casc][48]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port P_EN
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port OPCODE[9]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port OPCODE[8]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port OPCODE[7]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port OPCODE[6]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port OPCODE[5]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port OPCODE[4]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port OPCODE[3]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port OPCODE[2]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port OPCODE[1]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port OPCODE[0]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port CIN[16]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port CIN[15]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port CIN[14]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port CIN[13]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port CIN[12]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port CIN[11]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port CIN[10]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port CIN[9]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port CIN[8]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port CIN[7]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port CIN[6]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port CIN[5]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port CIN[4]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port CIN[3]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port CIN[2]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port CIN[1]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port CIN[0]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[fab][57]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[fab][56]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[fab][55]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[fab][54]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[fab][53]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[fab][52]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[fab][51]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[fab][50]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[fab][49]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[fab][48]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[casc][62]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[casc][61]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[casc][60]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[casc][59]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[casc][58]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[casc][57]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[casc][56]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[casc][55]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[casc][54]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[casc][53]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[casc][52]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[casc][51]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[casc][50]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[casc][49]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[casc][48]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[casc][47]
+WARNING: [Synth 8-3331] design addsub_mult_add has unconnected port PIN[casc][46]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2068.516 ; gain = 256.438 ; free physical = 1354 ; free virtual = 26669
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2063.707 ; gain = 249.406 ; free physical = 2027 ; free virtual = 28604
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -334,12 +334,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2068.516 ; gain = 256.438 ; free physical = 1357 ; free virtual = 26675
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2063.707 ; gain = 249.406 ; free physical = 2033 ; free virtual = 28610
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2068.516 ; gain = 256.438 ; free physical = 1357 ; free virtual = 26675
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2063.707 ; gain = 249.406 ; free physical = 2032 ; free virtual = 28609
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -353,30 +353,30 @@ Parsing XDC File [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ether
 Finished Parsing XDC File [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2206.203 ; gain = 0.000 ; free physical = 964 ; free virtual = 26296
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2160.426 ; gain = 0.000 ; free physical = 1848 ; free virtual = 28427
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2206.203 ; gain = 0.000 ; free physical = 982 ; free virtual = 26314
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2160.426 ; gain = 0.000 ; free physical = 1847 ; free virtual = 28427
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2206.203 ; gain = 394.125 ; free physical = 1048 ; free virtual = 26336
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2160.426 ; gain = 346.125 ; free physical = 1862 ; free virtual = 28370
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7vx690tffg1927-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2206.203 ; gain = 394.125 ; free physical = 1048 ; free virtual = 26336
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2160.426 ; gain = 346.125 ; free physical = 1861 ; free virtual = 28370
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2206.203 ; gain = 394.125 ; free physical = 1041 ; free virtual = 26330
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2160.426 ; gain = 346.125 ; free physical = 1860 ; free virtual = 28369
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2206.203 ; gain = 394.125 ; free physical = 909 ; free virtual = 26179
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2160.426 ; gain = 346.125 ; free physical = 1820 ; free virtual = 28310
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -409,12 +409,15 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tdata_int_reg[16]' (FDRE) to 'U0/i_synth/g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tdata_int_reg[17]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tdata_int_reg[17]' (FDRE) to 'U0/i_synth/g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tdata_int_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tdata_int_reg[18]' (FDRE) to 'U0/i_synth/g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tdata_int_reg[19]'
 INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tdata_int_reg[19]' (FDRE) to 'U0/i_synth/g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tdata_int_reg[20]'
 INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tdata_int_reg[20]' (FDRE) to 'U0/i_synth/g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tdata_int_reg[21]'
 INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tdata_int_reg[21]' (FDRE) to 'U0/i_synth/g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tdata_int_reg[22]'
 INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tdata_int_reg[22]' (FDRE) to 'U0/i_synth/g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tdata_int_reg[23]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 2206.203 ; gain = 394.125 ; free physical = 1884 ; free virtual = 27153
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2160.426 ; gain = 346.125 ; free physical = 1844 ; free virtual = 28260
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -426,13 +429,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2206.203 ; gain = 394.125 ; free physical = 6199 ; free virtual = 31454
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2160.426 ; gain = 346.125 ; free physical = 4019 ; free virtual = 30149
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2206.203 ; gain = 394.125 ; free physical = 6191 ; free virtual = 31446
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2160.426 ; gain = 346.125 ; free physical = 4049 ; free virtual = 30179
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -444,7 +447,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2206.203 ; gain = 394.125 ; free physical = 6198 ; free virtual = 31453
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2160.426 ; gain = 346.125 ; free physical = 4180 ; free virtual = 30310
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -468,7 +471,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2206.203 ; gain = 394.125 ; free physical = 6201 ; free virtual = 31456
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2168.277 ; gain = 353.977 ; free physical = 6257 ; free virtual = 32385
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -481,7 +484,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2206.203 ; gain = 394.125 ; free physical = 6201 ; free virtual = 31456
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2168.277 ; gain = 353.977 ; free physical = 6261 ; free virtual = 32389
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -493,25 +496,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2206.203 ; gain = 394.125 ; free physical = 6202 ; free virtual = 31457
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2168.277 ; gain = 353.977 ; free physical = 6269 ; free virtual = 32397
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2206.203 ; gain = 394.125 ; free physical = 6202 ; free virtual = 31457
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2168.277 ; gain = 353.977 ; free physical = 6268 ; free virtual = 32396
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2206.203 ; gain = 394.125 ; free physical = 6202 ; free virtual = 31457
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2168.277 ; gain = 353.977 ; free physical = 6268 ; free virtual = 32396
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2206.203 ; gain = 394.125 ; free physical = 6202 ; free virtual = 31457
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2168.277 ; gain = 353.977 ; free physical = 6268 ; free virtual = 32396
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -527,41 +530,41 @@ Report Cell Usage:
 +------+--------+------+
 |      |Cell    |Count |
 +------+--------+------+
-|1     |DSP48E1 |     8|
-|2     |LUT2    |    10|
+|1     |DSP48E1 |     1|
+|2     |LUT2    |     4|
 |3     |LUT5    |     1|
-|4     |SRL16E  |   227|
-|5     |FDRE    |   401|
+|4     |SRL16E  |    19|
+|5     |FDRE    |    56|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2206.203 ; gain = 394.125 ; free physical = 6202 ; free virtual = 31457
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2168.277 ; gain = 353.977 ; free physical = 6267 ; free virtual = 32395
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 169 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2206.203 ; gain = 256.438 ; free physical = 6263 ; free virtual = 31518
-Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2206.203 ; gain = 394.125 ; free physical = 6263 ; free virtual = 31518
+Synthesis finished with 0 errors, 0 critical warnings and 29 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2168.277 ; gain = 257.258 ; free physical = 6315 ; free virtual = 32444
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2168.285 ; gain = 353.977 ; free physical = 6315 ; free virtual = 32444
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2228.016 ; gain = 0.000 ; free physical = 6188 ; free virtual = 31442
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2215.168 ; gain = 0.000 ; free physical = 6283 ; free virtual = 32411
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-24 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+27 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 2228.016 ; gain = 800.691 ; free physical = 6285 ; free virtual = 31538
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2228.016 ; gain = 0.000 ; free physical = 6285 ; free virtual = 31538
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2215.168 ; gain = 784.527 ; free physical = 6372 ; free virtual = 32500
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2215.168 ; gain = 0.000 ; free physical = 6372 ; free virtual = 32500
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0_synth_1/ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0, cache-ID = 130ed53e01d586ef
-INFO: [Coretcl 2-1174] Renamed 60 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2252.027 ; gain = 0.000 ; free physical = 6282 ; free virtual = 31540
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0, cache-ID = f9d6a5ad8ef338b2
+INFO: [Coretcl 2-1174] Renamed 11 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2242.148 ; gain = 0.000 ; free physical = 6365 ; free virtual = 32494
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0_synth_1/ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0_utilization_synth.rpt -pb ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Aug 10 17:59:40 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 11 11:52:20 2026...

@@ -106,7 +106,7 @@ lappend params_list CONFIG.Blank_Output {false}
 lappend params_list CONFIG.Channel_Sequence {Basic}
 lappend params_list CONFIG.Clock_Frequency {300.0}
 lappend params_list CONFIG.CoefficientSource {Vector}
-lappend params_list CONFIG.CoefficientVector {binary:000000000000F03F000000000000F03F000000000000F03F000000000000F03F000000000000F03F000000000000F03F000000000000F03F000000000000F03F000000000000F03F000000000000F03F000000000000F03F000000000000F03F000000000000F03F000000000000F03F000000000000F03F000000000000F03F}
+lappend params_list CONFIG.CoefficientVector {binary:000000000000F03F000000000000F03F}
 lappend params_list CONFIG.Coefficient_Buffer_Type {Automatic}
 lappend params_list CONFIG.Coefficient_File {no_coe_file_loaded}
 lappend params_list CONFIG.Coefficient_Fractional_Bits {0}
@@ -115,7 +115,7 @@ lappend params_list CONFIG.Coefficient_Sets {1}
 lappend params_list CONFIG.Coefficient_Sign {Unsigned}
 lappend params_list CONFIG.Coefficient_Structure {Inferred}
 lappend params_list CONFIG.Coefficient_Width {16}
-lappend params_list CONFIG.ColumnConfig {8}
+lappend params_list CONFIG.ColumnConfig {1}
 lappend params_list CONFIG.DATA_Has_TLAST {Packet_Framing}
 lappend params_list CONFIG.DATA_TUSER_Width {1}
 lappend params_list CONFIG.Data_Buffer_Type {Automatic}
@@ -148,7 +148,7 @@ lappend params_list CONFIG.Optimization_List {None}
 lappend params_list CONFIG.Optimization_Selection {None}
 lappend params_list CONFIG.Output_Buffer_Type {Automatic}
 lappend params_list CONFIG.Output_Rounding_Mode {Full_Precision}
-lappend params_list CONFIG.Output_Width {20}
+lappend params_list CONFIG.Output_Width {17}
 lappend params_list CONFIG.Passband_Max {0.50000000}
 lappend params_list CONFIG.Passband_Min {0.00000000}
 lappend params_list CONFIG.Pattern_List {P4-0,P4-1,P4-2,P4-3,P4-4}

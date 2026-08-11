@@ -10,10 +10,10 @@ entity ethernet_one_gbe_skarab_axi_addr_data_fifo is
   );
 end ethernet_one_gbe_skarab_axi_addr_data_fifo;
 architecture structural of ethernet_one_gbe_skarab_axi_addr_data_fifo is 
-  signal reint1_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal ethernet_one_gbe_skarab_axi_addr_data_fifo_user_data_out_net : std_logic_vector( 32-1 downto 0 );
   signal io_delay_q_net : std_logic_vector( 32-1 downto 0 );
   signal slice_reg_y_net : std_logic_vector( 32-1 downto 0 );
+  signal reint1_output_port_net : std_logic_vector( 32-1 downto 0 );
 begin
   in_reg <= reint1_output_port_net;
   ethernet_one_gbe_skarab_axi_addr_data_fifo_user_data_out_net <= ethernet_one_gbe_skarab_axi_addr_data_fifo_user_data_out;
@@ -267,13 +267,13 @@ entity ethernet_one_gbe_skarab_axi_buscreate_x2 is
   );
 end ethernet_one_gbe_skarab_axi_buscreate_x2;
 architecture structural of ethernet_one_gbe_skarab_axi_buscreate_x2 is 
+  signal reinterpret2_output_port_net : std_logic_vector( 32-1 downto 0 );
+  signal reinterpret3_output_port_net : std_logic_vector( 64-1 downto 0 );
   signal concatenate_y_net : std_logic_vector( 128-1 downto 0 );
   signal assert_ctr0_dout_net : std_logic_vector( 32-1 downto 0 );
   signal assert_ramp0_dout_net : std_logic_vector( 32-1 downto 0 );
   signal assert_walking0_dout_net : std_logic_vector( 64-1 downto 0 );
   signal reinterpret1_output_port_net : std_logic_vector( 32-1 downto 0 );
-  signal reinterpret2_output_port_net : std_logic_vector( 32-1 downto 0 );
-  signal reinterpret3_output_port_net : std_logic_vector( 64-1 downto 0 );
 begin
   bus_out <= concatenate_y_net;
   assert_ctr0_dout_net <= in1;
@@ -328,12 +328,12 @@ entity ethernet_one_gbe_skarab_axi_edge_detect_x4 is
   );
 end ethernet_one_gbe_skarab_axi_edge_detect_x4;
 architecture structural of ethernet_one_gbe_skarab_axi_edge_detect_x4 is 
-  signal edge_op_y_net : std_logic_vector( 1-1 downto 0 );
-  signal ce_net : std_logic;
   signal slice3_y_net : std_logic_vector( 1-1 downto 0 );
   signal clk_net : std_logic;
   signal delay_q_net : std_logic_vector( 1-1 downto 0 );
   signal inverter_op_net : std_logic_vector( 1-1 downto 0 );
+  signal edge_op_y_net : std_logic_vector( 1-1 downto 0 );
+  signal ce_net : std_logic;
 begin
   out_x0 <= edge_op_y_net;
   slice3_y_net <= in_x0;
@@ -646,13 +646,13 @@ entity ethernet_one_gbe_skarab_axi_dram_munge_x1 is
   );
 end ethernet_one_gbe_skarab_axi_dram_munge_x1;
 architecture structural of ethernet_one_gbe_skarab_axi_dram_munge_x1 is 
-  signal cast_dout_net : std_logic_vector( 128-1 downto 0 );
-  signal mux1_y_net_x0 : std_logic_vector( 1-1 downto 0 );
-  signal edge_op_y_net : std_logic_vector( 1-1 downto 0 );
-  signal clk_net : std_logic;
+  signal input_count_op_net : std_logic_vector( 2-1 downto 0 );
+  signal con0_op_net : std_logic_vector( 2-1 downto 0 );
+  signal con1_op_net : std_logic_vector( 2-1 downto 0 );
+  signal con2_op_net : std_logic_vector( 2-1 downto 0 );
+  signal con3_op_net : std_logic_vector( 2-1 downto 0 );
+  signal dram_op_net : std_logic_vector( 1-1 downto 0 );
   signal ce_net : std_logic;
-  signal data_choice_y_net : std_logic_vector( 128-1 downto 0 );
-  signal we_choice_y_net : std_logic_vector( 1-1 downto 0 );
   signal concat_y_net : std_logic_vector( 272-1 downto 0 );
   signal constant_op_net : std_logic_vector( 8-1 downto 0 );
   signal register_q_net : std_logic_vector( 128-1 downto 0 );
@@ -670,12 +670,12 @@ architecture structural of ethernet_one_gbe_skarab_axi_dram_munge_x1 is
   signal relational_op_net : std_logic_vector( 1-1 downto 0 );
   signal relational1_op_net : std_logic_vector( 1-1 downto 0 );
   signal relational2_op_net : std_logic_vector( 1-1 downto 0 );
-  signal input_count_op_net : std_logic_vector( 2-1 downto 0 );
-  signal con0_op_net : std_logic_vector( 2-1 downto 0 );
-  signal con1_op_net : std_logic_vector( 2-1 downto 0 );
-  signal con2_op_net : std_logic_vector( 2-1 downto 0 );
-  signal con3_op_net : std_logic_vector( 2-1 downto 0 );
-  signal dram_op_net : std_logic_vector( 1-1 downto 0 );
+  signal data_choice_y_net : std_logic_vector( 128-1 downto 0 );
+  signal we_choice_y_net : std_logic_vector( 1-1 downto 0 );
+  signal cast_dout_net : std_logic_vector( 128-1 downto 0 );
+  signal mux1_y_net_x0 : std_logic_vector( 1-1 downto 0 );
+  signal edge_op_y_net : std_logic_vector( 1-1 downto 0 );
+  signal clk_net : std_logic;
 begin
   dout <= data_choice_y_net;
   we_o <= we_choice_y_net;
@@ -952,12 +952,12 @@ entity ethernet_one_gbe_skarab_axi_edge_detect_x3 is
   );
 end ethernet_one_gbe_skarab_axi_edge_detect_x3;
 architecture structural of ethernet_one_gbe_skarab_axi_edge_detect_x3 is 
-  signal edge_op_y_net : std_logic_vector( 1-1 downto 0 );
   signal delay1_q_net : std_logic_vector( 1-1 downto 0 );
   signal clk_net : std_logic;
   signal ce_net : std_logic;
   signal delay_q_net : std_logic_vector( 1-1 downto 0 );
   signal inverter_op_net : std_logic_vector( 1-1 downto 0 );
+  signal edge_op_y_net : std_logic_vector( 1-1 downto 0 );
 begin
   out_x0 <= edge_op_y_net;
   delay1_q_net <= in_x0;
@@ -1017,9 +1017,6 @@ entity ethernet_one_gbe_skarab_axi_basic_ctrl_x1 is
   );
 end ethernet_one_gbe_skarab_axi_basic_ctrl_x1;
 architecture structural of ethernet_one_gbe_skarab_axi_basic_ctrl_x1 is 
-  signal enable_y_net : std_logic_vector( 1-1 downto 0 );
-  signal delay2_q_net : std_logic_vector( 1-1 downto 0 );
-  signal trig_src_y_net : std_logic_vector( 1-1 downto 0 );
   signal data_choice_y_net : std_logic_vector( 128-1 downto 0 );
   signal we_choice_y_net : std_logic_vector( 1-1 downto 0 );
   signal register6_q_net : std_logic_vector( 1-1 downto 0 );
@@ -1039,6 +1036,9 @@ architecture structural of ethernet_one_gbe_skarab_axi_basic_ctrl_x1 is
   signal delay3_q_net : std_logic_vector( 1-1 downto 0 );
   signal valid_src_y_net : std_logic_vector( 1-1 downto 0 );
   signal inverter_op_net : std_logic_vector( 1-1 downto 0 );
+  signal enable_y_net : std_logic_vector( 1-1 downto 0 );
+  signal delay2_q_net : std_logic_vector( 1-1 downto 0 );
+  signal trig_src_y_net : std_logic_vector( 1-1 downto 0 );
   signal logical_y_net : std_logic_vector( 1-1 downto 0 );
   signal mux2_y_net : std_logic_vector( 1-1 downto 0 );
   signal register1_q_net : std_logic_vector( 1-1 downto 0 );
@@ -1248,17 +1248,17 @@ entity ethernet_one_gbe_skarab_axi_calc_add_x1 is
   );
 end ethernet_one_gbe_skarab_axi_calc_add_x1;
 architecture structural of ethernet_one_gbe_skarab_axi_calc_add_x1 is 
-  signal mux_y_net : std_logic_vector( 13-1 downto 0 );
-  signal add_del_q_net : std_logic_vector( 13-1 downto 0 );
-  signal clk_net : std_logic;
-  signal ce_net : std_logic;
-  signal add_sub_s_net : std_logic_vector( 1-1 downto 0 );
+  signal manipulate_op_net : std_logic_vector( 1-1 downto 0 );
   signal const_op_net : std_logic_vector( 1-1 downto 0 );
   signal lsw_y_net : std_logic_vector( 1-1 downto 0 );
   signal concat_y_net : std_logic_vector( 13-1 downto 0 );
   signal msw_y_net : std_logic_vector( 12-1 downto 0 );
   signal convert_addr_dout_net : std_logic_vector( 13-1 downto 0 );
-  signal manipulate_op_net : std_logic_vector( 1-1 downto 0 );
+  signal mux_y_net : std_logic_vector( 13-1 downto 0 );
+  signal add_del_q_net : std_logic_vector( 13-1 downto 0 );
+  signal clk_net : std_logic;
+  signal ce_net : std_logic;
+  signal add_sub_s_net : std_logic_vector( 1-1 downto 0 );
 begin
   out_x0 <= mux_y_net;
   add_del_q_net <= in_x0;
@@ -1365,15 +1365,15 @@ entity ethernet_one_gbe_skarab_axi_join_x0 is
   );
 end ethernet_one_gbe_skarab_axi_join_x0;
 architecture structural of ethernet_one_gbe_skarab_axi_join_x0 is 
+  signal reinterpret1_output_port_net_x0 : std_logic_vector( 32-1 downto 0 );
+  signal reinterpret2_output_port_net_x0 : std_logic_vector( 32-1 downto 0 );
+  signal reinterpret3_output_port_net_x0 : std_logic_vector( 32-1 downto 0 );
+  signal reinterpret4_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal concatenate_y_net : std_logic_vector( 128-1 downto 0 );
   signal reinterpret1_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret2_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret3_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret4_output_port_net_x0 : std_logic_vector( 32-1 downto 0 );
-  signal reinterpret1_output_port_net_x0 : std_logic_vector( 32-1 downto 0 );
-  signal reinterpret2_output_port_net_x0 : std_logic_vector( 32-1 downto 0 );
-  signal reinterpret3_output_port_net_x0 : std_logic_vector( 32-1 downto 0 );
-  signal reinterpret4_output_port_net : std_logic_vector( 32-1 downto 0 );
 begin
   bus_out <= concatenate_y_net;
   reinterpret1_output_port_net <= in1;
@@ -2006,6 +2006,13 @@ entity ethernet_one_gbe_skarab_axi_ss_x2 is
   );
 end ethernet_one_gbe_skarab_axi_ss_x2;
 architecture structural of ethernet_one_gbe_skarab_axi_ss_x2 is 
+  signal circ_or_y_net : std_logic_vector( 1-1 downto 0 );
+  signal reinterpret2_output_port_net : std_logic_vector( 2-1 downto 0 );
+  signal slice3_y_net : std_logic_vector( 1-1 downto 0 );
+  signal slice1_y_net : std_logic_vector( 1-1 downto 0 );
+  signal arm_op_net : std_logic_vector( 1-1 downto 0 );
+  signal ri_output_port_net : std_logic_vector( 128-1 downto 0 );
+  signal circ_op_net : std_logic_vector( 1-1 downto 0 );
   signal arm_or_y_net : std_logic_vector( 1-1 downto 0 );
   signal concatenate_y_net : std_logic_vector( 128-1 downto 0 );
   signal ethernet_one_gbe_skarab_axi_tx_one_gbe_app_rx_dvld_net : std_logic_vector( 1-1 downto 0 );
@@ -2033,13 +2040,6 @@ architecture structural of ethernet_one_gbe_skarab_axi_ss_x2 is
   signal we_del_q_net : std_logic_vector( 1-1 downto 0 );
   signal reint1_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret4_output_port_net : std_logic_vector( 28-1 downto 0 );
-  signal circ_or_y_net : std_logic_vector( 1-1 downto 0 );
-  signal reinterpret2_output_port_net : std_logic_vector( 2-1 downto 0 );
-  signal slice3_y_net : std_logic_vector( 1-1 downto 0 );
-  signal slice1_y_net : std_logic_vector( 1-1 downto 0 );
-  signal arm_op_net : std_logic_vector( 1-1 downto 0 );
-  signal ri_output_port_net : std_logic_vector( 128-1 downto 0 );
-  signal circ_op_net : std_logic_vector( 1-1 downto 0 );
 begin
   arm_out <= arm_or_y_net;
   concatenate_y_net <= din;
@@ -2483,6 +2483,7 @@ architecture structural of ethernet_one_gbe_skarab_axi_add_gen_x3 is
   signal inverter1_op_net : std_logic_vector( 1-1 downto 0 );
   signal logical1_y_net : std_logic_vector( 1-1 downto 0 );
   signal logical4_y_net : std_logic_vector( 1-1 downto 0 );
+  signal add_gen_op_net : std_logic_vector( 18-1 downto 0 );
   signal slice2_y_net : std_logic_vector( 13-1 downto 0 );
   signal delay6_q_net : std_logic_vector( 128-1 downto 0 );
   signal logical6_y_net : std_logic_vector( 1-1 downto 0 );
@@ -2503,7 +2504,6 @@ architecture structural of ethernet_one_gbe_skarab_axi_add_gen_x3 is
   signal register5_q_net : std_logic_vector( 1-1 downto 0 );
   signal delay_q_net : std_logic_vector( 1-1 downto 0 );
   signal delay4_q_net : std_logic_vector( 1-1 downto 0 );
-  signal add_gen_op_net : std_logic_vector( 18-1 downto 0 );
 begin
   add <= slice2_y_net;
   dout <= delay6_q_net;
@@ -2731,8 +2731,7 @@ entity ethernet_one_gbe_skarab_axi_dram_munge_x3 is
   );
 end ethernet_one_gbe_skarab_axi_dram_munge_x3;
 architecture structural of ethernet_one_gbe_skarab_axi_dram_munge_x3 is 
-  signal data_choice_y_net : std_logic_vector( 128-1 downto 0 );
-  signal we_choice_y_net : std_logic_vector( 1-1 downto 0 );
+  signal dram_op_net : std_logic_vector( 1-1 downto 0 );
   signal cast_dout_net : std_logic_vector( 128-1 downto 0 );
   signal mux1_y_net_x0 : std_logic_vector( 1-1 downto 0 );
   signal edge_op_y_net : std_logic_vector( 1-1 downto 0 );
@@ -2760,7 +2759,8 @@ architecture structural of ethernet_one_gbe_skarab_axi_dram_munge_x3 is
   signal con1_op_net : std_logic_vector( 2-1 downto 0 );
   signal con2_op_net : std_logic_vector( 2-1 downto 0 );
   signal con3_op_net : std_logic_vector( 2-1 downto 0 );
-  signal dram_op_net : std_logic_vector( 1-1 downto 0 );
+  signal data_choice_y_net : std_logic_vector( 128-1 downto 0 );
+  signal we_choice_y_net : std_logic_vector( 1-1 downto 0 );
 begin
   dout <= data_choice_y_net;
   we_o <= we_choice_y_net;
@@ -3524,6 +3524,7 @@ entity ethernet_one_gbe_skarab_axi_split_x2 is
   );
 end ethernet_one_gbe_skarab_axi_split_x2;
 architecture structural of ethernet_one_gbe_skarab_axi_split_x2 is 
+  signal slice4_y_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret4_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret3_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal reinterpret2_output_port_net : std_logic_vector( 32-1 downto 0 );
@@ -3532,7 +3533,6 @@ architecture structural of ethernet_one_gbe_skarab_axi_split_x2 is
   signal slice1_y_net : std_logic_vector( 32-1 downto 0 );
   signal slice2_y_net : std_logic_vector( 32-1 downto 0 );
   signal slice3_y_net : std_logic_vector( 32-1 downto 0 );
-  signal slice4_y_net : std_logic_vector( 32-1 downto 0 );
 begin
   msb_out4 <= reinterpret4_output_port_net;
   out3 <= reinterpret3_output_port_net;
@@ -4325,8 +4325,6 @@ entity ethernet_one_gbe_skarab_axi_d4 is
   );
 end ethernet_one_gbe_skarab_axi_d4;
 architecture structural of ethernet_one_gbe_skarab_axi_d4 is 
-  signal arm_or_y_net : std_logic_vector( 1-1 downto 0 );
-  signal constant36_op_net : std_logic_vector( 32-1 downto 0 );
   signal constant37_op_net : std_logic_vector( 32-1 downto 0 );
   signal constant12_op_net : std_logic_vector( 48-1 downto 0 );
   signal constant38_op_net : std_logic_vector( 16-1 downto 0 );
@@ -4346,6 +4344,8 @@ architecture structural of ethernet_one_gbe_skarab_axi_d4 is
   signal assert_ramp1_dout_net : std_logic_vector( 32-1 downto 0 );
   signal assert_walking1_dout_net : std_logic_vector( 48-1 downto 0 );
   signal assert_marker_dout_net : std_logic_vector( 16-1 downto 0 );
+  signal arm_or_y_net : std_logic_vector( 1-1 downto 0 );
+  signal constant36_op_net : std_logic_vector( 32-1 downto 0 );
 begin
   arm_out <= arm_or_y_net;
   constant36_op_net <= in_ctr1;
@@ -4629,6 +4629,10 @@ entity ethernet_one_gbe_skarab_axi_add_gen_x2 is
   );
 end ethernet_one_gbe_skarab_axi_add_gen_x2;
 architecture structural of ethernet_one_gbe_skarab_axi_add_gen_x2 is 
+  signal inverter1_op_net : std_logic_vector( 1-1 downto 0 );
+  signal logical1_y_net : std_logic_vector( 1-1 downto 0 );
+  signal logical4_y_net : std_logic_vector( 1-1 downto 0 );
+  signal add_gen_op_net : std_logic_vector( 18-1 downto 0 );
   signal slice2_y_net : std_logic_vector( 13-1 downto 0 );
   signal delay6_q_net : std_logic_vector( 128-1 downto 0 );
   signal logical6_y_net : std_logic_vector( 1-1 downto 0 );
@@ -4651,10 +4655,6 @@ architecture structural of ethernet_one_gbe_skarab_axi_add_gen_x2 is
   signal delay4_q_net : std_logic_vector( 1-1 downto 0 );
   signal slice1_y_net : std_logic_vector( 17-1 downto 0 );
   signal delay3_q_net : std_logic_vector( 1-1 downto 0 );
-  signal inverter1_op_net : std_logic_vector( 1-1 downto 0 );
-  signal logical1_y_net : std_logic_vector( 1-1 downto 0 );
-  signal logical4_y_net : std_logic_vector( 1-1 downto 0 );
-  signal add_gen_op_net : std_logic_vector( 18-1 downto 0 );
 begin
   add <= slice2_y_net;
   dout <= delay6_q_net;
@@ -4882,10 +4882,6 @@ entity ethernet_one_gbe_skarab_axi_dram_munge_x2 is
   );
 end ethernet_one_gbe_skarab_axi_dram_munge_x2;
 architecture structural of ethernet_one_gbe_skarab_axi_dram_munge_x2 is 
-  signal con1_op_net : std_logic_vector( 2-1 downto 0 );
-  signal con2_op_net : std_logic_vector( 2-1 downto 0 );
-  signal con3_op_net : std_logic_vector( 2-1 downto 0 );
-  signal dram_op_net : std_logic_vector( 1-1 downto 0 );
   signal data_choice_y_net : std_logic_vector( 128-1 downto 0 );
   signal we_choice_y_net : std_logic_vector( 1-1 downto 0 );
   signal cast_dout_net : std_logic_vector( 128-1 downto 0 );
@@ -4893,6 +4889,8 @@ architecture structural of ethernet_one_gbe_skarab_axi_dram_munge_x2 is
   signal edge_op_y_net : std_logic_vector( 1-1 downto 0 );
   signal clk_net : std_logic;
   signal ce_net : std_logic;
+  signal con1_op_net : std_logic_vector( 2-1 downto 0 );
+  signal con2_op_net : std_logic_vector( 2-1 downto 0 );
   signal concat_y_net : std_logic_vector( 272-1 downto 0 );
   signal constant_op_net : std_logic_vector( 8-1 downto 0 );
   signal register_q_net : std_logic_vector( 128-1 downto 0 );
@@ -4912,6 +4910,8 @@ architecture structural of ethernet_one_gbe_skarab_axi_dram_munge_x2 is
   signal relational2_op_net : std_logic_vector( 1-1 downto 0 );
   signal input_count_op_net : std_logic_vector( 2-1 downto 0 );
   signal con0_op_net : std_logic_vector( 2-1 downto 0 );
+  signal con3_op_net : std_logic_vector( 2-1 downto 0 );
+  signal dram_op_net : std_logic_vector( 1-1 downto 0 );
 begin
   dout <= data_choice_y_net;
   we_o <= we_choice_y_net;
@@ -5253,6 +5253,7 @@ entity ethernet_one_gbe_skarab_axi_basic_ctrl_x2 is
   );
 end ethernet_one_gbe_skarab_axi_basic_ctrl_x2;
 architecture structural of ethernet_one_gbe_skarab_axi_basic_ctrl_x2 is 
+  signal register1_q_net : std_logic_vector( 1-1 downto 0 );
   signal data_choice_y_net : std_logic_vector( 128-1 downto 0 );
   signal we_choice_y_net : std_logic_vector( 1-1 downto 0 );
   signal register6_q_net : std_logic_vector( 1-1 downto 0 );
@@ -5277,7 +5278,6 @@ architecture structural of ethernet_one_gbe_skarab_axi_basic_ctrl_x2 is
   signal inverter_op_net : std_logic_vector( 1-1 downto 0 );
   signal logical_y_net : std_logic_vector( 1-1 downto 0 );
   signal mux2_y_net : std_logic_vector( 1-1 downto 0 );
-  signal register1_q_net : std_logic_vector( 1-1 downto 0 );
 begin
   dout <= data_choice_y_net;
   we_o <= we_choice_y_net;
@@ -7203,13 +7203,13 @@ entity ethernet_one_gbe_skarab_axi_err_valid_raw1 is
   );
 end ethernet_one_gbe_skarab_axi_err_valid_raw1;
 architecture structural of ethernet_one_gbe_skarab_axi_err_valid_raw1 is 
+  signal assert_reg_dout_net : std_logic_vector( 32-1 downto 0 );
   signal delay20_q_net : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net : std_logic_vector( 32-1 downto 0 );
   signal clk_net : std_logic;
   signal ce_net : std_logic;
   signal io_delay_q_net : std_logic_vector( 32-1 downto 0 );
   signal reint1_output_port_net : std_logic_vector( 32-1 downto 0 );
-  signal assert_reg_dout_net : std_logic_vector( 32-1 downto 0 );
 begin
   delay20_q_net <= out_reg;
   ethernet_one_gbe_skarab_axi_err_valid_raw1_user_data_in <= cast_gw_dout_net;
@@ -7693,6 +7693,20 @@ entity ethernet_one_gbe_skarab_axi_dram_munge is
   );
 end ethernet_one_gbe_skarab_axi_dram_munge;
 architecture structural of ethernet_one_gbe_skarab_axi_dram_munge is 
+  signal delay1_q_net : std_logic_vector( 1-1 downto 0 );
+  signal logical1_y_net : std_logic_vector( 1-1 downto 0 );
+  signal relational3_op_net : std_logic_vector( 1-1 downto 0 );
+  signal mux1_y_net : std_logic_vector( 80-1 downto 0 );
+  signal dout_count_op_net : std_logic_vector( 1-1 downto 0 );
+  signal relational_op_net : std_logic_vector( 1-1 downto 0 );
+  signal relational1_op_net : std_logic_vector( 1-1 downto 0 );
+  signal relational2_op_net : std_logic_vector( 1-1 downto 0 );
+  signal input_count_op_net : std_logic_vector( 2-1 downto 0 );
+  signal con0_op_net : std_logic_vector( 2-1 downto 0 );
+  signal con1_op_net : std_logic_vector( 2-1 downto 0 );
+  signal con2_op_net : std_logic_vector( 2-1 downto 0 );
+  signal con3_op_net : std_logic_vector( 2-1 downto 0 );
+  signal dram_op_net : std_logic_vector( 1-1 downto 0 );
   signal data_choice_y_net : std_logic_vector( 32-1 downto 0 );
   signal we_choice_y_net : std_logic_vector( 1-1 downto 0 );
   signal cast_dout_net : std_logic_vector( 32-1 downto 0 );
@@ -7709,20 +7723,6 @@ architecture structural of ethernet_one_gbe_skarab_axi_dram_munge is
   signal register3_q_net : std_logic_vector( 32-1 downto 0 );
   signal delay_q_net : std_logic_vector( 1-1 downto 0 );
   signal logical_y_net : std_logic_vector( 1-1 downto 0 );
-  signal delay1_q_net : std_logic_vector( 1-1 downto 0 );
-  signal logical1_y_net : std_logic_vector( 1-1 downto 0 );
-  signal relational3_op_net : std_logic_vector( 1-1 downto 0 );
-  signal mux1_y_net : std_logic_vector( 80-1 downto 0 );
-  signal dout_count_op_net : std_logic_vector( 1-1 downto 0 );
-  signal relational_op_net : std_logic_vector( 1-1 downto 0 );
-  signal relational1_op_net : std_logic_vector( 1-1 downto 0 );
-  signal relational2_op_net : std_logic_vector( 1-1 downto 0 );
-  signal input_count_op_net : std_logic_vector( 2-1 downto 0 );
-  signal con0_op_net : std_logic_vector( 2-1 downto 0 );
-  signal con1_op_net : std_logic_vector( 2-1 downto 0 );
-  signal con2_op_net : std_logic_vector( 2-1 downto 0 );
-  signal con3_op_net : std_logic_vector( 2-1 downto 0 );
-  signal dram_op_net : std_logic_vector( 1-1 downto 0 );
 begin
   dout <= data_choice_y_net;
   we_o <= we_choice_y_net;
@@ -9873,6 +9873,12 @@ entity ethernet_one_gbe_skarab_axi_basic_ctrl_x0 is
   );
 end ethernet_one_gbe_skarab_axi_basic_ctrl_x0;
 architecture structural of ethernet_one_gbe_skarab_axi_basic_ctrl_x0 is 
+  signal delay3_q_net : std_logic_vector( 1-1 downto 0 );
+  signal valid_src_y_net : std_logic_vector( 1-1 downto 0 );
+  signal inverter_op_net : std_logic_vector( 1-1 downto 0 );
+  signal logical_y_net : std_logic_vector( 1-1 downto 0 );
+  signal mux2_y_net : std_logic_vector( 1-1 downto 0 );
+  signal register1_q_net : std_logic_vector( 1-1 downto 0 );
   signal data_choice_y_net : std_logic_vector( 64-1 downto 0 );
   signal we_choice_y_net : std_logic_vector( 1-1 downto 0 );
   signal register6_q_net : std_logic_vector( 1-1 downto 0 );
@@ -9892,12 +9898,6 @@ architecture structural of ethernet_one_gbe_skarab_axi_basic_ctrl_x0 is
   signal enable_y_net : std_logic_vector( 1-1 downto 0 );
   signal delay2_q_net : std_logic_vector( 1-1 downto 0 );
   signal trig_src_y_net : std_logic_vector( 1-1 downto 0 );
-  signal delay3_q_net : std_logic_vector( 1-1 downto 0 );
-  signal valid_src_y_net : std_logic_vector( 1-1 downto 0 );
-  signal inverter_op_net : std_logic_vector( 1-1 downto 0 );
-  signal logical_y_net : std_logic_vector( 1-1 downto 0 );
-  signal mux2_y_net : std_logic_vector( 1-1 downto 0 );
-  signal register1_q_net : std_logic_vector( 1-1 downto 0 );
 begin
   dout <= data_choice_y_net;
   we_o <= we_choice_y_net;
@@ -10614,13 +10614,13 @@ entity ethernet_one_gbe_skarab_axi_ctrl_split_x1 is
   );
 end ethernet_one_gbe_skarab_axi_ctrl_split_x1;
 architecture structural of ethernet_one_gbe_skarab_axi_ctrl_split_x1 is 
-  signal reinterpret4_output_port_net : std_logic_vector( 28-1 downto 0 );
-  signal slice3_y_net : std_logic_vector( 1-1 downto 0 );
-  signal reinterpret2_output_port_net : std_logic_vector( 2-1 downto 0 );
   signal slice1_y_net : std_logic_vector( 1-1 downto 0 );
   signal reint1_output_port_net : std_logic_vector( 32-1 downto 0 );
   signal slice2_y_net : std_logic_vector( 2-1 downto 0 );
   signal slice4_y_net : std_logic_vector( 28-1 downto 0 );
+  signal reinterpret4_output_port_net : std_logic_vector( 28-1 downto 0 );
+  signal slice3_y_net : std_logic_vector( 1-1 downto 0 );
+  signal reinterpret2_output_port_net : std_logic_vector( 2-1 downto 0 );
 begin
   msb_out4 <= reinterpret4_output_port_net;
   out3 <= slice3_y_net;
@@ -12130,64 +12130,6 @@ entity ethernet_one_gbe_skarab_axi_struct is
   );
 end ethernet_one_gbe_skarab_axi_struct;
 architecture structural of ethernet_one_gbe_skarab_axi_struct is 
-  signal axi_fifo_1_m_axis_tvalid_net : std_logic;
-  signal axi_fifo_1_m_axis_tdata_net : std_logic_vector( 64-1 downto 0 );
-  signal axi_fifo_1_m_axis_tlast_net : std_logic;
-  signal axi_fifo_1_s_axis_tready_net : std_logic;
-  signal mf_tready : std_logic;
-  signal sf_tvalid : std_logic;
-  signal sf_tdata : std_logic_vector( 64-1 downto 0 );
-  signal sf_tlast : std_logic;
-  signal mf_tvalid : std_logic;
-  signal mf_tdata : std_logic_vector( 64-1 downto 0 );
-  signal mf_tlast : std_logic;
-  signal sf_tready : std_logic;
-  signal fir_compiler_7_2_s_axis_data_tready_net : std_logic;
-  signal fir_compiler_7_2_m_axis_data_tvalid_net : std_logic;
-  signal convert7_dout_net : std_logic_vector( 64-1 downto 0 );
-  signal fir_compiler_7_2_m_axis_data_tlast_net : std_logic;
-  signal addsub3_s_net : std_logic_vector( 33-1 downto 0 );
-  signal constant33_op_net : std_logic_vector( 1-1 downto 0 );
-  signal assert_dout_net : std_logic_vector( 1-1 downto 0 );
-  signal delay46_q_net : std_logic_vector( 1-1 downto 0 );
-  signal assert1_dout_net : std_logic_vector( 1-1 downto 0 );
-  signal delay44_q_net : std_logic_vector( 1-1 downto 0 );
-  signal assert2_dout_net : std_logic_vector( 64-1 downto 0 );
-  signal delay43_q_net : std_logic_vector( 64-1 downto 0 );
-  signal assert3_dout_net : std_logic_vector( 1-1 downto 0 );
-  signal delay42_q_net : std_logic_vector( 1-1 downto 0 );
-  signal assert4_dout_net : std_logic_vector( 1-1 downto 0 );
-  signal delay5_q_net : std_logic_vector( 1-1 downto 0 );
-  signal assert5_dout_net : std_logic_vector( 64-1 downto 0 );
-  signal delay9_q_net : std_logic_vector( 64-1 downto 0 );
-  signal assert6_dout_net : std_logic_vector( 1-1 downto 0 );
-  signal delay31_q_net : std_logic_vector( 1-1 downto 0 );
-  signal assert7_dout_net : std_logic_vector( 1-1 downto 0 );
-  signal delay32_q_net : std_logic_vector( 1-1 downto 0 );
-  signal ip_const_10_42_0_31 : std_logic_vector( 32-1 downto 0 );
-  signal constant11_op_net : std_logic_vector( 16-1 downto 0 );
-  signal constant14_op_net : std_logic_vector( 4-1 downto 0 );
-  signal constant2_op_net : std_logic_vector( 1-1 downto 0 );
-  signal port_const_7777 : std_logic_vector( 16-1 downto 0 );
-  signal convert5_dout_net : std_logic_vector( 32-1 downto 0 );
-  signal debug_rx_data : std_logic_vector( 8-1 downto 0 );
-  signal convert6_dout_net : std_logic_vector( 32-1 downto 0 );
-  signal system_control_one_gbe_skarab2_debug_rx_data_mem_fifo_net : std_logic_vector( 8-1 downto 0 );
-  signal delay25_q_net : std_logic_vector( 1-1 downto 0 );
-  signal pkt_counter17_op_net : std_logic_vector( 32-1 downto 0 );
-  signal pkt_counter18_op_net : std_logic_vector( 32-1 downto 0 );
-  signal pkt_counter19_op_net : std_logic_vector( 32-1 downto 0 );
-  signal pkt_counter20_op_net : std_logic_vector( 32-1 downto 0 );
-  signal pkt_counter21_op_net : std_logic_vector( 32-1 downto 0 );
-  signal pkt_counter22_op_net : std_logic_vector( 32-1 downto 0 );
-  signal pkt_counter2_op_net : std_logic_vector( 32-1 downto 0 );
-  signal delay18_q_net : std_logic_vector( 1-1 downto 0 );
-  signal pkt_counter3_op_net : std_logic_vector( 32-1 downto 0 );
-  signal pkt_counter16_op_net : std_logic_vector( 32-1 downto 0 );
-  signal pkt_counter1_op_net : std_logic_vector( 32-1 downto 0 );
-  signal delay26_q_net : std_logic_vector( 1-1 downto 0 );
-  signal pkt_rst : std_logic_vector( 1-1 downto 0 );
-  signal delay29_q_net : std_logic_vector( 16-1 downto 0 );
   signal logical11_y_net : std_logic_vector( 1-1 downto 0 );
   signal system_control_one_gbe_skarab2_m_axis_tlast_net : std_logic_vector( 1-1 downto 0 );
   signal system_control_one_gbe_skarab2_m_axis_tdata_net : std_logic_vector( 64-1 downto 0 );
@@ -12225,8 +12167,7 @@ architecture structural of ethernet_one_gbe_skarab_axi_struct is
   signal slice6_y_net : std_logic_vector( 1-1 downto 0 );
   signal slice9_y_net : std_logic_vector( 10-1 downto 0 );
   signal convert_dout_net : std_logic_vector( 16-1 downto 0 );
-  signal logical_y_net : std_logic_vector( 1-1 downto 0 );
-  signal fir_compiler_7_2_m_axis_data_tdata_real_net : std_logic_vector( 20-1 downto 0 );
+  signal fir_compiler_7_2_m_axis_data_tdata_real_net : std_logic_vector( 17-1 downto 0 );
   signal ethernet_one_gbe_skarab_axi_addr_data_fifo_user_data_out_net : std_logic_vector( 32-1 downto 0 );
   signal ethernet_one_gbe_skarab_axi_addr_data_gbe_user_data_out_net : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net_x20 : std_logic_vector( 32-1 downto 0 );
@@ -12250,14 +12191,14 @@ architecture structural of ethernet_one_gbe_skarab_axi_struct is
   signal cast_gw_dout_net_x9 : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net_x10 : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net_x8 : std_logic_vector( 32-1 downto 0 );
-  signal cast_gw_dout_net_x2 : std_logic_vector( 32-1 downto 0 );
+  signal cast_gw_dout_net_x1 : std_logic_vector( 32-1 downto 0 );
   signal ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out_net : std_logic_vector( 32-1 downto 0 );
-  signal cast_gw_dout_net_x0 : std_logic_vector( 32-1 downto 0 );
-  signal cast_gw_dout_net : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net_x5 : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net_x4 : std_logic_vector( 32-1 downto 0 );
   signal cast_gw_dout_net_x3 : std_logic_vector( 32-1 downto 0 );
-  signal cast_gw_dout_net_x1 : std_logic_vector( 32-1 downto 0 );
+  signal cast_gw_dout_net_x2 : std_logic_vector( 32-1 downto 0 );
+  signal cast_gw_dout_net : std_logic_vector( 32-1 downto 0 );
+  signal cast_gw_dout_net_x0 : std_logic_vector( 32-1 downto 0 );
   signal convert_addr_dout_net : std_logic_vector( 16-1 downto 0 );
   signal convert_din1_dout_net : std_logic_vector( 32-1 downto 0 );
   signal ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_data_out_net : std_logic_vector( 32-1 downto 0 );
@@ -12363,6 +12304,64 @@ architecture structural of ethernet_one_gbe_skarab_axi_struct is
   signal eof_verilg : std_logic_vector( 1-1 downto 0 );
   signal delay6_q_net : std_logic_vector( 1-1 downto 0 );
   signal delay68_q_net : std_logic_vector( 32-1 downto 0 );
+  signal axi_fifo_1_m_axis_tvalid_net : std_logic;
+  signal axi_fifo_1_m_axis_tdata_net : std_logic_vector( 64-1 downto 0 );
+  signal axi_fifo_1_m_axis_tlast_net : std_logic;
+  signal axi_fifo_1_s_axis_tready_net : std_logic;
+  signal mf_tready : std_logic;
+  signal sf_tvalid : std_logic;
+  signal sf_tdata : std_logic_vector( 64-1 downto 0 );
+  signal sf_tlast : std_logic;
+  signal mf_tvalid : std_logic;
+  signal mf_tdata : std_logic_vector( 64-1 downto 0 );
+  signal mf_tlast : std_logic;
+  signal sf_tready : std_logic;
+  signal fir_compiler_7_2_s_axis_data_tready_net : std_logic;
+  signal fir_compiler_7_2_m_axis_data_tvalid_net : std_logic;
+  signal convert7_dout_net : std_logic_vector( 64-1 downto 0 );
+  signal fir_compiler_7_2_m_axis_data_tlast_net : std_logic;
+  signal addsub3_s_net : std_logic_vector( 33-1 downto 0 );
+  signal constant33_op_net : std_logic_vector( 1-1 downto 0 );
+  signal assert_dout_net : std_logic_vector( 1-1 downto 0 );
+  signal delay46_q_net : std_logic_vector( 1-1 downto 0 );
+  signal assert1_dout_net : std_logic_vector( 1-1 downto 0 );
+  signal delay44_q_net : std_logic_vector( 1-1 downto 0 );
+  signal assert2_dout_net : std_logic_vector( 64-1 downto 0 );
+  signal delay43_q_net : std_logic_vector( 64-1 downto 0 );
+  signal assert3_dout_net : std_logic_vector( 1-1 downto 0 );
+  signal delay42_q_net : std_logic_vector( 1-1 downto 0 );
+  signal assert4_dout_net : std_logic_vector( 1-1 downto 0 );
+  signal delay5_q_net : std_logic_vector( 1-1 downto 0 );
+  signal assert5_dout_net : std_logic_vector( 64-1 downto 0 );
+  signal delay9_q_net : std_logic_vector( 64-1 downto 0 );
+  signal assert6_dout_net : std_logic_vector( 1-1 downto 0 );
+  signal delay31_q_net : std_logic_vector( 1-1 downto 0 );
+  signal assert7_dout_net : std_logic_vector( 1-1 downto 0 );
+  signal delay32_q_net : std_logic_vector( 1-1 downto 0 );
+  signal ip_const_10_42_0_31 : std_logic_vector( 32-1 downto 0 );
+  signal constant11_op_net : std_logic_vector( 16-1 downto 0 );
+  signal constant14_op_net : std_logic_vector( 4-1 downto 0 );
+  signal constant2_op_net : std_logic_vector( 1-1 downto 0 );
+  signal port_const_7777 : std_logic_vector( 16-1 downto 0 );
+  signal convert5_dout_net : std_logic_vector( 32-1 downto 0 );
+  signal debug_rx_data : std_logic_vector( 8-1 downto 0 );
+  signal convert6_dout_net : std_logic_vector( 32-1 downto 0 );
+  signal system_control_one_gbe_skarab2_debug_rx_data_mem_fifo_net : std_logic_vector( 8-1 downto 0 );
+  signal delay25_q_net : std_logic_vector( 1-1 downto 0 );
+  signal pkt_counter17_op_net : std_logic_vector( 32-1 downto 0 );
+  signal pkt_counter18_op_net : std_logic_vector( 32-1 downto 0 );
+  signal pkt_counter19_op_net : std_logic_vector( 32-1 downto 0 );
+  signal pkt_counter20_op_net : std_logic_vector( 32-1 downto 0 );
+  signal pkt_counter21_op_net : std_logic_vector( 32-1 downto 0 );
+  signal pkt_counter22_op_net : std_logic_vector( 32-1 downto 0 );
+  signal pkt_counter2_op_net : std_logic_vector( 32-1 downto 0 );
+  signal delay18_q_net : std_logic_vector( 1-1 downto 0 );
+  signal pkt_counter3_op_net : std_logic_vector( 32-1 downto 0 );
+  signal pkt_counter16_op_net : std_logic_vector( 32-1 downto 0 );
+  signal pkt_counter1_op_net : std_logic_vector( 32-1 downto 0 );
+  signal delay26_q_net : std_logic_vector( 1-1 downto 0 );
+  signal pkt_rst : std_logic_vector( 1-1 downto 0 );
+  signal delay29_q_net : std_logic_vector( 16-1 downto 0 );
 begin
   ethernet_one_gbe_skarab_axi_addr_data_fifo_user_data_out_net <= ethernet_one_gbe_skarab_axi_addr_data_fifo_user_data_out;
   ethernet_one_gbe_skarab_axi_addr_data_gbe_user_data_out_net <= ethernet_one_gbe_skarab_axi_addr_data_gbe_user_data_out;
@@ -12387,14 +12386,14 @@ begin
   ethernet_one_gbe_skarab_axi_d5_ss_status_user_data_in <= cast_gw_dout_net_x9;
   ethernet_one_gbe_skarab_axi_data_rx_valmir_user_data_in <= cast_gw_dout_net_x10;
   ethernet_one_gbe_skarab_axi_debug_rx_data_mem_fifo_user_data_in <= cast_gw_dout_net_x8;
-  ethernet_one_gbe_skarab_axi_debug_rx_data_mem_gbe_user_data_in <= cast_gw_dout_net_x2;
+  ethernet_one_gbe_skarab_axi_debug_rx_data_mem_gbe_user_data_in <= cast_gw_dout_net_x1;
   ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out_net <= ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out;
-  ethernet_one_gbe_skarab_axi_err_marker1_user_data_in <= cast_gw_dout_net_x0;
-  ethernet_one_gbe_skarab_axi_err_pkt_ctr1_user_data_in <= cast_gw_dout_net;
-  ethernet_one_gbe_skarab_axi_err_pkt_ctr_step1_user_data_in <= cast_gw_dout_net_x5;
-  ethernet_one_gbe_skarab_axi_err_ramp1_user_data_in <= cast_gw_dout_net_x4;
-  ethernet_one_gbe_skarab_axi_err_valid_raw1_user_data_in <= cast_gw_dout_net_x3;
-  ethernet_one_gbe_skarab_axi_err_walk1_user_data_in <= cast_gw_dout_net_x1;
+  ethernet_one_gbe_skarab_axi_err_marker1_user_data_in <= cast_gw_dout_net_x5;
+  ethernet_one_gbe_skarab_axi_err_pkt_ctr1_user_data_in <= cast_gw_dout_net_x4;
+  ethernet_one_gbe_skarab_axi_err_pkt_ctr_step1_user_data_in <= cast_gw_dout_net_x3;
+  ethernet_one_gbe_skarab_axi_err_ramp1_user_data_in <= cast_gw_dout_net_x2;
+  ethernet_one_gbe_skarab_axi_err_valid_raw1_user_data_in <= cast_gw_dout_net;
+  ethernet_one_gbe_skarab_axi_err_walk1_user_data_in <= cast_gw_dout_net_x0;
   ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_addr <= convert_addr_dout_net;
   ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_data_in <= convert_din1_dout_net;
   ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_data_out_net <= ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_data_out;
@@ -12539,7 +12538,7 @@ begin
     out_reg => delay45_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_axi_debug_rx_data_mem_gbe_user_data_in => cast_gw_dout_net_x2
+    ethernet_one_gbe_skarab_axi_debug_rx_data_mem_gbe_user_data_in => cast_gw_dout_net_x1
   );
   dec_factor : entity xil_defaultlib.ethernet_one_gbe_skarab_axi_dec_factor 
   port map (
@@ -12551,42 +12550,42 @@ begin
     out_reg => delay19_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_axi_err_marker1_user_data_in => cast_gw_dout_net_x0
+    ethernet_one_gbe_skarab_axi_err_marker1_user_data_in => cast_gw_dout_net_x5
   );
   err_pkt_ctr1 : entity xil_defaultlib.ethernet_one_gbe_skarab_axi_err_pkt_ctr1 
   port map (
     out_reg => delay17_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_axi_err_pkt_ctr1_user_data_in => cast_gw_dout_net
+    ethernet_one_gbe_skarab_axi_err_pkt_ctr1_user_data_in => cast_gw_dout_net_x4
   );
   err_pkt_ctr_step1 : entity xil_defaultlib.ethernet_one_gbe_skarab_axi_err_pkt_ctr_step1 
   port map (
     out_reg => delay21_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_axi_err_pkt_ctr_step1_user_data_in => cast_gw_dout_net_x5
+    ethernet_one_gbe_skarab_axi_err_pkt_ctr_step1_user_data_in => cast_gw_dout_net_x3
   );
   err_ramp1 : entity xil_defaultlib.ethernet_one_gbe_skarab_axi_err_ramp1 
   port map (
     out_reg => delay16_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_axi_err_ramp1_user_data_in => cast_gw_dout_net_x4
+    ethernet_one_gbe_skarab_axi_err_ramp1_user_data_in => cast_gw_dout_net_x2
   );
   err_valid_raw1 : entity xil_defaultlib.ethernet_one_gbe_skarab_axi_err_valid_raw1 
   port map (
     out_reg => delay20_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_axi_err_valid_raw1_user_data_in => cast_gw_dout_net_x3
+    ethernet_one_gbe_skarab_axi_err_valid_raw1_user_data_in => cast_gw_dout_net
   );
   err_walk1 : entity xil_defaultlib.ethernet_one_gbe_skarab_axi_err_walk1 
   port map (
     out_reg => delay15_q_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    ethernet_one_gbe_skarab_axi_err_walk1_user_data_in => cast_gw_dout_net_x1
+    ethernet_one_gbe_skarab_axi_err_walk1_user_data_in => cast_gw_dout_net_x0
   );
   pkt_ctrs1 : entity xil_defaultlib.ethernet_one_gbe_skarab_axi_pkt_ctrs1 
   port map (
@@ -14164,21 +14163,12 @@ begin
     ce => ce_net,
     dout => convert_dout_net
   );
-  logical : entity xil_defaultlib.sysgen_logical_5913fd9d25 
-  port map (
-    clk => '0',
-    ce => '0',
-    clr => '0',
-    d0(0) => axi_fifo_1_m_axis_tvalid_net,
-    d1(0) => axi_fifo_1_s_axis_tready_net,
-    y => logical_y_net
-  );
   convert7 : entity xil_defaultlib.ethernet_one_gbe_skarab_axi_xlconvert 
   generic map (
     bool_conversion => 0,
     din_arith => 2,
     din_bin_pt => 0,
-    din_width => 20,
+    din_width => 17,
     dout_arith => 1,
     dout_bin_pt => 0,
     dout_width => 64,
@@ -14194,12 +14184,11 @@ begin
     ce => ce_net,
     dout => convert7_dout_net
   );
-  fir_compiler_7_2 : entity xil_defaultlib.xlfir_compiler_80b58611f44be07b5c5f5c1cdabb093e 
+  fir_compiler_7_2 : entity xil_defaultlib.xlfir_compiler_757422385dd956f2fc70237829a67c0b 
   port map (
     s_axis_data_tvalid => axi_fifo_1_m_axis_tvalid_net,
     s_axis_data_tlast => axi_fifo_1_m_axis_tlast_net,
     s_axis_data_tdata_real => convert_dout_net,
-    en => logical_y_net(0),
     src_clk => clk_net,
     src_ce => ce_net,
     clk => clk_net,
@@ -14323,7 +14312,7 @@ entity ethernet_one_gbe_skarab_axi is
 end ethernet_one_gbe_skarab_axi;
 architecture structural of ethernet_one_gbe_skarab_axi is 
   attribute core_generation_info : string;
-  attribute core_generation_info of structural : architecture is "ethernet_one_gbe_skarab_axi,sysgen_core_2019_1,{,compilation=HDL Netlist,block_icon_display=Default,family=virtex7,part=xc7vx690t,speed=-2,package=ffg1927,synthesis_language=vhdl,hdl_library=xil_defaultlib,synthesis_strategy=Vivado Synthesis Defaults,implementation_strategy=Vivado Implementation Defaults,testbench=0,interface_doc=0,ce_clr=0,clock_period=4,system_simulink_period=1,waveform_viewer=0,axilite_interface=0,ip_catalog_plugin=0,hwcosim_burst_mode=0,simulation_time=3000,addsub=6,assert=48,axi_fifo=2,blackbox2=1,concat=40,constant=100,convert=68,counter=27,delay=170,fir_compiler_v7_2=1,inv=37,logical=75,mux=35,register=56,reinterpret=163,relational=26,shift=5,slice=116,}";
+  attribute core_generation_info of structural : architecture is "ethernet_one_gbe_skarab_axi,sysgen_core_2019_1,{,compilation=HDL Netlist,block_icon_display=Default,family=virtex7,part=xc7vx690t,speed=-2,package=ffg1927,synthesis_language=vhdl,hdl_library=xil_defaultlib,synthesis_strategy=Vivado Synthesis Defaults,implementation_strategy=Vivado Implementation Defaults,testbench=0,interface_doc=0,ce_clr=0,clock_period=4,system_simulink_period=1,waveform_viewer=0,axilite_interface=0,ip_catalog_plugin=0,hwcosim_burst_mode=0,simulation_time=3000,addsub=6,assert=48,axi_fifo=2,blackbox2=1,concat=40,constant=100,convert=68,counter=27,delay=170,fir_compiler_v7_2=1,inv=37,logical=74,mux=35,register=56,reinterpret=163,relational=26,shift=5,slice=116,}";
   signal clk_1_net : std_logic;
   signal ce_1_net : std_logic;
 begin

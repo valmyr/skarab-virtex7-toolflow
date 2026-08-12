@@ -69,6 +69,83 @@ set_property -dict $params_list [get_ips ethernet_one_gbe_skarab_axi_c_addsub_v1
 
 
 set existingipslist [get_ips]
+if {[lsearch $existingipslist ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0] < 0} {
+create_ip -name fir_compiler -version 7.2 -vendor xilinx.com -library ip -module_name ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0
+set params_list [list]
+lappend params_list CONFIG.Component_Name {ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0}
+lappend params_list CONFIG.BestPrecision {false}
+lappend params_list CONFIG.Blank_Output {false}
+lappend params_list CONFIG.Channel_Sequence {Basic}
+lappend params_list CONFIG.Clock_Frequency {300.0}
+lappend params_list CONFIG.CoefficientSource {Vector}
+lappend params_list CONFIG.CoefficientVector {binary:00000000000026C000000000000024C000000000000024C000000000000024C000000000000024C000000000000024C000000000000024C000000000000024C000000000000024C000000000000024C000000000000022C000000000000022C000000000000022C000000000000022C000000000000022C000000000000022C000000000000020C000000000000020C000000000000020C00000000000001CC00000000000001CC000000000000018C000000000000018C000000000000014C000000000000010C000000000000008C000000000000000C0000000000000F0BF0000000000000000000000000000F03F0000000000000840000000000000104000000000000018400000000000002040000000000000244000000000000028400000000000002E400000000000003140000000000000344000000000000037400000000000003A400000000000003E40000000000080404000000000008042400000000000804440000000000080464000000000000049400000000000004B400000000000804D40000000000000504000000000008051400000000000C0524000000000004054400000000000C05540000000000040574000000000000059400000000000C05A400000000000805C400000000000405E400000000000006040000000000000614000000000000062400000000000006340000000000020644000000000002065400000000000406640000000000060674000000000008068400000000000A069400000000000E06A400000000000206C400000000000606D400000000000A06E400000000000E06F40000000000090704000000000004071400000000000E07140000000000090724000000000004073400000000000F073400000000000A07440000000000050754000000000000076400000000000B07640000000000060774000000000001078400000000000D0784000000000008079400000000000307A400000000000E07A400000000000907B400000000000407C400000000000F07C400000000000A07D400000000000507E400000000000F07E400000000000A07F40000000000020804000000000007080400000000000C08040000000000010814000000000006081400000000000A881400000000000F08140000000000038824000000000008082400000000000C082400000000000008340000000000040834000000000007883400000000000B083400000000000E883400000000000208440000000000050844000000000008084400000000000A884400000000000D084400000000000F884400000000000188540000000000038854000000000005885400000000000708540000000000080854000000000009885400000000000A885400000000000B085400000000000B885400000000000C085400000000000C085400000000000C085400000000000B885400000000000B085400000000000A885400000000000988540000000000080854000000000007085400000000000588540000000000038854000000000001885400000000000F884400000000000D084400000000000A884400000000000808440000000000050844000000000002084400000000000E883400000000000B083400000000000788340000000000040834000000000000083400000000000C08240000000000080824000000000003882400000000000F081400000000000A88140000000000060814000000000001081400000000000C08040000000000070804000000000002080400000000000A07F400000000000F07E400000000000507E400000000000A07D400000000000F07C400000000000407C400000000000907B400000000000E07A400000000000307A4000000000008079400000000000D07840000000000010784000000000006077400000000000B07640000000000000764000000000005075400000000000A074400000000000F07340000000000040734000000000009072400000000000E07140000000000040714000000000009070400000000000E06F400000000000A06E400000000000606D400000000000206C400000000000E06A400000000000A069400000000000806840000000000060674000000000004066400000000000206540000000000020644000000000000063400000000000006240000000000000614000000000000060400000000000405E400000000000805C400000000000C05A40000000000000594000000000004057400000000000C0554000000000004054400000000000C05240000000000080514000000000000050400000000000804D400000000000004B40000000000000494000000000008046400000000000804440000000000080424000000000008040400000000000003E400000000000003A400000000000003740000000000000344000000000000031400000000000002E40000000000000284000000000000024400000000000002040000000000000184000000000000010400000000000000840000000000000F03F0000000000000000000000000000F0BF00000000000000C000000000000008C000000000000010C000000000000014C000000000000018C000000000000018C00000000000001CC00000000000001CC000000000000020C000000000000020C000000000000020C000000000000022C000000000000022C000000000000022C000000000000022C000000000000022C000000000000022C000000000000024C000000000000024C000000000000024C000000000000024C000000000000024C000000000000024C000000000000024C000000000000024C000000000000024C000000000000026C0}
+lappend params_list CONFIG.Coefficient_Buffer_Type {Automatic}
+lappend params_list CONFIG.Coefficient_File {no_coe_file_loaded}
+lappend params_list CONFIG.Coefficient_Fractional_Bits {0}
+lappend params_list CONFIG.Coefficient_Reload {false}
+lappend params_list CONFIG.Coefficient_Sets {1}
+lappend params_list CONFIG.Coefficient_Sign {Signed}
+lappend params_list CONFIG.Coefficient_Structure {Inferred}
+lappend params_list CONFIG.Coefficient_Width {16}
+lappend params_list CONFIG.ColumnConfig {129}
+lappend params_list CONFIG.DATA_Has_TLAST {Packet_Framing}
+lappend params_list CONFIG.DATA_TUSER_Width {1}
+lappend params_list CONFIG.Data_Buffer_Type {Automatic}
+lappend params_list CONFIG.Data_Fractional_Bits {0}
+lappend params_list CONFIG.Data_Sign {Signed}
+lappend params_list CONFIG.Data_Width {16}
+lappend params_list CONFIG.Decimation_Rate {1}
+lappend params_list CONFIG.DisplayReloadOrder {false}
+lappend params_list CONFIG.Filter_Architecture {Systolic_Multiply_Accumulate}
+lappend params_list CONFIG.Filter_Selection {1}
+lappend params_list CONFIG.Filter_Type {Single_Rate}
+lappend params_list CONFIG.GUI_Behaviour {Sysgen_uUPP}
+lappend params_list CONFIG.Gen_MIF_Files {false}
+lappend params_list CONFIG.Gen_MIF_from_COE {false}
+lappend params_list CONFIG.Gen_MIF_from_Spec {false}
+lappend params_list CONFIG.HardwareOversamplingRate {1}
+lappend params_list CONFIG.Has_ACLKEN {true}
+lappend params_list CONFIG.Has_ARESETn {false}
+lappend params_list CONFIG.Input_Buffer_Type {Automatic}
+lappend params_list CONFIG.Inter_Column_Pipe_Length {4}
+lappend params_list CONFIG.Interpolation_Rate {1}
+lappend params_list CONFIG.M_DATA_Has_TREADY {false}
+lappend params_list CONFIG.M_DATA_Has_TUSER {Not_Required}
+lappend params_list CONFIG.Multi_Column_Support {Automatic}
+lappend params_list CONFIG.Num_Reload_Slots {1}
+lappend params_list CONFIG.Number_Channels {1}
+lappend params_list CONFIG.Number_Paths {1}
+lappend params_list CONFIG.Optimization_Goal {Area}
+lappend params_list CONFIG.Optimization_List {None}
+lappend params_list CONFIG.Optimization_Selection {None}
+lappend params_list CONFIG.Output_Buffer_Type {Automatic}
+lappend params_list CONFIG.Output_Rounding_Mode {Full_Precision}
+lappend params_list CONFIG.Output_Width {33}
+lappend params_list CONFIG.Passband_Max {0.50000000}
+lappend params_list CONFIG.Passband_Min {0.00000000}
+lappend params_list CONFIG.Pattern_List {P4-0,P4-1,P4-2,P4-3,P4-4}
+lappend params_list CONFIG.Preference_For_Other_Storage {Automatic}
+lappend params_list CONFIG.Quantization {Integer_Coefficients}
+lappend params_list CONFIG.RateSpecification {Input_Sample_Period}
+lappend params_list CONFIG.Rate_Change_Type {Integer}
+lappend params_list CONFIG.Reload_File {no_coe_file_loaded}
+lappend params_list CONFIG.Reset_Data_Vector {true}
+lappend params_list CONFIG.S_CONFIG_Method {Single}
+lappend params_list CONFIG.S_CONFIG_Sync_Mode {On_Vector}
+lappend params_list CONFIG.S_DATA_Has_FIFO {false}
+lappend params_list CONFIG.S_DATA_Has_TUSER {Not_Required}
+lappend params_list CONFIG.SamplePeriod {1.00000000}
+lappend params_list CONFIG.Sample_Frequency {0.001}
+lappend params_list CONFIG.Select_Pattern {All}
+lappend params_list CONFIG.Stopband_Max {1.00000000}
+lappend params_list CONFIG.Stopband_Min {0.50000000}
+lappend params_list CONFIG.Zero_Pack_Factor {1}
+
+set_property -dict $params_list [get_ips ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0]
+}
+
+
+set existingipslist [get_ips]
 if {[lsearch $existingipslist ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i0] < 0} {
 create_ip -name c_counter_binary -version 12.0 -vendor xilinx.com -library ip -module_name ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i0
 set params_list [list]
@@ -93,83 +170,6 @@ lappend params_list CONFIG.sync_threshold_output {false}
 lappend params_list CONFIG.syncctrlpriority {Reset_Overrides_Set}
 
 set_property -dict $params_list [get_ips ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i0]
-}
-
-
-set existingipslist [get_ips]
-if {[lsearch $existingipslist ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0] < 0} {
-create_ip -name fir_compiler -version 7.2 -vendor xilinx.com -library ip -module_name ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0
-set params_list [list]
-lappend params_list CONFIG.Component_Name {ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0}
-lappend params_list CONFIG.BestPrecision {false}
-lappend params_list CONFIG.Blank_Output {false}
-lappend params_list CONFIG.Channel_Sequence {Basic}
-lappend params_list CONFIG.Clock_Frequency {300.0}
-lappend params_list CONFIG.CoefficientSource {Vector}
-lappend params_list CONFIG.CoefficientVector {binary:000000000000F03F000000000000F03F}
-lappend params_list CONFIG.Coefficient_Buffer_Type {Automatic}
-lappend params_list CONFIG.Coefficient_File {no_coe_file_loaded}
-lappend params_list CONFIG.Coefficient_Fractional_Bits {0}
-lappend params_list CONFIG.Coefficient_Reload {false}
-lappend params_list CONFIG.Coefficient_Sets {1}
-lappend params_list CONFIG.Coefficient_Sign {Unsigned}
-lappend params_list CONFIG.Coefficient_Structure {Inferred}
-lappend params_list CONFIG.Coefficient_Width {16}
-lappend params_list CONFIG.ColumnConfig {1}
-lappend params_list CONFIG.DATA_Has_TLAST {Packet_Framing}
-lappend params_list CONFIG.DATA_TUSER_Width {1}
-lappend params_list CONFIG.Data_Buffer_Type {Automatic}
-lappend params_list CONFIG.Data_Fractional_Bits {0}
-lappend params_list CONFIG.Data_Sign {Signed}
-lappend params_list CONFIG.Data_Width {16}
-lappend params_list CONFIG.Decimation_Rate {1}
-lappend params_list CONFIG.DisplayReloadOrder {false}
-lappend params_list CONFIG.Filter_Architecture {Systolic_Multiply_Accumulate}
-lappend params_list CONFIG.Filter_Selection {1}
-lappend params_list CONFIG.Filter_Type {Single_Rate}
-lappend params_list CONFIG.GUI_Behaviour {Sysgen_uUPP}
-lappend params_list CONFIG.Gen_MIF_Files {false}
-lappend params_list CONFIG.Gen_MIF_from_COE {false}
-lappend params_list CONFIG.Gen_MIF_from_Spec {false}
-lappend params_list CONFIG.HardwareOversamplingRate {10000}
-lappend params_list CONFIG.Has_ACLKEN {true}
-lappend params_list CONFIG.Has_ARESETn {false}
-lappend params_list CONFIG.Input_Buffer_Type {Automatic}
-lappend params_list CONFIG.Inter_Column_Pipe_Length {4}
-lappend params_list CONFIG.Interpolation_Rate {1}
-lappend params_list CONFIG.M_DATA_Has_TREADY {false}
-lappend params_list CONFIG.M_DATA_Has_TUSER {Not_Required}
-lappend params_list CONFIG.Multi_Column_Support {Automatic}
-lappend params_list CONFIG.Num_Reload_Slots {1}
-lappend params_list CONFIG.Number_Channels {1}
-lappend params_list CONFIG.Number_Paths {1}
-lappend params_list CONFIG.Optimization_Goal {Area}
-lappend params_list CONFIG.Optimization_List {None}
-lappend params_list CONFIG.Optimization_Selection {None}
-lappend params_list CONFIG.Output_Buffer_Type {Automatic}
-lappend params_list CONFIG.Output_Rounding_Mode {Full_Precision}
-lappend params_list CONFIG.Output_Width {17}
-lappend params_list CONFIG.Passband_Max {0.50000000}
-lappend params_list CONFIG.Passband_Min {0.00000000}
-lappend params_list CONFIG.Pattern_List {P4-0,P4-1,P4-2,P4-3,P4-4}
-lappend params_list CONFIG.Preference_For_Other_Storage {Automatic}
-lappend params_list CONFIG.Quantization {Integer_Coefficients}
-lappend params_list CONFIG.RateSpecification {Input_Sample_Period}
-lappend params_list CONFIG.Rate_Change_Type {Integer}
-lappend params_list CONFIG.Reload_File {no_coe_file_loaded}
-lappend params_list CONFIG.Reset_Data_Vector {true}
-lappend params_list CONFIG.S_CONFIG_Method {Single}
-lappend params_list CONFIG.S_CONFIG_Sync_Mode {On_Vector}
-lappend params_list CONFIG.S_DATA_Has_FIFO {false}
-lappend params_list CONFIG.S_DATA_Has_TUSER {Not_Required}
-lappend params_list CONFIG.SamplePeriod {1.00000000}
-lappend params_list CONFIG.Sample_Frequency {0.001}
-lappend params_list CONFIG.Select_Pattern {All}
-lappend params_list CONFIG.Stopband_Max {1.00000000}
-lappend params_list CONFIG.Stopband_Min {0.50000000}
-lappend params_list CONFIG.Zero_Pack_Factor {1}
-
-set_property -dict $params_list [get_ips ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0]
 }
 
 

@@ -94,13 +94,16 @@ FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_s
 FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-08-10_1544.fpg'
 ##SERDES + FIR 16 Taps +FIFO de 2x8K Bytes
 #FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-08-10_1758.fpg'
-FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-08-10_2240.fpg'
+#FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-08-10_2240.fpg'
 
 
 ##SERDES + FIR 2 Taps +FIFO de 2x8K Bytes
 
 #FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-08-11_1151.fpg'
 
+##SERDES + FIR 16 Taps +FIFO de 2x8K Bytes
+
+FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi_fir/outputs/ethernet_one_gbe_skarab_axi_fir_2026-08-12_1506.fpg'
 
 LOOPBACK_SIMPLES =not(bool("loop" in FPG))
 PKT_LEN = 1024

@@ -15,9 +15,9 @@ Reported by:
   'ethernet_one_gbe_skarab_axi_only_simulation/ROM'
 
 Details:
-The addr port is being driven by a UFix_13_0.
-The addr port must be a UFix_14_0.
-14 bits are needed to address the specified memory depth of 8196.
+The addr port is being driven by a UFix_16_0.
+The addr port must be a UFix_15_0.
+15 bits are needed to address the specified memory depth of 32768.
 Error occurred during "Rate and Type Error Checking".
 
 --------------------------------------------------------------------------------

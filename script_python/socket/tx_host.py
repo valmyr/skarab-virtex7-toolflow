@@ -120,6 +120,19 @@ def SerDesTransform(x, zero_pad, N):
         else:
             y[i] = 0
     return y
+def signal_gen(f1=30000,f2=5000,f3=80000,A1=6,A2=16,A3=3,fs=10e+5,N=1024*8):
+  '''
+
+  '''
+  t = np.arange(0,N,1)
+  x1 = A1*np.sin(2*np.pi*(f1/fs)*t)
+  x2 = A2*np.sin(2*np.pi*(f2/fs)*t)
+  x3 = A3*np.sin(2*np.pi*(f3/fs)*t)
+  minv = np.min(x1+x2+x3)
+  maxv = np.max(x1+x2+x3)
+  signal = (((x1+x2+x3+abs(minv)).astype(np.int64))/maxv)
+  return signal
+  
 k=3
 
 t0 = time.time()
@@ -129,9 +142,9 @@ try:
     while(True):
         if(DEBUG):
             os.system("clear")
-        data1 = (np.round(2**4 * np.sin(2 * np.pi * (f1 / fs) * t) + 2**4 ).astype(np.int64))
+        data1 = signal_gen(f1=3,f2=500,f3=80,A1=6,A2=16,A3=3,fs=10e+3,N=1024)
         #data1 = np.ones(N,dtype=np.int64)
-        data1 = SerDesTransform(data1, 8, N//8)+k
+        data1 = SerDesTransform(data1, 8, N//8)
         #data1 = np.ones(N,dtype=np.int64)*k#np.arange(0,N,1,dtype=np.int64)+1 # de 1 a 255
         #data1 = np.mod(data1, N).astype(np.int64)
         #data1[N-1] = 0xcc
@@ -143,12 +156,16 @@ try:
         #array_d = struct.unpack(f'>{N}Q',data)
 
         if(DEBUG):
+            for i in range(len(data1)):
+                if((1024-i)% 8 == 0):
+                    print("==============================================")
+                print(f"data1[{i}] = {data1[i]}")
             for i in range(0,N+8):
                 print(f"\033[91m PC \033[00m -> \033[92m FPGA \033[00m:Word[{i}]={data[i]}")
             print("============================Enviado=====================",k)
         k+=1
         if(k >=256-2*2**4): k =0
-        time.sleep(1/200.)
+        #time.sleep(1/10)
 except KeyboardInterrupt:
     print("Finalizado pelo usuário")
 

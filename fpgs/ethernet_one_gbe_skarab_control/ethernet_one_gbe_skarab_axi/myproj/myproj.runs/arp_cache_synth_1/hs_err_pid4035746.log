@@ -1,0 +1,5 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/usr/lib/x86_64-linux-gnu/libc.so.6(+0x43090) [0x7f4a47a0f090]

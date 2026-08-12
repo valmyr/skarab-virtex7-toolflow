@@ -45,8 +45,9 @@ def ao_fechar(event):
     rodando = False
     print("\nJanela fechada. Loop encerrado.")
 
-fig, ax = plt.subplots(figsize=(12, 4))
-ax.set_title("e^At*sint(Bt)")
+fig, ax = plt.subplots(1,2,figsize=(12, 4))
+ax[0].set_title("e^At*sint(Bt)")
+ax[1].set_title("Sinal Recebido")
 fig.canvas.mpl_connect('close_event', ao_fechar)
 
 
@@ -136,19 +137,27 @@ def SerDesInverseTransform(x, zero_pad, N):
     return y
 y=np.zeros(N,dtype=np.int8)
 while(True):
-        #plt.ion()
-        #ax.cla()
+        plt.ion()   
+        ax[0].cla()
+        ax[1].cla()
         data, addr = sock.recvfrom((N)*8)  # Buffer de 2048 bytes
         if(DEBUG):
             os.system('clear')
 
         array_d = struct.unpack(f'>{N}Q',data)
-        array_d = SerDesInverseTransform(array_d, 8, N)
-        #ax.plot(array_d,color='red')
-        #ax_set = ax.set_ylim(0,256)
+        array_d1 = SerDesInverseTransform(array_d, 8, N)
+        ax[0].set_title("Sinal Recebido: Serial")
+        #ax[0].plot(array_d,color='red')
+        ax[0].set_ylim(0,256 )
+
+        ax[1].set_title("Sinal Recebido: Paralelo")
+        #ax[1].plot(array_d1,color='red')
+        ax[1].set_ylim(0,256  )
+        ax[0].plot(array_d)
+        ax[1].plot(array_d1)
         if(DEBUG):
             for i in range(0,N//8):
                 print(f"\033[91m FPGA \033[00m -> \033[92m PC \033[00m:Word[{i}]={np.int64(array_d[i])}")
             print(j,"============================Recebido=====================",j)
-        #plt.pause(1 /100000000000000000.0)
+        plt.pause(1 /100000000000000000.0)
         j+=1

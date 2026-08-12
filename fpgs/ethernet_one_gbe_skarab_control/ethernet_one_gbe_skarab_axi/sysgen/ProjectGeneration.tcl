@@ -58,7 +58,7 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 	set SynthesisTool {Vivado}
 	set TargetDir {/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/sysgen}
 	set TopLevelModule {ethernet_one_gbe_skarab_axi}
-	set TopLevelSimulinkHandle 74344
+	set TopLevelSimulinkHandle 79680
 	set VHDLLib {xil_defaultlib}
 	set TopLevelPortInterface {}
 	dict set TopLevelPortInterface ethernet_one_gbe_skarab_axi_tx_one_gbe_app_tx_overflow Name {ethernet_one_gbe_skarab_axi_tx_one_gbe_app_tx_overflow}

@@ -40,7 +40,7 @@ phase = 0.0             # fase inicial (rad)
 
 # Offset/escala para converter o sinal (que pode ser negativo/fracionário)
 # em inteiros >= 0, já que o pacote é empacotado como unsigned ('>Q').
-offset = 16
+offset = 4
 scale  = 1.0
 
 # Frames de sincronismo (mesmo esquema do código original)
@@ -51,7 +51,7 @@ frame_rx = np.array([0x6E, 0x61, 0x72, 0x74], dtype=np.int64)  # 'nart'
 n = np.arange(N_TOTAL)    # índice das amostras (janela completa)
 t = n / fs                # vetor de tempo (s)
 
-def signal_gen1(f1=30000,f2=5000,f3=80000,A1=6,A2=16,A3=3,fs=10e+5,N=1024*8):
+def signal_gen1(f1=30000,f2=5000,f3=80000,A1=6,A2=16,A3=3,fs=fs,N=N_TOTAL):
   '''
 
   '''
@@ -61,14 +61,14 @@ def signal_gen1(f1=30000,f2=5000,f3=80000,A1=6,A2=16,A3=3,fs=10e+5,N=1024*8):
   x3 = A3*np.sin(2*np.pi*(f3/fs)*t)
   minv = np.min(x1+x2+x3)
   maxv = np.max(x1+x2+x3)
-  signal = (((x1+x2+x3+abs(minv)).astype(np.int64))/maxv)*2**2+2*2**2
+  signal = (((x1+x2+x3+abs(minv)).astype(np.int64)))
   return signal
 def gerar_sinal2(A, alpha, t0, f, phase, t):
     """x(t) = A * exp(-alpha*(t+t0)) * cos(2*pi*f*t + phase)"""
-    return A * np.exp(-alpha * (t + t0)) * np.cos(2 * np.pi * (f) * t + phase)+64
+    return A * np.exp(-alpha * (t + t0)) * np.cos(2 * np.pi * (f) * t + phase)
 
-
-x = signal_gen1(f1=30000,f2=5000,f3=80000,A1=6,A2=16,A3=3,fs=10e+5,N=N_TOTAL)
+f_send =100
+x = signal_gen1(f1=30000,f2=f_send,f3=80000,A1=10,A2=16,A3=10,fs=fs,N=N_TOTAL)
 
 #x = gerar_sinal2(A, alpha, t0, f, phase, t)
 
@@ -77,9 +77,13 @@ x_q = np.round(scale * x + offset).astype(np.int64)
 x_q = np.clip(x_q, 0, None)  # evita valores negativos ao empacotar como unsigned
 
 if DEBUG:
+    start =0
+    stop =1024
     plt.figure(figsize=(10, 4))
-    plt.plot(t, x, label="x(t) contínuo (float)")
-    plt.plot(t, x_q, ".", markersize=3, label="x quantizado (enviado)")
+    plt.subplot(2,1,1)
+    plt.plot(t[start:stop], x[start:stop], label="x(t) contínuo (float)")
+    plt.subplot(2,1,2)
+    plt.plot(t[start:stop], x_q[start:stop], ".", markersize=3, label="x quantizado (enviado)")
     plt.xlabel("tempo (s)")
     plt.ylabel("amplitude")
     plt.title("Janela de %d amostras: A*exp(-alpha*(t+t0))*cos(2*pi*f*t+phase)" % N_TOTAL)
@@ -111,7 +115,8 @@ try:
                 n_words = len(frame_pack) // 8
                 print(f"\033[91m PC \033[00m -> \033[92m FPGA \033[00m: "
                       f"Frame {idx+1}/{n_frames} enviado ({n_words} words)")
-            time.sleep(1/100.0) #Decimação por sofware para não saturar o link. A FPGA não consegue processar mais rápido que isso.
+            
+            time.sleep(1/f_send) #Decimação por sofware para não saturar o link. A FPGA não consegue processar mais rápido que isso.
         if DEBUG:
             print("============================ Janela completa enviada ============================")
         

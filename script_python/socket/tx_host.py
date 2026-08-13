@@ -165,7 +165,7 @@ try:
             print("============================Enviado=====================",k)
         k+=1
         if(k >=256-2*2**4): k =0
-        #time.sleep(1/10)
+        time.sleep(1/10000.0)
 except KeyboardInterrupt:
     print("Finalizado pelo usuário")
 

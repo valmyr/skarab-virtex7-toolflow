@@ -77,6 +77,62 @@ fs=100000
 t=np.arange(0,window,1)
 t_step = 0
 j=0
+import numpy as np
+
+def SerDesTransform(x, zero_pad, N):
+    '''
+    Aplica um "zero-padding" (inserção de zeros) entre as amostras de um sinal,
+    tornando-o compatível com a taxa de amostragem exigida pelo SerDes do módulo
+    de controle da interface de rede Ethernet da SKARAB.
+
+    Para cada amostra do sinal de entrada, são inseridas (zero_pad - 1) amostras
+    com valor zero antes da próxima amostra original. Ou seja, o sinal original
+    aparece apenas nas posições múltiplas de "zero_pad" do sinal de saída.
+
+    Parâmetros
+    ----------
+    x : array_like
+        Sinal de entrada (amostras originais a serem transmitidas).
+    zero_pad : int
+        Fator de espaçamento: número de posições entre duas amostras
+        consecutivas do sinal original no sinal de saída (inclui a própria
+        amostra + zeros inseridos).
+    N : int
+        Número de amostras do sinal de entrada `x` que serão inseridas
+        no sinal de saída.
+
+    Retorna
+    -------
+    y : np.ndarray (dtype=int8), tamanho = zero_pad * N
+        Sinal de saída com as amostras originais espaçadas por zeros.
+
+    Exemplo
+    -------
+    Considerando N=8 e zero_pad=8:
+
+    x = [1,2,3,4,5,6,7,8]
+    y = [1,0,0,0,0,0,0,0,
+         2,0,0,0,0,0,0,0,
+         3,0,0,0,0,0,0,0,
+         4,0,0,0,0,0,0,0,
+         5,0,0,0,0,0,0,0,
+         6,0,0,0,0,0,0,0,
+         7,0,0,0,0,0,0,0,
+         8,0,0,0,0,0,0,0]
+    '''
+    y = np.zeros(zero_pad * N, dtype=np.int64)
+    k = 0
+    for i in range(N * zero_pad):
+        # A cada "zero_pad" posições, insere a próxima amostra original.
+        if ((N * zero_pad - i - 1) % zero_pad == 0):
+            y[i] = x[k]
+            k += 1
+        # Nas demais posições, mantém o zero (padding).
+        else:
+            y[i] = 0
+    return y
+
+
 def SerDesInverseTransform(x, zero_pad, N):
     '''
     Realiza a operação inversa de `SerDesTransform`: a partir de um sinal com
@@ -127,13 +183,18 @@ def SerDesInverseTransform(x, zero_pad, N):
     completa e exata do sinal original.
     '''
     k = 0
+    bits_concat = 3
     y = np.zeros(N // zero_pad, dtype=np.int64)
-    for i in range(N ):
+    for i in range(N):
         # Extrai apenas as amostras que estão nas posições múltiplas de "zero_pad",
         # descartando os zeros de padding.
-        if (N * zero_pad -i-1) % zero_pad == 0:
-            y[k] = x[i]
-            k += 1
+      if(N * zero_pad -i-1) % zero_pad == 0:
+      #if(i) % zero_pad == 0:
+          for j in range(zero_pad):
+            y[k] += pow(16,2*j)*np.uint8(x[i-j])
+          #if (N * zero_pad -i-1) % zero_pad == 0:
+          #    y[k] = x[i]
+          k += 1
     return y
 y=np.zeros(N,dtype=np.int8)
 while(True):
@@ -146,18 +207,18 @@ while(True):
 
         array_d = struct.unpack(f'>{N}Q',data)
         array_d1 = SerDesInverseTransform(array_d, 8, N)
-        ax[0].set_title("Sinal Recebido: Serial")
+        ax[0].set_title("Sinal Recebido: SerDesTransform")
         #ax[0].plot(array_d,color='red')
         ax[0].set_ylim(0,256 )
 
-        ax[1].set_title("Sinal Recebido: Paralelo")
+        ax[1].set_title("Sinal Recebido: SerDesInverseTransform")
         #ax[1].plot(array_d1,color='red')
-        ax[1].set_ylim(0,256  )
+        #ax[1].set_ylim(4100,4600)
         ax[0].plot(array_d)
         ax[1].plot(array_d1)
         if(DEBUG):
-            for i in range(0,N):
-                print(f"\033[91m FPGA \033[00m -> \033[92m PC \033[00m:Word[{i}]={np.int64(array_d[i])}")
+            for i in range(0,N//8):
+                print(f"\033[91m FPGA \033[00m -> \033[92m PC \033[00m:Word[{i}]={np.int64(array_d1[i])}")
             print(j,"============================Recebido=====================",j)
         plt.pause(1 /100000000000000000.0)
         j+=1

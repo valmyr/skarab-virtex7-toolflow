@@ -17,7 +17,7 @@ print(f"Escutando em {IP}:{PORT}")
 
 fig, ax = plt.subplots(figsize=(12, 4))
 ax.set_title("e^At*sint(Bt)")
-ax.set_ylim(0,256)
+ax.set_ylim(0,2**14)
 
 x = np.arange(SAMPLES)
 y0 = np.zeros(SAMPLES)
@@ -37,6 +37,62 @@ background = fig.canvas.copy_from_bbox(ax.bbox)
 
 PKT_SIZE = N * 8
 j = 0
+
+import numpy as np
+
+def SerDesTransform(x, zero_pad, N):
+    '''
+    Aplica um "zero-padding" (inserção de zeros) entre as amostras de um sinal,
+    tornando-o compatível com a taxa de amostragem exigida pelo SerDes do módulo
+    de controle da interface de rede Ethernet da SKARAB.
+
+    Para cada amostra do sinal de entrada, são inseridas (zero_pad - 1) amostras
+    com valor zero antes da próxima amostra original. Ou seja, o sinal original
+    aparece apenas nas posições múltiplas de "zero_pad" do sinal de saída.
+
+    Parâmetros
+    ----------
+    x : array_like
+        Sinal de entrada (amostras originais a serem transmitidas).
+    zero_pad : int
+        Fator de espaçamento: número de posições entre duas amostras
+        consecutivas do sinal original no sinal de saída (inclui a própria
+        amostra + zeros inseridos).
+    N : int
+        Número de amostras do sinal de entrada `x` que serão inseridas
+        no sinal de saída.
+
+    Retorna
+    -------
+    y : np.ndarray (dtype=int8), tamanho = zero_pad * N
+        Sinal de saída com as amostras originais espaçadas por zeros.
+
+    Exemplo
+    -------
+    Considerando N=8 e zero_pad=8:
+
+    x = [1,2,3,4,5,6,7,8]
+    y = [1,0,0,0,0,0,0,0,
+         2,0,0,0,0,0,0,0,
+         3,0,0,0,0,0,0,0,
+         4,0,0,0,0,0,0,0,
+         5,0,0,0,0,0,0,0,
+         6,0,0,0,0,0,0,0,
+         7,0,0,0,0,0,0,0,
+         8,0,0,0,0,0,0,0]
+    '''
+    y = np.zeros(zero_pad * N, dtype=np.int64)
+    k = 0
+    for i in range(N * zero_pad):
+        # A cada "zero_pad" posições, insere a próxima amostra original.
+        if ((N * zero_pad - i - 1) % zero_pad == 0):
+            y[i] = x[k]
+            k += 1
+        # Nas demais posições, mantém o zero (padding).
+        else:
+            y[i] = 0
+    return y
+
 
 def SerDesInverseTransform(x, zero_pad, N):
     '''
@@ -88,13 +144,18 @@ def SerDesInverseTransform(x, zero_pad, N):
     completa e exata do sinal original.
     '''
     k = 0
+    bits_concat = 3
     y = np.zeros(N // zero_pad, dtype=np.int64)
-    for i in range(N ):
+    for i in range(N):
         # Extrai apenas as amostras que estão nas posições múltiplas de "zero_pad",
         # descartando os zeros de padding.
-        if (N * zero_pad -i-1) % zero_pad == 0:
-            y[k] = x[i]
-            k += 1
+      if(N * zero_pad -i-1) % zero_pad == 0:
+      #if(i) % zero_pad == 0:
+          for j in range(zero_pad):
+            y[k] += pow(16,2*j)*np.uint8(x[i-j])
+          #if (N * zero_pad -i-1) % zero_pad == 0:
+          #    y[k] = x[i]
+          k += 1
     return y
 
 while rodando:

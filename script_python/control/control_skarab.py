@@ -103,6 +103,8 @@ FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_s
 
 ##SERDES + FIR 16 Taps +FIFO de 2x8K Bytes
 #FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi_fir/outputs/ethernet_one_gbe_skarab_axi_fir_2026-08-12_1506.fpg'
+#FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi_fir/outputs/ethernet_one_gbe_skarab_axi_fir_2026-08-12_1643.fpg'
+FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi_fir/outputs/ethernet_one_gbe_skarab_axi_fir_2026-08-13_1156.fpg'
 
 LOOPBACK_SIMPLES =not(bool("loop" in FPG))
 PKT_LEN = 1024
@@ -189,6 +191,13 @@ if __name__ == '__main__':
 #     plt.pause(1e-17)
 
 """"
+
+snap = fpga.snapshots.fir_filter_snapshoot_ila.read(
+    arm=True,
+    man_trig=True,
+    man_valid=True,
+    timeout=30
+)
 
 RATE = 10
 clk_ghz = fpga.estimate_fpga_clock() / 1000

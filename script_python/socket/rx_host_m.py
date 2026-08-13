@@ -156,7 +156,7 @@ while(True):
         ax[0].plot(array_d)
         ax[1].plot(array_d1)
         if(DEBUG):
-            for i in range(0,N//8):
+            for i in range(0,N):
                 print(f"\033[91m FPGA \033[00m -> \033[92m PC \033[00m:Word[{i}]={np.int64(array_d[i])}")
             print(j,"============================Recebido=====================",j)
         plt.pause(1 /100000000000000000.0)

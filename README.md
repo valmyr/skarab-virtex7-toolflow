@@ -1,12 +1,14 @@
 # skarab-virtex7-toolflow
 
 # Unidade de Controle para a Interface Ethernet do Yellow Block da CASPER
+**Orientação:** Prof. Dr. Gutemberg Gonçalves dos Santos Júnior
+
 
 **VIRTUS/UFCG** — Engenheiro: Valmir F. Silva
 
 **XMEN/UFCG** — Engenheiro: Marcos Antônio I. Luz
 
-**Orientação:** Prof. Dr. Gutemberg Gonçalves dos Santos Júnior
+
 
 **Plataforma alvo:** SKARAB (Square Kilometer Array Reconfigurable Application Board), ecossistema CASPER
 

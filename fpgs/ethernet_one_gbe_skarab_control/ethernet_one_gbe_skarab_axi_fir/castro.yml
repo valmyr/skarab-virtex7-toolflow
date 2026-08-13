@@ -28,217 +28,235 @@ mm_slaves:
   span: 131072
 - !!python/object:castro.mm_slave
   base_address: 2148843520
-  high_address: 2149105664
+  high_address: 2148859904
+  mode: 3
+  name: fir_filter_snapshoot_ila_bram
+  span: 16384
+- !!python/object:castro.mm_slave
+  base_address: 2148859904
+  high_address: 2149122048
   mode: 3
   name: pkt_ctrs1_ss_bram
   span: 262144
 - !!python/object:castro.mm_slave
-  base_address: 2149105664
-  high_address: 2149171200
+  base_address: 2149122048
+  high_address: 2149187584
   mode: 3
   name: pkt_ctrs_compare1_ss_bram
   span: 65536
 - !!python/object:castro.mm_slave
-  base_address: 2149171200
-  high_address: 2149171204
+  base_address: 2149187584
+  high_address: 2149187588
   mode: 3
   name: addr_data_fifo
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171204
-  high_address: 2149171208
+  base_address: 2149187588
+  high_address: 2149187592
   mode: 3
   name: addr_data_gbe
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171208
-  high_address: 2149171212
+  base_address: 2149187592
+  high_address: 2149187596
   mode: 1
   name: clk_mhz
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171212
-  high_address: 2149171216
+  base_address: 2149187596
+  high_address: 2149187600
   mode: 3
   name: d3_ss_ctrl
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171216
-  high_address: 2149171220
+  base_address: 2149187600
+  high_address: 2149187604
   mode: 1
   name: d3_ss_status
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171220
-  high_address: 2149171224
+  base_address: 2149187604
+  high_address: 2149187608
   mode: 3
   name: d4_ss_ctrl
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171224
-  high_address: 2149171228
+  base_address: 2149187608
+  high_address: 2149187612
   mode: 1
   name: d4_ss_status
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171228
-  high_address: 2149171232
+  base_address: 2149187612
+  high_address: 2149187616
   mode: 3
   name: d5_ss_ctrl
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171232
-  high_address: 2149171236
+  base_address: 2149187616
+  high_address: 2149187620
   mode: 1
   name: d5_ss_status
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171236
-  high_address: 2149171240
+  base_address: 2149187620
+  high_address: 2149187624
   mode: 1
   name: data_rx_valmir
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171240
-  high_address: 2149171244
+  base_address: 2149187624
+  high_address: 2149187628
   mode: 1
   name: debug_rx_data_mem_fifo
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171244
-  high_address: 2149171248
+  base_address: 2149187628
+  high_address: 2149187632
   mode: 1
   name: debug_rx_data_mem_gbe
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171248
-  high_address: 2149171252
+  base_address: 2149187632
+  high_address: 2149187636
   mode: 3
   name: dec_factor
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171252
-  high_address: 2149171256
+  base_address: 2149187636
+  high_address: 2149187640
   mode: 1
   name: err_marker1
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171256
-  high_address: 2149171260
+  base_address: 2149187640
+  high_address: 2149187644
   mode: 1
   name: err_pkt_ctr1
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171260
-  high_address: 2149171264
+  base_address: 2149187644
+  high_address: 2149187648
   mode: 1
   name: err_pkt_ctr_step1
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171264
-  high_address: 2149171268
+  base_address: 2149187648
+  high_address: 2149187652
   mode: 1
   name: err_ramp1
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171268
-  high_address: 2149171272
+  base_address: 2149187652
+  high_address: 2149187656
   mode: 1
   name: err_valid_raw1
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171272
-  high_address: 2149171276
+  base_address: 2149187656
+  high_address: 2149187660
   mode: 1
   name: err_walk1
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171276
-  high_address: 2149171280
+  base_address: 2149187660
+  high_address: 2149187664
+  mode: 3
+  name: fir_filter_snapshoot_ila_ctrl
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149187664
+  high_address: 2149187668
+  mode: 1
+  name: fir_filter_snapshoot_ila_status
+  span: 4
+- !!python/object:castro.mm_slave
+  base_address: 2149187668
+  high_address: 2149187672
   mode: 3
   name: pkt_ctrs1_ss_ctrl
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171280
-  high_address: 2149171284
+  base_address: 2149187672
+  high_address: 2149187676
   mode: 1
   name: pkt_ctrs1_ss_status
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171284
-  high_address: 2149171288
+  base_address: 2149187676
+  high_address: 2149187680
   mode: 3
   name: pkt_ctrs_compare1_ss_ctrl
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171288
-  high_address: 2149171292
+  base_address: 2149187680
+  high_address: 2149187684
   mode: 1
   name: pkt_ctrs_compare1_ss_status
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171292
-  high_address: 2149171296
+  base_address: 2149187684
+  high_address: 2149187688
   mode: 3
   name: read_gbe_or_fifo
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171296
-  high_address: 2149171300
+  base_address: 2149187688
+  high_address: 2149187692
   mode: 1
   name: rx_badframe1
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171300
-  high_address: 2149171304
+  base_address: 2149187692
+  high_address: 2149187696
   mode: 3
   name: rx_control1
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171304
-  high_address: 2149171308
+  base_address: 2149187696
+  high_address: 2149187700
   mode: 1
   name: rx_eof1
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171308
-  high_address: 2149171312
+  base_address: 2149187700
+  high_address: 2149187704
   mode: 1
   name: rx_overrun1
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171312
-  high_address: 2149171316
+  base_address: 2149187704
+  high_address: 2149187708
   mode: 1
   name: rx_valid1
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171316
-  high_address: 2149171320
+  base_address: 2149187708
+  high_address: 2149187712
   mode: 1
   name: tx_afull1
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171320
-  high_address: 2149171324
+  base_address: 2149187712
+  high_address: 2149187716
   mode: 3
   name: tx_control
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171324
-  high_address: 2149171328
+  base_address: 2149187716
+  high_address: 2149187720
   mode: 1
   name: tx_overflow1
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171328
-  high_address: 2149171332
+  base_address: 2149187720
+  high_address: 2149187724
   mode: 1
   name: vaild_rx_valmir1
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 2149171332
-  high_address: 2149171364
+  base_address: 2149187724
+  high_address: 2149187756
   mode: 1
   name: sys_block
   span: 32
@@ -265,6 +283,9 @@ src_files:
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_bram
+- /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_bram
 - /home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
@@ -336,6 +357,7 @@ src_files:
 - /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi_fir/sysgen/hdl_netlist/ethernet_one_gbe_skarab_axi_fir.srcs/sources_1/ip/ethernet_one_gbe_skarab_axi_fir_c_counter_binary_v12_0_i3/ethernet_one_gbe_skarab_axi_fir_c_counter_binary_v12_0_i3.xci
 - /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi_fir/sysgen/hdl_netlist/ethernet_one_gbe_skarab_axi_fir.srcs/sources_1/ip/ethernet_one_gbe_skarab_axi_fir_fir_compiler_v7_2_i0/ethernet_one_gbe_skarab_axi_fir_fir_compiler_v7_2_i0.xci
 - /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi_fir/sysgen/hdl_netlist/ethernet_one_gbe_skarab_axi_fir.srcs/sources_1/ip/ethernet_one_gbe_skarab_axi_fir_c_counter_binary_v12_0_i2/ethernet_one_gbe_skarab_axi_fir_c_counter_binary_v12_0_i2.xci
+- /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi_fir/sysgen/hdl_netlist/ethernet_one_gbe_skarab_axi_fir.srcs/sources_1/ip/ethernet_one_gbe_skarab_axi_fir_c_counter_binary_v12_0_i5/ethernet_one_gbe_skarab_axi_fir_c_counter_binary_v12_0_i5.xci
 - /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi_fir/sysgen/hdl_netlist/ethernet_one_gbe_skarab_axi_fir.srcs/sources_1/ip/ethernet_one_gbe_skarab_axi_fir_c_counter_binary_v12_0_i0/ethernet_one_gbe_skarab_axi_fir_c_counter_binary_v12_0_i0.xci
 - /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi_fir/sysgen/hdl_netlist/ethernet_one_gbe_skarab_axi_fir.srcs/sources_1/ip/ethernet_one_gbe_skarab_axi_fir_c_addsub_v12_0_i0/ethernet_one_gbe_skarab_axi_fir_c_addsub_v12_0_i0.xci
 - /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi_fir/sysgen/hdl_netlist/ethernet_one_gbe_skarab_axi_fir.srcs/sources_1/ip/ethernet_one_gbe_skarab_axi_fir_c_counter_binary_v12_0_i1/ethernet_one_gbe_skarab_axi_fir_c_counter_binary_v12_0_i1.xci

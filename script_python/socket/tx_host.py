@@ -130,7 +130,7 @@ def signal_gen(f1=30000,f2=5000,f3=80000,A1=6,A2=16,A3=3,fs=10e+5,N=1024*8):
   x3 = A3*np.sin(2*np.pi*(f3/fs)*t)
   minv = np.min(x1+x2+x3)
   maxv = np.max(x1+x2+x3)
-  signal = (((x1+x2+x3+abs(minv)).astype(np.int64))/maxv)
+  signal = (((x1+x2+x3+abs(minv)).astype(np.int64))/maxv)*2**6
   return signal
   
 k=3
@@ -142,7 +142,7 @@ try:
     while(True):
         if(DEBUG):
             os.system("clear")
-        data1 = signal_gen(f1=3,f2=500,f3=80,A1=6,A2=16,A3=3,fs=10e+3,N=1024)
+        data1 = signal_gen(f1=30,f2=50000,f3=8000,A1=6,A2=16,A3=3,fs=10e+3,N=1024)
         #data1 = np.ones(N,dtype=np.int64)
         data1 = SerDesTransform(data1, 8, N//8)
         #data1 = np.ones(N,dtype=np.int64)*k#np.arange(0,N,1,dtype=np.int64)+1 # de 1 a 255

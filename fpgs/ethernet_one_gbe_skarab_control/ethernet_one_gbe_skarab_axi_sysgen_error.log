@@ -1,25 +1,120 @@
 --------------------------------- Version Log ----------------------------------
 Version                                 Path
-System Generator 2019.1                 /tools/Xilinx/Vivado/2019.1
+System Generator 2019.1                 /usr/local/Xilinx/Vivado/2019.1
 Matlab 9.4.0.813654 (R2018a)            /usr/local/MATLAB/R2018a
-Vivado 2019.1                           /tools/Xilinx/Vivado/2019.1
+Vivado 2019.1                           /usr/local/Xilinx/Vivado/2019.1
 --------------------------------------------------------------------------------
 Summary of Errors:
-Error 0001: Validation failed for parameter 'Sample Period (Clock Cyc...
-     Block: 'ethernet_one_gbe_skarab_axi/FIR Compiler 7.2'
+Error 0001: File, /skarab/skarab-gbe-control/fpgs/ethernet_one_gbe_sk...
+     Block: 'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
+Error 0002: File, /deserializer.v, does not exist.
+     Block: 'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
+Error 0003: File, /serializer.v, does not exist.
+     Block: 'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
+Error 0004: File, /skarab/skarab-gbe-control/fpgs/ethernet_one_gbe_sk...
+     Block: 'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
+Error 0005: File, /skarab/skarab-gbe-control/fpgs/ethernet_one_gbe_sk...
+     Block: 'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
+Error 0006: File, /deserializer.v, does not exist.
+     Block: 'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
+Error 0007: File, /serializer.v, does not exist.
+     Block: 'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
+Error 0008: File, /skarab/skarab-gbe-control/fpgs/ethernet_one_gbe_sk...
+     Block: 'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
 --------------------------------------------------------------------------------
 
 Error 0001:
 
 Reported by:
-  'ethernet_one_gbe_skarab_axi/FIR Compiler 7.2'
+  'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
 
 Details:
-Validation failed for parameter 'Sample Period (Clock
-Cycles)(SamplePeriod)'  Value '-1' is out of the range (1.0,10000000.0)
-Value 'Inferred' is out of the range for parameter 'Coefficient
-Structure(Coefficient_Structure)'  Valid values are - Non_Symmetric
+File,
+/skarab/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/cmd_sync_detector.v,
+does not exist.
+Error occurred during "Rate and Type Propagation".
 
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
+
+Details:
+File, /deserializer.v, does not exist.
+Error occurred during "Rate and Type Propagation".
+
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
+
+Details:
+File, /serializer.v, does not exist.
+Error occurred during "Rate and Type Propagation".
+
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
+
+Details:
+File,
+/skarab/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/control_axi_stream_gbe.v,
+does not exist.
+Error occurred during "Rate and Type Propagation".
+
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
+
+Details:
+File,
+/skarab/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/cmd_sync_detector.v,
+does not exist.
+Error occurred during "Rate and Type Error Checking".
+
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
+
+Details:
+File, /deserializer.v, does not exist.
+Error occurred during "Rate and Type Error Checking".
+
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
+
+Details:
+File, /serializer.v, does not exist.
+Error occurred during "Rate and Type Error Checking".
+
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'ethernet_one_gbe_skarab_axi/System_Control_One_GBE_Skarab2'
+
+Details:
+File,
+/skarab/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/control_axi_stream_gbe.v,
+does not exist.
 Error occurred during "Rate and Type Error Checking".
 
 --------------------------------------------------------------------------------

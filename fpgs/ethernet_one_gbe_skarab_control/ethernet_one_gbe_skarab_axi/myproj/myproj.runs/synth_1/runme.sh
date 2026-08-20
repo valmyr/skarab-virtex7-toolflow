@@ -7,20 +7,20 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/tools/Xilinx/SDK/2019.1/bin:/tools/Xilinx/Vivado/2019.1/ids_lite/ISE/bin/lin64:/tools/Xilinx/Vivado/2019.1/bin
+  PATH=/usr/local/Xilinx/SDK/2019.1/bin:/usr/local/Xilinx/Vivado/2019.1/ids_lite/ISE/bin/lin64:/usr/local/Xilinx/Vivado/2019.1/bin
 else
-  PATH=/tools/Xilinx/SDK/2019.1/bin:/tools/Xilinx/Vivado/2019.1/ids_lite/ISE/bin/lin64:/tools/Xilinx/Vivado/2019.1/bin:$PATH
+  PATH=/usr/local/Xilinx/SDK/2019.1/bin:/usr/local/Xilinx/Vivado/2019.1/ids_lite/ISE/bin/lin64:/usr/local/Xilinx/Vivado/2019.1/bin:$PATH
 fi
 export PATH
 
 if [ -z "$LD_LIBRARY_PATH" ]; then
-  LD_LIBRARY_PATH=/tools/Xilinx/Vivado/2019.1/ids_lite/ISE/lib/lin64
+  LD_LIBRARY_PATH=/usr/local/Xilinx/Vivado/2019.1/ids_lite/ISE/lib/lin64
 else
-  LD_LIBRARY_PATH=/tools/Xilinx/Vivado/2019.1/ids_lite/ISE/lib/lin64:$LD_LIBRARY_PATH
+  LD_LIBRARY_PATH=/usr/local/Xilinx/Vivado/2019.1/ids_lite/ISE/lib/lin64:$LD_LIBRARY_PATH
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1'
+HD_PWD='/skarab/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

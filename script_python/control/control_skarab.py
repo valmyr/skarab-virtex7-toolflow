@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #!/usr/bin/env python2
 """
 Script de teste do SKARAB (loopback / FIFO / AXI ethernet_one_gbe).
@@ -105,7 +106,7 @@ FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_s
 #FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi_fir/outputs/ethernet_one_gbe_skarab_axi_fir_2026-08-12_1506.fpg'
 #FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi_fir/outputs/ethernet_one_gbe_skarab_axi_fir_2026-08-12_1643.fpg'
 FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi_fir/outputs/ethernet_one_gbe_skarab_axi_fir_2026-08-13_1156.fpg'
-
+FPG='/skarab/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_control/outputs/ethernet_one_gbe_skarab_control_2026-06-15_2313.fpg'
 LOOPBACK_SIMPLES =not(bool("loop" in FPG))
 PKT_LEN = 1024
 

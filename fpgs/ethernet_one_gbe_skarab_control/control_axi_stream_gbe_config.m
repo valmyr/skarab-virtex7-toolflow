@@ -153,22 +153,17 @@ function control_axi_stream_gbe_config(this_block)
   %    this_block.addFile('');
   %    this_block.addFile('');
 
-  this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/cmd_sync_detector.v');
-  this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/serdes/deserializer.v');
-  this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/serdes/serializer.v');
-  this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe.v');
-    
+% Pega o diretório onde este .m está localizado
+  this_path = fileparts(mfilename('fullpath'));
   
-  %this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/sync_fifo_peek.v')
+  % Sobe 2 níveis até a raiz do projeto (skarab-gbe-control)
+  % e desce até a pasta com os .v
+  verilog_dir = fullfile(this_path, '..', '..', 'verilog_custom', 'onegbe_skarab');
   
-  %this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/cmd_sync_detector.v');
-  %f1 = this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/serdes/deserializer.sv');
-  %f1.setFileType('SystemVerilog');
-  
-  %f2 = this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/serdes/serializer.sv');
-  %f2.setFileType('SystemVerilog');
-  
-  %this_block.addFile('/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/verilog_custom/onegbe_skarab/control_axi_stream_gbe_checkpoint_fifos_serdes.v');
+  this_block.addFile(fullfile(verilog_dir, 'cmd_sync_detector.v'));
+  this_block.addFile(fullfile(verilog_dir, 'serdes', 'deserializer.v'));
+  this_block.addFile(fullfile(verilog_dir, 'serdes', 'serializer.v'));
+  this_block.addFile(fullfile(verilog_dir, 'control_axi_stream_gbe.v'));
 return;
 
 

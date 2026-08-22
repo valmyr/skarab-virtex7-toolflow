@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-// Date        : Thu Aug  6 23:34:14 2026
-// Host        : valmyrsilva07-B760M-AORUS-ELITE running 64-bit Ubuntu 20.04.6 LTS
+// Date        : Sat Aug 22 13:40:41 2026
+// Host        : VT0144 running 64-bit Rocky Linux release 8.10 (Green Obsidian)
 // Command     : write_verilog -force -mode synth_stub
-//               /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4_stub.v
+//               /skarab/projetos/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4_stub.v
 // Design      : ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7vx690tffg1927-2
@@ -15,9 +15,9 @@
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "c_counter_binary_v12_0_13,Vivado 2019.1" *)
 module ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4(CLK, CE, SCLR, Q)
-/* synthesis syn_black_box black_box_pad_pin="CLK,CE,SCLR,Q[16:0]" */;
+/* synthesis syn_black_box black_box_pad_pin="CLK,CE,SCLR,Q[31:0]" */;
   input CLK;
   input CE;
   input SCLR;
-  output [16:0]Q;
+  output [31:0]Q;
 endmodule

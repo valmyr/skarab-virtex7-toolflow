@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Aug 22 13:40:12 2026
+# Process ID: 172114
+# Current directory: /skarab/projetos/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i8_synth_1
+# Command line: vivado -log ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i8.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i8.tcl
+# Log file: /skarab/projetos/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i8_synth_1/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i8.vds
+# Journal file: /skarab/projetos/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i8_synth_1/vivado.jou
+#-----------------------------------------------------------
+source ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i8.tcl -notrace

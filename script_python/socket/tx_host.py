@@ -46,7 +46,7 @@ f=78
 
 #sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 #sock.bind((IP, PORT))
-N= 256
+N= 1024
 
 
 frame_rx = np.array(([0x6E,0x61,0x72,0x74]),dtype=np.int8)
@@ -59,6 +59,18 @@ f3=700
 fs=10e+4
 t = np.arange(0,N,1)
 
+def signal_gen1(f1=30000,f2=5000,f3=80000,A1=6,A2=16,A3=3,fs=fs,N=N_TOTAL):
+  '''
+
+  '''
+  t = np.arange(0,N,1)
+  x1 = A1*np.sin(2*np.pi*(f1/fs)*t)
+  x2 = A2*np.sin(2*np.pi*(f2/fs)*t)
+  x3 = A3*np.sin(2*np.pi*(f3/fs)*t)
+  minv = np.min(x1+x2+x3)
+  maxv = np.max(x1+x2+x3)
+  signal = (((x1+x2+x3+abs(minv)).astype(np.int64)))
+  return signal
 
 data1=np.arange(start=0,stop=N,dtype=np.int64)+   3
 #data1=np.ones(N-8,dtype=np.int64)*35
@@ -78,7 +90,11 @@ try:
     while(True):
         if(DEBUG):
             os.system("clear")
-        data1 = (np.round(2**4 * np.sin(2 * np.pi * (f1 / fs) * t) + 2**4+k ).astype(np.int64))
+        data1 = np.zeros(1024,np.int64)
+        data1[0]  =np.int64(255)
+        data1[512]  =np.int64(255)
+
+        #data1[127]  =np.int64(100)
         #data1 = np.ones(N,dtype=np.int64)*k#np.arange(0,N,1,dtype=np.int64)+1 # de 1 a 255
         #data1 = np.mod(data1, N).astype(np.int64)
         #data1[N-1] = 0xcc
@@ -95,7 +111,7 @@ try:
             print("============================Enviado=====================",k)
         k+=1
         if(k >=256-2*2**4): k =0
-        time.sleep(10)
+        #time.sleep(10)
 except KeyboardInterrupt:
     print("Finalizado pelo usuário")
 

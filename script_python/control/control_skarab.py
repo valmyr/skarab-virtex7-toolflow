@@ -8,7 +8,7 @@ Ativar o virtualenv antes de rodar:
 
 import time
 from random import randint
-
+from matplotlib import pyplot as plt
 import casperfpga
 
 # ---------------------------------------------------------------------------
@@ -87,8 +87,8 @@ FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_s
 FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-08-06_2316.fpg'
 FPG='/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-08-06_2333.fpg'
 
-
-
+FPG='/skarab/projetos/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-08-21_1921.fpg'
+FPG='/skarab/projetos/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/outputs/ethernet_one_gbe_skarab_axi_2026-08-21_2154.fpg'
 
 
 
@@ -141,7 +141,10 @@ def control_fan(pwm=30):
 # ---------------------------------------------------------------------------
 # Execução
 # ---------------------------------------------------------------------------
+plt.ion()
 
+fig, ax = plt.subplots()
+line, = ax.plot([])
 def main():
     control_fan(pwm=randint(0, 8) + 1)
 
@@ -165,6 +168,21 @@ def main():
         debug_mem(ADDR_FIFO, DATA_FIFO, start=0, stop=256)
 
     control_fan(1)
+    i=0
+    while True:
+        snap = fpga.snapshots.input_fir.read(
+            arm=True,
+            timeout=120
+        )
+        data = snap['data']['data']
+        line.set_data(range(len(data)), data)
+        ax.relim()
+        ax.autoscale_view()
+        fig.canvas.draw()
+        fig.canvas.flush_events()
+        plt.pause(0.01)
+        print(i)
+        i+=1
 if __name__ == '__main__':
     main()
 

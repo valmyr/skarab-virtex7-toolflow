@@ -13,6 +13,12 @@ entity ethernet_one_gbe_skarab_axi_stub is
     ethernet_one_gbe_skarab_axi_d5_ss_bram_data_out : in std_logic_vector( 128-1 downto 0 );
     skarab_tx_1gbe_tx_rx_valmir_d5_ss_ctrl_user_data_out : in std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out : in std_logic_vector( 32-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_input_fir_bram_data_out : in std_logic_vector( 8-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_input_fir_ctrl_user_data_out : in std_logic_vector( 32-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_input_fir_trig_offset_user_data_out : in std_logic_vector( 32-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_output_fir_bram_data_out : in std_logic_vector( 32-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_output_fir_ctrl_user_data_out : in std_logic_vector( 32-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_output_fir_trig_offset_user_data_out : in std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_data_out : in std_logic_vector( 32-1 downto 0 );
     skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs1_ss_ctrl_user_data_out : in std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram_data_out : in std_logic_vector( 64-1 downto 0 );
@@ -54,6 +60,14 @@ entity ethernet_one_gbe_skarab_axi_stub is
     ethernet_one_gbe_skarab_axi_err_ramp1_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_err_valid_raw1_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_err_walk1_user_data_in : out std_logic_vector( 32-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_input_fir_bram_addr : out std_logic_vector( 12-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_input_fir_bram_data_in : out std_logic_vector( 8-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_input_fir_bram_we : out std_logic_vector( 1-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_input_fir_status_user_data_in : out std_logic_vector( 32-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_output_fir_bram_addr : out std_logic_vector( 12-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_output_fir_bram_data_in : out std_logic_vector( 32-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_output_fir_bram_we : out std_logic_vector( 1-1 downto 0 );
+    ethernet_one_gbe_skarab_axi_output_fir_status_user_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_addr : out std_logic_vector( 16-1 downto 0 );
     ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_data_in : out std_logic_vector( 32-1 downto 0 );
     ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_we : out std_logic_vector( 1-1 downto 0 );
@@ -92,6 +106,12 @@ begin
     ethernet_one_gbe_skarab_axi_d5_ss_bram_data_out => ethernet_one_gbe_skarab_axi_d5_ss_bram_data_out,
     skarab_tx_1gbe_tx_rx_valmir_d5_ss_ctrl_user_data_out => skarab_tx_1gbe_tx_rx_valmir_d5_ss_ctrl_user_data_out,
     ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out => ethernet_one_gbe_skarab_axi_dec_dactor_user_data_out,
+    ethernet_one_gbe_skarab_axi_input_fir_bram_data_out => ethernet_one_gbe_skarab_axi_input_fir_bram_data_out,
+    ethernet_one_gbe_skarab_axi_input_fir_ctrl_user_data_out => ethernet_one_gbe_skarab_axi_input_fir_ctrl_user_data_out,
+    ethernet_one_gbe_skarab_axi_input_fir_trig_offset_user_data_out => ethernet_one_gbe_skarab_axi_input_fir_trig_offset_user_data_out,
+    ethernet_one_gbe_skarab_axi_output_fir_bram_data_out => ethernet_one_gbe_skarab_axi_output_fir_bram_data_out,
+    ethernet_one_gbe_skarab_axi_output_fir_ctrl_user_data_out => ethernet_one_gbe_skarab_axi_output_fir_ctrl_user_data_out,
+    ethernet_one_gbe_skarab_axi_output_fir_trig_offset_user_data_out => ethernet_one_gbe_skarab_axi_output_fir_trig_offset_user_data_out,
     ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_data_out => ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_data_out,
     skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs1_ss_ctrl_user_data_out => skarab_tx_1gbe_tx_rx_valmir_pkt_ctrs1_ss_ctrl_user_data_out,
     ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram_data_out => ethernet_one_gbe_skarab_axi_pkt_ctrs_compare1_ss_bram_data_out,
@@ -133,6 +153,14 @@ begin
     ethernet_one_gbe_skarab_axi_err_ramp1_user_data_in => ethernet_one_gbe_skarab_axi_err_ramp1_user_data_in,
     ethernet_one_gbe_skarab_axi_err_valid_raw1_user_data_in => ethernet_one_gbe_skarab_axi_err_valid_raw1_user_data_in,
     ethernet_one_gbe_skarab_axi_err_walk1_user_data_in => ethernet_one_gbe_skarab_axi_err_walk1_user_data_in,
+    ethernet_one_gbe_skarab_axi_input_fir_bram_addr => ethernet_one_gbe_skarab_axi_input_fir_bram_addr,
+    ethernet_one_gbe_skarab_axi_input_fir_bram_data_in => ethernet_one_gbe_skarab_axi_input_fir_bram_data_in,
+    ethernet_one_gbe_skarab_axi_input_fir_bram_we => ethernet_one_gbe_skarab_axi_input_fir_bram_we,
+    ethernet_one_gbe_skarab_axi_input_fir_status_user_data_in => ethernet_one_gbe_skarab_axi_input_fir_status_user_data_in,
+    ethernet_one_gbe_skarab_axi_output_fir_bram_addr => ethernet_one_gbe_skarab_axi_output_fir_bram_addr,
+    ethernet_one_gbe_skarab_axi_output_fir_bram_data_in => ethernet_one_gbe_skarab_axi_output_fir_bram_data_in,
+    ethernet_one_gbe_skarab_axi_output_fir_bram_we => ethernet_one_gbe_skarab_axi_output_fir_bram_we,
+    ethernet_one_gbe_skarab_axi_output_fir_status_user_data_in => ethernet_one_gbe_skarab_axi_output_fir_status_user_data_in,
     ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_addr => ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_addr,
     ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_data_in => ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_data_in,
     ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_we => ethernet_one_gbe_skarab_axi_pkt_ctrs1_ss_bram_we,

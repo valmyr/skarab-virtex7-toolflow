@@ -2,150 +2,151 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Aug  6 23:33:52 2026
-# Process ID: 687886
-# Current directory: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0_synth_1
+# Start of session at: Sat Aug 22 13:40:12 2026
+# Process ID: 172121
+# Current directory: /skarab/projetos/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0_synth_1
 # Command line: vivado -log ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0.tcl
-# Log file: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0_synth_1/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0.vds
-# Journal file: /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0_synth_1/vivado.jou
+# Log file: /skarab/projetos/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0_synth_1/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0.vds
+# Journal file: /skarab/projetos/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0_synth_1/vivado.jou
 #-----------------------------------------------------------
-WARNING: [Runs 36-547] Tool Strategy 'Vivado Implementation Defaults' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_Explore' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_ExplorePostRoutePhysOpt' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_RefinePlacement' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_WLBlockPlacement' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_WLBlockPlacementFanoutOpt' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_NetDelay_high' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_NetDelay_medium' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_NetDelay_low' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_ExploreSLLs' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_Retiming' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Area_Explore' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Power_DefaultOpt' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_RunPhysOpt' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_RunPostRoutePhysOpt' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_RuntimeOptimized' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_Quick' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogic_high' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogic_medium' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogic_low' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogicSLLs' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Congestion_BalanceSLLs' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Congestion_BalanceSLRs' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Congestion_CompressSLRs' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2015.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Vivado Synthesis Defaults' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2012.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2012.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Vivado Implementation Defaults' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2012.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2012.psg'
-WARNING: [Runs 36-547] Tool Strategy 'HighEffort' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2012.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2012.psg'
-WARNING: [Runs 36-547] Tool Strategy 'HighEffortPhySynth' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2012.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2012.psg'
-WARNING: [Runs 36-547] Tool Strategy 'LowEffort' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2012.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2012.psg'
-WARNING: [Runs 36-547] Tool Strategy 'QuickEffort' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2012.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2012.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Vivado Synthesis Defaults' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_RuntimeOptimized' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_AreaOptimized_High' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_PerfOptimized_High' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Vivado Synthesis Defaults' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2018.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2018.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_AreaOptimized_high' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2018.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2018.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_AreaOptimized_medium' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2018.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2018.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_AreaMultThresholdDSP' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2018.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2018.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_AlternateRoutability' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2018.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2018.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_PerfOptimized_high' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2018.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2018.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_PerfThresholdCarry' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2018.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2018.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_RuntimeOptimized' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2018.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2018.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Vivado Synthesis Defaults' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_AreaOptimized_high' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_AreaOptimized_medium' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_AreaMultThresholdDSP' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_AlternateRoutability' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_PerfOptimized_high' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_PerfThresholdCarry' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_RuntimeOptimized' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Vivado Synthesis Defaults' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2013.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2013.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_RuntimeOptimized' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDS2013.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDS2013.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Vivado Implementation Defaults' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_Explore' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_ExplorePostRoutePhysOpt' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_WLBlockPlacement' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_WLBlockPlacementFanoutOpt' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_EarlyBlockPlacement' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_NetDelay_high' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_NetDelay_low' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_Retiming' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_ExtraTimingOpt' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_RefinePlacement' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_SpreadSLLs' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_BalanceSLLs' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogic_high' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogic_medium' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogic_low' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogic_Explore' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Congestion_SSI_SpreadLogic_high' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Congestion_SSI_SpreadLogic_low' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Congestion_SSI_SpreadLogic_Explore' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Area_Explore' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Area_ExploreSequential' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Area_ExploreWithRemap' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Power_DefaultOpt' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Power_ExploreArea' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_RunPhysOpt' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_RunPostRoutePhysOpt' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_RuntimeOptimized' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_Quick' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2017.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Vivado Implementation Defaults' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_Explore' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_ExplorePostRoutePhysOpt' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_RefinePlacement' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_WLBlockPlacement' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_WLBlockPlacementFanoutOpt' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_LateBlockPlacement' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_NetDelay_high' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_NetDelay_medium' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_NetDelay_low' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_ExploreSLLs' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Performance_Retiming' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Area_Explore' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Power_DefaultOpt' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_RunPhysOpt' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_RunPostRoutePhysOpt' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_RuntimeOptimized' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Flow_Quick' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
-WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogic_high' from file '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Vivado Synthesis Defaults' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_RuntimeOptimized' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_AreaOptimized_High' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_PerfOptimized_High' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Vivado Implementation Defaults' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_Explore' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_ExplorePostRoutePhysOpt' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_RefinePlacement' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_WLBlockPlacement' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_WLBlockPlacementFanoutOpt' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_LateBlockPlacement' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_NetDelay_high' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_NetDelay_medium' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_NetDelay_low' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_ExploreSLLs' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_Retiming' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Area_Explore' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Power_DefaultOpt' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_RunPhysOpt' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_RunPostRoutePhysOpt' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_RuntimeOptimized' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_Quick' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogic_high' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogic_medium' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogic_low' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogicSLLs' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_BalanceSLLs' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_BalanceSLRs' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_CompressSLRs' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2014.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Vivado Synthesis Defaults' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2018.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2018.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_AreaOptimized_high' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2018.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2018.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_AreaOptimized_medium' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2018.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2018.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_AreaMultThresholdDSP' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2018.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2018.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_AlternateRoutability' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2018.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2018.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_PerfOptimized_high' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2018.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2018.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_PerfThresholdCarry' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2018.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2018.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_RuntimeOptimized' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2018.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2018.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Rodin Implementation Defaults' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/RDI13.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/RDI13.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Vivado Synthesis Defaults' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2019.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2019.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_AreaOptimized_high' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2019.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2019.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_AreaOptimized_medium' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2019.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2019.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_AreaMultThresholdDSP' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2019.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2019.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_AlternateRoutability' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2019.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2019.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_PerfOptimized_high' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2019.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2019.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_PerfThresholdCarry' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2019.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2019.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_RuntimeOptimized' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2019.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2019.psg'
+WARNING: [Runs 36-547] Tool Strategy 'HLS Compile C Defaults' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/CC2015.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/CC2015.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Vivado Synthesis Defaults' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_RuntimeOptimized' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Vivado Implementation Defaults' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_Explore' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_RefinePlacement' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_WLBlockPlacement' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_WLBlockPlacementFanoutOpt' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_LateBlockPlacement' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_NetDelay_high' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_NetDelay_medium' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_NetDelay_low' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_ExploreSLLs' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Area_Explore' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Power_DefaultOpt' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_RunPhysOpt' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_RuntimeOptimized' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_Quick' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogic_high' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogic_medium' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogic_low' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogicSLLs' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_BalanceSLLs' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_BalanceSLRs' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_CompressSLRs' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2013.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Vivado Synthesis Defaults' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2012.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDS2012.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Vivado Implementation Defaults' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_Explore' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_ExplorePostRoutePhysOpt' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_WLBlockPlacement' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_WLBlockPlacementFanoutOpt' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_NetDelay_high' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_NetDelay_low' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_Retiming' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_ExtraTimingOpt' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_RefinePlacement' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_SpreadSLLs' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Performance_BalanceSLLs' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogic_high' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogic_medium' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogic_low' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_SpreadLogic_Explore' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_SSI_SpreadLogic_high' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_SSI_SpreadLogic_low' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Congestion_SSI_SpreadLogic_Explore' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Area_Explore' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Area_ExploreSequential' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Area_ExploreWithRemap' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Power_DefaultOpt' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Power_ExploreArea' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_RunPhysOpt' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_RunPostRoutePhysOpt' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_RuntimeOptimized' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
+WARNING: [Runs 36-547] Tool Strategy 'Flow_Quick' from file '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/strategies/VDI2016.psg'
 INFO: [Common 17-14] Message 'Runs 36-547' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Runs 36-546] Tool Report Strategy 'Vivado Implementation Default Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2017.psg'
-WARNING: [Runs 36-546] Tool Report Strategy 'UltraFast Design Methodology Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2017.psg'
-WARNING: [Runs 36-546] Tool Report Strategy 'Performance Explore Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2017.psg'
-WARNING: [Runs 36-546] Tool Report Strategy 'Timing Closure Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2017.psg'
-WARNING: [Runs 36-546] Tool Report Strategy 'No Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2017.psg'
-WARNING: [Runs 36-546] Tool Report Strategy 'Vivado Implementation Default Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2018.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2018.psg'
-WARNING: [Runs 36-546] Tool Report Strategy 'UltraFast Design Methodology Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2018.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2018.psg'
-WARNING: [Runs 36-546] Tool Report Strategy 'Performance Explore Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2018.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2018.psg'
-WARNING: [Runs 36-546] Tool Report Strategy 'Timing Closure Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2018.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2018.psg'
-WARNING: [Runs 36-546] Tool Report Strategy 'No Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2018.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2018.psg'
-WARNING: [Runs 36-546] Tool Report Strategy 'Vivado Synthesis Default Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRS2018.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRS2018.psg'
-WARNING: [Runs 36-546] Tool Report Strategy 'No Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRS2018.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRS2018.psg'
-WARNING: [Runs 36-546] Tool Report Strategy 'Vivado Synthesis Default Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRS2019.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRS2019.psg'
-WARNING: [Runs 36-546] Tool Report Strategy 'No Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRS2019.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRS2019.psg'
-WARNING: [Runs 36-546] Tool Report Strategy 'Vivado Implementation Default Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2019.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2019.psg'
-WARNING: [Runs 36-546] Tool Report Strategy 'UltraFast Design Methodology Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2019.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2019.psg'
-WARNING: [Runs 36-546] Tool Report Strategy 'Performance Explore Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2019.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2019.psg'
-WARNING: [Runs 36-546] Tool Report Strategy 'Timing Closure Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2019.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2019.psg'
-WARNING: [Runs 36-546] Tool Report Strategy 'No Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2019.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRI2019.psg'
-WARNING: [Runs 36-546] Tool Report Strategy 'Vivado Synthesis Default Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRS2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRS2017.psg'
-WARNING: [Runs 36-546] Tool Report Strategy 'No Reports' from file '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRS2017.psg' discarded because strategy with same name already parsed from '/tools/Xilinx/Vivado/2019.1/reportstrategies/VRS2017.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'Vivado Synthesis Default Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRS2019.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRS2019.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'No Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRS2019.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRS2019.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'Vivado Implementation Default Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2018.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2018.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'UltraFast Design Methodology Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2018.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2018.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'Performance Explore Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2018.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2018.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'Timing Closure Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2018.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2018.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'No Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2018.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2018.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'Vivado Synthesis Default Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRS2017.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRS2017.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'No Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRS2017.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRS2017.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'Vivado Synthesis Default Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRS2018.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRS2018.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'No Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRS2018.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRS2018.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'Vivado Implementation Default Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2017.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2017.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'UltraFast Design Methodology Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2017.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2017.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'Performance Explore Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2017.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2017.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'Timing Closure Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2017.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2017.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'No Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2017.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2017.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'Vivado Implementation Default Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2019.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2019.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'UltraFast Design Methodology Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2019.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2019.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'Performance Explore Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2019.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2019.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'Timing Closure Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2019.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2019.psg'
+WARNING: [Runs 36-546] Tool Report Strategy 'No Reports' from file '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2019.psg' discarded because strategy with same name already parsed from '/usr/local/Xilinx/Vivado/2019.1/reportstrategies/VRI2019.psg'
 source ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/valmyrsilva07/teste12345/mlib_devel/jasper_library/hdl_sources/skarab_infr/cont_microblaze/ipshared/peralex.com'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/skarab/tutorials_devel/skarab/mlib_devel/jasper_library/hdl_sources/skarab_infr/cont_microblaze/ipshared/peralex.com'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/local/Xilinx/Vivado/2019.1/data/ip'.
 Command: synth_design -top ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0 -part xc7vx690tffg1927-2 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-86] Your Synthesis license expires in 28 day(s)
 INFO: [Device 21-403] Loading part xc7vx690tffg1927-2
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 688158 
+INFO: Helper process launched with PID 174694 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1967.039 ; gain = 154.719 ; free physical = 31627 ; free virtual = 43373
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2199.758 ; gain = 151.719 ; free physical = 11836 ; free virtual = 44808
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0/synth/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0' [/skarab/projetos/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0/synth/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0.vhd:67]
 	Parameter C_VERBOSITY bound to: 0 - type: integer 
 	Parameter C_XDEVICEFAMILY bound to: virtex7 - type: string 
 	Parameter C_IMPLEMENTATION bound to: 0 - type: integer 
@@ -172,8 +173,8 @@ INFO: [Synth 8-638] synthesizing module 'ethernet_one_gbe_skarab_axi_c_addsub_v1
 	Parameter C_HAS_SCLR bound to: 0 - type: integer 
 	Parameter C_HAS_SSET bound to: 0 - type: integer 
 	Parameter C_HAS_SINIT bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'c_addsub_v12_0_13' declared at '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0/hdl/c_addsub_v12_0_vh_rfs.vhd:7026' bound to instance 'U0' of component 'c_addsub_v12_0_13' [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0/synth/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0.vhd:130]
-INFO: [Synth 8-256] done synthesizing module 'ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0' (6#1) [/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0/synth/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0.vhd:67]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_13' declared at '/skarab/projetos/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0/hdl/c_addsub_v12_0_vh_rfs.vhd:7026' bound to instance 'U0' of component 'c_addsub_v12_0_13' [/skarab/projetos/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0/synth/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0.vhd:130]
+INFO: [Synth 8-256] done synthesizing module 'ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0' (6#1) [/skarab/projetos/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/ip/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0/synth/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0.vhd:67]
 WARNING: [Synth 8-3331] design c_addsub_v12_0_13_lut6_legacy has unconnected port clk
 WARNING: [Synth 8-3331] design c_addsub_v12_0_13_lut6_legacy has unconnected port add
 WARNING: [Synth 8-3331] design c_addsub_v12_0_13_lut6_legacy has unconnected port c_in
@@ -191,7 +192,7 @@ WARNING: [Synth 8-3331] design c_addsub_v12_0_13_legacy has unconnected port a_s
 WARNING: [Synth 8-3331] design c_addsub_v12_0_13_legacy has unconnected port b_signed
 WARNING: [Synth 8-3331] design c_addsub_v12_0_13_viv has unconnected port C_IN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2032.758 ; gain = 220.438 ; free physical = 31348 ; free virtual = 43095
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2265.477 ; gain = 217.438 ; free physical = 11450 ; free virtual = 44479
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -204,10 +205,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2035.727 ; gain = 223.406 ; free physical = 31429 ; free virtual = 43176
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2269.445 ; gain = 221.406 ; free physical = 11553 ; free virtual = 44583
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2035.727 ; gain = 223.406 ; free physical = 31429 ; free virtual = 43176
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2269.445 ; gain = 221.406 ; free physical = 11553 ; free virtual = 44582
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 65 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -217,31 +218,31 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2138.383 ; gain = 0.000 ; free physical = 31436 ; free virtual = 43184
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2371.133 ; gain = 0.000 ; free physical = 11168 ; free virtual = 44164
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2138.383 ; gain = 0.000 ; free physical = 31423 ; free virtual = 43171
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2371.133 ; gain = 0.000 ; free physical = 11189 ; free virtual = 44185
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2138.383 ; gain = 326.062 ; free physical = 31474 ; free virtual = 43223
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2371.133 ; gain = 323.094 ; free physical = 12108 ; free virtual = 45125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7vx690tffg1927-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2138.383 ; gain = 326.062 ; free physical = 31474 ; free virtual = 43223
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2371.133 ; gain = 323.094 ; free physical = 12107 ; free virtual = 45122
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2138.383 ; gain = 326.062 ; free physical = 31473 ; free virtual = 43222
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2371.133 ; gain = 323.094 ; free physical = 12103 ; free virtual = 45118
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2138.383 ; gain = 326.062 ; free physical = 31456 ; free virtual = 43206
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2371.133 ; gain = 323.094 ; free physical = 12076 ; free virtual = 45098
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -283,7 +284,7 @@ WARNING: [Synth 8-3331] design c_addsub_v12_0_13_viv has unconnected port SCLR
 WARNING: [Synth 8-3331] design c_addsub_v12_0_13_viv has unconnected port SSET
 WARNING: [Synth 8-3331] design c_addsub_v12_0_13_viv has unconnected port SINIT
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2138.383 ; gain = 326.062 ; free physical = 31466 ; free virtual = 43218
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2371.133 ; gain = 323.094 ; free physical = 11994 ; free virtual = 45019
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -295,13 +296,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2138.383 ; gain = 326.062 ; free physical = 31056 ; free virtual = 42820
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2371.133 ; gain = 323.094 ; free physical = 12065 ; free virtual = 45122
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2138.383 ; gain = 326.062 ; free physical = 31055 ; free virtual = 42820
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2371.133 ; gain = 323.094 ; free physical = 12064 ; free virtual = 45120
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -313,7 +314,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2138.383 ; gain = 326.062 ; free physical = 31051 ; free virtual = 42816
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2371.133 ; gain = 323.094 ; free physical = 12060 ; free virtual = 45116
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -337,7 +338,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2138.383 ; gain = 326.062 ; free physical = 30883 ; free virtual = 42648
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2371.133 ; gain = 323.094 ; free physical = 13905 ; free virtual = 46894
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -350,7 +351,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2138.383 ; gain = 326.062 ; free physical = 30882 ; free virtual = 42647
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2371.133 ; gain = 323.094 ; free physical = 13905 ; free virtual = 46894
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -362,25 +363,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2138.383 ; gain = 326.062 ; free physical = 30877 ; free virtual = 42642
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2371.133 ; gain = 323.094 ; free physical = 14037 ; free virtual = 47026
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2138.383 ; gain = 326.062 ; free physical = 30884 ; free virtual = 42649
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2371.133 ; gain = 323.094 ; free physical = 14076 ; free virtual = 47065
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2138.383 ; gain = 326.062 ; free physical = 30883 ; free virtual = 42648
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2371.133 ; gain = 323.094 ; free physical = 14113 ; free virtual = 47103
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2138.383 ; gain = 326.062 ; free physical = 30882 ; free virtual = 42647
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2371.133 ; gain = 323.094 ; free physical = 14151 ; free virtual = 47141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -401,35 +402,35 @@ Report Cell Usage:
 |3     |XORCY |    33|
 +------+------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2138.383 ; gain = 326.062 ; free physical = 30882 ; free virtual = 42647
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2371.133 ; gain = 323.094 ; free physical = 14187 ; free virtual = 47177
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2138.383 ; gain = 223.406 ; free physical = 30915 ; free virtual = 42680
-Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2138.383 ; gain = 326.062 ; free physical = 30914 ; free virtual = 42679
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2371.133 ; gain = 221.406 ; free physical = 14495 ; free virtual = 47482
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2371.133 ; gain = 323.094 ; free physical = 14496 ; free virtual = 47483
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 65 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2160.070 ; gain = 0.000 ; free physical = 30789 ; free virtual = 42554
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2392.820 ; gain = 0.000 ; free physical = 15454 ; free virtual = 48426
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 9 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 9 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-19 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
+20 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2160.070 ; gain = 730.410 ; free physical = 30859 ; free virtual = 42624
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2160.070 ; gain = 0.000 ; free physical = 30859 ; free virtual = 42624
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 2392.820 ; gain = 729.535 ; free physical = 15637 ; free virtual = 48609
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2392.820 ; gain = 0.000 ; free physical = 15638 ; free virtual = 48610
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0_synth_1/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/skarab/projetos/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0_synth_1/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
 INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0, cache-ID = 12f4114ed536742d
 INFO: [Coretcl 2-1174] Renamed 5 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2166.008 ; gain = 0.000 ; free physical = 30856 ; free virtual = 42621
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2395.789 ; gain = 0.000 ; free physical = 16368 ; free virtual = 49340
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0_synth_1/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/skarab/projetos/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.runs/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0_synth_1/ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0_utilization_synth.rpt -pb ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Aug  6 23:34:12 2026...
+INFO: [Common 17-206] Exiting Vivado at Sat Aug 22 13:40:40 2026...

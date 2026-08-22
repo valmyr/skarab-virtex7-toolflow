@@ -30,7 +30,7 @@ N_FRAMES = N_TOTAL // N   # quantidade de frames necessários p/ cobrir N_TOTAL
 
 assert N_TOTAL % N == 0, "N_TOTAL precisa ser múltiplo de N (256)"
 
-fs    = 10e4        # taxa de amostragem (Hz)
+fs    = 10e5        # taxa de amostragem (Hz)
 
 A     = 64         # amplitude
 alpha = 1/10.0         # taxa de decaimento (1/s) -> maior alpha = decai mais rápido
@@ -52,12 +52,20 @@ n = np.arange(N_TOTAL)    # índice das amostras (janela completa)
 t = n / fs                # vetor de tempo (s)
 
 
-def gerar_sinal(A, alpha, t0, f, phase, t):
-    """x(t) = A * exp(-alpha*(t+t0)) * cos(2*pi*f*t + phase)"""
-    return A * np.exp(-alpha * (t + t0)) * np.cos(2 * np.pi * (f) * t + phase)+64
+def signal_gen1(f1=300000,f2=1000,f3=800000,A1=6,A2=16,A3=3,fs=fs,N=N_TOTAL):
+  '''
 
+  '''
+  t = np.arange(0,N,1)
+  x1 = A1*np.sin(2*np.pi*(f1/fs)*t)
+  x2 = A2*np.sin(2*np.pi*(f2/fs)*t)
+  x3 = A3*np.sin(2*np.pi*(f3/fs)*t)
+  minv = np.min(x1+x2+x3)
+  maxv = np.max(x1+x2+x3)
+  signal = (((x1+x2+x3+abs(minv)).astype(np.int64)))
+  return signal
 
-x = gerar_sinal(A, alpha, t0, f, phase, t)
+x = signal_gen1(f1=30000,f2=1000,f3=80000,A1=10,A2=10,A3=10,fs=fs,N=N_TOTAL)
 
 # Quantização (ajuste offset/scale conforme a resolução/range aceitos pela FPGA)
 x_q = np.round(scale * x + offset).astype(np.int64)
@@ -98,7 +106,7 @@ try:
                 n_words = len(frame_pack) // 8
                 print(f"\033[91m PC \033[00m -> \033[92m FPGA \033[00m: "
                       f"Frame {idx+1}/{n_frames} enviado ({n_words} words)")
-            time.sleep(1/1000.0)
+            #time.sleep(1/20.0)
         if DEBUG:
             print("============================ Janela completa enviada ============================")
 except KeyboardInterrupt:

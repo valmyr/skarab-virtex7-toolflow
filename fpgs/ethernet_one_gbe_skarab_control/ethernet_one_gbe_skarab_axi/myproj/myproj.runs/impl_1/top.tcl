@@ -67,11 +67,11 @@ set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 8
   open_checkpoint top_postroute_physopt.dcp
-  set_property webtalk.parent_dir /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.cache/wt [current_project]
+  set_property webtalk.parent_dir /skarab/projetos/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.cache/wt [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/cont_microblaze/EMB123701U1R1.elf
-  set_property SCOPED_TO_REF cont_microblaze [get_files -all /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/cont_microblaze/EMB123701U1R1.elf]
-  set_property SCOPED_TO_CELLS microblaze_0 [get_files -all /home/valmyrsilva07/virtex7/skarab-virtex7-toolflow/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/cont_microblaze/EMB123701U1R1.elf]
+  add_files /skarab/projetos/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/cont_microblaze/EMB123701U1R1.elf
+  set_property SCOPED_TO_REF cont_microblaze [get_files -all /skarab/projetos/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/cont_microblaze/EMB123701U1R1.elf]
+  set_property SCOPED_TO_CELLS microblaze_0 [get_files -all /skarab/projetos/skarab-gbe-control/fpgs/ethernet_one_gbe_skarab_control/ethernet_one_gbe_skarab_axi/myproj/myproj.srcs/sources_1/imports/cont_microblaze/EMB123701U1R1.elf]
   catch { write_mem_info -force top.mmi }
   catch { write_bmm -force top_bd.bmm }
   write_bitstream -force top.bit -bin_file

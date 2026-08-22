@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Thu Aug  6 23:37:00 2026
-| Host         : valmyrsilva07-B760M-AORUS-ELITE running 64-bit Ubuntu 20.04.6 LTS
+| Date         : Sat Aug 22 13:44:07 2026
+| Host         : VT0144 running 64-bit Rocky Linux release 8.10 (Green Obsidian)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
 | Device       : 7vx690tffg1927-2
@@ -30,17 +30,17 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs*                | 16378 |     0 |    433200 |  3.78 |
-|   LUT as Logic             | 11321 |     0 |    433200 |  2.61 |
-|   LUT as Memory            |  5057 |     0 |    174200 |  2.90 |
+| Slice LUTs*                | 16679 |     0 |    433200 |  3.85 |
+|   LUT as Logic             | 11594 |     0 |    433200 |  2.68 |
+|   LUT as Memory            |  5085 |     0 |    174200 |  2.92 |
 |     LUT as Distributed RAM |  4736 |     0 |           |       |
-|     LUT as Shift Register  |   321 |     0 |           |       |
-| Slice Registers            | 21225 |     0 |    866400 |  2.45 |
-|   Register as Flip Flop    | 21224 |     0 |    866400 |  2.45 |
+|     LUT as Shift Register  |   349 |     0 |           |       |
+| Slice Registers            | 22138 |     0 |    866400 |  2.56 |
+|   Register as Flip Flop    | 22137 |     0 |    866400 |  2.56 |
 |   Register as Latch        |     0 |     0 |    866400 |  0.00 |
 |   Register as AND/OR       |     1 |     0 |    866400 | <0.01 |
-| F7 Muxes                   |  1269 |     0 |    216600 |  0.59 |
-| F8 Muxes                   |   488 |     0 |    108300 |  0.45 |
+| F7 Muxes                   |  1288 |     0 |    216600 |  0.59 |
+| F8 Muxes                   |   520 |     0 |    108300 |  0.48 |
 +----------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -59,8 +59,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 311   |          Yes |           - |          Set |
 | 1581  |          Yes |           - |        Reset |
-| 264   |          Yes |         Set |            - |
-| 19068 |          Yes |       Reset |            - |
+| 266   |          Yes |         Set |            - |
+| 19979 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -70,9 +70,9 @@ Table of Contents
 +-------------------+------+-------+-----------+-------+
 |     Site Type     | Used | Fixed | Available | Util% |
 +-------------------+------+-------+-----------+-------+
-| Block RAM Tile    |  240 |     0 |      1470 | 16.33 |
-|   RAMB36/FIFO*    |  240 |     0 |      1470 | 16.33 |
-|     RAMB36E1 only |  240 |       |           |       |
+| Block RAM Tile    |  245 |     0 |      1470 | 16.67 |
+|   RAMB36/FIFO*    |  245 |     0 |      1470 | 16.67 |
+|     RAMB36E1 only |  245 |       |           |       |
 |   RAMB18          |    0 |     0 |      2940 |  0.00 |
 +-------------------+------+-------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
@@ -154,22 +154,22 @@ Table of Contents
 +--------------+-------+---------------------+
 |   Ref Name   |  Used | Functional Category |
 +--------------+-------+---------------------+
-| FDRE         | 19068 |        Flop & Latch |
-| LUT6         |  6356 |                 LUT |
+| FDRE         | 19979 |        Flop & Latch |
+| LUT6         |  6411 |                 LUT |
 | RAMD64E      |  4608 |  Distributed Memory |
-| LUT2         |  2090 |                 LUT |
-| LUT5         |  1689 |                 LUT |
+| LUT2         |  2325 |                 LUT |
+| LUT5         |  1705 |                 LUT |
 | FDCE         |  1581 |        Flop & Latch |
-| LUT4         |  1428 |                 LUT |
-| LUT3         |  1352 |                 LUT |
-| MUXF7        |  1269 |               MuxFx |
-| MUXF8        |   488 |               MuxFx |
-| CARRY4       |   419 |          CarryLogic |
-| LUT1         |   380 |                 LUT |
+| LUT4         |  1508 |                 LUT |
+| LUT3         |  1385 |                 LUT |
+| MUXF7        |  1288 |               MuxFx |
+| MUXF8        |   520 |               MuxFx |
+| CARRY4       |   427 |          CarryLogic |
+| LUT1         |   382 |                 LUT |
 | FDPE         |   311 |        Flop & Latch |
-| SRL16E       |   279 |  Distributed Memory |
-| FDSE         |   264 |        Flop & Latch |
-| RAMB36E1     |   240 |        Block Memory |
+| SRL16E       |   307 |  Distributed Memory |
+| FDSE         |   266 |        Flop & Latch |
+| RAMB36E1     |   245 |        Block Memory |
 | RAMD32       |   160 |  Distributed Memory |
 | OBUFT        |    66 |                  IO |
 | IBUF         |    64 |                  IO |
@@ -196,7 +196,7 @@ Table of Contents
 |                        Ref Name                       | Used |
 +-------------------------------------------------------+------+
 | ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i0 |   12 |
-| ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i2 |    5 |
+| ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i2 |    7 |
 | ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i1 |    3 |
 | isp_spi_buffer                                        |    2 |
 | cpu_buffer                                            |    2 |
@@ -211,6 +211,11 @@ Table of Contents
 | packet_byte_count_fifo                                |    1 |
 | gmii_to_xaui_fifo                                     |    1 |
 | gmii_to_sgmii                                         |    1 |
+| ethernet_one_gbe_skarab_axi_fir_compiler_v7_2_i0      |    1 |
+| ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i8 |    1 |
+| ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i7 |    1 |
+| ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i6 |    1 |
+| ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i5 |    1 |
 | ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4 |    1 |
 | ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i3 |    1 |
 | ethernet_one_gbe_skarab_axi_c_addsub_v12_0_i0         |    1 |

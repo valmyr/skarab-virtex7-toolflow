@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 from random import randint
 DEBUG = True
 
-N=256
+N=1024
 SAMPLES = N
 IP = "10.42.0.31"
 PORT = 7777
@@ -14,7 +14,7 @@ sock.bind((IP, PORT))
 sock.setblocking(False)
 print(f"Escutando em {IP}:{PORT}")
 
-fig, ax = plt.subplots(figsize=(12, 4))
+fig, ax = plt.subplots(figsize=(12, 12))
 ax.set_title("e^At*sint(Bt)")
 ax.set_ylim(0, 256)
 

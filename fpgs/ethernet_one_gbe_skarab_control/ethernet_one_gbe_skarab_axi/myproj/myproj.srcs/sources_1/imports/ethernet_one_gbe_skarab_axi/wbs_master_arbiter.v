@@ -35,88 +35,104 @@
   localparam SUBARB_1 = 1;
 
   localparam N_SLAVES_ARB0 = 32;
-  localparam N_SLAVES_ARB1 = 8;
+  localparam N_SLAVES_ARB1 = 16;
 
-  localparam SLAVE_ADDR_ARB0 = { 32'h8019c064 - 32'h800dc000,//rx_control1
-32'h8019c060 - 32'h800dc000,//rx_badframe1
-32'h8019c05c - 32'h800dc000,//read_gbe_or_fifo
-32'h8019c058 - 32'h800dc000,//pkt_ctrs_compare1_ss_status
-32'h8019c054 - 32'h800dc000,//pkt_ctrs_compare1_ss_ctrl
-32'h8019c050 - 32'h800dc000,//pkt_ctrs1_ss_status
-32'h8019c04c - 32'h800dc000,//pkt_ctrs1_ss_ctrl
-32'h8019c048 - 32'h800dc000,//err_walk1
-32'h8019c044 - 32'h800dc000,//err_valid_raw1
-32'h8019c040 - 32'h800dc000,//err_ramp1
-32'h8019c03c - 32'h800dc000,//err_pkt_ctr_step1
-32'h8019c038 - 32'h800dc000,//err_pkt_ctr1
-32'h8019c034 - 32'h800dc000,//err_marker1
-32'h8019c030 - 32'h800dc000,//dec_factor
-32'h8019c02c - 32'h800dc000,//debug_rx_data_mem_gbe
-32'h8019c028 - 32'h800dc000,//debug_rx_data_mem_fifo
-32'h8019c024 - 32'h800dc000,//data_rx_valmir
-32'h8019c020 - 32'h800dc000,//d5_ss_status
-32'h8019c01c - 32'h800dc000,//d5_ss_ctrl
-32'h8019c018 - 32'h800dc000,//d4_ss_status
-32'h8019c014 - 32'h800dc000,//d4_ss_ctrl
-32'h8019c010 - 32'h800dc000,//d3_ss_status
-32'h8019c00c - 32'h800dc000,//d3_ss_ctrl
-32'h8019c008 - 32'h800dc000,//clk_mhz
-32'h8019c004 - 32'h800dc000,//addr_data_gbe
-32'h8019c000 - 32'h800dc000,//addr_data_fifo
-32'h8018c000 - 32'h800dc000,//pkt_ctrs_compare1_ss_bram
-32'h8014c000 - 32'h800dc000,//pkt_ctrs1_ss_bram
+  localparam SLAVE_ADDR_ARB0 = { 32'h801a105c - 32'h800dc000,//output_fir_status
+32'h801a1058 - 32'h800dc000,//output_fir_ctrl
+32'h801a1054 - 32'h800dc000,//input_fir_trig_offset
+32'h801a1050 - 32'h800dc000,//input_fir_status
+32'h801a104c - 32'h800dc000,//input_fir_ctrl
+32'h801a1048 - 32'h800dc000,//err_walk1
+32'h801a1044 - 32'h800dc000,//err_valid_raw1
+32'h801a1040 - 32'h800dc000,//err_ramp1
+32'h801a103c - 32'h800dc000,//err_pkt_ctr_step1
+32'h801a1038 - 32'h800dc000,//err_pkt_ctr1
+32'h801a1034 - 32'h800dc000,//err_marker1
+32'h801a1030 - 32'h800dc000,//dec_factor
+32'h801a102c - 32'h800dc000,//debug_rx_data_mem_gbe
+32'h801a1028 - 32'h800dc000,//debug_rx_data_mem_fifo
+32'h801a1024 - 32'h800dc000,//data_rx_valmir
+32'h801a1020 - 32'h800dc000,//d5_ss_status
+32'h801a101c - 32'h800dc000,//d5_ss_ctrl
+32'h801a1018 - 32'h800dc000,//d4_ss_status
+32'h801a1014 - 32'h800dc000,//d4_ss_ctrl
+32'h801a1010 - 32'h800dc000,//d3_ss_status
+32'h801a100c - 32'h800dc000,//d3_ss_ctrl
+32'h801a1008 - 32'h800dc000,//clk_mhz
+32'h801a1004 - 32'h800dc000,//addr_data_gbe
+32'h801a1000 - 32'h800dc000,//addr_data_fifo
+32'h80191000 - 32'h800dc000,//pkt_ctrs_compare1_ss_bram
+32'h80151000 - 32'h800dc000,//pkt_ctrs1_ss_bram
+32'h8014d000 - 32'h800dc000,//output_fir_bram
+32'h8014c000 - 32'h800dc000,//input_fir_bram
 32'h8012c000 - 32'h800dc000,//d5_ss_bram
 32'h8010c000 - 32'h800dc000,//d4_ss_bram
 32'h800ec000 - 32'h800dc000,//d3_ss_bram
 32'h800dc000 - 32'h800dc000}; //tx_one_gbe
-  localparam SLAVE_HIGH_ARB0 = { 32'h8019c067 - 32'h800dc000,//rx_control1
-32'h8019c063 - 32'h800dc000,//rx_badframe1
-32'h8019c05f - 32'h800dc000,//read_gbe_or_fifo
-32'h8019c05b - 32'h800dc000,//pkt_ctrs_compare1_ss_status
-32'h8019c057 - 32'h800dc000,//pkt_ctrs_compare1_ss_ctrl
-32'h8019c053 - 32'h800dc000,//pkt_ctrs1_ss_status
-32'h8019c04f - 32'h800dc000,//pkt_ctrs1_ss_ctrl
-32'h8019c04b - 32'h800dc000,//err_walk1
-32'h8019c047 - 32'h800dc000,//err_valid_raw1
-32'h8019c043 - 32'h800dc000,//err_ramp1
-32'h8019c03f - 32'h800dc000,//err_pkt_ctr_step1
-32'h8019c03b - 32'h800dc000,//err_pkt_ctr1
-32'h8019c037 - 32'h800dc000,//err_marker1
-32'h8019c033 - 32'h800dc000,//dec_factor
-32'h8019c02f - 32'h800dc000,//debug_rx_data_mem_gbe
-32'h8019c02b - 32'h800dc000,//debug_rx_data_mem_fifo
-32'h8019c027 - 32'h800dc000,//data_rx_valmir
-32'h8019c023 - 32'h800dc000,//d5_ss_status
-32'h8019c01f - 32'h800dc000,//d5_ss_ctrl
-32'h8019c01b - 32'h800dc000,//d4_ss_status
-32'h8019c017 - 32'h800dc000,//d4_ss_ctrl
-32'h8019c013 - 32'h800dc000,//d3_ss_status
-32'h8019c00f - 32'h800dc000,//d3_ss_ctrl
-32'h8019c00b - 32'h800dc000,//clk_mhz
-32'h8019c007 - 32'h800dc000,//addr_data_gbe
-32'h8019c003 - 32'h800dc000,//addr_data_fifo
-32'h8019bfff - 32'h800dc000,//pkt_ctrs_compare1_ss_bram
-32'h8018bfff - 32'h800dc000,//pkt_ctrs1_ss_bram
+  localparam SLAVE_HIGH_ARB0 = { 32'h801a105f - 32'h800dc000,//output_fir_status
+32'h801a105b - 32'h800dc000,//output_fir_ctrl
+32'h801a1057 - 32'h800dc000,//input_fir_trig_offset
+32'h801a1053 - 32'h800dc000,//input_fir_status
+32'h801a104f - 32'h800dc000,//input_fir_ctrl
+32'h801a104b - 32'h800dc000,//err_walk1
+32'h801a1047 - 32'h800dc000,//err_valid_raw1
+32'h801a1043 - 32'h800dc000,//err_ramp1
+32'h801a103f - 32'h800dc000,//err_pkt_ctr_step1
+32'h801a103b - 32'h800dc000,//err_pkt_ctr1
+32'h801a1037 - 32'h800dc000,//err_marker1
+32'h801a1033 - 32'h800dc000,//dec_factor
+32'h801a102f - 32'h800dc000,//debug_rx_data_mem_gbe
+32'h801a102b - 32'h800dc000,//debug_rx_data_mem_fifo
+32'h801a1027 - 32'h800dc000,//data_rx_valmir
+32'h801a1023 - 32'h800dc000,//d5_ss_status
+32'h801a101f - 32'h800dc000,//d5_ss_ctrl
+32'h801a101b - 32'h800dc000,//d4_ss_status
+32'h801a1017 - 32'h800dc000,//d4_ss_ctrl
+32'h801a1013 - 32'h800dc000,//d3_ss_status
+32'h801a100f - 32'h800dc000,//d3_ss_ctrl
+32'h801a100b - 32'h800dc000,//clk_mhz
+32'h801a1007 - 32'h800dc000,//addr_data_gbe
+32'h801a1003 - 32'h800dc000,//addr_data_fifo
+32'h801a0fff - 32'h800dc000,//pkt_ctrs_compare1_ss_bram
+32'h80190fff - 32'h800dc000,//pkt_ctrs1_ss_bram
+32'h80150fff - 32'h800dc000,//output_fir_bram
+32'h8014cfff - 32'h800dc000,//input_fir_bram
 32'h8014bfff - 32'h800dc000,//d5_ss_bram
 32'h8012bfff - 32'h800dc000,//d4_ss_bram
 32'h8010bfff - 32'h800dc000,//d3_ss_bram
 32'h800ebfff - 32'h800dc000}; //tx_one_gbe
-  localparam SLAVE_ADDR_ARB1 = { 32'h8019c084 - 32'h8019c068,//sys_block
-32'h8019c080 - 32'h8019c068,//vaild_rx_valmir1
-32'h8019c07c - 32'h8019c068,//tx_overflow1
-32'h8019c078 - 32'h8019c068,//tx_control
-32'h8019c074 - 32'h8019c068,//tx_afull1
-32'h8019c070 - 32'h8019c068,//rx_valid1
-32'h8019c06c - 32'h8019c068,//rx_overrun1
-32'h8019c068 - 32'h8019c068}; //rx_eof1
-  localparam SLAVE_HIGH_ARB1 = { 32'h8019c0a3 - 32'h8019c068,//sys_block
-32'h8019c083 - 32'h8019c068,//vaild_rx_valmir1
-32'h8019c07f - 32'h8019c068,//tx_overflow1
-32'h8019c07b - 32'h8019c068,//tx_control
-32'h8019c077 - 32'h8019c068,//tx_afull1
-32'h8019c073 - 32'h8019c068,//rx_valid1
-32'h8019c06f - 32'h8019c068,//rx_overrun1
-32'h8019c06b - 32'h8019c068}; //rx_eof1
+  localparam SLAVE_ADDR_ARB1 = { 32'h801a109c - 32'h801a1060,//sys_block
+32'h801a1098 - 32'h801a1060,//vaild_rx_valmir1
+32'h801a1094 - 32'h801a1060,//tx_overflow1
+32'h801a1090 - 32'h801a1060,//tx_control
+32'h801a108c - 32'h801a1060,//tx_afull1
+32'h801a1088 - 32'h801a1060,//rx_valid1
+32'h801a1084 - 32'h801a1060,//rx_overrun1
+32'h801a1080 - 32'h801a1060,//rx_eof1
+32'h801a107c - 32'h801a1060,//rx_control1
+32'h801a1078 - 32'h801a1060,//rx_badframe1
+32'h801a1074 - 32'h801a1060,//read_gbe_or_fifo
+32'h801a1070 - 32'h801a1060,//pkt_ctrs_compare1_ss_status
+32'h801a106c - 32'h801a1060,//pkt_ctrs_compare1_ss_ctrl
+32'h801a1068 - 32'h801a1060,//pkt_ctrs1_ss_status
+32'h801a1064 - 32'h801a1060,//pkt_ctrs1_ss_ctrl
+32'h801a1060 - 32'h801a1060}; //output_fir_trig_offset
+  localparam SLAVE_HIGH_ARB1 = { 32'h801a10bb - 32'h801a1060,//sys_block
+32'h801a109b - 32'h801a1060,//vaild_rx_valmir1
+32'h801a1097 - 32'h801a1060,//tx_overflow1
+32'h801a1093 - 32'h801a1060,//tx_control
+32'h801a108f - 32'h801a1060,//tx_afull1
+32'h801a108b - 32'h801a1060,//rx_valid1
+32'h801a1087 - 32'h801a1060,//rx_overrun1
+32'h801a1083 - 32'h801a1060,//rx_eof1
+32'h801a107f - 32'h801a1060,//rx_control1
+32'h801a107b - 32'h801a1060,//rx_badframe1
+32'h801a1077 - 32'h801a1060,//read_gbe_or_fifo
+32'h801a1073 - 32'h801a1060,//pkt_ctrs_compare1_ss_status
+32'h801a106f - 32'h801a1060,//pkt_ctrs_compare1_ss_ctrl
+32'h801a106b - 32'h801a1060,//pkt_ctrs1_ss_status
+32'h801a1067 - 32'h801a1060,//pkt_ctrs1_ss_ctrl
+32'h801a1063 - 32'h801a1060}; //output_fir_trig_offset
 
   wire     [N_SUB_ARBS - 1:0] wb_cyc_o;
       wire     [N_SUB_ARBS - 1:0] wb_stb_o;

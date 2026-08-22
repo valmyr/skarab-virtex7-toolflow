@@ -61,7 +61,7 @@ ENTITY ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4 IS
     CLK : IN STD_LOGIC;
     CE : IN STD_LOGIC;
     SCLR : IN STD_LOGIC;
-    Q : OUT STD_LOGIC_VECTOR(16 DOWNTO 0)
+    Q : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4;
 
@@ -101,9 +101,9 @@ ARCHITECTURE ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4_arch OF ether
       SINIT : IN STD_LOGIC;
       UP : IN STD_LOGIC;
       LOAD : IN STD_LOGIC;
-      L : IN STD_LOGIC_VECTOR(16 DOWNTO 0);
+      L : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       THRESH0 : OUT STD_LOGIC;
-      Q : OUT STD_LOGIC_VECTOR(16 DOWNTO 0)
+      Q : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
   END COMPONENT c_counter_binary_v12_0_13;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -111,8 +111,8 @@ ARCHITECTURE ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4_arch OF ether
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4_arch : ARCHITECTURE IS "ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4,c_counter_binary_v12_0_13,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4_arch: ARCHITECTURE IS "ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4,c_counter_binary_v12_0_13,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=c_counter_binary,x_ipVersion=12.0,x_ipCoreRevision=13,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_IMPLEMENTATION=1,C_VERBOSITY=0,C_XDEVICEFAMILY=virtex7,C_WIDTH=17,C_HAS_CE=1,C_HAS_SCLR=1,C_RESTRICT_COUNT=0,C_COUNT_TO=1,C_COUNT_BY=1000,C_COUNT_MODE=0,C_THRESH0_VALUE=1,C_CE_OVERRIDES_SYNC=0,C_HAS_THRESH0=0,C_HAS_LOAD=0,C_LOAD_LOW=0,C_LATENCY=1,C_FB" & 
-"_LATENCY=0,C_AINIT_VAL=0,C_SINIT_VAL=0,C_SCLR_OVERRIDES_SSET=1,C_HAS_SSET=0,C_HAS_SINIT=0}";
+  ATTRIBUTE CORE_GENERATION_INFO OF ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4_arch: ARCHITECTURE IS "ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4,c_counter_binary_v12_0_13,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=c_counter_binary,x_ipVersion=12.0,x_ipCoreRevision=13,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_IMPLEMENTATION=1,C_VERBOSITY=0,C_XDEVICEFAMILY=virtex7,C_WIDTH=32,C_HAS_CE=1,C_HAS_SCLR=1,C_RESTRICT_COUNT=0,C_COUNT_TO=1,C_COUNT_BY=1,C_COUNT_MODE=0,C_THRESH0_VALUE=1,C_CE_OVERRIDES_SYNC=0,C_HAS_THRESH0=0,C_HAS_LOAD=0,C_LOAD_LOW=0,C_LATENCY=1,C_FB_LA" & 
+"TENCY=0,C_AINIT_VAL=0,C_SINIT_VAL=0,C_SCLR_OVERRIDES_SSET=1,C_HAS_SSET=0,C_HAS_SINIT=0}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF Q: SIGNAL IS "XIL_INTERFACENAME q_intf, LAYERED_METADATA undef";
@@ -129,12 +129,12 @@ BEGIN
       C_IMPLEMENTATION => 1,
       C_VERBOSITY => 0,
       C_XDEVICEFAMILY => "virtex7",
-      C_WIDTH => 17,
+      C_WIDTH => 32,
       C_HAS_CE => 1,
       C_HAS_SCLR => 1,
       C_RESTRICT_COUNT => 0,
       C_COUNT_TO => "1",
-      C_COUNT_BY => "1000",
+      C_COUNT_BY => "1",
       C_COUNT_MODE => 0,
       C_THRESH0_VALUE => "1",
       C_CE_OVERRIDES_SYNC => 0,
@@ -157,7 +157,7 @@ BEGIN
       SINIT => '0',
       UP => '1',
       LOAD => '0',
-      L => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 17)),
+      L => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 32)),
       Q => Q
     );
 END ethernet_one_gbe_skarab_axi_c_counter_binary_v12_0_i4_arch;

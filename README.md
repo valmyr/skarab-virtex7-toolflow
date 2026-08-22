@@ -1,10 +1,14 @@
 # skarab-virtex7-toolflow
 
 # Unidade de Controle para a Interface Ethernet do Yellow Block da CASPER
+**Orientação:** Prof. Dr. Gutemberg Gonçalves dos Santos Júnior
+
 
 **VIRTUS/UFCG** — Engenheiro: Valmir F. Silva
 
-**Orientação:** Prof. Dr. Gutemberg Gonçalves dos Santos Júnior
+**XMEN/UFCG** — Engenheiro: Marcos Antônio I. Luz
+
+
 
 **Plataforma alvo:** SKARAB (Square Kilometer Array Reconfigurable Application Board), ecossistema CASPER
 
@@ -21,6 +25,14 @@ O objetivo é servir como **canal de controle/eco de teste**, permitindo:
 - Validar a infraestrutura de comunicação host↔FPGA antes de acoplar um acelerador real (FIR, FFT, correlator, etc.);
 - Fornecer visibilidade de debug (leitura direta do conteúdo do buffer via registradores CASPER);
 - Servir de base para uma futura unidade de controle **genérica**, capaz de operar tanto sobre o yellow block de 1GbE (gerenciamento) quanto sobre 10/40GbE (dados de alta velocidade), tratando ambos sob o mesmo contrato AXI4-Stream.
+
+- Diagrama de arquitetura proposta (camadas: Interface Física → Adaptação de Protocolo → Infraestrutura AXI → Processamento → Protocolo de Saída) — documento de arquitetura de destino de médio prazo.
+- `cmd_sync_detector` — submódulo de detecção de comando por casamento de padrão de 4 bytes (não incluído neste README; ver arquivo-fonte para detalhes de timing de `event_cmd_out`).
+
+<p align="center">
+<img title="Diagrama de Blocos Simulink" alt="Alt text" src="images/control_one_gbe.png" width="100%" height="100%">
+</p>
+
 
 ### Diagrama de blocos funcional (estado atual)
 
@@ -700,11 +712,41 @@ while rodando:
 
 ## 10. Referências internas
 
-- Diagrama de arquitetura proposta (camadas: Interface Física → Adaptação de Protocolo → Infraestrutura AXI → Processamento → Protocolo de Saída) — documento de arquitetura de destino de médio prazo.
-- `cmd_sync_detector` — submódulo de detecção de comando por casamento de padrão de 4 bytes (não incluído neste README; ver arquivo-fonte para detalhes de timing de `event_cmd_out`).
 
-<p align="center">
-<img title="Diagrama de Blocos Simulink" alt="Alt text" src="images/control_one_gbe.png" width="100%" height="100%">
-</p>
+## Comandos úteis
 
-[Path de Correção da API casperfpga para python2.7](https://youtu.be/omPAlH5oBUo?si=3I-0S11s5vJFtD_3).
+> **Adapte `<interface>`, `<IP>` e demais parâmetros à configuração do seu sistema.**
+
+### UART
+
+```bash
+# Listar UARTs disponíveis
+ls -la /dev/serial/by-id/
+```
+
+### Rede
+
+```bash
+# Identificar interfaces
+ip -br link
+
+# Configurar conexão Ethernet
+sudo nmcli con add type ethernet ifname <interface> \
+    con-name skarab-direct ipv4.method shared ipv6.method disabled
+
+sudo nmcli con up skarab-direct
+
+# Adicionar IP de recepção
+sudo ip addr add <IP>/<prefixo> dev <interface>
+
+# Verificar configuração
+ip -br addr
+```
+
+**Exemplo:**
+
+```bash
+sudo ip addr add 10.42.0.31/24 dev enp4s0
+```
+
+[Correção da API casperfpga para python2.7](https://youtu.be/omPAlH5oBUo?si=3I-0S11s5vJFtD_3).

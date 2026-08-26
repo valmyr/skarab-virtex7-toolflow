@@ -717,12 +717,17 @@ while rodando:
 
 > **Adapte `<interface>`, `<IP>` e demais parâmetros à configuração do seu sistema.**
 
+
+
 ### UART
 
 ```bash
 # Listar UARTs disponíveis
 ls -la /dev/serial/by-id/
 ```
+<p align="center">
+<img title="Skarab Serial" alt="Alt text" src="images/serial_select.png" width="100%" height="100%">
+</p>
 
 ### Rede
 
@@ -747,6 +752,11 @@ ip -br addr
 
 ```bash
 sudo ip addr add 10.42.0.31/24 dev enp4s0
+```
+
+
+```bash
+sudo ip link set dev enp4s0 mtu 9000
 ```
 
 [Correção da API casperfpga para python2.7](https://youtu.be/omPAlH5oBUo?si=3I-0S11s5vJFtD_3).

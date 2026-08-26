@@ -729,6 +729,16 @@ ls -la /dev/serial/by-id/
 <img title="Skarab Serial" alt="Alt text" src="images/serial_select.png" width="100%" height="100%">
 </p>
 
+```bash
+sudo screen /dev/ttyUSB3 115200
+```
+
+Para listar as opções disponíveis: ?
+
+<p align="center">
+<img title="Skarab Serial" alt="Alt text" src="images/serial_select_1.png" width="100%" height="100%">
+</p>
+
 ### Rede
 
 ```bash
